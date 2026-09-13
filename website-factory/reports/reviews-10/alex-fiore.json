@@ -1,0 +1,209 @@
+{
+  "seed": {
+    "slug": "alex-fiore",
+    "name": "Kundengärtner Alex Fiore",
+    "url": "https://alexfiore.ch/"
+  },
+  "observedAt": "2026-09-13T20:44:45.053Z",
+  "profileComplete": false,
+  "scoutError": "ProviderError: Every declared image must be supplied exactly once",
+  "audit": {
+    "dimensions": {
+      "mobile_usability": {
+        "level": "major_friction",
+        "evidence_ids": [
+          "66e97f84-cb53-44e5-8a44-50bac1b6ebab"
+        ],
+        "checked_criteria": [
+          "Darstellung bei Viewport 375 × 812",
+          "Horizontale Anpassung des Seitenlayouts",
+          "Erreichbarkeit der Hauptnavigation"
+        ],
+        "rationale": "Bei Viewport 375 × 812 bleibt ein breites Desktop-Layout sichtbar; Navigation, Inhaltsbereich und Bild reichen deutlich über die mobile Breite hinaus."
+      },
+      "conversion": {
+        "level": "usable_with_friction",
+        "evidence_ids": [
+          "ca791dbe-d888-4279-ba52-3cb5d852a6e9",
+          "2bfb579d-ebae-4a67-a207-4d326e032c60"
+        ],
+        "checked_criteria": [
+          "Kontaktwege",
+          "Kontaktformular",
+          "Pflichtfelder"
+        ],
+        "rationale": "Kontaktangaben und ein Kontaktformular sind vorhanden. Das Formular verlangt mehrere persönliche und Adressangaben als Pflichtfelder."
+      },
+      "content_clarity": {
+        "level": "minor_friction",
+        "evidence_ids": [
+          "2bfb579d-ebae-4a67-a207-4d326e032c60",
+          "66e97f84-cb53-44e5-8a44-50bac1b6ebab"
+        ],
+        "checked_criteria": [
+          "Leistungsnennung",
+          "Navigation",
+          "Einordnung auf der Startseite"
+        ],
+        "rationale": "Die Navigation nennt Firma, Gartenbau, Umänderung, Pflege, Referenzen und bei der Arbeit. Die Startseite beschreibt Beratung und Planung, Gestaltung, Ausführung und Pflege, bleibt jedoch allgemein."
+      },
+      "trust_transparency": {
+        "level": "minor_friction",
+        "evidence_ids": [
+          "2bfb579d-ebae-4a67-a207-4d326e032c60",
+          "ca791dbe-d888-4279-ba52-3cb5d852a6e9"
+        ],
+        "checked_criteria": [
+          "Kontaktangaben",
+          "Impressumsverweis"
+        ],
+        "rationale": "Adresse, Telefonnummern und E-Mail-Adresse sind beobachtbar; ein Impressumsverweis ist in der Navigation vorhanden. Der Inhalt des Impressums wurde nicht übergeben."
+      },
+      "technical_seo": {
+        "level": null,
+        "evidence_ids": [],
+        "checked_criteria": [
+          "Meta-Angaben",
+          "Indexierbarkeit",
+          "strukturierte Daten",
+          "Überschriftenstruktur"
+        ],
+        "rationale": "Für eine technische SEO-Bewertung liegen keine entsprechenden Prüfresultate oder vollständigen technischen Seiteninformationen vor."
+      }
+    },
+    "performance_score": 72,
+    "quality_score": 54.631578947368425,
+    "coverage": 0.95,
+    "issues": [
+      {
+        "issue_id": "9057c3c2-1ef2-4914-96ce-793bec49df69",
+        "category": "mobile_usability",
+        "severity": "major",
+        "observation": "Bei Viewport 375 × 812 wird ein breites, nicht auf die Bildschirmbreite angepasstes Desktop-Layout angezeigt. Wesentliche Bereiche liegen rechts ausserhalb der sichtbaren Breite.",
+        "evidence_ids": [
+          "66e97f84-cb53-44e5-8a44-50bac1b6ebab"
+        ],
+        "page_ref": "page-45a20404dbb95a6e93bb46a0",
+        "viewport": {
+          "width": 375,
+          "height": 812
+        },
+        "impact_hypothesis": "Mobile Besuchende müssen horizontal navigieren oder Inhalte vergrössern, um Navigation und Seiteninhalte vollständig zu erfassen.",
+        "recommendation": "Responsive Darstellung für kleine Viewports umsetzen; Navigation, Bild und Inhaltsbereich auf die verfügbare Breite anpassen.",
+        "suggested_fix_target": "renderer",
+        "reproduction": [
+          "Startseite bei Viewport 375 × 812 öffnen.",
+          "Sichtbare Seitenbreite mit Navigation, Bild und Inhaltsbereich vergleichen."
+        ]
+      },
+      {
+        "issue_id": "3ee8f7a5-10b2-48fa-8503-272a2f9c736a",
+        "category": "conversion",
+        "severity": "minor",
+        "observation": "Das Kontaktformular markiert Anrede, Vorname, Nachname, Strasse, Postleitzahl, Ort und Email als Pflichtfelder. Zusätzlich ist Ergebnis eingeben vorhanden.",
+        "evidence_ids": [
+          "ca791dbe-d888-4279-ba52-3cb5d852a6e9"
+        ],
+        "page_ref": "page-74bb695f1fd7de0a9f60c117",
+        "viewport": null,
+        "impact_hypothesis": "Zusätzliche Pflichtangaben können Kontaktanfragen erschweren, wenn für eine erste Anfrage nicht alle Angaben nötig sind.",
+        "recommendation": "Pflichtfelder auf die für die Kontaktaufnahme notwendigen Angaben reduzieren und erforderliche Angaben verständlich kennzeichnen.",
+        "suggested_fix_target": "configuration",
+        "reproduction": [
+          "Kontaktseite öffnen.",
+          "Pflichtfeldmarkierungen im Kontaktformular prüfen."
+        ]
+      }
+    ],
+    "limitations": [
+      "Geprüft wurden die übergebenen Inhalte der Startseite und der Kontaktseite.",
+      "Für die Kontaktseite liegt keine visuelle Darstellung bei einem mobilen Viewport vor.",
+      "Keine Prüfresultate zu Meta-Angaben, Indexierbarkeit, strukturierten Daten, Überschriftenstruktur oder Barrierefreiheit liegen vor.",
+      "Der Lighthouse-Mobile-Wert wurde übergeben, aber keine Performance-Diagnose oder Einzelmetriken; daraus wird keine Leistungsursache abgeleitet."
+    ]
+  },
+  "images": [
+    {
+      "path": "alex-fiore-1.png",
+      "evidence_id": "66e97f84-cb53-44e5-8a44-50bac1b6ebab",
+      "width": 980,
+      "height": 860,
+      "sha256": "04202e556b46632df08d3dccd8ab4dd924dbf7f0f1704e0741ef25d45ea4d6be"
+    },
+    {
+      "path": "alex-fiore-2.png",
+      "evidence_id": "adbcd0ac-2bf8-4cab-8d34-0de6a459f89a",
+      "width": 1440,
+      "height": 1000,
+      "sha256": "baaa0c199d8d508bb48969b37124c81e3955bc735aee8158520261d72d4f9499"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "2bfb579d-ebae-4a67-a207-4d326e032c60",
+      "kind": "html",
+      "source_url": "https://alexfiore.ch/",
+      "observed_at": "2026-09-13T20:44:45.053Z",
+      "artifact_hash": "cdf63ba8df5904e2812421b48653631ffccd83b87619e603cc6652be547c977d",
+      "locator": "C:\\Users\\StartKlar\\Documents\\ChatGPT\\Project-Polire\\website-factory\\data\\reviews-10-2026-09-13\\review-crawls\\alex-fiore\\raw\\page-45a20404dbb95a6e93bb46a0.html#text-chunk-1",
+      "excerpt": "KUNDENGÄRTNER ALEX FIORE | 4623 Neuendorf\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nnavi oben\n\n\r\n\r\n\nStartseite\n\nImpressum\n\nKontakt\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\n\r\nhauptnavi\n\nFirma\nGartenbau\nUm&auml;nderung\nPflege\nReferenzen\nbei der Arbeit\n\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nPrinterFriendly\n\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nWillkommen auf der Homepage von KUNDENG&Auml;RTNER FIORE .\n\r\n\r\nEs freut uns, Ihnen unser Unternehmen vorzustellen. F&uuml;r Ihre gr&uuml;ne Oase bieten wir von der Beratung und Planung, &uuml;ber die Gestaltung bis zur Ausf&uuml;hrung und weitergehenden Pflege alle Dienstleistungen aus erster Hand an.\n\r\n\n\r\nWir planen, erstellen, &auml;ndern und pflegen grosse und kleine G&auml;rten.\n\r\n\n\r\nQualitativ einwandfreie Arbeit, mit hochwertigen Produkten und Pflanzen, modernem Maschinenpark und nat&uuml;rlich motivierten Mitarbeitern.\n\r\n\n\r\nDiese entscheidenden Kriterien setzen wir um, damit die Projekte zu Ihrer vollen Zufriedenheit f&uuml;hren.\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nMenu\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\r\n\n\r\n\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nCopyright bottom\n\n\r\n\r\n\nAlex Fiore Kundeng&auml;rtner | Dorfstrasse 152 | CH - 4623 Neuendorf | 062 216 63 50\n\n&copy; created by m&uuml;ller webdesign &bull; www.mueller-webdesign.ch &bull; CH - 4617 Gunzgen | Powered by WORLDSOFT-CMS &bull; W.I.N.-Zertifikat: 1-19-5580\n..: Login :..\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\nBenutzername:\n\nUser-Login\n\nIhr E-Mail",
+      "numeric_value": null,
+      "unit": null
+    },
+    {
+      "evidence_id": "ca791dbe-d888-4279-ba52-3cb5d852a6e9",
+      "kind": "html",
+      "source_url": "https://alexfiore.ch/80/Kontakt.html",
+      "observed_at": "2026-09-13T20:44:45.053Z",
+      "artifact_hash": "0696415905290209404938305f37d3da3d40b092cb80b6f89e7d5434fb400b78",
+      "locator": "C:\\Users\\StartKlar\\Documents\\ChatGPT\\Project-Polire\\website-factory\\data\\reviews-10-2026-09-13\\review-crawls\\alex-fiore\\raw\\page-74bb695f1fd7de0a9f60c117.html#text-chunk-1",
+      "excerpt": "KUNDENGÄRTNER ALEX FIORE | 4623 Neuendorf - Kontaktformular\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nnavi oben\n\n\r\n\r\n\nStartseite\n\nImpressum\n\nKontakt\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\n\r\nhauptnavi\n\nFirma\nGartenbau\nUm&auml;nderung\nPflege\nReferenzen\nbei der Arbeit\n\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nPrinterFriendly\n\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nKUNDENGÄRTNER ALEX FIORE\n\r\nDorfstrasse 152\n\r\nCH - 4623 Neuendorf\n\r\n\r\n+41 (0)62 216 63 50 fon\n\r\n+41 (0)62 216 63 51 fax\n\r\n+41 (0)79 606 81 78 mobile\n\r\n\r\nalex.fiore@bluewin.ch\n\r\nwww.alexfiore.ch\n\r\n\r\n\r\n\r\n\r\n© created by müller webdesign \n\r\nwww.mueller-webdesign.ch\n\r\ninfo@mueller-webdesign.ch \r\n  \r\nPowered by\n\r\nWORLDSOFT-CMS\n\r\nW.I.N.-Zertifikat : 1-19-5580 \r\n\r\n\r\n\nKontaktformular\n\nAnrede\n*\n\nHerr\nFrau\nFirma\nHerr Dipl.-Ing.\nFrau Dipl.-Ing.\nHerr Dr.\nFrau Dr.\nHerr Prof.\nFrau Prof.\nHerr und Frau\nFamilie\n\nVorname\n*\n\nNachname\n*\n\nFirma\n\nStrasse\n\nPostleitzahl\n*\n\nOrt\n*\n\nLand\n\nSchweiz\n\nEmail\n*\n\nTelefonnummer\n\nFaxnummer\n\nMobiltelefon\n\nWir interessieren uns für\n\nGartenbau\n\nUmänderungen\n\nPflege\n\nMitteilung\n\nErgebnis eingeben\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\r\n\n\r\n\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nCopyright bottom\n\n\r\n\r\n\nAlex Fiore Kundeng&auml;rtner | Dorfstrasse 152 | CH - 4623 Neuendorf | 062 216 63 50\n\n&copy; created by m&uuml;ller webdesign &bull; www.mueller-webdesign.ch &bull; CH - 4617 Gunzgen | Powered by WORLDSOFT-CMS &bull; W.I.N.-Zertifikat: 1-19-5580\n..: Login :..\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\nBenutzername:\n\nUser-Login\n\nIhr E-Mail",
+      "numeric_value": null,
+      "unit": null
+    },
+    {
+      "evidence_id": "66e97f84-cb53-44e5-8a44-50bac1b6ebab",
+      "kind": "screenshot",
+      "source_url": "https://alexfiore.ch/",
+      "observed_at": "2026-09-13T20:44:50.625Z",
+      "artifact_hash": "04202e556b46632df08d3dccd8ab4dd924dbf7f0f1704e0741ef25d45ea4d6be",
+      "locator": "{\"viewport\":{\"width\":375,\"height\":812},\"full_page\":true}",
+      "excerpt": null,
+      "numeric_value": null,
+      "unit": null
+    },
+    {
+      "evidence_id": "adbcd0ac-2bf8-4cab-8d34-0de6a459f89a",
+      "kind": "screenshot",
+      "source_url": "https://alexfiore.ch/",
+      "observed_at": "2026-09-13T20:44:56.582Z",
+      "artifact_hash": "baaa0c199d8d508bb48969b37124c81e3955bc735aee8158520261d72d4f9499",
+      "locator": "{\"viewport\":{\"width\":1440,\"height\":1000},\"full_page\":true}",
+      "excerpt": null,
+      "numeric_value": null,
+      "unit": null
+    },
+    {
+      "evidence_id": "74a0e8d5-0c9c-45b1-af2e-8f5a8f582cc5",
+      "kind": "metric",
+      "source_url": "https://alexfiore.ch/",
+      "observed_at": "2026-09-13T20:45:11.091Z",
+      "artifact_hash": "d8f9c5739e0f2b3cc4cf3d5061fc54bc388bd7b0404083c3b18b1ab5c0477e63",
+      "locator": "C:\\Users\\StartKlar\\Documents\\ChatGPT\\Project-Polire\\website-factory\\data\\reviews-10-2026-09-13\\review-crawls\\alex-fiore\\lighthouse-mobile.json",
+      "excerpt": "Lighthouse mobile performance",
+      "numeric_value": 72,
+      "unit": "lighthouse_mobile"
+    }
+  ],
+  "businessStatus": {
+    "slug": "alex-fiore",
+    "status": "recent_activity_evidence",
+    "decision": "review",
+    "finding": "Lokaler Ferienpass nennt Fiore Alex Kundengärtner als Sponsor für 2026. Das ist ein aktuelles Aktivitätssignal, kein direkter Nachweis verfügbarer Auftragskapazität.",
+    "sources": [
+      "https://www.ferienpass-neuendorf.org/sponsoren/",
+      "https://alexfiore.ch/"
+    ]
+  },
+  "demoDecision": "pending"
+}

@@ -1,0 +1,46 @@
+{
+  "name": "polire-website-factory",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "factory": "tsx src/cli.ts",
+    "build": "tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write src tests prompts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "demo": "tsx src/cli.ts demo"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "latest",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "commander": "^14.0.0",
+    "csv-parse": "^6.1.0",
+    "dotenv": "^17.2.0",
+    "ipaddr.js": "^2.2.0",
+    "lighthouse": "latest",
+    "openai": "latest",
+    "playwright": "^1.63.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "robots-parser": "^3.0.1",
+    "tldts": "^7.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "eslint": "^10.10.0",
+    "prettier": "^3.9.6",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0",
+    "typescript-eslint": "^8.70.0",
+    "vitest": "^3.2.0"
+  }
+}

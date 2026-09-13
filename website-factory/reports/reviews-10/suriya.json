@@ -1,0 +1,252 @@
+{
+  "seed": {
+    "slug": "suriya",
+    "name": "Suriya Spa",
+    "url": "https://www.suriya-spa.ch/"
+  },
+  "observedAt": "2026-09-13T20:46:43.540Z",
+  "profileComplete": false,
+  "scoutError": "Error: evidence does not support claim: Thai Tok-Sen Massage",
+  "audit": {
+    "dimensions": {
+      "mobile_usability": {
+        "level": "minor_friction",
+        "evidence_ids": [
+          "cf93ab43-1587-478c-ae80-c7f26ca5e935",
+          "119f2ee9-9a66-4d3a-baf6-43659e22a134"
+        ],
+        "checked_criteria": [
+          "mobile viewport observed",
+          "mobile navigation observed",
+          "Kontaktweg observed"
+        ],
+        "rationale": "Die mobile Startseite zeigt eine einspaltige Darstellung mit wiederholten Kontaktaufforderungen. Die Kopfzeilen-Navigation wirkt im 375-Pixel-Screenshot sehr kompakt."
+      },
+      "conversion": {
+        "level": "usable_with_friction",
+        "evidence_ids": [
+          "119f2ee9-9a66-4d3a-baf6-43659e22a134",
+          "f0837ce3-5d82-4c13-b709-097c291027e6"
+        ],
+        "checked_criteria": [
+          "Terminaufforderungen",
+          "Leistungs- und Preisangaben",
+          "Kontaktwege",
+          "Kontaktformular"
+        ],
+        "rationale": "Leistungen, Preise sowie Telefon- und E-Mail-Kontakt sind auf der Startseite vorhanden. Das Kontaktformular öffnet gemäss Seitenhinweis ein E-Mail-Programm, statt eine Nachricht unmittelbar über die Website zu übermitteln."
+      },
+      "content_clarity": {
+        "level": "minor_friction",
+        "evidence_ids": [
+          "119f2ee9-9a66-4d3a-baf6-43659e22a134",
+          "01f36e4e-6f00-4f8a-b827-5c85a66e58cf",
+          "a130d433-62b9-4b02-a954-1b121554a30d",
+          "971f0c0d-8b2b-4d68-ba60-5bef9d298c6f"
+        ],
+        "checked_criteria": [
+          "Leistungsübersicht",
+          "Preise",
+          "Leistungsdetailseite",
+          "Kontaktinformationen"
+        ],
+        "rationale": "Die Startseite enthält eine umfangreiche Leistungsübersicht, Preisübersicht und Kontaktinformationen; für die Traditionelle Thai Massage liegt zudem eine Detailseite vor. Die vielen Leistungen und gesundheitlichen Wirkungsbeschreibungen auf der Startseite machen die Orientierung umfangreich."
+      },
+      "trust_transparency": {
+        "level": "usable_with_friction",
+        "evidence_ids": [
+          "a130d433-62b9-4b02-a954-1b121554a30d",
+          "f0837ce3-5d82-4c13-b709-097c291027e6",
+          "971f0c0d-8b2b-4d68-ba60-5bef9d298c6f"
+        ],
+        "checked_criteria": [
+          "Adresse",
+          "Öffnungszeiten",
+          "Kontaktangaben",
+          "Preise",
+          "Anerkennungsangaben",
+          "Bewertungsangaben"
+        ],
+        "rationale": "Adresse, Öffnungszeiten, Telefon, E-Mail, Preise sowie Angaben zu ASCA und EMR sind vorhanden. Für die beobachteten gesundheitsbezogenen Wirkungs- und Anwendungsangaben sind in den vorliegenden Ausschnitten keine Quellen, Einschränkungen oder Hinweise zu medizinischen Abklärungen ersichtlich."
+      },
+      "technical_seo": {
+        "level": null,
+        "evidence_ids": [
+          "119f2ee9-9a66-4d3a-baf6-43659e22a134",
+          "971f0c0d-8b2b-4d68-ba60-5bef9d298c6f"
+        ],
+        "checked_criteria": [
+          "Seitentitel in Crawl-Texten"
+        ],
+        "rationale": "Für Startseite und Leistungsdetailseite sind beschreibende Seitentitel im Crawl-Text vorhanden. Weitere technische SEO-Kriterien wurden nicht übergeben."
+      }
+    },
+    "performance_score": 95,
+    "quality_score": 70,
+    "coverage": 0.95,
+    "issues": [
+      {
+        "issue_id": "97eaa532-4c53-4ad2-91f7-8f61a286c3f0",
+        "category": "conversion",
+        "severity": "major",
+        "observation": "Das Kontaktformular öffnet gemäss Seitenhinweis ein E-Mail-Programm mit einer vorausgefüllten Nachricht.",
+        "evidence_ids": [
+          "f0837ce3-5d82-4c13-b709-097c291027e6"
+        ],
+        "page_ref": "page-46b57d69bb5f34e3844e033c",
+        "viewport": null,
+        "impact_hypothesis": "Besuchende ohne eingerichtetes E-Mail-Programm können die Anfrage möglicherweise nicht direkt übermitteln.",
+        "recommendation": "Ein direkt über die Website übermittelbares Kontaktformular ergänzen und Telefon sowie E-Mail als zusätzliche Kontaktwege beibehalten.",
+        "suggested_fix_target": "site_spec",
+        "reproduction": [
+          "Startseite öffnen.",
+          "Zum Abschnitt Kontakt scrollen.",
+          "Hinweis unter dem Formular lesen."
+        ]
+      },
+      {
+        "issue_id": "1ea1282e-c9ad-4de5-9f4b-3a7d1b823e53",
+        "category": "trust_transparency",
+        "severity": "minor",
+        "observation": "Die beobachteten Leistungsbeschreibungen enthalten gesundheitsbezogene Wirkungs- und Anwendungsangaben; in den vorliegenden Ausschnitten sind keine Quellen, Einschränkungen oder Hinweise zu medizinischen Abklärungen ersichtlich.",
+        "evidence_ids": [
+          "119f2ee9-9a66-4d3a-baf6-43659e22a134",
+          "01f36e4e-6f00-4f8a-b827-5c85a66e58cf",
+          "971f0c0d-8b2b-4d68-ba60-5bef9d298c6f"
+        ],
+        "page_ref": "page-46b57d69bb5f34e3844e033c",
+        "viewport": null,
+        "impact_hypothesis": "Ohne Einordnung können Besuchende Aussagen zu Beschwerden oder Erkrankungen als individuelle medizinische Zusage verstehen.",
+        "recommendation": "Gesundheitsbezogene Aussagen fachlich prüfen und, wo angemessen, mit klaren Einschränkungen oder einem Hinweis auf medizinische Abklärung einordnen.",
+        "suggested_fix_target": "source_data",
+        "reproduction": [
+          "Startseite oder Detailseite Traditionelle Thai Massage öffnen.",
+          "Leistungsbeschreibungen und Abschnitte zu empfohlenen Beschwerden lesen."
+        ]
+      }
+    ],
+    "limitations": [
+      "Geprüft wurden die Startseite und eine Leistungsdetailseite.",
+      "Es liegen keine Interaktionsaufzeichnungen für Navigation, Formularübermittlung, Telefonlinks oder E-Mail-Links vor.",
+      "Es wurden keine Angaben zu Canonical-Tags, robots.txt, Sitemap, strukturierten Daten, Indexierung oder Core Web Vitals übergeben.",
+      "Die Angaben zu Anerkennungen, Bewertungen und medizinischen Wirkungen wurden nicht extern verifiziert."
+    ]
+  },
+  "images": [
+    {
+      "path": "suriya-1.png",
+      "evidence_id": "cf93ab43-1587-478c-ae80-c7f26ca5e935",
+      "width": 375,
+      "height": 18984,
+      "sha256": "7e3702c885b744072e319ebad6d2f33a366bcf528a0d4828dcce29e89ceca1ff"
+    },
+    {
+      "path": "suriya-2.png",
+      "evidence_id": "0a859bf3-9659-4dd0-a939-f1ab9fa1c135",
+      "width": 1440,
+      "height": 10575,
+      "sha256": "e43ee9e32979288c44d33d2a23985da5718f758c031ab719504356651bcf9b41"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "119f2ee9-9a66-4d3a-baf6-43659e22a134",
+      "kind": "html",
+      "source_url": "https://www.suriya-spa.ch/",
+      "observed_at": "2026-09-13T20:46:43.540Z",
+      "artifact_hash": "9f5827759e6c5c65e09491c8f481d282516786d6ae886c99168ae321438536c8",
+      "locator": "C:\\Users\\StartKlar\\Documents\\ChatGPT\\Project-Polire\\website-factory\\data\\reviews-10-2026-09-13\\review-crawls\\suriya\\raw\\page-46b57d69bb5f34e3844e033c.html#text-chunk-1",
+      "excerpt": "Thai Massage Dübendorf | Suriya Spa, ASCA & EMR anerkannt\n\nSuriya Spa\nMassage & Holistic Therapy\n\n☰\n\nLeistungen\n\nÜber mich\n\nPreise\n\nFAQ\n\nBlog\n\nKontakt\n\nTraditionelle Thai Massage in Dübendorf\n\nCome in &hellip; feel well. Sawasdee kaa, herzlich willkommen im Suriya Spa.\n\n✓ ASCA anerkannt\n✓ EMR anerkannt\n✓ 40+ Zertifikate und Diplome\n\nTermin anfragen\n\nUnsere Leistungen\n\nAlle Massagen eignen sich für Frauen und Männer gleichermassen. Für deine erste Behandlung nimm dir bitte 15 Minuten mehr Zeit für eine kostenlose Beratung.\n\nTraditionelle Thai Massage\n\nDie Königsdisziplin: Druckpunkte, Dehnung und passives Yoga für den ganzen Körper, auf Matte oder Liege, 2 bis 2½ Stunden.\n\n60 Min. CHF 120\n\n90 Min. CHF 180\n\n120 Min. CHF 240\n\nMehr erfahren\nTermin anfragen\n\nThai Kräuterstempel Massage\n\nHeisse Kräuterstempel treffen auf gezielte Massagegriffe, wohltuend entspannend und traditionell heilend zugleich.\n\n60 Min. CHF 130\n\n90 Min. CHF 180\n\nMehr erfahren\nTermin anfragen\n\nTraditionelle Thai Öl Massage\n\nDie sanftere Variante der Thai-Massage mit pflegendem Öl, ideal für tiefe Entspannung ohne intensive Dehnung.\n\n60 Min. CHF 120\n\n90 Min. CHF 180\n\n120 Min. CHF 210\n\nMehr erfahren\nTermin anfragen\n\nFussreflexzonen Massage\n\nÜber 1'000 Nervenenden am Fuss stehen mit dem ganzen Körper in Verbindung, gezielte Aktivierung der Selbstheilungskräfte.\n\n60 Min. CHF 120\n\n90 Min. CHF 180\n\nMehr erfahren\nTermin anfragen\n\nKopf-Nacken-Schulter Massage\n\nLöst gezielt die Verspannungen, die Stress und schlechte Haltung im Alltag hinterlassen.\n\n60 Min. CHF 120\n\n90 Min. CHF 170\n\n120 Min. CHF 230\n\nMehr erfahren\nTermin anfragen\n\nGesichtsmassage\n\nPflegende Massage gegen Stress, Kopfschmerzen und Verspannungen im Gesicht, mit sichtbarem Frischekick.\n\n60 Min. CHF 100\n\nMehr erfahren\nTermin anfragen\n\nThai Tok-Sen Ma",
+      "numeric_value": null,
+      "unit": null
+    },
+    {
+      "evidence_id": "01f36e4e-6f00-4f8a-b827-5c85a66e58cf",
+      "kind": "html",
+      "source_url": "https://www.suriya-spa.ch/",
+      "observed_at": "2026-09-13T20:46:43.540Z",
+      "artifact_hash": "9f5827759e6c5c65e09491c8f481d282516786d6ae886c99168ae321438536c8",
+      "locator": "C:\\Users\\StartKlar\\Documents\\ChatGPT\\Project-Polire\\website-factory\\data\\reviews-10-2026-09-13\\review-crawls\\suriya\\raw\\page-46b57d69bb5f34e3844e033c.html#text-chunk-2",
+      "excerpt": "ssage\n\nJahrhundertealte Klopfmassage mit Holzhammer und Holzkeil entlang der Energielinien, wirksam gegen Schmerzen und Verspannungen.\n\n60 Min. CHF 130\n\nMehr erfahren\nTermin anfragen\n\nSchröpfen Massage\n\nTraditionelle Unterdrucktherapie am Rücken zur Aktivierung von Organen und Lösung von Verspannungen.\n\n60 Min. CHF 130\n\nMehr erfahren\nTermin anfragen\n\nGua Sha Massage\n\nSanftes Schaben mit Jade oder Horn regt Durchblutung und Selbstheilung an, seit Jahrtausenden bewährt.\n\n60 Min. CHF 130\n\nMehr erfahren\nTermin anfragen\n\nKlassische Massage\n\nDie älteste Heilkunst der Erde, medizinisch anerkannt bei Muskelverhärtungen, Kopfschmerzen und Stress.\n\n60 Min. CHF 120\n\n90 Min. CHF 180\n\n120 Min. CHF 240\n\nMehr erfahren\nTermin anfragen\n\nSport Massage\n\nVor und nach dem Sport: bereitet Muskeln vor oder unterstützt gezielt die Regeneration danach.\n\n60 Min. CHF 120\n\n90 Min. CHF 180\n\n120 Min. CHF 230\n\nMehr erfahren\nTermin anfragen\n\nAroma Therapie\n\nÄtherische Öle vertiefen die entspannende Wirkung der Massage über Haut und Geruchssinn.\n\n60 Min. CHF 130\n\n90 Min. CHF 190\n\nMehr erfahren\nTermin anfragen\n\nHot Stone Massage\n\nÜber 2'000 Jahre alte Tradition: warme Steine durchfluten den Körper mit Wärme und tiefer Entspannung.\n\n60 Min. CHF 135\n\n90 Min. CHF 190\n\n120 Min. CHF 250\n\nMehr erfahren\nTermin anfragen\n\nZusätzlich\n\nFreitags bei KINU\n\nJeden Freitag bin ich zusätzlich bei KINU tätig, mit Thai-Massage, Klassischer Massage und Fussreflexzonenmassage.\n\nZu KINU\n\nÜber mich\n\nWassana Schläpfer\n\nAlle nennen mich Noiy\n\nMeine Mutter ist eine angesehene Massage-Lehrerin in Chiang Rai, Thailand, mein Onkel führt Spas in Chiang Rai, Chiang Mai und Bangkok. Ich habe die traditionellen Massagetechniken in Thailand und in der Schweiz gelernt und biete seit 2013 professionelle Thai-Massagen in Dübendorf an.\n\nBei",
+      "numeric_value": null,
+      "unit": null
+    },
+    {
+      "evidence_id": "a130d433-62b9-4b02-a954-1b121554a30d",
+      "kind": "html",
+      "source_url": "https://www.suriya-spa.ch/",
+      "observed_at": "2026-09-13T20:46:43.540Z",
+      "artifact_hash": "9f5827759e6c5c65e09491c8f481d282516786d6ae886c99168ae321438536c8",
+      "locator": "C:\\Users\\StartKlar\\Documents\\ChatGPT\\Project-Polire\\website-factory\\data\\reviews-10-2026-09-13\\review-crawls\\suriya\\raw\\page-46b57d69bb5f34e3844e033c.html#text-chunk-3",
+      "excerpt": " mir gibt es keine Fliessband-Arbeit. Ich nehme mir Zeit für jede Person individuell, in einem gepflegten thailändischen Ambiente, inklusive Tee-Zeremonie nach der Behandlung.\n\n„Glaube nichts, ganz gleich wo du etwas liest oder wer es gesagt hat, ausser es stimmt überein mit deinen Motiven und deinem eigenen Menschenverstand.\" Buddha\nAlle Zertifikate und Ausbildungen ansehen &middot; Ursprung der Thai-Massage &middot; Geschichte und Konzept von Suriya Spa\n\n40+ Zertifikate und Diplome\n\nSeit 2013 in Dübendorf tätig\n\n3 Sprachen Deutsch, Englisch, Thai\n\nASCA / EMR krankenkassenanerkannt\n\nBewertungen\n\n4.8 / 5\n★★★★★\n9 verifizierte Bewertungen auf Treatwell\n\nAlle Bewertungen auf Treatwell lesen\n&middot;\nAuf Google Maps ansehen\n\nPreise\n\nÜbersicht\n\nPreise gemäss aktueller Preisliste.\n\nMassage 60 Min 90 Min 120 Min\n\nTraditionelle Thai Massage CHF 120 CHF 180 CHF 240\nThai Kräuterstempel Massage CHF 130 CHF 180\nTraditionelle Thai Öl Massage CHF 120 CHF 180 CHF 210\nFussreflexzonen Massage CHF 120 CHF 180\nKopf-Nacken-Schulter Massage CHF 120 CHF 170 CHF 230\nGesichtsmassage CHF 100\nThai Tok-Sen Massage CHF 130\nSchröpfen Massage CHF 130\nGua Sha Massage CHF 130\nKlassische Massage CHF 120 CHF 180 CHF 240\nSport Massage CHF 120 CHF 180 CHF 230\nAroma Therapie CHF 130 CHF 190\nHot Stone Massage CHF 135 CHF 190 CHF 250\n\nPreise gemäss aktuellem Treatwell-Profil. Gesichtsmassage ist auch als 30-Minuten-Variante für CHF 100 buchbar.\n\nTreuekarte: nach 10 Behandlungen wird die 11. im Wert des Durchschnittspreises gutgeschrieben\n\nGutschein: als Geschenk im Spa oder per E-Mail erhältlich\n\nGeburtstagsrabatt: 10 Prozent Rabatt oder 15 Minuten geschenkt, an deinem Geburtstag\n\nGutschein\n\nTreuekarte\n\nGeburtstagsrabatt\n\nEinblicke\n\nDer Spa\n\nKontakt\n\nTermin anfragen\n\nFür eine Behandlung meldest du dich am be",
+      "numeric_value": null,
+      "unit": null
+    },
+    {
+      "evidence_id": "f0837ce3-5d82-4c13-b709-097c291027e6",
+      "kind": "html",
+      "source_url": "https://www.suriya-spa.ch/",
+      "observed_at": "2026-09-13T20:46:43.540Z",
+      "artifact_hash": "9f5827759e6c5c65e09491c8f481d282516786d6ae886c99168ae321438536c8",
+      "locator": "C:\\Users\\StartKlar\\Documents\\ChatGPT\\Project-Polire\\website-factory\\data\\reviews-10-2026-09-13\\review-crawls\\suriya\\raw\\page-46b57d69bb5f34e3844e033c.html#text-chunk-4",
+      "excerpt": "sten telefonisch oder per E-Mail. Ich mache auch Kundenbesuche in Dübendorf und Umgebung.\n\nAdresse Wangenstrasse 5A, 8600 Dübendorf\nwenige Meter vom Bahnhof Dübendorf, Parkplatz neben dem Haus\n\nTelefon 079 475 42 77 / 079 918 79 98\n\nE-Mail info@suriya-spa.ch\n\nÖffnungszeiten Montag bis Freitag: 09:00 bis 19:00 Uhr\nSamstag: 10:00 bis 18:00 Uhr\nSonntag: geschlossen\n\nDa das Massieren mein Hobby ist, richte ich mich gerne auch ausserhalb dieser Zeiten nach deinen Wünschen: tagsüber, abends, am Samstag oder Sonntag sind Termine nach Absprache möglich. Bitte vereinbare deinen Termin rechtzeitig.\n\nJetzt anrufen\noder per E-Mail anfragen\n\nOder schreib mir direkt:\n\nName\n\nE-Mail\n\nTelefon (optional)\n\nNachricht\n\nNachricht senden\nÖffnet dein E-Mail-Programm mit einer vorausgefüllten Nachricht an Suriya Spa.\n\nSuriya Spa\n\nWangenstrasse 5A, 8600 Dübendorf &middot; 079 475 42 77 / 079 918 79 98\n\nImpressum &middot; Datenschutz &middot; AGB &middot; Cookies\n\n&copy; 2026 Suriya Spa &middot; Website & SEO/GEO von Yamanda",
+      "numeric_value": null,
+      "unit": null
+    },
+    {
+      "evidence_id": "971f0c0d-8b2b-4d68-ba60-5bef9d298c6f",
+      "kind": "html",
+      "source_url": "https://www.suriya-spa.ch/leistungen/thai-massage-traditionell.html",
+      "observed_at": "2026-09-13T20:46:43.540Z",
+      "artifact_hash": "608582c5e2cd25d8e402c2f531697a25a4c89183434b746af833b69be39f8c18",
+      "locator": "C:\\Users\\StartKlar\\Documents\\ChatGPT\\Project-Polire\\website-factory\\data\\reviews-10-2026-09-13\\review-crawls\\suriya\\raw\\page-92f5e3a46125233afa8c8273.html#text-chunk-1",
+      "excerpt": "Traditionelle Thai Massage in Dübendorf | Suriya Spa\n\nSuriya Spa\nMassage & Holistic Therapy\n\nLeistungen\n\nÜber mich\n\nPreise\n\nFAQ\n\nBlog\n\nKontakt\n\n&larr; Zurück zu allen Leistungen\n\nTraditionelle Thai Massage\n\nDauer: 2 bis 2½ Stunden &middot; Ganzkörperbehandlung &middot; ASCA und EMR anerkannt\n\n60 Min. CHF 120\n\n90 Min. CHF 180\n\n120 Min. CHF 240\n\nDruckpunkt-Massage entlang der zehn Haupt-Energielinien (Sen), kombiniert mit Dehnung und passivem Yoga. Bekleidet, auf Matte oder Liege, für den ganzen Körper.\n\nLöst Verspannungen und Blockaden, fördert die Durchblutung, mobilisiert die Gelenke und vertieft die Atmung. Wirkt vorbeugend und steigert das körperliche und geistige Wohlbefinden.\n\nEmpfehlenswert bei\n\nMuskuläre Verhärtungen, Verspannungen und Schmerzen\n\nKopf- und Gliederschmerzen\n\nAllgemeine Bewegungseinschränkungen\n\nProbleme mit dem Bewegungsapparat und Fehlhaltungen\n\nRückenschmerzen\n\nStressbedingte Beschwerden wie Schlafstörungen, Nervosität oder Burnout-Syndrom\n\nMigräne\n\nArthrose und weitere Gelenkerkrankungen\n\nKreislauf- und Durchblutungsstörungen\n\nMenstruationsbeschwerden\n\nStörungen des Verdauungstraktes\n\nEnergetisches Ungleichgewicht im Körper\n\nTermin anfragen\nPreise ansehen",
+      "numeric_value": null,
+      "unit": null
+    },
+    {
+      "evidence_id": "cf93ab43-1587-478c-ae80-c7f26ca5e935",
+      "kind": "screenshot",
+      "source_url": "https://www.suriya-spa.ch/",
+      "observed_at": "2026-09-13T20:46:51.803Z",
+      "artifact_hash": "7e3702c885b744072e319ebad6d2f33a366bcf528a0d4828dcce29e89ceca1ff",
+      "locator": "{\"viewport\":{\"width\":375,\"height\":812},\"full_page\":true}",
+      "excerpt": null,
+      "numeric_value": null,
+      "unit": null
+    },
+    {
+      "evidence_id": "0a859bf3-9659-4dd0-a939-f1ab9fa1c135",
+      "kind": "screenshot",
+      "source_url": "https://www.suriya-spa.ch/",
+      "observed_at": "2026-09-13T20:46:56.177Z",
+      "artifact_hash": "e43ee9e32979288c44d33d2a23985da5718f758c031ab719504356651bcf9b41",
+      "locator": "{\"viewport\":{\"width\":1440,\"height\":1000},\"full_page\":true}",
+      "excerpt": null,
+      "numeric_value": null,
+      "unit": null
+    },
+    {
+      "evidence_id": "2efbc2aa-1bfe-47e8-a85a-de68cdba1dbc",
+      "kind": "metric",
+      "source_url": "https://www.suriya-spa.ch/",
+      "observed_at": "2026-09-13T20:47:10.168Z",
+      "artifact_hash": "27f0adbf17730191f2b6f6913d4278281fa39a0b08111cba05e0e43d8ad3b902",
+      "locator": "C:\\Users\\StartKlar\\Documents\\ChatGPT\\Project-Polire\\website-factory\\data\\reviews-10-2026-09-13\\review-crawls\\suriya\\lighthouse-mobile.json",
+      "excerpt": "Lighthouse mobile performance",
+      "numeric_value": 95,
+      "unit": "lighthouse_mobile"
+    }
+  ],
+  "businessStatus": {
+    "slug": "suriya",
+    "status": "current_booking_signal",
+    "decision": "review",
+    "finding": "Passendes Studio in Dübendorf bietet auf Treatwell Buchungen an; OneDoc nennt Aufnahme neuer Kunden. Buchungsmöglichkeit sichtbar, kein Termin gebucht und keine Live-Verfügbarkeit zugesichert.",
+    "sources": [
+      "https://www.treatwell.ch/ort/suriya-spa/",
+      "https://www.onedoc.ch/it/studio-medicina-alternativa/dubendorf/ebcp5/suriya-spa"
+    ]
+  },
+  "demoDecision": "pending"
+}

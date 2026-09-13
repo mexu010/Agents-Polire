@@ -1,0 +1,224 @@
+{
+  "seed": {
+    "slug": "hp-blaettler",
+    "name": "Malerei H.P. Blättler GmbH",
+    "url": "https://www.hp-blaettler.ch/"
+  },
+  "observedAt": "2026-09-13T20:36:48.557Z",
+  "profileComplete": false,
+  "audit": {
+    "dimensions": {
+      "mobile_usability": {
+        "level": "major_friction",
+        "evidence_ids": [
+          "3e1da3c5-d9ec-4c8e-9c92-0caceaeabe5d"
+        ],
+        "checked_criteria": [
+          "Startansicht bei 375 × 812",
+          "Navigation",
+          "Überlagerungen",
+          "Inhaltszugang"
+        ],
+        "rationale": "In der mobilen Startansicht überdeckt der Einwilligungsdialog den oberen Inhaltsbereich. Weiter unten erscheint ein weiterer Einwilligungsbereich für Drittinhalte."
+      },
+      "conversion": {
+        "level": "usable_with_friction",
+        "evidence_ids": [
+          "a54b3b74-89bd-4b4b-871c-ef60b6ca32ac",
+          "3e1da3c5-d9ec-4c8e-9c92-0caceaeabe5d",
+          "75efb5b1-97aa-4262-ad2b-3a0ad76997d6"
+        ],
+        "checked_criteria": [
+          "Kontaktzugang",
+          "Telefonangabe",
+          "Einstieg über Navigation",
+          "Sichtbarkeit bei Cookie-Einwilligung"
+        ],
+        "rationale": "«Kontakt» und «Telefon: 033 822 72 70» sind vorhanden. Der Einwilligungsdialog verdeckt jedoch bei beiden beobachteten Ansichten wesentliche Bereiche der Startseite."
+      },
+      "content_clarity": {
+        "level": "usable_with_friction",
+        "evidence_ids": [
+          "a54b3b74-89bd-4b4b-871c-ef60b6ca32ac",
+          "fb3998ff-74b8-4537-bb86-29f3a8fd990d"
+        ],
+        "checked_criteria": [
+          "Leistungsnennung",
+          "Seitentitel und Seiteninhalt",
+          "Textverständlichkeit"
+        ],
+        "rationale": "Die Navigation nennt «Innenanstriche», «Aussenanstriche», «Holzwerk», «Tapezieren», «Dekoratives» und «Naturofloor». Bei der URL «/53/ueber-uns» lautet der beobachtete Seitentitel jedoch «Impressum», während der Inhalt «Über uns» beginnt."
+      },
+      "trust_transparency": {
+        "level": "usable_with_friction",
+        "evidence_ids": [
+          "a54b3b74-89bd-4b4b-871c-ef60b6ca32ac",
+          "fb3998ff-74b8-4537-bb86-29f3a8fd990d",
+          "3e1da3c5-d9ec-4c8e-9c92-0caceaeabe5d"
+        ],
+        "checked_criteria": [
+          "Impressum",
+          "Datenschutz",
+          "Kontaktangaben",
+          "Einwilligungshinweis"
+        ],
+        "rationale": "«Impressum», «Datenschutz», Firmenname, Adresse und Telefonnummer sind beobachtbar. Einwilligungsinformationen und ein zusätzlicher Drittinhalte-Hinweis sind ebenfalls sichtbar; deren vollständige Funktionsweise wurde nicht geprüft."
+      },
+      "technical_seo": {
+        "level": null,
+        "evidence_ids": [
+          "fb3998ff-74b8-4537-bb86-29f3a8fd990d"
+        ],
+        "checked_criteria": [
+          "Seitentitel und Seiteninhalt"
+        ],
+        "rationale": "Ein abweichender Seitentitel ist beobachtbar. Für Indexierbarkeit, strukturierte Daten, Canonicals, Robots, Sitemap, Ladezeit und weitere technische Kriterien liegen keine ausreichenden Beobachtungen vor."
+      }
+    },
+    "performance_score": null,
+    "quality_score": 41.666666666666664,
+    "coverage": 0.75,
+    "issues": [
+      {
+        "issue_id": "6866e478-f964-4c1f-a3cf-0e67a78f32b5",
+        "category": "mobile_usability",
+        "severity": "major",
+        "observation": "Der Einwilligungsdialog überdeckt in der Startansicht bei 375 × 812 den oberen Inhaltsbereich.",
+        "evidence_ids": [
+          "3e1da3c5-d9ec-4c8e-9c92-0caceaeabe5d"
+        ],
+        "page_ref": "page-1954c93e35bf2a278667d047",
+        "viewport": {
+          "width": 375,
+          "height": 812
+        },
+        "impact_hypothesis": "Wichtige Inhalte und Navigation können vor einer Entscheidung schlechter wahrnehmbar sein.",
+        "recommendation": "Einwilligungsdialog bei 375 × 812 auf Überdeckung, Platzbedarf und Bedienbarkeit prüfen.",
+        "suggested_fix_target": "renderer",
+        "reproduction": [
+          "Startseite bei 375 × 812 öffnen.",
+          "Einwilligungsdialog in der ersten Ansicht beobachten."
+        ]
+      },
+      {
+        "issue_id": "ede703d8-f5f8-423d-95bb-502379c9ab35",
+        "category": "conversion",
+        "severity": "major",
+        "observation": "Der Einwilligungsdialog liegt in der Desktop-Startansicht über dem zentralen Seiteninhalt.",
+        "evidence_ids": [
+          "75efb5b1-97aa-4262-ad2b-3a0ad76997d6"
+        ],
+        "page_ref": "page-1954c93e35bf2a278667d047",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "impact_hypothesis": "Der Zugang zu Inhalten und Kontakt kann bis zur Entscheidung beeinträchtigt sein.",
+        "recommendation": "Einwilligungsdialog auf Platzierung und Inhaltsüberdeckung prüfen.",
+        "suggested_fix_target": "renderer",
+        "reproduction": [
+          "Startseite bei 1440 × 1000 öffnen.",
+          "Einwilligungsdialog über dem Inhalt beobachten."
+        ]
+      },
+      {
+        "issue_id": "5873b9c5-d3b6-4b08-a396-ca602b8b3964",
+        "category": "content_clarity",
+        "severity": "minor",
+        "observation": "Bei «https://www.hp-blaettler.ch/53/ueber-uns» ist «Impressum» als Seitentitel beobachtbar; der Seiteninhalt beginnt mit «Über uns».",
+        "evidence_ids": [
+          "fb3998ff-74b8-4537-bb86-29f3a8fd990d"
+        ],
+        "page_ref": "page-a98ea9cd0439e24b0f0d2871",
+        "viewport": null,
+        "impact_hypothesis": "Abweichende Seitentitel und Seiteninhalt können Orientierung erschweren.",
+        "recommendation": "Seitentitel und Seiteninhalt für «Über uns» abgleichen.",
+        "suggested_fix_target": "source_data",
+        "reproduction": [
+          "«https://www.hp-blaettler.ch/53/ueber-uns» öffnen.",
+          "Seitentitel und Überschrift vergleichen."
+        ]
+      }
+    ],
+    "limitations": [
+      "Geprüft wurden die Startseite und eine Seite unter «/53/ueber-uns».",
+      "Für die Seite unter «/53/ueber-uns» liegt keine Screenshot-Beobachtung vor.",
+      "Keine Performance-Messwerte vorhanden.",
+      "Keine Interaktions-, Formular-, Link-, Einwilligungs- oder technischen SEO-Tests vorhanden."
+    ]
+  },
+  "images": [
+    {
+      "path": "hp-blaettler-1.png",
+      "evidence_id": "3e1da3c5-d9ec-4c8e-9c92-0caceaeabe5d",
+      "width": 482,
+      "height": 2267,
+      "sha256": "202a0d022f046b56e352cba169bfb7788a16d8a004236230182486ef5821dec0"
+    },
+    {
+      "path": "hp-blaettler-2.png",
+      "evidence_id": "75efb5b1-97aa-4262-ad2b-3a0ad76997d6",
+      "width": 1440,
+      "height": 1206,
+      "sha256": "433f3631b83e8e95db9fa936aa2c97416da936240438c534dc1de77b59b35fb6"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "a54b3b74-89bd-4b4b-871c-ef60b6ca32ac",
+      "kind": "html",
+      "source_url": "https://www.hp-blaettler.ch/",
+      "observed_at": "2026-09-13T20:36:48.557Z",
+      "artifact_hash": "3a7096a6afe2f461617f0fc3951c296d31732e510f0a5449a62c346ce31e5d30",
+      "locator": "C:\\Users\\StartKlar\\Documents\\ChatGPT\\Project-Polire\\website-factory\\data\\reviews-10-2026-09-13\\crawl\\lead-68822444-1ae9-47f0-bba7-0f34c1af001f\\collect-ee00b82d-6816-4487-b3b5-cb150b2e3780\\raw\\page-1954c93e35bf2a278667d047.html#text-chunk-1",
+      "excerpt": "Malerei H.P. Blättler GmbH - Interlaken - Startseite\n\nLogo HP_Blaettler_GmbH\n\nMegaMenu\n\nMenu\n\nHome\n\nÜber uns\n\nTeam\n\nUnser Angebot\n\nInnenanstriche\n\nAussenanstriche\n\nHolzwerk\n\nTapezieren\n\nDekoratives\n\nNaturofloor\n\nKontakt\n\nImpressum\n\nDatenschutz\n\nMalerei H.P. Blättler GmbH\n\nLassen Sie sich durch unsere Malerarbeiten begeistern.\n\nAm 4. April 1972 übernahm Hans-Peter Blättler-Glauser das Malergeschäft von Arnold Feller an der Bernastrasse 28 in Interlaken. Nach 15 Jahren bezieht die Firma Blättler die neue Werkstatt mit Büroräumen in der Gewerbezone Ost.\n\nLangjährige Erfahrungen, treue Mitarbeiter und persönliche Beratung beim Erstellen von Farbmuster zeichnen das Unternehmen bis heute aus. Im Jahr 2006 wurde die Einzelfirma in die Malerei H.P. Blättler GmbH umgewandelt.\n\nUnsere Kundenmaler bieten die ganze Palette, vom neuen Anstrich ihrer Fassade über die Renovation ihrer Wohnung, spritzen ihres lieblings Stücks oder setzen ihr persönliches Raumkonzept mit Gestaltung einer Digitaldrucktapete bis hin zum grösseren gewerblichen Bauvorhaben um. In Zusammenarbeit mit der Denkmalpflege restaurieren wir ihr erhaltenswertes Objekt.\n\nSlider_stehend_300\n\nFusszeile Kontakte\n\nMalerei H.P. Blättler GmbH - Sendlistrasse 4 - CH-3800 Interlaken - Telefon: 033 822 72 70 - Kontakte Webdesign by B&A SERVICES\n\nshariff_socials\n\nBenutzername:\n\nUser-Login\n\nIhr E-Mail",
+      "numeric_value": null,
+      "unit": null
+    },
+    {
+      "evidence_id": "fb3998ff-74b8-4537-bb86-29f3a8fd990d",
+      "kind": "html",
+      "source_url": "https://www.hp-blaettler.ch/53/ueber-uns",
+      "observed_at": "2026-09-13T20:36:48.557Z",
+      "artifact_hash": "017d77e23ad670287da920949afffd7daccad751ea46c682f64d18a9dc3aa707",
+      "locator": "C:\\Users\\StartKlar\\Documents\\ChatGPT\\Project-Polire\\website-factory\\data\\reviews-10-2026-09-13\\crawl\\lead-68822444-1ae9-47f0-bba7-0f34c1af001f\\collect-ee00b82d-6816-4487-b3b5-cb150b2e3780\\raw\\page-a98ea9cd0439e24b0f0d2871.html#text-chunk-1",
+      "excerpt": "Malerei H.P. Blättler GmbH - Interlaken - Impressum\n\nLogo HP_Blaettler_GmbH\n\nMegaMenu\n\nMenu\n\nHome\n\nÜber uns\n\nTeam\n\nUnser Angebot\n\nInnenanstriche\n\nAussenanstriche\n\nHolzwerk\n\nTapezieren\n\nDekoratives\n\nNaturofloor\n\nKontakt\n\nImpressum\n\nDatenschutz\n\n&Uuml;ber uns\n\r\n\r\nDie Fachleute schwingen nicht nur den Pinsel, sondern f&uuml;r spezielle Techniken auch den Schwamm oder den Spachtel f&uuml;r die Stuccos: die Malerei H.P. Bl&auml;ttler GmbH hat sich als zuverl&auml;ssiger und erstklassiger Partner mit viel Fingerspitzengef&uuml;hl und fairen Preisen bei zahlreichen zufriedenen Kunden bew&auml;hrt.\n\r\n\r\nWir leisten einen aktiven Umweltbeitrag durch die Verwendung von Emissionsstoff-freien Farben und umweltschonenden Lacken, sowie durch deren fachgerechte Entsorgung.\n\r\nModerne Wohnwelten verbinden Komfort und Behaglichkeit mit individuellem Flair.\n\r\n\r\nNach 40-j&auml;hrigem, intensivem Engagement wird Hans-Peter Bl&auml;ttler sukzessive k&uuml;rzer treten. Im August 2012 hat Bernadette Ley-Bl&auml;ttler die Gesch&auml;ftsf&uuml;hrung &uuml;bernommen. Die Gesch&auml;ftsleitung wird erweitert durch den Betriebsleiter Beat Grossenbacher. Das Ziel der Malerei H.P. Bl&auml;ttler GmbH ist auch zuk&uuml;nftig die Unternehmung im gleichen Sinn und Geist weiter zu f&uuml;hren. Kontaktieren Sie uns - wir beraten Sie gerne!\n\r\n\r\n\n\r\n\nSlider_stehend_300\n\nFusszeile Kontakte\n\nMalerei H.P. Blättler GmbH - Sendlistrasse 4 - CH-3800 Interlaken - Telefon: 033 822 72 70 - Kontakte Webdesign by B&A SERVICES\n\nshariff_socials\n\nBenutzername:\n\nUser-Login\n\nIhr E-Mail",
+      "numeric_value": null,
+      "unit": null
+    },
+    {
+      "evidence_id": "3e1da3c5-d9ec-4c8e-9c92-0caceaeabe5d",
+      "kind": "screenshot",
+      "source_url": "https://www.hp-blaettler.ch/",
+      "observed_at": "2026-09-13T20:36:59.118Z",
+      "artifact_hash": "202a0d022f046b56e352cba169bfb7788a16d8a004236230182486ef5821dec0",
+      "locator": "{\"viewport\":{\"width\":375,\"height\":812},\"full_page\":true}",
+      "excerpt": null,
+      "numeric_value": null,
+      "unit": null
+    },
+    {
+      "evidence_id": "75efb5b1-97aa-4262-ad2b-3a0ad76997d6",
+      "kind": "screenshot",
+      "source_url": "https://www.hp-blaettler.ch/",
+      "observed_at": "2026-09-13T20:37:06.497Z",
+      "artifact_hash": "433f3631b83e8e95db9fa936aa2c97416da936240438c534dc1de77b59b35fb6",
+      "locator": "{\"viewport\":{\"width\":1440,\"height\":1000},\"full_page\":true}",
+      "excerpt": null,
+      "numeric_value": null,
+      "unit": null
+    }
+  ],
+  "businessStatus": {
+    "slug": "hp-blaettler",
+    "status": "recent_activity_evidence",
+    "decision": "review",
+    "finding": "Projektabrechnung vom Mai 2025 nennt ausgeführte Malerarbeiten; Teamseite und aktiver Registerstatus mit Änderung im Dezember 2025 vorhanden.",
+    "sources": [
+      "https://boedeli-bibliothek.ch/wp-content/uploads/2025/05/Projekt-Umzug-Boedeli-Bibliothek-und-Ludothek-JoJo-in-die-Bleikimatta_Abschlussbericht_20250519-1.pdf",
+      "https://www.hp-blaettler.ch/85/team",
+      "https://www.moneyhouse.ch/de/company/malerei-h-p-blaettler-gmbh-12068897511"
+    ]
+  },
+  "demoDecision": "pending"
+}

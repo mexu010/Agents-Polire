@@ -1,0 +1,245 @@
+{
+  "seed": {
+    "slug": "zimmerli",
+    "name": "Zimmerli Dach- & Lukarnenbau AG",
+    "url": "https://www.zdl.ch/"
+  },
+  "observedAt": "2026-09-13T20:45:56.237Z",
+  "profileComplete": false,
+  "scoutError": "ProviderError: Every declared image must be supplied exactly once",
+  "audit": {
+    "dimensions": {
+      "mobile_usability": {
+        "level": "minor_friction",
+        "evidence_ids": [
+          "29609819-f92c-4ae0-9ad5-2e5360551dcd"
+        ],
+        "checked_criteria": [
+          "Navigation auf 375 px",
+          "sichtbarer Cookie-Hinweis",
+          "Lesbarkeit der Startseite",
+          "Kontaktangaben auf 375 px"
+        ],
+        "rationale": "Auf 375 px ist ein Menü-Symbol sichtbar. Der Cookie-Hinweis mit „Ich bin einverstanden“, „Ablehnen“ und „Einstellungen“ nimmt im oberen Bereich sichtbaren Platz ein."
+      },
+      "conversion": {
+        "level": "usable_with_friction",
+        "evidence_ids": [
+          "e0e22242-5000-4d4a-8fac-f92543a07750",
+          "29609819-f92c-4ae0-9ad5-2e5360551dcd",
+          "7839fe6f-f16e-43fc-80b3-ad101dc70460"
+        ],
+        "checked_criteria": [
+          "Kontaktweg",
+          "Handlungsaufforderungen",
+          "Leistungsübersicht"
+        ],
+        "rationale": "„Kontaktieren Sie uns“ sowie Telefon-, Mobiltelefon- und E-Mail-Angaben sind vorhanden. „Unsere Systeme“ und „Kontaktieren Sie uns“ sind im sichtbaren Inhaltsbereich unterschiedlich hervorgehoben."
+      },
+      "content_clarity": {
+        "level": "no_material_issue",
+        "evidence_ids": [
+          "e0e22242-5000-4d4a-8fac-f92543a07750",
+          "4e148549-335e-4eda-939d-96872d3a5875"
+        ],
+        "checked_criteria": [
+          "Leistungsbeschreibung",
+          "Dienstleistungspaket",
+          "Über-uns-Inhalte"
+        ],
+        "rationale": "Herstellung und Montage von Dachlukarnen als Fertigelemente sowie Konstruktion, Herstellung und Montage sind beschrieben. Das Dienstleistungspaket nennt Persönliche Beratung, Lösungsvorschläge, Konstruktion, Offertstellung, Abklärung bei Behörden, Bauprofil, Baugesuch, Herstellung der Dachlukarne(n), Lieferung und Montage."
+      },
+      "trust_transparency": {
+        "level": "minor_friction",
+        "evidence_ids": [
+          "e0e22242-5000-4d4a-8fac-f92543a07750",
+          "671f65c6-e261-4b59-a8aa-535b44bf2211",
+          "29609819-f92c-4ae0-9ad5-2e5360551dcd"
+        ],
+        "checked_criteria": [
+          "Kontaktangaben",
+          "Datenschutzerklärung",
+          "Impressum",
+          "Firmeninformationen"
+        ],
+        "rationale": "Rohrerstrasse 20, 5000 Aarau, Tel: 062 822 37 23, Nat: 079 657 88 49, Datenschutzerklärung und Impressum sind vorhanden. Im HTML steht bei der E-Mail-Adresse „Diese E-Mail-Adresse ist vor Spambots geschützt! Zur Anzeige muss JavaScript eingeschaltet sein.“"
+      },
+      "technical_seo": {
+        "level": null,
+        "evidence_ids": [],
+        "checked_criteria": [
+          "Seitentitel im HTML",
+          "Weitere technische SEO-Kriterien nicht beobachtet"
+        ],
+        "rationale": "Meta-Angaben, Canonical, strukturierte Daten, Indexierbarkeit und Sitemap sind nicht vorliegend."
+      }
+    },
+    "performance_score": 89,
+    "quality_score": 75.3157894736842,
+    "coverage": 0.95,
+    "issues": [
+      {
+        "issue_id": "7bf331da-ed15-4155-ada7-d67701775058",
+        "category": "mobile_usability",
+        "severity": "minor",
+        "observation": "Der Cookie-Hinweis mit „Ich bin einverstanden“, „Ablehnen“ und „Einstellungen“ ist auf 375 px im oberen sichtbaren Bereich platziert.",
+        "evidence_ids": [
+          "29609819-f92c-4ae0-9ad5-2e5360551dcd"
+        ],
+        "page_ref": "page-1d1224587e6f6372439866a6",
+        "viewport": {
+          "width": 375,
+          "height": 812
+        },
+        "impact_hypothesis": "Der Cookie-Hinweis kann den ersten Inhaltsbereich auf kleinen Bildschirmen visuell verdrängen.",
+        "recommendation": "Cookie-Hinweis auf kleinen Bildschirmen kompakter gestalten.",
+        "suggested_fix_target": "renderer",
+        "reproduction": [
+          "Startseite mit 375 × 812 px öffnen.",
+          "Oberen sichtbaren Bereich prüfen."
+        ]
+      },
+      {
+        "issue_id": "c7c12b8c-beef-4542-a74c-1413a7d57290",
+        "category": "conversion",
+        "severity": "minor",
+        "observation": "„Unsere Systeme“ ist visuell als umrandete Schaltfläche dargestellt. „Kontaktieren Sie uns“ ist im gleichen Inhaltsbereich weniger hervorgehoben.",
+        "evidence_ids": [
+          "29609819-f92c-4ae0-9ad5-2e5360551dcd",
+          "7839fe6f-f16e-43fc-80b3-ad101dc70460"
+        ],
+        "page_ref": "page-1d1224587e6f6372439866a6",
+        "viewport": {
+          "width": 375,
+          "height": 812
+        },
+        "impact_hypothesis": "Der Kontaktweg kann gegenüber „Unsere Systeme“ weniger auffallen.",
+        "recommendation": "„Kontaktieren Sie uns“ als gleichwertig erkennbare Schaltfläche gestalten.",
+        "suggested_fix_target": "renderer",
+        "reproduction": [
+          "Startseite mit 375 × 812 px öffnen.",
+          "Bereich mit „Unsere Systeme“ und „Kontaktieren Sie uns“ prüfen."
+        ]
+      },
+      {
+        "issue_id": "9f0adce6-3c3f-4a79-abff-3968ff5d1024",
+        "category": "trust_transparency",
+        "severity": "minor",
+        "observation": "Im HTML steht bei der E-Mail-Adresse „Diese E-Mail-Adresse ist vor Spambots geschützt! Zur Anzeige muss JavaScript eingeschaltet sein.“",
+        "evidence_ids": [
+          "e0e22242-5000-4d4a-8fac-f92543a07750"
+        ],
+        "page_ref": "page-1d1224587e6f6372439866a6",
+        "viewport": null,
+        "impact_hypothesis": "Ohne JavaScript kann die E-Mail-Adresse im HTML nicht angezeigt werden.",
+        "recommendation": "E-Mail-Kontakt ohne JavaScript zugänglich gestalten.",
+        "suggested_fix_target": "renderer",
+        "reproduction": [
+          "Startseite ohne JavaScript prüfen.",
+          "Kontaktbereich prüfen."
+        ]
+      }
+    ],
+    "limitations": [
+      "Geprüft wurden die Startseite und die Seite „Über uns“.",
+      "Keine Beobachtung von Meta-Angaben, Canonical, strukturierten Daten, Indexierbarkeit, Sitemap oder Rechtsseitentexten.",
+      "Keine Interaktions- oder JavaScript-Deaktivierungsprüfung vorliegend.",
+      "Keine mobile Aufnahme der Seite „Über uns“ vorliegend."
+    ]
+  },
+  "images": [
+    {
+      "path": "zimmerli-1.png",
+      "evidence_id": "29609819-f92c-4ae0-9ad5-2e5360551dcd",
+      "width": 375,
+      "height": 3567,
+      "sha256": "63db341de335df75bb346156b45d64f6fc4b72ae8e2c2111320ac8d831edda18"
+    },
+    {
+      "path": "zimmerli-2.png",
+      "evidence_id": "7839fe6f-f16e-43fc-80b3-ad101dc70460",
+      "width": 1440,
+      "height": 2663,
+      "sha256": "ec3cbe1dd2d0c142dcf2b1e399cc1e27fdab63ead6cb4a0200e3a339d1d236e9"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "e0e22242-5000-4d4a-8fac-f92543a07750",
+      "kind": "html",
+      "source_url": "https://www.zdl.ch/",
+      "observed_at": "2026-09-13T20:45:56.237Z",
+      "artifact_hash": "1bc93018546839add4fcb8957d184f7cdc1ad76cdbab101cdd76101bea661a25",
+      "locator": "C:\\Users\\StartKlar\\Documents\\ChatGPT\\Project-Polire\\website-factory\\data\\reviews-10-2026-09-13\\review-crawls\\zimmerli\\raw\\page-1d1224587e6f6372439866a6.html#text-chunk-1",
+      "excerpt": "Zimmerli Dach- & Lukarnenbau AG – Home\n\nSkip to main content\n\nHome\n\nDachlukarnen\n\nArbeit mit System\n\nGalerie\n\nSteildach\n\nFlachdach\n\nSpenglerarbeiten\n\nSeitenfenster\n\nÜber uns\n\nWir suchen\n\nKontakt\n\nHome\n\nDachlukarnen\n\nArbeit mit System\n\nGalerie\n\nSteildach\n\nFlachdach\n\nSpenglerarbeiten\n\nSeitenfenster\n\nÜber uns\n\nWir suchen\n\nKontakt\n\nIn einem Tag mehr Raum und Licht\n\nWir planen, bauen und montieren\nHerstellung und Montage von Dachlukarnen als Fertigelemente sind eine Spezialität unseres Unternehmens. Die Lukarnen werden in unserem Werk in Aarau vorfabriziert, an jeden gewünschten Ort geliefert und in einem einzigen Arbeitstag beim Kunden montiert.\n\nKonstruktion, Herstellung und Montage sind in einem umfassenden  Dienstleistungspaket  eingebettet, das folgende Leistungen enthält:\n\nUnsere Systeme\n\nKontaktieren Sie uns\n\nDienstleistungspaket\n\nKonstruktion, Herstellung und Montage sind in einem umfassenden Dienstleistungspaket eingebettet, das folgende Leistungen enthält:\n\nPersönliche Beratung\n\nLösungsvorschläge\n\nKonstruktion\n\nOffertstellung\n\nAbklärung bei Behörden\n\nBauprofil\n\nBaugesuch\n\nHerstellung der Dachlukarne(n)\n\nLieferung und Montage\n\nFür die Ausstattung der Fertigelemente stehen verschiedene Materialien, Fenster, Rolladen und Lamellenstorn zur Verfügung.\n\nRohrerstrasse 20\n5000 Aarau\nEmail: Diese E-Mail-Adresse ist vor Spambots geschützt! Zur Anzeige muss JavaScript eingeschaltet sein.\n\nTel: 062 822 37 23\nNat: 079 657 88 49\nFax: 062 824 91 33\n\nCopyright © 2010 Zimmerli Dach- & Lukarnenbau AG\nWebdesign by Web-d-vision GmbH\n\nDatenschutzerklärung\n\nImpressum",
+      "numeric_value": null,
+      "unit": null
+    },
+    {
+      "evidence_id": "4e148549-335e-4eda-939d-96872d3a5875",
+      "kind": "html",
+      "source_url": "https://www.zdl.ch/ueber-uns",
+      "observed_at": "2026-09-13T20:45:56.237Z",
+      "artifact_hash": "378431ed98be2589f76cbd4b981704a197408e5ae01fcd760e302f7c269bea3c",
+      "locator": "C:\\Users\\StartKlar\\Documents\\ChatGPT\\Project-Polire\\website-factory\\data\\reviews-10-2026-09-13\\review-crawls\\zimmerli\\raw\\page-5692ba3e4683ac7d6b08665f.html#text-chunk-1",
+      "excerpt": "Zimmerli Dach- & Lukarnenbau AG – Über uns\n\nSkip to main content\n\nHome\n\nDachlukarnen\n\nArbeit mit System\n\nGalerie\n\nSteildach\n\nFlachdach\n\nSpenglerarbeiten\n\nSeitenfenster\n\nÜber uns\n\nWir suchen\n\nKontakt\n\nHome\n\nDachlukarnen\n\nArbeit mit System\n\nGalerie\n\nSteildach\n\nFlachdach\n\nSpenglerarbeiten\n\nSeitenfenster\n\nÜber uns\n\nWir suchen\n\nKontakt\n\nÜber uns\n\nUnsere Firma Bedachungen P. Zimmerli wurde im Jahr 1990 gegründet. Per 1. Juli 2008 haben wir die Lukarnenabteilung der Hirt Isolierbau AG übernommen. Neu heisst unsere Firma ZIMMERLI Dach- & Lukarnenbau A G und die Produktion haben wir nach Aarau verlegt.\n\nSteil- und Flachdach\n\nFassaden\n\nIsolationen\n\nSpenglerarbeiten\n\nLukarnen im Fertigelement\n\nZDL\n\nDa wir nicht nur das Know How sondern auch langjährige Mitarbeiter der Firma Hirt Isolierbau AG übernommen haben, bieten wir in allen Fachbereichen massgeschneiderte Angebote und Lösungen. Zeichner, Spengler, Schreiner, Zimmerleute, Dachdecker, Monteure und Kaufleute sorgen unter einem Dach für eine reibungslose und persönliche Zusammenarbeit.\nHerstellung und Montage von Dachlukarnen als Fertigelemente sind eine Spezialität unseres Unternehmens. Die Lukarnen werden in Aarau vorfabriziert, an jeden gewünschten Ort geliefert und in einem einzigen Arbeitstag beim Kunden montiert.\nKonstruktion, Herstellung und Montage sind in einem umfassenden Dienstleistungspaket eingebettet, das folgende Leistungen enthält:\n\nPersönliche Beratung\n\nLösungsvorschläge\n\nKonstruktion\n\nOffertstellung\n\nAbklärungen bei Behörden\n\nBauprofil\n\nBaugesuch\n\nHerstellung der Dachlukarnen\n\nLieferung und Montage\n\nFür die Ausstattung der Fertigelemente stehen verschiedenste Materialien, Fenster, Rollläden und Lamellenstoren zur Verfügung.\n\nRohrerstrasse 20\n5000 Aarau\nEmail: Diese E-Mail-Adresse ist vor Spambots geschützt! Zur",
+      "numeric_value": null,
+      "unit": null
+    },
+    {
+      "evidence_id": "671f65c6-e261-4b59-a8aa-535b44bf2211",
+      "kind": "html",
+      "source_url": "https://www.zdl.ch/ueber-uns",
+      "observed_at": "2026-09-13T20:45:56.237Z",
+      "artifact_hash": "378431ed98be2589f76cbd4b981704a197408e5ae01fcd760e302f7c269bea3c",
+      "locator": "C:\\Users\\StartKlar\\Documents\\ChatGPT\\Project-Polire\\website-factory\\data\\reviews-10-2026-09-13\\review-crawls\\zimmerli\\raw\\page-5692ba3e4683ac7d6b08665f.html#text-chunk-2",
+      "excerpt": " Anzeige muss JavaScript eingeschaltet sein.\n\nTel: 062 822 37 23\nNat: 079 657 88 49\nFax: 062 824 91 33\n\nCopyright © 2010 Zimmerli Dach- & Lukarnenbau AG\nWebdesign by Web-d-vision GmbH\n\nDatenschutzerklärung\n\nImpressum",
+      "numeric_value": null,
+      "unit": null
+    },
+    {
+      "evidence_id": "29609819-f92c-4ae0-9ad5-2e5360551dcd",
+      "kind": "screenshot",
+      "source_url": "https://www.zdl.ch/",
+      "observed_at": "2026-09-13T20:46:02.661Z",
+      "artifact_hash": "63db341de335df75bb346156b45d64f6fc4b72ae8e2c2111320ac8d831edda18",
+      "locator": "{\"viewport\":{\"width\":375,\"height\":812},\"full_page\":true}",
+      "excerpt": null,
+      "numeric_value": null,
+      "unit": null
+    },
+    {
+      "evidence_id": "7839fe6f-f16e-43fc-80b3-ad101dc70460",
+      "kind": "screenshot",
+      "source_url": "https://www.zdl.ch/",
+      "observed_at": "2026-09-13T20:46:05.762Z",
+      "artifact_hash": "ec3cbe1dd2d0c142dcf2b1e399cc1e27fdab63ead6cb4a0200e3a339d1d236e9",
+      "locator": "{\"viewport\":{\"width\":1440,\"height\":1000},\"full_page\":true}",
+      "excerpt": null,
+      "numeric_value": null,
+      "unit": null
+    },
+    {
+      "evidence_id": "ad1cf817-8484-4ddc-80d0-e1cb9f7fba82",
+      "kind": "metric",
+      "source_url": "https://www.zdl.ch/",
+      "observed_at": "2026-09-13T20:46:18.372Z",
+      "artifact_hash": "3cfd18cd81678a63fa3470ddff9bd778696771805a78507fbaf5be35f835e8c1",
+      "locator": "C:\\Users\\StartKlar\\Documents\\ChatGPT\\Project-Polire\\website-factory\\data\\reviews-10-2026-09-13\\review-crawls\\zimmerli\\lighthouse-mobile.json",
+      "excerpt": "Lighthouse mobile performance",
+      "numeric_value": 89,
+      "unit": "lighthouse_mobile"
+    }
+  ],
+  "businessStatus": {
+    "slug": "zimmerli",
+    "status": "recent_activity_evidence",
+    "decision": "review",
+    "finding": "Anzeige im Mitteilungsblatt März 2026 mit gleicher Website und Anschrift; passender Registereintrag wird als aktiv geführt.",
+    "sources": [
+      "https://www.stadtteilverein-rohr.ch/wp-content/uploads/sr_26_1.pdf",
+      "https://www.moneyhouse.ch/de/company/zimmerli-dach-lukarnenbau-ag-4229163471"
+    ]
+  },
+  "demoDecision": "pending"
+}

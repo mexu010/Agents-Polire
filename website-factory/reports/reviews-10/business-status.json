@@ -1,0 +1,107 @@
+{
+  "checkedAt": "2026-09-13",
+  "method": "Öffentliche Webrecherche; keine Kontaktaufnahme. Registerstatus ist kein Beweis laufenden Tagesgeschäfts.",
+  "leads": [
+    {
+      "slug": "anton-helscher",
+      "status": "recent_activity_evidence",
+      "decision": "review",
+      "finding": "Als Projektverantwortlicher in einer Baupublikation mit Einsprachefrist 28. Januar 2026 genannt.",
+      "sources": [
+        "https://azeiger.ch/wp-content/uploads/2026/01/Azeiger_02_2026.pdf"
+      ]
+    },
+    {
+      "slug": "hp-blaettler",
+      "status": "recent_activity_evidence",
+      "decision": "review",
+      "finding": "Projektabrechnung vom Mai 2025 nennt ausgeführte Malerarbeiten; Teamseite und aktiver Registerstatus mit Änderung im Dezember 2025 vorhanden.",
+      "sources": [
+        "https://boedeli-bibliothek.ch/wp-content/uploads/2025/05/Projekt-Umzug-Boedeli-Bibliothek-und-Ludothek-JoJo-in-die-Bleikimatta_Abschlussbericht_20250519-1.pdf",
+        "https://www.hp-blaettler.ch/85/team",
+        "https://www.moneyhouse.ch/de/company/malerei-h-p-blaettler-gmbh-12068897511"
+      ]
+    },
+    {
+      "slug": "kreuzgarage-lanz",
+      "status": "retirement_closure_signal",
+      "decision": "exclude",
+      "finding": "Eigene Chronik nennt Pensionierung 2024; ein Verzeichnis markiert den Betrieb als geschlossen. Kein belastbarer Nachweis eines fortgeführten Betriebs.",
+      "sources": [
+        "https://kreuzgaragelanz.ch/firmen-chronik",
+        "https://www.allbiz.ch/kreuzgarage-lanz"
+      ]
+    },
+    {
+      "slug": "andere-gaerten",
+      "status": "registry_active_operations_unconfirmed",
+      "decision": "research",
+      "finding": "Moneyhouse führt den passenden Einzelbetrieb als aktiv. Letzte dort gezeigte Registeränderung 2004; kein aktueller datierter Arbeitsnachweis gefunden. Tagesgeschäft bleibt ungeklärt.",
+      "sources": [
+        "https://www.moneyhouse.ch/en/company/andere-gaerten-markus-w-wysshaar-11974175911",
+        "https://www.deranderegaertner.ch/"
+      ]
+    },
+    {
+      "slug": "alex-fiore",
+      "status": "recent_activity_evidence",
+      "decision": "review",
+      "finding": "Lokaler Ferienpass nennt Fiore Alex Kundengärtner als Sponsor für 2026. Das ist ein aktuelles Aktivitätssignal, kein direkter Nachweis verfügbarer Auftragskapazität.",
+      "sources": [
+        "https://www.ferienpass-neuendorf.org/sponsoren/",
+        "https://alexfiore.ch/"
+      ]
+    },
+    {
+      "slug": "kyburz",
+      "status": "liquidation_signal",
+      "decision": "exclude",
+      "finding": "Passender Betrieb Stefan Kyburz AG Gartengestaltung, Birrwilerstrasse 475, Zetzwil, CHE-471.954.636: Konkurs vom 21. Mai 2026 und Liquidation laut SHAB-Wiedergabe. Nicht mit Kyburz Gartengestaltung GmbH in Malans verwechseln.",
+      "sources": [
+        "https://www.moneyhouse.ch/de/company/stefan-kyburz-ag-gartengestaltung-13550140011",
+        "https://www.kyburzgartenbau.ch/"
+      ]
+    },
+    {
+      "slug": "zimmerli",
+      "status": "recent_activity_evidence",
+      "decision": "review",
+      "finding": "Anzeige im Mitteilungsblatt März 2026 mit gleicher Website und Anschrift; passender Registereintrag wird als aktiv geführt.",
+      "sources": [
+        "https://www.stadtteilverein-rohr.ch/wp-content/uploads/sr_26_1.pdf",
+        "https://www.moneyhouse.ch/de/company/zimmerli-dach-lukarnenbau-ag-4229163471"
+      ]
+    },
+    {
+      "slug": "bauert",
+      "status": "registry_active_operations_unconfirmed",
+      "decision": "research",
+      "finding": "Passender heutiger Betrieb Bauert AG Parkpflege Gartenbau, Eymattstrasse 9, CHE-261.603.269, wird als aktiv geführt. Website und Kontaktdaten stimmen überein; kein aktueller datierter Arbeitsnachweis verifiziert.",
+      "sources": [
+        "https://www.moneyhouse.ch/fr/company/bauert-ag-parkpflege-gartenbau-4265459931",
+        "https://www.bauert-gartenbau.ch/"
+      ]
+    },
+    {
+      "slug": "suriya",
+      "status": "current_booking_signal",
+      "decision": "review",
+      "finding": "Passendes Studio in Dübendorf bietet auf Treatwell Buchungen an; OneDoc nennt Aufnahme neuer Kunden. Buchungsmöglichkeit sichtbar, kein Termin gebucht und keine Live-Verfügbarkeit zugesichert.",
+      "sources": [
+        "https://www.treatwell.ch/ort/suriya-spa/",
+        "https://www.onedoc.ch/it/studio-medicina-alternativa/dubendorf/ebcp5/suriya-spa"
+      ]
+    },
+    {
+      "slug": "garage-brunner",
+      "status": "recent_activity_evidence",
+      "decision": "review",
+      "finding": "Passender Betrieb in Jonschwil mit Stellenanzeige aus 2026, Händlerprofil und aktivem Registerstatus. Namensgleiche Garagen anderer Orte wurden nicht verwendet.",
+      "sources": [
+        "https://www.ostjob.ch/job/automechatroniker-in-automobilfachmann-80-100/1080208",
+        "https://www.autoscout24.ch/it/ip/garage-brunner-ag-9243-jonschwil/contact?accountid=64615",
+        "https://business-monitor.ch/de/companies/565518-garage-brunner-ag"
+      ]
+    }
+  ]
+}

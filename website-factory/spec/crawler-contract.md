@@ -1,0 +1,13 @@
+# Crawler implementation contract (Sol task)
+
+Implement src/crawler.ts. Existing tests/crawler.test.ts has initial failing tests. Exports publicUrl(input):URL, isPublicAddress(ip):boolean, extractPage(html,base):{text,links,...}, collect(website:string, options?:{outputDir?:string,maxPages?:number,timeoutMs?:number,browser?:boolean}):Promise<JsonObject>.
+
+Return {evidence:Evidence[],images:Array<{path:string,evidence_id:string,width:number,height:number,sha256:string}>,crawl_pages:CrawlPage[],technology_observations:TechSignal[],metrics:{performance_score:number|null},errors:JsonObject[],observedAt,website}. Evidence exact schema in spec/contracts.schema.json, fields evidence_id,kind,source_url,observed_at,artifact_hash,locator,excerpt,numeric_value,unit. Page page_ref opaque ID deterministic URL hash; screenshot evidence actual bytes artifact_hash. Homepage HTML evidence excerpt must preserve enough source context; bounded several excerpts each <=2000 chars, no truncation beyond schema unnoticed. Persist full HTML/text separately. All unknown measurements null.
+
+User test actual reachable https://polireagency.vercel.app (www variant TLS fails; don't disable TLS). No paid crawling. Node HTTP(S) URL + public IP filtering using ipaddr.js range, DNS pinning, redirects recheck, decompressed byte/time limits, robots policy 404 allow else failures block. Header User-Agent POLIRE-Research/1.0. Follow same site contact/impressum/about links, max6 pages, single host request +1000ms gap, max30MB total. Do not submit forms or click consent.
+
+Actual Playwright screenshot capture mobile+desktop homepage required when browser true; never claim visual observations without actual output files. External browser requests need guarded network path: local HTTP CONNECT proxy resolving/pinning public destinations; Chrome proxy no bypass/WebRTC, block ServiceWorkers/downloads/popups, time/request/byte bounds. Proxy protects all subresources. TLS errors fail safely. Local preview test context never relaxes public crawler. Implement testable proxy boundary and SSRF tests incl redirected blocked destination, DNS resolved private, CONNECT. No real external URLs in unit test mocks unless explicit smoke command.
+
+Lighthouse real mobile performance if available using controlled browser debugging/proxy; if unsupported/fails report null/error (not fake scores). Primary purpose live tested source/screenshot evidence. Agent input exact screenshot image bindings are built by orchestrator.
+
+Use existing dependencies, request root additional parser package if needed. Root installing no packages now. Own crawler files/tests only. No subagents or commits. Full spec/factory.md 7.14 binding.

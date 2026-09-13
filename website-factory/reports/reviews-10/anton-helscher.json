@@ -1,0 +1,274 @@
+{
+  "seed": {
+    "slug": "anton-helscher",
+    "name": "Anton Helscher AG",
+    "url": "https://www.antonhelscherag.ch/"
+  },
+  "observedAt": "2026-09-13T20:36:48.548Z",
+  "profileComplete": false,
+  "audit": {
+    "dimensions": {
+      "mobile_usability": {
+        "level": "major_friction",
+        "evidence_ids": [
+          "c7f8982e-2fcf-4b04-ae8a-338b94a4054c"
+        ],
+        "checked_criteria": [
+          "Darstellung bei 375 × 812",
+          "Navigation",
+          "Lesbarkeit"
+        ],
+        "rationale": "Die Startseite zeigt bei 375 × 812 weiterhin ein dreispaltiges Desktop-Layout. Navigation und Inhalte sind klein dargestellt; eine für kleine Bildschirme angepasste Navigation ist nicht beobachtet."
+      },
+      "conversion": {
+        "level": "usable_with_friction",
+        "evidence_ids": [
+          "537fb0c1-ec42-426e-8984-5b662773da01",
+          "c7f8982e-2fcf-4b04-ae8a-338b94a4054c"
+        ],
+        "checked_criteria": [
+          "Kontaktweg",
+          "Leistungsübersicht",
+          "Handlungsaufforderung"
+        ],
+        "rationale": "Ein Kontakt-Link ist vorhanden und die Leistungen sind auf der Startseite aufgeführt. Eine hervorgehobene Kontaktmöglichkeit oder Handlungsaufforderung im Hauptinhalt ist nicht beobachtet."
+      },
+      "content_clarity": {
+        "level": "minor_friction",
+        "evidence_ids": [
+          "537fb0c1-ec42-426e-8984-5b662773da01",
+          "c7f8982e-2fcf-4b04-ae8a-338b94a4054c"
+        ],
+        "checked_criteria": [
+          "Leistungsübersicht",
+          "Seitentitel",
+          "Inhaltsstruktur"
+        ],
+        "rationale": "Die Startseite benennt Heizung / Sanitär sowie Spenglerei / Service und führt konkrete Themen auf. Die Darstellung ist jedoch dicht und auf kleinen Bildschirmen schwer lesbar."
+      },
+      "trust_transparency": {
+        "level": "major_friction",
+        "evidence_ids": [
+          "537fb0c1-ec42-426e-8984-5b662773da01",
+          "a3028c65-1e62-42d6-b924-310722fb1411"
+        ],
+        "checked_criteria": [
+          "Impressum",
+          "Kontaktangaben",
+          "Konsistenz der Adressangaben"
+        ],
+        "rationale": "Ein Impressum mit Unternehmensname, Adresse, Telefonnummer und E-Mail-Adresse ist vorhanden. Die auf der Startseite genannte Adresse weicht von der Adresse im Impressum ab."
+      },
+      "technical_seo": {
+        "level": null,
+        "evidence_ids": [
+          "537fb0c1-ec42-426e-8984-5b662773da01"
+        ],
+        "checked_criteria": [
+          "Seitentitel"
+        ],
+        "rationale": "Der Seitentitel ist beobachtet. Strukturierte Daten, Meta-Description, Canonical, Indexierbarkeit und weitere technische SEO-Kriterien sind nicht ausreichend beobachtet."
+      }
+    },
+    "performance_score": 97,
+    "quality_score": 54.63157894736843,
+    "coverage": 0.95,
+    "issues": [
+      {
+        "issue_id": "8702da68-9a54-4c30-88ee-5459d5229d9d",
+        "category": "mobile_usability",
+        "severity": "major",
+        "observation": "Bei 375 × 812 zeigt die Startseite ein dreispaltiges Desktop-Layout mit horizontalen Navigationspunkten und sehr klein dargestellten Inhalten.",
+        "evidence_ids": [
+          "c7f8982e-2fcf-4b04-ae8a-338b94a4054c"
+        ],
+        "page_ref": "page-3712bd3beac45e3da4553e1a",
+        "viewport": {
+          "width": 375,
+          "height": 812
+        },
+        "impact_hypothesis": "Die Bedienung und das Erfassen der Inhalte auf kleinen Bildschirmen können erschwert sein.",
+        "recommendation": "Responsives einspaltiges Layout und mobile Navigation umsetzen.",
+        "suggested_fix_target": "renderer",
+        "reproduction": [
+          "Startseite bei 375 × 812 öffnen.",
+          "Navigation und dreispaltigen Inhaltsbereich prüfen."
+        ]
+      },
+      {
+        "issue_id": "7225785e-f543-447b-954f-34e1393d529a",
+        "category": "conversion",
+        "severity": "minor",
+        "observation": "Die Startseite enthält einen Kontakt-Link, jedoch keine hervorgehobene Kontaktmöglichkeit oder Handlungsaufforderung im Hauptinhalt.",
+        "evidence_ids": [
+          "537fb0c1-ec42-426e-8984-5b662773da01",
+          "c7f8982e-2fcf-4b04-ae8a-338b94a4054c"
+        ],
+        "page_ref": "page-3712bd3beac45e3da4553e1a",
+        "viewport": {
+          "width": 375,
+          "height": 812
+        },
+        "impact_hypothesis": "Besuchende können den nächsten Kontakt-Schritt weniger schnell erkennen.",
+        "recommendation": "Kontakt aufnehmen",
+        "suggested_fix_target": "site_spec",
+        "reproduction": [
+          "Startseite öffnen.",
+          "Hauptinhalt auf hervorgehobene Kontaktmöglichkeit prüfen."
+        ]
+      },
+      {
+        "issue_id": "6cbe0281-79de-4fd6-b635-1eba42c72b43",
+        "category": "trust_transparency",
+        "severity": "major",
+        "observation": "Die Startseite nennt Heinibühlstrasse 33, das Impressum nennt Friedhofstrasse 34.",
+        "evidence_ids": [
+          "537fb0c1-ec42-426e-8984-5b662773da01",
+          "a3028c65-1e62-42d6-b924-310722fb1411"
+        ],
+        "page_ref": "page-3712bd3beac45e3da4553e1a",
+        "viewport": null,
+        "impact_hypothesis": "Widersprüchliche Adressangaben können die Verlässlichkeit der Kontaktinformationen beeinträchtigen.",
+        "recommendation": "Adressangaben auf Startseite und im Impressum prüfen und einheitlich aktualisieren.",
+        "suggested_fix_target": "source_data",
+        "reproduction": [
+          "Startseite öffnen.",
+          "Impressum öffnen.",
+          "Die beiden Adressangaben vergleichen."
+        ]
+      }
+    ],
+    "limitations": [
+      "Geprüft wurden die Startseite und das Impressum.",
+      "Für das Impressum liegt keine visuelle Prüfung bei mobiler Ansicht vor.",
+      "Keine Interaktionen, Formulare, Ladeabläufe oder technischen SEO-Metadaten ausser dem Seitentitel wurden geprüft."
+    ]
+  },
+  "images": [
+    {
+      "path": "anton-helscher-1.png",
+      "evidence_id": "c7f8982e-2fcf-4b04-ae8a-338b94a4054c",
+      "width": 902,
+      "height": 830,
+      "sha256": "d5fc7f49b465d2444c2b6a21f51b67d8cd9164f40eeb77686c9342f2a04b39a1"
+    },
+    {
+      "path": "anton-helscher-2.png",
+      "evidence_id": "b59c2359-7950-4fa9-85f6-8a3c1204dd9e",
+      "width": 1440,
+      "height": 1020,
+      "sha256": "8be591fa0ce4b7368ba3ffb26cec2bc9d504fbe9a3dc252f21499a6cacb597bc"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "537fb0c1-ec42-426e-8984-5b662773da01",
+      "kind": "html",
+      "source_url": "https://www.antonhelscherag.ch/",
+      "observed_at": "2026-09-13T20:36:48.548Z",
+      "artifact_hash": "4b4aa624236bae36752d3677919905a4e4f107e2e3f1149eb5aa375de43f0b6c",
+      "locator": "C:\\Users\\StartKlar\\Documents\\ChatGPT\\Project-Polire\\website-factory\\data\\reviews-10-2026-09-13\\crawl\\lead-57348cae-7a54-4675-bb42-c97e05d9f971\\collect-7d34c9c6-27fa-4926-9f6e-e7e84279c8cf\\raw\\page-3712bd3beac45e3da4553e1a.html#text-chunk-1",
+      "excerpt": "Anton Helscher AG - Haustechnik \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nHome\n\r\nKontakt\n\r\nImpressum\n\r\n\r\n\n\r\n\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\nStartseite\n\r\nFirma\n\r\nHeizungsanlagen\n\r\nSanit&Auml;r\n\r\nSpenglerei\n\r\nService/Unterhalt\n\r\nBeratung\n\r\n\r\n\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\nANTON HELSCHER AG\n\r\n\n\r\n\r\n\r\n\r\n\r\nWillkommen bei Anton Helscher AG - Haustechnik\n\r\n\r\n\r\n\r\n\r\nHeinibühlstrasse 33\n\r\n4573 Lohn-Ammannsegg\n\r\n\r\n\r\nWir freuen uns, Sie im Firmengebäude an der Hauptverkehrsachse zwischen Lohn-Ammannsegg und Biberist zu begrüssen\n\r\n\n\r\n\n\r\n\n\r\n\n\r\n\n\r\n\n\r\n\n\r\n\n\r\n\n\r\n\r\n\r\n\r\n\r\nHeizung / Sanitär\n\r\nFragen Sie uns nach:\n\r\n\r\n• Solaranlagen\n\r\n• Wärmepumpen\n\r\n• Holzheizungen\n\r\n• Gas-/Oelheizungen\n\r\n• Küche/Bad-Wellness\n\r\n• Sanitäre Anlagen\n\r\n• Entkalkungsanlagen\n\r\n• Komfortlüftungen\n\r\n\n\r\n\n\r\n\n\r\n\n\r\n\r\n\r\nSpenglerei / Service\n\r\nSpenglerei- und Reparaturarbeiten\n\r\n\r\n• Bauspenglerei\n\r\n• Blitzschutz\n\r\n• Bedachungen/Fassaden\n\r\n• Kaminanlagen\n\r\n• Reparaturen\n\r\n• Unterhalt (Sanitär/Heizung)\n\r\n\n\r\n\n\r\n\n\r\n\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\nInfos\n\r\n\r\n\r\n\r\n\r\n&raquo; Offene Stellen\n\n\r\n\r\n\n\r\nSonnenkollektoren\n\r\n\r\n\n\r\n\n\r\n\r\n\r\nAnton Helscher AG\n\r\n\r\n\n\r\n\n\r\n\r\n\r\nNews und Links\n\r\n\r\n&raquo; Neuheiten\n\r\n\n\r\n\n\r\n\r\n\n\r\n\r\n\r\nCopyright &copy; 2010 Anton Helscher AG | info@antonhelscherag.ch | Webdesign by SperiLogic",
+      "numeric_value": null,
+      "unit": null
+    },
+    {
+      "evidence_id": "a3028c65-1e62-42d6-b924-310722fb1411",
+      "kind": "html",
+      "source_url": "https://www.antonhelscherag.ch/de/beratung/impressum.html",
+      "observed_at": "2026-09-13T20:36:48.548Z",
+      "artifact_hash": "7f9382f3854d4edc37bb911c15f53d66a4993dcde1a5b644540066067f2d3fa5",
+      "locator": "C:\\Users\\StartKlar\\Documents\\ChatGPT\\Project-Polire\\website-factory\\data\\reviews-10-2026-09-13\\crawl\\lead-57348cae-7a54-4675-bb42-c97e05d9f971\\collect-7d34c9c6-27fa-4926-9f6e-e7e84279c8cf\\raw\\page-1dd779f31782bce2d3329636.html#text-chunk-1",
+      "excerpt": "Anton Helscher AG - Haustechnik \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nHome\n\r\nKontakt\n\r\nImpressum\n\r\n\r\n\n\r\n\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\nStartseite\n\r\nFirma\n\r\nHeizungsanlagen\n\r\nSanit&Auml;r\n\r\nSpenglerei\n\r\nService/Unterhalt\n\r\nBeratung\n\r\n\r\n\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\nIMPRESSUM\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\nImpressum\n\r\n\r\n\r\n\r\n\r\nAnton Helscher AG\n\r\nVerantwortlich f&uuml;r den Inhalt\n\r\n\r\nAnton Helscher AG\n\r\nHaustechnik\n\r\nFriedhofstrasse 34\n\r\n4573 Lohn-Ammannsegg (Schweiz)\n\r\nTel.: 032 677 15 27\n\r\ninfo@antonhelscherag.ch\n\r\n\n\r\nAnton Helscher AG &uuml;bernimmt f&uuml;r die Richtigkeit und Vollst&auml;ndigkeit der Inhalte keine Gew&auml;hr. Alle Informationen und Erkl&auml;rungen dieser Internetseiten sind unverbindlich. Aus den Inhalten der Internetseiten ergeben sich keine Rechtsanspr&uuml;che. Fehler im Inhalt werden bei Kenntnis dar&uuml;ber unverz&uuml;glich korrigiert. Die Inhalte der Internetseiten k&ouml;nnen durch zeitverz&ouml;gerte Aktualisierung nicht permanent aktuell sein. Wir &uuml;bernehmen keine Verantwortung f&uuml;r den Inhalt verlinkter Seiten.\n\r\n\n\r\nHerunterladen von Daten und Software\n\r\nAnton Helscher AG &uuml;bernimmt keine Gew&auml;hr f&uuml;r die Fehlerfreiheit von Daten und Software, die von den Internetseiten heruntergeladen werden k&ouml;nnen. Die Software wird von Anton Helscher AG auf Virenbefall &uuml;berpr&uuml;ft. Wir empfehlen dennoch, Daten und Software nach dem Herunterladen mit jeweils neuster Virensuchsoftware auf Virenbefall zu pr&uuml;fen.\n\r\n\n\r\nUrheberrechte und sonstige Sonderschutzrechte\n\r\nDer Inhalt dieser Internetseiten ist urheberrechtlich gesch&uuml;tzt. Es darf eine Kopie der Informationen der Internetseiten auf einem einzigen Computer f&uuml;r den nicht-kommerziellen und pers&ouml;nlichen internen Gebrauch gespeichert werden. Bei genannten Produkt- und Firmennamen kann es sich um eingetrage",
+      "numeric_value": null,
+      "unit": null
+    },
+    {
+      "evidence_id": "4d1d3f3a-dd7d-4559-a0ed-773c70f31c4c",
+      "kind": "html",
+      "source_url": "https://www.antonhelscherag.ch/de/beratung/impressum.html",
+      "observed_at": "2026-09-13T20:36:48.548Z",
+      "artifact_hash": "7f9382f3854d4edc37bb911c15f53d66a4993dcde1a5b644540066067f2d3fa5",
+      "locator": "C:\\Users\\StartKlar\\Documents\\ChatGPT\\Project-Polire\\website-factory\\data\\reviews-10-2026-09-13\\crawl\\lead-57348cae-7a54-4675-bb42-c97e05d9f971\\collect-7d34c9c6-27fa-4926-9f6e-e7e84279c8cf\\raw\\page-1dd779f31782bce2d3329636.html#text-chunk-2",
+      "excerpt": "ne Warenzeichen oder Marken handeln. Die unberechtigte Verwendung kann zu Schadensersatzanspr&uuml;chen und Unterlassungsanspr&uuml;chen f&uuml;hren.\n\r\n\n\r\nSchutz pers&ouml;nlicher Daten und Vertraulichkeit\n\r\nEs kann nicht garantiert werden, dass Informationen oder pers&ouml;nliche Daten, die uns &uuml;bermittelt werden, bei der &Uuml;bermittlung nicht von Dritten \"abgeh&ouml;rt\" werden.\n\r\n\n\r\nHaftung\n\r\nAnton Helscher AG haftet nicht f&uuml;r Sch&auml;den insbesondere nicht f&uuml;r unmittelbare oder mittelbare Folgesch&auml;den, Datenverlust, entgangenen Gewinn, System- oder Produktionsausf&auml;lle, die durch die Nutzung dieser Internetseiten oder das Herunterladen von Daten entstehen. Liegt bei einem entstandenen Schaden durch die Nutzung der Internetseiten oder das Herunterladen von Daten Vorsatz oder grobe Fahrl&auml;ssigkeit vor, gilt der Haftungsausschluss nicht. Die durch die Nutzung der Internetseiten entstandene Rechtsbeziehung zwischen Ihnen und Anton Helscher AG unterliegt dem Schweizer Recht. Bei Rechtsstreitigkeiten mit Vollkaufleuten, die aus der Nutzung dieser Internetseiten resultieren, ist der Gerichtsstand der Sitz der Anton Helscher AG in Lohn-Ammannsegg.\n\r\n\n\r\nErl&auml;uterungen zum Datenschutz\n\r\nSie k&ouml;nnen im Regelfall alle Internetseiten von Anton Helscher AG aufrufen, ohne Angaben &uuml;ber Ihre Person zu machen. Werden im Einzelfall Ihr Name, Ihre Anschrift oder sonstige pers&ouml;nliche Daten ben&ouml;tigt, so werden Sie zuvor darauf hingewiesen. Ihre personenbezogenen Nutzungsdaten werden verwendet, um den Service von Anton Helscher AG f&uuml;r Sie so angenehm wie m&ouml;glich zu gestalten und zu verbessern. Wenn Sie sich entschliessen, Anton Helscher AG pers&ouml;nliche Daten &uuml;ber das Internet zu &uuml;berlassen, damit z.B. Korresponde",
+      "numeric_value": null,
+      "unit": null
+    },
+    {
+      "evidence_id": "353f111d-b42d-4abe-aaaf-95e098a2a34a",
+      "kind": "html",
+      "source_url": "https://www.antonhelscherag.ch/de/beratung/impressum.html",
+      "observed_at": "2026-09-13T20:36:48.548Z",
+      "artifact_hash": "7f9382f3854d4edc37bb911c15f53d66a4993dcde1a5b644540066067f2d3fa5",
+      "locator": "C:\\Users\\StartKlar\\Documents\\ChatGPT\\Project-Polire\\website-factory\\data\\reviews-10-2026-09-13\\crawl\\lead-57348cae-7a54-4675-bb42-c97e05d9f971\\collect-7d34c9c6-27fa-4926-9f6e-e7e84279c8cf\\raw\\page-1dd779f31782bce2d3329636.html#text-chunk-3",
+      "excerpt": "nz abgewickelt oder eine Bestellung ausgef&uuml;hrt werden kann, so wird mit diesen Daten nach strengen Regeln, sorgf&auml;ltig umgegangen.\n\r\nDurch die Aufrufe der Internetseite erh&auml;lt Anton Helscher AG Nutzungsdaten, die f&uuml;r Sicherungszwecke gespeichert werden und m&ouml;glicherweise eine Identifizierung zulassen (zum Beispiel IP-Adresse, Datum, Uhrzeit und betrachtete Seiten). Diese Daten k&ouml;nnen vom Anton Helscher AG ausgewertet werden, um das Nutzerverhalten kennen zu lernen und Statistiken aufzustellen. Dabei werden bei allen Massnahmen die hohen Sicherheitsstandards beachtet. Es findet keine personenbezogene Verwertung statt. Die statistische Auswertung anonymisierter Datens&auml;tze bleibt vorbehalten. Weitere Informationen zum Thema Datenschutz in der Schweiz finden Sie unter: www.edoeb.admin.ch\n\r\n\n\r\nWeitergabe personenbezogener Informationen an Dritte\n\r\nSollten im Rahmen der Auftragsdatenverarbeitung Daten an Dienstleister weitergegeben werden, so sind diese an die gesetzlichen Vorschriften und vertraglich an die Privacy Policy der Anton Helscher AG gebunden. Soweit Anton Helscher AG gesetzlich oder per Gerichtsbeschluss dazu verpflichtet ist, werden Ihre Daten im geforderten Umfang an auskunftsberechtigte Stellen &uuml;bermittelt. F&uuml;r andere Zwecke gibt Anton Helscher AG Ihre Daten nicht ohne Ihr ausdr&uuml;ckliches Einverst&auml;ndnis an Dritte weiter.\n\r\n\n\r\nSicherheit\n\r\nAnton Helscher AG speichert Ihre Daten auf besonders gesch&uuml;tzten Servern in der Schweiz. Der Zugriff darauf ist nur wenigen, von Anton Helscher AG befugten Personen m&ouml;glich, die mit der technischen, kaufm&auml;nnischen oder redaktionellen Betreuung dieser Server befasst sind.\n\r\n\n\r\nRecht auf Widerruf\n\r\nWenn Sie Anton Helscher AG auffordern, Ihre personenbezogenen Da",
+      "numeric_value": null,
+      "unit": null
+    },
+    {
+      "evidence_id": "ccf43970-2c1c-45b2-ba9d-472524aad6ec",
+      "kind": "html",
+      "source_url": "https://www.antonhelscherag.ch/de/beratung/impressum.html",
+      "observed_at": "2026-09-13T20:36:48.548Z",
+      "artifact_hash": "7f9382f3854d4edc37bb911c15f53d66a4993dcde1a5b644540066067f2d3fa5",
+      "locator": "C:\\Users\\StartKlar\\Documents\\ChatGPT\\Project-Polire\\website-factory\\data\\reviews-10-2026-09-13\\crawl\\lead-57348cae-7a54-4675-bb42-c97e05d9f971\\collect-7d34c9c6-27fa-4926-9f6e-e7e84279c8cf\\raw\\page-1dd779f31782bce2d3329636.html#text-chunk-4",
+      "excerpt": "ten nicht f&uuml;r die weitere Kontaktaufnahme zu verwenden und/oder zu l&ouml;schen, so wird entsprechend verfahren. Daten, die f&uuml;r eine Auftragsabwicklung bzw. zu kaufm&auml;nnischen Zwecken zwingend erforderlich sind, sind von einer K&uuml;ndigung beziehungsweise von einer L&ouml;schung nicht ber&uuml;hrt. Bitte haben Sie Verst&auml;ndnis daf&uuml;r, dass im Falle des Widerrufs der personalisierte Service nicht mehr erbracht werden kann, da er auf der Verwendung der Kundendaten aufbaut.\n\r\n\n\r\nEinsatz von Cookies\n\r\nIn Cookies werden w&auml;hrend einer Onlinesitzung Textinformationen gesammelt und in einer speziellen Datei im ASCII-Format (cookie.txt) auf der Festplatte des Benutzers abgelegt. Wohin der Cookie beim Anwender gespeichert wird, kontrolliert der www-Browser des Anwenders. Cookies sind Informationen, die bei dem n&auml;chsten Onlinebesuch an den Server zur&uuml;ckgesandt werden. Sie k&ouml;nnen jeweils nur von dem Server, der sie vorher auch abgelegt hat, gelesen werden.\n\r\nAnton Helscher AG setzt Cookies nur dann ein, wenn sie f&uuml;r Benutzerfunktionen dringend erforderlich sind bzw. die Navigation der Websites erleichtern. Die Informationen werden keinem Dritten zur Verf&uuml;gung gestellt, da Cookies nur f&uuml;r die o.g. Zwecke verwendet werden.\n\r\nDie meisten Browser sind so eingestellt, dass sie Cookies automatisch akzeptieren. Diese Funktion kann jedoch jederzeit im Browser deaktiviert werden. Sie k&ouml;nnen Ihren Browser so einstellen, dass er Sie benachrichtigt, sobald Cookies gesendet werden.\n\r\n\n\r\nLinks zu anderen Websites\n\r\nDie Webseiten von Anton Helscher AG enthalten gegebenenfalls Links zu anderen Websites. Anton Helscher AG hat keinen Einfluss auf den redaktionellen Inhalt fremder Webseiten und darauf, dass deren Betreiber die Datenschut",
+      "numeric_value": null,
+      "unit": null
+    },
+    {
+      "evidence_id": "e790ac91-e7ed-4a04-81fc-2b34764a0675",
+      "kind": "html",
+      "source_url": "https://www.antonhelscherag.ch/de/beratung/impressum.html",
+      "observed_at": "2026-09-13T20:36:48.548Z",
+      "artifact_hash": "7f9382f3854d4edc37bb911c15f53d66a4993dcde1a5b644540066067f2d3fa5",
+      "locator": "C:\\Users\\StartKlar\\Documents\\ChatGPT\\Project-Polire\\website-factory\\data\\reviews-10-2026-09-13\\crawl\\lead-57348cae-7a54-4675-bb42-c97e05d9f971\\collect-7d34c9c6-27fa-4926-9f6e-e7e84279c8cf\\raw\\page-1dd779f31782bce2d3329636.html#text-chunk-5",
+      "excerpt": "zbestimmungen einhalten.\n\r\n\n\r\n\n\r\n\n\r\n\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\nInfos\n\r\n\r\n\r\nSonnenkollektoren FK-1\n\r\n\r\n\n\r\n\n\r\n\r\n\r\nSanit&auml;rtechnik\n\r\n\r\n\n\r\n\n\r\n\r\n\r\nNews und Links\n\r\n\r\n&raquo; Neuheiten\n\r\n\n\r\n\n\r\n\r\n\n\r\n\r\n\r\nCopyright &copy; 2010 Anton Helscher AG | info@antonhelscherag.ch | Webdesign by SperiLogic",
+      "numeric_value": null,
+      "unit": null
+    },
+    {
+      "evidence_id": "c7f8982e-2fcf-4b04-ae8a-338b94a4054c",
+      "kind": "screenshot",
+      "source_url": "https://www.antonhelscherag.ch/",
+      "observed_at": "2026-09-13T20:36:52.939Z",
+      "artifact_hash": "d5fc7f49b465d2444c2b6a21f51b67d8cd9164f40eeb77686c9342f2a04b39a1",
+      "locator": "{\"viewport\":{\"width\":375,\"height\":812},\"full_page\":true}",
+      "excerpt": null,
+      "numeric_value": null,
+      "unit": null
+    },
+    {
+      "evidence_id": "b59c2359-7950-4fa9-85f6-8a3c1204dd9e",
+      "kind": "screenshot",
+      "source_url": "https://www.antonhelscherag.ch/",
+      "observed_at": "2026-09-13T20:36:54.697Z",
+      "artifact_hash": "8be591fa0ce4b7368ba3ffb26cec2bc9d504fbe9a3dc252f21499a6cacb597bc",
+      "locator": "{\"viewport\":{\"width\":1440,\"height\":1000},\"full_page\":true}",
+      "excerpt": null,
+      "numeric_value": null,
+      "unit": null
+    },
+    {
+      "evidence_id": "7691e4c5-5827-4d30-8a69-82849d442437",
+      "kind": "metric",
+      "source_url": "https://www.antonhelscherag.ch/",
+      "observed_at": "2026-09-13T20:37:05.219Z",
+      "artifact_hash": "db1e3d3a346bda1d7ba44f7335d39f31094c436441b25460f48e9bc60a00714e",
+      "locator": "C:\\Users\\StartKlar\\Documents\\ChatGPT\\Project-Polire\\website-factory\\data\\reviews-10-2026-09-13\\crawl\\lead-57348cae-7a54-4675-bb42-c97e05d9f971\\collect-7d34c9c6-27fa-4926-9f6e-e7e84279c8cf\\lighthouse-mobile.json",
+      "excerpt": "Lighthouse mobile performance",
+      "numeric_value": 97,
+      "unit": "lighthouse_mobile"
+    }
+  ],
+  "businessStatus": {
+    "slug": "anton-helscher",
+    "status": "recent_activity_evidence",
+    "decision": "review",
+    "finding": "Als Projektverantwortlicher in einer Baupublikation mit Einsprachefrist 28. Januar 2026 genannt.",
+    "sources": [
+      "https://azeiger.ch/wp-content/uploads/2026/01/Azeiger_02_2026.pdf"
+    ]
+  },
+  "demoDecision": "pending"
+}

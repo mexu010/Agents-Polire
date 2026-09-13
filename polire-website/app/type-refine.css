@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700;800;900&display=swap');
+
+/* POLIRE type refinement
+   Hero stays untouched. The display face is used only where weight adds meaning. */
+:root { --display:'Inter Tight',Arial,Helvetica,sans-serif; }
+
+/* Calm sections keep the neutral system font. */
+.work .section-heading h2,
+.services-intro h2,
+.process .section-heading h2,
+.process-list h3,
+.studio-note h3 {
+  font-family:Arial,Helvetica,sans-serif;
+}
+.work .section-heading h2,
+.services-intro h2,
+.process .section-heading h2 {
+  font-weight:500;
+  letter-spacing:-.055em;
+  line-height:1.02;
+}
+.process-list h3 { font-weight:600; letter-spacing:-.045em; }
+.studio-note h3 { font-weight:600; }
+
+/* Bold display moments only. */
+.project-visual-copy>strong,
+.project-copy h3,
+.service-row>span:nth-child(2),
+.contact h2,
+.kinetic-word {
+  font-family:var(--display);
+}
+
+.kinetic-word {
+  font-weight:900;
+  letter-spacing:-.065em;
+  line-height:.8;
+}
+
+/* Project typography: bold, clean and readable — never crushed by the comparison overlay. */
+.project-visual-copy>strong {
+  font-weight:800;
+  font-size:clamp(44px,5.5vw,82px);
+  line-height:.92;
+  letter-spacing:-.06em;
+  max-width:78%;
+  text-transform:none;
+  text-wrap:balance;
+}
+.comparison .project-visual-copy {
+  padding-left:clamp(42%,46%,50%);
+}
+.comparison .project-visual-copy>strong {
+  max-width:100%;
+  font-size:clamp(42px,5vw,76px);
+}
+.project-copy h3 {
+  font-size:clamp(28px,2.7vw,42px);
+  font-weight:700;
+  line-height:1;
+  letter-spacing:-.05em;
+}
+
+/* Services get weight, but not poster typography. */
+.service-row>span:nth-child(2) {
+  font-weight:700;
+  letter-spacing:-.045em;
+}
+.service-row:hover>span:nth-child(2),
+.service-row[aria-expanded=true]>span:nth-child(2) {
+  letter-spacing:-.055em;
+}
+
+/* Final CTA can carry the strongest display weight. */
+.contact h2 {
+  font-weight:900;
+  letter-spacing:-.065em;
+  line-height:.88;
+  text-transform:none;
+  font-size:clamp(58px,8.5vw,132px);
+}
+
+/* Metadata should feel precise, not oversized or stylised. */
+.project-meta,
+.work::after,
+.hero-art::after,
+.kinetic-stage::after,
+.footer-inner::before {
+  font-family:Arial,Helvetica,sans-serif;
+}
+
+@media(max-width:860px) {
+  .comparison .project-visual-copy { padding-left:26px; }
+  .comparison .project-visual-copy>strong,
+  .project-visual-copy>strong { font-size:clamp(38px,11vw,62px); max-width:92%; }
+  .contact h2 { font-size:clamp(48px,15vw,82px); }
+}

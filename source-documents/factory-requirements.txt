@@ -1,0 +1,194 @@
+Ich gebe dir eine bestehende Spezifikation für eine Multi-Agent-Website-Factory. Überarbeite sie als Senior AI Agent Architect und Senior Software Engineer.
+
+WICHTIG:
+Die bestehende Architektur soll grundsätzlich erhalten bleiben. Schreibe nicht einfach ein komplett anderes System. Analysiere zuerst die vorhandene Spezifikation und verbessere gezielt Schwachstellen, Inkonsistenzen, unnötige Wiederholungen und unsichere Verantwortlichkeiten.
+
+Das System besteht aus:
+Scout → Audit → Qualifier → Strategist → Builder → deterministischer Renderer → QA → menschliche Preview-Freigabe → Sales → menschliche Outreach-Freigabe.
+
+ZIEL
+Ich möchte danach eine möglichst implementierungsreife Agent-Spezifikation haben, die ich einem Coding-Agenten geben kann, damit dieser das System zuverlässig implementiert.
+
+PRÜFE BESONDERS:
+
+1. LLM VS. RUNTIME VS. MENSCH
+   Ordne jede wichtige Entscheidung eindeutig einer dieser drei Ebenen zu:
+
+* LLM
+* deterministischer Code / Runtime
+* menschlicher Betreiber
+
+Sicherheits-, Berechtigungs-, Freigabe-, Scoring- und Zustandsentscheidungen sollen möglichst nicht vom LLM kontrolliert werden.
+
+2. OUTPUT-VERTRÄGE
+   Prüfe die Outputs aller Agents.
+   Entferne Felder aus Modellantworten, die besser von der Runtime erzeugt werden, insbesondere:
+
+* run_id
+* lead_id
+* Agent-ID
+* vertrauenswürdige Zeitstempel
+* Berechtigungen
+* Freigaben
+* persistente IDs
+
+Schlage eine klare Trennung zwischen:
+A) ModelOutput
+B) RuntimeEnvelope
+vor.
+
+3. IDs UND REFERENZEN
+   Prüfe alle issue_ids, fact_ids, evidence_ids, section_ids usw.
+   Das Modell soll keine vertrauenswürdigen IDs erfinden.
+   Definiere, welche IDs durch Runtime erzeugt werden und welche stabilen Referenzen das Modell tatsächlich liefern darf.
+
+4. SCHEMAS
+   Für jeden Agent sollen vorhanden sein:
+
+* exakter Input
+* exakter Output
+* Statusmöglichkeiten
+* Pflichtfelder
+* nullable Felder
+* Arrays
+* Enums
+* Referenzbeziehungen
+* semantische Validierungsregeln
+
+Die Zod-/JSON-Schemas sollen die strukturelle Wahrheit sein.
+Prompts sollen Verhalten und Semantik erklären, nicht das Schema unnötig duplizieren.
+
+5. AGENT-GRENZEN
+   Prüfe bei jedem Agent:
+
+* Was darf er wissen?
+* Was darf er entscheiden?
+* Was darf er nicht entscheiden?
+* Welche vorherigen Agent-Ergebnisse braucht er wirklich?
+* Welche Informationen sollte er aus Sicherheits- oder Token-Gründen NICHT sehen?
+
+Verhindere Verantwortungsüberschneidungen.
+
+6. PROMPT-INJECTION UND UNTRUSTED INPUT
+   Prüfe alle Datenflüsse darauf, ob Inhalte fremder Websites indirekt als Instruktionen in spätere Agents gelangen könnten.
+   Website-Inhalte, Screenshots, Crawl-Daten und frühere Modellantworten bleiben untrusted data.
+
+7. ORCHESTRATOR
+   Überprüfe die Zustandsmaschine sehr streng.
+   Zustandsübergänge sollen nur durch validierte Runtime-Regeln erfolgen.
+
+Definiere klar:
+
+* allowed transitions
+* retry rules
+* pause/resume
+* needs_input
+* blocked
+* error/failed
+* manual_review
+* human approvals
+* invalidation alter Freigaben nach Änderungen
+* Idempotenz
+* Budgets
+* maximale Reparaturrunden
+
+8. QUALIFIER UND SCORING
+   Prüfe, ob die Scores sauber vom LLM getrennt sind.
+   LLMs dürfen Einschätzungen liefern, aber mathematische Berechnung, Grenzwerte und finale Pipeline-Entscheidungen sollen im Code liegen.
+
+9. BUILDER UND QA
+   QA muss unabhängig vom Builder bleiben.
+   Der Builder darf keine Testergebnisse behaupten.
+   Automatische Reparaturen dürfen nur klar definierte SiteSpec-Probleme verändern.
+   Tests dürfen niemals vom Builder abgeschwächt werden.
+
+10. SALES
+    Der Sales-Agent darf ausschliesslich Textentwürfe erzeugen.
+    Er darf niemals selbst Versandberechtigung, Kontaktberechtigung oder rechtliche Zulässigkeit feststellen.
+
+11. TOKEN- UND PROMPT-EFFIZIENZ
+    Entferne unnötige Wiederholungen zwischen gemeinsamem System-Prompt und individuellen Agent-Prompts.
+    Sicherheitskritische Regeln dürfen dabei nicht verloren gehen.
+    Der Common Prompt soll nur Regeln enthalten, die wirklich für alle Agents gelten.
+
+12. FEHLENDE EDGE CASES
+    Suche aktiv nach Fällen, die noch nicht berücksichtigt wurden.
+    Insbesondere:
+
+* widersprüchliche Quellen
+* veraltete Daten
+* teilweise fehlgeschlagene Crawls
+* kaputte JSON-Ausgabe
+* Provider-Refusal
+* abgeschnittene Antworten
+* Modell-Halluzinationen
+* falsche Referenzen
+* parallele Jobs
+* Race Conditions
+* Neustart nach Crash
+* veraltete Artefakte
+* Versionskonflikte
+* Budgetüberschreitungen
+* Änderungen zwischen QA und Freigabe
+
+13. TESTBARKEIT
+    Jeder Agent soll isoliert mit Fixtures testbar sein.
+    Erstelle beziehungsweise verbessere Testfälle für:
+
+* Happy Path
+* fehlende Daten
+* widersprüchliche Daten
+* Prompt Injection
+* Halluzinationen
+* falsche IDs
+* Schemafehler
+* Providerfehler
+* adversariale Inputs
+
+ARBEITSWEISE
+
+Gehe zuerst durch das vorhandene Dokument und erstelle eine kurze Problemliste mit Prioritäten:
+
+CRITICAL
+Fehler, die Sicherheit, Berechtigungen, Datenintegrität oder falsche Pipeline-Entscheidungen verursachen können.
+
+IMPORTANT
+Architektur-, Schema- oder Agent-Grenzprobleme, die Zuverlässigkeit beeinträchtigen.
+
+IMPROVEMENT
+Tokenoptimierung, Lesbarkeit, Wartbarkeit und kleinere Verbesserungen.
+
+Danach erstelle eine vollständig überarbeitete Version des gesamten Dokuments.
+
+WICHTIGE REGELN FÜR DIE ÜBERARBEITUNG
+
+* Bestehende sinnvolle Regeln nicht entfernen.
+* Keine Features erfinden, die nicht zum beschriebenen Produkt gehören.
+* Keine unnötigen Microservices.
+* Keine zusätzliche Agent-Schicht ohne klaren Grund.
+* Keine Business-Logik in Prompts verschieben, wenn Code sie deterministisch erzwingen kann.
+* Keine vertraulichen Daten in Modellkontexte einführen.
+* Keine automatische E-Mail-Versendung hinzufügen.
+* Menschliche Freigaben beibehalten.
+* Bestehendes Schweizer Hochdeutsch beibehalten.
+* ss statt ß verwenden.
+* Kommentare zu Änderungen klar von den finalen Prompts trennen.
+
+AUSGABE
+
+Liefere in dieser Reihenfolge:
+
+1. Architektur-Review
+2. Liste CRITICAL / IMPORTANT / IMPROVEMENT
+3. Empfohlene Änderungen mit kurzer Begründung
+4. Klare Tabelle:
+   Entscheidung | LLM | Runtime | Mensch
+5. Empfohlener Datenfluss zwischen den Agents
+6. Empfohlene Trennung ModelOutput / RuntimeEnvelope
+7. Vollständig überarbeitete Version der gesamten Markdown-Datei
+8. Changelog der wichtigsten Änderungen
+9. Liste noch offener Entscheidungen, die nur ich als Betreiber beantworten kann
+
+Die überarbeitete Datei muss direkt als Implementierungsspezifikation für einen Coding-Agenten verwendbar sein.
+
+Ändere nicht nur Formulierungen. Suche aktiv nach Architekturfehlern und verbessere die Zuverlässigkeit des gesamten Agent-Systems.

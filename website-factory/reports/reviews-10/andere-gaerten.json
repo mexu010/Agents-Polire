@@ -1,0 +1,248 @@
+{
+  "seed": {
+    "slug": "andere-gaerten",
+    "name": "Andere Gärten",
+    "url": "https://www.deranderegaertner.ch/"
+  },
+  "observedAt": "2026-09-13T20:37:37.288Z",
+  "profileComplete": false,
+  "audit": {
+    "dimensions": {
+      "mobile_usability": {
+        "level": "usable_with_friction",
+        "evidence_ids": [
+          "e9f24d3b-62ad-4b2a-b4ca-240a337abc51"
+        ],
+        "checked_criteria": [
+          "Darstellung bei 375 × 812",
+          "Lesbarkeit des Hauptinhalts",
+          "Navigation"
+        ],
+        "rationale": "Der Hauptinhalt ist bei 375 × 812 einspaltig und lesbar. Die Navigation erscheint jedoch erst weiter unten als lange Linkliste; oben ist nur ein Menüsymbol sichtbar."
+      },
+      "conversion": {
+        "level": "major_friction",
+        "evidence_ids": [
+          "5f48204e-86b5-4cb2-8f8e-9867565e7919",
+          "e9f24d3b-62ad-4b2a-b4ca-240a337abc51"
+        ],
+        "checked_criteria": [
+          "Kontaktweg auf Startseite",
+          "Handlungsaufforderung",
+          "Leistungszugang"
+        ],
+        "rationale": "Die Startseite enthält «kontaktieren Sie mich», jedoch keinen unmittelbar sichtbaren Kontaktweg. «Kontakt» ist als Navigationseintrag vorhanden."
+      },
+      "content_clarity": {
+        "level": "usable_with_friction",
+        "evidence_ids": [
+          "5f48204e-86b5-4cb2-8f8e-9867565e7919",
+          "607b1d0a-a09e-42a4-ac74-35f19bfb8753",
+          "9ec27989-c3cf-4588-896a-3cd2ab825f92"
+        ],
+        "checked_criteria": [
+          "Leistungsbeschreibung",
+          "Struktur der Startseite",
+          "Textverständlichkeit"
+        ],
+        "rationale": "«Gartenbau und individuelle Gartenarbeiten» sowie mehrere Dienstleistungen sind benannt. Die Startseite nutzt eine lange Akrostichon-Textliste; auf der Dienstleistungsseite sind Schreib- und Worttrennungsfehler beobachtbar."
+      },
+      "trust_transparency": {
+        "level": "minor_friction",
+        "evidence_ids": [
+          "5f48204e-86b5-4cb2-8f8e-9867565e7919",
+          "9ec27989-c3cf-4588-896a-3cd2ab825f92"
+        ],
+        "checked_criteria": [
+          "Impressumszugang",
+          "Personenbezug",
+          "Kontaktzugang"
+        ],
+        "rationale": "«Andere Gärten, Markus Wysshaar», «Kontakt» und «Impressum» sind im Footer vorhanden. Inhalte der Kontakt- und Impressumsseite wurden nicht übergeben."
+      },
+      "technical_seo": {
+        "level": null,
+        "evidence_ids": [
+          "5f48204e-86b5-4cb2-8f8e-9867565e7919",
+          "607b1d0a-a09e-42a4-ac74-35f19bfb8753"
+        ],
+        "checked_criteria": [
+          "Seitentitel und Metadaten",
+          "Überschriftenstruktur",
+          "Indexierbarkeit"
+        ],
+        "rationale": "Aus den HTML-Textauszügen lassen sich Seitentitel und Metadaten, Überschriftenstruktur sowie Indexierbarkeit nicht ausreichend prüfen."
+      }
+    },
+    "performance_score": 92,
+    "quality_score": 54.894736842105274,
+    "coverage": 0.95,
+    "issues": [
+      {
+        "issue_id": "f5af706b-8535-4ac3-adb3-a17e317036b9",
+        "category": "conversion",
+        "severity": "major",
+        "observation": "Auf der Startseite ist «Kontakt» nur als Navigationseintrag vorhanden. Die Textaufforderung «kontaktieren Sie mich» führt im sichtbaren Hauptinhalt nicht zu einem unmittelbar sichtbaren Kontaktweg.",
+        "evidence_ids": [
+          "5f48204e-86b5-4cb2-8f8e-9867565e7919",
+          "e9f24d3b-62ad-4b2a-b4ca-240a337abc51"
+        ],
+        "page_ref": "page-bc8cb82b945fc81d981fc9d4",
+        "viewport": {
+          "width": 375,
+          "height": 812
+        },
+        "impact_hypothesis": "Interessierte Personen müssen den Kontaktweg in der Navigation suchen.",
+        "recommendation": "Kontakt aufnehmen",
+        "suggested_fix_target": "site_spec",
+        "reproduction": [
+          "Startseite bei 375 × 812 öffnen.",
+          "Hauptinhalt bis zur Navigation prüfen."
+        ]
+      },
+      {
+        "issue_id": "8d7a1f55-bce5-4b97-95ec-4f579a0234b8",
+        "category": "content_clarity",
+        "severity": "major",
+        "observation": "Die Startseite enthält eine lange Akrostichon-Textliste unter «Kreativität». Die Leistungen sind darin nicht als klar gegliederte Angebote erkennbar.",
+        "evidence_ids": [
+          "5f48204e-86b5-4cb2-8f8e-9867565e7919",
+          "e9f24d3b-62ad-4b2a-b4ca-240a337abc51"
+        ],
+        "page_ref": "page-bc8cb82b945fc81d981fc9d4",
+        "viewport": {
+          "width": 375,
+          "height": 812
+        },
+        "impact_hypothesis": "Die rasche Einordnung der angebotenen Arbeiten kann erschwert sein.",
+        "recommendation": "Leistungen",
+        "suggested_fix_target": "site_spec",
+        "reproduction": [
+          "Startseite öffnen.",
+          "Abschnitt «Kreativität» prüfen."
+        ]
+      },
+      {
+        "issue_id": "b22e3aaf-d5c2-40d5-951d-4923c3fb70df",
+        "category": "content_clarity",
+        "severity": "minor",
+        "observation": "Auf der Dienstleistungsseite sind «Terrassen» als «Terassen», «braucht» als «brauch», «aerifizieren» als «aerifinzieren» und «vermeidenund» ohne Abstand beobachtbar.",
+        "evidence_ids": [
+          "607b1d0a-a09e-42a4-ac74-35f19bfb8753",
+          "9ec27989-c3cf-4588-896a-3cd2ab825f92"
+        ],
+        "page_ref": "page-4b73fb8e3e5421c586bd6918",
+        "viewport": null,
+        "impact_hypothesis": "Textfehler können das Verständnis und den professionellen Eindruck beeinträchtigen.",
+        "recommendation": "Mehr erfahren",
+        "suggested_fix_target": "source_data",
+        "reproduction": [
+          "Dienstleistungsseite öffnen.",
+          "Abschnitte «Dienstleistungen», «Felsreinigung» und «Jahresrasenpflege» prüfen."
+        ]
+      }
+    ],
+    "limitations": [
+      "Geprüft wurden die Startseite und die Dienstleistungsseite.",
+      "Die Inhalte von Kontakt, Impressum, Bilder, Referenzen, Links und Über mich wurden nicht übergeben.",
+      "Für die Dienstleistungsseite liegt kein Screenshot vor.",
+      "Es liegen keine technischen SEO-Metadaten, Indexierbarkeitsdaten oder strukturierten Daten vor.",
+      "Der mobile Lighthouse-Wert 92 liegt vor; weitere Performance-Metriken wurden nicht übergeben."
+    ]
+  },
+  "images": [
+    {
+      "path": "andere-gaerten-1.png",
+      "evidence_id": "e9f24d3b-62ad-4b2a-b4ca-240a337abc51",
+      "width": 375,
+      "height": 1070,
+      "sha256": "a149700a56260182ecb46082c3949b8d171986cb51676db71cf1398a37e1f60d"
+    },
+    {
+      "path": "andere-gaerten-2.png",
+      "evidence_id": "ac1af01a-2075-46d9-bb0b-fcd2d0bcd020",
+      "width": 1440,
+      "height": 1000,
+      "sha256": "49d8f716e9074827707e28145732d7ff1593fcaebae4eda15af3a2e71a5c7238"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "5f48204e-86b5-4cb2-8f8e-9867565e7919",
+      "kind": "html",
+      "source_url": "https://www.deranderegaertner.ch/",
+      "observed_at": "2026-09-13T20:37:37.288Z",
+      "artifact_hash": "528f1e7fd7bb0769c6152a1587faf1906152f6e598caa9dbffd63363268a876d",
+      "locator": "C:\\Users\\StartKlar\\Documents\\ChatGPT\\Project-Polire\\website-factory\\data\\reviews-10-2026-09-13\\crawl\\lead-1f925a77-54fd-4f5e-826a-0e28a2325d46\\collect-d1e75043-7f45-40dc-ad9e-5d39b9d03ea0\\raw\\page-bc8cb82b945fc81d981fc9d4.html#text-chunk-1",
+      "excerpt": "Gartenbau und individuelle Gartenarbeiten. Der andere Gärtner aus Balsthal, Solothurn\n\nHome\nDienstleistungen\nBilder\nReferenzen\nLinks\nÜber mich\nKontakt\n\n\r\n\n\r\n\nHerzlich Willkommen\n\nFarben, Formen und natürliche Materialien sind die Elemente der Gestaltung.\nSchenken Sie sich Garten-Raum zum Träumen!\n\r\nDas Lebensgefühl, Leben zu fühlen.\n\r\nKreativität\n\n\r\n\n\r\nK räuter, Gewürze und Heilkräuter finden in unserem Alltag eine breite Anwendung\n\r\nR asen ist nicht einfach Rasen, Rollrasen, Neusaat , das Angebot ist enorm vielfältig\n\r\nE ine Blumenwiese ist für viele Menschen der Inbegriff von Natur\n\r\nA rbeit im Garten beflügelt Seele und Geist\n\r\nT rockener, magerer gut besonnter Boden ergibt eine artenreichste Blumenwiese\n\r\nI mmer gehört ein gepflegter Garten oder Wiese zu einer schönen Grünfläche\n\r\nV itaminlieferant und Schattenspender bringen uns die Obstbäume mitten in der Grünfläche\n\r\nI ndividuelle Zierrasen, Gebrauchsrasen, Sportrasen, Schattenrasen: lassen Sie sich von mir beraten\n\r\nT eiche umgeben von englischem Rasen, eine wahre Augenweide\n\r\nA nlagen mit einem Bewässerungssystem erleichtern die Gartenarbeit und bieten Komfort\n\r\nE ine Wiese auf einem Grundstück ist Gold wert\n\r\nT räumen Sie nicht weiter, kontaktieren Sie mich, ich verwirkliche Ihre Träume\n\nHome\nDienstleistungen\nBilder\nReferenzen\nLinks\nÜber mich\nKontakt\n\nAndere Gärten, Markus Wysshaar | Kontakt | Impressum | Google+ | webdesign: adiheutschi.ch\n\nHome\nDienstleistungen\nBilder\nReferenzen\nLinks\nÜber mich\nKontakt",
+      "numeric_value": null,
+      "unit": null
+    },
+    {
+      "evidence_id": "607b1d0a-a09e-42a4-ac74-35f19bfb8753",
+      "kind": "html",
+      "source_url": "https://www.deranderegaertner.ch/dienstleistungen",
+      "observed_at": "2026-09-13T20:37:37.288Z",
+      "artifact_hash": "52145c1a68e221b18a8b5713251a1cd2789d5b4363d91049f19c9114413fca37",
+      "locator": "C:\\Users\\StartKlar\\Documents\\ChatGPT\\Project-Polire\\website-factory\\data\\reviews-10-2026-09-13\\crawl\\lead-1f925a77-54fd-4f5e-826a-0e28a2325d46\\collect-d1e75043-7f45-40dc-ad9e-5d39b9d03ea0\\raw\\page-4b73fb8e3e5421c586bd6918.html#text-chunk-1",
+      "excerpt": "Dienstleistungen wie Gartenbau und Gartenarbeiten Steingarten, Terassen, Granitplatten, Biotop, Trockenmauern, Sitzplätze, Industriearealpflege in der Umgebung Balsthal, Solothurn\n\nHome\nDienstleistungen\nBilder\nReferenzen\nLinks\nÜber mich\nKontakt\n\n\r\n\n\r\n\nDienstleistungen\n\nDienstleistungen\n\nI nnenhof zum Steingarten\nN eugestaltung einer idyllischen Oase\nD er Weg zum Haus mit Granitplatten bestücken\nI hre Gartenanlage nach Feng Shui als Erholungspark gestalten\nV ielfache Blumenpracht\nI hre Anlage durch Wasserspiele oder Skulpturen bereichern\nD as Biotop genau nach Ihren Wünschen\nU nterhalt ist eine ganz persönliche Sache, ganz einfach auf die Bedürfnisse meiner Kunden abzustimmen\nA nbau von Böschungen kann auch sehr individuell gestaltet werden\nL anschaftsarchitektonische Gartengestaltung\nI hre Träume will ich raschmöglichst in Wirklichkeit umsetzen\nT rockenmauern & Sitzplätze geben im Sommer eine spezielle Note der Natur ab\nA lle Arbeiten im und rund um Ihren Garten sind meine Leidenschaft\nE rfahrungen & Weiterbildungen geben mir die Ideen\nT raumgarten: Ihre Wünsche und mein meine künstlerische Ader, sind der Schlüssel zu Ihrer Oase\n\nFelsreinigung\n\nUm vorzubeugen oder Schäden zu vermeidenund damit unkontrollierte Steinabgänge zu verhindern, ist es in manchen Fällen notwendig eine Felsreinigung durchzuführen. Auch für diese Säuberungsarbeiten bin ich ausgerüstet.\n\n\r\n\nJahresrasenpflege\n\nEin gepflegter Rasen brauch die richtige Pflege in der richtigen Jahreszeit.\n\r\nNicht nur die Bodenqualität spielt eine wichtige Rolle. Zur richtigen Jahreszeit muss der Rasen mit Dünger<br />genährt werden, der Rasen braucht genügend Luft durch vertikutieren aerifinzieren kann sich der Rasen richtig entfalten. Selbstverständlich gehört auch der wöchentliche Schnitt zur optimalen Pflege.\n\nIndus",
+      "numeric_value": null,
+      "unit": null
+    },
+    {
+      "evidence_id": "9ec27989-c3cf-4588-896a-3cd2ab825f92",
+      "kind": "html",
+      "source_url": "https://www.deranderegaertner.ch/dienstleistungen",
+      "observed_at": "2026-09-13T20:37:37.288Z",
+      "artifact_hash": "52145c1a68e221b18a8b5713251a1cd2789d5b4363d91049f19c9114413fca37",
+      "locator": "C:\\Users\\StartKlar\\Documents\\ChatGPT\\Project-Polire\\website-factory\\data\\reviews-10-2026-09-13\\crawl\\lead-1f925a77-54fd-4f5e-826a-0e28a2325d46\\collect-d1e75043-7f45-40dc-ad9e-5d39b9d03ea0\\raw\\page-4b73fb8e3e5421c586bd6918.html#text-chunk-2",
+      "excerpt": "triearealpflege\n\nHaben Sie Grünflächen um Ihre Firmenliegenschaft?\nRasen - oder Grasflächen zu schneiden?\n\r\n\n\r\nMit dem modernen Maschinenpark kann ich Ihnen eine individuelle Lösung für Ihr Areal anbieten.\n\nBepflanzung jeglicher Art\n\nEine Bepflanzung ist sehr persönlich und vor allem eine Frage des Geschmacks.\n\r\nGerne gestalte ich eine Rabatte nach Ihren Wünschen. Oder aber lassen sie sich überraschen und entdecken Ihren Garten neu.\n\r\nStaudenrabatte\n\nNeusaat von Rasen, Blumenwiese\n\n\r\nRasen ist nicht einfach Rasen! Eine Standortgerechte Samenmischung und eine optimale Pflege verlängert die Lebensdauer Ihres Grüns erheblich.\n\r\nOptimale Bodenvorbereitung ist das A und O für einen schönen Rasen.\n\nHome\nDienstleistungen\nBilder\nReferenzen\nLinks\nÜber mich\nKontakt\n\nAndere Gärten, Markus Wysshaar | Kontakt | Impressum | Google+ | webdesign: adiheutschi.ch\n\nHome\nDienstleistungen\nBilder\nReferenzen\nLinks\nÜber mich\nKontakt",
+      "numeric_value": null,
+      "unit": null
+    },
+    {
+      "evidence_id": "e9f24d3b-62ad-4b2a-b4ca-240a337abc51",
+      "kind": "screenshot",
+      "source_url": "https://www.deranderegaertner.ch/",
+      "observed_at": "2026-09-13T20:37:41.637Z",
+      "artifact_hash": "a149700a56260182ecb46082c3949b8d171986cb51676db71cf1398a37e1f60d",
+      "locator": "{\"viewport\":{\"width\":375,\"height\":812},\"full_page\":true}",
+      "excerpt": null,
+      "numeric_value": null,
+      "unit": null
+    },
+    {
+      "evidence_id": "ac1af01a-2075-46d9-bb0b-fcd2d0bcd020",
+      "kind": "screenshot",
+      "source_url": "https://www.deranderegaertner.ch/",
+      "observed_at": "2026-09-13T20:37:43.588Z",
+      "artifact_hash": "49d8f716e9074827707e28145732d7ff1593fcaebae4eda15af3a2e71a5c7238",
+      "locator": "{\"viewport\":{\"width\":1440,\"height\":1000},\"full_page\":true}",
+      "excerpt": null,
+      "numeric_value": null,
+      "unit": null
+    },
+    {
+      "evidence_id": "94218307-4bb2-4dbe-9665-4b599ba67dec",
+      "kind": "metric",
+      "source_url": "https://www.deranderegaertner.ch/",
+      "observed_at": "2026-09-13T20:37:52.994Z",
+      "artifact_hash": "fb6eaa15911975cc7cfc8512960052befb7ca4e7dc94404e37660b49c6c3b185",
+      "locator": "C:\\Users\\StartKlar\\Documents\\ChatGPT\\Project-Polire\\website-factory\\data\\reviews-10-2026-09-13\\crawl\\lead-1f925a77-54fd-4f5e-826a-0e28a2325d46\\collect-d1e75043-7f45-40dc-ad9e-5d39b9d03ea0\\lighthouse-mobile.json",
+      "excerpt": "Lighthouse mobile performance",
+      "numeric_value": 92,
+      "unit": "lighthouse_mobile"
+    }
+  ],
+  "businessStatus": {
+    "slug": "andere-gaerten",
+    "status": "registry_active_operations_unconfirmed",
+    "decision": "research",
+    "finding": "Moneyhouse führt den passenden Einzelbetrieb als aktiv. Letzte dort gezeigte Registeränderung 2004; kein aktueller datierter Arbeitsnachweis gefunden. Tagesgeschäft bleibt ungeklärt.",
+    "sources": [
+      "https://www.moneyhouse.ch/en/company/andere-gaerten-markus-w-wysshaar-11974175911",
+      "https://www.deranderegaertner.ch/"
+    ]
+  },
+  "demoDecision": "pending"
+}
