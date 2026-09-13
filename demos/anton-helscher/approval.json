@@ -1,0 +1,13 @@
+{
+  "date": "2026-09-13",
+  "source": "explicit_user_message",
+  "instruction": "nimm eine website die schlecht ist, die die aktuell noch läuft danach erstelle eine demo",
+  "selectedLead": "Anton Helscher AG",
+  "website": "https://www.antonhelscherag.ch/",
+  "scope": "local_design_demo",
+  "creationMethod": "development_chat_using_stored_audit_and_verified_sources",
+  "factoryRuntimeStateModified": false,
+  "additionalApiSpendUsd": 0,
+  "outreachApproved": false,
+  "publicHostingApproved": false
+}

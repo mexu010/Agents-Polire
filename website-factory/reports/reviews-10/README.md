@@ -2,7 +2,7 @@
 
 Stand 13.09.2026. Websitequalität: 0 schlecht, 100 gut. Scores sind Agent-Einschätzungen mit unterschiedlicher Prüfabdeckung, keine Kaufwahrscheinlichkeit. Betriebsprüfung durch öffentliche Recherche; niemand wurde kontaktiert. Ein aktiver Registereintrag allein bestätigt keine laufenden Aufträge.
 
-Sechs Audits abgeschlossen, zwei Browser-Erfassungen fehlgeschlagen, zwei Firmen ausgeschlossen. Gesamtkosten der bisherigen Modellaufrufe: USD 0.275238 von maximal USD 5. Keine Demo freigegeben.
+Sechs Audits abgeschlossen, zwei Browser-Erfassungen fehlgeschlagen, zwei Firmen ausgeschlossen. Gesamtkosten der bisherigen Modellaufrufe: USD 0.275238 von maximal USD 5. Anton Helscher AG wurde anschliessend vom Betreiber für eine lokale Demo ausgewählt. Siehe `demos/anton-helscher`.
 
 ## [Anton Helscher AG](https://www.antonhelscherag.ch/)
 
@@ -12,11 +12,11 @@ Sechs Audits abgeschlossen, zwei Browser-Erfassungen fehlgeschlagen, zwei Firmen
 
 [Beleg 1](https://azeiger.ch/wp-content/uploads/2026/01/Azeiger_02_2026.pdf)
 
-**Websitequalität: 55/100**
+**Historischer Agent-Score: 55/100 – nach Quellenkorrektur nicht mehr als Gesamtbewertung verwendbar.**
 
 - Bei 375 × 812 zeigt die Startseite ein dreispaltiges Desktop-Layout mit horizontalen Navigationspunkten und sehr klein dargestellten Inhalten.
 - Die Startseite enthält einen Kontakt-Link, jedoch keine hervorgehobene Kontaktmöglichkeit oder Handlungsaufforderung im Hauptinhalt.
-- Die Startseite nennt Heinibühlstrasse 33, das Impressum nennt Friedhofstrasse 34.
+- Korrektur vom 13.09.2026: Die Kontaktseite unterscheidet Firmensitz und Werkstatt. Der frühere Widerspruchsvorwurf ist zurückgenommen. [Quelle](https://www.antonhelscherag.ch/de/beratung/index.html)
 
 [Ansicht 1](anton-helscher-1.png) · [Ansicht 2](anton-helscher-2.png)
 

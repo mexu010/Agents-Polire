@@ -19,10 +19,14 @@ Am 13.09.2026 bestanden Factory-Build, Lint und 115 Tests in 12 Dateien. Das ist
 
 Bei Bauert und Garage Brunner scheiterte die Browser-Erfassung; dafür wird kein Audit-Score erfunden. Kreuzgarage Lanz wird wegen Pensionierungs-/Schliessungssignalen und Stefan Kyburz AG wegen Liquidationssignalen ausgeschlossen. Zwei Ersatz-Leads sowie die beiden fehlenden Audits sind noch offen. Die Browser-/Lighthouse-Abstürze sind noch nicht behoben.
 
-Bisheriger Zehnerlauf: 18 abgerechnete Aufrufe, USD 0.275238 laut lokalem Usage-Ledger; keine offenen Reservierungen zum Exportzeitpunkt. Autorisiertes Gesamtlimit: USD 5. Der separate frühere POLIRE-Test hat einen eigenen Budgetbereich. Keine Demos für diese Leads freigegeben.
+Bisheriger Zehnerlauf: 18 abgerechnete Aufrufe, USD 0.275238 laut lokalem Usage-Ledger; keine offenen Reservierungen zum Exportzeitpunkt. Autorisiertes Gesamtlimit: USD 5. Der separate frühere POLIRE-Test hat einen eigenen Budgetbereich. Beim ersten Review-Export war noch keine Demo freigegeben; danach wurde Anton Helscher AG ausdrücklich für die unten verlinkte lokale Demo ausgewählt.
 
 ## Lokale Daten
 
 API-Schlüssel nur lokal in `website-factory/.env` eintragen. `.env`, Zugangsdaten, interne Überlegungen, rohe Tool-Protokolle, installierte Pakete, Build-Caches und lokale SQLite-Laufzeitdaten gehören nicht ins Git-Archiv. Der bestehende lokale Datenbestand bleibt erhalten. Ein frischer Checkout enthält keine bereits verbrauchten Budgetkonten: Live-Läufe erst mit bewusst gesetztem neuem Betreiberbudget oder wiederhergestellter lokaler Datenbank starten.
 
 Das Archiv ist eine Momentaufnahme; es ändert weder die bisherigen Website-Remotes noch den Vercel-Deploy.
+
+## Erste echte Firmen-Demo
+
+[Anton Helscher AG](demos/anton-helscher/README.md): lokale responsive Design-Demo auf Basis realer Firmenquellen und des gespeicherten Audits. Direkt im Entwicklungs-Chat erstellt; kein vollständiger autonomer Factory-Lauf. Keine zusätzlichen API-Kosten. Die Adresskritik des ursprünglichen Reviews wurde nach erweitertem Quellenabgleich zurückgenommen.

@@ -270,5 +270,14 @@
       "https://azeiger.ch/wp-content/uploads/2026/01/Azeiger_02_2026.pdf"
     ]
   },
-  "demoDecision": "pending"
+  "demoDecision": "pending",
+  "humanReviewCorrection": {
+    "checkedAt": "2026-09-13",
+    "retractedIssueId": "6cbe0281-79de-4fd6-b635-1eba42c72b43",
+    "reason": "Die Kontaktseite unterscheidet Firmensitz (Friedhofstrasse 34) und Werkstatt/Administration (Heinibühlstrasse 33). Kein belegter Adresswiderspruch.",
+    "source": "https://www.antonhelscherag.ch/de/beratung/index.html",
+    "historicalQualityScoreSuperseded": true,
+    "correctedQualityScore": null,
+    "demo": "demos/anton-helscher/"
+  }
 }
