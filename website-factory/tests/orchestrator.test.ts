@@ -66,7 +66,7 @@ function liveReviewHarness(override?: (agent: any, input: any) => any) {
 describe("Factory orchestration", () => {
   test("live analysis always waits for a hash-bound demo decision despite generation bypass flags", async () => {
     const { factory, store } = liveReviewHarness();
-    const reviewed = await factory.runLead(
+    let reviewed = await factory.runLead(
       "https://fixture.alpina-service.example/",
       { experimental: true },
     );
@@ -74,6 +74,27 @@ describe("Factory orchestration", () => {
       stage: "demo_review",
       status: "waiting_approval",
     });
+    expect(factory.review(reviewed.id).summary.eligibility.blockers).toContain(
+      "business_activity_unverified",
+    );
+    await expect(
+      factory.decideDemo(
+        reviewed.id,
+        "approve",
+        reviewed.revision,
+        factory.review(reviewed.id).reviewHash,
+      ),
+    ).rejects.toThrow(/not eligible/);
+    const originalReviewHash = factory.review(reviewed.id).reviewHash;
+    reviewed = factory.recordBusinessReview(reviewed.id, reviewed.revision, {
+      status: "operating",
+      reason: "Explicit synthetic operator review for test",
+      sourceUrl: "https://company.ch/news",
+      excerpt: "Synthetic current project",
+      activityDate: new Date().toISOString(),
+      checkedAt: new Date().toISOString(),
+    });
+    expect(factory.review(reviewed.id).reviewHash).not.toBe(originalReviewHash);
     const review = factory.review(reviewed.id);
     expect(review.summary.website).toBe(
       "https://fixture.alpina-service.example/",
@@ -166,6 +187,127 @@ describe("Factory orchestration", () => {
     ).rejects.toThrow(/review hash/i);
     store.close();
   }, 15_000);
+
+  test("stale business evidence revokes an approved demo before resume dispatches postapproval work", async () => {
+    const { factory, store } = liveReviewHarness();
+    let job = await factory.runLead("https://fixture.alpina-service.example/", {
+      experimental: true,
+    });
+    job = factory.recordBusinessReview(job.id, job.revision, {
+      status: "operating",
+      reason: "Explicit synthetic operator review for resume safety",
+      sourceUrl: "https://company.ch/news",
+      excerpt: "Synthetic current project",
+      activityDate: new Date().toISOString(),
+      checkedAt: new Date().toISOString(),
+    });
+    const waiting = factory.show(job.id);
+    waiting.stopAfter = "qualifier";
+    store.db
+      .prepare("UPDATE factory_jobs SET value_json=? WHERE run_id=?")
+      .run(JSON.stringify(waiting), job.id);
+    const review = factory.review(job.id);
+    const paused = await factory.decideDemo(
+      job.id,
+      "approve",
+      job.revision,
+      review.reviewHash,
+    );
+    expect(paused.status).toBe("paused");
+    const decisionId = paused.context.demoDecision.decisionId;
+    const stale = factory.show(job.id);
+    stale.context.businessReview.checkedAt = "2000-01-01T00:00:00.000Z";
+    store.db
+      .prepare("UPDATE factory_jobs SET value_json=? WHERE run_id=?")
+      .run(JSON.stringify(stale), job.id);
+
+    const reset = await factory.resume(job.id, stale.revision);
+
+    expect(reset).toMatchObject({
+      stage: "demo_review",
+      status: "waiting_approval",
+      reason: "business_activity_stale",
+    });
+    expect(reset.context.demoDecision).toBeUndefined();
+    expect(reset.context.demoReview.summary.eligibility.blockers).toContain(
+      "business_activity_stale",
+    );
+    expect(
+      store.list("steps").some((step) => step.agent === "strategist"),
+    ).toBe(false);
+    expect(store.get("demo_decisions", decisionId)).toMatchObject({
+      revokedReason: "business_activity_stale",
+    });
+
+    const refreshed = factory.recordBusinessReview(reset.id, reset.revision, {
+      status: "operating",
+      reason: "Explicit refreshed operator review after stale evidence",
+      sourceUrl: "https://company.ch/news",
+      excerpt: "Synthetic current project remains active",
+      activityDate: new Date().toISOString(),
+      checkedAt: new Date().toISOString(),
+    });
+    const refreshedReview = factory.review(refreshed.id);
+    const built = await factory.decideDemo(
+      refreshed.id,
+      "approve",
+      refreshed.revision,
+      refreshedReview.reviewHash,
+    );
+    expect(built.stage).toBe("preview_review");
+    store.close();
+  }, 15_000);
+
+  test("preview approval returns to demo review when the approved business is now closed", async () => {
+    const { factory, store } = liveReviewHarness();
+    let job = await factory.runLead("https://fixture.alpina-service.example/", {
+      experimental: true,
+    });
+    job = factory.recordBusinessReview(job.id, job.revision, {
+      status: "operating",
+      reason: "Explicit synthetic operator review before build",
+      sourceUrl: "https://company.ch/news",
+      excerpt: "Synthetic current project",
+      activityDate: new Date().toISOString(),
+      checkedAt: new Date().toISOString(),
+    });
+    const review = factory.review(job.id);
+    const built = await factory.decideDemo(
+      job.id,
+      "approve",
+      job.revision,
+      review.reviewHash,
+    );
+    const decisionId = built.context.demoDecision.decisionId;
+    const closed = factory.show(job.id);
+    closed.context.businessReview.status = "closed";
+    store.db
+      .prepare("UPDATE factory_jobs SET value_json=? WHERE run_id=?")
+      .run(JSON.stringify(closed), job.id);
+
+    const reset = factory.approvePreview(
+      job.id,
+      built.artifactHash,
+      closed.revision,
+    );
+
+    expect(reset).toMatchObject({
+      stage: "demo_review",
+      status: "waiting_approval",
+      reason: "business_closed",
+    });
+    expect(reset.previewApproval).toBeUndefined();
+    expect(reset.context.demoDecision).toBeUndefined();
+    expect(reset.context.demoReview.summary.eligibility.blockers).toContain(
+      "business_closed",
+    );
+    expect(store.get("demo_decisions", decisionId)).toMatchObject({
+      revokedReason: "business_closed",
+    });
+    expect(store.list("approvals")).toHaveLength(0);
+    store.close();
+  }, 15_000);
+
   test("runs all production validators, real rendering and browser checks before preview approval", async () => {
     const { factory, store } = harness();
     const job = await factory.runLead(
@@ -653,15 +795,16 @@ describe("Factory orchestration", () => {
     };
     const firstConfig = structuredClone(fixtureFactory.config);
     firstConfig.mode = "live";
-    await (new Factory(firstConfig, store, { provider: provider as any }) as any).agent(
-      fixtureFactory.show(paused.id),
-      "audit",
-    );
+    await (
+      new Factory(firstConfig, store, { provider: provider as any }) as any
+    ).agent(fixtureFactory.show(paused.id), "audit");
     const changedConfig = structuredClone(firstConfig);
     changedConfig.models.audit.max_output_tokens--;
-    await (new Factory(changedConfig, store, {
-      provider: provider as any,
-    }) as any).agent(fixtureFactory.show(paused.id), "audit");
+    await (
+      new Factory(changedConfig, store, {
+        provider: provider as any,
+      }) as any
+    ).agent(fixtureFactory.show(paused.id), "audit");
     expect(stepIds).toHaveLength(1);
     const auditSteps = store
       .list("logical_steps")
@@ -710,9 +853,9 @@ describe("Factory orchestration", () => {
     );
     expect(result.issues).toBeTruthy();
     expect(calls).toBe(1);
-    expect(store.list("steps").find((step) => step.agent === "audit")?.status).toBe(
-      "succeeded",
-    );
+    expect(
+      store.list("steps").find((step) => step.agent === "audit")?.status,
+    ).toBe("succeeded");
     store.close();
   });
 
@@ -754,7 +897,8 @@ describe("Factory orchestration", () => {
     ).rejects.toThrow(/exhausted.*historical raw/i);
     expect(calls).toBe(0);
     expect(
-      store.list("logical_steps").find((step) => step.agent === "audit")?.stepId,
+      store.list("logical_steps").find((step) => step.agent === "audit")
+        ?.stepId,
     ).toBe(legacyStep);
     store.close();
   });
@@ -773,7 +917,9 @@ describe("Factory orchestration", () => {
         invoke: async (args: any) => {
           calls++;
           if (calls > 1)
-            throw new Error("The step has exhausted its output repair allowance");
+            throw new Error(
+              "The step has exhausted its output repair allowance",
+            );
           const invalid = fixtureOutput(args.agent, args.input);
           invalid.data.issues[0].evidence_ids = ["ev-does-not-exist"];
           return invalid;
@@ -782,7 +928,9 @@ describe("Factory orchestration", () => {
     });
     await expect(
       (factory as any).agent(factory.show(paused.id), "audit"),
-    ).rejects.toThrow(/Semantic validation failed:.*evidence.*repair allowance/i);
+    ).rejects.toThrow(
+      /Semantic validation failed:.*evidence.*repair allowance/i,
+    );
     expect(calls).toBe(2);
     store.close();
   });

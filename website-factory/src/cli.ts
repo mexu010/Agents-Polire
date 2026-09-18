@@ -4,13 +4,19 @@ import { dirname, resolve } from "node:path";
 import { Command } from "commander";
 import dotenv from "dotenv";
 import { parse } from "csv-parse/sync";
-import { defaultConfig, loadConfig, type FactoryConfig } from "./config.js";
-import { hash, id, type AgentName, type JsonObject } from "./contracts.js";
+import {
+  defaultConfig,
+  loadConfig,
+  validateConfig,
+  type FactoryConfig,
+} from "./config.js";
+import { id, type AgentName, type JsonObject } from "./contracts.js";
 import { Factory } from "./orchestrator.js";
 import { startPreview } from "./preview.js";
 import { ModelProvider } from "./provider.js";
 import { Store } from "./store.js";
 import { Evaluation } from "./evaluation.js";
+import { registerWorkflowCommands } from "./workflow-cli.js";
 
 type GlobalOptions = { config?: string; dataDir?: string };
 function configured(
@@ -19,6 +25,8 @@ function configured(
   budgetUsd?: number,
   autoGenerate?: boolean,
 ): FactoryConfig {
+  if (mode !== undefined && !["fixture", "live"].includes(mode))
+    throw new Error("mode must be fixture or live");
   dotenv.config({ path: resolve(".env"), quiet: true });
   if (global.config)
     dotenv.config({
@@ -35,19 +43,35 @@ function configured(
   if (mode) config.mode = mode;
   if (autoGenerate !== undefined) config.autoGenerate = autoGenerate;
   if (budgetUsd !== undefined) {
-    if (!Number.isFinite(budgetUsd) || budgetUsd <= 0 || budgetUsd > 2)
-      throw new Error("--budget-usd must be greater than 0 and at most 2");
+    if (
+      [
+        config.budgets.leadMicroUsd,
+        config.budgets.runMicroUsd,
+        config.budgets.dayMicroUsd,
+        config.budgets.totalMicroUsd,
+      ].some((v) => v === null || !Number.isSafeInteger(v) || v <= 0) ||
+      !config.budgets.spendScopeId?.trim()
+    )
+      throw new Error(
+        "--budget-usd only lowers existing configured budgets with an explicit spendScopeId",
+      );
+    if (
+      !Number.isFinite(budgetUsd) ||
+      budgetUsd <= 0 ||
+      Math.floor(budgetUsd * 1_000_000) < 1 ||
+      !Number.isSafeInteger(Math.floor(budgetUsd * 1_000_000))
+    )
+      throw new Error(
+        "--budget-usd must be positive and representable in micro-USD",
+      );
     const micro = Math.floor(budgetUsd * 1_000_000);
-    const cap = (value: number | null) => Math.min(value ?? micro, micro);
+    const cap = (value: number | null) => Math.min(value!, micro);
     config.budgets = {
       ...config.budgets,
       leadMicroUsd: cap(config.budgets.leadMicroUsd),
       runMicroUsd: cap(config.budgets.runMicroUsd),
       dayMicroUsd: cap(config.budgets.dayMicroUsd),
       totalMicroUsd: cap(config.budgets.totalMicroUsd),
-      spendScopeId:
-        config.budgets.spendScopeId ??
-        `cli-${hash({ dataDir: config.dataDir }).slice(0, 20)}`,
     };
   }
   if (
@@ -63,7 +87,7 @@ function configured(
     throw new Error(
       "live mode requires positive lead/run/day/total budgets and a persistent spendScopeId",
     );
-  return config;
+  return structuredClone(validateConfig(config));
 }
 async function useFactory<T>(
   global: GlobalOptions,
@@ -105,7 +129,7 @@ const cli = new Command()
 cli
   .command("doctor")
   .option("--mode <mode>", "fixture or live", "fixture")
-  .option("--budget-usd <amount>", "total USD cap (maximum 2)", Number)
+  .option("--budget-usd <amount>", "lower the configured total USD cap", Number)
   .action(async (o, cmd) => {
     const config = configured(cmd.optsWithGlobals(), o.mode, o.budgetUsd);
     if (config.mode === "fixture")
@@ -122,7 +146,8 @@ cli
   .requiredOption("--domain <url>")
   .requiredOption("--mode <mode>", "fixture or live")
   .option("--stop-after <agent>")
-  .option("--budget-usd <amount>", "total USD cap (maximum 2)", Number)
+  .option("--run-id <id>", "stable run identity for safe continuation")
+  .option("--budget-usd <amount>", "lower the configured total USD cap", Number)
   .option("--experimental")
   .action(async (o, cmd) =>
     print(
@@ -131,6 +156,7 @@ cli
           cmd.optsWithGlobals(),
           (f) =>
             f.runLead(o.domain, {
+              runId: o.runId,
               stopAfter: o.stopAfter as AgentName | undefined,
               experimental: o.experimental,
             }),
@@ -501,6 +527,8 @@ cli
       ),
     );
   });
+
+registerWorkflowCommands(cli, configured, print);
 
 await cli.parseAsync().catch((error) => {
   process.stderr.write(

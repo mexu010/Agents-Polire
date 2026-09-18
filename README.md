@@ -1,6 +1,6 @@
 # POLIRE Projektarchiv
 
-Stand: 13. September 2026. Dieses Archiv enthält den Website-Quellcode, die Website Factory mit sieben Agent-Rollen, Spezifikationen, Tests, verfügbare sichtbare Projekt-Chats und Review-Ergebnisse.
+Stand: 18. September 2026. Dieses Archiv enthält den Website-Quellcode, die Website Factory mit sieben Agent-Rollen, Spezifikationen, Tests, verfügbare sichtbare Projekt-Chats und Review-Ergebnisse.
 
 ## Verzeichnisse
 
@@ -17,7 +17,7 @@ Die Factory implementiert Scout, Audit, Qualifier, Strategist, Builder, QA und S
 
 Am 13.09.2026 bestanden Factory-Build, Lint und 115 Tests in 12 Dateien. Das ist kein Nachweis eines erfolgreichen vollständigen Live-Demo-Laufs: Der frühere POLIRE-Test stoppte an der Strategist-Validierung. Der Zehnerlauf ergab bislang sechs validierte Audit-Ergebnisse; mehrere Scout-Ausgaben konnten nicht vollständig belegt werden. Deshalb sind diese Audits keine vollständigen Business-Value-Qualifizierungen.
 
-Bei Bauert und Garage Brunner scheiterte die Browser-Erfassung; dafür wird kein Audit-Score erfunden. Kreuzgarage Lanz wird wegen Pensionierungs-/Schliessungssignalen und Stefan Kyburz AG wegen Liquidationssignalen ausgeschlossen. Zwei Ersatz-Leads sowie die beiden fehlenden Audits sind noch offen. Die Browser-/Lighthouse-Abstürze sind noch nicht behoben.
+Bei Bauert und Garage Brunner scheiterte die Browser-Erfassung; dafür wird kein Audit-Score erfunden. Kreuzgarage Lanz wird wegen Pensionierungs-/Schliessungssignalen und Stefan Kyburz AG wegen Liquidationssignalen ausgeschlossen. Zwei Ersatz-Leads sowie die beiden fehlenden Audits sind noch offen. Die Browser-Erfassung toleriert jetzt dauernde Hintergrundanfragen; Lighthouse-Abstürze sind vom Hauptprozess isoliert. Die fehlenden Firmen-Audits wurden noch nicht kostenpflichtig erneut ausgeführt.
 
 Bisheriger Zehnerlauf: 18 abgerechnete Aufrufe, USD 0.275238 laut lokalem Usage-Ledger; keine offenen Reservierungen zum Exportzeitpunkt. Autorisiertes Gesamtlimit: USD 5. Der separate frühere POLIRE-Test hat einen eigenen Budgetbereich. Beim ersten Review-Export war noch keine Demo freigegeben; danach wurde Anton Helscher AG ausdrücklich für die unten verlinkte lokale Demo ausgewählt.
 
@@ -30,3 +30,7 @@ Das Archiv ist eine Momentaufnahme; es ändert weder die bisherigen Website-Remo
 ## Erste echte Firmen-Demo
 
 [Anton Helscher AG](demos/anton-helscher/README.md): lokale responsive Design-Demo auf Basis realer Firmenquellen und des gespeicherten Audits. Direkt im Entwicklungs-Chat erstellt; kein vollständiger autonomer Factory-Lauf. Keine zusätzlichen API-Kosten. Die Adresskritik des ursprünglichen Reviews wurde nach erweitertem Quellenabgleich zurückgenommen.
+
+## Ergänzung vom 18.09.2026
+
+Ausführbare Setup-, Prüf- und Workflow-Skripte, eine begrenzte Recherche-Werkzeugschleife, persistente Stapelläufe, Review-Berichte und Fortsetzungen sind implementiert. Betriebsnachweise werden vor einer Live-Demo verlangt und bei Ablauf erneut geprüft. Build, Lint und 149 Tests bestehen. Ein kompletter Fixture-Lauf durchlief alle sieben Agent-Stufen und 22 echte Browserprüfungen. Keine neuen API-Kosten; automatisierte Live-Suche braucht noch einen lokalen Brave-Key und einen bestätigten Tarif. Details unter website-factory/spec/completion-validation.md.

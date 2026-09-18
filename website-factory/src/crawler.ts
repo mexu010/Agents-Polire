@@ -1,4 +1,5 @@
 import { createHash } from "node:crypto";
+import { spawn } from "node:child_process";
 import { lookup as dnsLookup } from "node:dns/promises";
 import { mkdir, mkdtemp, readFile, writeFile } from "node:fs/promises";
 import { request as httpRequest } from "node:http";
@@ -9,9 +10,10 @@ import {
 } from "node:net";
 import { tmpdir } from "node:os";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { createBrotliDecompress, createGunzip, createInflate } from "node:zlib";
 import ipaddr from "ipaddr.js";
-import { chromium, type Browser } from "playwright";
+import { chromium, type Browser, type Page } from "playwright";
 import robotsParser from "robots-parser";
 import { hash, id, now, validate, type JsonObject } from "./contracts.js";
 
@@ -61,6 +63,7 @@ export type CrawlOptions = {
   maxBrowserRequestsPerLead?: number;
   maxDurationMs?: number;
   maxCrawlDurationMs?: number;
+  lighthouse?: boolean;
 };
 
 type CrawlLimits = typeof DEFAULTS;
@@ -775,10 +778,124 @@ async function installBrowserReadOnlyPolicy(
   };
 }
 
+export async function navigateForCapture(
+  page: Page,
+  website: string,
+  timeoutMs: number,
+): Promise<{
+  domContentLoadedTimedOut: boolean;
+  networkIdleTimedOut: boolean;
+}> {
+  let domContentLoadedTimedOut = false;
+  try {
+    await page.goto(website, {
+      waitUntil: "domcontentloaded",
+      timeout: timeoutMs,
+    });
+  } catch (error) {
+    if (!(error instanceof Error) || error.name !== "TimeoutError") throw error;
+    let currentUrl: URL;
+    try {
+      currentUrl = publicUrl(page.url());
+    } catch {
+      throw error;
+    }
+    const readyState = await page
+      .evaluate(() => document.readyState)
+      .catch(() => "loading");
+    if (
+      (readyState !== "interactive" && readyState !== "complete") ||
+      !["http:", "https:"].includes(currentUrl.protocol)
+    )
+      throw error;
+    domContentLoadedTimedOut = true;
+  }
+
+  let networkIdleTimedOut = false;
+  try {
+    await page.waitForLoadState("networkidle", {
+      timeout: Math.min(2_000, timeoutMs),
+    });
+  } catch {
+    networkIdleTimedOut = true;
+  }
+  return { domContentLoadedTimedOut, networkIdleTimedOut };
+}
+
+export type LighthouseWorkerOptions = {
+  website: string;
+  debuggingPort: number;
+  timeoutMs: number;
+  maxWaitForLoadMs?: number;
+  reportPath: string;
+  workerPath?: string;
+};
+
+export async function runLighthouseWorker(
+  options: LighthouseWorkerOptions,
+): Promise<string> {
+  const workerPath =
+    options.workerPath ??
+    fileURLToPath(new URL("./lighthouse-worker.mjs", import.meta.url));
+  const payload = JSON.stringify({
+    website: options.website,
+    debuggingPort: options.debuggingPort,
+    timeoutMs: options.timeoutMs,
+    maxWaitForLoadMs: options.maxWaitForLoadMs ?? options.timeoutMs,
+    reportPath: options.reportPath,
+  });
+
+  return new Promise<string>((resolve, reject) => {
+    const child = spawn(process.execPath, [workerPath, payload], {
+      stdio: ["ignore", "ignore", "pipe"],
+      windowsHide: true,
+    });
+    let settled = false;
+    let timedOut = false;
+    let stderr = "";
+    const timer = setTimeout(() => {
+      timedOut = true;
+      child.kill("SIGKILL");
+    }, options.timeoutMs);
+    const settle = (callback: () => void) => {
+      if (settled) return;
+      settled = true;
+      clearTimeout(timer);
+      callback();
+    };
+    child.stderr.setEncoding("utf8");
+    child.stderr.on("data", (chunk: string) => {
+      if (stderr.length < 8_192)
+        stderr += chunk.slice(0, 8_192 - stderr.length);
+    });
+    child.once("error", (error) => settle(() => reject(error)));
+    child.once("close", (code, signal) => {
+      if (timedOut) {
+        settle(() =>
+          reject(new Error("Lighthouse worker timed out and was terminated")),
+        );
+        return;
+      }
+      if (code !== 0) {
+        const detail =
+          stderr.trim() || `exit ${String(code)} (${String(signal)})`;
+        settle(() => reject(new Error(`Lighthouse worker failed: ${detail}`)));
+        return;
+      }
+      clearTimeout(timer);
+      void readFile(options.reportPath, "utf8").then(
+        (report) => settle(() => resolve(report)),
+        (error) => settle(() => reject(error)),
+      );
+    });
+  });
+}
+
 async function captureScreenshots(
   website: URL,
   outputDir: string,
   limits: ProxyLimits,
+  runLighthouse: boolean,
 ): Promise<{
   evidence: JsonObject[];
   images: Array<{
@@ -854,20 +971,39 @@ async function captureScreenshots(
         });
       });
       try {
-        await page.goto(website.href, {
-          waitUntil: "networkidle",
-          timeout: limits.timeoutMs,
-        });
+        const navigation = await navigateForCapture(
+          page,
+          website.href,
+          Math.max(1, Math.min(limits.timeoutMs, limits.deadline - Date.now())),
+        );
+        if (navigation.domContentLoadedTimedOut)
+          proxy.errors.push({
+            code: "browser_dom_ready_timeout",
+            viewport,
+            message:
+              "Navigation timed out after producing a usable document; capture continued",
+          });
+        if (navigation.networkIdleTimedOut)
+          proxy.errors.push({
+            code: "browser_network_idle_timeout",
+            viewport,
+            message:
+              "Document did not become network-idle; bounded capture continued",
+          });
         await page.evaluate(async () => {
-          await document.fonts.ready;
+          await Promise.race([
+            document.fonts.ready,
+            new Promise((resolve) => setTimeout(resolve, 750)),
+          ]);
           const step = Math.max(300, Math.floor(window.innerHeight * 0.75));
-          for (
-            let y = 0;
-            y < document.documentElement.scrollHeight;
-            y += step
-          ) {
+          const maximumScrolls = Math.min(
+            40,
+            Math.ceil(document.documentElement.scrollHeight / step),
+          );
+          for (let index = 0; index < maximumScrolls; index += 1) {
+            const y = index * step;
             window.scrollTo(0, y);
-            await new Promise((resolve) => setTimeout(resolve, 80));
+            await new Promise((resolve) => setTimeout(resolve, 40));
           }
           window.scrollTo(0, 0);
         });
@@ -913,65 +1049,53 @@ async function captureScreenshots(
         await context.close();
       }
     }
-    try {
-      removeBrowserPolicy = await installBrowserReadOnlyPolicy(
-        debuggingPort,
-        allowBrowserRequest,
-      );
-      const lighthouseModule = await import("lighthouse");
-      const remaining = Math.max(
-        1,
-        Math.min(60_000, limits.deadline - Date.now()),
-      );
-      const lighthouseRun = (lighthouseModule.default as any)(website.href, {
-        port: debuggingPort,
-        logLevel: "silent",
-        output: "json",
-        onlyCategories: ["performance"],
-        formFactor: "mobile",
-        maxWaitForLoad: Math.min(limits.timeoutMs, remaining),
-        disableStorageReset: false,
-      });
-      let timeoutHandle: NodeJS.Timeout | undefined;
-      const timeout = new Promise<never>((_resolve, reject) => {
-        timeoutHandle = setTimeout(
-          () =>
-            reject(new Error("Lighthouse timed out within crawler deadline")),
-          remaining,
+    if (runLighthouse)
+      try {
+        removeBrowserPolicy = await installBrowserReadOnlyPolicy(
+          debuggingPort,
+          allowBrowserRequest,
         );
+        const remaining = Math.max(
+          1,
+          Math.min(60_000, limits.deadline - Date.now()),
+        );
+        const reportPath = path.join(outputDir, "lighthouse-mobile.json");
+        const reportText = await runLighthouseWorker({
+          website: website.href,
+          debuggingPort,
+          timeoutMs: remaining,
+          maxWaitForLoadMs: Math.min(limits.timeoutMs, remaining),
+          reportPath,
+        });
+        const report = JSON.parse(reportText) as unknown;
+        performanceScore = lighthousePerformance(report);
+        if (performanceScore === null)
+          throw new Error("Lighthouse returned no finite performance score");
+        const reportHash = sha256(reportText);
+        evidenceItems.push(
+          evidence({
+            kind: "metric",
+            source_url: website.href,
+            observed_at: now(),
+            artifact_hash: reportHash,
+            locator: reportPath,
+            excerpt: "Lighthouse mobile performance",
+            numeric_value: performanceScore,
+            unit: "lighthouse_mobile",
+          }),
+        );
+      } catch (error) {
+        proxy.errors.push({
+          code: "lighthouse_failed",
+          message: String(error),
+        });
+        performanceScore = null;
+      }
+    else
+      proxy.errors.push({
+        code: "lighthouse_not_requested",
+        message: "Lighthouse was explicitly disabled",
       });
-      const runner = await Promise.race([lighthouseRun, timeout]).finally(
-        () => {
-          if (timeoutHandle) clearTimeout(timeoutHandle);
-        },
-      );
-      if (!runner?.lhr) throw new Error("Lighthouse returned no result");
-      const reportText =
-        typeof runner.report === "string"
-          ? runner.report
-          : JSON.stringify(runner.lhr);
-      const reportPath = path.join(outputDir, "lighthouse-mobile.json");
-      await writeFile(reportPath, reportText, "utf8");
-      performanceScore = lighthousePerformance(runner.lhr);
-      if (performanceScore === null)
-        throw new Error("Lighthouse returned no finite performance score");
-      const reportHash = sha256(reportText);
-      evidenceItems.push(
-        evidence({
-          kind: "metric",
-          source_url: website.href,
-          observed_at: now(),
-          artifact_hash: reportHash,
-          locator: reportPath,
-          excerpt: "Lighthouse mobile performance",
-          numeric_value: performanceScore,
-          unit: "lighthouse_mobile",
-        }),
-      );
-    } catch (error) {
-      proxy.errors.push({ code: "lighthouse_failed", message: String(error) });
-      performanceScore = null;
-    }
   } catch (error) {
     proxy.errors.push({ code: "browser_unavailable", message: String(error) });
   } finally {
@@ -1185,14 +1309,19 @@ export async function collect(
   }> = [];
   let performanceScore: number | null = null;
   if (options.browser) {
-    const captured = await captureScreenshots(homepage, outputDir, {
-      timeoutMs,
-      maxRequests: limits.maxBrowserRequests,
-      maxBytes: Math.max(1, limits.maxTotalBytes - totalBytes),
-      deadline: started + limits.maxDurationMs,
-      minHostIntervalMs: limits.minHostIntervalMs,
-      maxRedirects: limits.maxRedirects,
-    });
+    const captured = await captureScreenshots(
+      homepage,
+      outputDir,
+      {
+        timeoutMs,
+        maxRequests: limits.maxBrowserRequests,
+        maxBytes: Math.max(1, limits.maxTotalBytes - totalBytes),
+        deadline: started + limits.maxDurationMs,
+        minHostIntervalMs: limits.minHostIntervalMs,
+        maxRedirects: limits.maxRedirects,
+      },
+      options.lighthouse !== false,
+    );
     evidenceItems.push(...captured.evidence);
     images = captured.images;
     errors.push(...captured.errors);

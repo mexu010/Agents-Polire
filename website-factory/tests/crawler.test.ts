@@ -1,5 +1,8 @@
 import { connect } from "node:net";
 import { request } from "node:http";
+import { mkdtemp } from "node:fs/promises";
+import { tmpdir } from "node:os";
+import path from "node:path";
 import { describe, it, expect } from "vitest";
 import {
   publicUrl,
@@ -7,9 +10,11 @@ import {
   extractPage,
   lighthousePerformance,
   normalizeCrawlOptions,
+  navigateForCapture,
   pinnedLookup,
   redirectTarget,
   resolvePublicHost,
+  runLighthouseWorker,
   startEgressProxy,
 } from "../src/crawler.js";
 
@@ -216,5 +221,54 @@ describe("external network boundary", () => {
     expect(result.text).toContain("Beispiel & Partner");
     expect(result.text).not.toContain("send secrets");
     expect(result.links).toContain("https://example.ch/kontakt");
+  });
+
+  it("keeps a loaded document usable when network idle times out", async () => {
+    const navigationOptions: Array<Record<string, unknown>> = [];
+    const page = {
+      goto: async (_url: string, options: Record<string, unknown>) => {
+        navigationOptions.push(options);
+      },
+      waitForLoadState: async () => {
+        throw new Error("network idle timeout");
+      },
+      url: () => "https://example.com/",
+      evaluate: async () => "complete",
+    };
+
+    const result = await navigateForCapture(
+      page as never,
+      "https://example.com/",
+      1_000,
+    );
+
+    expect(navigationOptions).toEqual([
+      { waitUntil: "domcontentloaded", timeout: 1_000 },
+    ]);
+    expect(result).toEqual({
+      domContentLoadedTimedOut: false,
+      networkIdleTimedOut: true,
+    });
+  });
+
+  it("kills a Lighthouse worker that exceeds its deadline", async () => {
+    const outputDir = await mkdtemp(
+      path.join(tmpdir(), "crawler-worker-test-"),
+    );
+    const started = Date.now();
+
+    await expect(
+      runLighthouseWorker({
+        website: "https://example.com/hang",
+        debuggingPort: 9,
+        timeoutMs: 50,
+        reportPath: path.join(outputDir, "report.json"),
+        workerPath: path.join(
+          import.meta.dirname,
+          "crawler-lighthouse-worker-fixture.mjs",
+        ),
+      }),
+    ).rejects.toThrow(/timed out/i);
+    expect(Date.now() - started).toBeLessThan(1_000);
   });
 });

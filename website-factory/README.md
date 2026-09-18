@@ -4,6 +4,51 @@ Lokale TypeScript-Anwendung mit sieben Agent-Stufen, SQLite, einem deklarativen 
 
 ## Schnellstart ohne API-Key
 
+### Ausführbare Werkzeuge und Recherche
+
+Die Factory enthält jetzt eine begrenzte Scout-Werkzeugschleife: Das Modell entscheidet zwischen Suche, Quellenabruf, Abschluss und Stopp. Entscheidungen, Werkzeugergebnisse, Fehler und Kosten werden in SQLite gespeichert. Die übrigen Agent-Stufen verwenden ihre bestehenden validierten Verträge; Renderer und Orchestrator bleiben normaler Anwendungscode.
+
+```powershell
+./scripts/setup.ps1
+pnpm preflight
+./scripts/check.ps1
+pnpm discover --mode fixture --run-id research-test --objective "Schweizer Dienstleister" --analyse
+pnpm runs
+pnpm trace research-test
+pnpm demo
+```
+
+`preflight` prüft lokal und kostenlos. `discover --mode fixture` simuliert Suche und Modellantworten ausdrücklich. `--analyse` führt die gefundenen Kandidaten bis zum Review aus und wartet auf deine Demo-Entscheidung. `demo` prüft zusätzlich den Renderer und Browser tatsächlich mit Testdaten. Diese Tests belegen keinen erfolgreichen Live-Modelllauf.
+
+Für bekannte URLs und CSV-Stapel:
+
+```powershell
+pnpm analyse --config config/live-test.json --mode live --run-id mein-lead --domain https://polireagency.vercel.app/
+pnpm batch --config config/live-test.json --mode live --batch-id mein-stapel --file leads.csv
+pnpm review --config config/live-test.json RUN_ID
+pnpm report --config config/live-test.json RUN_ID
+pnpm trace --config config/live-test.json RUN_ID
+```
+
+CSV benötigt die Spalte `website`. Stapel sind auf 50 Einträge begrenzt, dedupliziert und sequenziell. Derselbe Stapelname behält seine URLs und Lauf-IDs; erfolgreiche Einträge werden nicht nochmals ausgeführt. Nur `--retry-failed` nimmt fehlgeschlagene Einträge erneut auf. `report` schreibt eine Datei mit Original-Link, Befunden und offenen Voraussetzungen, auch bei unvollständigen Läufen.
+
+Automatische Live-Suche benötigt zusätzlich `BRAVE_SEARCH_API_KEY` ausschliesslich in `.env` sowie `research.enabled: true` und einen positiven `research.queryCostMicroUsd` in der JSON-Konfiguration. Dieser Wert muss den maximalen Preis einer Suchanfrage deines aktuellen Tarifs abdecken (1 USD = 1’000’000 Mikro-USD). Suchkosten werden anhand dieses konfigurierten Tarifs verbucht; sie sind keine vom Suchanbieter zurückgemeldete Rechnungsposition. Ohne Preis, Schlüssel und Gesamtbudget wird die Suche blockiert. Direkte Website-URLs benötigen keinen Suchschlüssel.
+
+Die konfigurierbaren Recherchegrenzen sind `maxSteps` (höchstens 6), `maxQueries` (5), `maxResults` (10 pro Suche) und `maxPages` (5). Dieselbe Lauf-ID und dasselbe Ziel verwenden, um gespeicherte Ergebnisse weiterzuverwenden. `discover --retry-stopped` erlaubt eine ausdrückliche Fortsetzung nach geeigneten Modell- oder Werkzeugfehlern; offene Kostenreservierungen, Refusals und ausgeschöpfte Grenzen bleiben gesperrt. Eine Fortsetzung setzt keine Zähler zurück.
+
+### Betrieb einer Firma vor einer Live-Demo bestätigen
+
+Eine erreichbare Website beweist keinen aktiven Betrieb. Vor einer Live-Demo ist deshalb eine datierte Quellenprüfung erforderlich. Lege lokal eine JSON-Datei mit `status` (`operating`, `uncertain` oder `closed`), `reason`, `sourceUrl`, `excerpt`, `activityDate` und `checkedAt` an. Die Angaben müssen eine tatsächlich geprüfte Quelle wiedergeben; unbekannte Aktivität bleibt `uncertain`.
+
+```powershell
+pnpm business-review --config config/live-test.json RUN_ID --revision REVISION --file business-review.json
+pnpm review --config config/live-test.json RUN_ID
+pnpm demo-decision --config config/live-test.json RUN_ID approve --revision NEUE_REVISION --review-hash NEUER_HASH
+pnpm preview --config config/live-test.json RUN_ID
+```
+
+Eine Prüfung darf höchstens 30 Tage alt sein, die belegte Aktivität höchstens 366 Tage. Änderungen erzeugen einen neuen Review-Hash. Die Prüfung ist eine nachvollziehbare Betreiberbestätigung, keine automatische Garantie über den Firmenstatus. Das alte Budget von 5 USD galt ausschliesslich den zehn Reviews und ist keine Freigabe für neue Such- oder Demo-Läufe.
+
 Voraussetzungen: Node.js 24 oder neuer, pnpm und Chrome oder Playwright Chromium.
 
 Alle folgenden Befehle im Projektordner `website-factory` ausführen.

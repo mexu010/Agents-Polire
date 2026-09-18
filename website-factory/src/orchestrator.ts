@@ -17,6 +17,7 @@ import { ModelProvider } from "./provider.js";
 import { renderSite, verifyArtifact } from "./renderer.js";
 import { runBrowserTests } from "./browser-tests.js";
 import { Store } from "./store.js";
+import { businessBlocker, validateBusinessReview } from "./business.js";
 
 type RunOptions = {
   stopAfter?: AgentName;
@@ -89,7 +90,11 @@ export class Factory {
       throw new Error("website must use HTTP or HTTPS");
     const runId = opts.runId ?? id();
     const existing = this.row(runId);
-    if (existing) return this.resume(runId);
+    if (existing) {
+      if (this.show(runId).website !== url.toString())
+        throw new Error("run identity already belongs to another website");
+      return this.resume(runId);
+    }
     // Identity is unresolved before Scout; keep a provisional lead distinct to avoid unsafe domain-only merging.
     const leadId = `lead-${id()}`;
     const context =
@@ -154,8 +159,9 @@ export class Factory {
       job.status === "done"
     )
       return job;
+    const wasPaused = job.status === "paused";
     job.status = "queued";
-    if (job.status === "paused" || job.stopAfter) job.stopAfter = null;
+    if (wasPaused || job.stopAfter) job.stopAfter = null;
     job = this.save(job, job.revision);
     return this.execute(job);
   }
@@ -222,9 +228,35 @@ export class Factory {
       job.context.demoDecision = record;
       job.stage = decision === "approve" ? "strategist" : "done";
       job.status = decision === "approve" ? "queued" : "done";
+      if (decision === "approve") job.reason = null;
       return this.save(job, expectedRevision);
     });
     return decision === "approve" ? this.execute(saved) : saved;
+  }
+
+  recordBusinessReview(
+    runId: string,
+    expectedRevision: number,
+    input: unknown,
+  ): JsonObject {
+    const review = validateBusinessReview(input);
+    return this.store.transaction(() => {
+      const job = this.show(runId);
+      if (job.revision !== expectedRevision)
+        throw new Error("version conflict for business review");
+      if (job.status === "running" || job.status === "cancelled")
+        throw new Error(
+          "cannot change business review on running or cancelled job",
+        );
+      if (job.context.demoDecision)
+        throw new Error(
+          "business review is locked after demo decision; create a new reviewed revision first",
+        );
+      job.context.businessReview = { ...review, website: job.website };
+      if (job.context.qualification)
+        job.context.demoReview = this.analysisReview(job);
+      return this.save(job, expectedRevision);
+    });
   }
 
   revise(
@@ -287,6 +319,7 @@ export class Factory {
     if (patch.recrawl || campaignChanged) {
       clear([
         "crawl",
+        "businessReview",
         "profile",
         "audit",
         "qualification",
@@ -353,6 +386,8 @@ export class Factory {
       throw new Error("version conflict for preview approval");
     if (job.stage !== "preview_review" || job.status !== "waiting_approval")
       throw new Error("preview is not waiting for approval");
+    const reset = this.resetBlockedDemoApproval(job, revision);
+    if (reset) return reset;
     this.assertArtifact(job, expectedHash);
     const expires = job.context.render.manifest.expires_at;
     if (Date.parse(expires) <= Date.now())
@@ -736,6 +771,8 @@ export class Factory {
           return this.save(job, job.revision, lease);
         }
       }
+      const reset = this.resetBlockedDemoApproval(job, job.revision, lease);
+      if (reset) return reset;
       if (!job.context.demoReview)
         job.context.demoReview = this.analysisReview(job);
       if (
@@ -1293,6 +1330,10 @@ export class Factory {
           (!fact.valid_until || Date.parse(fact.valid_until) > Date.now()),
       );
     const blockers: string[] = [];
+    if (job.mode === "live") {
+      const blocker = businessBlocker(job.context.businessReview);
+      if (blocker) blockers.push(blocker);
+    }
     if (!currentFact("company_name")) blockers.push("company_identity_missing");
     const groundedSwissCountry = (profile.facts ?? []).some(
       (fact: JsonObject) =>
@@ -1320,6 +1361,10 @@ export class Factory {
       blockers.push("hard_exclusion");
     const summary = {
       website: job.website,
+      businessStatus: job.context.businessReview ?? {
+        status: "uncertain",
+        verification: "not_reviewed",
+      },
       audit: {
         qualityScore: audit.quality_score,
         coverage: audit.coverage,
@@ -1367,6 +1412,34 @@ export class Factory {
       },
     };
     return { reviewHash: hash(summary), summary };
+  }
+  private resetBlockedDemoApproval(
+    job: JsonObject,
+    expectedRevision: number,
+    lease?: string,
+  ): JsonObject | null {
+    if (
+      this.config.mode !== "live" ||
+      job.context.demoDecision?.decision !== "approve"
+    )
+      return null;
+    const blocker = businessBlocker(job.context.businessReview);
+    if (!blocker) return null;
+    return this.store.transaction(() => {
+      const decision = job.context.demoDecision;
+      this.store.put("demo_decisions", decision.decisionId, {
+        ...decision,
+        revokedAt: now(),
+        revokedReason: blocker,
+      });
+      delete job.context.demoDecision;
+      job.context.demoReview = this.analysisReview(job);
+      job.stage = "demo_review";
+      job.status = "waiting_approval";
+      job.reason = blocker;
+      job.stopAfter = null;
+      return this.save(job, expectedRevision, lease);
+    });
   }
   private contextKey(agent: AgentName): string {
     return (
@@ -1617,6 +1690,15 @@ export class Factory {
     const result = this.store.db.prepare(sql).run(...args);
     if (result.changes !== 1)
       throw new Error("version conflict while saving job");
+    this.store.put("factory_events", `${job.id}:${revision}`, {
+      runId: job.id,
+      leadId: job.leadId,
+      revision,
+      stage: job.stage,
+      status: job.status,
+      reason: job.reason ?? null,
+      createdAt: job.updatedAt,
+    });
     return this.show(job.id);
   }
 }

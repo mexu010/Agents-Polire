@@ -84,6 +84,105 @@ test("vision token ceiling records its official source, date, and exact model sc
   });
 });
 
+test("research decisions use the fixed strict schema and Scout budget accounting", async () => {
+  const config = liveConfig();
+  const store = new Store(
+    (config.dataDir = mkdtempSync(
+      join(tmpdir(), "factory-research-provider-"),
+    )),
+  );
+  let request: any;
+  const provider = new ModelProvider(config, store, {
+    openai: {
+      responses: {
+        async create(body: any) {
+          request = body;
+          return completed({
+            action: "search",
+            query: "electricians zurich",
+            url: null,
+            candidate_urls: [],
+            reason: "Find candidates",
+          });
+        },
+      },
+    },
+  });
+
+  await expect(
+    provider.decideResearch({
+      runId: "research-run",
+      leadId: "research-lead",
+      stepId: "research-run:decision:0",
+      input: { objective: "Find candidates", observations: [] },
+    }),
+  ).resolves.toMatchObject({ action: "search" });
+  await expect(
+    provider.decideResearch({
+      runId: "research-run",
+      leadId: "research-lead",
+      stepId: "research-run:decision:0",
+      input: { objective: "Find candidates", observations: [] },
+    }),
+  ).resolves.toMatchObject({ action: "search" });
+  await expect(
+    provider.decideResearch({
+      runId: "research-run",
+      leadId: "research-lead",
+      stepId: "research-run:decision:0",
+      input: { objective: "Changed objective", observations: [] },
+    }),
+  ).rejects.toMatchObject({ code: "CACHE_INPUT_MISMATCH" });
+  expect(request).toMatchObject({
+    model: "gpt-5.6-luna",
+    reasoning: { effort: "low" },
+    text: {
+      format: {
+        type: "json_schema",
+        name: "ResearchDecision",
+        strict: true,
+        schema: { additionalProperties: false },
+      },
+    },
+  });
+  expect(store.getBudgetStatus({ runId: "research-run" }).settledMicroUsd).toBe(
+    529,
+  );
+  expect(store.countAttempts("research-run:decision:0")).toBe(1);
+  store.close();
+});
+
+test("research decisions reject semantically invalid combinations after schema output", async () => {
+  const config = liveConfig();
+  const store = new Store(
+    (config.dataDir = mkdtempSync(join(tmpdir(), "factory-research-invalid-"))),
+  );
+  const provider = new ModelProvider(config, store, {
+    openai: {
+      responses: {
+        async create() {
+          return completed({
+            action: "finish",
+            query: "must be null for finish",
+            url: null,
+            candidate_urls: [],
+            reason: "invalid",
+          });
+        },
+      },
+    },
+  });
+  await expect(
+    provider.decideResearch({
+      runId: "invalid-run",
+      leadId: "invalid-lead",
+      stepId: "invalid-run:decision:0",
+      input: { objective: "Find candidates", observations: [] },
+    }),
+  ).rejects.toMatchObject({ code: "SCHEMA_ERROR" });
+  store.close();
+});
+
 test("accepts complete orchestrator inputs, reachable schemas, and a real screenshot within every configured bound", async () => {
   const config = liveConfig();
   const store = new Store(

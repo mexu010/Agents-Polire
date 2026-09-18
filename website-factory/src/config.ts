@@ -48,6 +48,14 @@ export interface FactoryConfig {
   offer: JsonObject;
   agency: JsonObject | null;
   autoGenerate: boolean;
+  research: {
+    enabled: boolean;
+    maxSteps: number;
+    maxQueries: number;
+    maxResults: number;
+    maxPages: number;
+    queryCostMicroUsd: number | null;
+  };
   prices: Record<string, Price>;
   limits: {
     maxDispatches: number;
@@ -182,6 +190,14 @@ export function defaultConfig(): FactoryConfig {
     },
     agency: null,
     autoGenerate: false,
+    research: {
+      enabled: false,
+      maxSteps: 6,
+      maxQueries: 3,
+      maxResults: 5,
+      maxPages: 5,
+      queryCostMicroUsd: null,
+    },
     prices: {
       "openai:gpt-5.6-luna": openAiPrice("gpt-5.6-luna", 0.2, 0.02, 1.2),
       "openai:gpt-5.6-terra": openAiPrice("gpt-5.6-terra", 2, 0.2, 12),
@@ -260,7 +276,7 @@ function deepFreeze<T>(value: T): T {
   return value;
 }
 
-function validateConfig(config: FactoryConfig): FactoryConfig {
+export function validateConfig(config: FactoryConfig): FactoryConfig {
   if (config.mode !== "fixture" && config.mode !== "live")
     throw new Error("mode must be fixture or live");
   for (const agent of AGENTS) {
@@ -303,6 +319,33 @@ function validateConfig(config: FactoryConfig): FactoryConfig {
       throw new Error(`limits.${key} exceeds hard maximum ${cap}`);
   if (typeof config.autoGenerate !== "boolean")
     throw new Error("autoGenerate must be boolean");
+  if (typeof config.research.enabled !== "boolean")
+    throw new Error("research.enabled must be boolean");
+  for (const [key, cap] of Object.entries({
+    maxSteps: 6,
+    maxQueries: 5,
+    maxResults: 10,
+    maxPages: 5,
+  })) {
+    const value =
+      config.research[
+        key as "maxSteps" | "maxQueries" | "maxResults" | "maxPages"
+      ];
+    positiveInteger(`research.${key}`, value);
+    if (value > cap)
+      throw new Error(`research.${key} exceeds hard maximum ${cap}`);
+  }
+  if (config.research.queryCostMicroUsd !== null)
+    positiveInteger(
+      "research.queryCostMicroUsd",
+      config.research.queryCostMicroUsd,
+    );
+  if (
+    config.mode === "live" &&
+    config.research.enabled &&
+    config.research.queryCostMicroUsd === null
+  )
+    throw new Error("live research requires an explicit search query price");
   if (typeof config.escalation.enabled !== "boolean")
     throw new Error("escalation.enabled must be boolean");
   const crawlerCaps: Record<keyof FactoryConfig["crawler"], number> = {
