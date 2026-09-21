@@ -50,7 +50,7 @@ export interface AttemptInput {
   model: string;
   kind: "initial" | "transient_retry" | "output_repair" | "upgrade" | "doctor";
   reasoning?: "low" | "medium";
-  provider?: "openai" | "anthropic";
+  provider?: "openai" | "anthropic" | "codex_oauth";
   inputLimit?: number;
   outputLimit?: number;
   priceVersion?: string;

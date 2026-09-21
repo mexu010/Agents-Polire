@@ -1,5 +1,6 @@
 {
   "mode": "live",
+  "authentication": "chatgpt_oauth",
   "dataDir": "./data/live-test-polire",
   "budgets": {
     "leadMicroUsd": 2000000,

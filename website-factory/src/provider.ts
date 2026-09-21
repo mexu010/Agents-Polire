@@ -14,12 +14,20 @@ import {
 } from "./contracts.js";
 import type { FactoryConfig, ModelConfig, Price } from "./config.js";
 import { BudgetExceededError, Store } from "./store.js";
+import {
+  CodexOAuthClient,
+  OAuthTransportError,
+  type OAuthClient,
+  type OAuthResult,
+} from "./codex-oauth.js";
+import { reserveOAuthCall, oauthQuotaStatus } from "./oauth-quota.js";
 
 interface ResponsesClient {
   responses: { create(body: any, options?: any): Promise<any> };
 }
 export interface ProviderClients {
   openai?: ResponsesClient;
+  oauth?: OAuthClient;
 }
 
 export class ProviderError extends Error {
@@ -41,6 +49,36 @@ export interface NormalizedUsage {
   outputTokens: number;
   reasoningTokens: number | null;
   totalTokens: number;
+}
+
+function normalizeOAuthUsage(
+  usage: OAuthResult["usage"],
+): NormalizedUsage | null {
+  if (
+    !usage ||
+    ![
+      usage.inputTokens,
+      usage.cachedInputTokens,
+      usage.outputTokens,
+      usage.totalTokens,
+    ].every((n) => Number.isSafeInteger(n) && n >= 0) ||
+    usage.cachedInputTokens > usage.inputTokens ||
+    usage.totalTokens !== usage.inputTokens + usage.outputTokens ||
+    (usage.reasoningTokens !== null &&
+      (!Number.isSafeInteger(usage.reasoningTokens) ||
+        usage.reasoningTokens < 0 ||
+        usage.reasoningTokens > usage.outputTokens))
+  )
+    return null;
+  return {
+    inputTokens: usage.inputTokens,
+    cacheReadTokens: usage.cachedInputTokens,
+    cacheWriteTokens: null,
+    uncachedInputTokens: null,
+    outputTokens: usage.outputTokens,
+    reasoningTokens: usage.reasoningTokens,
+    totalTokens: usage.totalTokens,
+  };
 }
 
 const RESEARCH_DECISION_SCHEMA = Object.freeze({
@@ -401,6 +439,7 @@ function assertInputWithinLimit(
 }
 
 export class ModelProvider {
+  private readonly oauth: OAuthClient;
   private readonly openai: ResponsesClient | null;
   private readonly injectedOpenAI: boolean;
 
@@ -409,16 +448,19 @@ export class ModelProvider {
     private readonly store: Store,
     clients: ProviderClients = {},
   ) {
+    this.oauth = clients.oauth ?? new CodexOAuthClient(config.oauth.command);
     this.injectedOpenAI = Boolean(clients.openai);
     this.openai =
-      clients.openai ??
-      (process.env.OPENAI_API_KEY
-        ? new OpenAI({
-            apiKey: process.env.OPENAI_API_KEY,
-            maxRetries: 0,
-            timeout: config.limits.modelTimeoutMs,
-          })
-        : null);
+      config.authentication === "chatgpt_oauth"
+        ? null
+        : (clients.openai ??
+          (process.env.OPENAI_API_KEY
+            ? new OpenAI({
+                apiKey: process.env.OPENAI_API_KEY,
+                maxRetries: 0,
+                timeout: config.limits.modelTimeoutMs,
+              })
+            : null));
   }
 
   async invoke(args: {
@@ -436,6 +478,8 @@ export class ModelProvider {
         "FIXTURE_DISPATCH_FORBIDDEN",
         "ModelProvider cannot dispatch in fixture mode",
       );
+    if (this.config.authentication === "chatgpt_oauth")
+      return this.invokeOAuth(args);
     if (!this.openai)
       throw new ProviderError(
         "API_KEY_MISSING",
@@ -765,7 +809,10 @@ export class ModelProvider {
       max_input_tokens: configured.max_input_tokens,
       max_output_tokens: Math.min(configured.max_output_tokens, 1_000),
     };
-    const requestHash = researchDecisionRequestHash(args.input, model, limits);
+    const requestHash = hash({
+      authentication: this.config.authentication,
+      request: researchDecisionRequestHash(args.input, model, limits),
+    });
     const cached = this.store.get("research_decisions", args.stepId);
     if (cached) {
       if (cached.runId !== args.runId || cached.leadId !== args.leadId)
@@ -785,6 +832,25 @@ export class ModelProvider {
         "FIXTURE_DISPATCH_FORBIDDEN",
         "ModelProvider cannot dispatch in fixture mode",
       );
+    if (this.config.authentication === "chatgpt_oauth") {
+      const decision = await this.oauthTurn({
+        ...args,
+        agent: "scout",
+        model,
+        limits: { ...configured, ...limits },
+        instructions: RESEARCH_DECISION_INSTRUCTIONS,
+        schema: RESEARCH_DECISION_SCHEMA,
+        images: [],
+        validateOutput: validateResearchDecision,
+      });
+      this.store.put("research_decisions", args.stepId, {
+        runId: args.runId,
+        leadId: args.leadId,
+        requestHash,
+        decision,
+      });
+      return decision;
+    }
     if (!this.openai)
       throw new ProviderError(
         "API_KEY_MISSING",
@@ -1045,6 +1111,262 @@ export class ModelProvider {
     );
   }
 
+  private async invokeOAuth(
+    args: Parameters<ModelProvider["invoke"]>[0],
+  ): Promise<JsonObject> {
+    const configured = this.config.models[args.agent];
+    const model = args.modelOverride ?? configured.model;
+    if (
+      !allowedOverride(
+        args.agent,
+        configured.model,
+        model,
+        this.config.escalation.enabled,
+      )
+    )
+      throw new ProviderError(
+        "ESCALATION_NOT_ALLOWED",
+        "OAuth model override is not allowed",
+      );
+    const images = imageContent(args.images, args.input).map(
+      (i) => i.image_url as string,
+    );
+    return this.oauthTurn({
+      ...args,
+      model,
+      limits: configured,
+      images,
+      instructions: promptFor(args.agent),
+      schema: schemaFor(`${ROOT_NAMES[args.agent]}Output`),
+      validateOutput: (value) =>
+        validate(`${ROOT_NAMES[args.agent]}Output`, value),
+    });
+  }
+
+  private async oauthTurn(args: {
+    agent: AgentName;
+    input: JsonObject;
+    runId: string;
+    leadId: string;
+    stepId: string;
+    model: string;
+    limits: ModelConfig;
+    instructions: string;
+    schema: JsonObject;
+    images: string[];
+    repair?: { reason: string };
+    modelOverride?: string;
+    validateOutput: (value: unknown) => JsonObject;
+  }): Promise<JsonObject> {
+    if (args.limits.provider !== "openai")
+      throw new ProviderError(
+        "PROVIDER_DISABLED",
+        "OAuth requires the configured OpenAI model",
+      );
+    let repairReason = args.repair?.reason;
+    const upgraded = args.model !== args.limits.model;
+    // Metadata only: login, available model, modality and effort. No inference or API fallback.
+    await this.oauth.check([
+      {
+        model: args.model,
+        reasoning: args.limits.reasoning_effort,
+        image: args.images.length > 0,
+      },
+    ]);
+    while (true) {
+      const instructions =
+        args.instructions +
+        (repairReason
+          ? `\nRepair only structured output. Validator code: ${repairReason.slice(0, 200)}`
+          : "");
+      const request = {
+        model: args.model,
+        instructions,
+        input: [
+          {
+            role: "user",
+            content: [
+              { type: "input_text", text: JSON.stringify(args.input) },
+              ...args.images.map((image_url) => ({
+                type: "input_image",
+                detail: "high",
+                image_url,
+              })),
+            ],
+          },
+        ],
+        text: { format: { schema: args.schema } },
+      };
+      assertInputWithinLimit(request, args.limits.max_input_tokens, args.model);
+      const attemptId = id();
+      this.store.transaction(() => {
+        const previous = this.store.db
+          .prepare(
+            "SELECT state,error_type FROM agent_attempts WHERE step_id=? AND provider='codex_oauth'",
+          )
+          .all(args.stepId) as Array<{
+          state: string;
+          error_type: string | null;
+        }>;
+        if (previous.some((p) => ["dispatched", "uncertain"].includes(p.state)))
+          throw new ProviderError(
+            "OAUTH_UNRESOLVED",
+            "An OAuth call is unresolved; automatic redispatch is blocked",
+          );
+        if (
+          this.store.countDispatches(args.stepId) >=
+          this.config.limits.maxDispatches
+        )
+          throw new ProviderError(
+            "DISPATCH_LIMIT",
+            "The step has exhausted its dispatch limit",
+          );
+        if (
+          repairReason &&
+          this.store.countAttempts(args.stepId, "output_repair") >=
+            this.config.limits.maxOutputRepairs
+        )
+          throw new ProviderError(
+            "SCHEMA_REPAIR_LIMIT",
+            "The step has exhausted its output repair allowance",
+          );
+        if (
+          upgraded &&
+          this.store.countAttempts(args.stepId, "upgrade") >=
+            this.config.limits.maxUpgrades
+        )
+          throw new ProviderError(
+            "UPGRADE_LIMIT",
+            "The step has exhausted its model upgrade allowance",
+          );
+        reserveOAuthCall(this.store, this.config.oauth, {
+          runId: args.runId,
+          attemptId,
+        });
+        this.store.createAttempt({
+          attemptId,
+          stepId: args.stepId,
+          runId: args.runId,
+          leadId: args.leadId,
+          agent: args.agent,
+          provider: "codex_oauth",
+          model: args.model,
+          reasoning: args.limits.reasoning_effort,
+          kind: upgraded
+            ? "upgrade"
+            : repairReason
+              ? "output_repair"
+              : "initial",
+          inputLimit: args.limits.max_input_tokens,
+          outputLimit: args.limits.max_output_tokens,
+        });
+        this.store.updateAttempt(attemptId, {
+          state: "dispatched",
+          billingStatus: "subscription_pending",
+        });
+      });
+      const started = Date.now();
+      let response: OAuthResult;
+      try {
+        response = await this.oauth.run({
+          model: args.model,
+          reasoning: args.limits.reasoning_effort,
+          image: args.images.length > 0,
+          instructions,
+          input: JSON.stringify(args.input),
+          images: args.images,
+          schema: args.schema,
+          timeoutMs: this.config.limits.modelTimeoutMs,
+          maxOutputTokens: args.limits.max_output_tokens,
+        });
+      } catch (error) {
+        const knownCode =
+          typeof (error as any)?.code === "string" &&
+          /^[A-Z_]{1,60}$/.test((error as any).code)
+            ? (error as any).code
+            : "TRANSPORT";
+        const knownUsage =
+          error instanceof OAuthTransportError ? error.usage : undefined;
+        const normalizedUsage = normalizeOAuthUsage(knownUsage ?? null);
+        this.store.updateAttempt(attemptId, {
+          state: normalizedUsage ? "failed" : "uncertain",
+          errorType: `OAUTH_${knownCode}`,
+          rawUsage: knownUsage ?? null,
+          normalizedUsage,
+          billingStatus: normalizedUsage
+            ? "subscription"
+            : "subscription_usage_unknown",
+          latencyMs: Date.now() - started,
+        });
+        throw new ProviderError(
+          `OAUTH_${knownCode}`,
+          "OAuth request did not complete; usage may have been consumed",
+        );
+      }
+      const usage = response.usage;
+      const normalizedUsage = normalizeOAuthUsage(usage);
+      const validUsage = normalizedUsage !== null;
+      this.store.updateAttempt(attemptId, {
+        reportedModel: response.model,
+        latencyMs: Date.now() - started,
+        rawUsage: usage,
+        normalizedUsage,
+        actualCostMicroUsd: null,
+        billingStatus: validUsage
+          ? "subscription"
+          : "subscription_usage_unknown",
+      });
+      if (!validUsage || response.model !== args.model) {
+        this.store.updateAttempt(attemptId, {
+          state: "uncertain",
+          errorType: "OAUTH_USAGE_OR_MODEL",
+        });
+        throw new ProviderError(
+          "OAUTH_USAGE_OR_MODEL",
+          "OAuth result has unknown usage or an unexpected model",
+        );
+      }
+      if (
+        usage!.outputTokens > args.limits.max_output_tokens ||
+        Buffer.byteLength(response.text) > args.limits.max_output_tokens * 16
+      ) {
+        this.store.updateAttempt(attemptId, {
+          state: "failed",
+          errorType: "OUTPUT_LIMIT",
+        });
+        throw new ProviderError(
+          "OUTPUT_LIMIT",
+          "OAuth output exceeds the accepted response limit",
+        );
+      }
+      try {
+        const output = args.validateOutput(JSON.parse(response.text));
+        this.store.updateAttempt(attemptId, { state: "succeeded" });
+        return output;
+      } catch {
+        this.store.updateAttempt(attemptId, {
+          state: "failed",
+          errorType: "SCHEMA_ERROR",
+        });
+        if (
+          !repairReason &&
+          !upgraded &&
+          this.store.countAttempts(args.stepId, "output_repair") <
+            this.config.limits.maxOutputRepairs &&
+          this.store.countDispatches(args.stepId) <
+            this.config.limits.maxDispatches
+        ) {
+          repairReason = "SCHEMA_ERROR";
+          continue;
+        }
+        throw new ProviderError(
+          "SCHEMA_ERROR",
+          "OAuth output did not pass schema validation",
+        );
+      }
+    }
+  }
+
   async doctor(): Promise<JsonObject> {
     if (this.config.mode === "fixture")
       return {
@@ -1053,6 +1375,24 @@ export class ModelProvider {
         paid: false,
         checks: ["configuration", "sqlite", "fixture_no_provider_dispatch"],
       };
+    if (this.config.authentication === "chatgpt_oauth") {
+      const result = await this.oauth.check(
+        Object.entries(this.config.models).map(([agent, cfg]) => ({
+          model: cfg.model,
+          reasoning: cfg.reasoning_effort,
+          image: ["audit", "qa"].includes(agent),
+        })),
+      );
+      return {
+        ...result,
+        ok: true,
+        mode: "live",
+        authentication: "chatgpt_oauth",
+        inferenceCalls: 0,
+        quota: oauthQuotaStatus(this.store, this.config.oauth.scopeId),
+        actualCostMicroUsd: null,
+      };
+    }
     if (!this.injectedOpenAI && !process.env.OPENAI_API_KEY)
       throw new ProviderError(
         "API_KEY_MISSING",

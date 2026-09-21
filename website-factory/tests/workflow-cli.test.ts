@@ -42,6 +42,7 @@ test("CLI revalidates a fixture configuration switched to live before dispatch",
     file,
     JSON.stringify({
       mode: "fixture",
+      authentication: "api_key",
       research: { enabled: true },
       budgets: {
         leadMicroUsd: 100000,
@@ -86,7 +87,7 @@ test("CLI revalidates a fixture configuration switched to live before dispatch",
 test("budget flag cannot create paid budgets or a spend scope from a fixture config", () => {
   const dir = mkdtempSync(join(tmpdir(), "factory-budget-cli-"));
   const file = join(dir, "config.json");
-  writeFileSync(file, JSON.stringify({ mode: "fixture" }));
+  writeFileSync(file, JSON.stringify({ mode: "fixture", authentication: "api_key" }));
   const child = spawnSync(
     process.execPath,
     [
@@ -109,4 +110,14 @@ test("budget flag cannot create paid budgets or a spend scope from a fixture con
   );
   expect(child.status).not.toBe(0);
   expect(child.stderr).toContain("only lowers existing configured budgets");
+});
+
+test("budget flag cannot suggest an OAuth model spending cap", () => {
+  const child = spawnSync(
+    process.execPath,
+    ["scripts/run.mjs", "doctor", "--config", "config/live-test.json", "--mode", "live", "--budget-usd", "1"],
+    { cwd: resolve("."), encoding: "utf8", timeout: 30000 },
+  );
+  expect(child.status).not.toBe(0);
+  expect(child.stderr).toContain("--budget-usd applies only to API-key or live research USD costs");
 });

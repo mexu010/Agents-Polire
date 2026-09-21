@@ -69,6 +69,7 @@ describe("factory configuration", () => {
       file,
       JSON.stringify({
         mode: "live",
+        authentication: "api_key",
         budgets: {
           leadMicroUsd: 2_000_000,
           runMicroUsd: 2_000_000,

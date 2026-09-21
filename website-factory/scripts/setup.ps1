@@ -8,6 +8,8 @@ try {
   if ($LASTEXITCODE -ne 0) { throw 'Paketinstallation fehlgeschlagen.' }
   pnpm exec playwright install chromium
   if ($LASTEXITCODE -ne 0) { throw 'Browserinstallation fehlgeschlagen.' }
-  if (-not (Test-Path -LiteralPath '.env')) { Copy-Item -LiteralPath '.env.example' -Destination '.env' }
-  Write-Output 'Setup fertig. Zugangsdaten ausschliesslich lokal in .env eintragen. Es wurden keine Modellaufrufe gestartet.'
+  if (-not (Get-Command codex -ErrorAction SilentlyContinue)) {
+    throw 'Codex CLI fehlt. Installiere sie nach https://learn.chatgpt.com/docs/cli und starte setup.ps1 erneut.'
+  }
+  Write-Output 'Setup fertig. Für Live-OAuth mit pnpm login bei ChatGPT anmelden. Es wurden keine Modellaufrufe gestartet.'
 } finally { Pop-Location }

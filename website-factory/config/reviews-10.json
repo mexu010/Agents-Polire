@@ -1,5 +1,6 @@
 {
   "mode": "live",
+  "authentication": "chatgpt_oauth",
   "dataDir": "./data/reviews-10-2026-09-13",
   "budgets": {
     "leadMicroUsd": 500000,

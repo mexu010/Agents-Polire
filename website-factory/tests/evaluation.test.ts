@@ -120,6 +120,7 @@ describe("Evaluation", () => {
   test("requires a dedicated live evaluation budget before any dispatch", async () => {
     const { config, store } = setup();
     config.mode = "live";
+    config.authentication = "api_key";
     config.budgets = {
       leadMicroUsd: 2_000_000,
       runMicroUsd: 2_000_000,
@@ -158,6 +159,7 @@ describe("Evaluation", () => {
     }));
     store.put("evaluation_suites", "representative-20", suite);
     config.mode = "live";
+    config.authentication = "api_key";
     config.budgets = {
       leadMicroUsd: 2_000_000,
       runMicroUsd: 2_000_000,
@@ -189,6 +191,17 @@ describe("Evaluation", () => {
     expect(run.results).toHaveLength(40);
     expect(run.results[0].error).toBeNull();
     expect(new Set(scopes)).toEqual(new Set(["evaluation-only"]));
+    config.authentication = "chatgpt_oauth";
+    const oauthRun = await evaluation.runSuite("representative-20");
+    expect(invokes).toBe(4);
+    expect(oauthRun.results[0].resultId).not.toBe(run.results[0].resultId);
+    const savedOAuth = store.get(
+      "evaluation_results",
+      oauthRun.results[0].resultId,
+    );
+    expect(savedOAuth.costMicroUsd).toBeNull();
+    await evaluation.runSuite("representative-20");
+    expect(invokes).toBe(4);
     store.close();
   });
 

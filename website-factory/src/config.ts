@@ -33,6 +33,14 @@ export interface Price {
 export interface FactoryConfig {
   dataDir: string;
   mode: "fixture" | "live";
+  authentication: "chatgpt_oauth" | "api_key";
+  oauth: {
+    command: string;
+    scopeId: string;
+    maxCallsPerRun: number;
+    maxCallsPerDay: number;
+    maxCallsTotal: number;
+  };
   models: Record<AgentName, ModelConfig>;
   budgets: {
     leadMicroUsd: number | null;
@@ -111,6 +119,14 @@ export function defaultConfig(): FactoryConfig {
   return deepFreeze({
     dataDir: resolve("data"),
     mode: "fixture",
+    authentication: "chatgpt_oauth",
+    oauth: {
+      command: "codex",
+      scopeId: "polire-codex",
+      maxCallsPerRun: 24,
+      maxCallsPerDay: 100,
+      maxCallsTotal: 300,
+    },
     models: {
       scout: {
         provider: "openai",
@@ -277,6 +293,24 @@ function deepFreeze<T>(value: T): T {
 }
 
 export function validateConfig(config: FactoryConfig): FactoryConfig {
+  if (!["chatgpt_oauth", "api_key"].includes(config.authentication))
+    throw new Error("authentication must be chatgpt_oauth or api_key");
+  if (
+    typeof config.oauth.command !== "string" ||
+    !config.oauth.command.trim() ||
+    typeof config.oauth.scopeId !== "string" ||
+    !config.oauth.scopeId.trim()
+  )
+    throw new Error("oauth.command and scopeId are required");
+  for (const name of [
+    "maxCallsPerRun",
+    "maxCallsPerDay",
+    "maxCallsTotal",
+  ] as const) {
+    positiveInteger(`oauth.${name}`, config.oauth[name]);
+    if (config.oauth[name] > 10000)
+      throw new Error(`oauth.${name} exceeds hard maximum 10000`);
+  }
   if (config.mode !== "fixture" && config.mode !== "live")
     throw new Error("mode must be fixture or live");
   for (const agent of AGENTS) {
@@ -438,7 +472,10 @@ export function validateConfig(config: FactoryConfig): FactoryConfig {
     )
       throw new Error(`models.${agent} exceeds context capability profile`);
   }
-  if (config.mode === "live") {
+  if (
+    config.mode === "live" &&
+    (config.authentication === "api_key" || config.research.enabled)
+  ) {
     for (const key of [
       "leadMicroUsd",
       "runMicroUsd",

@@ -424,11 +424,12 @@ export class Evaluation {
     const { evaluationScopeId, evaluationMicroUsd, spendScopeId } =
       this.config.budgets;
     if (
-      typeof evaluationScopeId !== "string" ||
-      !evaluationScopeId.trim() ||
-      evaluationScopeId === spendScopeId ||
-      !Number.isSafeInteger(evaluationMicroUsd) ||
-      (evaluationMicroUsd as number) <= 0
+      this.config.authentication === "api_key" &&
+      (typeof evaluationScopeId !== "string" ||
+        !evaluationScopeId.trim() ||
+        evaluationScopeId === spendScopeId ||
+        !Number.isSafeInteger(evaluationMicroUsd) ||
+        (evaluationMicroUsd as number) <= 0)
     ) {
       throw new Error(
         "A dedicated evaluation budget scope and positive evaluation budget are required for live evaluation",
@@ -490,7 +491,11 @@ export class Evaluation {
         reusedFromCache: true,
         attemptIds: [],
         latencyMs: 0,
-        costMicroUsd: 0,
+        costMicroUsd:
+          this.config.authentication === "chatgpt_oauth" &&
+          this.config.mode === "live"
+            ? null
+            : 0,
       };
       this.store.put("evaluation_results", resultId, result);
       return this.store.get("evaluation_results", resultId);
@@ -551,7 +556,7 @@ export class Evaluation {
     const costMicroUsd =
       this.config.mode === "fixture"
         ? 0
-        : unknownCost
+        : this.config.authentication === "chatgpt_oauth" || unknownCost
           ? null
           : attempts.reduce(
               (sum, attempt) => sum + (attempt?.actualCostMicroUsd ?? 0),
@@ -597,6 +602,7 @@ export class Evaluation {
   }
 
   private withEvaluationBudget(config: FactoryConfig): FactoryConfig {
+    if (config.authentication === "chatgpt_oauth") return config;
     const limit = config.budgets.evaluationMicroUsd as number;
     config.budgets = {
       ...config.budgets,
@@ -633,6 +639,7 @@ export class Evaluation {
     const config = this.variantConfig(agent, model);
     const configHash = hash({
       mode: config.mode,
+      authentication: config.authentication,
       model: config.models[agent],
       price: config.prices[`${config.models[agent].provider}:${model}`],
       limits: config.limits,

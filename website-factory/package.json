@@ -25,6 +25,8 @@
     "runs": "node scripts/run.mjs runs",
     "discover": "node scripts/run.mjs discover",
     "preflight": "node scripts/preflight.mjs",
+    "login": "node scripts/auth.mjs login",
+    "login:status": "node scripts/auth.mjs status",
     "preview": "node scripts/run.mjs preview open"
   },
   "dependencies": {

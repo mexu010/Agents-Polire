@@ -65,6 +65,7 @@ function screenshotPng(): Buffer {
 function liveConfig(): FactoryConfig {
   const config = structuredClone(defaultConfig());
   config.mode = "live";
+  config.authentication = "api_key";
   config.budgets = {
     leadMicroUsd: 1_000_000,
     runMicroUsd: 1_000_000,

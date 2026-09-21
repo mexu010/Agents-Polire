@@ -82,7 +82,7 @@ export function registerWorkflowCommands(
   cli
     .command("trace")
     .argument("<run-id>")
-    .description("Show stage events, tool decisions and billed usage")
+    .description("Show stage events, tool decisions and available usage")
     .action(async (runId, _, cmd) => {
       const config = configure(cmd.optsWithGlobals());
       const store = new Store(config.dataDir);
@@ -99,9 +99,18 @@ export function registerWorkflowCommands(
               .filter((r) => r.runId === runId),
             usage: store.db
               .prepare(
-                "SELECT requested_model,reported_model,state,actual_cost_micro_usd,billing_status,error_type FROM agent_attempts WHERE run_id=?",
+                "SELECT provider,requested_model,reported_model,state,normalized_usage_json,actual_cost_micro_usd,billing_status,error_type FROM agent_attempts WHERE run_id=?",
               )
-              .all(runId),
+              .all(runId)
+              .map((row: any) => {
+                const { normalized_usage_json, ...attempt } = row;
+                return {
+                  ...attempt,
+                  usage: normalized_usage_json
+                    ? JSON.parse(normalized_usage_json)
+                    : null,
+                };
+              }),
             reservations: store.db
               .prepare(
                 "SELECT amount_micro_usd,actual_cost_micro_usd,state FROM budget_reservations WHERE run_id=?",

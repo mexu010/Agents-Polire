@@ -202,9 +202,16 @@ export function runTrace(factory: Factory, runId: string): JsonObject {
     factory.store.list(kind).filter((r: JsonObject) => r.runId === runId);
   const usage = factory.store.db
     .prepare(
-      "SELECT agent,requested_model,reported_model,reasoning,state,actual_cost_micro_usd,billing_status,error_type,created_at FROM agent_attempts WHERE run_id=? ORDER BY created_at",
+      "SELECT agent,provider,requested_model,reported_model,reasoning,state,normalized_usage_json,actual_cost_micro_usd,billing_status,error_type,created_at FROM agent_attempts WHERE run_id=? ORDER BY created_at",
     )
-    .all(runId);
+    .all(runId)
+    .map((row: any) => {
+      const { normalized_usage_json, ...attempt } = row;
+      return {
+        ...attempt,
+        usage: normalized_usage_json ? JSON.parse(normalized_usage_json) : null,
+      };
+    });
   return {
     runId,
     website: job.website,

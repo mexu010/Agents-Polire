@@ -2,15 +2,25 @@
 
 Lokale TypeScript-Anwendung mit sieben Agent-Stufen, SQLite, einem deklarativen React-Renderer und echten Browserprüfungen. Das Projekt ist von der bestehenden POLIRE-Website getrennt. Es enthält keinen E-Mail-Versand.
 
-## Schnellstart ohne API-Key
+## Schnellstart mit ChatGPT-Anmeldung
 
-### Ausführbare Werkzeuge und Recherche
-
-Die Factory enthält jetzt eine begrenzte Scout-Werkzeugschleife: Das Modell entscheidet zwischen Suche, Quellenabruf, Abschluss und Stopp. Entscheidungen, Werkzeugergebnisse, Fehler und Kosten werden in SQLite gespeichert. Die übrigen Agent-Stufen verwenden ihre bestehenden validierten Verträge; Renderer und Orchestrator bleiben normaler Anwendungscode.
+Für Live-Agenten nutzt die Factory die Anmeldung der lokalen Codex CLI. Ein OpenAI-API-Key ist dafür nicht nötig. Installiere die Codex CLI, melde dich im Browser bei ChatGPT an und prüfe den Status:
 
 ```powershell
 ./scripts/setup.ps1
+pnpm login
+pnpm login:status
 pnpm preflight
+pnpm factory --config config/live-test.json doctor --mode live
+```
+
+`pnpm login` startet den offiziellen `codex login`-Ablauf; Codex verwaltet und erneuert die Anmeldung selbst. Die Factory liest, kopiert und speichert keine OAuth-Tokens. `doctor` prüft bei `authentication: "chatgpt_oauth"` nur die lokale Codex-Anmeldung und Konfiguration, ohne Modellaufruf. Eine Anmeldung per API-Key in der Codex CLI ist für diesen Modus nicht geeignet. [Codex-Authentifizierung](https://learn.chatgpt.com/docs/auth) und [App Server](https://learn.chatgpt.com/docs/app-server) beschreiben die zugrunde liegenden Abläufe.
+
+### Ausführbare Werkzeuge und Recherche
+
+Die Factory enthält eine begrenzte Scout-Werkzeugschleife: Das Modell entscheidet zwischen Suche, Quellenabruf, Abschluss und Stopp. Entscheidungen, Werkzeugergebnisse, Fehler und Nutzung werden in SQLite gespeichert. Die übrigen Agent-Stufen verwenden ihre bestehenden validierten Verträge; Renderer und Orchestrator bleiben normaler Anwendungscode.
+
+```powershell
 ./scripts/check.ps1
 pnpm discover --mode fixture --run-id research-test --objective "Schweizer Dienstleister" --analyse
 pnpm runs
@@ -32,7 +42,7 @@ pnpm trace --config config/live-test.json RUN_ID
 
 CSV benötigt die Spalte `website`. Stapel sind auf 50 Einträge begrenzt, dedupliziert und sequenziell. Derselbe Stapelname behält seine URLs und Lauf-IDs; erfolgreiche Einträge werden nicht nochmals ausgeführt. Nur `--retry-failed` nimmt fehlgeschlagene Einträge erneut auf. `report` schreibt eine Datei mit Original-Link, Befunden und offenen Voraussetzungen, auch bei unvollständigen Läufen.
 
-Automatische Live-Suche benötigt zusätzlich `BRAVE_SEARCH_API_KEY` ausschliesslich in `.env` sowie `research.enabled: true` und einen positiven `research.queryCostMicroUsd` in der JSON-Konfiguration. Dieser Wert muss den maximalen Preis einer Suchanfrage deines aktuellen Tarifs abdecken (1 USD = 1’000’000 Mikro-USD). Suchkosten werden anhand dieses konfigurierten Tarifs verbucht; sie sind keine vom Suchanbieter zurückgemeldete Rechnungsposition. Ohne Preis, Schlüssel und Gesamtbudget wird die Suche blockiert. Direkte Website-URLs benötigen keinen Suchschlüssel.
+Automatische Live-Suche benötigt zusätzlich `BRAVE_SEARCH_API_KEY` ausschliesslich in `.env` sowie `research.enabled: true`, einen positiven `research.queryCostMicroUsd` und USD-Budgets in der JSON-Konfiguration. Dieser Wert muss den maximalen Preis einer Suchanfrage deines aktuellen Tarifs abdecken (1 USD = 1’000’000 Mikro-USD). Suchkosten werden anhand dieses konfigurierten Tarifs verbucht; sie sind keine vom Suchanbieter zurückgemeldete Rechnungsposition. Ohne Preis, Schlüssel und Gesamtbudget wird die Suche blockiert. Direkte Website-URLs benötigen keinen Suchschlüssel.
 
 Die konfigurierbaren Recherchegrenzen sind `maxSteps` (höchstens 6), `maxQueries` (5), `maxResults` (10 pro Suche) und `maxPages` (5). Dieselbe Lauf-ID und dasselbe Ziel verwenden, um gespeicherte Ergebnisse weiterzuverwenden. `discover --retry-stopped` erlaubt eine ausdrückliche Fortsetzung nach geeigneten Modell- oder Werkzeugfehlern; offene Kostenreservierungen, Refusals und ausgeschöpfte Grenzen bleiben gesperrt. Eine Fortsetzung setzt keine Zähler zurück.
 
@@ -76,17 +86,9 @@ pnpm factory --data-dir data/my-fixture preview open RUN_ID
 
 Der letzte Befehl zeigt eine geschützte lokale URL und läuft bis Strg+C weiter. `show` enthält Quellen, Bewertungen, Grenzen, aktuelle Versionen und Artefakt-Hashes. Platzhalter wie `RUN_ID` und `HASH` durch die tatsächlichen Werte ersetzen.
 
-## Echter POLIRE-Test mit maximal 2 USD
+## Echter POLIRE-Test mit Codex OAuth
 
-Der API-Key erlaubt den fertigen Agents, Modelle über die OpenAI-API aufzurufen. Diese Nutzung wird separat vom ChatGPT-Abo abgerechnet. Einen Key ausschliesslich lokal in `.env` speichern:
-
-```dotenv
-OPENAI_API_KEY=
-```
-
-`.env` ist von Git ausgeschlossen. `.env.example` enthält nur einen leeren Platzhalter. Keine Schlüssel in JSON-Konfigurationen, Prompts, Chats oder Commits schreiben.
-
-Die vorbereitete `config/live-test.json` setzt für den vom Betreiber genehmigten Einzeltest ein dauerhaftes Gesamtbudget von 2'000'000 Mikro-USD = 2 USD. Die Startprüfung und der Lead-Lauf teilen denselben Budgetbereich.
+Die vorbereitete `config/live-test.json` wählt ausdrücklich `authentication: "chatgpt_oauth"`. Die Agenten nutzen damit das Codex-Kontingent des angemeldeten ChatGPT-Kontos. Es gelten die Codex-Nutzungsgrenzen des Kontos; die Factory kann daraus weder einen USD-Preis noch eine API-Rechnung ableiten. Die gespeicherten historischen USD-Budgets betreffen frühere API-Läufe und bleiben für deren Nachvollziehbarkeit erhalten. Für neue direkte URL-Läufe mit OAuth sind sie kein Modellkostenlimit.
 
 ```powershell
 pnpm factory --config config/live-test.json doctor --mode live
@@ -95,22 +97,21 @@ pnpm factory --config config/live-test.json run --domain https://polireagency.ve
 
 Die Variante ohne `www` wurde verwendet, weil die angegebene `www`-Variante beim Abruf einen TLS-Fehler lieferte. TLS-Prüfungen bleiben aktiviert.
 
-`doctor` prüft die konfigurierten Modellfähigkeiten mit kleinen, tatsächlich kostenpflichtigen Aufrufen. Erfolgreiche Ergebnisse werden zeitlich begrenzt wiederverwendet. Fehlender Key, fehlende Modellberechtigung oder ununterstützte Fähigkeiten stoppen den Lauf. Es gibt keinen stillen Modellwechsel.
+`doctor` prüft die OAuth-Anmeldung und den von Codex angebotenen Modellkatalog inklusive Reasoning und Bildeingabe, ohne Inferenz. Ob ein konkreter Modellaufruf gelingt, zeigt erst der Lauf; es gibt keinen stillen Modellwechsel und keinen automatischen Rückfall auf einen API-Key.
 
 Der echte Lauf bewertet die vorhandenen Belege und legt nach der Analyse immer ein Review mit Firmen-URL vor. Erst eine ausdrückliche, an dieses Review gebundene Betreiberentscheidung erlaubt die Demo-Erstellung. Ein hoher Score, autoGenerate oder --experimental ersetzen im Live-Modus diese Entscheidung nicht. Fehlende Fakten werden nicht erfunden.
 
 Das bestätigte POLIRE-Angebot ist in `config/live-test.json` hinterlegt: Verbesserung bestehender Websites oder komplette Neuerstellung, für alle Schweizer Branchen, ab 1’000 CHF abhängig vom Projektumfang und ohne feste Preisobergrenze. Eine leere Branchenliste bedeutet keine Branchenbeschränkung. Dieser Angebotspreis ist kein Nachweis für das Budget einer gefundenen Firma. Eine bestätigte Absenderidentität muss vor einem Verkaufsentwurf zusätzlich hinterlegt werden.
 
-### Budgetverhalten
+### Grenzen und Abrechnung
 
-- Vor jedem kostenpflichtigen Request wird der maximale zulässige Betrag atomar reserviert, auch bei parallelen Prozessen.
-- Input inklusive Prompt, Schema und Bildern muss innerhalb der budgetierten Grenze liegen. Zu grosse Eingaben stoppen vor dem Modellaufruf.
-- Echte Usage einschliesslich Cache-Reads, Cache-Writes und Reasoning wird gespeichert. Reasoning-Tokens sind bereits in Output-Tokens enthalten und werden nicht doppelt addiert.
-- Timeout oder unklare Usage halten die Reservation offen. Ein Neustart gibt diesen Betrag nicht frei.
-- Ein dauerhafter `spendScopeId` begrenzt den gesamten Test zusätzlich zu Tages-, Lauf- und Leadbudget. Dieselbe Datenbank und denselben Scope für Fortsetzungen beibehalten.
-- `--budget-usd` darf ein konfiguriertes Budget nur weiter begrenzen. Der Betreiber darf die Testdatenbank oder den Budgetbereich nicht wechseln, um denselben genehmigten Test erneut zu finanzieren.
-
-Geldlimits verhindern weitere Requests; sie sind keine vom Provider garantierte Kontosperre. Die Preis- und Bildtokenannahmen sind in `src/config.ts` und `src/provider.ts` versioniert. Der Adapter erzwingt den dokumentierten Standardtarif. Unbekannte Abrechnung bleibt sichtbar und wird nicht als kostenlos behandelt.
+- OAuth-Aufrufe haben lokale Zähler für Versuche pro Lauf, Tag und insgesamt. Diese begrenzen die Zahl der gestarteten Modellaufrufe, nicht das Kontingent oder die Abrechnung des ChatGPT-Kontos.
+- Die zentrale Konfiguration enthält `oauth.maxCallsPerRun` (24), `maxCallsPerDay` (100), `maxCallsTotal` (300) und einen dauerhaften `scopeId`. Die gespeicherten Grenzen lassen sich durch einen Neustart nur senken. Die Zähler erfassen logische Codex-Turns, keine garantierte Anzahl interner Modellrequests.
+- Der konfigurierte Modell-Timeout begrenzt die Wartezeit. `max_output_tokens` wird bei der OAuth-Transportantwort lokal geprüft; es ist keine garantierte serverseitige Ausgabesperre.
+- `max_input_tokens` prüft die von der Factory übergebene Nutzlast. Codex ergänzt eigenen Kontext; das Feld ist deshalb keine harte Obergrenze für sämtliche tatsächlich verwendeten Eingabetokens.
+- Usage und mögliche Fehler bleiben in `trace` sichtbar. Bei OAuth gibt es keinen erfundenen USD-Betrag pro Modellaufruf.
+- `--budget-usd` senkt nur konfigurierte Geldbudgets für den ausdrücklichen API-Key-Modus oder die optionale Brave-Suche. Es setzt kein OAuth-Modelllimit.
+- Bei `authentication: "api_key"` gelten weiterhin die konfigurierten USD-Reservationen für OpenAI-API-Aufrufe. Dieser Modus muss ausdrücklich gewählt werden und ist kein automatischer Rückfall.
 
 ## Deine Entscheidung vor jeder Demo
 
@@ -203,11 +204,13 @@ pnpm factory eval report --suite scout-20
 
 Fallimport: `slot_number`, `agent`, `source_provenance`, `usage_permission_description`, strikt validiertes `input`, dessen kanonischer `input_hash`, `human_reference` und gegebenenfalls `image_attachments`. Das genaue Format und ausführbare Beispiele stehen in `tests/evaluation.test.ts`. Bild- und Quelldateien werden mit ihren Hashes eingefroren. Die Ergebnisse werden für den menschlichen Vergleich verblindet.
 
-Live-Evaluation verlangt ein gesondertes ausdrücklich konfiguriertes `evaluationScopeId` und `evaluationMicroUsd`. Auch die vorangestellten, gecachten Fähigkeitsprüfungen der verglichenen Modelle belasten dieses Evaluationsbudget. Sie darf nicht das Budget des genehmigten POLIRE-Einzeltests benutzen. Leere Fallplätze werden nicht durch erfundene Firmen oder automatische menschliche Bewertungen ergänzt. Kosten pro akzeptiertem Ergebnis bleiben bei null akzeptierten Ergebnissen oder unbekannter Usage undefiniert.
+Die OAuth-Evaluation verwendet denselben dauerhaften Codex-Aufrufbereich wie die Factory. API-Dollar-Kosten bleiben dabei unbekannt (`null`); ein Preisvergleich aus API-Tokenpreisen wäre keine tatsächliche Abrechnung. Im ausdrücklich gewählten API-Modus verlangt die Evaluation weiterhin ein gesondertes `evaluationScopeId` und `evaluationMicroUsd`. Leere Fallplätze werden nicht durch erfundene Firmen oder automatische menschliche Bewertungen ergänzt. Kosten pro akzeptiertem Ergebnis bleiben bei null akzeptierten Ergebnissen oder unbekannter Usage undefiniert.
+
+Ein vollständiger Modellvergleich mit 20 Fällen benötigt mindestens 40 logische Aufrufe. Dafür vor dem ersten Lauf einen entsprechend freigegebenen OAuth-Limitbereich konfigurieren; das Standardlimit von 24 pro Lauf stoppt vorher. Bestehende begrenzte Läufe werden nicht automatisch erweitert.
 
 ## Daten und Grenzen
 
-- Quellartefakte, Screenshots, Lighthouse-Berichte, Laufstände und Exporte liegen unter dem konfigurierten `dataDir`; Secrets stehen getrennt in `.env`.
+- Quellartefakte, Screenshots, Lighthouse-Berichte, Laufstände und Exporte liegen unter dem konfigurierten `dataDir`; die ChatGPT-Anmeldung verwaltet Codex. Nur der optionale Brave-Schlüssel steht in `.env`.
 - Crawler respektiert robots.txt und begrenzt Redirects, öffentliche Zieladressen, Datenmenge, Requests und Zeit. Browserzugriffe laufen durch einen kontrollierten Proxy. Teilfehler bleiben im Lead-Ergebnis sichtbar.
 - Lighthouse liefert echte Messdaten oder `null` mit Fehlergrund. Ein Screenshot allein ist kein bestandener visueller KI-Audit.
 - Der Renderer unterstützt die deklarativen Komponenten des Templates, keine frei generierten Skripte, Shops oder beliebigen Integrationen.

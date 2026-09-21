@@ -1,6 +1,6 @@
 # POLIRE Projektarchiv
 
-Stand: 18. September 2026. Dieses Archiv enthält den Website-Quellcode, die Website Factory mit sieben Agent-Rollen, Spezifikationen, Tests, verfügbare sichtbare Projekt-Chats und Review-Ergebnisse.
+Stand: 21. September 2026. Dieses Archiv enthält den Website-Quellcode, die Website Factory mit sieben Agent-Rollen, Spezifikationen, Tests, verfügbare sichtbare Projekt-Chats und Review-Ergebnisse.
 
 ## Verzeichnisse
 
@@ -23,7 +23,7 @@ Bisheriger Zehnerlauf: 18 abgerechnete Aufrufe, USD 0.275238 laut lokalem Usage-
 
 ## Lokale Daten
 
-API-Schlüssel nur lokal in `website-factory/.env` eintragen. `.env`, Zugangsdaten, interne Überlegungen, rohe Tool-Protokolle, installierte Pakete, Build-Caches und lokale SQLite-Laufzeitdaten gehören nicht ins Git-Archiv. Der bestehende lokale Datenbestand bleibt erhalten. Ein frischer Checkout enthält keine bereits verbrauchten Budgetkonten: Live-Läufe erst mit bewusst gesetztem neuem Betreiberbudget oder wiederhergestellter lokaler Datenbank starten.
+Die Factory nutzt standardmässig die lokale ChatGPT-Anmeldung über Codex OAuth. Ori meldet sich auf seinem Rechner mit `pnpm login` an; Anmeldedaten werden nicht übertragen. Der optionale Brave-Suchschlüssel gehört nur lokal in `website-factory/.env`. `.env`, Zugangsdaten, interne Überlegungen, rohe Tool-Protokolle, installierte Pakete, Build-Caches und lokale SQLite-Laufzeitdaten gehören nicht ins Git-Archiv. Der bestehende lokale Datenbestand bleibt erhalten. Ein frischer Checkout enthält keine bereits verbrauchten Budgetkonten: Live-Läufe erst mit bewusst gesetztem neuem Betreiberbudget oder wiederhergestellter lokaler Datenbank starten.
 
 Das Archiv ist eine Momentaufnahme; es ändert weder die bisherigen Website-Remotes noch den Vercel-Deploy.
 
@@ -34,3 +34,7 @@ Das Archiv ist eine Momentaufnahme; es ändert weder die bisherigen Website-Remo
 ## Ergänzung vom 18.09.2026
 
 Ausführbare Setup-, Prüf- und Workflow-Skripte, eine begrenzte Recherche-Werkzeugschleife, persistente Stapelläufe, Review-Berichte und Fortsetzungen sind implementiert. Betriebsnachweise werden vor einer Live-Demo verlangt und bei Ablauf erneut geprüft. Build, Lint und 149 Tests bestehen. Ein kompletter Fixture-Lauf durchlief alle sieben Agent-Stufen und 22 echte Browserprüfungen. Keine neuen API-Kosten; automatisierte Live-Suche braucht noch einen lokalen Brave-Key und einen bestätigten Tarif. Details unter website-factory/spec/completion-validation.md.
+
+## OAuth-Umstellung vom 21.09.2026
+
+Alle Modellstufen verwenden jetzt standardmässig die verwaltete ChatGPT-Anmeldung über Codex. Kein automatischer Rückfall auf API-Schlüssel. Persistente Aufrufgrenzen und die Demo-Freigabe bleiben erhalten; OAuth-Kosten werden nicht als API-Dollarbeträge erfunden. Build, Lint und 174 Tests bestehen. Ein kleiner echter OAuth-Verbindungstest mit Luna war erfolgreich; ein vollständiger Firmenlauf über OAuth steht noch aus. Einrichtung und Grenzen: website-factory/README.md; Verifikation: website-factory/spec/oauth-migration.md.

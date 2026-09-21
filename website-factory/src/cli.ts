@@ -43,6 +43,10 @@ function configured(
   if (mode) config.mode = mode;
   if (autoGenerate !== undefined) config.autoGenerate = autoGenerate;
   if (budgetUsd !== undefined) {
+    if (config.authentication === "chatgpt_oauth" && !config.research.enabled)
+      throw new Error(
+        "--budget-usd applies only to API-key or live research USD costs",
+      );
     if (
       [
         config.budgets.leadMicroUsd,
@@ -76,6 +80,7 @@ function configured(
   }
   if (
     config.mode === "live" &&
+    (config.authentication === "api_key" || config.research.enabled) &&
     ([
       config.budgets.leadMicroUsd,
       config.budgets.runMicroUsd,
@@ -85,7 +90,7 @@ function configured(
       !config.budgets.spendScopeId)
   )
     throw new Error(
-      "live mode requires positive lead/run/day/total budgets and a persistent spendScopeId",
+      "live API or research mode requires positive lead/run/day/total USD budgets and a persistent spendScopeId",
     );
   return structuredClone(validateConfig(config));
 }
@@ -129,7 +134,7 @@ const cli = new Command()
 cli
   .command("doctor")
   .option("--mode <mode>", "fixture or live", "fixture")
-  .option("--budget-usd <amount>", "lower the configured total USD cap", Number)
+  .option("--budget-usd <amount>", "lower configured API or search USD budgets", Number)
   .action(async (o, cmd) => {
     const config = configured(cmd.optsWithGlobals(), o.mode, o.budgetUsd);
     if (config.mode === "fixture")
@@ -147,7 +152,7 @@ cli
   .requiredOption("--mode <mode>", "fixture or live")
   .option("--stop-after <agent>")
   .option("--run-id <id>", "stable run identity for safe continuation")
-  .option("--budget-usd <amount>", "lower the configured total USD cap", Number)
+  .option("--budget-usd <amount>", "lower configured API or search USD budgets", Number)
   .option("--experimental")
   .action(async (o, cmd) =>
     print(
