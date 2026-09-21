@@ -1,0 +1,101 @@
+{
+  "grossfeld": {
+    "order": 1,
+    "priority": "Zuerst ansehen und anrufen",
+    "reason": "Konkrete mobile Schwächen und eine aktuelle Personalnachricht aus 2026 liefern einen nachvollziehbaren Gesprächsanlass.",
+    "findings": [
+      "Mobile Performance in diesem Abruf: 53/100. Ursachen vor einer Optimierung genauer messen.",
+      "Der grosse Cookie-Dialog verdeckt beim ersten Aufruf den Inhalt. Sein Text beschreibt ausserdem eine automatische Zustimmung beim Weiterklicken; das ist aus Besuchersicht erklärungsbedürftig. Die tatsächliche Funktion wurde nicht getestet.",
+      "Der Audit findet Schreibfehler im Startseitentext. Eine klarere mobile Einstiegsseite mit gut sichtbarem Werkstattkontakt wäre ein konkreter Ansatz."
+    ]
+  },
+  "sopra": {
+    "order": 2,
+    "priority": "Zuerst ansehen und anrufen",
+    "reason": "Ein aktuelles Tagesmenü und konkrete Schwierigkeiten der mobilen Darstellung machen das Restaurant zu einem gut prüfbaren Gesprächskandidaten.",
+    "findings": [
+      "Der Audit beschreibt kleine Menütexte in einer schmalen Spalte und viel freien Raum. Eine besser lesbare Speisekarte auf dem Handy wäre ein konkreter Ansatz.",
+      "Reservation ist in der Navigation vorhanden, auf der mobilen Startseite jedoch wenig hervorgehoben.",
+      "Ergänzende Sichtprüfung: Die für 375 Pixel Breite angeforderte Aufnahme hat eine Inhaltsbreite von 980 Pixeln. Das ist ein Hinweis auf eine unzureichend angepasste mobile Darstellung, kein Nachweis eines defekten Reservationssystems."
+    ]
+  },
+  "fuhrer": {
+    "order": 3,
+    "priority": "Interessant, Bedarf klären",
+    "reason": "Aktivitätssignale sind vorhanden. Der sichtbare Verbesserungsbedarf betrifft zunächst den Einstieg und die inhaltliche Priorisierung.",
+    "findings": [
+      "Der Cookie-Dialog verdeckt einen grossen Teil des ersten mobilen Bildschirms.",
+      "Der Audit empfiehlt, datierte Startseiteninhalte zu prüfen und aktuelle Leistungen deutlicher zu priorisieren. Eine Datierung allein beweist keinen veralteten Betrieb.",
+      "Der Footer nennt eine Webdesign-Domain mit Copyright. Das wurde konservativ nicht als belegter früherer Agenturauftrag gewertet.",
+      "Die Website bittet darum, Vertreterbesuche voranzumelden. Keinen unangekündigten Besuch aus dieser Liste ableiten."
+    ]
+  },
+  "bernhof": {
+    "order": 4,
+    "priority": "Interessant, Bedarf klären",
+    "reason": "Das konkrete Angebot an Haustüren und Innenausbau ist sichtbar. Ein übersichtlicherer Einstieg könnte bei der Orientierung helfen; Kaufbereitschaft ist unbekannt.",
+    "findings": [
+      "Der Cookie-Dialog verdeckt grosse Teile des ersten mobilen und Desktop-Eindrucks.",
+      "Der Audit beschreibt eine umfangreiche Navigation und verschiedene Themen auf derselben Startseite. Die gewünschte Kontaktaufnahme könnte klarer priorisiert werden.",
+      "Für diesen Lauf liegt keine verwertbare Performance-Messung vor. Der Qualitätsscore beruht deshalb auf den beobachteten übrigen Dimensionen."
+    ]
+  },
+  "dolce-vita": {
+    "order": 9,
+    "priority": "Agent-Review unvollständig",
+    "reason": "Der Scout hat die Länderangabe nicht mit der angegebenen Quelle belegt. Nach drei Versuchen hat die Grenze den Lauf gestoppt. Die folgenden Hinweise sind nur eine ergänzende Sichtprüfung, kein abgeschlossener Agent-Audit.",
+    "findings": [
+      "Ergänzende Sichtprüfung: Der Cookie-Dialog dominiert den ersten mobilen Bildschirm.",
+      "Die mobile Startseite ist lang und verteilt Speisen, Gruppenangebote und Abholung über mehrere Abschnitte. Ein kürzerer Weg zu Menü und Reservation ist ein möglicher Ansatz, dessen Wirkung nicht gemessen wurde."
+    ]
+  },
+  "wismer": {
+    "order": 5,
+    "priority": "Zuerst Betriebsstatus klären",
+    "reason": "Konkrete Ansatzpunkte auf der Website, aber kein ausreichend sicherer aktueller Betriebsnachweis aus der direkt geprüften Seite.",
+    "findings": [
+      "Der Audit findet keine deutlich hervorgehobene Handlungsaufforderung im oberen Seitenbereich. Telefon und E-Mail sind weiter unten vorhanden.",
+      "Ergänzende Sichtprüfung: Die für 375 Pixel Breite angeforderte Aufnahme ist 1172 Pixel breit und zeigt das breite Seitenlayout. Die mobile Anpassung sollte direkt auf einem Handy überprüft werden.",
+      "Öffnungszeiten und Kontaktdaten allein reichen nicht zur Bestätigung eines heute aktiven Betriebs. Das zuerst telefonisch klären."
+    ]
+  },
+  "widenbad": {
+    "order": 10,
+    "priority": "Agent-Review unvollständig",
+    "reason": "Der Scout ordnete einzelne Leistungen der falschen Belegstelle zu. Der Lauf stoppte nach drei Versuchen. Kein Qualitätsscore und keine Einstufung als schlechte Website.",
+    "findings": [
+      "Die aktuelle Veranstaltungsankündigung ist ein Aktivitätssignal. Sie beweist nicht, dass die zukünftige Veranstaltung bereits stattgefunden hat.",
+      "Ergänzende Sichtprüfung: Angebote, Menüverknüpfungen, Kontaktdaten und eine Reservationsschaltfläche sind vorhanden. Aus dem vorliegenden Stand folgt kein begründeter Neubau-Bedarf."
+    ]
+  },
+  "bettina": {
+    "order": 6,
+    "priority": "Niedrige Priorität",
+    "reason": "Die Website ist auf dem Handy bereits brauchbar. Der Audit liefert eher kleinere Verbesserungen als einen überzeugenden Anlass für einen kompletten Neubau.",
+    "findings": [
+      "Ein Hinweis auf bereits beendete Betriebsferien steht weiterhin prominent am Seitenanfang.",
+      "Der Terminaufruf mit Telefonnummer erscheint erst nach mehreren Inhaltsabschnitten; er könnte früher sichtbar sein.",
+      "Adresse, Telefonnummer, Öffnungszeiten und Team sind vorhanden. Mobile Performance in diesem Abruf: 91/100."
+    ]
+  },
+  "sigron": {
+    "order": 7,
+    "priority": "Niedrige Priorität",
+    "reason": "Die mobile Seite ist grundsätzlich brauchbar. Der gefundene aktuelle Beitrag ist eine Publireportage und keine unabhängige Betriebsbestätigung.",
+    "findings": [
+      "Der Cookie-Hinweis überlagert auf dem Handy den laufenden Seiteninhalt; ein kompakterer Hinweis könnte die Orientierung erleichtern.",
+      "Der Audit erkennt einen Schreibfehler im Seitentitel des Muldenservice-Angebots.",
+      "Aus diesen Einzelpunkten folgt noch kein starker Bedarf für einen kompletten Neubau. Bedarf und Budget wären zuerst im Gespräch zu klären."
+    ]
+  },
+  "durrer": {
+    "order": 8,
+    "priority": "Visuelle Prüfung fehlt",
+    "reason": "Die Agent-Schritte können ausgewertet werden, aber ohne erfolgreiche Screenshots ist die Websitequalität nicht seriös als schlecht einzustufen.",
+    "findings": [
+      "Die HTML-Inhalte enthalten Firmen- und Kontaktangaben sowie Hinweise auf Aktivitäten im Jahr 2026.",
+      "Der Audit nennt das Telefon-Pflichtfeld im Kontaktformular als mögliche Hürde. Das Formular wurde nicht bedient; ein Defekt ist damit nicht nachgewiesen.",
+      "Es fehlen verwertbare mobile und Desktop-Screenshots. Deshalb kein Qualitätsscore und keine belastbare visuelle Redesign-Empfehlung."
+    ]
+  }
+}

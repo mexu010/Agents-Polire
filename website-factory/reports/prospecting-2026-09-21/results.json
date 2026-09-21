@@ -1,0 +1,2375 @@
+{
+  "observedAt": "2026-09-21T12:23:10.236Z",
+  "authentication": "chatgpt_oauth",
+  "discoveryMethod": "Webrecherche im Codex-Chat; kein automatischer Brave-Suchlauf. Anschliessend echte Factory-Analyse über OAuth.",
+  "noContactSent": true,
+  "noDemosBuilt": true,
+  "summary": {
+    "analysed": 8,
+    "numericAudits": 7,
+    "selected": 10,
+    "totals": {
+      "attempts": 39,
+      "inputTokens": 527230,
+      "outputTokens": 61608,
+      "totalTokens": 588838,
+      "reasoningTokens": 9492,
+      "cacheReadTokens": 51968,
+      "cacheWriteTokens": null,
+      "costUsd": null
+    }
+  },
+  "leads": [
+    {
+      "slug": "bernhof",
+      "name": "BERNHOF-Vetsch AG",
+      "website": "https://www.bernhof.ch/",
+      "industry": "Schreinerei / Haustüren",
+      "locality": "Frümsen SG",
+      "phone": "081 757 12 73",
+      "contactSource": "https://www.bernhof.ch/",
+      "activity": {
+        "status": "recent_self_report",
+        "sourceUrl": "https://www.bernhof.ch/",
+        "activityDate": "2026-08-09",
+        "excerpt": "Wir haben Betriebsferien vom 20.7.2026 bis 9. August 2026.",
+        "finding": "Die Webrecherche zeigte einen eigenen Sommerferien-Hinweis für 2026. Im späteren direkten Factory-Abruf war diese Datierung nicht mehr vorhanden. Das ist ein Recherchehinweis; aktuellen Betrieb und Erreichbarkeit zuerst telefonisch bestätigen."
+      },
+      "runId": "batch-prospects-2026-09-21-a-867af9e243f6fc73",
+      "revision": 9,
+      "status": "waiting_approval",
+      "stage": "demo_review",
+      "error": null,
+      "audit": {
+        "dimensions": {
+          "mobile_usability": {
+            "level": "usable_with_friction",
+            "evidence_ids": ["a554910e-0b6d-47c2-b4d5-727bc62fa405"],
+            "checked_criteria": [
+              "Mobile Navigation",
+              "Sichtbarkeit der Inhalte im mobilen Viewport",
+              "Cookie-Dialog"
+            ],
+            "rationale": "Die mobile Ansicht zeigt eine Menüschaltfläche und ein einspaltiges Layout. Der Cookie-Dialog überdeckt beim ersten Aufruf jedoch den oberen Inhaltsbereich."
+          },
+          "conversion": {
+            "level": "usable_with_friction",
+            "evidence_ids": [
+              "a554910e-0b6d-47c2-b4d5-727bc62fa405",
+              "ece7fdae-7c4c-4ea1-87a7-33255ca8f1c1"
+            ],
+            "checked_criteria": [
+              "Kontaktmöglichkeit",
+              "Kontaktformular",
+              "Primäre Handlung"
+            ],
+            "rationale": "Telefon, E-Mail und ein Kontaktformular sind vorhanden. Auf der Startseite liegt beim beobachteten Aufruf ein Cookie-Dialog über dem Inhalt."
+          },
+          "content_clarity": {
+            "level": "usable_with_friction",
+            "evidence_ids": [
+              "05c0931f-a30e-4b09-97b0-bfb2e8fe2263",
+              "a554910e-0b6d-47c2-b4d5-727bc62fa405"
+            ],
+            "checked_criteria": [
+              "Leistungsübersicht",
+              "Inhaltshierarchie",
+              "Textlesbarkeit"
+            ],
+            "rationale": "Haustüren, Innenausbau und weitere Leistungen sind erkennbar. Die Startseite zeigt eine umfangreiche, teils wiederholte Navigation und viele unterschiedliche Inhalte."
+          },
+          "trust_transparency": {
+            "level": "minor_friction",
+            "evidence_ids": [
+              "68c51e9a-abd0-4a74-a525-591708ec90e2",
+              "4d010328-10e3-4eb2-9646-c97ab2ff63a4"
+            ],
+            "checked_criteria": [
+              "Kontaktangaben",
+              "Adresse",
+              "Rechtliche Verweise"
+            ],
+            "rationale": "Adresse, Telefonnummern, E-Mail sowie Verweise auf Impressum, AGB, Datenschutz und Cookie-Richtlinie sind beobachtet."
+          },
+          "technical_seo": {
+            "level": null,
+            "evidence_ids": [],
+            "checked_criteria": [],
+            "rationale": "Es liegen keine Beobachtungen zu Metadaten, Indexierbarkeit, strukturierten Daten oder technischen Messungen vor."
+          }
+        },
+        "performance_score": null,
+        "quality_score": 53.333333333333336,
+        "coverage": 0.75,
+        "issues": [
+          {
+            "issue_id": "5f168561-cfa8-4d9c-b89c-6271e227be7a",
+            "category": "conversion",
+            "severity": "major",
+            "observation": "Der Cookie-Dialog überdeckt beim beobachteten mobilen und Desktop-Aufruf grosse Teile des sichtbaren Startseiteninhalts.",
+            "evidence_ids": [
+              "a554910e-0b6d-47c2-b4d5-727bc62fa405",
+              "cbe72e43-2c66-4c1e-873a-95c77f63f89d"
+            ],
+            "page_ref": "page-867af9e243f6fc7381a299f3",
+            "viewport": {
+              "width": 375,
+              "height": 812
+            },
+            "impact_hypothesis": "Besuchende müssen den Dialog erst schliessen oder eine Auswahl treffen, bevor sie den Inhalt und Kontaktwege sehen können.",
+            "recommendation": "Cookie-Dialog kompakter gestalten und die Schliessen-Funktion deutlich erreichbar halten.",
+            "suggested_fix_target": "configuration",
+            "reproduction": [
+              "Startseite im Viewport 375 × 812 öffnen.",
+              "Cookie-Dialog beim ersten Aufruf beobachten."
+            ]
+          },
+          {
+            "issue_id": "05ad0453-2e4d-4c07-b1e4-d2854845ad4b",
+            "category": "content_clarity",
+            "severity": "minor",
+            "observation": "Die Startseite enthält eine umfangreiche Navigation mit wiederholten Menüpunkten sowie mehrere unterschiedliche Themenbereiche auf derselben Seite.",
+            "evidence_ids": [
+              "05c0931f-a30e-4b09-97b0-bfb2e8fe2263",
+              "cbe72e43-2c66-4c1e-873a-95c77f63f89d"
+            ],
+            "page_ref": "page-867af9e243f6fc7381a299f3",
+            "viewport": {
+              "width": 1440,
+              "height": 1000
+            },
+            "impact_hypothesis": "Die Orientierung zu den wichtigsten Leistungen und zum nächsten Kontaktweg kann mehr Aufmerksamkeit erfordern.",
+            "recommendation": "Leistungen und Kontaktweg in einer klareren Reihenfolge bündeln und Navigationswiederholungen prüfen.",
+            "suggested_fix_target": "site_spec",
+            "reproduction": [
+              "Startseite öffnen.",
+              "Navigation und Inhaltsbereiche der Startseite vergleichen."
+            ]
+          }
+        ],
+        "limitations": [
+          "Geprüft wurden die drei übergebenen Seiten und zwei Screenshots der Startseite.",
+          "Keine technischen SEO-Prüfungen oder Performance-Messungen liegen vor.",
+          "Es liegen keine Interaktionsbeobachtungen zum Absenden des Kontaktformulars vor."
+        ]
+      },
+      "qualification": {
+        "offer_fit": 100,
+        "implementation_fit": 100,
+        "opportunity_score": null,
+        "lower_bound": 21.666666666666664,
+        "upper_bound": 81.66666666666667,
+        "coverage": 0.39999999999999997,
+        "priority": "skip",
+        "decision": "manual_review",
+        "reason_codes": ["manual_review"],
+        "supporting_issue_ids": [
+          "5f168561-cfa8-4d9c-b89c-6271e227be7a",
+          "05ad0453-2e4d-4c07-b1e4-d2854845ad4b"
+        ]
+      },
+      "businessComponents": {
+        "company_value": {
+          "score": null,
+          "rationale": "Keine uebergebenen Rubrikanker oder ausreichenden Fakten fuer eine Einstufung."
+        },
+        "budget_capacity": {
+          "score": null,
+          "rationale": "Es liegen keine belastbaren Fakten zur Budgetkapazitaet vor. Der Richtpreis des Angebots ist kein Beleg fuer das Budget der Firma."
+        },
+        "website_importance": {
+          "score": null,
+          "rationale": "Es liegen keine uebergebenen Rubrikanker fuer diese Einstufung vor."
+        }
+      },
+      "previousAgency": {
+        "agency_name": null,
+        "status": "unknown",
+        "evidence_ids": [],
+        "score": null
+      },
+      "analysisCompleted": true,
+      "reviewHash": "4054cde79427c547a332adbf309fac0620d9063b1280914e6e20a0af53a89709",
+      "contactStatus": "noch_nicht_angerufen",
+      "customerDemoRequested": null,
+      "demoApproved": false,
+      "editorial": {
+        "order": 4,
+        "priority": "Interessant, Bedarf klären",
+        "reason": "Das konkrete Angebot an Haustüren und Innenausbau ist sichtbar. Ein übersichtlicherer Einstieg könnte bei der Orientierung helfen; Kaufbereitschaft ist unbekannt.",
+        "findings": [
+          "Der Cookie-Dialog verdeckt grosse Teile des ersten mobilen und Desktop-Eindrucks.",
+          "Der Audit beschreibt eine umfangreiche Navigation und verschiedene Themen auf derselben Startseite. Die gewünschte Kontaktaufnahme könnte klarer priorisiert werden.",
+          "Für diesen Lauf liegt keine verwertbare Performance-Messung vor. Der Qualitätsscore beruht deshalb auf den beobachteten übrigen Dimensionen."
+        ]
+      },
+      "usage": [
+        {
+          "run_id": "batch-prospects-2026-09-21-a-867af9e243f6fc73",
+          "agent": "scout",
+          "provider": "codex_oauth",
+          "requested_model": "gpt-5.6-luna",
+          "reported_model": "gpt-5.6-luna",
+          "reasoning": "low",
+          "state": "succeeded",
+          "actual_cost_micro_usd": null,
+          "billing_status": "subscription",
+          "error_type": null,
+          "usage": {
+            "inputTokens": 15115,
+            "cacheReadTokens": 0,
+            "cacheWriteTokens": null,
+            "uncachedInputTokens": null,
+            "outputTokens": 1470,
+            "reasoningTokens": 100,
+            "totalTokens": 16585
+          }
+        },
+        {
+          "run_id": "batch-prospects-2026-09-21-a-867af9e243f6fc73",
+          "agent": "scout",
+          "provider": "codex_oauth",
+          "requested_model": "gpt-5.6-luna",
+          "reported_model": "gpt-5.6-luna",
+          "reasoning": "low",
+          "state": "succeeded",
+          "actual_cost_micro_usd": null,
+          "billing_status": "subscription",
+          "error_type": null,
+          "usage": {
+            "inputTokens": 15130,
+            "cacheReadTokens": 0,
+            "cacheWriteTokens": null,
+            "uncachedInputTokens": null,
+            "outputTokens": 1858,
+            "reasoningTokens": 166,
+            "totalTokens": 16988
+          }
+        },
+        {
+          "run_id": "batch-prospects-2026-09-21-a-867af9e243f6fc73",
+          "agent": "audit",
+          "provider": "codex_oauth",
+          "requested_model": "gpt-5.6-terra",
+          "reported_model": "gpt-5.6-terra",
+          "reasoning": "low",
+          "state": "succeeded",
+          "actual_cost_micro_usd": null,
+          "billing_status": "subscription",
+          "error_type": null,
+          "usage": {
+            "inputTokens": 17955,
+            "cacheReadTokens": 0,
+            "cacheWriteTokens": null,
+            "uncachedInputTokens": null,
+            "outputTokens": 1650,
+            "reasoningTokens": 165,
+            "totalTokens": 19605
+          }
+        },
+        {
+          "run_id": "batch-prospects-2026-09-21-a-867af9e243f6fc73",
+          "agent": "qualifier",
+          "provider": "codex_oauth",
+          "requested_model": "gpt-5.6-luna",
+          "reported_model": "gpt-5.6-luna",
+          "reasoning": "low",
+          "state": "succeeded",
+          "actual_cost_micro_usd": null,
+          "billing_status": "subscription",
+          "error_type": null,
+          "usage": {
+            "inputTokens": 13372,
+            "cacheReadTokens": 0,
+            "cacheWriteTokens": null,
+            "uncachedInputTokens": null,
+            "outputTokens": 1272,
+            "reasoningTokens": 126,
+            "totalTokens": 14644
+          }
+        }
+      ]
+    },
+    {
+      "slug": "fuhrer",
+      "name": "Fuhrer Schreinerei AG",
+      "website": "https://www.fuhrerschreinerei.ch/",
+      "industry": "Schreinerei / Fenster / Türen",
+      "locality": "Kehrsatz BE",
+      "phone": "031 961 35 55",
+      "contactSource": "https://www.fuhrerschreinerei.ch/",
+      "activity": {
+        "status": "recent_self_report",
+        "sourceUrl": "https://www.fuhrerschreinerei.ch/",
+        "activityDate": "2026-08-03",
+        "excerpt": "Betriebsferien vom 25.Juli-Montag 03.August 2026",
+        "finding": "Eigene Website nennt die Sommerpause 2026 und seit Oktober 2025 ein erweitertes Arbeitsangebot."
+      },
+      "runId": "batch-prospects-2026-09-21-a-2feffc069b30c9c3",
+      "revision": 9,
+      "status": "waiting_approval",
+      "stage": "demo_review",
+      "error": null,
+      "audit": {
+        "dimensions": {
+          "mobile_usability": {
+            "level": "usable_with_friction",
+            "evidence_ids": ["bcfa0617-07ca-4567-bf50-600e1b635365"],
+            "checked_criteria": [
+              "Ansicht bei 375 × 812",
+              "Sichtbarkeit des Cookie-Hinweises",
+              "Navigation"
+            ],
+            "rationale": "Der Cookie-Hinweis verdeckt auf der mobilen Startseite einen grossen Teil des sichtbaren Inhalts. Ein Menü-Symbol ist sichtbar."
+          },
+          "conversion": {
+            "level": "usable_with_friction",
+            "evidence_ids": [
+              "bcfa0617-07ca-4567-bf50-600e1b635365",
+              "e5f74b59-122d-48a3-b429-26dd16f642a6"
+            ],
+            "checked_criteria": [
+              "Kontaktformular",
+              "Telefonangabe",
+              "Sichtbarkeit des Cookie-Hinweises"
+            ],
+            "rationale": "Die Kontaktseite enthält ein Formular sowie eine Telefonnummer. Auf der Startseite verdeckt der Cookie-Hinweis den sichtbaren Inhalt."
+          },
+          "content_clarity": {
+            "level": "minor_friction",
+            "evidence_ids": [
+              "b751e1f1-d77e-4db0-ae3f-ffd6881d9565",
+              "bcfa0617-07ca-4567-bf50-600e1b635365"
+            ],
+            "checked_criteria": [
+              "Leistungsnavigation",
+              "Aktualität der Startseiteninhalte"
+            ],
+            "rationale": "Die Leistungsnavigation nennt Fenster, Türen, Innenausbau und Spezialmontagen. Die Startseite zeigt zugleich Inhalte mit Datumsbezug auf Oktober 2025 und 2022."
+          },
+          "trust_transparency": {
+            "level": "minor_friction",
+            "evidence_ids": ["e5f74b59-122d-48a3-b429-26dd16f642a6"],
+            "checked_criteria": [
+              "Kontaktangaben",
+              "Datenschutzerklärung",
+              "Öffnungszeiten"
+            ],
+            "rationale": "Die Kontaktseite nennt Adresse, Telefonnummer, Formular, Öffnungszeiten und eine Datenschutzerklärung."
+          },
+          "technical_seo": {
+            "level": null,
+            "evidence_ids": [],
+            "checked_criteria": [],
+            "rationale": "Keine technischen SEO-Beobachtungen übermittelt."
+          }
+        },
+        "performance_score": null,
+        "quality_score": 58.333333333333336,
+        "coverage": 0.75,
+        "issues": [
+          {
+            "issue_id": "f1765e76-9104-4712-9ec7-ecab19605335",
+            "category": "mobile_usability",
+            "severity": "major",
+            "observation": "Der Cookie-Hinweis verdeckt auf der Startseite bei 375 × 812 einen grossen Teil des sichtbaren Inhalts.",
+            "evidence_ids": ["bcfa0617-07ca-4567-bf50-600e1b635365"],
+            "page_ref": "page-2feffc069b30c9c3f2828907",
+            "viewport": {
+              "width": 375,
+              "height": 812
+            },
+            "impact_hypothesis": "Der Zugang zu Inhalt und Navigation kann vor einer Cookie-Auswahl erschwert sein.",
+            "recommendation": "Cookie-Hinweis kompakter gestalten und den sichtbaren Seiteninhalt weniger verdecken.",
+            "suggested_fix_target": "configuration",
+            "reproduction": [
+              "Startseite bei 375 × 812 öffnen.",
+              "Cookie-Hinweis im sichtbaren Bereich prüfen."
+            ]
+          },
+          {
+            "issue_id": "c04d5005-138b-48a8-86be-efdf60e0a76c",
+            "category": "content_clarity",
+            "severity": "minor",
+            "observation": "Die Startseite enthält Inhalte mit Datumsbezug auf Oktober 2025 und 2022.",
+            "evidence_ids": ["b751e1f1-d77e-4db0-ae3f-ffd6881d9565"],
+            "page_ref": "page-2feffc069b30c9c3f2828907",
+            "viewport": null,
+            "impact_hypothesis": "Datierte Startseiteninhalte können die Einordnung der aktuellen Leistungen erschweren.",
+            "recommendation": "Datierte Startseiteninhalte prüfen und aktuelle Inhalte priorisieren.",
+            "suggested_fix_target": "source_data",
+            "reproduction": [
+              "Startseite öffnen.",
+              "Inhalte mit Oktober 2025 und 2022 prüfen."
+            ]
+          }
+        ],
+        "limitations": [
+          "Keine Interaktion mit Navigation, Formular oder Cookie-Hinweis beobachtet.",
+          "Keine technische SEO- oder Performance-Messung übermittelt.",
+          "Für die Kontaktseite wurde kein Screenshot übermittelt."
+        ]
+      },
+      "qualification": {
+        "offer_fit": 100,
+        "implementation_fit": 100,
+        "opportunity_score": null,
+        "lower_bound": 20.416666666666664,
+        "upper_bound": 80.41666666666667,
+        "coverage": 0.39999999999999997,
+        "priority": "skip",
+        "decision": "manual_review",
+        "reason_codes": ["manual_review"],
+        "supporting_issue_ids": [
+          "f1765e76-9104-4712-9ec7-ecab19605335",
+          "c04d5005-138b-48a8-86be-efdf60e0a76c"
+        ]
+      },
+      "businessComponents": {
+        "company_value": {
+          "score": null,
+          "rationale": "Keine übergebenen Rubrikanker oder tragfähigen Fakten zur Bewertung."
+        },
+        "budget_capacity": {
+          "score": null,
+          "rationale": "Keine tragfähigen Fakten zur Budgetkapazität übergeben."
+        },
+        "website_importance": {
+          "score": null,
+          "rationale": "Keine übergebenen Rubrikanker zur Bewertung der Website-Wichtigkeit."
+        }
+      },
+      "previousAgency": {
+        "agency_name": "New-Webdesign.ch by Nicole Fasel",
+        "status": "unknown",
+        "evidence_ids": ["b751e1f1-d77e-4db0-ae3f-ffd6881d9565"],
+        "score": null
+      },
+      "analysisCompleted": true,
+      "reviewHash": "55f22f010690995ad49e3bbda69430df3be37bb556cdcbc1e97237255b7421db",
+      "contactStatus": "noch_nicht_angerufen",
+      "customerDemoRequested": null,
+      "demoApproved": false,
+      "editorial": {
+        "order": 3,
+        "priority": "Interessant, Bedarf klären",
+        "reason": "Aktivitätssignale sind vorhanden. Der sichtbare Verbesserungsbedarf betrifft zunächst den Einstieg und die inhaltliche Priorisierung.",
+        "findings": [
+          "Der Cookie-Dialog verdeckt einen grossen Teil des ersten mobilen Bildschirms.",
+          "Der Audit empfiehlt, datierte Startseiteninhalte zu prüfen und aktuelle Leistungen deutlicher zu priorisieren. Eine Datierung allein beweist keinen veralteten Betrieb.",
+          "Der Footer nennt eine Webdesign-Domain mit Copyright. Das wurde konservativ nicht als belegter früherer Agenturauftrag gewertet.",
+          "Die Website bittet darum, Vertreterbesuche voranzumelden. Keinen unangekündigten Besuch aus dieser Liste ableiten."
+        ]
+      },
+      "usage": [
+        {
+          "run_id": "batch-prospects-2026-09-21-a-2feffc069b30c9c3",
+          "agent": "scout",
+          "provider": "codex_oauth",
+          "requested_model": "gpt-5.6-luna",
+          "reported_model": "gpt-5.6-luna",
+          "reasoning": "low",
+          "state": "succeeded",
+          "actual_cost_micro_usd": null,
+          "billing_status": "subscription",
+          "error_type": null,
+          "usage": {
+            "inputTokens": 12404,
+            "cacheReadTokens": 1792,
+            "cacheWriteTokens": null,
+            "uncachedInputTokens": null,
+            "outputTokens": 1874,
+            "reasoningTokens": 114,
+            "totalTokens": 14278
+          }
+        },
+        {
+          "run_id": "batch-prospects-2026-09-21-a-2feffc069b30c9c3",
+          "agent": "scout",
+          "provider": "codex_oauth",
+          "requested_model": "gpt-5.6-luna",
+          "reported_model": "gpt-5.6-luna",
+          "reasoning": "low",
+          "state": "succeeded",
+          "actual_cost_micro_usd": null,
+          "billing_status": "subscription",
+          "error_type": null,
+          "usage": {
+            "inputTokens": 12432,
+            "cacheReadTokens": 0,
+            "cacheWriteTokens": null,
+            "uncachedInputTokens": null,
+            "outputTokens": 1968,
+            "reasoningTokens": 223,
+            "totalTokens": 14400
+          }
+        },
+        {
+          "run_id": "batch-prospects-2026-09-21-a-2feffc069b30c9c3",
+          "agent": "scout",
+          "provider": "codex_oauth",
+          "requested_model": "gpt-5.6-luna",
+          "reported_model": "gpt-5.6-luna",
+          "reasoning": "low",
+          "state": "succeeded",
+          "actual_cost_micro_usd": null,
+          "billing_status": "subscription",
+          "error_type": null,
+          "usage": {
+            "inputTokens": 12590,
+            "cacheReadTokens": 0,
+            "cacheWriteTokens": null,
+            "uncachedInputTokens": null,
+            "outputTokens": 1776,
+            "reasoningTokens": 96,
+            "totalTokens": 14366
+          }
+        },
+        {
+          "run_id": "batch-prospects-2026-09-21-a-2feffc069b30c9c3",
+          "agent": "audit",
+          "provider": "codex_oauth",
+          "requested_model": "gpt-5.6-terra",
+          "reported_model": "gpt-5.6-terra",
+          "reasoning": "low",
+          "state": "succeeded",
+          "actual_cost_micro_usd": null,
+          "billing_status": "subscription",
+          "error_type": null,
+          "usage": {
+            "inputTokens": 15640,
+            "cacheReadTokens": 0,
+            "cacheWriteTokens": null,
+            "uncachedInputTokens": null,
+            "outputTokens": 1599,
+            "reasoningTokens": 457,
+            "totalTokens": 17239
+          }
+        },
+        {
+          "run_id": "batch-prospects-2026-09-21-a-2feffc069b30c9c3",
+          "agent": "qualifier",
+          "provider": "codex_oauth",
+          "requested_model": "gpt-5.6-luna",
+          "reported_model": "gpt-5.6-luna",
+          "reasoning": "low",
+          "state": "succeeded",
+          "actual_cost_micro_usd": null,
+          "billing_status": "subscription",
+          "error_type": null,
+          "usage": {
+            "inputTokens": 10812,
+            "cacheReadTokens": 1792,
+            "cacheWriteTokens": null,
+            "uncachedInputTokens": null,
+            "outputTokens": 876,
+            "reasoningTokens": 129,
+            "totalTokens": 11688
+          }
+        }
+      ]
+    },
+    {
+      "slug": "bettina",
+      "name": "Coiffure Bettina",
+      "website": "https://coiffeur-bettina.ch/content/coiffure-bettina",
+      "industry": "Coiffeur",
+      "locality": "Muri AG",
+      "phone": "056 664 13 92",
+      "contactSource": "https://coiffeur-bettina.ch/content/coiffure-bettina",
+      "activity": {
+        "status": "recent_self_report",
+        "sourceUrl": "https://coiffeur-bettina.ch/content/coiffure-bettina",
+        "activityDate": "2026-09-05",
+        "excerpt": "Betriebsferien vom 29. August bis 5. September 2026",
+        "finding": "Eigene Website enthält eine kürzlich beendete Betriebspause und Telefonnummer für Termine."
+      },
+      "runId": "batch-prospects-2026-09-21-a-7d40baefb5a43627",
+      "revision": 6,
+      "status": "waiting_approval",
+      "stage": "demo_review",
+      "error": null,
+      "audit": {
+        "dimensions": {
+          "mobile_usability": {
+            "level": "usable_with_friction",
+            "evidence_ids": ["db3ed535-3c7b-4b3e-995d-d97ca6157ea3"],
+            "checked_criteria": [
+              "mobile Darstellung der Startseite",
+              "Navigation",
+              "Sichtbarkeit von Kontaktangaben"
+            ],
+            "rationale": "Die Startseite ist im mobilen Screenshot einspaltig und die Navigation ist als Menüsymbol vorhanden. Die Kontaktaufforderung erscheint jedoch erst weiter unten auf der Seite."
+          },
+          "conversion": {
+            "level": "minor_friction",
+            "evidence_ids": [
+              "db3ed535-3c7b-4b3e-995d-d97ca6157ea3",
+              "77c452b8-24fe-4791-9772-856a9cdc7a4c"
+            ],
+            "checked_criteria": [
+              "Kontaktaufforderung",
+              "Telefonkontakt",
+              "Platzierung der Kontaktaufforderung"
+            ],
+            "rationale": "Eine telefonische Kontaktaufforderung und die Telefonnummer sind vorhanden. Auf der mobilen Startseite liegt die Kontaktaufforderung nach mehreren Inhaltsabschnitten."
+          },
+          "content_clarity": {
+            "level": "minor_friction",
+            "evidence_ids": [
+              "77c452b8-24fe-4791-9772-856a9cdc7a4c",
+              "db3ed535-3c7b-4b3e-995d-d97ca6157ea3"
+            ],
+            "checked_criteria": [
+              "Startseitenstruktur",
+              "Aktualität sichtbarer Hinweise",
+              "Leistungsübersicht"
+            ],
+            "rationale": "Leistungen und Preise sind über die Navigation erreichbar. Der sichtbare Hinweis zu Betriebsferien nennt einen Zeitraum vor dem Beobachtungsdatum."
+          },
+          "trust_transparency": {
+            "level": "no_material_issue",
+            "evidence_ids": [
+              "77c452b8-24fe-4791-9772-856a9cdc7a4c",
+              "10e2cf89-1d87-4857-86d8-994edd68b362"
+            ],
+            "checked_criteria": [
+              "Kontaktangaben",
+              "Öffnungszeiten",
+              "Teaminformationen"
+            ],
+            "rationale": "Adresse, Telefonnummer, Öffnungszeiten und Teaminformationen sind auf den beobachteten Seiten vorhanden."
+          },
+          "technical_seo": {
+            "level": null,
+            "evidence_ids": [],
+            "checked_criteria": [],
+            "rationale": "Keine technischen SEO-Artefakte für Metadaten, Indexierbarkeit oder strukturierte Daten übergeben."
+          }
+        },
+        "performance_score": 91,
+        "quality_score": 74.42105263157896,
+        "coverage": 0.95,
+        "issues": [
+          {
+            "issue_id": "6c270d5a-e136-4db2-b8bb-7846d2794bf3",
+            "category": "content_clarity",
+            "severity": "minor",
+            "observation": "Betriebsferien vom 29. August bis 5. September 2026",
+            "evidence_ids": [
+              "77c452b8-24fe-4791-9772-856a9cdc7a4c",
+              "db3ed535-3c7b-4b3e-995d-d97ca6157ea3"
+            ],
+            "page_ref": "page-7d40baefb5a4362791d111d4",
+            "viewport": {
+              "width": 375,
+              "height": 812
+            },
+            "impact_hypothesis": "Der abgelaufene Hinweis kann die Aktualität der Website unklar machen.",
+            "recommendation": "Den Hinweis entfernen oder aktualisieren.",
+            "suggested_fix_target": "source_data",
+            "reproduction": [
+              "Startseite öffnen.",
+              "Hinweis zu Betriebsferien prüfen."
+            ]
+          },
+          {
+            "issue_id": "f63ac8f7-389e-454a-9950-2925b1bf7546",
+            "category": "conversion",
+            "severity": "minor",
+            "observation": "Jetzt Termin vereinbaren",
+            "evidence_ids": [
+              "db3ed535-3c7b-4b3e-995d-d97ca6157ea3",
+              "77c452b8-24fe-4791-9772-856a9cdc7a4c"
+            ],
+            "page_ref": "page-7d40baefb5a4362791d111d4",
+            "viewport": {
+              "width": 375,
+              "height": 812
+            },
+            "impact_hypothesis": "Besuchende können die telefonische Kontaktmöglichkeit später entdecken.",
+            "recommendation": "Kontakt aufnehmen",
+            "suggested_fix_target": "site_spec",
+            "reproduction": [
+              "Startseite im mobilen Screenshot prüfen.",
+              "Position der Kontaktaufforderung nach den Inhaltsabschnitten prüfen."
+            ]
+          }
+        ],
+        "limitations": [
+          "Geprüft wurden übergebene HTML-Auszüge sowie Screenshots der Startseite.",
+          "Keine Interaktionen, Formulare, Metadaten oder Indexierbarkeit wurden beobachtet.",
+          "Die Leistungsseite und Teamseite liegen nicht als Screenshots vor."
+        ]
+      },
+      "qualification": {
+        "offer_fit": 100,
+        "implementation_fit": 100,
+        "opportunity_score": null,
+        "lower_bound": 28.89473684210526,
+        "upper_bound": 58.89473684210525,
+        "coverage": 0.7000000000000001,
+        "priority": null,
+        "decision": "manual_review",
+        "reason_codes": ["manual_review"],
+        "supporting_issue_ids": [
+          "6c270d5a-e136-4db2-b8bb-7846d2794bf3",
+          "f63ac8f7-389e-454a-9950-2925b1bf7546"
+        ]
+      },
+      "businessComponents": {
+        "company_value": {
+          "score": 50,
+          "rationale": "Die Website enthält Kontakt- und Leistungsinformationen. Es wurde eine kleinere mobile und konversionale Reibung beobachtet."
+        },
+        "budget_capacity": {
+          "score": null,
+          "rationale": "Es liegen keine tragfähigen Belege zur Budgetkapazität vor."
+        },
+        "website_importance": {
+          "score": 75,
+          "rationale": "Die Website stellt Leistungen, Preise, Öffnungszeiten und telefonische Kontaktmöglichkeiten bereit. Die mobile Kontaktaufforderung liegt erst nach mehreren Inhaltsabschnitten."
+        }
+      },
+      "previousAgency": {
+        "agency_name": null,
+        "status": "unknown",
+        "evidence_ids": [],
+        "score": null
+      },
+      "analysisCompleted": true,
+      "reviewHash": "f58298ad1dc08a432c21e68bf4f90529f973e1c4cb6d83505a30e075cfdfb044",
+      "contactStatus": "noch_nicht_angerufen",
+      "customerDemoRequested": null,
+      "demoApproved": false,
+      "editorial": {
+        "order": 6,
+        "priority": "Niedrige Priorität",
+        "reason": "Die Website ist auf dem Handy bereits brauchbar. Der Audit liefert eher kleinere Verbesserungen als einen überzeugenden Anlass für einen kompletten Neubau.",
+        "findings": [
+          "Ein Hinweis auf bereits beendete Betriebsferien steht weiterhin prominent am Seitenanfang.",
+          "Der Terminaufruf mit Telefonnummer erscheint erst nach mehreren Inhaltsabschnitten; er könnte früher sichtbar sein.",
+          "Adresse, Telefonnummer, Öffnungszeiten und Team sind vorhanden. Mobile Performance in diesem Abruf: 91/100."
+        ]
+      },
+      "usage": [
+        {
+          "run_id": "batch-prospects-2026-09-21-a-7d40baefb5a43627",
+          "agent": "scout",
+          "provider": "codex_oauth",
+          "requested_model": "gpt-5.6-luna",
+          "reported_model": "gpt-5.6-luna",
+          "reasoning": "low",
+          "state": "succeeded",
+          "actual_cost_micro_usd": null,
+          "billing_status": "subscription",
+          "error_type": null,
+          "usage": {
+            "inputTokens": 14002,
+            "cacheReadTokens": 0,
+            "cacheWriteTokens": null,
+            "uncachedInputTokens": null,
+            "outputTokens": 1673,
+            "reasoningTokens": 128,
+            "totalTokens": 15675
+          }
+        },
+        {
+          "run_id": "batch-prospects-2026-09-21-a-7d40baefb5a43627",
+          "agent": "audit",
+          "provider": "codex_oauth",
+          "requested_model": "gpt-5.6-terra",
+          "reported_model": "gpt-5.6-terra",
+          "reasoning": "low",
+          "state": "succeeded",
+          "actual_cost_micro_usd": null,
+          "billing_status": "subscription",
+          "error_type": null,
+          "usage": {
+            "inputTokens": 16916,
+            "cacheReadTokens": 5888,
+            "cacheWriteTokens": null,
+            "uncachedInputTokens": null,
+            "outputTokens": 1797,
+            "reasoningTokens": 491,
+            "totalTokens": 18713
+          }
+        },
+        {
+          "run_id": "batch-prospects-2026-09-21-a-7d40baefb5a43627",
+          "agent": "qualifier",
+          "provider": "codex_oauth",
+          "requested_model": "gpt-5.6-luna",
+          "reported_model": "gpt-5.6-luna",
+          "reasoning": "low",
+          "state": "succeeded",
+          "actual_cost_micro_usd": null,
+          "billing_status": "subscription",
+          "error_type": null,
+          "usage": {
+            "inputTokens": 12015,
+            "cacheReadTokens": 0,
+            "cacheWriteTokens": null,
+            "uncachedInputTokens": null,
+            "outputTokens": 1206,
+            "reasoningTokens": 148,
+            "totalTokens": 13221
+          }
+        }
+      ]
+    },
+    {
+      "slug": "grossfeld",
+      "name": "Garage Grossfeld AG",
+      "website": "https://www.garage-grossfeld.ch/",
+      "industry": "Garage",
+      "locality": "Trimbach SO",
+      "phone": "062 293 09 09",
+      "contactSource": "https://www.garage-grossfeld.ch/",
+      "activity": {
+        "status": "recent_self_report",
+        "sourceUrl": "https://www.garage-grossfeld.ch/standort?catid=39%3Aaktuell&id=24%3Amai-2026&view=article",
+        "activityDate": "2026-09-01",
+        "excerpt": "Ab dem 1. September startet unser neuer Werkstattleiter Patrik Schenker.",
+        "finding": "Eine eigene Personalnachricht nennt Ausbildungsstart im August 2026 und neuen Werkstattleiter ab September."
+      },
+      "runId": "batch-prospects-2026-09-21-a-8b2bf7fdca74d829",
+      "revision": 6,
+      "status": "waiting_approval",
+      "stage": "demo_review",
+      "error": null,
+      "audit": {
+        "dimensions": {
+          "mobile_usability": {
+            "level": "usable_with_friction",
+            "evidence_ids": ["c4c4f829-ba67-4024-9319-56fa8d38b8f8"],
+            "checked_criteria": [
+              "Darstellung im Viewport 375 × 812",
+              "Cookie-Hinweis",
+              "Bedienelemente des Cookie-Hinweises"
+            ],
+            "rationale": "Der Cookie-Hinweis passt in den beobachteten Viewport und zeigt zwei gut erkennbare Auswahlmöglichkeiten. Er überlagert jedoch beim Aufruf die Seiteninhalte."
+          },
+          "conversion": {
+            "level": "usable_with_friction",
+            "evidence_ids": [
+              "a9ecf8b6-0c9f-4332-9fe8-21b481ca16f6",
+              "c4c4f829-ba67-4024-9319-56fa8d38b8f8"
+            ],
+            "checked_criteria": [
+              "Sichtbare Kontaktmöglichkeit",
+              "Startseitenzugriff"
+            ],
+            "rationale": "Die Telefonnummer ist auf der Startseite vorhanden. Vor dem Zugriff auf die Inhalte wird ein Cookie-Hinweis angezeigt."
+          },
+          "content_clarity": {
+            "level": "minor_friction",
+            "evidence_ids": [
+              "07e95987-ad81-4ecc-97aa-664a11505aef",
+              "a9ecf8b6-0c9f-4332-9fe8-21b481ca16f6"
+            ],
+            "checked_criteria": [
+              "Navigation",
+              "Leistungsnennung",
+              "Öffnungszeiten",
+              "Textfehler"
+            ],
+            "rationale": "Navigation, Leistungen und Öffnungszeiten sind im gelieferten Inhalt vorhanden. Einzelne sichtbare Schreibweisen sind fehlerhaft."
+          },
+          "trust_transparency": {
+            "level": "usable_with_friction",
+            "evidence_ids": [
+              "a9ecf8b6-0c9f-4332-9fe8-21b481ca16f6",
+              "eee2a385-c572-48ff-b402-ab71198b6ef6"
+            ],
+            "checked_criteria": [
+              "Cookie-Hinweis",
+              "Ablehnoption",
+              "Datenschutzverweise"
+            ],
+            "rationale": "Der Hinweis enthält eine Ablehnoption und Datenschutzverweise. Die beschriebene automatische Cookie-Akzeptanz bei bestimmten Interaktionen sollte überprüft werden."
+          },
+          "technical_seo": {
+            "level": null,
+            "evidence_ids": [
+              "07e95987-ad81-4ecc-97aa-664a11505aef",
+              "c0e5f345-fbb5-4d79-9a2c-496df9ff3be3",
+              "615c9313-5234-4cd8-b5d5-1baeb3001535"
+            ],
+            "checked_criteria": ["Seitentitel im gelieferten HTML"],
+            "rationale": "Seitentitel sind im gelieferten HTML erkennbar. Weitere technische SEO-Kriterien wurden nicht übergeben."
+          }
+        },
+        "performance_score": 53,
+        "quality_score": 54.578947368421055,
+        "coverage": 0.95,
+        "issues": [
+          {
+            "issue_id": "c3aee2b5-6de9-4227-86ad-996d7dd17e25",
+            "category": "content_clarity",
+            "severity": "minor",
+            "observation": "Im gelieferten Startseiteninhalt stehen «GARGAE GROSSFELD» und «CITROËN C5 AIRCORSS».",
+            "evidence_ids": ["07e95987-ad81-4ecc-97aa-664a11505aef"],
+            "page_ref": "page-8b2bf7fdca74d829da910684",
+            "viewport": null,
+            "impact_hypothesis": "Sichtbare Schreibfehler können die Verständlichkeit der Inhalte beeinträchtigen.",
+            "recommendation": "Schreibweisen in den Startseiteninhalten prüfen und korrigieren.",
+            "suggested_fix_target": "source_data",
+            "reproduction": [
+              "Startseite aufrufen.",
+              "Die gelieferten Startseiteninhalte prüfen."
+            ]
+          },
+          {
+            "issue_id": "d6732911-e833-4f3b-84a0-047ffa8d22e1",
+            "category": "trust_transparency",
+            "severity": "major",
+            "observation": "Der Cookie-Hinweis enthält: «Wenn Sie jetzt einen Link anklicken, wegklicken oder das Impressum wählen, akzeptieren Sie automatisch die Cookies.»",
+            "evidence_ids": [
+              "a9ecf8b6-0c9f-4332-9fe8-21b481ca16f6",
+              "eee2a385-c572-48ff-b402-ab71198b6ef6"
+            ],
+            "page_ref": "page-8b2bf7fdca74d829da910684",
+            "viewport": {
+              "width": 375,
+              "height": 812
+            },
+            "impact_hypothesis": "Die beschriebene automatische Akzeptanz kann für Besuchende unklar sein.",
+            "recommendation": "Einwilligungslogik und Hinweistext fachlich überprüfen; Akzeptanz nur über eine eindeutige Auswahl auslösen.",
+            "suggested_fix_target": "configuration",
+            "reproduction": ["Startseite aufrufen.", "Cookie-Hinweis lesen."]
+          },
+          {
+            "issue_id": "81dcbafd-55c1-4732-80be-c8edcf7c4a14",
+            "category": "performance",
+            "severity": "major",
+            "observation": "Lighthouse mobile performance: 53.",
+            "evidence_ids": ["76c1e977-6996-4955-a77d-ce1678895784"],
+            "page_ref": "page-8b2bf7fdca74d829da910684",
+            "viewport": null,
+            "impact_hypothesis": "Eine Überprüfung der mobilen Ladeleistung ist angezeigt.",
+            "recommendation": "Die gemessene mobile Ladeleistung anhand eines Performance-Profils analysieren und priorisierte Optimierungen ableiten.",
+            "suggested_fix_target": "unknown",
+            "reproduction": ["Mobile Lighthouse-Messung der Startseite prüfen."]
+          }
+        ],
+        "limitations": [
+          "Keine Interaktionen, Formulare, Navigation oder Cookie-Auswahl wurden getestet.",
+          "Keine technischen SEO-Daten zu Indexierung, Canonical, Sitemap oder strukturierten Daten wurden übergeben.",
+          "Die visuelle Prüfung umfasst nur die Startseite in zwei gelieferten Viewports."
+        ]
+      },
+      "qualification": {
+        "offer_fit": 100,
+        "implementation_fit": 100,
+        "opportunity_score": null,
+        "lower_bound": 21.355263157894736,
+        "upper_bound": 81.35526315789474,
+        "coverage": 0.39999999999999997,
+        "priority": null,
+        "decision": "manual_review",
+        "reason_codes": ["manual_review"],
+        "supporting_issue_ids": [
+          "c3aee2b5-6de9-4227-86ad-996d7dd17e25",
+          "d6732911-e833-4f3b-84a0-047ffa8d22e1",
+          "81dcbafd-55c1-4732-80be-c8edcf7c4a14"
+        ]
+      },
+      "businessComponents": {
+        "company_value": {
+          "score": null,
+          "rationale": "Keine übergebenen Rubrikanker für diese Bewertung."
+        },
+        "budget_capacity": {
+          "score": null,
+          "rationale": "Keine tragfähigen Belege zur Budgetkapazität des Leads."
+        },
+        "website_importance": {
+          "score": null,
+          "rationale": "Keine übergebenen Rubrikanker für diese Bewertung."
+        }
+      },
+      "previousAgency": {
+        "agency_name": null,
+        "status": "unknown",
+        "evidence_ids": [],
+        "score": null
+      },
+      "analysisCompleted": true,
+      "reviewHash": "9904c77814d7bd7d5e3e5cc38fb832e36948a1ef27e28144b10f6b0bef2f95fa",
+      "contactStatus": "noch_nicht_angerufen",
+      "customerDemoRequested": null,
+      "demoApproved": false,
+      "editorial": {
+        "order": 1,
+        "priority": "Zuerst ansehen und anrufen",
+        "reason": "Konkrete mobile Schwächen und eine aktuelle Personalnachricht aus 2026 liefern einen nachvollziehbaren Gesprächsanlass.",
+        "findings": [
+          "Mobile Performance in diesem Abruf: 53/100. Ursachen vor einer Optimierung genauer messen.",
+          "Der grosse Cookie-Dialog verdeckt beim ersten Aufruf den Inhalt. Sein Text beschreibt ausserdem eine automatische Zustimmung beim Weiterklicken; das ist aus Besuchersicht erklärungsbedürftig. Die tatsächliche Funktion wurde nicht getestet.",
+          "Der Audit findet Schreibfehler im Startseitentext. Eine klarere mobile Einstiegsseite mit gut sichtbarem Werkstattkontakt wäre ein konkreter Ansatz."
+        ]
+      },
+      "usage": [
+        {
+          "run_id": "batch-prospects-2026-09-21-a-8b2bf7fdca74d829",
+          "agent": "scout",
+          "provider": "codex_oauth",
+          "requested_model": "gpt-5.6-luna",
+          "reported_model": "gpt-5.6-luna",
+          "reasoning": "low",
+          "state": "succeeded",
+          "actual_cost_micro_usd": null,
+          "billing_status": "subscription",
+          "error_type": null,
+          "usage": {
+            "inputTokens": 16613,
+            "cacheReadTokens": 0,
+            "cacheWriteTokens": null,
+            "uncachedInputTokens": null,
+            "outputTokens": 1975,
+            "reasoningTokens": 222,
+            "totalTokens": 18588
+          }
+        },
+        {
+          "run_id": "batch-prospects-2026-09-21-a-8b2bf7fdca74d829",
+          "agent": "audit",
+          "provider": "codex_oauth",
+          "requested_model": "gpt-5.6-terra",
+          "reported_model": "gpt-5.6-terra",
+          "reasoning": "low",
+          "state": "succeeded",
+          "actual_cost_micro_usd": null,
+          "billing_status": "subscription",
+          "error_type": null,
+          "usage": {
+            "inputTokens": 19440,
+            "cacheReadTokens": 6912,
+            "cacheWriteTokens": null,
+            "uncachedInputTokens": null,
+            "outputTokens": 2585,
+            "reasoningTokens": 1034,
+            "totalTokens": 22025
+          }
+        },
+        {
+          "run_id": "batch-prospects-2026-09-21-a-8b2bf7fdca74d829",
+          "agent": "qualifier",
+          "provider": "codex_oauth",
+          "requested_model": "gpt-5.6-luna",
+          "reported_model": "gpt-5.6-luna",
+          "reasoning": "low",
+          "state": "succeeded",
+          "actual_cost_micro_usd": null,
+          "billing_status": "subscription",
+          "error_type": null,
+          "usage": {
+            "inputTokens": 15147,
+            "cacheReadTokens": 0,
+            "cacheWriteTokens": null,
+            "uncachedInputTokens": null,
+            "outputTokens": 1114,
+            "reasoningTokens": 144,
+            "totalTokens": 16261
+          }
+        }
+      ]
+    },
+    {
+      "slug": "dolce-vita",
+      "name": "Restaurant La Dolce Vita",
+      "website": "https://www.ladolce-vita.ch/",
+      "industry": "Restaurant",
+      "locality": "Augst BL",
+      "phone": "061 811 26 42",
+      "contactSource": "https://www.ladolce-vita.ch/",
+      "activity": {
+        "status": "recent_self_report",
+        "sourceUrl": "https://www.ladolce-vita.ch/",
+        "activityDate": "2026-09-18",
+        "excerpt": "Tages- Menü Freitag 18.09.2026",
+        "finding": "Eigene Startseite verlinkt ein Tagesmenü vom 18. September 2026 und enthält aktuelle Preisangaben."
+      },
+      "runId": "batch-prospects-2026-09-21-a-2530762ef2af1e0b",
+      "revision": 6,
+      "status": "failed",
+      "stage": "collect",
+      "error": "Semantic validation failed: evidence does not support country CH; repair dispatch failed: The step has exhausted its dispatch limit",
+      "audit": null,
+      "qualification": null,
+      "businessComponents": {
+        "company_value": {
+          "score": null,
+          "rationale": null
+        },
+        "budget_capacity": {
+          "score": null,
+          "rationale": null
+        },
+        "website_importance": {
+          "score": null,
+          "rationale": null
+        }
+      },
+      "previousAgency": null,
+      "analysisCompleted": false,
+      "reviewHash": null,
+      "contactStatus": "noch_nicht_angerufen",
+      "customerDemoRequested": null,
+      "demoApproved": false,
+      "editorial": {
+        "order": 9,
+        "priority": "Agent-Review unvollständig",
+        "reason": "Der Scout hat die Länderangabe nicht mit der angegebenen Quelle belegt. Nach drei Versuchen hat die Grenze den Lauf gestoppt. Die folgenden Hinweise sind nur eine ergänzende Sichtprüfung, kein abgeschlossener Agent-Audit.",
+        "findings": [
+          "Ergänzende Sichtprüfung: Der Cookie-Dialog dominiert den ersten mobilen Bildschirm.",
+          "Die mobile Startseite ist lang und verteilt Speisen, Gruppenangebote und Abholung über mehrere Abschnitte. Ein kürzerer Weg zu Menü und Reservation ist ein möglicher Ansatz, dessen Wirkung nicht gemessen wurde."
+        ]
+      },
+      "usage": [
+        {
+          "run_id": "batch-prospects-2026-09-21-a-2530762ef2af1e0b",
+          "agent": "scout",
+          "provider": "codex_oauth",
+          "requested_model": "gpt-5.6-luna",
+          "reported_model": "gpt-5.6-luna",
+          "reasoning": "low",
+          "state": "succeeded",
+          "actual_cost_micro_usd": null,
+          "billing_status": "subscription",
+          "error_type": null,
+          "usage": {
+            "inputTokens": 14722,
+            "cacheReadTokens": 5888,
+            "cacheWriteTokens": null,
+            "uncachedInputTokens": null,
+            "outputTokens": 1585,
+            "reasoningTokens": 115,
+            "totalTokens": 16307
+          }
+        },
+        {
+          "run_id": "batch-prospects-2026-09-21-a-2530762ef2af1e0b",
+          "agent": "scout",
+          "provider": "codex_oauth",
+          "requested_model": "gpt-5.6-luna",
+          "reported_model": "gpt-5.6-luna",
+          "reasoning": "low",
+          "state": "succeeded",
+          "actual_cost_micro_usd": null,
+          "billing_status": "subscription",
+          "error_type": null,
+          "usage": {
+            "inputTokens": 14744,
+            "cacheReadTokens": 1792,
+            "cacheWriteTokens": null,
+            "uncachedInputTokens": null,
+            "outputTokens": 1505,
+            "reasoningTokens": 220,
+            "totalTokens": 16249
+          }
+        },
+        {
+          "run_id": "batch-prospects-2026-09-21-a-2530762ef2af1e0b",
+          "agent": "scout",
+          "provider": "codex_oauth",
+          "requested_model": "gpt-5.6-luna",
+          "reported_model": "gpt-5.6-luna",
+          "reasoning": "low",
+          "state": "succeeded",
+          "actual_cost_micro_usd": null,
+          "billing_status": "subscription",
+          "error_type": null,
+          "usage": {
+            "inputTokens": 14908,
+            "cacheReadTokens": 0,
+            "cacheWriteTokens": null,
+            "uncachedInputTokens": null,
+            "outputTokens": 1501,
+            "reasoningTokens": 136,
+            "totalTokens": 16409
+          }
+        }
+      ]
+    },
+    {
+      "slug": "wismer",
+      "name": "Blumengärtnerei Wismer AG",
+      "website": "https://www.blumenwismer.ch/",
+      "industry": "Gärtnerei / Floristik",
+      "locality": "Zug ZG",
+      "phone": "041 711 06 25",
+      "contactSource": "https://www.blumenwismer.ch/blank-3",
+      "activity": {
+        "status": "uncertain",
+        "sourceUrl": "https://www.blumenwismer.ch/blank-3",
+        "activityDate": null,
+        "excerpt": "Unsere Öffnungszeiten",
+        "finding": "Live-Seite zeigt Öffnungszeiten und Kontakte. Ein Suchindex erwähnte Sommerferien 2026; diese datierte Angabe war auf der direkt geöffneten Seite nicht mehr vorhanden. Betrieb vorerst nicht als aktuell bestätigt werten."
+      },
+      "runId": "batch-prospects-2026-09-21-b-760a5be3381d0366",
+      "revision": 9,
+      "status": "waiting_approval",
+      "stage": "demo_review",
+      "error": null,
+      "audit": {
+        "dimensions": {
+          "mobile_usability": {
+            "level": "minor_friction",
+            "evidence_ids": ["8c90e508-9a3a-4de7-a33a-4a9ffadb28a1"],
+            "checked_criteria": [
+              "Ansicht bei 375 × 812",
+              "Navigation",
+              "Lesbarkeit",
+              "Kontaktzugang"
+            ],
+            "rationale": "Die mobile Ansicht zeigt Navigation, Öffnungszeiten, Angebot sowie Telefon und E-Mail. Die Kontaktinformationen stehen erst weiter unten auf der Seite."
+          },
+          "conversion": {
+            "level": "usable_with_friction",
+            "evidence_ids": [
+              "8c90e508-9a3a-4de7-a33a-4a9ffadb28a1",
+              "da93bc4b-66ff-42c6-8e92-75c58b689bae"
+            ],
+            "checked_criteria": [
+              "Kontaktwege",
+              "Leistungsübersicht",
+              "Handlungsaufforderung"
+            ],
+            "rationale": "Telefon und E-Mail sind vorhanden, ebenso eine Leistungsübersicht. Eine klar erkennbare Handlungsaufforderung im oberen Seitenbereich wurde nicht beobachtet."
+          },
+          "content_clarity": {
+            "level": "minor_friction",
+            "evidence_ids": [
+              "da93bc4b-66ff-42c6-8e92-75c58b689bae",
+              "a81a99a5-3873-4ad6-a9e7-df16654bc730"
+            ],
+            "checked_criteria": [
+              "Leistungsübersicht",
+              "Öffnungszeiten",
+              "Standortangaben"
+            ],
+            "rationale": "Leistungen, Öffnungszeiten und Adresse sind auf der Startseite klar sichtbar. Die Begrüssung benennt keine Leistung."
+          },
+          "trust_transparency": {
+            "level": "usable_with_friction",
+            "evidence_ids": [
+              "da93bc4b-66ff-42c6-8e92-75c58b689bae",
+              "a81a99a5-3873-4ad6-a9e7-df16654bc730"
+            ],
+            "checked_criteria": ["Firmenname", "Adresse", "Telefon", "E-Mail"],
+            "rationale": "Firmenname, Adresse, Telefon und E-Mail sind sichtbar. Weitere Vertrauensinformationen wurden im geprüften Umfang nicht bewertet."
+          },
+          "technical_seo": {
+            "level": null,
+            "evidence_ids": ["da93bc4b-66ff-42c6-8e92-75c58b689bae"],
+            "checked_criteria": ["Abruf der Startseite"],
+            "rationale": "Die Startseite war abrufbar. Angaben zu Metadaten, Indexierbarkeit und strukturierten Daten liegen nicht vor."
+          }
+        },
+        "performance_score": 73,
+        "quality_score": 65.36842105263159,
+        "coverage": 0.95,
+        "issues": [
+          {
+            "issue_id": "a14184a4-8bb6-4465-9053-e9a376aaf2c5",
+            "category": "conversion",
+            "severity": "major",
+            "observation": "Im oberen Seitenbereich ist keine klar erkennbare Handlungsaufforderung sichtbar; Telefon und E-Mail stehen weiter unten auf der Seite.",
+            "evidence_ids": ["8c90e508-9a3a-4de7-a33a-4a9ffadb28a1"],
+            "page_ref": "page-760a5be3381d03666f4fa1ff",
+            "viewport": {
+              "width": 375,
+              "height": 812
+            },
+            "impact_hypothesis": "Besuchende könnten den direkten Kontaktzugang später finden.",
+            "recommendation": "Kontaktaufnahme im oberen Seitenbereich deutlich platzieren.",
+            "suggested_fix_target": "site_spec",
+            "reproduction": [
+              "Startseite bei 375 × 812 öffnen.",
+              "Oberen Seitenbereich prüfen."
+            ]
+          }
+        ],
+        "limitations": [
+          "Geprüft wurde nur die Startseite.",
+          "Keine Beobachtungen zu Metadaten, Indexierbarkeit, strukturierten Daten oder rechtlichen Seiten liegen vor.",
+          "Es liegen keine Interaktions- oder Formularprüfungen vor."
+        ]
+      },
+      "qualification": {
+        "offer_fit": 100,
+        "implementation_fit": 100,
+        "opportunity_score": null,
+        "lower_bound": 18.657894736842103,
+        "upper_bound": 78.65789473684211,
+        "coverage": 0.39999999999999997,
+        "priority": null,
+        "decision": "manual_review",
+        "reason_codes": ["manual_review"],
+        "supporting_issue_ids": ["a14184a4-8bb6-4465-9053-e9a376aaf2c5"]
+      },
+      "businessComponents": {
+        "company_value": {
+          "score": null,
+          "rationale": "Für die Rubrik company_value wurden keine Bewertungsanker oder tragfähigen Fakten übergeben."
+        },
+        "budget_capacity": {
+          "score": null,
+          "rationale": "Der Richtpreis des Angebots ist kein Beleg für die Budgetkapazität der Firma."
+        },
+        "website_importance": {
+          "score": null,
+          "rationale": "Für die Rubrik website_importance wurden keine Bewertungsanker übergeben."
+        }
+      },
+      "previousAgency": {
+        "agency_name": null,
+        "status": "unknown",
+        "evidence_ids": [],
+        "score": null
+      },
+      "analysisCompleted": true,
+      "reviewHash": "7c1a3b0e947c2b59b46718a9bfc4c5e867140ae67caa1820ea3d36e19ce5595f",
+      "contactStatus": "noch_nicht_angerufen",
+      "customerDemoRequested": null,
+      "demoApproved": false,
+      "editorial": {
+        "order": 5,
+        "priority": "Zuerst Betriebsstatus klären",
+        "reason": "Konkrete Ansatzpunkte auf der Website, aber kein ausreichend sicherer aktueller Betriebsnachweis aus der direkt geprüften Seite.",
+        "findings": [
+          "Der Audit findet keine deutlich hervorgehobene Handlungsaufforderung im oberen Seitenbereich. Telefon und E-Mail sind weiter unten vorhanden.",
+          "Ergänzende Sichtprüfung: Die für 375 Pixel Breite angeforderte Aufnahme ist 1172 Pixel breit und zeigt das breite Seitenlayout. Die mobile Anpassung sollte direkt auf einem Handy überprüft werden.",
+          "Öffnungszeiten und Kontaktdaten allein reichen nicht zur Bestätigung eines heute aktiven Betriebs. Das zuerst telefonisch klären."
+        ]
+      },
+      "usage": [
+        {
+          "run_id": "batch-prospects-2026-09-21-b-760a5be3381d0366",
+          "agent": "scout",
+          "provider": "codex_oauth",
+          "requested_model": "gpt-5.6-luna",
+          "reported_model": "gpt-5.6-luna",
+          "reasoning": "low",
+          "state": "succeeded",
+          "actual_cost_micro_usd": null,
+          "billing_status": "subscription",
+          "error_type": null,
+          "usage": {
+            "inputTokens": 12879,
+            "cacheReadTokens": 0,
+            "cacheWriteTokens": null,
+            "uncachedInputTokens": null,
+            "outputTokens": 1438,
+            "reasoningTokens": 132,
+            "totalTokens": 14317
+          }
+        },
+        {
+          "run_id": "batch-prospects-2026-09-21-b-760a5be3381d0366",
+          "agent": "scout",
+          "provider": "codex_oauth",
+          "requested_model": "gpt-5.6-luna",
+          "reported_model": "gpt-5.6-luna",
+          "reasoning": "low",
+          "state": "succeeded",
+          "actual_cost_micro_usd": null,
+          "billing_status": "subscription",
+          "error_type": null,
+          "usage": {
+            "inputTokens": 12902,
+            "cacheReadTokens": 0,
+            "cacheWriteTokens": null,
+            "uncachedInputTokens": null,
+            "outputTokens": 1646,
+            "reasoningTokens": 270,
+            "totalTokens": 14548
+          }
+        },
+        {
+          "run_id": "batch-prospects-2026-09-21-b-760a5be3381d0366",
+          "agent": "audit",
+          "provider": "codex_oauth",
+          "requested_model": "gpt-5.6-terra",
+          "reported_model": "gpt-5.6-terra",
+          "reasoning": "low",
+          "state": "succeeded",
+          "actual_cost_micro_usd": null,
+          "billing_status": "subscription",
+          "error_type": null,
+          "usage": {
+            "inputTokens": 15576,
+            "cacheReadTokens": 0,
+            "cacheWriteTokens": null,
+            "uncachedInputTokens": null,
+            "outputTokens": 1222,
+            "reasoningTokens": 135,
+            "totalTokens": 16798
+          }
+        },
+        {
+          "run_id": "batch-prospects-2026-09-21-b-760a5be3381d0366",
+          "agent": "qualifier",
+          "provider": "codex_oauth",
+          "requested_model": "gpt-5.6-luna",
+          "reported_model": "gpt-5.6-luna",
+          "reasoning": "low",
+          "state": "succeeded",
+          "actual_cost_micro_usd": null,
+          "billing_status": "subscription",
+          "error_type": null,
+          "usage": {
+            "inputTokens": 9670,
+            "cacheReadTokens": 0,
+            "cacheWriteTokens": null,
+            "uncachedInputTokens": null,
+            "outputTokens": 964,
+            "reasoningTokens": 146,
+            "totalTokens": 10634
+          }
+        }
+      ]
+    },
+    {
+      "slug": "durrer",
+      "name": "Schreinerei Durrer GmbH",
+      "website": "https://www.schreinereidurrer.ch/",
+      "industry": "Schreinerei",
+      "locality": "Stalden OW",
+      "phone": "041 660 89 75",
+      "contactSource": "https://www.schreinereidurrer.ch/",
+      "activity": {
+        "status": "recent_self_report",
+        "sourceUrl": "https://www.schreinereidurrer.ch/",
+        "activityDate": "2026-08-09",
+        "excerpt": "Betriebsferien vom 27. Juli bis 09. August 2026",
+        "finding": "Eigene Website nennt Sommerferien 2026 sowie eine Lehrstelle für 2026."
+      },
+      "runId": "batch-prospects-2026-09-21-b-bb5c6731cde1db0f",
+      "revision": 9,
+      "status": "waiting_approval",
+      "stage": "demo_review",
+      "error": null,
+      "audit": {
+        "dimensions": {
+          "mobile_usability": {
+            "level": null,
+            "evidence_ids": [],
+            "checked_criteria": ["mobile Darstellung", "Touch-Bedienung"],
+            "rationale": "Keine Viewport- oder Interaktionsbeobachtung vorhanden."
+          },
+          "conversion": {
+            "level": "minor_friction",
+            "evidence_ids": [
+              "a295f361-cb5d-4a15-b071-0c6c5a2e1028",
+              "3c71c435-9c17-4987-b4a7-f9d94b79b25b"
+            ],
+            "checked_criteria": [
+              "Kontaktwege",
+              "Kontaktformular",
+              "Handlungsaufforderung"
+            ],
+            "rationale": "Telefon, E-Mail und Kontaktformular sind beobachtet. Im Formular ist Telefon als Pflichtfeld ausgewiesen."
+          },
+          "content_clarity": {
+            "level": "no_material_issue",
+            "evidence_ids": ["3c71c435-9c17-4987-b4a7-f9d94b79b25b"],
+            "checked_criteria": [
+              "Leistungsübersicht",
+              "Kontaktinformationen",
+              "Navigation"
+            ],
+            "rationale": "Die Startseite nennt eine Leistungsübersicht sowie Navigation und Kontaktinformationen."
+          },
+          "trust_transparency": {
+            "level": "usable_with_friction",
+            "evidence_ids": [
+              "3c71c435-9c17-4987-b4a7-f9d94b79b25b",
+              "a295f361-cb5d-4a15-b071-0c6c5a2e1028"
+            ],
+            "checked_criteria": [
+              "Adresse",
+              "Telefon",
+              "E-Mail",
+              "Impressumsverweis"
+            ],
+            "rationale": "Adresse, Telefon, E-Mail und ein Impressumsverweis sind im beobachteten HTML vorhanden; der Inhalt des Impressums wurde nicht geprüft."
+          },
+          "technical_seo": {
+            "level": null,
+            "evidence_ids": [],
+            "checked_criteria": [
+              "Metadaten",
+              "Indexierbarkeit",
+              "strukturierte Daten"
+            ],
+            "rationale": "Keine technischen SEO-Beobachtungen übergeben."
+          }
+        },
+        "performance_score": 80,
+        "quality_score": null,
+        "coverage": 0.7,
+        "issues": [
+          {
+            "issue_id": "80df649c-bf6a-4444-bcea-af1dd3cb12f7",
+            "category": "conversion",
+            "severity": "minor",
+            "observation": "Telefon* ist im Kontaktformular als Pflichtfeld aufgeführt.",
+            "evidence_ids": ["a295f361-cb5d-4a15-b071-0c6c5a2e1028"],
+            "page_ref": "page-3142550353933ad3e44d9f9e",
+            "viewport": null,
+            "impact_hypothesis": "Ein Pflichtfeld für die Telefonnummer kann einzelne Anfragen erschweren.",
+            "recommendation": "Telefon als optionales Feld prüfen.",
+            "suggested_fix_target": "site_spec",
+            "reproduction": [
+              "Kontaktseite öffnen.",
+              "Die mit * markierten Formularfelder prüfen."
+            ]
+          }
+        ],
+        "limitations": [
+          "Geprüft wurden HTML-Ausschnitte der Startseite und Kontaktseite.",
+          "Keine Bilder, Viewport-Aufnahmen, Interaktions- oder technischen SEO-Tests vorhanden.",
+          "Der übergebene Lighthouse-Wert betrifft Performance und erlaubt keine Bewertung der technischen SEO."
+        ]
+      },
+      "qualification": {
+        "offer_fit": 100,
+        "implementation_fit": 100,
+        "opportunity_score": null,
+        "lower_bound": 7.5,
+        "upper_bound": 92.5,
+        "coverage": 0.15000000000000002,
+        "priority": null,
+        "decision": "manual_review",
+        "reason_codes": ["manual_review"],
+        "supporting_issue_ids": ["80df649c-bf6a-4444-bcea-af1dd3cb12f7"]
+      },
+      "businessComponents": {
+        "company_value": {
+          "score": null,
+          "rationale": "Keine Rubrikanker oder tragfähigen Belege für eine Einstufung übergeben."
+        },
+        "budget_capacity": {
+          "score": null,
+          "rationale": "Keine tragfähigen Belege zur Budgetkapazität übergeben."
+        },
+        "website_importance": {
+          "score": null,
+          "rationale": "Keine Rubrikanker für die Einstufung der Website-Wichtigkeit übergeben."
+        }
+      },
+      "previousAgency": {
+        "agency_name": null,
+        "status": "unknown",
+        "evidence_ids": [],
+        "score": null
+      },
+      "analysisCompleted": true,
+      "reviewHash": "e415563a0258562684cadd555ea44ddc635a268850018d218ccb99706ca7abfb",
+      "contactStatus": "noch_nicht_angerufen",
+      "customerDemoRequested": null,
+      "demoApproved": false,
+      "editorial": {
+        "order": 8,
+        "priority": "Visuelle Prüfung fehlt",
+        "reason": "Die Agent-Schritte können ausgewertet werden, aber ohne erfolgreiche Screenshots ist die Websitequalität nicht seriös als schlecht einzustufen.",
+        "findings": [
+          "Die HTML-Inhalte enthalten Firmen- und Kontaktangaben sowie Hinweise auf Aktivitäten im Jahr 2026.",
+          "Der Audit nennt das Telefon-Pflichtfeld im Kontaktformular als mögliche Hürde. Das Formular wurde nicht bedient; ein Defekt ist damit nicht nachgewiesen.",
+          "Es fehlen verwertbare mobile und Desktop-Screenshots. Deshalb kein Qualitätsscore und keine belastbare visuelle Redesign-Empfehlung."
+        ]
+      },
+      "usage": [
+        {
+          "run_id": "batch-prospects-2026-09-21-b-bb5c6731cde1db0f",
+          "agent": "scout",
+          "provider": "codex_oauth",
+          "requested_model": "gpt-5.6-luna",
+          "reported_model": "gpt-5.6-luna",
+          "reasoning": "low",
+          "state": "succeeded",
+          "actual_cost_micro_usd": null,
+          "billing_status": "subscription",
+          "error_type": null,
+          "usage": {
+            "inputTokens": 8429,
+            "cacheReadTokens": 5888,
+            "cacheWriteTokens": null,
+            "uncachedInputTokens": null,
+            "outputTokens": 1513,
+            "reasoningTokens": 150,
+            "totalTokens": 9942
+          }
+        },
+        {
+          "run_id": "batch-prospects-2026-09-21-b-bb5c6731cde1db0f",
+          "agent": "scout",
+          "provider": "codex_oauth",
+          "requested_model": "gpt-5.6-luna",
+          "reported_model": "gpt-5.6-luna",
+          "reasoning": "low",
+          "state": "succeeded",
+          "actual_cost_micro_usd": null,
+          "billing_status": "subscription",
+          "error_type": null,
+          "usage": {
+            "inputTokens": 8457,
+            "cacheReadTokens": 1792,
+            "cacheWriteTokens": null,
+            "uncachedInputTokens": null,
+            "outputTokens": 1422,
+            "reasoningTokens": 187,
+            "totalTokens": 9879
+          }
+        },
+        {
+          "run_id": "batch-prospects-2026-09-21-b-bb5c6731cde1db0f",
+          "agent": "audit",
+          "provider": "codex_oauth",
+          "requested_model": "gpt-5.6-terra",
+          "reported_model": "gpt-5.6-terra",
+          "reasoning": "low",
+          "state": "succeeded",
+          "actual_cost_micro_usd": null,
+          "billing_status": "subscription",
+          "error_type": null,
+          "usage": {
+            "inputTokens": 11006,
+            "cacheReadTokens": 0,
+            "cacheWriteTokens": null,
+            "uncachedInputTokens": null,
+            "outputTokens": 1282,
+            "reasoningTokens": 338,
+            "totalTokens": 12288
+          }
+        },
+        {
+          "run_id": "batch-prospects-2026-09-21-b-bb5c6731cde1db0f",
+          "agent": "qualifier",
+          "provider": "codex_oauth",
+          "requested_model": "gpt-5.6-luna",
+          "reported_model": "gpt-5.6-luna",
+          "reasoning": "low",
+          "state": "succeeded",
+          "actual_cost_micro_usd": null,
+          "billing_status": "subscription",
+          "error_type": null,
+          "usage": {
+            "inputTokens": 9964,
+            "cacheReadTokens": 0,
+            "cacheWriteTokens": null,
+            "uncachedInputTokens": null,
+            "outputTokens": 987,
+            "reasoningTokens": 86,
+            "totalTokens": 10951
+          }
+        }
+      ]
+    },
+    {
+      "slug": "sigron",
+      "name": "SIGRON Transporte & Garage",
+      "website": "https://sigron-ag.ch/garage/index.html",
+      "industry": "Garage / Transport",
+      "locality": "Lain/Obervaz GR",
+      "phone": "081 384 15 81",
+      "contactSource": "https://sigron-ag.ch/garage/index.html",
+      "activity": {
+        "status": "recent_advertorial",
+        "sourceUrl": "https://schweiz-auto.ch/garagen/autogaragen/ein-bergtal-unternehmen-das-seit-70-jahren-beweist-verlaesslichkeit-ist-die-schoenste-form-von-fortschritt",
+        "activityDate": "2026-09-10",
+        "excerpt": "10. September 2026",
+        "finding": "Datierte Publireportage nennt denselben Betrieb, dieselbe Adresse und Telefonnummer. Aktuelles Vermarktungssignal, keine unabhängige Betriebsprüfung."
+      },
+      "runId": "batch-prospects-2026-09-21-b-66a8462b18ce59e5",
+      "revision": 9,
+      "status": "waiting_approval",
+      "stage": "demo_review",
+      "error": null,
+      "audit": {
+        "dimensions": {
+          "mobile_usability": {
+            "level": "usable_with_friction",
+            "evidence_ids": ["883ccfb3-c151-4ceb-9aa8-878fbb59f064"],
+            "checked_criteria": [
+              "mobile Navigation sichtbar",
+              "Textlesbarkeit",
+              "Überlagerungen im mobilen Viewport"
+            ],
+            "rationale": "Die mobile Navigation ist sichtbar und die Inhalte sind lesbar. Der Cookie-Hinweis überlagert jedoch einen grossen Teil des sichtbaren Inhalts."
+          },
+          "conversion": {
+            "level": "minor_friction",
+            "evidence_ids": [
+              "883ccfb3-c151-4ceb-9aa8-878fbb59f064",
+              "7c1be964-4d80-4418-a5a3-3a3431224aa3",
+              "8bd64440-4f9b-4889-84b7-3aad72b7be89"
+            ],
+            "checked_criteria": [
+              "Kontaktweg vorhanden",
+              "Kontaktzugang auf Startseite sichtbar",
+              "Cookie-Hinweis"
+            ],
+            "rationale": "Eine Kontaktseite und Telefonnummern sind vorhanden. Auf der geprüften Startseite ist der Kontaktzugang jedoch erst nach dem Einleitungstext beziehungsweise über die Navigation erreichbar; mobil wird er zusätzlich durch den Cookie-Hinweis verdeckt."
+          },
+          "content_clarity": {
+            "level": "minor_friction",
+            "evidence_ids": [
+              "c021fc26-763c-4b61-a413-3543575a52c6",
+              "10210d7c-eedc-461d-8819-fe9e7d886adb"
+            ],
+            "checked_criteria": [
+              "Leistungsübersicht",
+              "Seitentitel",
+              "Navigation"
+            ],
+            "rationale": "Garage- und Transportleistungen sind in Navigation und Text erkennbar. Der Seitentitel «Muldensevice» enthält einen Schreibfehler."
+          },
+          "trust_transparency": {
+            "level": "no_material_issue",
+            "evidence_ids": [
+              "c021fc26-763c-4b61-a413-3543575a52c6",
+              "8bd64440-4f9b-4889-84b7-3aad72b7be89"
+            ],
+            "checked_criteria": [
+              "Kontaktangaben",
+              "Adresse",
+              "Datenschutzlink"
+            ],
+            "rationale": "Kontaktangaben, Adresse und ein Datenschutzlink sind auf den geprüften Seiten sichtbar."
+          },
+          "technical_seo": {
+            "level": null,
+            "evidence_ids": [],
+            "checked_criteria": [],
+            "rationale": "Keine Beobachtungen zu Metadaten, Indexierbarkeit, strukturierten Daten oder technischen Antwortheadern."
+          }
+        },
+        "performance_score": 89,
+        "quality_score": 74,
+        "coverage": 0.95,
+        "issues": [
+          {
+            "issue_id": "459d14db-7e24-4db0-aa4a-db425eee8da2",
+            "category": "conversion",
+            "severity": "minor",
+            "observation": "Der Cookie-Hinweis überlagert im Viewport 375 × 812 den laufenden Seiteninhalt.",
+            "evidence_ids": ["883ccfb3-c151-4ceb-9aa8-878fbb59f064"],
+            "page_ref": "page-66a8462b18ce59e5972716f9",
+            "viewport": {
+              "width": 375,
+              "height": 812
+            },
+            "impact_hypothesis": "Der Kontaktzugang und weitere Inhalte können beim ersten Besuch weniger schnell wahrgenommen werden.",
+            "recommendation": "Cookie-Hinweis so gestalten, dass er weniger Inhalt verdeckt, sobald eine Auswahl möglich ist.",
+            "suggested_fix_target": "site_spec",
+            "reproduction": [
+              "Startseite im Viewport 375 × 812 öffnen.",
+              "Cookie-Hinweis im sichtbaren Seitenbereich prüfen."
+            ]
+          },
+          {
+            "issue_id": "3bf009d4-e426-438b-9b52-c91feb21c678",
+            "category": "content_clarity",
+            "severity": "minor",
+            "observation": "Der Seitentitel lautet «Muldensevice».",
+            "evidence_ids": ["10210d7c-eedc-461d-8819-fe9e7d886adb"],
+            "page_ref": "page-d13020859f63e955c8586eea",
+            "viewport": null,
+            "impact_hypothesis": "Der Schreibfehler kann die inhaltliche Sorgfalt der Seite beeinträchtigen.",
+            "recommendation": "Seitentitel in «Muldenservice» korrigieren.",
+            "suggested_fix_target": "source_data",
+            "reproduction": [
+              "Seite Muldenservice öffnen.",
+              "Seitentitel prüfen."
+            ]
+          }
+        ],
+        "limitations": [
+          "Geprüft wurden drei bereitgestellte Seiten.",
+          "Keine Interaktionstests für Navigation, Suche, Formular oder Cookie-Auswahl.",
+          "Keine technischen SEO-Artefakte ausser HTML-Auszügen vorhanden."
+        ]
+      },
+      "qualification": {
+        "offer_fit": 100,
+        "implementation_fit": 100,
+        "opportunity_score": null,
+        "lower_bound": 14,
+        "upper_bound": 74,
+        "coverage": 0.39999999999999997,
+        "priority": null,
+        "decision": "manual_review",
+        "reason_codes": ["manual_review"],
+        "supporting_issue_ids": [
+          "459d14db-7e24-4db0-aa4a-db425eee8da2",
+          "3bf009d4-e426-438b-9b52-c91feb21c678"
+        ]
+      },
+      "businessComponents": {
+        "company_value": {
+          "score": null,
+          "rationale": "Keine übergebenen Rubrikanker oder tragfähigen Fakten zur Bewertung des Unternehmenswerts."
+        },
+        "budget_capacity": {
+          "score": null,
+          "rationale": "Keine tragfähigen Fakten zur Budgetkapazität. Der Richtpreis des Angebots ist kein Beleg für das Budget des Leads."
+        },
+        "website_importance": {
+          "score": null,
+          "rationale": "Keine übergebenen Rubrikanker für diese Bewertung."
+        }
+      },
+      "previousAgency": {
+        "agency_name": null,
+        "status": "unknown",
+        "evidence_ids": [],
+        "score": null
+      },
+      "analysisCompleted": true,
+      "reviewHash": "d8d966ebf3e6fde8032d519cd4c19de8f900dd11041e726b7cf8a4e35f067fbf",
+      "contactStatus": "noch_nicht_angerufen",
+      "customerDemoRequested": null,
+      "demoApproved": false,
+      "editorial": {
+        "order": 7,
+        "priority": "Niedrige Priorität",
+        "reason": "Die mobile Seite ist grundsätzlich brauchbar. Der gefundene aktuelle Beitrag ist eine Publireportage und keine unabhängige Betriebsbestätigung.",
+        "findings": [
+          "Der Cookie-Hinweis überlagert auf dem Handy den laufenden Seiteninhalt; ein kompakterer Hinweis könnte die Orientierung erleichtern.",
+          "Der Audit erkennt einen Schreibfehler im Seitentitel des Muldenservice-Angebots.",
+          "Aus diesen Einzelpunkten folgt noch kein starker Bedarf für einen kompletten Neubau. Bedarf und Budget wären zuerst im Gespräch zu klären."
+        ]
+      },
+      "usage": [
+        {
+          "run_id": "batch-prospects-2026-09-21-b-66a8462b18ce59e5",
+          "agent": "scout",
+          "provider": "codex_oauth",
+          "requested_model": "gpt-5.6-luna",
+          "reported_model": "gpt-5.6-luna",
+          "reasoning": "low",
+          "state": "succeeded",
+          "actual_cost_micro_usd": null,
+          "billing_status": "subscription",
+          "error_type": null,
+          "usage": {
+            "inputTokens": 14003,
+            "cacheReadTokens": 0,
+            "cacheWriteTokens": null,
+            "uncachedInputTokens": null,
+            "outputTokens": 1688,
+            "reasoningTokens": 282,
+            "totalTokens": 15691
+          }
+        },
+        {
+          "run_id": "batch-prospects-2026-09-21-b-66a8462b18ce59e5",
+          "agent": "scout",
+          "provider": "codex_oauth",
+          "requested_model": "gpt-5.6-luna",
+          "reported_model": "gpt-5.6-luna",
+          "reasoning": "low",
+          "state": "succeeded",
+          "actual_cost_micro_usd": null,
+          "billing_status": "subscription",
+          "error_type": null,
+          "usage": {
+            "inputTokens": 14024,
+            "cacheReadTokens": 0,
+            "cacheWriteTokens": null,
+            "uncachedInputTokens": null,
+            "outputTokens": 1750,
+            "reasoningTokens": 353,
+            "totalTokens": 15774
+          }
+        },
+        {
+          "run_id": "batch-prospects-2026-09-21-b-66a8462b18ce59e5",
+          "agent": "scout",
+          "provider": "codex_oauth",
+          "requested_model": "gpt-5.6-luna",
+          "reported_model": "gpt-5.6-luna",
+          "reasoning": "low",
+          "state": "succeeded",
+          "actual_cost_micro_usd": null,
+          "billing_status": "subscription",
+          "error_type": null,
+          "usage": {
+            "inputTokens": 14189,
+            "cacheReadTokens": 1792,
+            "cacheWriteTokens": null,
+            "uncachedInputTokens": null,
+            "outputTokens": 1965,
+            "reasoningTokens": 224,
+            "totalTokens": 16154
+          }
+        },
+        {
+          "run_id": "batch-prospects-2026-09-21-b-66a8462b18ce59e5",
+          "agent": "audit",
+          "provider": "codex_oauth",
+          "requested_model": "gpt-5.6-terra",
+          "reported_model": "gpt-5.6-terra",
+          "reasoning": "low",
+          "state": "succeeded",
+          "actual_cost_micro_usd": null,
+          "billing_status": "subscription",
+          "error_type": null,
+          "usage": {
+            "inputTokens": 16774,
+            "cacheReadTokens": 5888,
+            "cacheWriteTokens": null,
+            "uncachedInputTokens": null,
+            "outputTokens": 1762,
+            "reasoningTokens": 400,
+            "totalTokens": 18536
+          }
+        },
+        {
+          "run_id": "batch-prospects-2026-09-21-b-66a8462b18ce59e5",
+          "agent": "qualifier",
+          "provider": "codex_oauth",
+          "requested_model": "gpt-5.6-luna",
+          "reported_model": "gpt-5.6-luna",
+          "reasoning": "low",
+          "state": "succeeded",
+          "actual_cost_micro_usd": null,
+          "billing_status": "subscription",
+          "error_type": null,
+          "usage": {
+            "inputTokens": 12356,
+            "cacheReadTokens": 4864,
+            "cacheWriteTokens": null,
+            "uncachedInputTokens": null,
+            "outputTokens": 1378,
+            "reasoningTokens": 133,
+            "totalTokens": 13734
+          }
+        }
+      ]
+    },
+    {
+      "slug": "widenbad",
+      "name": "Restaurant Widenbad",
+      "website": "https://widenbad.ch/",
+      "industry": "Restaurant",
+      "locality": "Männedorf ZH",
+      "phone": "044 920 08 28",
+      "contactSource": "https://widenbad.ch/",
+      "activity": {
+        "status": "current_announcement",
+        "sourceUrl": "https://widenbad.ch/",
+        "activityDate": null,
+        "excerpt": "Unsere Konzerte im September 2026",
+        "finding": "Eigene Seite bewirbt Herbstgerichte und eine Veranstaltung am 29. September 2026. Das ist eine aktuelle Ankündigung, kein Nachweis einer bereits stattgefundenen Veranstaltung."
+      },
+      "runId": "batch-prospects-2026-09-21-b-2bf4481551a6da54",
+      "revision": 6,
+      "status": "failed",
+      "stage": "collect",
+      "error": "Semantic validation failed: evidence does not support claim: Mittagsmenüs; repair dispatch failed: The step has exhausted its dispatch limit",
+      "audit": null,
+      "qualification": null,
+      "businessComponents": {
+        "company_value": {
+          "score": null,
+          "rationale": null
+        },
+        "budget_capacity": {
+          "score": null,
+          "rationale": null
+        },
+        "website_importance": {
+          "score": null,
+          "rationale": null
+        }
+      },
+      "previousAgency": null,
+      "analysisCompleted": false,
+      "reviewHash": null,
+      "contactStatus": "noch_nicht_angerufen",
+      "customerDemoRequested": null,
+      "demoApproved": false,
+      "editorial": {
+        "order": 10,
+        "priority": "Agent-Review unvollständig",
+        "reason": "Der Scout ordnete einzelne Leistungen der falschen Belegstelle zu. Der Lauf stoppte nach drei Versuchen. Kein Qualitätsscore und keine Einstufung als schlechte Website.",
+        "findings": [
+          "Die aktuelle Veranstaltungsankündigung ist ein Aktivitätssignal. Sie beweist nicht, dass die zukünftige Veranstaltung bereits stattgefunden hat.",
+          "Ergänzende Sichtprüfung: Angebote, Menüverknüpfungen, Kontaktdaten und eine Reservationsschaltfläche sind vorhanden. Aus dem vorliegenden Stand folgt kein begründeter Neubau-Bedarf."
+        ]
+      },
+      "usage": [
+        {
+          "run_id": "batch-prospects-2026-09-21-b-2bf4481551a6da54",
+          "agent": "scout",
+          "provider": "codex_oauth",
+          "requested_model": "gpt-5.6-luna",
+          "reported_model": "gpt-5.6-luna",
+          "reasoning": "low",
+          "state": "succeeded",
+          "actual_cost_micro_usd": null,
+          "billing_status": "subscription",
+          "error_type": null,
+          "usage": {
+            "inputTokens": 12700,
+            "cacheReadTokens": 0,
+            "cacheWriteTokens": null,
+            "uncachedInputTokens": null,
+            "outputTokens": 1681,
+            "reasoningTokens": 171,
+            "totalTokens": 14381
+          }
+        },
+        {
+          "run_id": "batch-prospects-2026-09-21-b-2bf4481551a6da54",
+          "agent": "scout",
+          "provider": "codex_oauth",
+          "requested_model": "gpt-5.6-luna",
+          "reported_model": "gpt-5.6-luna",
+          "reasoning": "low",
+          "state": "succeeded",
+          "actual_cost_micro_usd": null,
+          "billing_status": "subscription",
+          "error_type": null,
+          "usage": {
+            "inputTokens": 12724,
+            "cacheReadTokens": 0,
+            "cacheWriteTokens": null,
+            "uncachedInputTokens": null,
+            "outputTokens": 1571,
+            "reasoningTokens": 117,
+            "totalTokens": 14295
+          }
+        },
+        {
+          "run_id": "batch-prospects-2026-09-21-b-2bf4481551a6da54",
+          "agent": "scout",
+          "provider": "codex_oauth",
+          "requested_model": "gpt-5.6-luna",
+          "reported_model": "gpt-5.6-luna",
+          "reasoning": "low",
+          "state": "succeeded",
+          "actual_cost_micro_usd": null,
+          "billing_status": "subscription",
+          "error_type": null,
+          "usage": {
+            "inputTokens": 12886,
+            "cacheReadTokens": 1792,
+            "cacheWriteTokens": null,
+            "uncachedInputTokens": null,
+            "outputTokens": 1764,
+            "reasoningTokens": 90,
+            "totalTokens": 14650
+          }
+        }
+      ]
+    },
+    {
+      "slug": "sopra",
+      "name": "Restaurant Sopra",
+      "website": "https://www.restaurantsopra.ch/",
+      "industry": "Restaurant",
+      "locality": "Attelwil AG",
+      "phone": "062 726 11 44",
+      "contactSource": "https://www.restaurantsopra.ch/",
+      "activity": {
+        "status": "recent_self_report",
+        "sourceUrl": "https://www.restaurantsopra.ch/",
+        "activityDate": "2026-09-19",
+        "excerpt": "19. September 2026",
+        "finding": "Die eigene Website enthält ein Mittagmenü vom 19. September 2026 und eine Online-Reservationsverknüpfung."
+      },
+      "runId": "batch-prospects-2026-09-21-b-ad0f7f2cd85a70c9",
+      "revision": 6,
+      "status": "waiting_approval",
+      "stage": "demo_review",
+      "error": null,
+      "audit": {
+        "dimensions": {
+          "mobile_usability": {
+            "level": "usable_with_friction",
+            "evidence_ids": ["6da9fe97-e430-4d7d-aaf2-e37e3e5a63b8"],
+            "checked_criteria": [
+              "Startseitennavigation",
+              "Lesbarkeit des Tagesmenüs",
+              "sichtbarer Speisekartenlink",
+              "Kontaktdaten im Footer"
+            ],
+            "rationale": "Die mobile Startseite ist bedienbar, das Tagesmenü erscheint jedoch klein in einer schmalen Spalte mit viel Leerraum."
+          },
+          "conversion": {
+            "level": "usable_with_friction",
+            "evidence_ids": [
+              "6da9fe97-e430-4d7d-aaf2-e37e3e5a63b8",
+              "f9df465e-ceed-4e7e-977f-3b2044a22e60"
+            ],
+            "checked_criteria": [
+              "Reservation in der Navigation",
+              "Speisekartenlink",
+              "Kontaktangaben"
+            ],
+            "rationale": "Eine Reservation ist in der Navigation sichtbar. Auf der beobachteten Startseite ist keine gleichwertig hervorgehobene Kontakt- oder Reservationsaktion sichtbar."
+          },
+          "content_clarity": {
+            "level": "minor_friction",
+            "evidence_ids": [
+              "6da9fe97-e430-4d7d-aaf2-e37e3e5a63b8",
+              "f9df465e-ceed-4e7e-977f-3b2044a22e60"
+            ],
+            "checked_criteria": [
+              "Tagesmenü",
+              "Preise",
+              "Speisekartenlink",
+              "Angebotsbeschreibung"
+            ],
+            "rationale": "Tagesmenü, Preise und Speisekartenlink sind vorhanden. Die kleine Darstellung des Menüs erschwert das schnelle Erfassen."
+          },
+          "trust_transparency": {
+            "level": "no_material_issue",
+            "evidence_ids": [
+              "f9df465e-ceed-4e7e-977f-3b2044a22e60",
+              "f4a3c0cf-7bc8-440a-8542-8746ea51e5ec"
+            ],
+            "checked_criteria": [
+              "Adresse",
+              "E-Mail",
+              "Telefon",
+              "Öffnungszeiten"
+            ],
+            "rationale": "Adresse, E-Mail, Telefon und Öffnungszeiten sind auf den beobachteten Seiten vorhanden."
+          },
+          "technical_seo": {
+            "level": null,
+            "evidence_ids": ["f9df465e-ceed-4e7e-977f-3b2044a22e60"],
+            "checked_criteria": ["Seitentitel"],
+            "rationale": "Restaurant Sopra | Takeaway | Aargau"
+          }
+        },
+        "performance_score": 73,
+        "quality_score": 64.05263157894737,
+        "coverage": 0.95,
+        "issues": [
+          {
+            "issue_id": "75253bef-44b3-4f21-9197-3743cab30d3e",
+            "category": "mobile_usability",
+            "severity": "major",
+            "observation": "Auf der mobilen Startseite erscheint das Tagesmenü klein in einer schmalen mittigen Spalte; darum bleibt viel Leerraum.",
+            "evidence_ids": ["6da9fe97-e430-4d7d-aaf2-e37e3e5a63b8"],
+            "page_ref": "page-ad0f7f2cd85a70c95da49ad6",
+            "viewport": {
+              "width": 375,
+              "height": 812
+            },
+            "impact_hypothesis": "Gäste könnten Menü, Zutaten und Preise langsamer erfassen.",
+            "recommendation": "Menütexte vergrössern und die Inhalte in einer breiteren, klar gegliederten mobilen Darstellung anordnen.",
+            "suggested_fix_target": "site_spec",
+            "reproduction": [
+              "Startseite bei 375 × 812 öffnen.",
+              "Zum Tagesmenü scrollen."
+            ]
+          },
+          {
+            "issue_id": "51f481d3-8794-4c11-b069-7f5d24957425",
+            "category": "conversion",
+            "severity": "minor",
+            "observation": "Reservation ist in der Navigation sichtbar. Auf der beobachteten mobilen Startseite ist keine gleichwertig hervorgehobene Kontakt- oder Reservationsaktion sichtbar.",
+            "evidence_ids": [
+              "6da9fe97-e430-4d7d-aaf2-e37e3e5a63b8",
+              "f9df465e-ceed-4e7e-977f-3b2044a22e60"
+            ],
+            "page_ref": "page-ad0f7f2cd85a70c95da49ad6",
+            "viewport": {
+              "width": 375,
+              "height": 812
+            },
+            "impact_hypothesis": "Der nächste Schritt zur Reservation könnte weniger schnell auffindbar sein.",
+            "recommendation": "Kontakt aufnehmen",
+            "suggested_fix_target": "site_spec",
+            "reproduction": [
+              "Startseite bei 375 × 812 öffnen.",
+              "Sichtbare Aktionen im Kopf und im Seitenverlauf prüfen."
+            ]
+          },
+          {
+            "issue_id": "25049246-ea97-4b8d-aade-6b4626c93055",
+            "category": "performance",
+            "severity": "minor",
+            "observation": "Lighthouse mobile performance: 73",
+            "evidence_ids": ["5af9f361-15c9-4165-96f0-f6d2b2c9f36f"],
+            "page_ref": "page-ad0f7f2cd85a70c95da49ad6",
+            "viewport": null,
+            "impact_hypothesis": null,
+            "recommendation": "Messwerte und konkrete Ursachen vor einer technischen Anpassung prüfen.",
+            "suggested_fix_target": "unknown",
+            "reproduction": ["Lighthouse mobile performance prüfen."]
+          }
+        ],
+        "limitations": [
+          "Die mobile Beobachtung umfasst die Startseite bei 375 × 812.",
+          "Für die Kontaktseite liegt keine mobile Ansicht vor.",
+          "Strukturierte SEO-Daten, Indexierung und weitere technische Kriterien wurden nicht übergeben.",
+          "Der Lighthouse-Wert enthält keine übergebenen Ursachen."
+        ]
+      },
+      "qualification": {
+        "offer_fit": 100,
+        "implementation_fit": 100,
+        "opportunity_score": null,
+        "lower_bound": 18.986842105263158,
+        "upper_bound": 78.98684210526316,
+        "coverage": 0.39999999999999997,
+        "priority": null,
+        "decision": "manual_review",
+        "reason_codes": ["manual_review"],
+        "supporting_issue_ids": ["75253bef-44b3-4f21-9197-3743cab30d3e"]
+      },
+      "businessComponents": {
+        "company_value": {
+          "score": null,
+          "rationale": "Keine übergebenen Rubrikanker oder tragfähigen Fakten für eine Bewertung."
+        },
+        "budget_capacity": {
+          "score": null,
+          "rationale": "Der Angebotspreis ist kein Beleg für die Budgetkapazität des Leads. Es liegen keine geeigneten Fakten vor."
+        },
+        "website_importance": {
+          "score": null,
+          "rationale": "Keine übergebenen Rubrikanker oder tragfähigen Fakten für eine Bewertung."
+        }
+      },
+      "previousAgency": {
+        "agency_name": null,
+        "status": "unknown",
+        "evidence_ids": [],
+        "score": null
+      },
+      "analysisCompleted": true,
+      "reviewHash": "5fbba46173edc38a0152fe6a04d53a07401f3263381d85f681babbe76052f51f",
+      "contactStatus": "noch_nicht_angerufen",
+      "customerDemoRequested": null,
+      "demoApproved": false,
+      "editorial": {
+        "order": 2,
+        "priority": "Zuerst ansehen und anrufen",
+        "reason": "Ein aktuelles Tagesmenü und konkrete Schwierigkeiten der mobilen Darstellung machen das Restaurant zu einem gut prüfbaren Gesprächskandidaten.",
+        "findings": [
+          "Der Audit beschreibt kleine Menütexte in einer schmalen Spalte und viel freien Raum. Eine besser lesbare Speisekarte auf dem Handy wäre ein konkreter Ansatz.",
+          "Reservation ist in der Navigation vorhanden, auf der mobilen Startseite jedoch wenig hervorgehoben.",
+          "Ergänzende Sichtprüfung: Die für 375 Pixel Breite angeforderte Aufnahme hat eine Inhaltsbreite von 980 Pixeln. Das ist ein Hinweis auf eine unzureichend angepasste mobile Darstellung, kein Nachweis eines defekten Reservationssystems."
+        ]
+      },
+      "usage": [
+        {
+          "run_id": "batch-prospects-2026-09-21-b-ad0f7f2cd85a70c9",
+          "agent": "scout",
+          "provider": "codex_oauth",
+          "requested_model": "gpt-5.6-luna",
+          "reported_model": "gpt-5.6-luna",
+          "reasoning": "low",
+          "state": "succeeded",
+          "actual_cost_micro_usd": null,
+          "billing_status": "subscription",
+          "error_type": null,
+          "usage": {
+            "inputTokens": 12146,
+            "cacheReadTokens": 5888,
+            "cacheWriteTokens": null,
+            "uncachedInputTokens": null,
+            "outputTokens": 1793,
+            "reasoningTokens": 232,
+            "totalTokens": 13939
+          }
+        },
+        {
+          "run_id": "batch-prospects-2026-09-21-b-ad0f7f2cd85a70c9",
+          "agent": "audit",
+          "provider": "codex_oauth",
+          "requested_model": "gpt-5.6-terra",
+          "reported_model": "gpt-5.6-terra",
+          "reasoning": "low",
+          "state": "succeeded",
+          "actual_cost_micro_usd": null,
+          "billing_status": "subscription",
+          "error_type": null,
+          "usage": {
+            "inputTokens": 15127,
+            "cacheReadTokens": 0,
+            "cacheWriteTokens": null,
+            "uncachedInputTokens": null,
+            "outputTokens": 2255,
+            "reasoningTokens": 516,
+            "totalTokens": 17382
+          }
+        },
+        {
+          "run_id": "batch-prospects-2026-09-21-b-ad0f7f2cd85a70c9",
+          "agent": "audit",
+          "provider": "codex_oauth",
+          "requested_model": "gpt-5.6-terra",
+          "reported_model": "gpt-5.6-terra",
+          "reasoning": "low",
+          "state": "succeeded",
+          "actual_cost_micro_usd": null,
+          "billing_status": "subscription",
+          "error_type": null,
+          "usage": {
+            "inputTokens": 15165,
+            "cacheReadTokens": 0,
+            "cacheWriteTokens": null,
+            "uncachedInputTokens": null,
+            "outputTokens": 2410,
+            "reasoningTokens": 1014,
+            "totalTokens": 17575
+          }
+        },
+        {
+          "run_id": "batch-prospects-2026-09-21-b-ad0f7f2cd85a70c9",
+          "agent": "qualifier",
+          "provider": "codex_oauth",
+          "requested_model": "gpt-5.6-luna",
+          "reported_model": "gpt-5.6-luna",
+          "reasoning": "low",
+          "state": "succeeded",
+          "actual_cost_micro_usd": null,
+          "billing_status": "subscription",
+          "error_type": null,
+          "usage": {
+            "inputTokens": 11129,
+            "cacheReadTokens": 0,
+            "cacheWriteTokens": null,
+            "uncachedInputTokens": null,
+            "outputTokens": 983,
+            "reasoningTokens": 79,
+            "totalTokens": 12112
+          }
+        },
+        {
+          "run_id": "batch-prospects-2026-09-21-b-ad0f7f2cd85a70c9",
+          "agent": "qualifier",
+          "provider": "codex_oauth",
+          "requested_model": "gpt-5.6-luna",
+          "reported_model": "gpt-5.6-luna",
+          "reasoning": "low",
+          "state": "succeeded",
+          "actual_cost_micro_usd": null,
+          "billing_status": "subscription",
+          "error_type": null,
+          "usage": {
+            "inputTokens": 11167,
+            "cacheReadTokens": 0,
+            "cacheWriteTokens": null,
+            "uncachedInputTokens": null,
+            "outputTokens": 850,
+            "reasoningTokens": 223,
+            "totalTokens": 12017
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -42,6 +42,19 @@ pnpm trace --config config/live-test.json RUN_ID
 
 CSV benötigt die Spalte `website`. Stapel sind auf 50 Einträge begrenzt, dedupliziert und sequenziell. Derselbe Stapelname behält seine URLs und Lauf-IDs; erfolgreiche Einträge werden nicht nochmals ausgeführt. Nur `--retry-failed` nimmt fehlgeschlagene Einträge erneut auf. `report` schreibt eine Datei mit Original-Link, Befunden und offenen Voraussetzungen, auch bei unvollständigen Läufen.
 
+### Interessenten prüfen und selbst anrufen
+
+Der erste echte Such- und Review-Stapel vom 21. September 2026 liegt unter [reports/prospecting-2026-09-21](reports/prospecting-2026-09-21/README.md). Die Firmen wurden im Chat recherchiert, anschliessend mit Scout, Audit und Qualifier über OAuth geprüft. Die Liste unterscheidet aktuelle Aktivitätssignale von unbekanntem Betriebsstatus. Ein auffindbarer Kontakt ist keine Bestätigung von Interesse oder Budget.
+
+`config/prospecting.json` prüft bekannte URLs ohne kostenpflichtige Such-API. Die Konfiguration nutzt absichtlich dieselbe Datenbank wie `live-test.json`, damit bestehende OAuth-Zähler erhalten bleiben. Sie erlaubt bis zu drei HTML-Seiten je Firma und höhere Eingabelimits für die Quellen und Screenshots (Scout/Qualifier 64’000, Audit 80’000 Tokens). Die Grenzen für Aufrufe, Wiederholungen und Freigaben bleiben unverändert.
+
+```powershell
+pnpm batch --config config/prospecting.json --mode live --batch-id prospects-2026-09-21-a --file reports/prospecting-2026-09-21/leads-a.csv
+pnpm batch --config config/prospecting.json --mode live --batch-id prospects-2026-09-21-b --file reports/prospecting-2026-09-21/leads-b.csv
+```
+
+Nach dem Review ruft der Betreiber selbst an und hält das Ergebnis fest. Erst wenn der Kunde eine Demo möchte, wird sie ausdrücklich freigegeben. Die Review-Stapel erzeugen keine Demo und führen keine Kontaktaufnahme aus. Eine erneute Ausführung auf derselben Installation verwendet die gespeicherten Läufe; auf einer neuen Installation sind diese Befehle echte neue OAuth-Läufe.
+
 Automatische Live-Suche benötigt zusätzlich `BRAVE_SEARCH_API_KEY` ausschliesslich in `.env` sowie `research.enabled: true`, einen positiven `research.queryCostMicroUsd` und USD-Budgets in der JSON-Konfiguration. Dieser Wert muss den maximalen Preis einer Suchanfrage deines aktuellen Tarifs abdecken (1 USD = 1’000’000 Mikro-USD). Suchkosten werden anhand dieses konfigurierten Tarifs verbucht; sie sind keine vom Suchanbieter zurückgemeldete Rechnungsposition. Ohne Preis, Schlüssel und Gesamtbudget wird die Suche blockiert. Direkte Website-URLs benötigen keinen Suchschlüssel.
 
 Die konfigurierbaren Recherchegrenzen sind `maxSteps` (höchstens 6), `maxQueries` (5), `maxResults` (10 pro Suche) und `maxPages` (5). Dieselbe Lauf-ID und dasselbe Ziel verwenden, um gespeicherte Ergebnisse weiterzuverwenden. `discover --retry-stopped` erlaubt eine ausdrückliche Fortsetzung nach geeigneten Modell- oder Werkzeugfehlern; offene Kostenreservierungen, Refusals und ausgeschöpfte Grenzen bleiben gesperrt. Eine Fortsetzung setzt keine Zähler zurück.

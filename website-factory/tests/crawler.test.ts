@@ -223,6 +223,16 @@ describe("external network boundary", () => {
     expect(result.links).toContain("https://example.ch/kontakt");
   });
 
+  it("extracts readable Swiss names from HTML entities without losing case", () => {
+    const result = extractPage(
+      '<h1>Blumeng&auml;rtnerei Wismer AG</h1><p>&Auml; &Ouml; &Uuml; &eacute; &#XFC; &#1114112;</p><a href="/gr&uuml;n">Angebot</a>',
+      "https://example.ch/",
+    );
+    expect(result.text).toContain("Blumengärtnerei Wismer AG");
+    expect(result.text).toContain("Ä Ö Ü é ü �");
+    expect(result.links).toContain("https://example.ch/gr%C3%BCn");
+  });
+
   it("keeps a loaded document usable when network idle times out", async () => {
     const navigationOptions: Array<Record<string, unknown>> = [];
     const page = {

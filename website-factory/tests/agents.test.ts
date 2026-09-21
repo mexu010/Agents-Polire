@@ -78,6 +78,76 @@ describe("agent contracts", () => {
     );
   });
 
+  it("revalidates stored entity-encoded evidence without accepting different claims", () => {
+    const input = buildAgentInput("scout", fixtureInput());
+    input.evidence.push({
+      ...input.evidence[0],
+      evidence_id: "e-encoded",
+      excerpt: "Grabbepflanzung &amp; G&auml;rtnerei",
+    });
+    const output = fixtureOutput("scout", input);
+    output.data.facts.push({
+      field: "service",
+      value: "Grabbepflanzung & Gärtnerei",
+      evidence_ids: ["e-encoded"],
+      interpretation: "source_reported",
+    });
+    expect(() => processAgentOutput("scout", output, input)).not.toThrow();
+    output.data.facts.at(-1).value = "Grabbepflanzung & Schreinerei";
+    expect(() => processAgentOutput("scout", output, input)).toThrow(
+      /evidence/,
+    );
+  });
+
+  it("accepts an explicit Swiss postal prefix but not arbitrary CH text as country evidence", () => {
+    const input = buildAgentInput("scout", fixtureInput());
+    const proof = {
+      ...input.evidence[0],
+      evidence_id: "e-postal",
+      excerpt: "im Hof 3, CH-9467 Frümsen",
+    };
+    input.evidence.push(proof);
+    const output = fixtureOutput("scout", input);
+    output.data.facts.push({
+      field: "country",
+      value: "CH",
+      evidence_ids: ["e-postal"],
+      interpretation: "source_reported",
+    });
+    expect(() => processAgentOutput("scout", output, input)).not.toThrow();
+    for (const excerpt of [
+      "CH Tools, DE-9467 Beispiel",
+      "CH-94678",
+      "CH-123",
+    ]) {
+      proof.excerpt = excerpt;
+      expect(() => processAgentOutput("scout", output, input)).toThrow(
+        /country CH/,
+      );
+    }
+  });
+
+  it("accepts a contact page URL from its fetched source, not an invented sibling URL", () => {
+    const input = buildAgentInput("scout", fixtureInput());
+    input.evidence.push({
+      ...input.evidence[0],
+      evidence_id: "e-contact-url",
+      source_url: "https://example.ch/kontakt",
+      excerpt: "Kontakt: Rufen Sie uns an.",
+    });
+    const output = fixtureOutput("scout", input);
+    output.data.contacts.push({
+      kind: "contact_page",
+      value: "https://example.ch/kontakt",
+      evidence_ids: ["e-contact-url"],
+    });
+    expect(() => processAgentOutput("scout", output, input)).not.toThrow();
+    output.data.contacts.at(-1).value = "https://example.ch/other-contact";
+    expect(() => processAgentOutput("scout", output, input)).toThrow(
+      /evidence/,
+    );
+  });
+
   it("accepts an official same-site Webdesign by credit and rejects off-site or generic mentions", () => {
     const input = buildAgentInput("scout", fixtureInput());
     const credit = input.evidence.find(

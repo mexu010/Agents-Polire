@@ -9,6 +9,7 @@ import builder from "../prompts/builder.js";
 import qa from "../prompts/qa.js";
 import sales from "../prompts/sales.js";
 import { assertCopyPolicy, assertSubjectPolicy } from "./copy-policy.js";
+import { decodeHTML } from "entities";
 
 const prompts: Record<AgentName, string> = {
   scout,
@@ -74,7 +75,7 @@ function assertEvidence(
 }
 
 const normaliseEvidence = (value: string) =>
-  value
+  decodeHTML(value)
     .normalize("NFKC")
     .toLocaleLowerCase()
     .replace(/[^\p{L}\p{N}]+/gu, " ")
@@ -114,7 +115,10 @@ function assertFactEvidence(
       .map((key: string) => source.get(key)?.excerpt ?? "")
       .join(" ")
       .toLocaleLowerCase();
-    if (!/\b(schweiz|suisse|svizzera|switzerland)\b/.test(text))
+    if (
+      !/\b(schweiz|suisse|svizzera|switzerland)\b/.test(text) &&
+      !/\bch\s*[-–]\s*\d{4}\b/i.test(text)
+    )
       throw new Error("evidence does not support country CH");
     return;
   }
@@ -266,7 +270,14 @@ function registerScout(output: JsonObject, input: JsonObject): JsonObject {
   });
   const contacts = data.contacts.map((c: JsonObject) => {
     if (!c.evidence_ids.length) throw new Error("contact needs evidence");
-    assertEvidence(c.evidence_ids, allowed, c.value);
+    assertIds(c.evidence_ids, allowed, "evidence");
+    const observedContactUrl =
+      c.kind === "contact_page" &&
+      c.evidence_ids.some((key: string) => {
+        const proof = allowed.get(key);
+        return proof?.kind === "html" && proof.source_url === c.value;
+      });
+    if (!observedContactUrl) assertEvidence(c.evidence_ids, allowed, c.value);
     return { contact_id: id(), ...c };
   });
   for (const page of data.pages) {

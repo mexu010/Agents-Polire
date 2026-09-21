@@ -4,6 +4,7 @@ import { lookup as dnsLookup } from "node:dns/promises";
 import { mkdir, mkdtemp, readFile, writeFile } from "node:fs/promises";
 import { request as httpRequest } from "node:http";
 import { request as httpsRequest } from "node:https";
+import { decodeHTML as decodeEntities } from "entities";
 import {
   connect as netConnect,
   createServer as createNetServer,
@@ -218,27 +219,6 @@ export function pinnedLookup(pinned: ResolvedAddress) {
     if (options.all) callback(null, [pinned]);
     else callback(null, pinned.address, pinned.family);
   };
-}
-
-function decodeEntities(text: string): string {
-  const named: Record<string, string> = {
-    amp: "&",
-    lt: "<",
-    gt: ">",
-    quot: '"',
-    apos: "'",
-    nbsp: " ",
-  };
-  return text.replace(
-    /&(#x[0-9a-f]+|#\d+|[a-z]+);/gi,
-    (whole, entity: string) => {
-      if (entity.startsWith("#x"))
-        return String.fromCodePoint(Number.parseInt(entity.slice(2), 16));
-      if (entity.startsWith("#"))
-        return String.fromCodePoint(Number.parseInt(entity.slice(1), 10));
-      return named[entity.toLowerCase()] ?? whole;
-    },
-  );
 }
 
 function cleanText(html: string): string {

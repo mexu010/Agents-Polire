@@ -1,0 +1,174 @@
+{
+  "checkedAt": "2026-09-21",
+  "discoveryMethod": "Webrecherche im Codex-Chat; kein automatischer Brave-Suchlauf. Anschliessend echte Factory-Analyse über OAuth.",
+  "workflow": "Review ansehen, selbst anrufen, Kundeninteresse festhalten, erst bei Demo-Wunsch ausdrücklich freigeben.",
+  "leads": [
+    {
+      "slug": "bernhof",
+      "name": "BERNHOF-Vetsch AG",
+      "website": "https://www.bernhof.ch/",
+      "industry": "Schreinerei / Haustüren",
+      "locality": "Frümsen SG",
+      "phone": "081 757 12 73",
+      "contactSource": "https://www.bernhof.ch/",
+      "activity": {
+        "status": "recent_self_report",
+        "sourceUrl": "https://www.bernhof.ch/",
+        "activityDate": "2026-08-09",
+        "excerpt": "Wir haben Betriebsferien vom 20.7.2026 bis 9. August 2026.",
+        "finding": "Die Webrecherche zeigte einen eigenen Sommerferien-Hinweis für 2026. Im späteren direkten Factory-Abruf war diese Datierung nicht mehr vorhanden. Das ist ein Recherchehinweis; aktuellen Betrieb und Erreichbarkeit zuerst telefonisch bestätigen."
+      }
+    },
+    {
+      "slug": "fuhrer",
+      "name": "Fuhrer Schreinerei AG",
+      "website": "https://www.fuhrerschreinerei.ch/",
+      "industry": "Schreinerei / Fenster / Türen",
+      "locality": "Kehrsatz BE",
+      "phone": "031 961 35 55",
+      "contactSource": "https://www.fuhrerschreinerei.ch/",
+      "activity": {
+        "status": "recent_self_report",
+        "sourceUrl": "https://www.fuhrerschreinerei.ch/",
+        "activityDate": "2026-08-03",
+        "excerpt": "Betriebsferien vom 25.Juli-Montag 03.August 2026",
+        "finding": "Eigene Website nennt die Sommerpause 2026 und seit Oktober 2025 ein erweitertes Arbeitsangebot."
+      }
+    },
+    {
+      "slug": "bettina",
+      "name": "Coiffure Bettina",
+      "website": "https://coiffeur-bettina.ch/content/coiffure-bettina",
+      "industry": "Coiffeur",
+      "locality": "Muri AG",
+      "phone": "056 664 13 92",
+      "contactSource": "https://coiffeur-bettina.ch/content/coiffure-bettina",
+      "activity": {
+        "status": "recent_self_report",
+        "sourceUrl": "https://coiffeur-bettina.ch/content/coiffure-bettina",
+        "activityDate": "2026-09-05",
+        "excerpt": "Betriebsferien vom 29. August bis 5. September 2026",
+        "finding": "Eigene Website enthält eine kürzlich beendete Betriebspause und Telefonnummer für Termine."
+      }
+    },
+    {
+      "slug": "grossfeld",
+      "name": "Garage Grossfeld AG",
+      "website": "https://www.garage-grossfeld.ch/",
+      "industry": "Garage",
+      "locality": "Trimbach SO",
+      "phone": "062 293 09 09",
+      "contactSource": "https://www.garage-grossfeld.ch/",
+      "activity": {
+        "status": "recent_self_report",
+        "sourceUrl": "https://www.garage-grossfeld.ch/standort?catid=39%3Aaktuell&id=24%3Amai-2026&view=article",
+        "activityDate": "2026-09-01",
+        "excerpt": "Ab dem 1. September startet unser neuer Werkstattleiter Patrik Schenker.",
+        "finding": "Eine eigene Personalnachricht nennt Ausbildungsstart im August 2026 und neuen Werkstattleiter ab September."
+      }
+    },
+    {
+      "slug": "dolce-vita",
+      "name": "Restaurant La Dolce Vita",
+      "website": "https://www.ladolce-vita.ch/",
+      "industry": "Restaurant",
+      "locality": "Augst BL",
+      "phone": "061 811 26 42",
+      "contactSource": "https://www.ladolce-vita.ch/",
+      "activity": {
+        "status": "recent_self_report",
+        "sourceUrl": "https://www.ladolce-vita.ch/",
+        "activityDate": "2026-09-18",
+        "excerpt": "Tages- Menü Freitag 18.09.2026",
+        "finding": "Eigene Startseite verlinkt ein Tagesmenü vom 18. September 2026 und enthält aktuelle Preisangaben."
+      }
+    },
+    {
+      "slug": "wismer",
+      "name": "Blumengärtnerei Wismer AG",
+      "website": "https://www.blumenwismer.ch/",
+      "industry": "Gärtnerei / Floristik",
+      "locality": "Zug ZG",
+      "phone": "041 711 06 25",
+      "contactSource": "https://www.blumenwismer.ch/blank-3",
+      "activity": {
+        "status": "uncertain",
+        "sourceUrl": "https://www.blumenwismer.ch/blank-3",
+        "activityDate": null,
+        "excerpt": "Unsere Öffnungszeiten",
+        "finding": "Live-Seite zeigt Öffnungszeiten und Kontakte. Ein Suchindex erwähnte Sommerferien 2026; diese datierte Angabe war auf der direkt geöffneten Seite nicht mehr vorhanden. Betrieb vorerst nicht als aktuell bestätigt werten."
+      }
+    },
+    {
+      "slug": "durrer",
+      "name": "Schreinerei Durrer GmbH",
+      "website": "https://www.schreinereidurrer.ch/",
+      "industry": "Schreinerei",
+      "locality": "Stalden OW",
+      "phone": "041 660 89 75",
+      "contactSource": "https://www.schreinereidurrer.ch/",
+      "activity": {
+        "status": "recent_self_report",
+        "sourceUrl": "https://www.schreinereidurrer.ch/",
+        "activityDate": "2026-08-09",
+        "excerpt": "Betriebsferien vom 27. Juli bis 09. August 2026",
+        "finding": "Eigene Website nennt Sommerferien 2026 sowie eine Lehrstelle für 2026."
+      }
+    },
+    {
+      "slug": "sigron",
+      "name": "SIGRON Transporte & Garage",
+      "website": "https://sigron-ag.ch/garage/index.html",
+      "industry": "Garage / Transport",
+      "locality": "Lain/Obervaz GR",
+      "phone": "081 384 15 81",
+      "contactSource": "https://sigron-ag.ch/garage/index.html",
+      "activity": {
+        "status": "recent_advertorial",
+        "sourceUrl": "https://schweiz-auto.ch/garagen/autogaragen/ein-bergtal-unternehmen-das-seit-70-jahren-beweist-verlaesslichkeit-ist-die-schoenste-form-von-fortschritt",
+        "activityDate": "2026-09-10",
+        "excerpt": "10. September 2026",
+        "finding": "Datierte Publireportage nennt denselben Betrieb, dieselbe Adresse und Telefonnummer. Aktuelles Vermarktungssignal, keine unabhängige Betriebsprüfung."
+      }
+    },
+    {
+      "slug": "widenbad",
+      "name": "Restaurant Widenbad",
+      "website": "https://widenbad.ch/",
+      "industry": "Restaurant",
+      "locality": "Männedorf ZH",
+      "phone": "044 920 08 28",
+      "contactSource": "https://widenbad.ch/",
+      "activity": {
+        "status": "current_announcement",
+        "sourceUrl": "https://widenbad.ch/",
+        "activityDate": null,
+        "excerpt": "Unsere Konzerte im September 2026",
+        "finding": "Eigene Seite bewirbt Herbstgerichte und eine Veranstaltung am 29. September 2026. Das ist eine aktuelle Ankündigung, kein Nachweis einer bereits stattgefundenen Veranstaltung."
+      }
+    },
+    {
+      "slug": "sopra",
+      "name": "Restaurant Sopra",
+      "website": "https://www.restaurantsopra.ch/",
+      "industry": "Restaurant",
+      "locality": "Attelwil AG",
+      "phone": "062 726 11 44",
+      "contactSource": "https://www.restaurantsopra.ch/",
+      "activity": {
+        "status": "recent_self_report",
+        "sourceUrl": "https://www.restaurantsopra.ch/",
+        "activityDate": "2026-09-19",
+        "excerpt": "19. September 2026",
+        "finding": "Die eigene Website enthält ein Mittagmenü vom 19. September 2026 und eine Online-Reservationsverknüpfung."
+      }
+    }
+  ],
+  "excludedFromBatch": [
+    {
+      "name": "Gärtnerei Waldhaus",
+      "website": "https://www.gaertnerei-waldhaus.ch/",
+      "reason": "Direkter Webabruf lieferte HTTP 403. Kein unbelegter Qualitätsaudit und keine Aussage über eine Betriebsschliessung."
+    }
+  ]
+}
