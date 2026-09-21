@@ -5,6 +5,14 @@ import { describe, expect, test } from "vitest";
 import { defaultConfig, loadConfig } from "../src/config.js";
 
 describe("factory configuration", () => {
+  test("accepts an explicit fast crawl profile without enabling a hidden performance score", () => {
+    const dir = mkdtempSync(join(tmpdir(), "factory-fast-config-"));
+    const file = join(dir, "config.json");
+    writeFileSync(file, JSON.stringify({ crawler: { lighthouse: false } }));
+    expect(loadConfig(file).crawler.lighthouse).toBe(false);
+    writeFileSync(file, JSON.stringify({ crawler: { lighthouse: "false" } }));
+    expect(() => loadConfig(file)).toThrow(/lighthouse/);
+  });
   test("defaults to a cost-free fixture configuration with the exact runtime model map", () => {
     const config = defaultConfig();
 

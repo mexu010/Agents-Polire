@@ -1,0 +1,51 @@
+{
+  "checkedAt": "2026-09-21",
+  "scope": "Zusätzliche Quellenprüfung der vier vorselektierten Firmen durch Codex; keine Telefonate. Betriebsstatus wird nicht aus einer erreichbaren Domain oder einem Registereintrag abgeleitet.",
+  "companies": [
+    {
+      "website": "https://www.coiffeurlanz.ch/",
+      "name": "Coiffeur Lanz, Vreni Lanz",
+      "place": "Bleienbach BE",
+      "phone": "062 922 31 82",
+      "activityAssessment": "recent_activity_signal",
+      "activityDate": "2026-08-05",
+      "sourceUrl": "https://www.coiffeurlanz.ch/html/offnungszeiten.html",
+      "excerpt": "BETRIEBSFERIEN bis am 5. August 2026",
+      "limitation": "Der Suchindex zeigte den datierten Ferienhinweis. Der direkte Öffnungszeiten-Abruf im Webwerkzeug zeigte eine Zugriffsprüfung; nicht umgangen. Telefonische Erreichbarkeit nicht getestet.",
+      "corroborationUrl": "https://www.bleienbach.ch/leben/gewerbe",
+      "corroboration": "Die Gemeinde führt Coiffure Lanz, Vreni Lanz, Eichi 20, 3368 Bleienbach mit passender Website/E-Mail und Telefonnummer. Nicht mit gleichnamigen Salons verwechseln."
+    },
+    {
+      "website": "https://www.fritschi-griesemer.ch/",
+      "name": "Fritschi + Griesemer AG",
+      "place": "Güttingen / Kreuzlingen TG",
+      "phone": "071 695 16 43",
+      "activityAssessment": "dated_primary_source",
+      "activityDate": "2026-04-28",
+      "sourceUrl": "https://www.guettingen.ch/politik/aus-dem-gemeinderat.html/203/news/1905",
+      "excerpt": "Schreinerarbeiten: Für CHF 24’635 an die Fritschi + Griesemer AG, Güttingen",
+      "limitation": "Amtliche Mitteilung vom 12.05.2026 über Auftragsvergabe an der Gemeinderatssitzung vom 28.04.2026. Beleg für Geschäftstätigkeit, kein Nachweis eines Website-Budgets.",
+      "corroborationUrl": "https://www.fritschi-griesemer.ch/willkommen.html"
+    },
+    {
+      "website": "https://grafgartenbaugmbh.ch/",
+      "name": "Martin Graf Gartenbau GmbH",
+      "place": "Lindau ZH",
+      "phone": "052 345 12 50",
+      "activityAssessment": "uncertain",
+      "activityDate": null,
+      "sourceUrl": "https://grafgartenbaugmbh.ch/",
+      "limitation": "Website und öffentliche Verzeichnisse stimmen bei Firma/Adresse/Telefon überein. Kein belastbarer datierter Betriebsnachweis gefunden. Aktiver Registereintrag allein reicht nicht."
+    },
+    {
+      "website": "https://www.lantii.ch/",
+      "name": "Lantii GmbH",
+      "place": "Villigen AG",
+      "phone": "056 245 79 39",
+      "activityAssessment": "uncertain",
+      "activityDate": null,
+      "sourceUrl": "https://www.local.ch/de/d/villigen/5234/lantii-gmbh-6BGMC-znlZtdVPa3Gvz94Q",
+      "limitation": "Kontaktverzeichnis vorhanden, keine Öffnungszeiten eingetragen. Registeraggregatoren melden aktiv; das belegt keine laufende operative Tätigkeit. Kein belastbarer datierter Betriebsnachweis gefunden."
+    }
+  ]
+}

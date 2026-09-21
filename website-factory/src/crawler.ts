@@ -429,6 +429,19 @@ function usefulLink(url: URL): boolean {
   );
 }
 
+/** Spend the bounded page allowance on identity and contact evidence first. */
+export function prioritizeCrawlLinks(links: string[]): string[] {
+  const priority = (link: string): number => {
+    const pathname = new URL(link).pathname;
+    if (/(?:kontakt|contact|contatti)/i.test(pathname)) return 0;
+    if (/(?:impressum|imprint)/i.test(pathname)) return 1;
+    if (/(?:about|ueber|uber|a-propos|chi-siamo|team)/i.test(pathname))
+      return 2;
+    return 3;
+  };
+  return [...links].sort((a, b) => priority(a) - priority(b));
+}
+
 function chunks(
   text: string,
   size = 1800,
@@ -1253,7 +1266,7 @@ export async function collect(
             }),
           );
       }
-      for (const link of extracted.links) {
+      for (const link of prioritizeCrawlLinks(extracted.links)) {
         const target = publicUrl(link);
         if (
           target.origin === homepage.origin &&

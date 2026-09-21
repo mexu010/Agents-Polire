@@ -1,0 +1,606 @@
+{
+  "discoveredAt": "2026-09-21",
+  "method": "Websuche durch Codex in diesem Chat. URLs sind Suchkandidaten; Qualität, Schweizer Sitz und Betriebsstatus werden nicht aus Suchtreffern abgeleitet.",
+  "seeds": [
+    {
+      "title": "Krone Mosnang | Kontakt",
+      "sourceUrl": "https://www.kronemosnang.ch/kontakt",
+      "website": "https://www.kronemosnang.ch/",
+      "queryGroup": "prospectSearch1"
+    },
+    {
+      "title": "Kontakt | Hôtel Restaurant Le Mont-Vully",
+      "sourceUrl": "https://www.hotelmontvully.ch/de/kontakt/kontakt-und-oeffnungszeiten-36.html",
+      "website": "https://www.hotelmontvully.ch/",
+      "queryGroup": "prospectSearch1"
+    },
+    {
+      "title": "Home | Cut Color & More",
+      "sourceUrl": "https://www.ccm-coiffure.ch/",
+      "website": "https://www.ccm-coiffure.ch/",
+      "queryGroup": "prospectSearch1"
+    },
+    {
+      "title": "KONTAKT | Restaurant Pizzeria Landenberg | Turbenthal",
+      "sourceUrl": "https://www.r-landenberg.ch/kontakt",
+      "website": "https://www.r-landenberg.ch/",
+      "queryGroup": "prospectSearch1"
+    },
+    {
+      "title": "Hönggerhof | Kontakt",
+      "sourceUrl": "https://hoenggerhof.ch/contact",
+      "website": "https://hoenggerhof.ch/",
+      "queryGroup": "prospectSearch1"
+    },
+    {
+      "title": "Ihr Restaurant in der Nähe von Winterthur jetzt kontaktieren",
+      "sourceUrl": "https://burghohenklingen.com/kontakt/",
+      "website": "https://burghohenklingen.com/",
+      "queryGroup": "prospectSearch1"
+    },
+    {
+      "title": "Restaurant zum Weinberg | Kontakt & Reservation",
+      "sourceUrl": "https://www.zumweinberg.ch/kontakt-reservation",
+      "website": "https://www.zumweinberg.ch/",
+      "queryGroup": "prospectSearch1"
+    },
+    {
+      "title": "Kontakt - Strandhotel",
+      "sourceUrl": "https://strandhotel.ch/kontakt/",
+      "website": "https://strandhotel.ch/",
+      "queryGroup": "prospectSearch1"
+    },
+    {
+      "title": "Kontakt",
+      "sourceUrl": "https://www.freihof-wettingen.ch/kontakt.html",
+      "website": "https://www.freihof-wettingen.ch/",
+      "queryGroup": "prospectSearch1"
+    },
+    {
+      "title": "Kontakt - Restaurant Cantina Caverna",
+      "sourceUrl": "https://www.bruenigpark.ch/kontakt/",
+      "website": "https://www.bruenigpark.ch/",
+      "queryGroup": "prospectSearch1"
+    },
+    {
+      "title": "Kontakt | Restaurant & Hotel Frohsinn, Küssnacht am Rigi",
+      "sourceUrl": "https://www.rest-frohsinn.ch/ueber-uns",
+      "website": "https://www.rest-frohsinn.ch/",
+      "queryGroup": "prospectSearch1"
+    },
+    {
+      "title": "Startseite - Restaurant Kreuz Schlosswil",
+      "sourceUrl": "https://kreuz-schlosswil.ch/",
+      "website": "https://kreuz-schlosswil.ch/",
+      "queryGroup": "prospectSearch1"
+    },
+    {
+      "title": "Individuelle Küchen und Möbel bei der Göldi Schreinerei AG",
+      "sourceUrl": "https://www.goeldischreinerei.ch/ueber-uns",
+      "website": "https://www.goeldischreinerei.ch/",
+      "queryGroup": "searchMore0"
+    },
+    {
+      "title": "badertscher.ch - Schreinerei, Innenausbau, Bern",
+      "sourceUrl": "https://badertscher.ch/",
+      "website": "https://badertscher.ch/",
+      "queryGroup": "searchMore0"
+    },
+    {
+      "title": "Der Schreiner, Ihr Wohnraumdesigner | Schreinerei Tanner | Münsingen",
+      "sourceUrl": "https://www.schreinerei-tanner.ch/",
+      "website": "https://www.schreinerei-tanner.ch/",
+      "queryGroup": "searchMore0"
+    },
+    {
+      "title": "Hairdreams | Coiffeur | Reichsgasse 52, Chur, Schweiz",
+      "sourceUrl": "https://www.hairdreams-chur.com/",
+      "website": "https://www.hairdreams-chur.com/",
+      "queryGroup": "searchMore1"
+    },
+    {
+      "title": "Capello Fortunato — Coiffeur in Aarburg",
+      "sourceUrl": "https://www.capellofortunato.ch/",
+      "website": "https://www.capellofortunato.ch/",
+      "queryGroup": "searchMore1"
+    },
+    {
+      "title": "Coiffeur und Kosmetik – Intercoiffure Sonja in Wattwil",
+      "sourceUrl": "https://www.intercoiffuresonja.ch/",
+      "website": "https://www.intercoiffuresonja.ch/",
+      "queryGroup": "searchMore1"
+    },
+    {
+      "title": "Haartreff-coiffeur-salon-jeuss",
+      "sourceUrl": "https://www.haartreff-jeuss.ch/",
+      "website": "https://www.haartreff-jeuss.ch/",
+      "queryGroup": "searchMore1"
+    },
+    {
+      "title": "Manu's Hair | Friseur",
+      "sourceUrl": "https://www.manushaircos.ch/",
+      "website": "https://www.manushaircos.ch/",
+      "queryGroup": "searchMore1"
+    },
+    {
+      "title": "öffnungszeiten - artof-hairs Webseite!",
+      "sourceUrl": "https://www.artof-hair.ch/%C3%B6ffnungszeiten-termine/",
+      "website": "https://www.artof-hair.ch/",
+      "queryGroup": "searchMore1"
+    },
+    {
+      "title": "Impressum",
+      "sourceUrl": "https://www.emmeleder.ch/kontakt/impressum",
+      "website": "https://www.emmeleder.ch/",
+      "queryGroup": "searchMore1"
+    },
+    {
+      "title": "Öffnungszeiten",
+      "sourceUrl": "https://www.coiffeurlanz.ch/html/offnungszeiten.html",
+      "website": "https://www.coiffeurlanz.ch/",
+      "queryGroup": "searchMore1"
+    },
+    {
+      "title": "Feiertage | alumex AG",
+      "sourceUrl": "https://alumex.ch/feiertage/",
+      "website": "https://alumex.ch/",
+      "queryGroup": "searchMore1"
+    },
+    {
+      "title": "Aktuelles | Coiffure Art Atelier",
+      "sourceUrl": "https://www.aacoiffure.ch/aktuelles",
+      "website": "https://www.aacoiffure.ch/",
+      "queryGroup": "searchMore1"
+    },
+    {
+      "title": "Aktuelles - Garage Müller AG - Erlenbach",
+      "sourceUrl": "https://mueller-garage.ch/aktuelles/",
+      "website": "https://mueller-garage.ch/",
+      "queryGroup": "searchMore2"
+    },
+    {
+      "title": "Auto Leisibach AG · Alles unter einem Dach",
+      "sourceUrl": "https://autoleisibach.ch/",
+      "website": "https://autoleisibach.ch/",
+      "queryGroup": "searchMore2"
+    },
+    {
+      "title": "News & Aktuelles | GP Garage AG",
+      "sourceUrl": "https://www.gp-garage.ch/news",
+      "website": "https://www.gp-garage.ch/",
+      "queryGroup": "searchMore2"
+    },
+    {
+      "title": "Garage Central Biglen AG - lukas-aeberhards Webseite!",
+      "sourceUrl": "https://www.centralbiglen.ch/",
+      "website": "https://www.centralbiglen.ch/",
+      "queryGroup": "searchMore2"
+    },
+    {
+      "title": "Garage Heller - Aktuelles zu Citroen, Toyota und DS Automobile",
+      "sourceUrl": "https://www.garage-heller.ch/aktuelles",
+      "website": "https://www.garage-heller.ch/",
+      "queryGroup": "searchMore2"
+    },
+    {
+      "title": "Garage P.Schweizer Liestal: ►Aktuelles ►Deals ►Saisonales",
+      "sourceUrl": "https://www.pschweizerag.ch/aktuell",
+      "website": "https://www.pschweizerag.ch/",
+      "queryGroup": "searchMore2"
+    },
+    {
+      "title": "Kontakt - Holz und Traum - Holzmöbel - Holz & Traum GmbH",
+      "sourceUrl": "https://www.holzundtraum.ch/",
+      "website": "https://www.holzundtraum.ch/",
+      "query": "Schreinerei Schweiz \"Willkommen\" \"Kontakt\""
+    },
+    {
+      "title": "Willkommen - Handwerk mit Tradition – Holzbau Schreinerei Spenglerei Bedachungen Service",
+      "sourceUrl": "https://www.fritschi-griesemer.ch/willkommen.html",
+      "website": "https://www.fritschi-griesemer.ch/",
+      "query": "Schreinerei Schweiz \"Willkommen\" \"Kontakt\""
+    },
+    {
+      "title": "Schreinerei Gander | Individuelle Möbel & Innenausbau",
+      "sourceUrl": "https://www.ganderag.ch/",
+      "website": "https://www.ganderag.ch/",
+      "query": "Schreinerei Schweiz \"Willkommen\" \"Kontakt\""
+    },
+    {
+      "title": "ARD Swiss GmbH | Schreinerei und Möbelanfertigung",
+      "sourceUrl": "https://www.ard-swiss.ch/",
+      "website": "https://www.ard-swiss.ch/",
+      "query": "Schreinerei Schweiz \"Willkommen\" \"Kontakt\""
+    },
+    {
+      "title": "Schreinerei Kienholz",
+      "sourceUrl": "https://www.kien-holz.com/",
+      "website": "https://www.kien-holz.com/",
+      "query": "Schreinerei Schweiz \"Willkommen\" \"Kontakt\""
+    },
+    {
+      "title": "Home - Meisterhaftes Handwerk gewachsen aus vertrauen",
+      "sourceUrl": "https://suemi.ch/",
+      "website": "https://suemi.ch/",
+      "query": "Schreinerei Schweiz \"Willkommen\" \"Kontakt\""
+    },
+    {
+      "title": "Schreinerei | Marschall Innenausbau Ag | Schweiz",
+      "sourceUrl": "https://www.marschallag.ch/",
+      "website": "https://www.marschallag.ch/",
+      "query": "Schreinerei Schweiz \"Willkommen\" \"Kontakt\""
+    },
+    {
+      "title": "Kontakt – Schreinerei Fux Yvo GmbH Zermatt",
+      "sourceUrl": "https://www.fux-baut.ch/kontakt",
+      "website": "https://www.fux-baut.ch/",
+      "query": "Schreinerei Schweiz \"Willkommen\" \"Kontakt\""
+    },
+    {
+      "title": "Ihre präzise Schreinerei | Männedorf | Andreas Blarer",
+      "sourceUrl": "https://www.schreiner-blarer.ch/",
+      "website": "https://www.schreiner-blarer.ch/",
+      "query": "Schreinerei Schweiz \"Willkommen\" \"Kontakt\""
+    },
+    {
+      "title": "Home | Schreinerei Egger",
+      "sourceUrl": "https://www.schreinereiegger.ch/",
+      "website": "https://www.schreinereiegger.ch/",
+      "query": "Schreinerei Schweiz \"Willkommen\" \"Kontakt\""
+    },
+    {
+      "title": "Schreinerei Paul Stricker GmbH | Schreinerei | Grabs, Schweiz",
+      "sourceUrl": "https://www.schreinereipaulstricker.ch/",
+      "website": "https://www.schreinereipaulstricker.ch/",
+      "query": "Schreinerei Schweiz \"Willkommen\" \"Kontakt\""
+    },
+    {
+      "title": "Schreinerei | Baselland | R. Brunner & Söhne AG",
+      "sourceUrl": "https://www.holz-isch-heimelig.ch/",
+      "website": "https://www.holz-isch-heimelig.ch/",
+      "query": "Schreinerei Schweiz \"Willkommen\" \"Kontakt\""
+    },
+    {
+      "title": "Home - F&G Malergeschäft",
+      "sourceUrl": "https://fgmaler.ch/",
+      "website": "https://fgmaler.ch/",
+      "query": "Maler Schweiz \"Betriebsferien\" \"2026\""
+    },
+    {
+      "title": "Öffnungszeiten — HUG von Matt bis Glanz",
+      "sourceUrl": "https://www.hug-wolfwil.ch/oeffnungszeiten",
+      "website": "https://www.hug-wolfwil.ch/",
+      "query": "Maler Schweiz \"Betriebsferien\" \"2026\""
+    },
+    {
+      "title": "Home - ARPI GmbH Sonnen- und Wetterschutzsysteme",
+      "sourceUrl": "https://www.arpi.ch/",
+      "website": "https://www.arpi.ch/",
+      "query": "Maler Schweiz \"Betriebsferien\" \"2026\""
+    },
+    {
+      "title": "T. Ruggiero & Söhne AG - Eigd. dipl. Malermeister",
+      "sourceUrl": "https://www.t-ruggiero.ch/news",
+      "website": "https://www.t-ruggiero.ch/",
+      "query": "Maler Schweiz \"Betriebsferien\" \"2026\""
+    },
+    {
+      "title": "Betriebsferien 2026 - Restaurant & Hotel Weiss Kreuz Malans",
+      "sourceUrl": "https://www.weisskreuzmalans.ch/news/betriebsferien-2026/",
+      "website": "https://www.weisskreuzmalans.ch/",
+      "query": "Maler Schweiz \"Betriebsferien\" \"2026\""
+    },
+    {
+      "title": "Feiertage und Ferien - Entla AG",
+      "sourceUrl": "https://www.entla.ch/unternehmen/feiertage-und-ferien/",
+      "website": "https://www.entla.ch/",
+      "query": "Maler Schweiz \"Betriebsferien\" \"2026\""
+    },
+    {
+      "title": "Steiner Schreinerei / Fensterfabrik AG ☆ Neuigkeiten",
+      "sourceUrl": "https://www.fenster-steiner.ch/264-Neuigkeiten.php?File=211",
+      "website": "https://www.fenster-steiner.ch/",
+      "query": "Maler Schweiz \"Betriebsferien\" \"2026\""
+    },
+    {
+      "title": "Aktuelles - Rüegg AG Spengler Sanitär Heizung Solar",
+      "sourceUrl": "https://www.rubema.ch/aktuelles/",
+      "website": "https://www.rubema.ch/",
+      "query": "Sanitär Heizung Schweiz \"Aktuelles\" \"2026\""
+    },
+    {
+      "title": "Aktuelles – Bär Haustechnik AG",
+      "sourceUrl": "https://www.baerhaustechnik.ch/aktuelles/",
+      "website": "https://www.baerhaustechnik.ch/",
+      "query": "Sanitär Heizung Schweiz \"Aktuelles\" \"2026\""
+    },
+    {
+      "title": "Aktuell | Gallati AG, Luzern",
+      "sourceUrl": "https://www.gallatiag.ch/ueber-uns/aktuell",
+      "website": "https://www.gallatiag.ch/",
+      "query": "Sanitär Heizung Schweiz \"Aktuelles\" \"2026\""
+    },
+    {
+      "title": "Wickart AG | Für Sanitär- und Heizungsanlagen im Kanton Zug",
+      "sourceUrl": "https://wickart.ch/",
+      "website": "https://wickart.ch/",
+      "query": "Sanitär Heizung Schweiz \"Aktuelles\" \"2026\""
+    },
+    {
+      "title": "Frutiger + Zbinden AG | Komfort, der bleibt – Qualität, die überzeugt.",
+      "sourceUrl": "https://www.fzag.ch/",
+      "website": "https://www.fzag.ch/",
+      "query": "Sanitär Heizung Schweiz \"Aktuelles\" \"2026\""
+    },
+    {
+      "title": "Arnold AG Heizung-Sanitär in Schattdorf | Gebäudetechnik die verbindet",
+      "sourceUrl": "https://www.arnoldag.ch/",
+      "website": "https://www.arnoldag.ch/",
+      "query": "Sanitär Heizung Schweiz \"Aktuelles\" \"2026\""
+    },
+    {
+      "title": "michel-ht.ch; Sanitär I Heizung I Haustechnik, Thun, Konolfingen, Aaretal, Frutigen, Spiez",
+      "sourceUrl": "https://www.michel-ht.ch/",
+      "website": "https://www.michel-ht.ch/",
+      "query": "Sanitär Heizung Schweiz \"Aktuelles\" \"2026\""
+    },
+    {
+      "title": "Aktuell | Willi Gebäudetechnik AG, Chur",
+      "sourceUrl": "https://www.willi-gt.ch/ueber-uns/aktuell",
+      "website": "https://www.willi-gt.ch/",
+      "query": "Sanitär Heizung Schweiz \"Aktuelles\" \"2026\""
+    },
+    {
+      "title": "Kontakt und Anfahrt | Meyer Söhne AG",
+      "sourceUrl": "https://www.meyer-soehne.ch/kontakt-und-anfahrt/",
+      "website": "https://www.meyer-soehne.ch/",
+      "query": "Gärtnerei Blumen Schweiz \"2026\" \"Kontakt\""
+    },
+    {
+      "title": "Winkenbach – Blumen – Gartenbau – Gärtnerei",
+      "sourceUrl": "https://winkenbach-hausen.ch/",
+      "website": "https://winkenbach-hausen.ch/",
+      "query": "Gärtnerei Blumen Schweiz \"2026\" \"Kontakt\""
+    },
+    {
+      "title": "Kontakt | DreamPlant Oberembrach & Zürich",
+      "sourceUrl": "https://www.dreamplant.ch/ueber-dreamplant/kontakt",
+      "website": "https://www.dreamplant.ch/",
+      "query": "Gärtnerei Blumen Schweiz \"2026\" \"Kontakt\""
+    },
+    {
+      "title": "Kontakt",
+      "sourceUrl": "https://www.d-labhart.ch/kontakt.html",
+      "website": "https://www.d-labhart.ch/",
+      "query": "Gärtnerei Blumen Schweiz \"2026\" \"Kontakt\""
+    },
+    {
+      "title": "Gartenbau & Gärtnerei | Blumen Höhener | Teufen & Bühler",
+      "sourceUrl": "https://www.blumen-hoehener.ch/",
+      "website": "https://www.blumen-hoehener.ch/",
+      "query": "Gärtnerei Blumen Schweiz \"2026\" \"Kontakt\""
+    },
+    {
+      "title": "Gartenbau, Gärtnerei, Floristik in Oberuzwil - Blumen Nützi",
+      "sourceUrl": "https://www.blumen-nuetzi.ch/home.html",
+      "website": "https://www.blumen-nuetzi.ch/",
+      "query": "Gärtnerei Blumen Schweiz \"2026\" \"Kontakt\""
+    },
+    {
+      "title": "Hofladen | Hofladen Dinhard | Dinhard",
+      "sourceUrl": "https://www.hofladendinhard.ch/",
+      "website": "https://www.hofladendinhard.ch/",
+      "query": "Bäckerei Metzgerei Schweiz \"Betriebsferien\" \"2026\""
+    },
+    {
+      "title": "Buure Metzg AG - Metzgerei Gstaad Schönried Rougemont",
+      "sourceUrl": "https://www.buuremetzg.ch/",
+      "website": "https://www.buuremetzg.ch/",
+      "query": "Bäckerei Metzgerei Schweiz \"Betriebsferien\" \"2026\""
+    },
+    {
+      "title": "Betriebsferien 2026 - ricklimetzgs Webseite!",
+      "sourceUrl": "https://www.ricklimetzg.ch/unternehmen/%C3%B6ffnungszeiten/",
+      "website": "https://www.ricklimetzg.ch/",
+      "query": "Bäckerei Metzgerei Schweiz \"Betriebsferien\" \"2026\""
+    },
+    {
+      "title": "Metzgerei Zurfluh – Frisch, Regional & Persönlich in Flüelen",
+      "sourceUrl": "https://zurfluh-metzgerei.ch/",
+      "website": "https://zurfluh-metzgerei.ch/",
+      "query": "Bäckerei Metzgerei Schweiz \"Betriebsferien\" \"2026\""
+    },
+    {
+      "title": "Unser Angebot | Fleisch Delikatessen Langnau am Albis",
+      "sourceUrl": "https://www.metzg-abegg.ch/das-team",
+      "website": "https://www.metzg-abegg.ch/",
+      "query": "Bäckerei Metzgerei Schweiz \"Betriebsferien\" \"2026\""
+    },
+    {
+      "title": "Willkommen bei der Marti Metzgerei – Fleischgenuss mit Tradition | martimetzgerei.ch",
+      "sourceUrl": "https://martimetzgerei.ch/",
+      "website": "https://martimetzgerei.ch/",
+      "query": "Bäckerei Metzgerei Schweiz \"Betriebsferien\" \"2026\""
+    },
+    {
+      "title": "Metzgerei Willener - Ihre Metzgerei in Amriswil",
+      "sourceUrl": "https://www.metzgerei-willener.ch/",
+      "website": "https://www.metzgerei-willener.ch/",
+      "query": "Bäckerei Metzgerei Schweiz \"Betriebsferien\" \"2026\""
+    },
+    {
+      "title": "Metzgerei und Partyservice Galgenen - Rickenbach Metzgerei Galgenen",
+      "sourceUrl": "https://www.metzgerei-rickenbach.ch/",
+      "website": "https://www.metzgerei-rickenbach.ch/",
+      "query": "Bäckerei Metzgerei Schweiz \"Betriebsferien\" \"2026\""
+    },
+    {
+      "title": "Forster Metzgerei – Fleisch & Feines",
+      "sourceUrl": "https://www.forster-metzgerei.ch/",
+      "website": "https://www.forster-metzgerei.ch/",
+      "query": "Bäckerei Metzgerei Schweiz \"Betriebsferien\" \"2026\""
+    },
+    {
+      "title": "Home - Metzgerei Bodmer GmbH",
+      "sourceUrl": "https://metzgerei-bodmer.ch/",
+      "website": "https://metzgerei-bodmer.ch/",
+      "query": "Bäckerei Metzgerei Schweiz \"Betriebsferien\" \"2026\""
+    },
+    {
+      "title": "Berwert Metzgerei und Partyservice in Oberurnen, Glarus Nord",
+      "sourceUrl": "https://www.berwert-metzgerei.ch/68/startseite",
+      "website": "https://www.berwert-metzgerei.ch/",
+      "query": "Bäckerei Metzgerei Schweiz \"Betriebsferien\" \"2026\""
+    },
+    {
+      "title": "Kontakt - Willkommen im bald schönsten Ort der Welt: In Ihrem Garten!",
+      "sourceUrl": "https://www.dag-gartenbau.ch/deutsch/kontakt/",
+      "website": "https://www.dag-gartenbau.ch/",
+      "query": "Gartenbau Schweiz \"Willkommen\" \"Kontakt\""
+    },
+    {
+      "title": "Willkommen bei E. Meier Gartenbau AG",
+      "sourceUrl": "https://www.meiergartenbau.ch/",
+      "website": "https://www.meiergartenbau.ch/",
+      "query": "Gartenbau Schweiz \"Willkommen\" \"Kontakt\""
+    },
+    {
+      "title": "Martin Graf Gartenbau Willkommen » Martin Graf Gartenbau",
+      "sourceUrl": "https://grafgartenbaugmbh.ch/",
+      "website": "https://grafgartenbaugmbh.ch/",
+      "query": "Gartenbau Schweiz \"Willkommen\" \"Kontakt\""
+    },
+    {
+      "title": "Willkommen - Gartenbau Adrian Kälin, Freienbach SZ Willkommen",
+      "sourceUrl": "https://www.gartenbau-kaelin.ch/",
+      "website": "https://www.gartenbau-kaelin.ch/",
+      "query": "Gartenbau Schweiz \"Willkommen\" \"Kontakt\""
+    },
+    {
+      "title": "Gartenbaufirma | Zürich und Region | F. Berner Gartenbau AG",
+      "sourceUrl": "https://www.bernergartenbau.ch/",
+      "website": "https://www.bernergartenbau.ch/",
+      "query": "Gartenbau Schweiz \"Willkommen\" \"Kontakt\""
+    },
+    {
+      "title": "Willkommen - Weiersmüller Gartenbau",
+      "sourceUrl": "https://www.weiersmueller-gartenbau.ch/",
+      "website": "https://www.weiersmueller-gartenbau.ch/",
+      "query": "Gartenbau Schweiz \"Willkommen\" \"Kontakt\""
+    },
+    {
+      "title": "Gartenbau | Fonseca Gartenpflege Gmbh",
+      "sourceUrl": "https://www.garten-fonseca.ch/",
+      "website": "https://www.garten-fonseca.ch/",
+      "query": "Gartenbau Schweiz \"Willkommen\" \"Kontakt\""
+    },
+    {
+      "title": "Spaltenstein – Gartenbau mit Köpfchen",
+      "sourceUrl": "https://www.spaltenstein-gartenbau.ch/",
+      "website": "https://www.spaltenstein-gartenbau.ch/",
+      "query": "Gartenbau Schweiz \"Willkommen\" \"Kontakt\""
+    },
+    {
+      "title": "Kosin Maler GmbH",
+      "sourceUrl": "https://maler-kosin.ch/",
+      "website": "https://maler-kosin.ch/",
+      "query": "Maler Schweiz \"Willkommen auf unserer Homepage\""
+    },
+    {
+      "title": "Georges Gruber AG | Malerei&Gipserei | Oberlandstrasse 21, 1719 Brünisried, Switzerland",
+      "sourceUrl": "https://www.gruber-ag.ch/",
+      "website": "https://www.gruber-ag.ch/",
+      "query": "Maler Schweiz \"Willkommen auf unserer Homepage\""
+    },
+    {
+      "title": "Maler Altdorf | Uri | Gerry Furger GmbH",
+      "sourceUrl": "https://www.maler-furger.ch/",
+      "website": "https://www.maler-furger.ch/",
+      "query": "Maler Schweiz \"Willkommen auf unserer Homepage\""
+    },
+    {
+      "title": "Lantii.ch Gipser & Maler Villigen - Lantii.ch Gipser & Fassadenisolation Maler",
+      "sourceUrl": "https://www.lantii.ch/",
+      "website": "https://www.lantii.ch/",
+      "query": "Maler Schweiz \"Willkommen auf unserer Homepage\""
+    },
+    {
+      "title": "Rico Campana – Malerarbeiten & Bodenbeläge",
+      "sourceUrl": "https://ricocampana.ch/",
+      "website": "https://ricocampana.ch/",
+      "query": "Maler Schweiz \"Willkommen auf unserer Homepage\""
+    },
+    {
+      "title": "Chiriatti AG",
+      "sourceUrl": "https://www.chiriatti-ag.ch/",
+      "website": "https://www.chiriatti-ag.ch/",
+      "query": "Maler Schweiz \"Willkommen auf unserer Homepage\""
+    },
+    {
+      "title": "Malergeschäft Schuler",
+      "sourceUrl": "https://www.maler-schuler.ch/",
+      "website": "https://www.maler-schuler.ch/",
+      "query": "Maler Schweiz \"Willkommen auf unserer Homepage\""
+    },
+    {
+      "title": "Home - DD Maler GmbH | malen gipsen renovieren",
+      "sourceUrl": "https://www.dd-maler.ch/",
+      "website": "https://www.dd-maler.ch/",
+      "query": "Maler Schweiz \"Willkommen auf unserer Homepage\""
+    },
+    {
+      "title": "Aktuell – Daniel Guyer Malergeschäft Embrach",
+      "sourceUrl": "https://www.malerguyer.ch/aktuell",
+      "website": "https://www.malerguyer.ch/",
+      "query": "Maler Schweiz \"Willkommen auf unserer Homepage\""
+    },
+    {
+      "title": "Garage Marugg GmbH | Ihr Partner für Nutzfahrzeuge in Gelterkinden",
+      "sourceUrl": "https://www.garage-marugg.ch/",
+      "website": "https://www.garage-marugg.ch/",
+      "query": "Garage Schweiz \"Willkommen auf unserer Homepage\""
+    },
+    {
+      "title": "Home",
+      "sourceUrl": "https://www.riedgarage.ch/",
+      "website": "https://www.riedgarage.ch/",
+      "query": "Garage Schweiz \"Willkommen auf unserer Homepage\""
+    },
+    {
+      "title": "About | Fahrzeugtechnik Müller Kleinlützel - Auto Garage und Reparatur Werkstatt",
+      "sourceUrl": "https://fahrzeugtechnikmueller.ch/about/",
+      "website": "https://fahrzeugtechnikmueller.ch/",
+      "query": "Garage Schweiz \"Willkommen auf unserer Homepage\""
+    },
+    {
+      "title": "Carrosserie Roger Nikles – Home",
+      "sourceUrl": "https://www.rep4you.ch/",
+      "website": "https://www.rep4you.ch/",
+      "query": "Garage Schweiz \"Willkommen auf unserer Homepage\""
+    },
+    {
+      "title": "Willkommen auf unserer Homepage - asp-gmbhs Webseite!",
+      "sourceUrl": "https://www.asp-gmbh.ch/",
+      "website": "https://www.asp-gmbh.ch/",
+      "query": "Garage Schweiz \"Willkommen auf unserer Homepage\""
+    },
+    {
+      "title": "Home - Garage Helg GmbH",
+      "sourceUrl": "https://garagehelg.ch/",
+      "website": "https://garagehelg.ch/",
+      "query": "Garage Schweiz \"Willkommen auf unserer Homepage\""
+    },
+    {
+      "title": "Home | Sensation Cars AG - Wir stehen zu unserem Wort",
+      "sourceUrl": "https://sensation-cars.ch/",
+      "website": "https://sensation-cars.ch/",
+      "query": "Garage Schweiz \"Willkommen auf unserer Homepage\""
+    },
+    {
+      "title": "Home",
+      "sourceUrl": "https://www.doldis-automobile.ch/",
+      "website": "https://www.doldis-automobile.ch/",
+      "query": "Garage Schweiz \"Willkommen auf unserer Homepage\""
+    }
+  ]
+}

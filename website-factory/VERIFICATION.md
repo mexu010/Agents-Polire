@@ -1,5 +1,17 @@
 # Prüfung vom 11. September 2026
 
+## Aktuelle Ergänzung: Durchsatz vom 21. September 2026
+
+Build und ESLint erfolgreich; 213 Tests in 22 Dateien bestanden (Gesamtlauf 17:44:47 Uhr, 30.11 Sekunden). Die folgenden älteren Abschnitte dokumentieren frühere Stände, nicht den aktuellen Umfang.
+
+Der neue persistente Prospecting-Ablauf wurde zusätzlich live mit 100 unterschiedlichen URLs geprüft: 100 HTML-Vorprüfungen, vier abgeschlossene Scout/Audit/Qualifier-Reviews, 14 OAuth-Aufrufe, keine fehlgeschlagenen Reviews. HTML-Erfassung 39.547 Sekunden; summierte aktive Laufzeit inklusive Vollreviews 278.806 Sekunden. 401.738 Sekunden zwischen erstem Start und Abschluss enthalten eine Korrekturpause. Keine Behauptung von 100 vollständigen visuellen Reviews. Alle vier Runs enden bei der gesperrten Demo-Entscheidung.
+
+Bei der ersten Live-Auswertung wurde ein Fehler im Crawl-Feldvertrag erkannt: `outcome` statt `status`. Er wurde durch Tests mit dem echten Collector-Format behoben. Die erneute Auswertung verwendete gespeicherte Quellen; keine erneuten 100 Abrufe, keine Quoten- oder Run-ID-Resets. Das Code-Review wurde nach den Korrekturen wiederholt. Ergebnisse und methodische Grenzen: [Bericht](reports/prospecting-100-2026-09-21/README.md).
+
+Die Modellgrenzen blieben unverändert; Tagesstand nach Abschluss 90 von 100 lokalen OAuth-Aufrufen. Keine kostenpflichtigen API-Aufrufe in diesem Batch, kein Preis für OAuth-Aufrufe erfunden. Die POLIRE-Website wurde nicht verändert. Keine Demo, Veröffentlichung oder Kontaktaufnahme.
+
+## Historischer Stand vom 11. September 2026
+
 Umgebung: Windows, Node.js 24.19.0, pnpm 11.19.0.
 
 ## Gemeinsamer finaler Stand

@@ -703,6 +703,7 @@ export class Factory {
               maxHtmlPagesPerLead: this.config.crawler.maxHtmlPagesPerLead,
               requestTimeoutMs: this.config.crawler.requestTimeoutMs,
               browser: true,
+              lighthouse: this.config.crawler.lighthouse,
               requestsPerHost: this.config.crawler.requestsPerHost,
               minHostIntervalMs: this.config.crawler.minHostIntervalMs,
               maxRedirects: this.config.crawler.maxRedirects,

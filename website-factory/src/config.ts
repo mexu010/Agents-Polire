@@ -74,6 +74,7 @@ export interface FactoryConfig {
     modelTimeoutMs: number;
   };
   crawler: {
+    lighthouse: boolean;
     parallelLeads: number;
     requestsPerHost: number;
     minHostIntervalMs: number;
@@ -228,6 +229,7 @@ export function defaultConfig(): FactoryConfig {
       modelTimeoutMs: 120_000,
     },
     crawler: {
+      lighthouse: true,
       parallelLeads: 2,
       requestsPerHost: 1,
       minHostIntervalMs: 1_000,
@@ -382,7 +384,12 @@ export function validateConfig(config: FactoryConfig): FactoryConfig {
     throw new Error("live research requires an explicit search query price");
   if (typeof config.escalation.enabled !== "boolean")
     throw new Error("escalation.enabled must be boolean");
-  const crawlerCaps: Record<keyof FactoryConfig["crawler"], number> = {
+  if (typeof config.crawler.lighthouse !== "boolean")
+    throw new Error("crawler.lighthouse must be boolean");
+  const crawlerCaps: Record<
+    Exclude<keyof FactoryConfig["crawler"], "lighthouse">,
+    number
+  > = {
     parallelLeads: 2,
     requestsPerHost: 1,
     minHostIntervalMs: Number.MAX_SAFE_INTEGER,
@@ -394,9 +401,10 @@ export function validateConfig(config: FactoryConfig): FactoryConfig {
     maxBrowserRequestsPerLead: 150,
     maxCrawlDurationMs: 180_000,
   };
-  for (const [key, value] of Object.entries(config.crawler) as Array<
-    [keyof FactoryConfig["crawler"], number]
+  for (const key of Object.keys(crawlerCaps) as Array<
+    keyof typeof crawlerCaps
   >) {
+    const value = config.crawler[key];
     positiveInteger(`crawler.${key}`, value);
     if (key === "minHostIntervalMs" ? value < 1_000 : value > crawlerCaps[key])
       throw new Error(`crawler.${key} violates its hard safety bound`);

@@ -1,0 +1,24 @@
+{
+  "mode": "live",
+  "authentication": "chatgpt_oauth",
+  "dataDir": "./data/live-test-polire",
+  "autoGenerate": false,
+  "escalation": { "enabled": false },
+  "research": { "enabled": false },
+  "crawler": {
+    "parallelLeads": 2,
+    "maxHtmlPagesPerLead": 3,
+    "lighthouse": false
+  },
+  "models": {
+    "scout": { "max_input_tokens": 64000 },
+    "audit": { "max_input_tokens": 80000 },
+    "qualifier": { "max_input_tokens": 64000 }
+  },
+  "offer": {
+    "services": ["Verbesserung einer bestehenden Website", "Erstellung einer komplett neuen Website"],
+    "confirmed_price": "Ab 1’000 CHF, abhängig vom Projektumfang; keine feste Preisobergrenze.",
+    "unsupported_features": [],
+    "offer_id": "polire-websites"
+  }
+}

@@ -44,6 +44,22 @@ CSV benötigt die Spalte `website`. Stapel sind auf 50 Einträge begrenzt, dedup
 
 ### Interessenten prüfen und selbst anrufen
 
+Der neue Schnelllauf verarbeitet bis zu **100 unterschiedliche Firmen**. Sechs parallele HTML-Prüfungen lesen je höchstens zwei Seiten ohne Modellaufruf. Nur die stärksten statischen Hinweise kommen in eine begrenzte Warteschlange für Scout, visuellen Audit und Qualifier; davon laufen höchstens zwei Firmen gleichzeitig. Die Sortierpriorität der Vorprüfung ist **kein Qualitäts- oder Opportunity-Score**. Fehlende Tags und alte Frames liefern Hinweise, keine fertige Designbewertung. Unklare/gesperrte Seiten bleiben in der Warteschlange; «kein Signal» bedeutet nicht «gute Website».
+
+```powershell
+pnpm prospect --config config/prospecting-fast.json --mode live --batch-id mein-100er-lauf --file leads.csv --max-reviews 6
+```
+
+CSV: eine Spalte `website`. Gleiche Firma mit `www`, ohne `www`, HTTP/HTTPS oder mehreren Pfaden zählt einmal; die erste angegebene Adresse bleibt das Abrufziel. `--max-reviews 0` führt nur die Vorprüfung aus. `--screen-concurrency` erlaubt 1–8 HTML-Arbeiter. Wiederaufnahme mit exakt demselben Befehl verwendet die gespeicherten Ergebnisse und dieselben Lauf-IDs. URLs, Auswahlgrenze und Modus sind an den Stapel gebunden. Fehlgeschlagene Reviews werden nicht automatisch erneut bezahlt. Vollständige, höchstens sieben Tage alte Reviews derselben Installation können wiederverwendet werden.
+
+Die Ergebnisse erscheinen unter `data/live-test-polire/prospecting/`: Markdown-Auswahl mit Original-Links und Einzelreviews sowie JSON mit allen Einträgen, offenen Fällen, Laufzeit und Nutzung. Die Auswahl sucht vorhandene Reviews mit Qualität bis 65/100 und konkreten Befunden; sie ersetzt weder das unveränderte Opportunity-Ranking noch die Betriebsprüfung. Für einen Anruf bleibt eine aktuelle Aktivitätsquelle nötig.
+
+Nach einer Korrektur der Vorprüfungslogik kann derselbe Befehl mit `--recheck-screening` die bereits gespeicherten HTML-Quellen lokal neu auswerten. Diese Vorprüfung verwendet nur gespeicherte Dateien und wiederholt keine abgeschlossenen Agent-Reviews. Neu erkannte Kandidaten können danach noch freie Plätze innerhalb des ursprünglichen `--max-reviews` belegen, inklusive neuer Browser- und Modellaufrufe; dabei gelten weiterhin alle Grenzen. Der Zeitpunkt des ursprünglichen Quellenabrufs bleibt erhalten.
+
+`config/prospecting-fast.json` nutzt die bestehende Datenbank und OAuth-Grenzen. Es spart im Vollreview den Lighthouse-Test aus, erstellt aber weiterhin mobile und Desktop-Aufnahmen. Performance bleibt deshalb unbekannt; es wird kein Messwert erfunden. Die 100 HTML-Vorprüfungen benötigen keine Modellaufrufe. 100 vollständige Reviews mit drei Agents würden mindestens 300 Aufrufe vor Reparaturen erfordern. Dieses Profil erhöht keine Grenze und verschickt nichts.
+
+Der Schnelllauf verarbeitet eine bereitgestellte URL-Liste. Die vollautomatische Suche benötigt weiterhin die separat konfigurierte Suchschnittstelle; für den dokumentierten Test wurde die Liste hier im Chat recherchiert.
+
 Der erste echte Such- und Review-Stapel vom 21. September 2026 liegt unter [reports/prospecting-2026-09-21](reports/prospecting-2026-09-21/README.md). Die Firmen wurden im Chat recherchiert, anschliessend mit Scout, Audit und Qualifier über OAuth geprüft. Die Liste unterscheidet aktuelle Aktivitätssignale von unbekanntem Betriebsstatus. Ein auffindbarer Kontakt ist keine Bestätigung von Interesse oder Budget.
 
 Der [zweite Durchlauf mit zehn weiteren Firmen](reports/prospecting-2026-09-21-round2/README.md) enthält zusätzliche Reviews, Quellen und Hinweise zu aktuellen Betriebsferien. Die früheren Ergebnisse bleiben separat erhalten.

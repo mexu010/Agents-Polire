@@ -15,6 +15,7 @@ import {
 } from "./agent-loop.js";
 import { ModelProvider } from "./provider.js";
 import { type JsonObject } from "./contracts.js";
+import { runProspecting } from "./prospecting.js";
 
 type Configure = (
   global: { config?: string; dataDir?: string },
@@ -38,6 +39,54 @@ export function registerWorkflowCommands(
       store.close();
     }
   };
+  cli
+    .command("prospect")
+    .requiredOption(
+      "--file <csv>",
+      "CSV with website column, up to 100 distinct businesses",
+    )
+    .requiredOption("--batch-id <id>", "stable identity for resume")
+    .requiredOption("--mode <mode>", "fixture or live")
+    .option(
+      "--max-reviews <number>",
+      "maximum full agent reviews; 0 screens only",
+      Number,
+      6,
+    )
+    .option(
+      "--screen-concurrency <number>",
+      "bounded HTML workers, 1-8",
+      Number,
+      6,
+    )
+    .option(
+      "--recheck-screening",
+      "re-evaluate saved HTML; newly selected candidates may use remaining live review slots",
+    )
+    .description(
+      "Screen 100 websites without LLM calls, review a bounded shortlist, stop before any demo",
+    )
+    .action(async (o, cmd) => {
+      const rows = parse(readFileSync(resolve(o.file), "utf8"), {
+        columns: true,
+        skip_empty_lines: true,
+        trim: true,
+      }) as JsonObject[];
+      print(
+        await withFactory(
+          cmd,
+          (f) =>
+            runProspecting(f, {
+              batchId: o.batchId,
+              websites: rows.map((r) => r.website ?? r.domain),
+              maxReviews: o.maxReviews,
+              screenConcurrency: o.screenConcurrency,
+              recheckScreening: o.recheckScreening,
+            }),
+          o.mode,
+        ),
+      );
+    });
   cli
     .command("batch")
     .requiredOption("--file <csv>", "CSV with website column")

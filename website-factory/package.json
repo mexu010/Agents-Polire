@@ -17,6 +17,7 @@
     "demo-decision": "node scripts/run.mjs demo-decision",
     "business-review": "node scripts/run.mjs business-review",
     "batch": "node scripts/run.mjs batch",
+    "prospect": "node scripts/run.mjs prospect",
     "resume": "node scripts/run.mjs resume",
     "report": "node scripts/run.mjs report",
     "trace": "node scripts/run.mjs trace",

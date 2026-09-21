@@ -16,9 +16,25 @@ import {
   resolvePublicHost,
   runLighthouseWorker,
   startEgressProxy,
+  prioritizeCrawlLinks,
 } from "../src/crawler.js";
 
 describe("external network boundary", () => {
+  it("uses the small page allowance for contact evidence before general service pages", () => {
+    const links = [
+      "https://company.ch/leistungen",
+      "https://company.ch/team",
+      "https://company.ch/kontakt",
+      "https://company.ch/impressum",
+    ];
+    expect(prioritizeCrawlLinks(links)).toEqual([
+      links[2],
+      links[3],
+      links[1],
+      links[0],
+    ]);
+    expect(links[0]).toBe("https://company.ch/leistungen");
+  });
   it.each([
     "http://localhost",
     "http://127.1",

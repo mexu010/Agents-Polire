@@ -64,6 +64,35 @@ function liveReviewHarness(override?: (agent: any, input: any) => any) {
 }
 
 describe("Factory orchestration", () => {
+  test("fast profile collects real screenshots but disables the slow performance measurement", async () => {
+    const dataDir = mkdtempSync(join(tmpdir(), "factory-fast-crawl-"));
+    const config = structuredClone(defaultConfig());
+    config.dataDir = dataDir;
+    config.mode = "live";
+    config.crawler.lighthouse = false;
+    const store = new Store(dataDir);
+    let capture: any;
+    const factory = new Factory(config, store, {
+      provider: {} as any,
+      collector: async (_website, options) => {
+        capture = options;
+        mkdirSync(options.outputDir, { recursive: true });
+        return { ...fixtureInput(), observedAt: new Date().toISOString() };
+      },
+      agentOutput: (agent, input) => fixtureOutput(agent, input),
+    });
+    try {
+      const result = await factory.runLead(
+        "https://fixture.alpina-service.example/",
+        { requireDemoDecision: true },
+      );
+      expect(capture).toMatchObject({ browser: true, lighthouse: false });
+      expect(result.stage).toBe("demo_review");
+      expect(result.status).toBe("waiting_approval");
+    } finally {
+      store.close();
+    }
+  });
   test("live analysis always waits for a hash-bound demo decision despite generation bypass flags", async () => {
     const { factory, store } = liveReviewHarness();
     let reviewed = await factory.runLead(

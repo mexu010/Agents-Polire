@@ -1,0 +1,4078 @@
+{
+  "batchId": "fast100-2026-09-21",
+  "checkedAt": "2026-09-21T15:45:41.607Z",
+  "summary": {
+    "total": 100,
+    "screened": 100,
+    "screenFailed": 0,
+    "candidates": 4,
+    "uncertain": 8,
+    "completeReviews": 4,
+    "reviewFailed": 0,
+    "blockedReviews": 0,
+    "modelCalls": 14,
+    "elapsedMs": 278806,
+    "noSignal": 88,
+    "initialHtmlScreeningMs": 39547,
+    "batchWallClockMs": 401738,
+    "oauthCallsToday": 90
+  },
+  "method": "100 HTML-Vorprüfungen ohne Modell; danach vier visuelle Scout/Audit/Qualifier-Reviews. 88 Websites ohne statisches Signal sind nicht als gut bewertet. Acht unklare Fälle bleiben offen. Recherchezeit, Entwicklung und manuelle Aktivitätsprüfung nicht in Laufzeit enthalten.",
+  "usage": {
+    "calls": 14,
+    "inputTokens": 195477,
+    "outputTokens": 20649,
+    "cacheReadTokens": 24320,
+    "cacheWriteTokens": null,
+    "reasoningTokens": 3868,
+    "totalTokens": 216126,
+    "actualCostUsd": null,
+    "billing": "ChatGPT OAuth; kein USD-Preis im Provider-Ledger verfügbar. Reasoning ist bereits in Output enthalten."
+  },
+  "calls": [
+    {
+      "agent": "scout",
+      "requested_model": "gpt-5.6-luna",
+      "reported_model": "gpt-5.6-luna",
+      "reasoning": "low",
+      "state": "succeeded",
+      "usage": {
+        "inputTokens": 11451,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": null,
+        "uncachedInputTokens": null,
+        "outputTokens": 1144,
+        "reasoningTokens": 240,
+        "totalTokens": 12595
+      },
+      "actualCostMicroUsd": null
+    },
+    {
+      "agent": "scout",
+      "requested_model": "gpt-5.6-luna",
+      "reported_model": "gpt-5.6-luna",
+      "reasoning": "low",
+      "state": "succeeded",
+      "usage": {
+        "inputTokens": 19155,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": null,
+        "uncachedInputTokens": null,
+        "outputTokens": 2150,
+        "reasoningTokens": 144,
+        "totalTokens": 21305
+      },
+      "actualCostMicroUsd": null
+    },
+    {
+      "agent": "audit",
+      "requested_model": "gpt-5.6-terra",
+      "reported_model": "gpt-5.6-terra",
+      "reasoning": "low",
+      "state": "succeeded",
+      "usage": {
+        "inputTokens": 13023,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": null,
+        "uncachedInputTokens": null,
+        "outputTokens": 1612,
+        "reasoningTokens": 110,
+        "totalTokens": 14635
+      },
+      "actualCostMicroUsd": null
+    },
+    {
+      "agent": "scout",
+      "requested_model": "gpt-5.6-luna",
+      "reported_model": "gpt-5.6-luna",
+      "reasoning": "low",
+      "state": "succeeded",
+      "usage": {
+        "inputTokens": 19187,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": null,
+        "uncachedInputTokens": null,
+        "outputTokens": 1947,
+        "reasoningTokens": 170,
+        "totalTokens": 21134
+      },
+      "actualCostMicroUsd": null
+    },
+    {
+      "agent": "qualifier",
+      "requested_model": "gpt-5.6-luna",
+      "reported_model": "gpt-5.6-luna",
+      "reasoning": "low",
+      "state": "succeeded",
+      "usage": {
+        "inputTokens": 9433,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": null,
+        "uncachedInputTokens": null,
+        "outputTokens": 942,
+        "reasoningTokens": 94,
+        "totalTokens": 10375
+      },
+      "actualCostMicroUsd": null
+    },
+    {
+      "agent": "scout",
+      "requested_model": "gpt-5.6-luna",
+      "reported_model": "gpt-5.6-luna",
+      "reasoning": "low",
+      "state": "succeeded",
+      "usage": {
+        "inputTokens": 12435,
+        "cacheReadTokens": 5888,
+        "cacheWriteTokens": null,
+        "uncachedInputTokens": null,
+        "outputTokens": 1513,
+        "reasoningTokens": 145,
+        "totalTokens": 13948
+      },
+      "actualCostMicroUsd": null
+    },
+    {
+      "agent": "audit",
+      "requested_model": "gpt-5.6-terra",
+      "reported_model": "gpt-5.6-terra",
+      "reasoning": "low",
+      "state": "succeeded",
+      "usage": {
+        "inputTokens": 21979,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": null,
+        "uncachedInputTokens": null,
+        "outputTokens": 1872,
+        "reasoningTokens": 393,
+        "totalTokens": 23851
+      },
+      "actualCostMicroUsd": null
+    },
+    {
+      "agent": "audit",
+      "requested_model": "gpt-5.6-terra",
+      "reported_model": "gpt-5.6-terra",
+      "reasoning": "low",
+      "state": "succeeded",
+      "usage": {
+        "inputTokens": 14340,
+        "cacheReadTokens": 5888,
+        "cacheWriteTokens": null,
+        "uncachedInputTokens": null,
+        "outputTokens": 1993,
+        "reasoningTokens": 804,
+        "totalTokens": 16333
+      },
+      "actualCostMicroUsd": null
+    },
+    {
+      "agent": "qualifier",
+      "requested_model": "gpt-5.6-luna",
+      "reported_model": "gpt-5.6-luna",
+      "reasoning": "low",
+      "state": "succeeded",
+      "usage": {
+        "inputTokens": 19165,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": null,
+        "uncachedInputTokens": null,
+        "outputTokens": 998,
+        "reasoningTokens": 143,
+        "totalTokens": 20163
+      },
+      "actualCostMicroUsd": null
+    },
+    {
+      "agent": "qualifier",
+      "requested_model": "gpt-5.6-luna",
+      "reported_model": "gpt-5.6-luna",
+      "reasoning": "low",
+      "state": "succeeded",
+      "usage": {
+        "inputTokens": 9789,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": null,
+        "uncachedInputTokens": null,
+        "outputTokens": 898,
+        "reasoningTokens": 117,
+        "totalTokens": 10687
+      },
+      "actualCostMicroUsd": null
+    },
+    {
+      "agent": "scout",
+      "requested_model": "gpt-5.6-luna",
+      "reported_model": "gpt-5.6-luna",
+      "reasoning": "low",
+      "state": "succeeded",
+      "usage": {
+        "inputTokens": 11472,
+        "cacheReadTokens": 5888,
+        "cacheWriteTokens": null,
+        "uncachedInputTokens": null,
+        "outputTokens": 1253,
+        "reasoningTokens": 132,
+        "totalTokens": 12725
+      },
+      "actualCostMicroUsd": null
+    },
+    {
+      "agent": "scout",
+      "requested_model": "gpt-5.6-luna",
+      "reported_model": "gpt-5.6-luna",
+      "reasoning": "low",
+      "state": "succeeded",
+      "usage": {
+        "inputTokens": 11487,
+        "cacheReadTokens": 1792,
+        "cacheWriteTokens": null,
+        "uncachedInputTokens": null,
+        "outputTokens": 1240,
+        "reasoningTokens": 235,
+        "totalTokens": 12727
+      },
+      "actualCostMicroUsd": null
+    },
+    {
+      "agent": "audit",
+      "requested_model": "gpt-5.6-terra",
+      "reported_model": "gpt-5.6-terra",
+      "reasoning": "low",
+      "state": "succeeded",
+      "usage": {
+        "inputTokens": 13224,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": null,
+        "uncachedInputTokens": null,
+        "outputTokens": 2175,
+        "reasoningTokens": 979,
+        "totalTokens": 15399
+      },
+      "actualCostMicroUsd": null
+    },
+    {
+      "agent": "qualifier",
+      "requested_model": "gpt-5.6-luna",
+      "reported_model": "gpt-5.6-luna",
+      "reasoning": "low",
+      "state": "succeeded",
+      "usage": {
+        "inputTokens": 9337,
+        "cacheReadTokens": 4864,
+        "cacheWriteTokens": null,
+        "uncachedInputTokens": null,
+        "outputTokens": 912,
+        "reasoningTokens": 162,
+        "totalTokens": 10249
+      },
+      "actualCostMicroUsd": null
+    }
+  ],
+  "results": [
+    {
+      "website": "https://www.kronemosnang.ch/",
+      "checkedAt": "2026-09-21T15:41:42.456Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.kronemosnang.ch/",
+          "excerpt": "href=\"tel:0719832847\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.kronemosnang.ch/",
+          "excerpt": "href=\"mailto:info@kronemosnang.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.kronemosnang.ch/",
+          "excerpt": "href=\"tel:0715112884\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.kronemosnang.ch/",
+          "excerpt": "href=\"mailto:info@kronelodge.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.kronemosnang.ch/kontakt",
+          "excerpt": "href=\"mailto:info@kronemosnang.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.kronemosnang.ch/kontakt",
+          "excerpt": "href=\"mailto:info@kronelodge.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.kronemosnang.ch/kontakt",
+          "excerpt": "href=\"tel:0719832847\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.kronemosnang.ch/kontakt",
+          "excerpt": "href=\"tel:0715112884\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.hotelmontvully.ch/",
+      "checkedAt": "2026-09-21T15:41:42.361Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.hotelmontvully.ch/",
+          "excerpt": "href=\"tel:+41266732121\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.hotelmontvully.ch/",
+          "excerpt": "href=\"mailto:info@hotelmontvully.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.hotelmontvully.ch/de/kontakt-33.html",
+          "excerpt": "href=\"tel:+41266732121\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.hotelmontvully.ch/de/kontakt-33.html",
+          "excerpt": "href=\"mailto:info@hotelmontvully.ch\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.ccm-coiffure.ch/",
+      "checkedAt": "2026-09-21T15:41:42.373Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "missing_contact",
+          "observation": "Keine verlinkte Kontaktmöglichkeit im abgerufenen HTML gefunden.",
+          "sourceUrl": "https://www.ccm-coiffure.ch/",
+          "excerpt": "<body>"
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.r-landenberg.ch/",
+      "checkedAt": "2026-09-21T15:41:42.435Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.r-landenberg.ch/",
+          "excerpt": "href=\"tel:052 385 50 50\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.r-landenberg.ch/kontakt",
+          "excerpt": "href=\"tel:052 385 50 50\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.r-landenberg.ch/kontakt",
+          "excerpt": "href=\"mailto:info@r-landenberg.ch\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://hoenggerhof.ch/",
+      "checkedAt": "2026-09-21T15:41:42.406Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://hoenggerhof.ch/",
+          "excerpt": "href=\"mailto:info@hoenggerhof.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://hoenggerhof.ch/",
+          "excerpt": "href=\"tel:044 296 13 13\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://hoenggerhof.ch/impressum",
+          "excerpt": "href=\"mailto:info@hoenggerhof.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://hoenggerhof.ch/impressum",
+          "excerpt": "href=\"tel:044 296 13 13\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://burghohenklingen.com/",
+      "checkedAt": "2026-09-21T15:41:42.382Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://burghohenklingen.com/kontakt/",
+          "excerpt": "href=\"tel:0527412137\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.zumweinberg.ch/",
+      "checkedAt": "2026-09-21T15:41:42.483Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.zumweinberg.ch/",
+          "excerpt": "href=\"mailto:info@zumweinberg.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.zumweinberg.ch/kontakt-reservation",
+          "excerpt": "href=\"mailto:info@zumweinberg.ch\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://strandhotel.ch/",
+      "checkedAt": "2026-09-21T15:41:42.494Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://strandhotel.ch/",
+          "excerpt": "href=\"tel: +41338451313\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://strandhotel.ch/kontakt/",
+          "excerpt": "href=\"tel: +41338451313\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.freihof-wettingen.ch/",
+      "checkedAt": "2026-09-21T15:41:42.504Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.freihof-wettingen.ch/",
+          "excerpt": "href=\"tel:0564267557\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.freihof-wettingen.ch/kontakt.html",
+          "excerpt": "href=\"tel:0564267557\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.bruenigpark.ch/",
+      "checkedAt": "2026-09-21T15:41:42.470Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "missing_contact",
+          "observation": "Keine verlinkte Kontaktmöglichkeit im abgerufenen HTML gefunden.",
+          "sourceUrl": "https://cantina-caverna.ch/",
+          "excerpt": "<body class=\"home wp-singular page-template-default page page-id-127 wp-embed-responsive wp-theme-bjork\">"
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.rest-frohsinn.ch/",
+      "checkedAt": "2026-09-21T15:41:42.513Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.rest-frohsinn.ch/",
+          "excerpt": "href=\"tel:+41418501414\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.rest-frohsinn.ch/kontakt",
+          "excerpt": "href=\"tel:+41418501414\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://kreuz-schlosswil.ch/",
+      "checkedAt": "2026-09-21T15:41:42.523Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://kreuz-schlosswil.ch/",
+          "excerpt": "href=\"tel:+41317110227\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://kreuz-schlosswil.ch/",
+          "excerpt": "href=\"mailto:info@kreuz-schlosswil.ch\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.goeldischreinerei.ch/",
+      "checkedAt": "2026-09-21T15:41:42.540Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.goeldischreinerei.ch/",
+          "excerpt": "href=\"tel:0713741719\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.goeldischreinerei.ch/",
+          "excerpt": "href=\"mailto:info@goeldischreinerei.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.goeldischreinerei.ch/kontakt",
+          "excerpt": "href=\"tel:0713741719\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.goeldischreinerei.ch/kontakt",
+          "excerpt": "href=\"mailto:info@goeldischreinerei.ch\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://badertscher.ch/",
+      "checkedAt": "2026-09-21T15:41:42.590Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://badertscher.ch/",
+          "excerpt": "href=\"tel:0313323334\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://badertscher.ch/",
+          "excerpt": "href=\"mailto:info@badertscher.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://badertscher.ch/firma/impressum/",
+          "excerpt": "href=\"tel:0313323334\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://badertscher.ch/firma/impressum/",
+          "excerpt": "href=\"mailto:info@badertscher.ch\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.schreinerei-tanner.ch/",
+      "checkedAt": "2026-09-21T15:41:42.599Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.schreinerei-tanner.ch/",
+          "excerpt": "href=\"tel:0317212986\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.schreinerei-tanner.ch/",
+          "excerpt": "href=\"mailto:info@schreinerei-tanner.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.schreinerei-tanner.ch/kontakt",
+          "excerpt": "href=\"tel:0317212986\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.schreinerei-tanner.ch/kontakt",
+          "excerpt": "href=\"mailto:info@schreinerei-tanner.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.schreinerei-tanner.ch/kontakt",
+          "excerpt": "href=\"mailto:christian@schreinerei-tanner.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.schreinerei-tanner.ch/kontakt",
+          "excerpt": "href=\"tel:+41317212986\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.hairdreams-chur.com/",
+      "checkedAt": "2026-09-21T15:41:42.555Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.hairdreams-chur.com/",
+          "excerpt": "href=\"tel:0818688089\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.hairdreams-chur.com/",
+          "excerpt": "href=\"mailto:hairdreams20@bluewin.ch\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.capellofortunato.ch/",
+      "checkedAt": "2026-09-21T15:41:42.575Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.capellofortunato.ch/",
+          "excerpt": "href=\"tel:+41764667399\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.capellofortunato.ch/",
+          "excerpt": "href=\"mailto:info@capellofortunato.ch?subject=Anmeldung%20%E2%80%93%20Fortunato%20Academy%3A%20Ice-Gel-Technik\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.intercoiffuresonja.ch/",
+      "checkedAt": "2026-09-21T15:41:42.612Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.intercoiffuresonja.ch/",
+          "excerpt": "href=\"tel:071 988 16 08\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.intercoiffuresonja.ch/",
+          "excerpt": "href=\"mailto:coiffuresonja@bluewin.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.intercoiffuresonja.ch/",
+          "excerpt": "href=\"tel:+41719881608\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.intercoiffuresonja.ch/impressum",
+          "excerpt": "href=\"tel:+41719881608\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.intercoiffuresonja.ch/impressum",
+          "excerpt": "href=\"mailto:coiffuresonja@bluewin.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.intercoiffuresonja.ch/impressum",
+          "excerpt": "href=\"tel:071 988 16 08\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.haartreff-jeuss.ch/",
+      "checkedAt": "2026-09-21T15:41:42.623Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.haartreff-jeuss.ch/kontakt",
+          "excerpt": "href=\"mailto:info@beautyspashop.ch\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.manushaircos.ch/",
+      "checkedAt": "2026-09-21T15:41:42.568Z",
+      "status": "uncertain",
+      "priority": 0,
+      "signals": [],
+      "limitations": [
+        "Abruf nicht vollständig verfügbar, blockiert oder fehlgeschlagen."
+      ],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.artof-hair.ch/",
+      "checkedAt": "2026-09-21T15:41:42.631Z",
+      "status": "no_signal",
+      "priority": 1,
+      "signals": [
+        {
+          "code": "missing_description",
+          "observation": "Keine Description-Metadaten im abgerufenen HTML.",
+          "sourceUrl": "https://www.artof-hair.ch/",
+          "excerpt": "<head>"
+        },
+        {
+          "code": "missing_contact",
+          "observation": "Keine verlinkte Kontaktmöglichkeit im abgerufenen HTML gefunden.",
+          "sourceUrl": "https://www.artof-hair.ch/",
+          "excerpt": "<body class=\"body cc-page cc-page-index cc-indexpage j-has-shop j-m-gallery-styles j-m-video-styles j-m-hr-styles j-m-header-styles j-m-text-styles j-m-emotionheader-styles j-m-htmlCode-styles j-m-rss-styles j-m-form-styles-disabled j-m-table-styles j-m-textWithImage-styles j-m-downloadDocument-styles j-m-imageSubtitle-styles j-m-flickr-styles j-m-googlemaps-styles j-m-blogSelection-styles-disabled j-m-comment-styles-disabled j-m-jimdo-styles j-m-profile-styles j-m-guestbook-styles j-m-promotion-styles j-m-twitter-styles j-m-hgrid-styles j-m-shoppingcart-styles j-m-catalog-styles j-m-product-styles-disabled j-m-facebook-styles j-m-sharebuttons-styles j-m-formnew-styles-disabled j-m-callToAction-styles j-m-turbo-styles j-m-spacing-styles j-m-googleplus-styles j-m-dummy-styles j-m-search-styles j-m-booking-styles j-m-socialprofiles-styles j-footer-styles cc-pagemode-default cc-content-parent\" id=\"page-2537354929\">"
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.emmeleder.ch/",
+      "checkedAt": "2026-09-21T15:41:42.650Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "missing_contact",
+          "observation": "Keine verlinkte Kontaktmöglichkeit im abgerufenen HTML gefunden.",
+          "sourceUrl": "https://www.emmeleder.ch/",
+          "excerpt": "<body class=\"site com-virtuemart view-category no-layout no-task itemid-116 ltr tpl-vp-neoteric v-2.5 j-5\">"
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.coiffeurlanz.ch/",
+      "checkedAt": "2026-09-21T15:41:42.660Z",
+      "status": "candidate",
+      "priority": 3,
+      "signals": [
+        {
+          "code": "missing_viewport",
+          "observation": "Kein viewport-Meta-Tag im abgerufenen HTML.",
+          "sourceUrl": "https://www.coiffeurlanz.ch/",
+          "excerpt": "<head>"
+        },
+        {
+          "code": "missing_description",
+          "observation": "Keine Description-Metadaten im abgerufenen HTML.",
+          "sourceUrl": "https://www.coiffeurlanz.ch/",
+          "excerpt": "<head>"
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.coiffeurlanz.ch/html/kontakt.html",
+          "excerpt": "href=\"mailto:info@coiffeurlanz.ch\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": "reviews/coiffeur-lanz.md"
+    },
+    {
+      "website": "https://alumex.ch/",
+      "checkedAt": "2026-09-21T15:41:42.672Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://alumex.ch/",
+          "excerpt": "href=\"tel:+41566185566\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://alumex.ch/",
+          "excerpt": "href=\"tel:+41 56 618 55 66\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://alumex.ch/kontakt/",
+          "excerpt": "href=\"tel:+41566185566\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://alumex.ch/kontakt/",
+          "excerpt": "href=\"tel:+41566185577\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://alumex.ch/kontakt/",
+          "excerpt": "href=\"tel:+41 56 618 55 66\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.aacoiffure.ch/",
+      "checkedAt": "2026-09-21T15:41:42.682Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "missing_contact",
+          "observation": "Keine verlinkte Kontaktmöglichkeit im abgerufenen HTML gefunden.",
+          "sourceUrl": "https://www.aacoiffure.ch/",
+          "excerpt": "<body id=\"Body\" itemscope itemtype=\"http://schema.org/WebPage\">"
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://mueller-garage.ch/",
+      "checkedAt": "2026-09-21T15:41:42.693Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://mueller-garage.ch/",
+          "excerpt": "href=\"mailto:info@mueller-garage.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://mueller-garage.ch/",
+          "excerpt": "href=\"tel:0336811163\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://mueller-garage.ch/",
+          "excerpt": "href=\"mailto:garagemm@swissonline.ch?subject=Ich%20suche%20ein%20neues%20Auto\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://mueller-garage.ch/",
+          "excerpt": "href=\"tel:%20+41%2033%20681%2011%2063\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://mueller-garage.ch/kontakt/",
+          "excerpt": "href=\"mailto:info@mueller-garage.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://mueller-garage.ch/kontakt/",
+          "excerpt": "href=\"tel:0336811163\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://autoleisibach.ch/",
+      "checkedAt": "2026-09-21T15:41:42.713Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://autoleisibach.ch/",
+          "excerpt": "href=\"tel://0041419172323\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://autoleisibach.ch/",
+          "excerpt": "href=\"tel://0041445111445\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://autoleisibach.ch/",
+          "excerpt": "href=\"tel://0041447462295\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://autoleisibach.ch/",
+          "excerpt": "href=\"tel://0041844372372\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://autoleisibach.ch/",
+          "excerpt": "href=\"tel://0041419172411\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://autoleisibach.ch/",
+          "excerpt": "href=\"tel://0041419173224\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://autoleisibach.ch/kontakt/",
+          "excerpt": "href=\"tel://0041419172323\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://autoleisibach.ch/kontakt/",
+          "excerpt": "href=\"tel://0041445111445\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://autoleisibach.ch/kontakt/",
+          "excerpt": "href=\"tel://0041447462295\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://autoleisibach.ch/kontakt/",
+          "excerpt": "href=\"tel://0041844372372\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://autoleisibach.ch/kontakt/",
+          "excerpt": "href=\"tel://0041419172411\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://autoleisibach.ch/kontakt/",
+          "excerpt": "href=\"tel://0041419173224\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.gp-garage.ch/",
+      "checkedAt": "2026-09-21T15:41:42.730Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.gp-garage.ch/",
+          "excerpt": "href=\"tel:+41448504455\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.gp-garage.ch/",
+          "excerpt": "href=\"mailto:mail@gpgarage.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.gp-garage.ch/kontakt",
+          "excerpt": "href=\"tel:+41448504455\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.gp-garage.ch/kontakt",
+          "excerpt": "href=\"mailto:mail@gpgarage.ch\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.centralbiglen.ch/",
+      "checkedAt": "2026-09-21T15:41:42.743Z",
+      "status": "no_signal",
+      "priority": 1,
+      "signals": [
+        {
+          "code": "missing_description",
+          "observation": "Keine Description-Metadaten im abgerufenen HTML.",
+          "sourceUrl": "https://www.centralbiglen.ch/",
+          "excerpt": "<head>"
+        },
+        {
+          "code": "missing_contact",
+          "observation": "Keine verlinkte Kontaktmöglichkeit im abgerufenen HTML gefunden.",
+          "sourceUrl": "https://www.centralbiglen.ch/",
+          "excerpt": "<body class=\"body cc-page cc-page-index cc-indexpage j-m-gallery-styles j-m-video-styles j-m-hr-styles j-m-header-styles j-m-text-styles j-m-emotionheader-styles j-m-htmlCode-styles j-m-rss-styles j-m-form-styles-disabled j-m-table-styles j-m-textWithImage-styles j-m-downloadDocument-styles j-m-imageSubtitle-styles j-m-flickr-styles j-m-googlemaps-styles j-m-blogSelection-styles-disabled j-m-comment-styles j-m-jimdo-styles j-m-profile-styles j-m-guestbook-styles j-m-promotion-styles j-m-twitter-styles j-m-hgrid-styles j-m-shoppingcart-styles j-m-catalog-styles j-m-product-styles-disabled j-m-facebook-styles j-m-sharebuttons-styles j-m-formnew-styles-disabled j-m-callToAction-styles j-m-turbo-styles j-m-spacing-styles j-m-googleplus-styles j-m-dummy-styles j-m-search-styles j-m-booking-styles j-m-socialprofiles-styles j-footer-styles cc-pagemode-default cc-content-parent\" id=\"page-1890291368\">"
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.garage-heller.ch/",
+      "checkedAt": "2026-09-21T15:41:42.702Z",
+      "status": "no_signal",
+      "priority": 1,
+      "signals": [
+        {
+          "code": "missing_description",
+          "observation": "Keine Description-Metadaten im abgerufenen HTML.",
+          "sourceUrl": "https://www.garage-heller.ch/",
+          "excerpt": "<head>"
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.garage-heller.ch/",
+          "excerpt": "href=\"tel:0419256363\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.garage-heller.ch/",
+          "excerpt": "href=\"mailto:info@garage-heller.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.garage-heller.ch/",
+          "excerpt": "href=\"tel:0419702888\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.garage-heller.ch/",
+          "excerpt": "href=\"mailto:info@heller-garage.ch\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.pschweizerag.ch/",
+      "checkedAt": "2026-09-21T15:41:42.765Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.pschweizerag.ch/",
+          "excerpt": "href=\"mailto:info@pschweizerag.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.pschweizerag.ch/",
+          "excerpt": "href=\"tel:+41619758383\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.pschweizerag.ch/kontakt",
+          "excerpt": "href=\"mailto:info@pschweizerag.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.pschweizerag.ch/kontakt",
+          "excerpt": "href=\"tel:+41619758383\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.holzundtraum.ch/",
+      "checkedAt": "2026-09-21T15:41:42.776Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.holzundtraum.ch/",
+          "excerpt": "href=\"mailto:mail@mail.com\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.fritschi-griesemer.ch/",
+      "checkedAt": "2026-09-21T15:41:42.789Z",
+      "status": "candidate",
+      "priority": 2,
+      "signals": [
+        {
+          "code": "missing_viewport",
+          "observation": "Kein viewport-Meta-Tag im abgerufenen HTML.",
+          "sourceUrl": "https://www.fritschi-griesemer.ch/willkommen.html",
+          "excerpt": "<head>"
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.fritschi-griesemer.ch/willkommen.html",
+          "excerpt": "href=\"mailto:info@fritschi-griesemer.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.fritschi-griesemer.ch/kontakt.html",
+          "excerpt": "href=\"mailto:info@fritschi-griesemer.ch\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": "reviews/fritschi-griesemer.md"
+    },
+    {
+      "website": "https://www.ganderag.ch/",
+      "checkedAt": "2026-09-21T15:41:42.806Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.ganderag.ch/",
+          "excerpt": "href=\"tel:+41418501756\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.ganderag.ch/",
+          "excerpt": "href=\"mailto:ganderag@bluewin.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.ganderag.ch/kontakt",
+          "excerpt": "href=\"tel:+41418501756\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.ganderag.ch/kontakt",
+          "excerpt": "href=\"mailto:ganderag@bluewin.ch\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.ard-swiss.ch/",
+      "checkedAt": "2026-09-21T15:41:42.848Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.ard-swiss.ch/",
+          "excerpt": "href=\"mailto:info@ard-swiss.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.ard-swiss.ch/kopie-von-impressum",
+          "excerpt": "href=\"mailto:info@ard-swiss.ch\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.kien-holz.com/",
+      "checkedAt": "2026-09-21T15:41:42.828Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "missing_contact",
+          "observation": "Keine verlinkte Kontaktmöglichkeit im abgerufenen HTML gefunden.",
+          "sourceUrl": "https://www.kien-holz.com/",
+          "excerpt": "<body\n    id=\"collection-6973ce09c3e16c047b727646\"\n    class=\"\n      tweak-blog-alternating-side-by-side-width-full tweak-blog-alternating-side-by-side-image-aspect-ratio-11-square tweak-blog-alternating-side-by-side-text-alignment-left tweak-blog-alternating-side-by-side-read-more-style-show tweak-blog-alternating-side-by-side-image-text-alignment-middle tweak-blog-alternating-side-by-side-delimiter-bullet tweak-blog-alternating-side-by-side-meta-position-top tweak-blog-alternating-side-by-side-primary-meta-categories tweak-blog-alternating-side-by-side-secondary-meta-date tweak-blog-alternating-side-by-side-excerpt-show image-block-poster-text-alignment-left image-block-card-content-position-center image-block-card-text-alignment-left image-block-overlap-content-position-center image-block-overlap-text-alignment-left image-block-collage-content-position-center image-block-collage-text-alignment-left image-block-stack-text-alignment-left form-use-theme-colors form-field-style-outline form-field-shape-pill form-field-border-all form-field-checkbox-type-icon form-field-checkbox-fill-outline form-field-checkbox-color-inverted form-field-checkbox-shape-rounded form-field-checkbox-layout-fit form-field-radio-type-icon form-field-radio-fill-outline form-field-radio-color-inverted form-field-radio-shape-rounded form-field-radio-layout-fit form-field-survey-fill-outline form-field-survey-color-inverted form-field-survey-shape-rounded form-field-hover-focus-outline form-submit-button-style-label  tweak-global-animations-complexity-level-detailed tweak-global-animations-animation-style-fade tweak-global-animations-animation-type-none tweak-global-animations-animation-curve-ease tweak-blog-masonry-width-full tweak-blog-masonry-text-alignment-left tweak-blog-masonry-primary-meta-categories tweak-blog-masonry-secondary-meta-date tweak-blog-masonry-meta-position-top tweak-blog-masonry-read-more-style-show tweak-blog-masonry-delimiter-space tweak-blog-masonry-image-placement-above tweak-blog-masonry-excerpt-show tweak-portfolio-grid-overlay-width-full tweak-portfolio-grid-overlay-height-large tweak-portfolio-grid-overlay-image-aspect-ratio-11-square tweak-portfolio-grid-overlay-text-placement-center tweak-portfolio-grid-overlay-show-text-after-hover tweak-blog-single-column-width-full tweak-blog-single-column-text-alignment-left tweak-blog-single-column-image-placement-above tweak-blog-single-column-delimiter-bullet tweak-blog-single-column-read-more-style-show tweak-blog-single-column-primary-meta-categories tweak-blog-single-column-secondary-meta-date tweak-blog-single-column-meta-position-top tweak-blog-single-column-content-full-post header-width-full tweak-transparent-header tweak-fixed-header-style-basic tweak-blog-item-width-medium tweak-blog-item-text-alignment-left tweak-blog-item-meta-position-above-title tweak-blog-item-show-categories tweak-blog-item-show-date tweak-blog-item-delimiter-bullet tweak-blog-side-by-side-width-full tweak-blog-side-by-side-image-placement-left tweak-blog-side-by-side-image-aspect-ratio-11-square tweak-blog-side-by-side-primary-meta-categories tweak-blog-side-by-side-secondary-meta-date tweak-blog-side-by-side-meta-position-top tweak-blog-side-by-side-text-alignment-left tweak-blog-side-by-side-image-text-alignment-middle tweak-blog-side-by-side-read-more-style-show tweak-blog-side-by-side-delimiter-bullet tweak-blog-side-by-side-excerpt-show primary-button-style-solid primary-button-shape-pill secondary-button-style-outline secondary-button-shape-pill tertiary-button-style-outline tertiary-button-shape-underline tweak-events-stacked-width-full tweak-events-stacked-height-large tweak-events-stacked-show-thumbnails tweak-events-stacked-thumbnail-size-32-standard tweak-events-stacked-date-style-with-text tweak-events-stacked-show-time tweak-events-stacked-show-location tweak-events-stacked-show-excerpt tweak-blog-basic-grid-width-inset tweak-blog-basic-grid-image-aspect-ratio-32-standard tweak-blog-basic-grid-text-alignment-center tweak-blog-basic-grid-delimiter-bullet tweak-blog-basic-grid-image-placement-above tweak-blog-basic-grid-read-more-style-show tweak-blog-basic-grid-primary-meta-categories tweak-blog-basic-grid-secondary-meta-date tweak-blog-basic-grid-excerpt-show tweak-portfolio-grid-basic-width-full tweak-portfolio-grid-basic-height-large tweak-portfolio-grid-basic-image-aspect-ratio-11-square tweak-portfolio-grid-basic-text-alignment-left tweak-portfolio-grid-basic-hover-effect-fade header-overlay-alignment-center tweak-portfolio-index-background-link-format-stacked tweak-portfolio-index-background-width-full tweak-portfolio-index-background-height-large tweak-portfolio-index-background-vertical-alignment-middle tweak-portfolio-index-background-horizontal-alignment-center tweak-portfolio-index-background-delimiter-none tweak-portfolio-index-background-animation-type-fade tweak-portfolio-index-background-animation-duration-medium tweak-portfolio-hover-follow-layout-inline tweak-portfolio-hover-follow-delimiter-bullet tweak-portfolio-hover-follow-animation-type-fade tweak-portfolio-hover-follow-animation-duration-fast tweak-portfolio-hover-static-layout-inline tweak-portfolio-hover-static-front tweak-portfolio-hover-static-delimiter-hyphen tweak-portfolio-hover-static-animation-type-fade tweak-portfolio-hover-static-animation-duration-fast hide-opentable-icons opentable-style-dark tweak-product-quick-view-button-style-floating tweak-product-quick-view-button-position-bottom tweak-product-quick-view-lightbox-excerpt-display-truncate tweak-product-quick-view-lightbox-show-arrows tweak-product-quick-view-lightbox-show-close-button tweak-product-quick-view-lightbox-controls-weight-light native-currency-code-chf collection-6973ce09c3e16c047b727646 collection-type-page collection-layout-default homepage mobile-style-available sqs-seven-one\n      \n        \n          \n        \n      \n    \"\n    tabindex=\"-1\"\n  >"
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://suemi.ch/",
+      "checkedAt": "2026-09-21T15:41:42.862Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://suemi.ch/",
+          "excerpt": "href=\"mailto:info@suemi.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://suemi.ch/kontaktieren-sie-suemi-schreinerei-wir-freuen-uns-auf-ihre-anfrage/",
+          "excerpt": "href=\"tel:+41 62 961 06 06\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://suemi.ch/kontaktieren-sie-suemi-schreinerei-wir-freuen-uns-auf-ihre-anfrage/",
+          "excerpt": "href=\"mailto:info@suemi.ch\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.marschallag.ch/",
+      "checkedAt": "2026-09-21T15:41:42.899Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.marschallag.ch/",
+          "excerpt": "href=\"mailto:kontakt@marschallag.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.marschallag.ch/kontakt",
+          "excerpt": "href=\"mailto:kontakt@marschallag.ch\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.fux-baut.ch/",
+      "checkedAt": "2026-09-21T15:41:42.815Z",
+      "status": "uncertain",
+      "priority": 0,
+      "signals": [],
+      "limitations": [
+        "Javascript-Hülle verhindert eine statische Vorprüfung."
+      ],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.schreiner-blarer.ch/",
+      "checkedAt": "2026-09-21T15:41:42.911Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.schreiner-blarer.ch/",
+          "excerpt": "href=\"tel:41449202919\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.schreiner-blarer.ch/",
+          "excerpt": "href=\"tel:+41447902284\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.schreiner-blarer.ch/",
+          "excerpt": "href=\"tel:+41449202919\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.schreiner-blarer.ch/",
+          "excerpt": "href=\"mailto:ablarer@sunrise.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.schreiner-blarer.ch/kontakt",
+          "excerpt": "href=\"tel:41449202919\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.schreiner-blarer.ch/kontakt",
+          "excerpt": "href=\"tel:+41449202919\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.schreiner-blarer.ch/kontakt",
+          "excerpt": "href=\"mailto:ablarer@sunrise.ch\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.schreinereiegger.ch/",
+      "checkedAt": "2026-09-21T15:41:42.957Z",
+      "status": "no_signal",
+      "priority": 1,
+      "signals": [
+        {
+          "code": "missing_description",
+          "observation": "Keine Description-Metadaten im abgerufenen HTML.",
+          "sourceUrl": "https://www.schreinereiegger.ch/",
+          "excerpt": "<head>"
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.schreinereiegger.ch/kontakt",
+          "excerpt": "href=\"mailto:info@schreinereiegger.ch\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.schreinereipaulstricker.ch/",
+      "checkedAt": "2026-09-21T15:41:42.938Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.schreinereipaulstricker.ch/",
+          "excerpt": "href=\"mailto:info@schreinereipaulstricker.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.schreinereipaulstricker.ch/impressum",
+          "excerpt": "href=\"mailto:info@schreinereipaulstricker.ch\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.holz-isch-heimelig.ch/",
+      "checkedAt": "2026-09-21T15:41:42.922Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.holz-isch-heimelig.ch/",
+          "excerpt": "href=\"tel:+41617614500\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.holz-isch-heimelig.ch/",
+          "excerpt": "href=\"mailto:mail@holz-isch-heimelig.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.holz-isch-heimelig.ch/kontakt",
+          "excerpt": "href=\"tel:+41617614500\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.holz-isch-heimelig.ch/kontakt",
+          "excerpt": "href=\"mailto:mail@holz-isch-heimelig.ch\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://fgmaler.ch/",
+      "checkedAt": "2026-09-21T15:41:42.875Z",
+      "status": "uncertain",
+      "priority": 0,
+      "signals": [],
+      "limitations": [
+        "Abruf nicht vollständig verfügbar, blockiert oder fehlgeschlagen."
+      ],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.hug-wolfwil.ch/",
+      "checkedAt": "2026-09-21T15:41:42.971Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.hug-wolfwil.ch/",
+          "excerpt": "href=\"mailto:info@hug-wolfwil.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.hug-wolfwil.ch/kontakt",
+          "excerpt": "href=\"mailto:info@hug-wolfwil.ch\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.arpi.ch/",
+      "checkedAt": "2026-09-21T15:41:42.985Z",
+      "status": "no_signal",
+      "priority": 1,
+      "signals": [
+        {
+          "code": "missing_description",
+          "observation": "Keine Description-Metadaten im abgerufenen HTML.",
+          "sourceUrl": "https://www.arpi.ch/",
+          "excerpt": "<head>"
+        },
+        {
+          "code": "missing_contact",
+          "observation": "Keine verlinkte Kontaktmöglichkeit im abgerufenen HTML gefunden.",
+          "sourceUrl": "https://www.arpi.ch/",
+          "excerpt": "<body class=\"body cc-page cc-page-index cc-indexpage j-m-gallery-styles j-m-video-styles j-m-hr-styles j-m-header-styles j-m-text-styles j-m-emotionheader-styles j-m-htmlCode-styles j-m-rss-styles j-m-form-styles-disabled j-m-table-styles j-m-textWithImage-styles j-m-downloadDocument-styles j-m-imageSubtitle-styles j-m-flickr-styles j-m-googlemaps-styles j-m-blogSelection-styles-disabled j-m-comment-styles j-m-jimdo-styles j-m-profile-styles j-m-guestbook-styles j-m-promotion-styles j-m-twitter-styles j-m-hgrid-styles j-m-shoppingcart-styles j-m-catalog-styles j-m-product-styles-disabled j-m-facebook-styles j-m-sharebuttons-styles j-m-formnew-styles-disabled j-m-callToAction-styles j-m-turbo-styles j-m-spacing-styles j-m-googleplus-styles j-m-dummy-styles j-m-search-styles j-m-booking-styles j-m-socialprofiles-styles j-footer-styles cc-pagemode-default cc-content-parent\" id=\"page-202141812\">"
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.t-ruggiero.ch/",
+      "checkedAt": "2026-09-21T15:41:42.995Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.t-ruggiero.ch/kontakt",
+          "excerpt": "href=\"tel:+41719235515\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.t-ruggiero.ch/kontakt",
+          "excerpt": "href=\"mailto:info@t-ruggiero.ch\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.weisskreuzmalans.ch/",
+      "checkedAt": "2026-09-21T15:41:43.032Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.weisskreuzmalans.ch/",
+          "excerpt": "href=\"mailto:info@weisskreuzmalans.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.weisskreuzmalans.ch/",
+          "excerpt": "href=\"tel:+41 81 735 25 00\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.weisskreuzmalans.ch/",
+          "excerpt": "href=\"tel:914-309-7030\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.weisskreuzmalans.ch/kontakt/",
+          "excerpt": "href=\"mailto:info@weisskreuzmalans.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.weisskreuzmalans.ch/kontakt/",
+          "excerpt": "href=\"tel:+41 81 735 25 00\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.weisskreuzmalans.ch/kontakt/",
+          "excerpt": "href=\"tel:914-309-7030\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.entla.ch/",
+      "checkedAt": "2026-09-21T15:41:43.006Z",
+      "status": "no_signal",
+      "priority": 1,
+      "signals": [
+        {
+          "code": "missing_description",
+          "observation": "Keine Description-Metadaten im abgerufenen HTML.",
+          "sourceUrl": "https://www.entla.ch/",
+          "excerpt": "<head>"
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.entla.ch/",
+          "excerpt": "href=\"mailto:bestellungen@entla.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.entla.ch/",
+          "excerpt": "href=\"mailto:anfragen@entla.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.entla.ch/unternehmen/kontakt/",
+          "excerpt": "href=\"mailto:bestellungen@entla.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.entla.ch/unternehmen/kontakt/",
+          "excerpt": "href=\"mailto:anfragen@entla.ch\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.fenster-steiner.ch/",
+      "checkedAt": "2026-09-21T15:41:43.019Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.fenster-steiner.ch/",
+          "excerpt": "href=\"tel:0554122562\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.fenster-steiner.ch/",
+          "excerpt": "href=\"mailto:info@fenster-steiner.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.fenster-steiner.ch/kontakt.php",
+          "excerpt": "href=\"mailto:info@fenster-steiner.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.fenster-steiner.ch/kontakt.php",
+          "excerpt": "href=\"tel:0554122562\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.rubema.ch/",
+      "checkedAt": "2026-09-21T15:41:43.043Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.rubema.ch/",
+          "excerpt": "href=\"tel:+419371010\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.rubema.ch/",
+          "excerpt": "href=\"mailto:info@rubema.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.rubema.ch/",
+          "excerpt": "href=\"tel:0900300300\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.rubema.ch/",
+          "excerpt": "href=\"tel:+41449371010\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.rubema.ch/kontakt/",
+          "excerpt": "href=\"tel:+419371010\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.rubema.ch/kontakt/",
+          "excerpt": "href=\"mailto:info@rubema.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.rubema.ch/kontakt/",
+          "excerpt": "href=\"tel:+41449371010\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.rubema.ch/kontakt/",
+          "excerpt": "href=\"tel:0900300300\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.baerhaustechnik.ch/",
+      "checkedAt": "2026-09-21T15:41:43.056Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.baerhaustechnik.ch/",
+          "excerpt": "href=\"tel:+41627878000\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.baerhaustechnik.ch/",
+          "excerpt": "href=\"mailto:info@baerhaustechnik.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.baerhaustechnik.ch/",
+          "excerpt": "href=\"tel:+41622121220\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.baerhaustechnik.ch/kontakt/",
+          "excerpt": "href=\"tel:+41627878000\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.baerhaustechnik.ch/kontakt/",
+          "excerpt": "href=\"mailto:info@baerhaustechnik.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.baerhaustechnik.ch/kontakt/",
+          "excerpt": "href=\"tel:+41622121220\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.gallatiag.ch/",
+      "checkedAt": "2026-09-21T15:41:43.083Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.gallatiag.ch/",
+          "excerpt": "href=\"tel:+41 41 249 40 70\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.gallatiag.ch/",
+          "excerpt": "href=\"tel:+41412494070\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.gallatiag.ch/ueber-uns/kontakt-anfahrt",
+          "excerpt": "href=\"tel:+41 41 249 40 70\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.gallatiag.ch/ueber-uns/kontakt-anfahrt",
+          "excerpt": "href=\"tel:+41412494070\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://wickart.ch/",
+      "checkedAt": "2026-09-21T15:41:43.099Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://wickart.ch/",
+          "excerpt": "href=\"tel:076 355 90 31\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://wickart.ch/",
+          "excerpt": "href=\"mailto:info@wickart.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://wickart.ch/kontakt/",
+          "excerpt": "href=\"tel:076 355 90 31\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://wickart.ch/kontakt/",
+          "excerpt": "href=\"mailto:info@wickart.ch\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.fzag.ch/",
+      "checkedAt": "2026-09-21T15:41:43.111Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.fzag.ch/",
+          "excerpt": "href=\"mailto:info@fzag.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.fzag.ch/",
+          "excerpt": "href=\"tel:033 244 90 90\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.fzag.ch/",
+          "excerpt": "href=\"tel:0332252200\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.fzag.ch/",
+          "excerpt": "href=\"tel:0041332449090\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.fzag.ch/impressum/",
+          "excerpt": "href=\"mailto:info@fzag.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.fzag.ch/impressum/",
+          "excerpt": "href=\"tel:033 244 90 90\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.fzag.ch/impressum/",
+          "excerpt": "href=\"tel:0332252200\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.fzag.ch/impressum/",
+          "excerpt": "href=\"tel:0041332449090\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.arnoldag.ch/",
+      "checkedAt": "2026-09-21T15:41:43.126Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.arnoldag.ch/",
+          "excerpt": "href=\"tel:+41418704474\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.arnoldag.ch/",
+          "excerpt": "href=\"tel:+41418703124\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.arnoldag.ch/ueber-uns/kontakt-anfahrt",
+          "excerpt": "href=\"tel:+41418704474\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.arnoldag.ch/ueber-uns/kontakt-anfahrt",
+          "excerpt": "href=\"tel:+41418703124\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.michel-ht.ch/",
+      "checkedAt": "2026-09-21T15:41:43.145Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.michel-ht.ch/",
+          "excerpt": "href=\"mailto:info@michel-ht.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.michel-ht.ch/",
+          "excerpt": "href=\"tel:0041333347575\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.michel-ht.ch/impressum/",
+          "excerpt": "href=\"mailto:info@michel-ht.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.michel-ht.ch/impressum/",
+          "excerpt": "href=\"tel:0041333347575\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.willi-gt.ch/",
+      "checkedAt": "2026-09-21T15:41:43.173Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.willi-gt.ch/",
+          "excerpt": "href=\"tel:+41812869922\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.willi-gt.ch/",
+          "excerpt": "href=\"tel:+41812869944\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.willi-gt.ch/ueber-uns/kontakt-standorte",
+          "excerpt": "href=\"tel:+41812869922\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.willi-gt.ch/ueber-uns/kontakt-standorte",
+          "excerpt": "href=\"tel:+41812869944\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.willi-gt.ch/ueber-uns/kontakt-standorte",
+          "excerpt": "href=\"tel:+41816411376\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.willi-gt.ch/ueber-uns/kontakt-standorte",
+          "excerpt": "href=\"tel:+41819111971\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.willi-gt.ch/ueber-uns/kontakt-standorte",
+          "excerpt": "href=\"tel:+41813224755\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.meyer-soehne.ch/",
+      "checkedAt": "2026-09-21T15:41:43.188Z",
+      "status": "no_signal",
+      "priority": 1,
+      "signals": [
+        {
+          "code": "missing_description",
+          "observation": "Keine Description-Metadaten im abgerufenen HTML.",
+          "sourceUrl": "https://www.meyer-soehne.ch/",
+          "excerpt": "<head>"
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.meyer-soehne.ch/",
+          "excerpt": "href=\"mailto:blumen@meyer-soehne.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.meyer-soehne.ch/kontakt-und-anfahrt/",
+          "excerpt": "href=\"mailto:blumen@meyer-soehne.ch\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://winkenbach-hausen.ch/",
+      "checkedAt": "2026-09-21T15:41:43.209Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://winkenbach-hausen.ch/",
+          "excerpt": "href=\"mailto:mail@winkenbach-hausen.ch\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.dreamplant.ch/",
+      "checkedAt": "2026-09-21T15:41:43.272Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.dreamplant.ch/",
+          "excerpt": "href=\"tel:044 260 73 10\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.dreamplant.ch/",
+          "excerpt": "href=\"mailto:info@dreamplant.ch?subject=Unverbindliche%20Anfrage\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.dreamplant.ch/ueber-dreamplant/kontakt",
+          "excerpt": "href=\"mailto:info@dreamplant.ch?subject=Bitte%20nehmen%20Sie%20mit%20mir%20Kontakt%20auf\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.d-labhart.ch/",
+      "checkedAt": "2026-09-21T15:41:43.135Z",
+      "status": "uncertain",
+      "priority": 0,
+      "signals": [],
+      "limitations": [
+        "Abruf nicht vollständig verfügbar, blockiert oder fehlgeschlagen."
+      ],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.blumen-hoehener.ch/",
+      "checkedAt": "2026-09-21T15:41:43.220Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.blumen-hoehener.ch/",
+          "excerpt": "href=\"tel:0713331023\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.blumen-hoehener.ch/",
+          "excerpt": "href=\"tel:0796014020\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.blumen-hoehener.ch/",
+          "excerpt": "href=\"tel:0794164031 \""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.blumen-hoehener.ch/",
+          "excerpt": "href=\"mailto:gartenbauhoehener@bluewin.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.blumen-hoehener.ch/impressum",
+          "excerpt": "href=\"tel:0713331023\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.blumen-hoehener.ch/impressum",
+          "excerpt": "href=\"mailto:gartenbauhoehener@bluewin.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.blumen-hoehener.ch/impressum",
+          "excerpt": "href=\"tel:0796014020\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.blumen-hoehener.ch/impressum",
+          "excerpt": "href=\"tel:0794164031 \""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.blumen-nuetzi.ch/",
+      "checkedAt": "2026-09-21T15:41:43.155Z",
+      "status": "uncertain",
+      "priority": 0,
+      "signals": [],
+      "limitations": [
+        "Abruf nicht vollständig verfügbar, blockiert oder fehlgeschlagen."
+      ],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.hofladendinhard.ch/",
+      "checkedAt": "2026-09-21T15:41:43.254Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.hofladendinhard.ch/",
+          "excerpt": "href=\"mailto:info@hofladendinhard.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.hofladendinhard.ch/",
+          "excerpt": "href=\"mailto:info@metzgerei-schenk.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.hofladendinhard.ch/kontakt",
+          "excerpt": "href=\"mailto:info@hofladendinhard.ch\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.buuremetzg.ch/",
+      "checkedAt": "2026-09-21T15:41:43.233Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "missing_contact",
+          "observation": "Keine verlinkte Kontaktmöglichkeit im abgerufenen HTML gefunden.",
+          "sourceUrl": "https://www.buuremetzg.ch/",
+          "excerpt": "<body data-spy=\"scroll\" data-target=\".navbar-custom\" data-offset=\"100\">"
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.ricklimetzg.ch/",
+      "checkedAt": "2026-09-21T15:41:43.289Z",
+      "status": "no_signal",
+      "priority": 1,
+      "signals": [
+        {
+          "code": "missing_description",
+          "observation": "Keine Description-Metadaten im abgerufenen HTML.",
+          "sourceUrl": "https://www.ricklimetzg.ch/",
+          "excerpt": "<head>"
+        },
+        {
+          "code": "missing_contact",
+          "observation": "Keine verlinkte Kontaktmöglichkeit im abgerufenen HTML gefunden.",
+          "sourceUrl": "https://www.ricklimetzg.ch/",
+          "excerpt": "<body class=\"body cc-page cc-page-index cc-indexpage j-m-gallery-styles j-m-video-styles j-m-hr-styles j-m-header-styles j-m-text-styles j-m-emotionheader-styles j-m-htmlCode-styles j-m-rss-styles j-m-form-styles-disabled j-m-table-styles j-m-textWithImage-styles j-m-downloadDocument-styles j-m-imageSubtitle-styles j-m-flickr-styles j-m-googlemaps-styles j-m-blogSelection-styles-disabled j-m-comment-styles-disabled j-m-jimdo-styles j-m-profile-styles j-m-guestbook-styles j-m-promotion-styles j-m-twitter-styles j-m-hgrid-styles j-m-shoppingcart-styles j-m-catalog-styles j-m-product-styles-disabled j-m-facebook-styles j-m-sharebuttons-styles j-m-formnew-styles-disabled j-m-callToAction-styles j-m-turbo-styles j-m-spacing-styles j-m-googleplus-styles j-m-dummy-styles j-m-search-styles j-m-booking-styles j-m-socialprofiles-styles j-footer-styles cc-pagemode-default cc-content-parent\" id=\"page-1148211259\">"
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://zurfluh-metzgerei.ch/",
+      "checkedAt": "2026-09-21T15:41:43.337Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://zurfluh-metzgerei.ch/",
+          "excerpt": "href=\"tel:+41410711140\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://zurfluh-metzgerei.ch/",
+          "excerpt": "href=\"mailto:zmetzg@bluewin.ch\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.metzg-abegg.ch/",
+      "checkedAt": "2026-09-21T15:41:43.313Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.metzg-abegg.ch/",
+          "excerpt": "href=\"mailto:info68@sunrise.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.metzg-abegg.ch/",
+          "excerpt": "href=\"tel:+41447132026\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.metzg-abegg.ch/kontakt",
+          "excerpt": "href=\"tel:0447132026\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.metzg-abegg.ch/kontakt",
+          "excerpt": "href=\"mailto:info68@sunrise.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.metzg-abegg.ch/kontakt",
+          "excerpt": "href=\"tel:+41447132026\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://martimetzgerei.ch/",
+      "checkedAt": "2026-09-21T15:41:43.297Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://martimetzgerei.ch/",
+          "excerpt": "href=\"mailto:info@martimetzgerei.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://martimetzgerei.ch/",
+          "excerpt": "href=\"tel:+41629611226\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.metzgerei-willener.ch/",
+      "checkedAt": "2026-09-21T15:41:43.346Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.metzgerei-willener.ch/",
+          "excerpt": "href=\"mailto:info@metzgerei-willener.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.metzgerei-willener.ch/impressum.php",
+          "excerpt": "href=\"mailto:info@metzgerei-willener.ch\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.metzgerei-rickenbach.ch/",
+      "checkedAt": "2026-09-21T15:41:43.357Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.metzgerei-rickenbach.ch/",
+          "excerpt": "href=\"tel: +41 55 440 15 79\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.metzgerei-rickenbach.ch/72/kontakt",
+          "excerpt": "href=\"tel: +41 55 440 15 79\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.forster-metzgerei.ch/",
+      "checkedAt": "2026-09-21T15:41:43.366Z",
+      "status": "no_signal",
+      "priority": 1,
+      "signals": [
+        {
+          "code": "missing_description",
+          "observation": "Keine Description-Metadaten im abgerufenen HTML.",
+          "sourceUrl": "https://www.forster-metzgerei.ch/",
+          "excerpt": "<head>"
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.forster-metzgerei.ch/",
+          "excerpt": "href=\"tel:+41417110201\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.forster-metzgerei.ch/",
+          "excerpt": "href=\"mailto:forstermetzgerei@bluewin.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.forster-metzgerei.ch/kontakt/",
+          "excerpt": "href=\"tel:+41417110201\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.forster-metzgerei.ch/kontakt/",
+          "excerpt": "href=\"mailto:forstermetzgerei@bluewin.ch\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://metzgerei-bodmer.ch/",
+      "checkedAt": "2026-09-21T15:41:43.379Z",
+      "status": "no_signal",
+      "priority": 1,
+      "signals": [
+        {
+          "code": "missing_description",
+          "observation": "Keine Description-Metadaten im abgerufenen HTML.",
+          "sourceUrl": "https://metzgerei-bodmer.ch/",
+          "excerpt": "<head>"
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://metzgerei-bodmer.ch/",
+          "excerpt": "href=\"tel:+41%2044%20844%2007%2040\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://metzgerei-bodmer.ch/kontakt/",
+          "excerpt": "href=\"tel:+41%2044%20844%2007%2040\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.berwert-metzgerei.ch/",
+      "checkedAt": "2026-09-21T15:41:43.391Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.berwert-metzgerei.ch/",
+          "excerpt": "href=\"tel:055 610 19 30\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.berwert-metzgerei.ch/",
+          "excerpt": "href=\"mailto:berwertag@bluewin.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.berwert-metzgerei.ch/77/impressum",
+          "excerpt": "href=\"tel:055 610 19 30\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.berwert-metzgerei.ch/77/impressum",
+          "excerpt": "href=\"mailto:berwertag@bluewin.ch\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.dag-gartenbau.ch/",
+      "checkedAt": "2026-09-21T15:41:43.402Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "missing_contact",
+          "observation": "Keine verlinkte Kontaktmöglichkeit im abgerufenen HTML gefunden.",
+          "sourceUrl": "https://www.dag-gartenbau.ch/",
+          "excerpt": "<body class=\"body cc-page cc-page-index cc-indexpage j-has-shop cc-pagemode-default cc-content-parent\" id=\"page-1843410465\">"
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.meiergartenbau.ch/",
+      "checkedAt": "2026-09-21T15:41:43.412Z",
+      "status": "no_signal",
+      "priority": 1,
+      "signals": [
+        {
+          "code": "missing_description",
+          "observation": "Keine Description-Metadaten im abgerufenen HTML.",
+          "sourceUrl": "https://www.meiergartenbau.ch/",
+          "excerpt": "<head>"
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.meiergartenbau.ch/",
+          "excerpt": "href=\"mailto:info@meiergartenbau.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.meiergartenbau.ch/ueber-uns/impressum.html",
+          "excerpt": "href=\"mailto:info@meiergartenbau.ch\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://grafgartenbaugmbh.ch/",
+      "checkedAt": "2026-09-21T15:41:43.422Z",
+      "status": "candidate",
+      "priority": 2,
+      "signals": [
+        {
+          "code": "missing_viewport",
+          "observation": "Kein viewport-Meta-Tag im abgerufenen HTML.",
+          "sourceUrl": "https://grafgartenbaugmbh.ch/",
+          "excerpt": "<head profile=\"http://gmpg.org/xfn/11\">"
+        },
+        {
+          "code": "missing_contact",
+          "observation": "Keine verlinkte Kontaktmöglichkeit im abgerufenen HTML gefunden.",
+          "sourceUrl": "https://grafgartenbaugmbh.ch/",
+          "excerpt": "<body class=\"home page page-id-2 page-template-default\">"
+        }
+      ],
+      "limitations": [],
+      "fullReview": "reviews/martin-graf-gartenbau.md"
+    },
+    {
+      "website": "https://www.gartenbau-kaelin.ch/",
+      "checkedAt": "2026-09-21T15:41:43.436Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.gartenbau-kaelin.ch/",
+          "excerpt": "href=\"mailto:info@gartenbau-kaelin.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.gartenbau-kaelin.ch/",
+          "excerpt": "href=\"tel:0447850231\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.gartenbau-kaelin.ch/Kontakt.php",
+          "excerpt": "href=\"mailto:\r\n                  info@gartenbau-kaelin.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.gartenbau-kaelin.ch/Kontakt.php",
+          "excerpt": "href=\"tel:0447850231\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.bernergartenbau.ch/",
+      "checkedAt": "2026-09-21T15:41:43.448Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.bernergartenbau.ch/",
+          "excerpt": "href=\"tel:+41444300370\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.bernergartenbau.ch/",
+          "excerpt": "href=\"mailto:info@bernergartenbau.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.bernergartenbau.ch/kontakt",
+          "excerpt": "href=\"tel:+41444300370\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.bernergartenbau.ch/kontakt",
+          "excerpt": "href=\"mailto:info@bernergartenbau.ch\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.weiersmueller-gartenbau.ch/",
+      "checkedAt": "2026-09-21T15:41:43.458Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "missing_contact",
+          "observation": "Keine verlinkte Kontaktmöglichkeit im abgerufenen HTML gefunden.",
+          "sourceUrl": "https://www.weiersmueller-gartenbau.ch/",
+          "excerpt": "<body class=\"body cc-page cc-page-index cc-indexpage j-m-gallery-styles j-m-video-styles j-m-hr-styles j-m-header-styles j-m-text-styles j-m-emotionheader-styles j-m-htmlCode-styles j-m-rss-styles j-m-form-styles-disabled j-m-table-styles j-m-textWithImage-styles j-m-downloadDocument-styles j-m-imageSubtitle-styles j-m-flickr-styles j-m-googlemaps-styles j-m-blogSelection-styles-disabled j-m-comment-styles-disabled j-m-jimdo-styles j-m-profile-styles j-m-guestbook-styles j-m-promotion-styles j-m-twitter-styles j-m-hgrid-styles j-m-shoppingcart-styles j-m-catalog-styles j-m-product-styles-disabled j-m-facebook-styles j-m-sharebuttons-styles j-m-formnew-styles-disabled j-m-callToAction-styles j-m-turbo-styles j-m-spacing-styles j-m-googleplus-styles j-m-dummy-styles j-m-search-styles j-m-booking-styles j-m-socialprofiles-styles j-footer-styles cc-pagemode-default cc-content-parent\" id=\"page-2561028136\">"
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.garten-fonseca.ch/",
+      "checkedAt": "2026-09-21T15:41:43.474Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.garten-fonseca.ch/",
+          "excerpt": "href=\"mailto:info@garten-fonseca.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.garten-fonseca.ch/about-1",
+          "excerpt": "href=\"mailto:info@garten-fonseca.ch\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.spaltenstein-gartenbau.ch/",
+      "checkedAt": "2026-09-21T15:41:43.485Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.spaltenstein-gartenbau.ch/",
+          "excerpt": "href=\"tel:+41448384720\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.spaltenstein-gartenbau.ch/ueber-uns/kontakt.html",
+          "excerpt": "href=\"tel:+41448384720\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://maler-kosin.ch/",
+      "checkedAt": "2026-09-21T15:41:43.497Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://maler-kosin.ch/",
+          "excerpt": "href=\"mailto:cornelia.kosin@bluewin.ch\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.gruber-ag.ch/",
+      "checkedAt": "2026-09-21T15:41:43.566Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.gruber-ag.ch/",
+          "excerpt": "href=\"mailto:info@gruber-ag.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.gruber-ag.ch/kontakt",
+          "excerpt": "href=\"mailto:info@gruber-ag.ch\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.maler-furger.ch/",
+      "checkedAt": "2026-09-21T15:41:43.523Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.maler-furger.ch/",
+          "excerpt": "href=\"tel:+41794591276\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.maler-furger.ch/",
+          "excerpt": "href=\"tel:+41418703847\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.maler-furger.ch/",
+          "excerpt": "href=\"mailto:furger.gmbh@hispeed.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.maler-furger.ch/%C3%BCber-uns-kontakt",
+          "excerpt": "href=\"tel:+41794591276\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.maler-furger.ch/%C3%BCber-uns-kontakt",
+          "excerpt": "href=\"mailto:furger.gmbh@hispeed.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.maler-furger.ch/%C3%BCber-uns-kontakt",
+          "excerpt": "href=\"tel:+41418703847\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.lantii.ch/",
+      "checkedAt": "2026-09-21T15:41:43.532Z",
+      "status": "candidate",
+      "priority": 2,
+      "signals": [
+        {
+          "code": "missing_viewport",
+          "observation": "Kein viewport-Meta-Tag im abgerufenen HTML.",
+          "sourceUrl": "https://www.lantii.ch/",
+          "excerpt": "<head>"
+        },
+        {
+          "code": "missing_contact",
+          "observation": "Keine verlinkte Kontaktmöglichkeit im abgerufenen HTML gefunden.",
+          "sourceUrl": "https://www.lantii.ch/",
+          "excerpt": "<body class=\"body cc-page cc-page-index cc-indexpage cc-pagemode-default cc-content-parent\" id=\"page-1118755975\">"
+        }
+      ],
+      "limitations": [],
+      "fullReview": "reviews/lantii.md"
+    },
+    {
+      "website": "https://ricocampana.ch/",
+      "checkedAt": "2026-09-21T15:41:43.542Z",
+      "status": "no_signal",
+      "priority": 1,
+      "signals": [
+        {
+          "code": "missing_description",
+          "observation": "Keine Description-Metadaten im abgerufenen HTML.",
+          "sourceUrl": "https://ricocampana.ch/",
+          "excerpt": "<head>"
+        },
+        {
+          "code": "missing_contact",
+          "observation": "Keine verlinkte Kontaktmöglichkeit im abgerufenen HTML gefunden.",
+          "sourceUrl": "https://ricocampana.ch/",
+          "excerpt": "<body class=\"home wp-singular page-template page-template-full-width-page page-template-full-width-page-php page page-id-1659 wp-theme-tesseract-free-theme frontend beaver-on theme-tesseract-free-theme fl-builder-lite-2-11-0-5 fl-no-js siteorigin-panels siteorigin-panels-before-js siteorigin-panels-home woocommerce-no-js elementor-default elementor-kit-1829 elementor-page elementor-page-1659\">"
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.chiriatti-ag.ch/",
+      "checkedAt": "2026-09-21T15:41:43.586Z",
+      "status": "no_signal",
+      "priority": 1,
+      "signals": [
+        {
+          "code": "missing_description",
+          "observation": "Keine Description-Metadaten im abgerufenen HTML.",
+          "sourceUrl": "https://www.chiriatti-ag.ch/",
+          "excerpt": "<head>"
+        },
+        {
+          "code": "missing_contact",
+          "observation": "Keine verlinkte Kontaktmöglichkeit im abgerufenen HTML gefunden.",
+          "sourceUrl": "https://www.chiriatti-ag.ch/",
+          "excerpt": "<body lang=\"de\" class=\"bgd-attachment-fixed\">"
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.maler-schuler.ch/",
+      "checkedAt": "2026-09-21T15:41:43.507Z",
+      "status": "uncertain",
+      "priority": 0,
+      "signals": [],
+      "limitations": [
+        "Abruf nicht vollständig verfügbar, blockiert oder fehlgeschlagen."
+      ],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.dd-maler.ch/",
+      "checkedAt": "2026-09-21T15:41:43.604Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.dd-maler.ch/",
+          "excerpt": "href=\"tel:+41615019874\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.dd-maler.ch/",
+          "excerpt": "href=\"mailto:info@dd-maler.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.dd-maler.ch/kontakt/",
+          "excerpt": "href=\"mailto:info@dd-maler.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.dd-maler.ch/kontakt/",
+          "excerpt": "href=\"tel:+41615019874\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.malerguyer.ch/",
+      "checkedAt": "2026-09-21T15:41:43.643Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.malerguyer.ch/",
+          "excerpt": "href=\"mailto:guyermaler@bluewin.ch?subject=Bitte um eine unverbindliche Offerte\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.garage-marugg.ch/",
+      "checkedAt": "2026-09-21T15:41:43.626Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.garage-marugg.ch/",
+          "excerpt": "href=\"tel:+41 61 983 13 17\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.garage-marugg.ch/",
+          "excerpt": "href=\"tel:+41619831317\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.garage-marugg.ch/kontakt/kontakt",
+          "excerpt": "href=\"tel:+41 61 983 13 17\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.garage-marugg.ch/kontakt/kontakt",
+          "excerpt": "href=\"tel:+41619831317\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.riedgarage.ch/",
+      "checkedAt": "2026-09-21T15:41:43.615Z",
+      "status": "no_signal",
+      "priority": 1,
+      "signals": [
+        {
+          "code": "missing_description",
+          "observation": "Keine Description-Metadaten im abgerufenen HTML.",
+          "sourceUrl": "https://www.riedgarage.ch/",
+          "excerpt": "<head>"
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.riedgarage.ch/",
+          "excerpt": "href=\"mailto:info@riedgarage.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.riedgarage.ch/",
+          "excerpt": "href=\"mailto:s.rickenbach@riedgarage.ch\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://fahrzeugtechnikmueller.ch/",
+      "checkedAt": "2026-09-21T15:41:43.577Z",
+      "status": "uncertain",
+      "priority": 0,
+      "signals": [],
+      "limitations": [
+        "Abruf nicht vollständig verfügbar, blockiert oder fehlgeschlagen."
+      ],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.rep4you.ch/",
+      "checkedAt": "2026-09-21T15:41:43.634Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "missing_contact",
+          "observation": "Keine verlinkte Kontaktmöglichkeit im abgerufenen HTML gefunden.",
+          "sourceUrl": "https://www.rep4you.ch/",
+          "excerpt": "<body onload=\"\">"
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.asp-gmbh.ch/",
+      "checkedAt": "2026-09-21T15:41:43.593Z",
+      "status": "uncertain",
+      "priority": 0,
+      "signals": [],
+      "limitations": [
+        "Abruf nicht vollständig verfügbar, blockiert oder fehlgeschlagen."
+      ],
+      "fullReview": null
+    },
+    {
+      "website": "https://garagehelg.ch/",
+      "checkedAt": "2026-09-21T15:41:43.654Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://garagehelg.ch/",
+          "excerpt": "href=\"tel:%20+41%2071%20951%2024%2074\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://garagehelg.ch/contact/",
+          "excerpt": "href=\"tel:%20+41%2071%20951%2024%2074\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://sensation-cars.ch/",
+      "checkedAt": "2026-09-21T15:41:43.668Z",
+      "status": "no_signal",
+      "priority": 0,
+      "signals": [
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://sensation-cars.ch/",
+          "excerpt": "href=\"mailto:info@sensation-cars.ch\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://sensation-cars.ch/kontakt/",
+          "excerpt": "href=\"mailto:info@sensation-cars.ch\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    },
+    {
+      "website": "https://www.doldis-automobile.ch/",
+      "checkedAt": "2026-09-21T15:41:43.685Z",
+      "status": "no_signal",
+      "priority": 1,
+      "signals": [
+        {
+          "code": "missing_description",
+          "observation": "Keine Description-Metadaten im abgerufenen HTML.",
+          "sourceUrl": "https://www.doldis-automobile.ch/",
+          "excerpt": "<head>"
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.doldis-automobile.ch/",
+          "excerpt": "href=\"tel:0716331134\""
+        },
+        {
+          "code": "contact_present",
+          "observation": "Kontaktmöglichkeit im abgerufenen HTML.",
+          "sourceUrl": "https://www.doldis-automobile.ch/contact",
+          "excerpt": "href=\"tel:0716331134\""
+        }
+      ],
+      "limitations": [],
+      "fullReview": null
+    }
+  ],
+  "reviews": [
+    {
+      "name": "Coiffeur Lanz, Vreni Lanz",
+      "website": "https://www.coiffeurlanz.ch/",
+      "place": "Bleienbach BE",
+      "phone": "062 922 31 82",
+      "runId": "prospect-fast100-2026-09-21-078e6fa51f3aeb26",
+      "status": "waiting_approval",
+      "stage": "demo_review",
+      "checkedAt": "2026-09-21T15:41:43.708Z",
+      "qualityScore": 28.333333333333332,
+      "qualityCoverage": 0.75,
+      "dimensions": {
+        "mobile_usability": {
+          "level": "major_friction",
+          "evidence_ids": [
+            "4bb8576b-9f1d-48bf-8afd-090ace308d87"
+          ],
+          "checked_criteria": [
+            "Darstellung bei 375 px Breite",
+            "Navigation"
+          ],
+          "rationale": "Die Ansicht bei 375 px zeigt eine breit fixierte Desktop-Anordnung; der sichtbare Seiteninhalt reicht deutlich über die mobile Breite hinaus."
+        },
+        "conversion": {
+          "level": "major_friction",
+          "evidence_ids": [
+            "4bb8576b-9f1d-48bf-8afd-090ace308d87",
+            "121ca07e-046e-41cb-ad4a-3932ead6a72a"
+          ],
+          "checked_criteria": [
+            "Einstiegsinhalt",
+            "Kontaktweg auf der Startseite",
+            "Handlungsaufforderung"
+          ],
+          "rationale": "Auf der Startseite sind Willkommen, Logo und Navigationslinks sichtbar. Ein direkter Kontaktweg oder eine Handlungsaufforderung ist dort nicht beobachtet."
+        },
+        "content_clarity": {
+          "level": "major_friction",
+          "evidence_ids": [
+            "4bb8576b-9f1d-48bf-8afd-090ace308d87",
+            "121ca07e-046e-41cb-ad4a-3932ead6a72a"
+          ],
+          "checked_criteria": [
+            "Erkennbarer Einstiegsinhalt",
+            "Leistungsinformationen"
+          ],
+          "rationale": "Die Startseite zeigt im Wesentlichen Willkommen, Logo und Navigation. Konkrete Informationen zum Angebot sind im beobachteten Inhalt nicht vorhanden."
+        },
+        "trust_transparency": {
+          "level": "usable_with_friction",
+          "evidence_ids": [
+            "0bc627c3-8c07-49f7-ab89-f5c20e3c5e6b"
+          ],
+          "checked_criteria": [
+            "Kontaktangaben",
+            "Adressangabe"
+          ],
+          "rationale": "Die Kontaktseite enthält Coiffeur Lanz, Eichi 20, 3368 Bleienbach, zwei Telefonnummern und eine E-Mail-Adresse."
+        },
+        "technical_seo": {
+          "level": null,
+          "evidence_ids": [
+            "121ca07e-046e-41cb-ad4a-3932ead6a72a"
+          ],
+          "checked_criteria": [
+            "Auslesbarer Seitentext"
+          ],
+          "rationale": "Es liegen keine Beobachtungen zu Metadaten, Indexierbarkeit, Canonical-Tags oder strukturierten Daten vor."
+        }
+      },
+      "performanceScore": null,
+      "issues": [
+        {
+          "category": "mobile_usability",
+          "severity": "major",
+          "observation": "Die Startseite wird bei 375 px Breite als breit fixierte Desktop-Anordnung dargestellt; Inhalt und Navigation liegen in einer deutlich breiteren Fläche.",
+          "recommendation": "Layout für kleine Viewports anpassen und Navigation innerhalb der Viewportbreite anordnen.",
+          "viewport": {
+            "width": 375,
+            "height": 812
+          },
+          "evidence": [
+            {
+              "evidenceId": "4bb8576b-9f1d-48bf-8afd-090ace308d87",
+              "kind": "screenshot",
+              "sourceUrl": "https://www.coiffeurlanz.ch/",
+              "observedAt": "2026-09-21T15:41:47.236Z",
+              "artifactHash": "956e30f082d108e345dd1a80cf2f50f57f8350a4200131a26a8d0a5721178e5b"
+            }
+          ]
+        },
+        {
+          "category": "conversion",
+          "severity": "major",
+          "observation": "Auf der beobachteten Startseite sind Willkommen, Logo und Navigationslinks sichtbar, jedoch kein direkter Kontaktweg oder eine Handlungsaufforderung.",
+          "recommendation": "Kontakt",
+          "viewport": {
+            "width": 375,
+            "height": 812
+          },
+          "evidence": [
+            {
+              "evidenceId": "4bb8576b-9f1d-48bf-8afd-090ace308d87",
+              "kind": "screenshot",
+              "sourceUrl": "https://www.coiffeurlanz.ch/",
+              "observedAt": "2026-09-21T15:41:47.236Z",
+              "artifactHash": "956e30f082d108e345dd1a80cf2f50f57f8350a4200131a26a8d0a5721178e5b"
+            },
+            {
+              "evidenceId": "121ca07e-046e-41cb-ad4a-3932ead6a72a",
+              "kind": "html",
+              "sourceUrl": "https://www.coiffeurlanz.ch/",
+              "observedAt": "2026-09-21T15:41:43.708Z",
+              "artifactHash": "9c4f12ae631ac54dc664f5c7c20f23c8e50715ac4eb546c0b2a1ebba7c8289f0"
+            }
+          ]
+        },
+        {
+          "category": "content_clarity",
+          "severity": "major",
+          "observation": "Im beobachteten Startseiteninhalt fehlen konkrete Informationen zum Angebot; sichtbar sind Willkommen, Logo und Navigation.",
+          "recommendation": "Leistungen",
+          "viewport": {
+            "width": 375,
+            "height": 812
+          },
+          "evidence": [
+            {
+              "evidenceId": "4bb8576b-9f1d-48bf-8afd-090ace308d87",
+              "kind": "screenshot",
+              "sourceUrl": "https://www.coiffeurlanz.ch/",
+              "observedAt": "2026-09-21T15:41:47.236Z",
+              "artifactHash": "956e30f082d108e345dd1a80cf2f50f57f8350a4200131a26a8d0a5721178e5b"
+            },
+            {
+              "evidenceId": "121ca07e-046e-41cb-ad4a-3932ead6a72a",
+              "kind": "html",
+              "sourceUrl": "https://www.coiffeurlanz.ch/",
+              "observedAt": "2026-09-21T15:41:43.708Z",
+              "artifactHash": "9c4f12ae631ac54dc664f5c7c20f23c8e50715ac4eb546c0b2a1ebba7c8289f0"
+            }
+          ]
+        },
+        {
+          "category": "preview_safety",
+          "severity": "major",
+          "observation": "Am Ende des ausgelesenen Kontaktseiteninhalts erscheint «Hilfe bei wissenschaftlichen Arbeiten», ohne Bezug zu den übergebenen Firmenfakten.",
+          "recommendation": "Unbekannten Inhalt prüfen und entfernen, falls er nicht beabsichtigt ist.",
+          "viewport": null,
+          "evidence": [
+            {
+              "evidenceId": "0bc627c3-8c07-49f7-ab89-f5c20e3c5e6b",
+              "kind": "html",
+              "sourceUrl": "https://www.coiffeurlanz.ch/html/kontakt.html",
+              "observedAt": "2026-09-21T15:41:43.708Z",
+              "artifactHash": "a5e2573d8c2c990427b76bb51026035a5807f9f393389f3d5803be54edbeb4d6"
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "Geprüft wurden die Startseite anhand von zwei Screenshots und die Kontaktseite anhand des ausgelesenen HTML-Inhalts.",
+        "Keine Messwerte zu Performance verfügbar.",
+        "Keine Beobachtungen zu Metadaten, Indexierbarkeit oder strukturierten Daten verfügbar."
+      ],
+      "contacts": [
+        {
+          "kind": "phone",
+          "value": "062 / 922 31 82",
+          "sources": [
+            "https://www.coiffeurlanz.ch/html/kontakt.html"
+          ]
+        },
+        {
+          "kind": "phone",
+          "value": "079 / 713 62 32",
+          "sources": [
+            "https://www.coiffeurlanz.ch/html/kontakt.html"
+          ]
+        },
+        {
+          "kind": "contact_page",
+          "value": "https://www.coiffeurlanz.ch/html/kontakt.html",
+          "sources": [
+            "https://www.coiffeurlanz.ch/html/kontakt.html"
+          ]
+        }
+      ],
+      "previousAgency": {
+        "agency_name": null,
+        "status": "unknown",
+        "evidence_ids": [],
+        "score": null
+      },
+      "qualification": {
+        "decision": "manual_review",
+        "opportunityScore": null,
+        "lowerBound": 30.416666666666668,
+        "upperBound": 90.41666666666667,
+        "coverage": 0.39999999999999997,
+        "offerFit": 100,
+        "implementationFit": 100
+      },
+      "activityCheck": {
+        "website": "https://www.coiffeurlanz.ch/",
+        "name": "Coiffeur Lanz, Vreni Lanz",
+        "place": "Bleienbach BE",
+        "phone": "062 922 31 82",
+        "activityAssessment": "recent_activity_signal",
+        "activityDate": "2026-08-05",
+        "sourceUrl": "https://www.coiffeurlanz.ch/html/offnungszeiten.html",
+        "excerpt": "BETRIEBSFERIEN bis am 5. August 2026",
+        "limitation": "Der Suchindex zeigte den datierten Ferienhinweis. Der direkte Öffnungszeiten-Abruf im Webwerkzeug zeigte eine Zugriffsprüfung; nicht umgangen. Telefonische Erreichbarkeit nicht getestet.",
+        "corroborationUrl": "https://www.bleienbach.ch/leben/gewerbe",
+        "corroboration": "Die Gemeinde führt Coiffure Lanz, Vreni Lanz, Eichi 20, 3368 Bleienbach mit passender Website/E-Mail und Telefonnummer. Nicht mit gleichnamigen Salons verwechseln."
+      },
+      "demoEligibilityAtAgentReview": {
+        "canApprove": false,
+        "blockers": [
+          "business_activity_unverified",
+          "ch_location_missing"
+        ],
+        "limitation": "Approval overrides ranking only; it does not supply missing facts or waive implementation and safety constraints."
+      },
+      "sources": [
+        {
+          "evidenceId": "121ca07e-046e-41cb-ad4a-3932ead6a72a",
+          "kind": "html",
+          "sourceUrl": "https://www.coiffeurlanz.ch/",
+          "observedAt": "2026-09-21T15:41:43.708Z",
+          "artifactHash": "9c4f12ae631ac54dc664f5c7c20f23c8e50715ac4eb546c0b2a1ebba7c8289f0"
+        },
+        {
+          "evidenceId": "0bc627c3-8c07-49f7-ab89-f5c20e3c5e6b",
+          "kind": "html",
+          "sourceUrl": "https://www.coiffeurlanz.ch/html/kontakt.html",
+          "observedAt": "2026-09-21T15:41:43.708Z",
+          "artifactHash": "a5e2573d8c2c990427b76bb51026035a5807f9f393389f3d5803be54edbeb4d6"
+        },
+        {
+          "evidenceId": "4bb8576b-9f1d-48bf-8afd-090ace308d87",
+          "kind": "screenshot",
+          "sourceUrl": "https://www.coiffeurlanz.ch/",
+          "observedAt": "2026-09-21T15:41:47.236Z",
+          "artifactHash": "956e30f082d108e345dd1a80cf2f50f57f8350a4200131a26a8d0a5721178e5b"
+        },
+        {
+          "evidenceId": "1bffae83-5be1-4532-8538-e845f2b5c40e",
+          "kind": "screenshot",
+          "sourceUrl": "https://www.coiffeurlanz.ch/",
+          "observedAt": "2026-09-21T15:41:48.425Z",
+          "artifactHash": "7b577e7d03d320f7f4627b5a51dc94c3a9e3a4cfb477233fe258ac33f5eab3dc"
+        }
+      ],
+      "report": "reviews/coiffeur-lanz.md",
+      "images": [
+        {
+          "path": "images/coiffeur-lanz-homepage-375.png",
+          "evidenceId": "4bb8576b-9f1d-48bf-8afd-090ace308d87",
+          "sha256": "956e30f082d108e345dd1a80cf2f50f57f8350a4200131a26a8d0a5721178e5b",
+          "width": 1282,
+          "height": 812
+        },
+        {
+          "path": "images/coiffeur-lanz-homepage-1440.png",
+          "evidenceId": "1bffae83-5be1-4532-8538-e845f2b5c40e",
+          "sha256": "7b577e7d03d320f7f4627b5a51dc94c3a9e3a4cfb477233fe258ac33f5eab3dc",
+          "width": 1440,
+          "height": 1000
+        }
+      ]
+    },
+    {
+      "name": "Fritschi + Griesemer AG",
+      "website": "https://www.fritschi-griesemer.ch/",
+      "place": "Güttingen / Kreuzlingen TG",
+      "phone": "071 695 16 43",
+      "runId": "prospect-fast100-2026-09-21-07fd174fbd7b56bf",
+      "status": "waiting_approval",
+      "stage": "demo_review",
+      "checkedAt": "2026-09-21T15:41:43.709Z",
+      "qualityScore": 56.666666666666664,
+      "qualityCoverage": 0.75,
+      "dimensions": {
+        "mobile_usability": {
+          "level": "major_friction",
+          "evidence_ids": [
+            "5947e8e2-5d76-4748-b902-7a376f3678db"
+          ],
+          "checked_criteria": [
+            "Lesbarkeit des Einleitungstextes",
+            "mobile Seitenansicht",
+            "Navigationseinstieg"
+          ],
+          "rationale": "Im mobilen Screenshot ist der Einleitungstext sehr klein dargestellt. Der Navigationseinstieg ist als Menüsymbol sichtbar."
+        },
+        "conversion": {
+          "level": "minor_friction",
+          "evidence_ids": [
+            "5947e8e2-5d76-4748-b902-7a376f3678db",
+            "469c072e-1e78-4759-8de5-aede25402fae"
+          ],
+          "checked_criteria": [
+            "Kontaktzugang",
+            "Handlungsaufforderung",
+            "Kontaktinformationen"
+          ],
+          "rationale": "Kontakt ist über Navigation, Kontaktseite und Footer erreichbar. Im sichtbaren Einleitungsbereich verweist die Handlungsaufforderung auf Ansprechpersonen statt direkt auf den Kontakt."
+        },
+        "content_clarity": {
+          "level": "usable_with_friction",
+          "evidence_ids": [
+            "5947e8e2-5d76-4748-b902-7a376f3678db",
+            "fdf53108-73f7-4557-88d4-237df816272e",
+            "22b745d3-153e-4f64-8e3d-0d757eb9c4bf"
+          ],
+          "checked_criteria": [
+            "Leistungsgliederung",
+            "visuelle Hierarchie",
+            "Lesbarkeit"
+          ],
+          "rationale": "Bereiche und Navigation strukturieren die Inhalte. Die sehr kleine Darstellung des Einleitungstextes im mobilen Screenshot erschwert das Lesen."
+        },
+        "trust_transparency": {
+          "level": "no_material_issue",
+          "evidence_ids": [
+            "469c072e-1e78-4759-8de5-aede25402fae",
+            "4945ca11-7ddc-4d64-a291-70c1ea070561",
+            "246aee1a-1bcf-42f8-a6dd-9f12e565234e",
+            "00aeec8a-62e1-4c14-9bac-7d83eddaeea5"
+          ],
+          "checked_criteria": [
+            "Kontaktinformationen",
+            "Teamdarstellung",
+            "Impressumsverweis"
+          ],
+          "rationale": "Kontaktinformationen, Teamangaben und ein Impressumsverweis sind in den vorliegenden Seiteninhalten sichtbar."
+        },
+        "technical_seo": {
+          "level": null,
+          "evidence_ids": [
+            "22b745d3-153e-4f64-8e3d-0d757eb9c4bf",
+            "469c072e-1e78-4759-8de5-aede25402fae"
+          ],
+          "checked_criteria": [
+            "Seitentitel im HTML",
+            "interne Navigation"
+          ],
+          "rationale": "Seitentitel und interne Navigation sind beobachtbar. Für eine technische SEO-Beurteilung fehlen strukturierte Metadaten, Indexierungs- und Messdaten."
+        }
+      },
+      "performanceScore": null,
+      "issues": [
+        {
+          "category": "content_clarity",
+          "severity": "major",
+          "observation": "Der Einleitungstext ist im mobilen Screenshot sehr klein dargestellt.",
+          "recommendation": "Schriftgrösse und Zeilenhöhe des Einleitungstextes für mobile Ansichten erhöhen und erneut visuell prüfen.",
+          "viewport": {
+            "width": 375,
+            "height": 812
+          },
+          "evidence": [
+            {
+              "evidenceId": "5947e8e2-5d76-4748-b902-7a376f3678db",
+              "kind": "screenshot",
+              "sourceUrl": "https://www.fritschi-griesemer.ch/",
+              "observedAt": "2026-09-21T15:41:52.254Z",
+              "artifactHash": "d70222b6072936ac096e785f34e7b1477766e07bbbebb29da8c3a78751182525"
+            }
+          ]
+        },
+        {
+          "category": "conversion",
+          "severity": "minor",
+          "observation": "Die sichtbare Handlungsaufforderung im Einleitungsbereich lautet «Unsere Ansprechpersonen», während die Kontaktinformationen auf der Kontaktseite verfügbar sind.",
+          "recommendation": "Neben dem Verweis auf Ansprechpersonen einen direkten Kontaktzugang vorsehen.",
+          "viewport": {
+            "width": 375,
+            "height": 812
+          },
+          "evidence": [
+            {
+              "evidenceId": "5947e8e2-5d76-4748-b902-7a376f3678db",
+              "kind": "screenshot",
+              "sourceUrl": "https://www.fritschi-griesemer.ch/",
+              "observedAt": "2026-09-21T15:41:52.254Z",
+              "artifactHash": "d70222b6072936ac096e785f34e7b1477766e07bbbebb29da8c3a78751182525"
+            },
+            {
+              "evidenceId": "469c072e-1e78-4759-8de5-aede25402fae",
+              "kind": "html",
+              "sourceUrl": "https://www.fritschi-griesemer.ch/kontakt.html",
+              "observedAt": "2026-09-21T15:41:43.709Z",
+              "artifactHash": "b3315e029dc27806521ae7f832e6ab1018b998b73889b644e4f111a447ca9cf0"
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "Geprüft wurden drei HTML-Seiten sowie zwei Screenshots der Startseite.",
+        "Keine Interaktionen, Formulareinsendungen, Ladezeitmessungen oder technischen SEO-Daten liegen vor.",
+        "Für Kontakt- und Teamseite liegen keine Screenshots vor."
+      ],
+      "contacts": [
+        {
+          "kind": "phone",
+          "value": "071 695 16 43",
+          "sources": [
+            "https://www.fritschi-griesemer.ch/kontakt.html"
+          ]
+        },
+        {
+          "kind": "phone",
+          "value": "071 677 17 00",
+          "sources": [
+            "https://www.fritschi-griesemer.ch/kontakt.html"
+          ]
+        },
+        {
+          "kind": "contact_page",
+          "value": "https://www.fritschi-griesemer.ch/kontakt.html",
+          "sources": [
+            "https://www.fritschi-griesemer.ch/kontakt.html"
+          ]
+        }
+      ],
+      "previousAgency": {
+        "agency_name": "cinziadesign",
+        "status": "unknown",
+        "evidence_ids": [
+          "5cfd527d-2308-44cb-ab5b-6247a6100dbe"
+        ],
+        "score": null
+      },
+      "qualification": {
+        "decision": "manual_review",
+        "opportunityScore": null,
+        "lowerBound": 18.333333333333336,
+        "upperBound": 78.33333333333334,
+        "coverage": 0.39999999999999997,
+        "offerFit": 100,
+        "implementationFit": 100
+      },
+      "activityCheck": {
+        "website": "https://www.fritschi-griesemer.ch/",
+        "name": "Fritschi + Griesemer AG",
+        "place": "Güttingen / Kreuzlingen TG",
+        "phone": "071 695 16 43",
+        "activityAssessment": "dated_primary_source",
+        "activityDate": "2026-04-28",
+        "sourceUrl": "https://www.guettingen.ch/politik/aus-dem-gemeinderat.html/203/news/1905",
+        "excerpt": "Schreinerarbeiten: Für CHF 24’635 an die Fritschi + Griesemer AG, Güttingen",
+        "limitation": "Amtliche Mitteilung vom 12.05.2026 über Auftragsvergabe an der Gemeinderatssitzung vom 28.04.2026. Beleg für Geschäftstätigkeit, kein Nachweis eines Website-Budgets.",
+        "corroborationUrl": "https://www.fritschi-griesemer.ch/willkommen.html"
+      },
+      "demoEligibilityAtAgentReview": {
+        "canApprove": false,
+        "blockers": [
+          "business_activity_unverified"
+        ],
+        "limitation": "Approval overrides ranking only; it does not supply missing facts or waive implementation and safety constraints."
+      },
+      "sources": [
+        {
+          "evidenceId": "22b745d3-153e-4f64-8e3d-0d757eb9c4bf",
+          "kind": "html",
+          "sourceUrl": "https://www.fritschi-griesemer.ch/willkommen.html",
+          "observedAt": "2026-09-21T15:41:43.709Z",
+          "artifactHash": "07c03271a862a0fe51a169f9c619ad89e8d7db865c9a1c44b9c04e250c61d029"
+        },
+        {
+          "evidenceId": "5cfd527d-2308-44cb-ab5b-6247a6100dbe",
+          "kind": "html",
+          "sourceUrl": "https://www.fritschi-griesemer.ch/willkommen.html",
+          "observedAt": "2026-09-21T15:41:43.709Z",
+          "artifactHash": "07c03271a862a0fe51a169f9c619ad89e8d7db865c9a1c44b9c04e250c61d029"
+        },
+        {
+          "evidenceId": "c6f59bdb-b27f-41b9-9f85-1535bca916f2",
+          "kind": "html",
+          "sourceUrl": "https://www.fritschi-griesemer.ch/willkommen.html",
+          "observedAt": "2026-09-21T15:41:43.709Z",
+          "artifactHash": "07c03271a862a0fe51a169f9c619ad89e8d7db865c9a1c44b9c04e250c61d029"
+        },
+        {
+          "evidenceId": "469c072e-1e78-4759-8de5-aede25402fae",
+          "kind": "html",
+          "sourceUrl": "https://www.fritschi-griesemer.ch/kontakt.html",
+          "observedAt": "2026-09-21T15:41:43.709Z",
+          "artifactHash": "b3315e029dc27806521ae7f832e6ab1018b998b73889b644e4f111a447ca9cf0"
+        },
+        {
+          "evidenceId": "0e7eb6d8-5174-4960-9ec1-20dd39d0d2af",
+          "kind": "html",
+          "sourceUrl": "https://www.fritschi-griesemer.ch/kontakt.html",
+          "observedAt": "2026-09-21T15:41:43.709Z",
+          "artifactHash": "b3315e029dc27806521ae7f832e6ab1018b998b73889b644e4f111a447ca9cf0"
+        },
+        {
+          "evidenceId": "4945ca11-7ddc-4d64-a291-70c1ea070561",
+          "kind": "html",
+          "sourceUrl": "https://www.fritschi-griesemer.ch/team-alle.html",
+          "observedAt": "2026-09-21T15:41:43.709Z",
+          "artifactHash": "3259144f8a0b61003461639c5e48d41c12fb071502502516183199827ac85297"
+        },
+        {
+          "evidenceId": "246aee1a-1bcf-42f8-a6dd-9f12e565234e",
+          "kind": "html",
+          "sourceUrl": "https://www.fritschi-griesemer.ch/team-alle.html",
+          "observedAt": "2026-09-21T15:41:43.709Z",
+          "artifactHash": "3259144f8a0b61003461639c5e48d41c12fb071502502516183199827ac85297"
+        },
+        {
+          "evidenceId": "00aeec8a-62e1-4c14-9bac-7d83eddaeea5",
+          "kind": "html",
+          "sourceUrl": "https://www.fritschi-griesemer.ch/team-alle.html",
+          "observedAt": "2026-09-21T15:41:43.709Z",
+          "artifactHash": "3259144f8a0b61003461639c5e48d41c12fb071502502516183199827ac85297"
+        },
+        {
+          "evidenceId": "4a49f442-de49-47d4-9833-0b04a4edb932",
+          "kind": "html",
+          "sourceUrl": "https://www.fritschi-griesemer.ch/team-alle.html",
+          "observedAt": "2026-09-21T15:41:43.709Z",
+          "artifactHash": "3259144f8a0b61003461639c5e48d41c12fb071502502516183199827ac85297"
+        },
+        {
+          "evidenceId": "3bf44d31-b375-4e64-bc60-aafbc44bf1b1",
+          "kind": "html",
+          "sourceUrl": "https://www.fritschi-griesemer.ch/team-alle.html",
+          "observedAt": "2026-09-21T15:41:43.709Z",
+          "artifactHash": "3259144f8a0b61003461639c5e48d41c12fb071502502516183199827ac85297"
+        },
+        {
+          "evidenceId": "5947e8e2-5d76-4748-b902-7a376f3678db",
+          "kind": "screenshot",
+          "sourceUrl": "https://www.fritschi-griesemer.ch/",
+          "observedAt": "2026-09-21T15:41:52.254Z",
+          "artifactHash": "d70222b6072936ac096e785f34e7b1477766e07bbbebb29da8c3a78751182525"
+        },
+        {
+          "evidenceId": "fdf53108-73f7-4557-88d4-237df816272e",
+          "kind": "screenshot",
+          "sourceUrl": "https://www.fritschi-griesemer.ch/",
+          "observedAt": "2026-09-21T15:41:55.564Z",
+          "artifactHash": "225cbb9b0acc2acf86d49e4aae0d3f5fe23b757a5add17d24bbdb795e086849b"
+        }
+      ],
+      "report": "reviews/fritschi-griesemer.md",
+      "images": [
+        {
+          "path": "images/fritschi-griesemer-homepage-375.png",
+          "evidenceId": "5947e8e2-5d76-4748-b902-7a376f3678db",
+          "sha256": "d70222b6072936ac096e785f34e7b1477766e07bbbebb29da8c3a78751182525",
+          "width": 388,
+          "height": 7927
+        },
+        {
+          "path": "images/fritschi-griesemer-homepage-1440.png",
+          "evidenceId": "fdf53108-73f7-4557-88d4-237df816272e",
+          "sha256": "225cbb9b0acc2acf86d49e4aae0d3f5fe23b757a5add17d24bbdb795e086849b",
+          "width": 1440,
+          "height": 5053
+        }
+      ]
+    },
+    {
+      "name": "Martin Graf Gartenbau GmbH",
+      "website": "https://grafgartenbaugmbh.ch/",
+      "place": "Lindau ZH",
+      "phone": "052 345 12 50",
+      "runId": "prospect-fast100-2026-09-21-a5cb70f3858b9a77",
+      "status": "waiting_approval",
+      "stage": "demo_review",
+      "checkedAt": "2026-09-21T15:42:43.996Z",
+      "qualityScore": 53.333333333333336,
+      "qualityCoverage": 0.75,
+      "dimensions": {
+        "mobile_usability": {
+          "level": "major_friction",
+          "evidence_ids": [
+            "28d0e6ee-14b8-4093-87ba-fbe09d7b5a54"
+          ],
+          "checked_criteria": [
+            "Darstellung bei 375 × 812",
+            "Lesbarkeit",
+            "Anordnung der Navigation und Inhalte"
+          ],
+          "rationale": "Die Ansicht bei 375 × 812 zeigt die Desktop-Anordnung mit sehr kleinen Texten und einer nebeneinanderstehenden Inhaltsstruktur."
+        },
+        "conversion": {
+          "level": "usable_with_friction",
+          "evidence_ids": [
+            "f66672df-7d30-4163-8b5f-e0e23e4aa6e4",
+            "b70acda7-9324-4c50-8c6b-efb9fc6db319",
+            "28d0e6ee-14b8-4093-87ba-fbe09d7b5a54"
+          ],
+          "checked_criteria": [
+            "Kontaktweg",
+            "Kontaktangaben",
+            "mobile Darstellung"
+          ],
+          "rationale": "Kontaktangaben und ein Kontaktbereich sind vorhanden. Die mobile Darstellung kann den Zugang zu diesen Angaben erschweren."
+        },
+        "content_clarity": {
+          "level": "minor_friction",
+          "evidence_ids": [
+            "f66672df-7d30-4163-8b5f-e0e23e4aa6e4",
+            "ed926189-2052-45f8-94fa-003f4bc0603f"
+          ],
+          "checked_criteria": [
+            "Einstiegstext",
+            "Leistungsbezug",
+            "Seitennavigation"
+          ],
+          "rationale": "Die Startseite benennt den Leistungsbezug und enthält eine Navigation. Detailseiten zu Dienstleistungen und Inspirationen wurden nicht vorgelegt."
+        },
+        "trust_transparency": {
+          "level": "no_material_issue",
+          "evidence_ids": [
+            "f66672df-7d30-4163-8b5f-e0e23e4aa6e4",
+            "b70acda7-9324-4c50-8c6b-efb9fc6db319",
+            "a63b43d2-7c7e-43bc-92f0-6d1b8bf34861"
+          ],
+          "checked_criteria": [
+            "Kontaktangaben",
+            "Impressumsseite"
+          ],
+          "rationale": "Kontaktangaben sind auf der Start- und Kontaktseite sichtbar. Eine Impressumsseite wurde übergeben."
+        },
+        "technical_seo": {
+          "level": null,
+          "evidence_ids": [],
+          "checked_criteria": [],
+          "rationale": "Metadaten, Canonical-Tags, robots-Anweisungen, Sitemap und strukturierte Daten wurden nicht vorgelegt."
+        }
+      },
+      "performanceScore": null,
+      "issues": [
+        {
+          "category": "mobile_usability",
+          "severity": "major",
+          "observation": "Die Ansicht bei 375 × 812 zeigt eine Desktop-Anordnung mit sehr kleinen Texten und nebeneinanderstehenden Inhaltsbereichen.",
+          "recommendation": "Navigation und Inhaltsbereiche für kleine Bildschirme umordnen sowie Schriftgrössen und Abstände anpassen.",
+          "viewport": {
+            "width": 375,
+            "height": 812
+          },
+          "evidence": [
+            {
+              "evidenceId": "28d0e6ee-14b8-4093-87ba-fbe09d7b5a54",
+              "kind": "screenshot",
+              "sourceUrl": "https://grafgartenbaugmbh.ch/",
+              "observedAt": "2026-09-21T15:42:48.793Z",
+              "artifactHash": "3d63b07eb5001a6ba9e49884408cfdfda33b1c8ac4e33d0db63e1b27894d788b"
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "Nur die Startseite wurde als Screenshot bei 375 × 812 und 1440 × 1000 vorgelegt.",
+        "Interaktionen, Linkziele und Formularverhalten wurden nicht getestet.",
+        "Keine technischen SEO-Artefakte oder Performance-Messungen wurden vorgelegt."
+      ],
+      "contacts": [
+        {
+          "kind": "phone",
+          "value": "079 558 83 73",
+          "sources": [
+            "https://grafgartenbaugmbh.ch/kontakt/"
+          ]
+        },
+        {
+          "kind": "phone",
+          "value": "052 345 12 50",
+          "sources": [
+            "https://grafgartenbaugmbh.ch/kontakt/"
+          ]
+        },
+        {
+          "kind": "contact_page",
+          "value": "https://grafgartenbaugmbh.ch/kontakt/",
+          "sources": [
+            "https://grafgartenbaugmbh.ch/kontakt/"
+          ]
+        }
+      ],
+      "previousAgency": {
+        "agency_name": null,
+        "status": "unknown",
+        "evidence_ids": [
+          "a63b43d2-7c7e-43bc-92f0-6d1b8bf34861"
+        ],
+        "score": null
+      },
+      "qualification": {
+        "decision": "manual_review",
+        "opportunityScore": null,
+        "lowerBound": 21.666666666666664,
+        "upperBound": 81.66666666666667,
+        "coverage": 0.39999999999999997,
+        "offerFit": 100,
+        "implementationFit": 100
+      },
+      "activityCheck": {
+        "website": "https://grafgartenbaugmbh.ch/",
+        "name": "Martin Graf Gartenbau GmbH",
+        "place": "Lindau ZH",
+        "phone": "052 345 12 50",
+        "activityAssessment": "uncertain",
+        "activityDate": null,
+        "sourceUrl": "https://grafgartenbaugmbh.ch/",
+        "limitation": "Website und öffentliche Verzeichnisse stimmen bei Firma/Adresse/Telefon überein. Kein belastbarer datierter Betriebsnachweis gefunden. Aktiver Registereintrag allein reicht nicht."
+      },
+      "demoEligibilityAtAgentReview": {
+        "canApprove": false,
+        "blockers": [
+          "business_activity_unverified",
+          "ch_location_missing"
+        ],
+        "limitation": "Approval overrides ranking only; it does not supply missing facts or waive implementation and safety constraints."
+      },
+      "sources": [
+        {
+          "evidenceId": "f66672df-7d30-4163-8b5f-e0e23e4aa6e4",
+          "kind": "html",
+          "sourceUrl": "https://grafgartenbaugmbh.ch/",
+          "observedAt": "2026-09-21T15:42:43.996Z",
+          "artifactHash": "0a3923b9548e5251439e66d207b8005541f109a2bb8dae370700810f21d37c80"
+        },
+        {
+          "evidenceId": "b70acda7-9324-4c50-8c6b-efb9fc6db319",
+          "kind": "html",
+          "sourceUrl": "https://grafgartenbaugmbh.ch/kontakt/",
+          "observedAt": "2026-09-21T15:42:43.996Z",
+          "artifactHash": "ae91fc4a85100fb938c40c596388e77570db9c81cade3ceee4535b419ca00156"
+        },
+        {
+          "evidenceId": "a63b43d2-7c7e-43bc-92f0-6d1b8bf34861",
+          "kind": "html",
+          "sourceUrl": "https://grafgartenbaugmbh.ch/impressum/",
+          "observedAt": "2026-09-21T15:42:43.996Z",
+          "artifactHash": "a90f16462da9dea7f89ad7865be3a0d62a8aa4a12dfc280981d5aa46f19b4ff5"
+        },
+        {
+          "evidenceId": "28d0e6ee-14b8-4093-87ba-fbe09d7b5a54",
+          "kind": "screenshot",
+          "sourceUrl": "https://grafgartenbaugmbh.ch/",
+          "observedAt": "2026-09-21T15:42:48.793Z",
+          "artifactHash": "3d63b07eb5001a6ba9e49884408cfdfda33b1c8ac4e33d0db63e1b27894d788b"
+        },
+        {
+          "evidenceId": "ed926189-2052-45f8-94fa-003f4bc0603f",
+          "kind": "screenshot",
+          "sourceUrl": "https://grafgartenbaugmbh.ch/",
+          "observedAt": "2026-09-21T15:42:50.270Z",
+          "artifactHash": "bea1efbcca90bf135a93cd7e623957d594204622e8b96367b345d37dee8330a5"
+        }
+      ],
+      "report": "reviews/martin-graf-gartenbau.md",
+      "images": [
+        {
+          "path": "images/martin-graf-gartenbau-homepage-375.png",
+          "evidenceId": "28d0e6ee-14b8-4093-87ba-fbe09d7b5a54",
+          "sha256": "3d63b07eb5001a6ba9e49884408cfdfda33b1c8ac4e33d0db63e1b27894d788b",
+          "width": 1036,
+          "height": 1149
+        },
+        {
+          "path": "images/martin-graf-gartenbau-homepage-1440.png",
+          "evidenceId": "ed926189-2052-45f8-94fa-003f4bc0603f",
+          "sha256": "bea1efbcca90bf135a93cd7e623957d594204622e8b96367b345d37dee8330a5",
+          "width": 1440,
+          "height": 1149
+        }
+      ]
+    },
+    {
+      "name": "Lantii GmbH",
+      "website": "https://www.lantii.ch/",
+      "place": "Villigen AG",
+      "phone": "056 245 79 39",
+      "runId": "prospect-fast100-2026-09-21-37e37b77cc5ed233",
+      "status": "waiting_approval",
+      "stage": "demo_review",
+      "checkedAt": "2026-09-21T15:43:34.915Z",
+      "qualityScore": 45,
+      "qualityCoverage": 0.75,
+      "dimensions": {
+        "mobile_usability": {
+          "level": "major_friction",
+          "evidence_ids": [
+            "80308bfe-a4be-4574-970f-c64884713aff"
+          ],
+          "checked_criteria": [
+            "Navigation bei 375 × 812",
+            "sichtbare Linkgrösse"
+          ],
+          "rationale": "Die Navigation mit acht Einträgen ist bei 375 × 812 stark verdichtet."
+        },
+        "conversion": {
+          "level": "usable_with_friction",
+          "evidence_ids": [
+            "f448fd7a-4fe0-4e76-a9f2-7d7396b058f8",
+            "791e5627-7c4d-4636-bdac-4ed0c63cd18e"
+          ],
+          "checked_criteria": [
+            "Kontaktweg",
+            "Offertanfrage",
+            "Kontaktformular"
+          ],
+          "rationale": "Kontakt und Offertanfrage sind vorhanden; das Kontaktformular enthält Name, E-Mail-Adresse und Nachricht."
+        },
+        "content_clarity": {
+          "level": "usable_with_friction",
+          "evidence_ids": [
+            "f448fd7a-4fe0-4e76-a9f2-7d7396b058f8",
+            "b2652797-280a-4bed-8833-c76e7baabb2e"
+          ],
+          "checked_criteria": [
+            "Startseiteninhalt",
+            "Wir über uns"
+          ],
+          "rationale": "Die Startseite nennt Kundenzufriedenheit, Beratung, Zuverlässigkeit, Termintreue und Preis-Leistungsverhältnis. Die geprüfte Seite /about/ enthält keine weiteren Unternehmensinformationen."
+        },
+        "trust_transparency": {
+          "level": "minor_friction",
+          "evidence_ids": [
+            "791e5627-7c4d-4636-bdac-4ed0c63cd18e",
+            "b2652797-280a-4bed-8833-c76e7baabb2e"
+          ],
+          "checked_criteria": [
+            "Kontaktangaben",
+            "Datenschutzerklärung",
+            "Impressum"
+          ],
+          "rationale": "Adresse, E-Mail-Adresse und Telefonnummern sind auf der Kontaktseite vorhanden. Datenschutz und Impressum sind im Footer sichtbar; die geprüfte Seite /about/ liefert keinen zusätzlichen Unternehmensinhalt."
+        },
+        "technical_seo": {
+          "level": null,
+          "evidence_ids": [],
+          "checked_criteria": [],
+          "rationale": "Keine technischen Metadaten, Indexierungsdaten oder strukturierten Daten übergeben."
+        }
+      },
+      "performanceScore": null,
+      "issues": [
+        {
+          "category": "mobile_usability",
+          "severity": "major",
+          "observation": "Die Navigation mit acht Einträgen ist bei 375 × 812 stark verdichtet.",
+          "recommendation": "Mobile Navigation mit grösseren, klar getrennten Bedienflächen vorsehen.",
+          "viewport": {
+            "width": 375,
+            "height": 812
+          },
+          "evidence": [
+            {
+              "evidenceId": "80308bfe-a4be-4574-970f-c64884713aff",
+              "kind": "screenshot",
+              "sourceUrl": "https://www.lantii.ch/",
+              "observedAt": "2026-09-21T15:43:57.426Z",
+              "artifactHash": "d74a5e86acba4849dd0c7f2ac4b96e1c82d4f134aacaf3c916c997cd3d44ce5c"
+            }
+          ]
+        },
+        {
+          "category": "content_clarity",
+          "severity": "major",
+          "observation": "Die geprüfte Seite /about/ enthält nur Navigation und Footer; im Auszug ist keine Unternehmensinformation vorhanden.",
+          "recommendation": "Unternehmensinformationen auf der Seite Wir über uns bereitstellen.",
+          "viewport": null,
+          "evidence": [
+            {
+              "evidenceId": "b2652797-280a-4bed-8833-c76e7baabb2e",
+              "kind": "html",
+              "sourceUrl": "https://www.lantii.ch/about/",
+              "observedAt": "2026-09-21T15:43:34.915Z",
+              "artifactHash": "b7fa6802ee89e76e0a2690c4356b58cf1be8aa264aa858f5fb45fe85e7c9b028"
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "Geprüft wurden drei gecrawlte Seiten sowie zwei Startseitenansichten.",
+        "Keine mobile Ansicht der Kontaktseite übergeben.",
+        "Keine technischen SEO-Daten oder Performance-Messungen übergeben."
+      ],
+      "contacts": [
+        {
+          "kind": "phone",
+          "value": "056 245 79 39",
+          "sources": [
+            "https://www.lantii.ch/kontakt/"
+          ]
+        },
+        {
+          "kind": "phone",
+          "value": "076 326 44 46",
+          "sources": [
+            "https://www.lantii.ch/kontakt/"
+          ]
+        },
+        {
+          "kind": "contact_page",
+          "value": "https://www.lantii.ch/kontakt/",
+          "sources": [
+            "https://www.lantii.ch/kontakt/"
+          ]
+        }
+      ],
+      "previousAgency": {
+        "agency_name": null,
+        "status": "unknown",
+        "evidence_ids": [],
+        "score": null
+      },
+      "qualification": {
+        "decision": "manual_review",
+        "opportunityScore": null,
+        "lowerBound": 23.75,
+        "upperBound": 83.75,
+        "coverage": 0.39999999999999997,
+        "offerFit": 100,
+        "implementationFit": 100
+      },
+      "activityCheck": {
+        "website": "https://www.lantii.ch/",
+        "name": "Lantii GmbH",
+        "place": "Villigen AG",
+        "phone": "056 245 79 39",
+        "activityAssessment": "uncertain",
+        "activityDate": null,
+        "sourceUrl": "https://www.local.ch/de/d/villigen/5234/lantii-gmbh-6BGMC-znlZtdVPa3Gvz94Q",
+        "limitation": "Kontaktverzeichnis vorhanden, keine Öffnungszeiten eingetragen. Registeraggregatoren melden aktiv; das belegt keine laufende operative Tätigkeit. Kein belastbarer datierter Betriebsnachweis gefunden."
+      },
+      "demoEligibilityAtAgentReview": {
+        "canApprove": false,
+        "blockers": [
+          "business_activity_unverified",
+          "ch_location_missing"
+        ],
+        "limitation": "Approval overrides ranking only; it does not supply missing facts or waive implementation and safety constraints."
+      },
+      "sources": [
+        {
+          "evidenceId": "f448fd7a-4fe0-4e76-a9f2-7d7396b058f8",
+          "kind": "html",
+          "sourceUrl": "https://www.lantii.ch/",
+          "observedAt": "2026-09-21T15:43:34.915Z",
+          "artifactHash": "66c296e2011fca443a16e48398f755b4c3c958dd3284cc1d6d57760ec0123cbf"
+        },
+        {
+          "evidenceId": "791e5627-7c4d-4636-bdac-4ed0c63cd18e",
+          "kind": "html",
+          "sourceUrl": "https://www.lantii.ch/kontakt/",
+          "observedAt": "2026-09-21T15:43:34.915Z",
+          "artifactHash": "214f569aa21c112ddb6fb4b2bdab3bf6dea3834b3253b418350f144b48749d28"
+        },
+        {
+          "evidenceId": "b2652797-280a-4bed-8833-c76e7baabb2e",
+          "kind": "html",
+          "sourceUrl": "https://www.lantii.ch/about/",
+          "observedAt": "2026-09-21T15:43:34.915Z",
+          "artifactHash": "b7fa6802ee89e76e0a2690c4356b58cf1be8aa264aa858f5fb45fe85e7c9b028"
+        },
+        {
+          "evidenceId": "80308bfe-a4be-4574-970f-c64884713aff",
+          "kind": "screenshot",
+          "sourceUrl": "https://www.lantii.ch/",
+          "observedAt": "2026-09-21T15:43:57.426Z",
+          "artifactHash": "d74a5e86acba4849dd0c7f2ac4b96e1c82d4f134aacaf3c916c997cd3d44ce5c"
+        },
+        {
+          "evidenceId": "0073123f-50dc-41d0-8b39-781c67be1193",
+          "kind": "screenshot",
+          "sourceUrl": "https://www.lantii.ch/",
+          "observedAt": "2026-09-21T15:44:16.628Z",
+          "artifactHash": "a2cff80b52a59813c35a72464f37a9646f3be6bcac94a4feb38ad351d3b8873c"
+        }
+      ],
+      "report": "reviews/lantii.md",
+      "images": [
+        {
+          "path": "images/lantii-homepage-375.png",
+          "evidenceId": "80308bfe-a4be-4574-970f-c64884713aff",
+          "sha256": "d74a5e86acba4849dd0c7f2ac4b96e1c82d4f134aacaf3c916c997cd3d44ce5c",
+          "width": 960,
+          "height": 926
+        },
+        {
+          "path": "images/lantii-homepage-1440.png",
+          "evidenceId": "0073123f-50dc-41d0-8b39-781c67be1193",
+          "sha256": "a2cff80b52a59813c35a72464f37a9646f3be6bcac94a4feb38ad351d3b8873c",
+          "width": 1440,
+          "height": 1000
+        }
+      ]
+    }
+  ]
+}
