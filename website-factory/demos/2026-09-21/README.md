@@ -1,4 +1,4 @@
-# 15 lokale Website-Demos
+# 15 Website-Demos
 
 Die ausdrückliche Demo-Freigabe im Chat vom 21. September 2026 wurde für 15 heute vorgestellte Firmen mit konkreten Website-Schwächen umgesetzt. Es sind individuell gestaltete Startseiten, keine vollständigen produktiven Firmenwebsites.
 
@@ -19,9 +19,11 @@ Anschliessend [Demo-Übersicht öffnen](http://127.0.0.1:4320/). Der Server bind
 
 ### Dauerhafte Team-Vorschau
 
-Für die vom Nutzer gewünschte Vorschau für Orlando und David ist ein separates Vercel-Projekt vorbereitet. Im Repository `mexu010/ChatGPT_Polire` muss dessen **Root Directory** auf `website-factory/demos/2026-09-21/public` zeigen. Framework: **Other**. Die dort mitgelieferte `vercel.json` überspringt Installation und Build; Vercel liefert die bereits geprüften statischen Dateien aus. Es werden keine API-Keys oder Factory-Prozesse benötigt. Künftige Designänderungen zuerst lokal mit `pnpm demos:build` erzeugen und die aktualisierten Dateien committen.
+Die vom Nutzer gewünschte Vorschau für Orlando und David ist unter **[polire-demo-gallery.vercel.app](https://polire-demo-gallery.vercel.app/)** erreichbar. Der Link benötigt keine Anmeldung und bleibt auch bei ausgeschaltetem Entwicklungsrechner verfügbar. Das separate Vercel-Projekt heisst `polire-demo-gallery` im Konto `maksimcanic-6695's projects`.
 
-Das POLIRE-Hauptprojekt wird dafür nicht umgestellt. Den Zugriff für die Team-Vorschau über Vercels Deployment Protection und die passende Freigabe regeln; `noindex` und `robots.txt` sind kein Passwortschutz. Nach der Anmeldung müssen Projekt, tatsächlicher Zugriffsmodus und Online-Link noch eingerichtet und geprüft werden; diese Vorbereitung allein veröffentlicht keine Website. [Vercel-Konfiguration](https://vercel.com/docs/project-configuration/vercel-json), [Deployment Protection](https://vercel.com/docs/deployment-protection).
+Im Repository `mexu010/ChatGPT_Polire` zeigt dessen **Root Directory** auf `website-factory/demos/2026-09-21/public`. Framework: **Other**. Die dort mitgelieferte `vercel.json` überspringt Installation und Build; Vercel liefert die bereits geprüften statischen Dateien aus. Es werden keine API-Keys oder Factory-Prozesse benötigt. Künftige Designänderungen zuerst lokal mit `pnpm demos:build` erzeugen und die aktualisierten Dateien committen. Vercel aktualisiert die Vorschau aus `main`.
+
+Das POLIRE-Hauptprojekt wurde dafür nicht umgestellt. Die Vorschau ist öffentlich erreichbar; `noindex` und `robots.txt` verhindern keinen direkten Zugriff. Geprüft wurden alle 15 Demo-Routen und insgesamt 116 ausgelieferte Dateien einschliesslich Bildern und Schriften gegen den lokalen Stand. `.env`, Factory-Inputs, Konfiguration und Quellcode ausserhalb des Demo-Ausgabeordners werden nicht ausgeliefert. [Vercel-Konfiguration](https://vercel.com/docs/project-configuration/vercel-json).
 
 Jede Karte zeigt ausserdem die gerundete Qualität der **bisherigen Website**: 0 = sehr schwach, 100 = sehr gut. Das ist keine Bewertung der neuen Demo und keine Kaufwahrscheinlichkeit. Der konkrete Befund und der nächste Schritt stehen direkt daneben; unbekannte Werte bleiben unbekannt.
 
@@ -50,10 +52,10 @@ Coiffure Bettina, SIGRON und Macchi wurden in den Reviews niedrig priorisiert un
 Die Entwürfe wurden durch drei Entwicklungsagents innerhalb der Codex-Sitzung gebaut, auf Basis der gespeicherten Firmenquellen und Reviews. Das ist **kein abgeschlossener Lauf der automatischen Strategist/Builder/QA-Pipeline**. Die Factory-Datenbank, Run-IDs, Freigaben und OAuth-Quoten wurden nicht geändert. Es gab für diese Entwürfe keine zusätzlichen Factory-Modellaufrufe und keinen Rückfall auf einen API-Key.
 
 - Firmenangaben stammen aus den Input-Fakten und Originalquellen. Keine erfundenen Preise, Kundenbewertungen, Mitarbeiter oder Referenzprojekte.
-- Bilder stammen aus den Firmenwebsites, dokumentiert in [asset-sources.json](asset-sources.json). Das ist keine Einräumung von Bildrechten für eine öffentliche Veröffentlichung. Die Demos bleiben interne Designentwürfe.
+- Bilder stammen aus den Firmenwebsites, dokumentiert in [asset-sources.json](asset-sources.json). Dieser Herkunftsnachweis ist keine Einräumung von Bildrechten. Die Demos sind als inoffizielle Designentwürfe gekennzeichnet.
 - Für Wismer, Sopra und Wacker liess der Bildhost den geprüften Abruf nicht zu. Es wurde kein alternativer Zugangsweg benutzt. Diese Seiten verwenden eine typografische bzw. grafische Gestaltung.
 - Der Betriebsstatus von Wismer, Martin Graf und Lantii bleibt offen. Ferienhinweise bei Seiler, Wacker, Hairstudio F und Holiday sind mit den recherchierten Daten sichtbar.
-- Kontaktknöpfe zeigen ausschliesslich einen lokalen Dialog. Keine Anrufe, E-Mails, Buchungen oder Formularübertragungen. Keine öffentliche Veröffentlichung.
+- Kontaktknöpfe zeigen ausschliesslich einen Dialog im Browser. Keine Anrufe, E-Mails, Buchungen oder Formularübertragungen.
 
 ## Aufbau und Prüfung
 
