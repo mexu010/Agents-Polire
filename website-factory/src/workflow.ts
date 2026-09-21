@@ -137,6 +137,20 @@ const plain = (s: unknown) =>
   String(s ?? "unbekannt")
     .replace(/[\r\n]+/g, " ")
     .replace(/[<>[\]`]/g, "");
+export const scoreText = (value: unknown) =>
+  typeof value === "number" &&
+  Number.isFinite(value) &&
+  value >= 0 &&
+  value <= 100
+    ? `${Math.round(value)} von 100 Punkten`
+    : "Noch nicht bewertbar";
+const coverageText = (value: unknown) =>
+  typeof value === "number" &&
+  Number.isFinite(value) &&
+  value >= 0 &&
+  value <= 1
+    ? `${Math.round(value * 100)} %`
+    : "unbekannt";
 export function writeReviewReport(dataDir: string, job: JsonObject): string {
   const review = job.context?.demoReview?.summary;
   const lines = [
@@ -168,14 +182,41 @@ export function writeReviewReport(dataDir: string, job: JsonObject): string {
         ...(blocker ? [blocker] : []),
       ]),
     ];
+    const quality = scoreText(review.audit.qualityScore);
+    const businessStatus =
+      {
+        operating: "Aktivität belegt; Aktualität der Quelle beachten",
+        closed: "Als geschlossen erfasst",
+        uncertain: "Aktueller Betrieb noch zu bestätigen",
+        unverified: "Aktueller Betrieb noch zu bestätigen",
+      }[String(review.businessStatus?.status)] ??
+      "Aktueller Betrieb noch zu bestätigen";
+    const next =
+      quality === "Noch nicht bewertbar"
+        ? "Prüfgrundlagen ergänzen: fehlende Quellen oder Ansichten prüfen. Noch keine Aussage zur Websitequalität."
+        : blocker
+          ? "Aktuellen Betrieb und offene Voraussetzungen klären, bevor eine Demo freigegeben wird."
+          : "Review ansehen, Bedarf und Interesse klären; eine Demo braucht deine ausdrückliche Freigabe.";
     lines.push(
-      `Websitequalität: ${plain(review.audit.qualityScore)}/100 (höher = besser).`,
-      `Opportunity: ${plain(review.qualification.score)}; Abdeckung: ${plain(review.qualification.coverage)}.`,
-      `Betriebsstatus: ${plain(review.businessStatus?.status)}.`,
+      `**Bestehende Website: ${quality}.**`,
+      "0 = sehr schwach, 100 = sehr gut. Je niedriger die Zahl, desto mehr beobachtete Schwächen. Das ist keine Kaufwahrscheinlichkeit und keine Bewertung einer Demo.",
+      `Prüfumfang: ${coverageText(review.audit.coverage)} des Bewertungsgewichts abgedeckt. Das beschreibt den Umfang der Prüfung, nicht ihre Sicherheit. Nicht untersuchte Bereiche bleiben offen.`,
+      "",
+      `**Eignung als Auftrag: ${scoreText(review.qualification.score)}.**`,
+      `Hier geht es um die wirtschaftliche Priorität für POLIRE, nicht um die Websitequalität oder eine Zusage der Firma. Informationsabdeckung: ${coverageText(review.qualification.coverage)}. Fehlende Angaben werden nicht als null Punkte gewertet.`,
+      `Betriebsstatus: ${businessStatus}.`,
+      "",
+      `**Nächster Schritt:** ${next}`,
       `Demo möglich: ${review.eligibility.canApprove && !blocker ? "ja, nach ausdrücklicher Freigabe" : "nein"}.`,
       ...blockers.map((b: string) => `- Offene Voraussetzung: ${plain(b)}`),
       "",
+      "## Konkrete Beobachtungen",
+      "",
     );
+    if (!review.audit.issues.length)
+      lines.push(
+        "Keine belegten Einzelbefunde im Bericht. Bei fehlenden Prüfgrundlagen bedeutet das nicht, dass die Website gut ist.",
+      );
     for (const issue of review.audit.issues)
       lines.push(
         `- ${plain(issue.observation)} → ${plain(issue.recommendation)}`,

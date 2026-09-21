@@ -8,7 +8,7 @@ import {
   screenWebsite,
   type ScreeningResult,
 } from "./screening.js";
-import { writeReviewReport } from "./workflow.js";
+import { scoreText, writeReviewReport } from "./workflow.js";
 import {
   controlSampleSummary,
   hasAssessableReview,
@@ -177,6 +177,7 @@ export function writeProspectingReport(
     `Stand: ${now()}`,
     `Websites: ${rows.length}; vorgeprüft: ${batch.summary.screened}; abgeschlossene Agent-Läufe: ${batch.summary.completeReviews}; auswertbare Reviews: ${rows.filter(hasAssessableReview).length}; Modellaufrufe: ${batch.summary.modelCalls}; Laufzeit: ${batch.summary.elapsedMs} ms.`,
     "Betriebsstatus nicht verifiziert. Vorprüfung ist kein visueller Audit und keine Betriebsprüfung.",
+    "Websitequalität: 0 = sehr schwach, 100 = sehr gut. Niedrigere Werte bedeuten mehr beobachtete Schwächen. Gerundete Darstellung der bestehenden Website, keine Bewertung einer Demo und keine Kaufwahrscheinlichkeit.",
     "Kein statisches Signal bedeutet unbewertet, nicht gute Website. Unklare Quellen und Abruffehler sind kein Ausschlussgrund. Offene Firmen bleiben erhalten.",
     "",
     "## Auswahl mit vollständigem Review",
@@ -187,7 +188,7 @@ export function writeProspectingReport(
   for (const row of promising) {
     const audit = row.review.context.demoReview.summary.audit;
     lines.push(
-      `- [${safeText(row.website)}](${sourceLink(row.website)}) — Qualität ${audit.qualityScore}/100; [Einzelreview](<${resolve(row.reportPath)}>); Betriebsstatus nicht verifiziert.`,
+      `- [${safeText(row.website)}](${sourceLink(row.website)}) — Bestehende Website: ${scoreText(audit.qualityScore)}; [Einzelreview](<${resolve(row.reportPath)}>); Betriebsstatus nicht verifiziert.`,
     );
     for (const signal of row.screening?.signals ?? []) {
       const source = sourceLink(signal.sourceUrl);

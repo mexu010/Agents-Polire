@@ -1,28 +1,37 @@
-# 100 Websites: Vorprüfung und ausgewählte Agent-Reviews
+# 100 Websites: Welche solltest du genauer ansehen?
 
-Stand: 21. September 2026. **100 unterschiedliche Websites vorgeprüft, vier anschliessend mit Scout, Audit und Qualifier bewertet.** Zwei dieser vier haben zusätzliche datierte Aktivitätshinweise. Kein Kontaktversand und keine Demo.
+Stand: 21. September 2026. **Für 4 von 100 Websites liegt eine auswertbare Bewertung vor. Die anderen 96 sind noch nicht bewertbar oder noch nicht vollständig geprüft.** Zwei zusätzliche Agent-Läufe brachten wegen fehlender Quellen bzw. Bilder keinen Gesamtwert. [Ergebnis dieser Nachprüfung](../selection-control-2026-09-21/README.md).
 
-## Interessante Treffer mit Aktivitätshinweisen
+## Was bedeutet die Zahl?
 
-Die Reihenfolge ist eine redaktionelle Auswahl nach Belegen und beobachtetem Verbesserungsbedarf. Sie ersetzt keinen vollständigen wirtschaftlichen Opportunity-Score. Die Qualitätswerte bewerten die Website: Je niedriger, desto mehr beobachtete Probleme.
+**Die Zahl bewertet die bestehende Website: 0 = sehr schwach, 100 = sehr gut.** Ein Wert von 28 bedeutet mehr beobachtete Website-Schwächen als ein Wert von 57. Es bedeutet weder 28 Prozent Kaufwahrscheinlichkeit noch 28 Prozent Sicherheit der Bewertung.
 
-| Firma / Website | Konkreter Ansatz | Qualitätswert | Geschäftstätigkeit | Telefon und Review |
-|---|---|---:|---|---|
-| [Fritschi + Griesemer AG](https://www.fritschi-griesemer.ch/) · Güttingen / Kreuzlingen | Sehr kleiner mobiler Einleitungstext; direkter Kontaktzugang könnte klarer sein | 56.7/100 | Gemeinde dokumentiert einen Auftrag vom 28.04.2026; Mitteilung vom 12.05.2026 | 071 695 16 43 · [Review](reviews/fritschi-griesemer.md) |
-| [Coiffeur Lanz, Vreni Lanz](https://www.coiffeurlanz.ch/) · Bleienbach | Breites Desktop-Layout auf dem Handy; Angebot und direkter Kontakt fehlen im Einstieg | 28.3/100 | Suchindex enthält Ferienhinweis bis 05.08.2026; Gemeinde bestätigt passende Kontaktdaten. Direkter Öffnungszeitenabruf war zugriffsgeschützt | 062 922 31 82 · [Review](reviews/coiffeur-lanz.md) |
+Die Werte sind zur besseren Lesbarkeit gerundet. Sie beruhen auf den tatsächlich geprüften Bereichen. **Ob daraus ein Auftrag entstehen kann, wissen wir noch nicht:** Bedarf, Interesse und Website-Budget müssen mit der Firma geklärt werden.
+
+## Die vier bewerteten Websites
+
+Sortiert nach Websitequalität, die schwächste zuerst. Die Einordnung beschreibt konkrete Befunde; sie ist kein automatisches Verkaufsranking.
+
+| Firma / Original | Websitequalität | Was heisst das konkret? | Dein nächster Schritt |
+|---|---|---|---|
+| [Coiffeur Lanz](https://www.coiffeurlanz.ch/) · Bleienbach | **28 von 100** | Starke Probleme auf dem Handy: breites Desktop-Layout, Angebot und direkter Kontakt fehlen im Einstieg. | Besonders interessant für ein Redesign. Betrieb und Interesse telefonisch bestätigen: **062 922 31 82**. [Review](reviews/coiffeur-lanz.md) |
+| [Lantii](https://www.lantii.ch/) · Villigen | **45 von 100** | Die Navigation ist auf dem Handy gedrängt. Im geprüften Über-uns-Auszug fehlen Firmeninformationen. | **Zuerst klären, ob die Firma aktuell arbeitet.** Noch kein belastbarer Betriebsnachweis. **056 245 79 39**. [Review](reviews/lantii.md) |
+| [Martin Graf Gartenbau](https://grafgartenbaugmbh.ch/) · Lindau | **53 von 100** | Auf dem Handy erscheinen eine Desktop-Anordnung und sehr kleine Texte. | **Zuerst aktuellen Betrieb klären.** Danach Bedarf an einer besseren mobilen Website besprechen. **052 345 12 50**. [Review](reviews/martin-graf-gartenbau.md) |
+| [Fritschi + Griesemer](https://www.fritschi-griesemer.ch/) · Güttingen / Kreuzlingen | **57 von 100** | Der mobile Einleitungstext ist klein; der Kontaktzugang könnte deutlicher sein. | Aktuelle Erreichbarkeit und Verbesserungsbedarf telefonisch klären: **071 695 16 43**. Ein amtlicher Auftrag belegt Tätigkeit im April 2026. [Review](reviews/fritschi-griesemer.md) |
 
 Der amtliche [Auftragsnachweis für Fritschi + Griesemer](https://www.guettingen.ch/politik/aus-dem-gemeinderat.html/203/news/1905) belegt Geschäftstätigkeit im April 2026, kein Website-Budget. Beim Coiffeur ist die Grundlage schwächer: [Öffnungszeiten-Seite](https://www.coiffeurlanz.ch/html/offnungszeiten.html) im Suchindex sowie [Gewerbeverzeichnis der Gemeinde](https://www.bleienbach.ch/leben/gewerbe). Telefonische Erreichbarkeit wurde bei keiner Firma getestet.
 
-## Zurückgestellt: Betriebsstatus noch offen
+Eine erreichbare Website, ein Verzeichniseintrag oder ein aktiver Registereintrag reicht nicht als Nachweis laufender Geschäftstätigkeit. Das betrifft besonders Martin Graf und Lantii. Eine schlechte Website allein macht eine Firma noch nicht zu einem guten Kunden.
 
-| Firma / Website | Beobachtung | Qualitätswert | Kontakt und Review |
-|---|---|---:|---|
-| [Martin Graf Gartenbau GmbH](https://grafgartenbaugmbh.ch/) · Lindau | Desktop-Anordnung auf dem Handy, sehr kleine Inhalte | 53.3/100 | 052 345 12 50 · [Review](reviews/martin-graf-gartenbau.md) |
-| [Lantii GmbH](https://www.lantii.ch/) · Villigen | Gedrängte mobile Navigation; im geprüften Über-uns-Auszug fehlen Firmeninformationen | 45.0/100 | 056 245 79 39 · [Review](reviews/lantii.md) |
+## Was fehlt bei den anderen 96?
 
-Eine erreichbare Website, ein Verzeichniseintrag oder ein aktiver Registereintrag reicht nicht als Nachweis laufender Geschäftstätigkeit. Für diese beiden Firmen wurde kein belastbarer datierter Betriebsnachweis gefunden.
+Bei 94 Websites wurde noch kein vollständiger Agent-Lauf durchgeführt. Bei Blarer und Labhart lief die Agent-Prüfung durch, aber wichtige Prüfgrundlagen fehlten. **Kein Score bedeutet unbekannt, nicht null Punkte und nicht gute Website.**
 
-## Tatsächlich gemessener Durchlauf
+Bei den vier auswertbaren Reviews sind 75 Prozent des Bewertungsgewichts durch geprüfte Bereiche abgedeckt. Das ist eine Angabe zum Prüfumfang, keine Erfolgs- oder Sicherheitsquote. Technisches SEO und Performance sind in diesem schnellen Lauf nicht vollständig geprüft.
+
+## Technische Details des ursprünglichen Durchlaufs
+
+Die folgenden Messwerte dokumentieren den ersten Lauf vor der späteren Nachprüfung und Demo-Erstellung. Die Bewertung oben ist unverändert; nur ihre Darstellung wurde vereinfacht.
 
 | Messung | Ergebnis |
 |---|---:|

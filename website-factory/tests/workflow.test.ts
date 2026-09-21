@@ -49,6 +49,44 @@ test("partial reports retain source link and clearly state missing review", () =
   expect(readFileSync(file, "utf8")).toContain("https://example.ch/");
 });
 
+test.each([
+  [null, "Noch nicht bewertbar", "Prüfgrundlagen ergänzen"],
+  [0, "0 von 100 Punkten", "Review ansehen"],
+  [28.3333333333, "28 von 100 Punkten", "Review ansehen"],
+])(
+  "review explains quality %s without presenting missing commercial data as zero",
+  (qualityScore, expected, next) => {
+    const dir = mkdtempSync(join(tmpdir(), "clear-report-"));
+    const file = writeReviewReport(dir, {
+      id: "clear-" + qualityScore,
+      website: "https://example.ch/",
+      mode: "fixture",
+      context: {
+        demoReview: {
+          reviewHash: "test",
+          summary: {
+            audit: {
+              qualityScore,
+              coverage: qualityScore === null ? 0 : 0.75,
+              issues: [],
+            },
+            qualification: { score: null, coverage: 0.4 },
+            eligibility: { canApprove: true, blockers: [] },
+            businessStatus: { status: "uncertain" },
+          },
+        },
+      },
+    });
+    const report = readFileSync(file, "utf8");
+    expect(report).toContain(expected);
+    expect(report).toContain("100 = sehr gut");
+    expect(report).toContain("Eignung als Auftrag: Noch nicht bewertbar");
+    expect(report).toContain(next);
+    expect(report).not.toContain("unbekannt/100");
+    expect(report).not.toContain("Abdeckung: 0.4");
+  },
+);
+
 test("concurrent batch wrapper cannot overwrite the active manifest or dispatch", async () => {
   const store = new Store(mkdtempSync(join(tmpdir(), "batch-lock-")));
   let release!: () => void;

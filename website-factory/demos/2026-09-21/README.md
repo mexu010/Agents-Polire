@@ -13,6 +13,8 @@ pnpm demos
 
 Anschliessend [Demo-Übersicht öffnen](http://127.0.0.1:4320/). Der Server bindet ausschliesslich an den lokalen Rechner. Bei Bedarf kann `POLIRE_DEMO_PORT` einen anderen Port festlegen. Zum Beenden im Terminal Strg+C. Die Übersicht bietet Vorschaubilder, Branchenfilter, Original-Websites und die gespeicherten Review-Befunde.
 
+Jede Karte zeigt ausserdem die gerundete Qualität der **bisherigen Website**: 0 = sehr schwach, 100 = sehr gut. Das ist keine Bewertung der neuen Demo und keine Kaufwahrscheinlichkeit. Der konkrete Befund und der nächste Schritt stehen direkt daneben; unbekannte Werte bleiben unbekannt.
+
 | Demo | Original |
 |---|---|
 | [BERNHOF-Vetsch](http://127.0.0.1:4320/sites/bernhof/) | [bernhof.ch](https://www.bernhof.ch/) |

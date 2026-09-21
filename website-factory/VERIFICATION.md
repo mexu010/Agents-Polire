@@ -1,5 +1,13 @@
 # Prüfprotokoll
 
+## Verständliche Score-Darstellung vom 21. September 2026
+
+Websitequalität wird als gerundete Zahl mit «0 = sehr schwach, 100 = sehr gut» erklärt. Der Bericht unterscheidet Original-Website, wirtschaftliche Priorität und Demo, stellt Abdeckung als Prozent des Prüfgewichts dar und lässt unbekannte Scores ausdrücklich unbekannt. Beobachtungen und nächster Schritt stehen neben der Bewertung. Die 15 Demo-Karten zeigen nun die Qualität der jeweiligen Original-Website. Der 100er-Bericht erläutert die vier auswertbaren Reviews und die 96 noch offenen Bewertungen in Alltagssprache.
+
+Berechnungen, gespeicherte Originalwerte, Ranking-Gewichte und Freigabelogik bleiben unverändert. Build und ESLint bestanden; 222 Tests in 23 Dateien bestanden, einschliesslich Unterscheidung zwischen null, echtem Nullwert und gerundeten Scores. Die Galerie wurde bei 375 und 1440 Pixeln sowie im dunklen Farbschema geprüft: 15 Scoreanzeigen, keine Überbreite oder Seitenfehler, Filter funktionieren. Screenshots wurden angesehen. Die unabhängige Prüfung fand keine blockierenden Befunde.
+
+Sechs lokale Einzelberichte und die Stapelübersicht wurden aus gespeicherten Ergebnissen neu formatiert. Kein neuer Modellaufruf; OAuth-Zähler weiterhin 96. Die mechanische Designprüfung meldete nur bereits vorhandene Typografiehinweise zur engen Laufweite und Fontwahl; die bestehende Gestaltung wurde beibehalten.
+
 ## Konservative Vorauswahl vom 21. September 2026
 
 Die Vorauswahl reserviert innerhalb der bisherigen Review-Grenze Plätze für unklare Fälle und eine zufällig gezogene Kontrolle der Websites ohne statisches Signal. Alle übrigen Firmen bleiben ausdrücklich unbewertet und im Bericht sichtbar. Wenig lesbarer statischer Inhalt gilt bei fehlenden starken Signalen als unklar. Quellenlücken werden nicht als Geschäftsschliessung oder gute Website umgedeutet.
