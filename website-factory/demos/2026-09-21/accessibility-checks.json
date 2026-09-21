@@ -1,0 +1,156 @@
+{
+  "checkedAt": "2026-09-21T18:01:08.969Z",
+  "method": "axe-core 4.13.0, seven selected rules, mobile light and dark; not a complete accessibility certification",
+  "results": [
+    {
+      "slug": "fuhrer",
+      "colorScheme": "light",
+      "violations": []
+    },
+    {
+      "slug": "bernhof",
+      "colorScheme": "light",
+      "violations": []
+    },
+    {
+      "slug": "grossfeld",
+      "colorScheme": "light",
+      "violations": []
+    },
+    {
+      "slug": "fuhrer",
+      "colorScheme": "dark",
+      "violations": []
+    },
+    {
+      "slug": "bernhof",
+      "colorScheme": "dark",
+      "violations": []
+    },
+    {
+      "slug": "grossfeld",
+      "colorScheme": "dark",
+      "violations": []
+    },
+    {
+      "slug": "wismer",
+      "colorScheme": "light",
+      "violations": []
+    },
+    {
+      "slug": "sopra",
+      "colorScheme": "light",
+      "violations": []
+    },
+    {
+      "slug": "bieri",
+      "colorScheme": "light",
+      "violations": []
+    },
+    {
+      "slug": "wismer",
+      "colorScheme": "dark",
+      "violations": []
+    },
+    {
+      "slug": "sopra",
+      "colorScheme": "dark",
+      "violations": []
+    },
+    {
+      "slug": "bieri",
+      "colorScheme": "dark",
+      "violations": []
+    },
+    {
+      "slug": "hairstudio-f",
+      "colorScheme": "light",
+      "violations": []
+    },
+    {
+      "slug": "schreinerzwei",
+      "colorScheme": "light",
+      "violations": []
+    },
+    {
+      "slug": "holiday",
+      "colorScheme": "light",
+      "violations": []
+    },
+    {
+      "slug": "hairstudio-f",
+      "colorScheme": "dark",
+      "violations": []
+    },
+    {
+      "slug": "schreinerzwei",
+      "colorScheme": "dark",
+      "violations": []
+    },
+    {
+      "slug": "holiday",
+      "colorScheme": "dark",
+      "violations": []
+    },
+    {
+      "slug": "seiler",
+      "colorScheme": "light",
+      "violations": []
+    },
+    {
+      "slug": "wacker",
+      "colorScheme": "light",
+      "violations": []
+    },
+    {
+      "slug": "coiffeur-lanz",
+      "colorScheme": "light",
+      "violations": []
+    },
+    {
+      "slug": "seiler",
+      "colorScheme": "dark",
+      "violations": []
+    },
+    {
+      "slug": "wacker",
+      "colorScheme": "dark",
+      "violations": []
+    },
+    {
+      "slug": "coiffeur-lanz",
+      "colorScheme": "dark",
+      "violations": []
+    },
+    {
+      "slug": "fritschi-griesemer",
+      "colorScheme": "light",
+      "violations": []
+    },
+    {
+      "slug": "martin-graf-gartenbau",
+      "colorScheme": "light",
+      "violations": []
+    },
+    {
+      "slug": "lantii",
+      "colorScheme": "light",
+      "violations": []
+    },
+    {
+      "slug": "fritschi-griesemer",
+      "colorScheme": "dark",
+      "violations": []
+    },
+    {
+      "slug": "martin-graf-gartenbau",
+      "colorScheme": "dark",
+      "violations": []
+    },
+    {
+      "slug": "lantii",
+      "colorScheme": "dark",
+      "violations": []
+    }
+  ]
+}

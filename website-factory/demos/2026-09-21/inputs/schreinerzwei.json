@@ -1,0 +1,323 @@
+{
+  "slug": "schreinerzwei",
+  "name": "Schreiner2 AG",
+  "website": "https://www.schreinerzwei.ch/",
+  "locality": "Gampelen BE",
+  "industry": "Schreinerei",
+  "phone": "032 338 16 84",
+  "runId": "batch-prospects-2026-09-21-round2-a-758959093c87085e",
+  "report": "reports/prospecting-2026-09-21-round2/reviews/schreinerzwei.md",
+  "family": "wood",
+  "activity": {
+    "status": "current_announcement",
+    "sourceUrl": "https://www.schreinerzwei.ch/",
+    "excerpt": "Betriebsferien 2026/2027",
+    "finding": "Eigene Website führt einen Ferienplan für 2026/2027 und Geschäftskontakte. Kein telefonischer Betriebsnachweis."
+  },
+  "quality": 62.89473684210527,
+  "facts": [
+    {
+      "field": "company_name",
+      "value": "Schreiner2 AG",
+      "evidenceIds": [
+        "2dbc5a4d-3e74-4c79-840a-b4ab1d169ce3"
+      ]
+    },
+    {
+      "field": "address",
+      "value": "Gewerbestrasse 10\n\n3236 Gampelen",
+      "evidenceIds": [
+        "2dbc5a4d-3e74-4c79-840a-b4ab1d169ce3"
+      ]
+    },
+    {
+      "field": "industry",
+      "value": "Schreinerei",
+      "evidenceIds": [
+        "eecd5fa1-d53e-497f-9e77-7da98c1e0e2b"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Möbel",
+      "evidenceIds": [
+        "eecd5fa1-d53e-497f-9e77-7da98c1e0e2b"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Fenster",
+      "evidenceIds": [
+        "eecd5fa1-d53e-497f-9e77-7da98c1e0e2b"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Türen",
+      "evidenceIds": [
+        "eecd5fa1-d53e-497f-9e77-7da98c1e0e2b"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Parkett",
+      "evidenceIds": [
+        "eecd5fa1-d53e-497f-9e77-7da98c1e0e2b"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Innenausbau",
+      "evidenceIds": [
+        "eecd5fa1-d53e-497f-9e77-7da98c1e0e2b"
+      ]
+    },
+    {
+      "field": "opening_hours",
+      "value": "Montag-Donnerstag\n\n07.30 - 12.00 Uhr\n\n13.00 - 17.15 Uhr",
+      "evidenceIds": [
+        "2dbc5a4d-3e74-4c79-840a-b4ab1d169ce3"
+      ]
+    },
+    {
+      "field": "opening_hours",
+      "value": "Freitag\n\n07.30 - 12.00 Uhr\n\n13.00 - 16.15 Uhr",
+      "evidenceIds": [
+        "2dbc5a4d-3e74-4c79-840a-b4ab1d169ce3"
+      ]
+    }
+  ],
+  "contacts": [
+    {
+      "contact_id": "3761b498-a986-441e-92bd-4d76796bbb72",
+      "kind": "phone",
+      "value": "032 338 16 84",
+      "evidence_ids": [
+        "2dbc5a4d-3e74-4c79-840a-b4ab1d169ce3"
+      ]
+    },
+    {
+      "contact_id": "51207d7d-a751-48ea-9430-8ec660a7cc93",
+      "kind": "email",
+      "value": "info@schreinerzwei.ch",
+      "evidence_ids": [
+        "7be8ba9d-d5aa-47aa-9d88-fcac2a856434"
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "observation": "Auf der Startseite ist keine deutlich hervorgehobene Kontaktaufnahme im ersten sichtbaren Bereich beobachtet; die sichtbaren Schaltflächen verweisen auf Informationsbereiche.",
+      "recommendation": "Kontakt aufnehmen"
+    },
+    {
+      "observation": "Die Startseite nennt «Betriebsferien 2026/2027», während die Seite «Über Uns» «23.12.2024 - 06.01.2024» nennt.",
+      "recommendation": "Die Betriebsferienangaben auf beiden Seiten prüfen und konsistent aktualisieren."
+    },
+    {
+      "observation": "Für die Startseite liegt ein Lighthouse-mobile-Performancewert von 80 vor.",
+      "recommendation": "Die zugrunde liegenden Lighthouse-Details prüfen und erst danach Massnahmen festlegen."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ea1b80d0-bc92-43b4-862c-2117684d3bec",
+      "url": "https://www.schreinerzwei.ch/",
+      "text": "Schreinerzwei.ch\n\nschreinerzwei.chSchreinerzwei\n\nÜber Uns Team\nGeschichte\nSponsoring\nLageplan\nEinweihung 2013\nBroschüre\n\nLeistungen Badmöbel\nBadumbauten\nBeschattung & Insektenschutz\nBöden\nDämmungen\nFenster\nFensterläden\nHolzdecks\nInnenausbau\nKüchen\nMöbel\nSchränke\nTische & Stühle\nTreppen\nTüren\nZimmerarbeiten\nSpezielles\n\nMedien Social Wall\nVideos\nPressestimmen\nBroschüre\n\nAusstellung\nKontakt\n\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nFenster \r\n\r\n\r\nMit uns wahren Sie den Durchblick! Wir setzen für Sie Qualität und Perfektion in \r\nder Fenstertechnik um. Ob Neubau, Altbausanierung, Objektbau oder Einfamilienhaus – gerne unterbreiten wir Ihnen eine individuelle Offerte. \r\n\r\n\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nTüren \r\n\r\n\r\nWir fertigen für Sie Ihre massgeschneiderte Haustür, Ihre Innentür oder Ihre Schiebetür nach Ihrem Geschmack an – damit garantiert keiner mit der Tür ins Haus fällt… \r\n\r\n\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nBöden \r\n\r\n\r\nMit uns gehen Sie wie auf Wolken: ob auf massivem Parkett, schwimmend verlegt\r\noder geklebt, auf Laminat, Linoleum, Kork oder wasserfestem Vinyl. \r\n\r\n\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nTische \r\n\r\n\r\nEin Tisch ist nicht einfach nur ein Tisch. Vielmehr ist er Zentrum für Begegnungen und Aktivitäten aller Art: Am Tisch wird gegessen, gefeiert, diskutiert, gespielt, gebastelt, ausgelegt und gearbeitet. Und natürlich wird auch mal ordentlich auf den Tisch geklopft… \r\n\r\n\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nMöbel \r\n\r\n\r\nEin passendes Möbelstück für die unmögliche Nische unter der Treppe? \r\nKein Problem für uns: Wir fertigen Ihr Möbel nach Ihren Wünschen. \r\n\r\n\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nKüchen \r\n\r\n\r\nDie Küche – Treffpunkt für alle, Herzstück Ihres Daheims. Sie möchten sowohl eine funktionelle als auch eine individuelle Küche? Kein Problem! Gerne realisieren wir mit Ihnen\r\nIhre Vorstellun"
+    },
+    {
+      "id": "eecd5fa1-d53e-497f-9e77-7da98c1e0e2b",
+      "url": "https://www.schreinerzwei.ch/",
+      "text": "gen und bauen die Küche nach Ihrem Gusto. \r\n\r\n\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\nÜBER UNS\n\nWir sind für Sie da\nDas Schreiner2-Team steht Ihnen gerne zur Verfügung. Erfahren Sie mehr über uns und unsere neue, modern eingerichtete Schreinerei.\n\n\r\n\nMehr über uns »\n\nAusstellung\n\nUnsere neue Ausstellung\nPünktlich auf die Gewerbeausstellung 2019 konnte unsere neue Ausstellung fertiggestellt werden.\r\n\nGerne begrüssen wir Sie persönlich bei uns in der Ausstellung. \r\n\n \n\nMehr darüber »\n\nBetriebsferien\n\n\r\n\n \n\nBetriebsferien 2026/2027 \r\n\nFrühlingsferien:  7.April bis 10.April\r\n\nSommerferien:   20.Juli bis 31.Juli\r\n\nWinterferien:      24.Dezember bis 8.Januar\n\nÜBER UNS\n\nDer Name Schreiner2 steht für «Kompetenz im Duett».\n\nAndreas Studer & Andreas Perrin.\nIn unserer Schreinerei haben wir uns auf Möbel, Fenster, Türen, Parkett und Innenausbau spezialisiert. Traditionelle Holzverbindungen verwenden wir, wo es möglich ist.\nUnsere Grundsätze sind Pünktlichkeit, Ehrlichkeit, sowie persönliche und individuelle Kundenkontakte.\n\nKompetente Beratung, detaillierte Planung, bedachtsame Wahl der Materialien und höchste Präzision für unsere Kunden - kurz gesagt: «Kompetenz im Duett» ist unser Leitmotiv. Auf unserer Internetseite erfahren Sie mehr über uns und Sie erhalten Einblick in einige unserer Arbeiten.\r\n\nMehr dazu »\n\nWIESO ZU SCHREINER2?\n\nWir zeichnen uns aus durch:\n\n– Persönlichkeit\n– hohe Qualität\n– Individualität\n– Professionalität\n– Pünktlichkeit\n– Ehrlichkeit\n– hohe Flexibilität\n– grosses Fachwissen\n\nLeistungen\n\n» Badmöbel\n» Badumbauten\n» Beschattung & Insektenschutz\n» Böden\n» Dämmungen\n» Fenster\n» Fensterläden\n» Holzdecks\n» Innenausbau\n» Küchen\n» Möbel\n» Schränke\n» Tische & Stühle\n» Treppen\n» Türen\n» Zimmerarbeiten\n» Spezielles\n\nÜBER UNS\n\n» Team\n» Geschichte\n» Sponsoring\n» Lageplan\n» Einweihu"
+    },
+    {
+      "id": "2dbc5a4d-3e74-4c79-840a-b4ab1d169ce3",
+      "url": "https://www.schreinerzwei.ch/",
+      "text": "ng 2013\n» Broschüre\n\nMEDIEN\n\n» Social Wall\n» Videos\n» Pressestimmen\n» Broschüre\n\nKONTAKT\n\nSchreiner2 AG\n\nGewerbestrasse 10\n\n3236 Gampelen\n\nTelefon 032 338 16 84\n\nE-Mail info(at)schreinerzwei.ch\n\nÖffnungszeiten\n\nMontag-Donnerstag\n\n07.30 - 12.00 Uhr\n\n13.00 - 17.15 Uhr\n\nFreitag\n\n07.30 - 12.00 Uhr\n\n13.00 - 16.15 Uhr\n\n© Schreiner2 AG | Home | Impressum | |\n\nnach Oben"
+    },
+    {
+      "id": "82d28fc9-1282-4756-bf89-9e5794f04638",
+      "url": "https://www.schreinerzwei.ch/ueber-uns/",
+      "text": "Schreinerzwei.ch\n\nschreinerzwei.chÜber Uns\n\nÜber Uns Team\nGeschichte\nSponsoring\nLageplan\nEinweihung 2013\nBroschüre\n\nLeistungen Badmöbel\nBadumbauten\nBeschattung & Insektenschutz\nBöden\nDämmungen\nFenster\nFensterläden\nHolzdecks\nInnenausbau\nKüchen\nMöbel\nSchränke\nTische & Stühle\nTreppen\nTüren\nZimmerarbeiten\nSpezielles\n\nMedien Social Wall\nVideos\nPressestimmen\nBroschüre\n\nAusstellung\nKontakt\n\nÜber Uns\n\nDer Name Schreinerzwei steht für «Kompetenz im Duett», seit über 15 Jahren!\n\nAndreas Studer & Andreas Perrin.\n\nIn unserer Schreinerei haben wir uns auf Möbel, Fenster, Türen, Parkett und Innenausbau spezialisiert.\n\nTraditionelle Holzverbindungen verwenden wir, wo es möglich ist.\n\nKompetente Beratung, detaillierte Planung, bedachtsame Wahl der Materialien und höchste Präzision für unsere Kunden – nach diesen Prinzipien arbeiten wir für Sie.\r\n\nUnser Team »\n\n \n\n \n\n \n\nUnsere Geschichte »\n\nÖffnungszeiten\n\nBetriebsferien \r\n\n23.12.2024 - 06.01.2024\r\n\n \n\nMontag-Donnerstag \r\n\n07.30 - 12.00 Uhr\r\n\n13.00 - 17.15 Uhr\r\n\nFreitag \r\n\n07.30 - 12.00 Uhr\r\n\n13.00 - 16.15 Uhr\n\nWIESO ZU SCHREINER2?\n\nWir zeichnen uns aus durch:\n\n– Persönlichkeit\n– hohe Qualität\n– Individualität\n– Professionalität\n– Pünktlichkeit\n– Ehrlichkeit\n– hohe Flexibilität\n– grosses Fachwissen\n\nLeistungen\n\n» Badmöbel\n» Badumbauten\n» Beschattung & Insektenschutz\n» Böden\n» Dämmungen\n» Fenster\n» Fensterläden\n» Holzdecks\n» Innenausbau\n» Küchen\n» Möbel\n» Schränke\n» Tische & Stühle\n» Treppen\n» Türen\n» Zimmerarbeiten\n» Spezielles\n\nÜBER UNS\n\n» Team\n» Geschichte\n» Sponsoring\n» Lageplan\n» Einweihung 2013\n» Broschüre\n\nMEDIEN\n\n» Social Wall\n» Videos\n» Pressestimmen\n» Broschüre\n\nKONTAKT\n\nSchreiner2 AG\n\nGewerbestrasse 10\n\n3236 Gampelen\n\nTelefon 032 338 16 84\n\nE-Mail info(at)schreinerzwei.ch\n\nÖffnungszeiten\n\nMontag-Donnerstag\n\n07.30 - 12.00 Uhr\n\n"
+    },
+    {
+      "id": "dff51b12-8837-43cc-b8bb-a15f1d0edd6b",
+      "url": "https://www.schreinerzwei.ch/ueber-uns/",
+      "text": "13.00 - 17.15 Uhr\n\nFreitag\n\n07.30 - 12.00 Uhr\n\n13.00 - 16.15 Uhr\n\n© Schreiner2 AG | Home | Impressum | |\n\nnach Oben"
+    },
+    {
+      "id": "7be8ba9d-d5aa-47aa-9d88-fcac2a856434",
+      "url": "https://www.schreinerzwei.ch/ueber-uns/team/",
+      "text": "Schreinerzwei.ch\n\nschreinerzwei.chTeam\n\nÜber Uns Team\nGeschichte\nSponsoring\nLageplan\nEinweihung 2013\nBroschüre\n\nLeistungen Badmöbel\nBadumbauten\nBeschattung & Insektenschutz\nBöden\nDämmungen\nFenster\nFensterläden\nHolzdecks\nInnenausbau\nKüchen\nMöbel\nSchränke\nTische & Stühle\nTreppen\nTüren\nZimmerarbeiten\nSpezielles\n\nMedien Social Wall\nVideos\nPressestimmen\nBroschüre\n\nAusstellung\nKontakt\n\nANDREAS STUDER\n\nBauschreiner EFZ, Geschäftsinhaber,\nGründer, Berufsbildner \r\n\n \nTelefon\n 032 338 16 84 E-Mail\n\ninfo@schreinerzwei.ch\n\nANDREAS PERRIN\n\nMöbelschreiner EFZ, Geschäftsinhaber,\nGründer, Berufsbildner \r\n\n \nTelefon\n 032 338 16 84 E-Mail\n\ninfo@schreinerzwei.ch\n\nMARC GLAUSER\n\nSchreiner EFZ / Vorarbeiter / Berufsbildner\n\n\r\n\n \n\n \n\n \n\nWalter Feitknecht\n\nSchreiner EFZ\n\n\r\n\n \n\n \n\nBARBARA SPRING STUDER\n\nAdministration / Büro / Reinigung\n\n\r\n\n \n\n \n\n \n\nJANINE SCHWAB\n\nAdministration / Büro\n\r\n\n \n 032 338 16 84  info(at)schreinerzwei.ch\n\nLoris Moser\n\nLernender \r\n\nLehrbeginn August 2025\n\nKerthan Sakthivel\n\nLernender\nLehrbeginn August 2025\r\n\n \n\n \n\nLeistungen\n\n» Badmöbel\n» Badumbauten\n» Beschattung & Insektenschutz\n» Böden\n» Dämmungen\n» Fenster\n» Fensterläden\n» Holzdecks\n» Innenausbau\n» Küchen\n» Möbel\n» Schränke\n» Tische & Stühle\n» Treppen\n» Türen\n» Zimmerarbeiten\n» Spezielles\n\nÜBER UNS\n\n» Team\n» Geschichte\n» Sponsoring\n» Lageplan\n» Einweihung 2013\n» Broschüre\n\nMEDIEN\n\n» Social Wall\n» Videos\n» Pressestimmen\n» Broschüre\n\nKONTAKT\n\nSchreiner2 AG\n\nGewerbestrasse 10\n\n3236 Gampelen\n\nTelefon 032 338 16 84\n\nE-Mail info(at)schreinerzwei.ch\n\nÖffnungszeiten\n\nMontag-Donnerstag\n\n07.30 - 12.00 Uhr\n\n13.00 - 17.15 Uhr\n\nFreitag\n\n07.30 - 12.00 Uhr\n\n13.00 - 16.15 Uhr\n\n© Schreiner2 AG | Home | Impressum | |\n\nnach Oben"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://www.schreinerzwei.ch/fileadmin/template/hp_images/_Logo_Schreinerzwei.png",
+      "alt": "Logo"
+    },
+    {
+      "url": "https://www.schreinerzwei.ch/uploads/tx_flexslider/header_fenster.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.schreinerzwei.ch/uploads/tx_flexslider/header_tueren.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.schreinerzwei.ch/uploads/tx_flexslider/header_boeden_01.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.schreinerzwei.ch/uploads/tx_flexslider/header_tisch.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.schreinerzwei.ch/uploads/tx_flexslider/header_moebel.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.schreinerzwei.ch/uploads/tx_flexslider/header_kueche.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.schreinerzwei.ch/fileadmin/bilder/Content/Teaser/Gebaeude.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.schreinerzwei.ch/fileadmin/bilder/Content/Teaser/Ausstelung.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.schreinerzwei.ch/fileadmin/bilder/Teaser_Klein/beach-7214773_640.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.schreinerzwei.ch/fileadmin/_migrated/pics/Der_Schreiner_01.png",
+      "alt": ""
+    },
+    {
+      "url": "https://www.schreinerzwei.ch/fileadmin/template/hp_images/Facebook_Logo.png",
+      "alt": "Facebook"
+    },
+    {
+      "url": "https://www.schreinerzwei.ch/fileadmin/template/hp_images/Instagram.png",
+      "alt": "Instagram"
+    },
+    {
+      "url": "https://www.schreinerzwei.ch/fileadmin/template/hp_images/Button_Nachoben.png",
+      "alt": "Oben"
+    },
+    {
+      "url": "https://www.schreinerzwei.ch/ueber-uns/fileadmin/template/hp_images/_Logo_Schreinerzwei.png",
+      "alt": "Logo"
+    },
+    {
+      "url": "https://www.schreinerzwei.ch/ueber-uns/fileadmin/bilder/Header/Header_ueber_uns.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.schreinerzwei.ch/ueber-uns/fileadmin/_migrated/pics/Der_Schreiner_01.png",
+      "alt": ""
+    },
+    {
+      "url": "https://www.schreinerzwei.ch/ueber-uns/fileadmin/template/hp_images/Facebook_Logo.png",
+      "alt": "Facebook"
+    },
+    {
+      "url": "https://www.schreinerzwei.ch/ueber-uns/fileadmin/template/hp_images/Instagram.png",
+      "alt": "Instagram"
+    },
+    {
+      "url": "https://www.schreinerzwei.ch/ueber-uns/fileadmin/template/hp_images/Button_Nachoben.png",
+      "alt": "Oben"
+    },
+    {
+      "url": "https://www.schreinerzwei.ch/ueber-uns/team/fileadmin/template/hp_images/_Logo_Schreinerzwei.png",
+      "alt": "Logo"
+    },
+    {
+      "url": "https://www.schreinerzwei.ch/ueber-uns/team/fileadmin/_migrated/pics/Visual_team.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.schreinerzwei.ch/ueber-uns/team/fileadmin/_processed_/csm_Andreas_Studer_8283f927f1.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.schreinerzwei.ch/ueber-uns/team/fileadmin/_processed_/csm_AP_Bearbeitet_060747cf29.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.schreinerzwei.ch/ueber-uns/team/fileadmin/_processed_/csm_Marc_Glauser_555ca7ad26.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.schreinerzwei.ch/ueber-uns/team/fileadmin/bilder/Content/Mitarbeiter_August_2019/Walter_Feitknecht.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.schreinerzwei.ch/ueber-uns/team/fileadmin/_processed_/csm_Barbara_Spring_Studer_6016096b1d.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.schreinerzwei.ch/ueber-uns/team/fileadmin/_processed_/csm_Janine_Schwab_71e952414b.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.schreinerzwei.ch/ueber-uns/team/fileadmin/template/hp_images/Facebook_Logo.png",
+      "alt": "Facebook"
+    },
+    {
+      "url": "https://www.schreinerzwei.ch/ueber-uns/team/fileadmin/template/hp_images/Instagram.png",
+      "alt": "Instagram"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/schreinerzwei-393d389b6fad.jpg",
+      "url": "https://www.schreinerzwei.ch/uploads/tx_flexslider/header_tueren.jpg",
+      "sourceUrl": "https://www.schreinerzwei.ch/uploads/tx_flexslider/header_tueren.jpg",
+      "alt": "",
+      "width": 936,
+      "height": 349,
+      "sha256": "393d389b6fadcea83fd18bcb02d0606e70b7d50f03e2d734f97bec701e54d86d"
+    },
+    {
+      "path": "assets/schreinerzwei-865505c312d2.jpg",
+      "url": "https://www.schreinerzwei.ch/uploads/tx_flexslider/header_moebel.jpg",
+      "sourceUrl": "https://www.schreinerzwei.ch/uploads/tx_flexslider/header_moebel.jpg",
+      "alt": "",
+      "width": 936,
+      "height": 349,
+      "sha256": "865505c312d2e05ccaef657db6db0756850e51263afa8aeacdfbdd8ac70829b6"
+    },
+    {
+      "path": "assets/schreinerzwei-e3710f9f2cc8.png",
+      "url": "https://www.schreinerzwei.ch/fileadmin/template/hp_images/_Logo_Schreinerzwei.png",
+      "sourceUrl": "https://www.schreinerzwei.ch/fileadmin/template/hp_images/_Logo_Schreinerzwei.png",
+      "alt": "Logo",
+      "width": 225,
+      "height": 126,
+      "sha256": "e3710f9f2cc899ae03a11239108d4b5009a0154223343a3bedc3e33910af3a65"
+    },
+    {
+      "path": "assets/schreinerzwei-096d1cba37c6.jpg",
+      "url": "https://www.schreinerzwei.ch/uploads/tx_flexslider/header_fenster.jpg",
+      "sourceUrl": "https://www.schreinerzwei.ch/uploads/tx_flexslider/header_fenster.jpg",
+      "alt": "",
+      "width": 936,
+      "height": 349,
+      "sha256": "096d1cba37c68e5b5e889dbd23aa42ab1c60c94f5ae7aaca202a1b47592f2b88"
+    },
+    {
+      "path": "assets/schreinerzwei-1e53036358fe.jpg",
+      "url": "https://www.schreinerzwei.ch/uploads/tx_flexslider/header_boeden_01.jpg",
+      "sourceUrl": "https://www.schreinerzwei.ch/uploads/tx_flexslider/header_boeden_01.jpg",
+      "alt": "",
+      "width": 936,
+      "height": 349,
+      "sha256": "1e53036358fe6595c3ac027911ded17989486f2a5ad26b419a3a9ca6939446fe"
+    }
+  ]
+}

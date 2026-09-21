@@ -1,0 +1,363 @@
+{
+  "slug": "seiler",
+  "name": "E. Seiler AG",
+  "website": "https://seilerburgdorf.ch/",
+  "locality": "Burgdorf BE",
+  "industry": "Werkzeuge / Schliesstechnik",
+  "phone": "034 420 13 00",
+  "runId": "batch-prospects-2026-09-21-round2-b-1bcd75bcba0d507d",
+  "report": "reports/prospecting-2026-09-21-round2/reviews/seiler.md",
+  "family": "places",
+  "activity": {
+    "status": "temporary_holiday",
+    "sourceUrl": "https://seilerburgdorf.ch/aktuell",
+    "excerpt": "Betriebsferien vom 19. 9. - 5. 10. 2026",
+    "finding": "Eigene aktuelle Mitteilung: Betriebspause bis einschliesslich 5. Oktober; Wiederaufnahme ab 6. Oktober 2026. Kein Hinweis auf eine dauerhafte Schliessung. Anruf zurückstellen."
+  },
+  "quality": 64.73684210526316,
+  "facts": [
+    {
+      "field": "company_name",
+      "value": "E. Seiler AG Burgdorf",
+      "evidenceIds": [
+        "0f01d76c-2ca0-427b-83e6-ef4dda109d1e"
+      ]
+    },
+    {
+      "field": "locality",
+      "value": "Burgdorf",
+      "evidenceIds": [
+        "04b7dc39-d0d1-430a-9457-0f449863624a"
+      ]
+    },
+    {
+      "field": "address",
+      "value": "Hohengasse 31, 3400 Burgdorf",
+      "evidenceIds": [
+        "04b7dc39-d0d1-430a-9457-0f449863624a"
+      ]
+    },
+    {
+      "field": "industry",
+      "value": "Eisenwarengewerbe",
+      "evidenceIds": [
+        "a27b34a8-abea-48f2-b975-89419a8d6c29"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Holzkochherde",
+      "evidenceIds": [
+        "0f01d76c-2ca0-427b-83e6-ef4dda109d1e"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Elektrowerkzeuge",
+      "evidenceIds": [
+        "0f01d76c-2ca0-427b-83e6-ef4dda109d1e"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Pumpen",
+      "evidenceIds": [
+        "0f01d76c-2ca0-427b-83e6-ef4dda109d1e"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Schliesstechnik",
+      "evidenceIds": [
+        "0f01d76c-2ca0-427b-83e6-ef4dda109d1e"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Briefkästen",
+      "evidenceIds": [
+        "0f01d76c-2ca0-427b-83e6-ef4dda109d1e"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Tresore",
+      "evidenceIds": [
+        "0f01d76c-2ca0-427b-83e6-ef4dda109d1e"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Drechselbänke von Record",
+      "evidenceIds": [
+        "0f01d76c-2ca0-427b-83e6-ef4dda109d1e"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Schnitzwerkzeuge",
+      "evidenceIds": [
+        "0f01d76c-2ca0-427b-83e6-ef4dda109d1e"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "3D Luftbefeuchter",
+      "evidenceIds": [
+        "0f01d76c-2ca0-427b-83e6-ef4dda109d1e"
+      ]
+    },
+    {
+      "field": "claim",
+      "value": "Qualität-Beratung-Service seit 1948",
+      "evidenceIds": [
+        "0f01d76c-2ca0-427b-83e6-ef4dda109d1e"
+      ]
+    },
+    {
+      "field": "opening_hours",
+      "value": "Montag: ganzer Tag geschlossen",
+      "evidenceIds": [
+        "04b7dc39-d0d1-430a-9457-0f449863624a"
+      ]
+    },
+    {
+      "field": "opening_hours",
+      "value": "Dienstag - Freitag: 08.30 - 12.00 & 13.30 - 18.30 Uhr",
+      "evidenceIds": [
+        "04b7dc39-d0d1-430a-9457-0f449863624a"
+      ]
+    },
+    {
+      "field": "opening_hours",
+      "value": "Samstag: 08.30 - 16.00 Uhr durchgehend",
+      "evidenceIds": [
+        "04b7dc39-d0d1-430a-9457-0f449863624a"
+      ]
+    }
+  ],
+  "contacts": [
+    {
+      "contact_id": "64c88bf5-dde6-46f4-a85f-938030226bb4",
+      "kind": "phone",
+      "value": "034 420 13 00",
+      "evidence_ids": [
+        "04b7dc39-d0d1-430a-9457-0f449863624a"
+      ]
+    },
+    {
+      "contact_id": "4ae9e5a7-5b4d-4217-9040-e2da09287ee5",
+      "kind": "contact_page",
+      "value": "https://seilerburgdorf.ch/kontakt",
+      "evidence_ids": [
+        "04b7dc39-d0d1-430a-9457-0f449863624a"
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "observation": "Die Beschreibungen und Beschriftungen der Leistungskarten sind bei 375 px sehr klein dargestellt.",
+      "recommendation": "Kartentypografie bei kleinen Viewports vergrössern und ausreichende Zeilenabstände vorsehen."
+    },
+    {
+      "observation": "Auf der mobilen Startseite ist kein direkter Kontaktaufruf ausserhalb des Menüs sichtbar; Telefon und E-Mail stehen im Fliesstext und im Footer.",
+      "recommendation": "Einen sichtbaren Kontaktaufruf im mobilen Einstiegsbereich ergänzen."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "0f01d76c-2ca0-427b-83e6-ef4dda109d1e",
+      "url": "https://seilerburgdorf.ch/",
+      "text": "E. Seiler AG Burgdorf\n\nMenü\n\nÜber Uns\nAktuell\nHolzkochherd – Heizen und Kochen mit Holz\nWerkstattöfen / Holzöfen von Wamsler\nElektrowerkzeuge\nPumpen\nSchliesstechnik\nBriefkästen\nTresore\nDrechselbänke von Record\nSchnitzwerkzeuge\n3D Luftbefeuchter\nOnlineshop\nKontakt\nGalerie / Ausstellung\n\nWillkommen bei der E. Seiler AG Burgdorf\n\nHolzkochherde\n\nmehr ...\n\nDrechselbänke\n\nmehr...\n\nSchwengelpumpen\n\nmehr ...\n\nKondensatpumpen\n\nmehr ...\n\nSchliesstechnik\n\nmehr ...\n\nE. Seiler AG - Qualität-Beratung-Service seit 1948\n\nSchön, dass Sie die Website der E. Seiler AG Burgdorf besuchen ! Hier finden Sie umfassende Informationen über unser Unternehmen und unsere Produkte. Gerne sind wir für Sie da, falls Sie weitere Fragen haben. Sie können uns telefonisch (034 420 13 00) oder per E-Mail info(at)seilerburgdorf.ch erreichen. Alternativ freuen wir uns, Sie in unserem Verkaufsladen willkommen zu heißen !\n\nSchliesstechnik\n\nWir sind offizieller Assa Abloy/Keso, dormakaba und Sea Systempartner ...\n\nmehr...\n\nWamsler Holzkochherde\n\nBesuchen Sie unsere ständige, grosse Ausstellung ...\n\nmehr...\n\nRecord Power Drechselbänke\n\nAus massivem Guss, mit hoher Laufruhe und viel Zubehör...\n\nmehr...\n\nRecord Power Elektrowerkzeuge\n\nMassiv, dauerhaft, innovativ - mit 5 Jahres-Garantie ...\n\nmehr...\n\nKondensatpumpen\n\nWir sind seit über 30 Jahren offizieller Little Giant Partnerhändler …\n\nmehr...\n\nSchwengelpumpen\n\nDekorativ und voll funktionsfähig für Haus und Garten...\n\nmehr...\n\nBriefkästen\n\nDer Briefkasten ist eine Visitenkarte Ihres Hauses - wir beraten Sie gerne …  \n\nmehr...\n\nTresore\n\nDer richtige Tresor für Geschäfts- & Privatbereich - wir beraten Sie gerne … \n\nmehr...\n\nPfeil Schnitzwerkzeuge\n\nPfeil Schnitzwerkzeuge - grosse Auswahl am Lager … \n\nmehr...\n\nAktuelles\n\nFestool Aktionen\n\nBeachen Sie unsere aktuelle"
+    },
+    {
+      "id": "4a1d035a-9c90-45f7-9b3b-980910007be0",
+      "url": "https://seilerburgdorf.ch/",
+      "text": "n Festool-Aktionen - ab Lager lieferbar !\n \n\nmehr...\n\nHolzkochherde\n\nBeachten Sie unsere aktuellen Aktionsmodelle - ab Lager lieferbar ! \n\nmehr...\n\nOnline-Shop\n\nBeachten Sie unsere aktuellen Angebot auf tutti.ch … \n\nmehr...\n\nÖffnungszeiten\n\nUnser Geschäft ist von Dienstag - Samstag geöffnet … \n\nmehr...\n\n© by E. Seiler AG | Hohengasse 31 | 3400 Burgdorf | Telefon 034 420 13 00 | E-Mail | Impressum und Datenschutz | Newsletter\n\nHolzkochherde\nHolzöfen\nFestool\nDrechselbänke\n\nSchwengelpumpen\nKondensatpumpen\n12 & 24 Volt Pumpen\nWasserpumpen\n\nSchliesstechnik\n3D Luftbefeuchter\nricardo.ch"
+    },
+    {
+      "id": "a27b34a8-abea-48f2-b975-89419a8d6c29",
+      "url": "https://seilerburgdorf.ch/ueber-uns",
+      "text": "E. Seiler AG Burgdorf\n\nMenü\n\nÜber Uns\nAktuell\nHolzkochherd – Heizen und Kochen mit Holz\nWerkstattöfen / Holzöfen von Wamsler\nElektrowerkzeuge\nPumpen\nSchliesstechnik\nBriefkästen\nTresore\nDrechselbänke von Record\nSchnitzwerkzeuge\n3D Luftbefeuchter\nOnlineshop\nKontakt\nGalerie / Ausstellung\n\nÜber uns\n\nTradition seit über 100 Jahren\nDas Eisenwarengewerbe am Burgdorfer Kronenplatz hat Tradition. Bereits vor über 100 Jahren wurden im Zentrum der Altstadt Eisenwaren, Werkzeuge, Beschläge und Haushaltwaren verkauft. Die E. Seiler AG wurde 1948 gegründet und wird heute in der 3. Generation geführt. Aus der sogenannten Eisenhandlung (Werkzeuge, landwirtschaftliche Geräte, Eisenwaren, Molkereiartikel etc.) des mittleren 20. Jahrhunderts hat sich eine Firma mit verschiedenen Spezial-Abteilungen entwickelt, welche mit der traditionellen Eisenhandlung kaum mehr identisch sind; z.B. Heizgeräte, Pumpen und Sicherheitstechnik.\n \nEin Blick in die Zukunft\nEisenhandlungen mit Vollsortiment im traditionellen Sinne gibt es immer weniger. Der Markt und das Einkaufsverhalten der Konsumenten hat sich in den letzten Jahren stark verändert. Wir sind bestrebt mit fachkompetenter Beratung, hohem Servicegrad und innovativen Produkten, die sich bietenden Chancen im Interesse der Kundschaft auch künftig aktiv wahrzunehmen.\n\nZahlen & Fakten\n\n1928 - Am 29. August tritt Ernst Seiler aus Basel in die Eisenhandlung H. Frey & Co. in der Burgdorfer Altstadt ein und beteiligt sich finanziell am Unternehmen.\n\n1948 - Gründung der E. Seiler AG nach dem Tod von H. Frey.\n\n1956 - Die beiden Söhne – Ernst (jun.) und Walter übernehen die Geschäftsführung der E. Seiler AG.\n\n1966 - Tod des Firmengründers Ernst Seiler\n\n1969 - Umbau Erdgeschoss (Abteilung Werkzeuge / Maschinen) und Ausbau des 1. Stockes.\n\n1969 - Einrichten "
+    },
+    {
+      "id": "8ec867c2-7182-4223-b5e6-87cbd9b07169",
+      "url": "https://seilerburgdorf.ch/ueber-uns",
+      "text": "der Haushalt- & Geschenke-Abteilung unter der Leitung von Christine Seiler.\n\n1990 - Pflästerung der Altstadt und Erföffnung des Parkhaus Oberstadt. Die Zufahrt zu unserem Geschäft ist nur noch für den Güterumschlag gestattet.\n\n1995 - Offizielle Übernahme der WAMSLER (München / D) Holzkochherde-Vetretung für die deutschsprachige Schweiz.\n\n1999 - Ernst Seiler (jun.) tritt in den Ruhestand. Übernahme der E. Seiler AG durch die Familie Walter Seiler.\n\n2000 - Liquidation der klassichen Eisenwaren-Abteilung (Schrauben, Nägel, Eisenwaren etc.)\n\n2002 - Neuer Ausstellungsraum für die Wamsler Holzkochherde und Heizgeräte.\n\n2004 - Start On-Line Verkauf auf der Auktionsplattform ricardo.ch.\n\n2016 - Wir erreichen 7000 (POSITIVE) Bewertungen auf ricardo.ch.\n\n2017 - Ausverkauf Haushalt- & Geschenkartikel. Die Abteilung im 1. Stock wird am 1. Juli 2017 für immer geschlossen.\n\n2019 - Die E. Seiler AG gewinnt den Burgdorfer Altstadtpreis 2019.\n\n2019 - Tod von Christine Seiler - Senior-Chefin und Verwaltungsrätin.\n\n2020 - Tod von Walter Seiler - Senior-Chef und Verwaltungsratspräsident.\n\n2020 - Ab 1. Oktober: Buchhandlung am Kronenplatz bei uns im 1. Stock für 1 Jahr \"zu Gast\"\n\n2021 - Verkauf der Schlossgasse 14 - Integration der Ofenausstellung/Schlüsselwerkstatt in die Hohengasse 31\n\n2023 - 75 Jahre E. Seiler AG\n\n© by E. Seiler AG | Hohengasse 31 | 3400 Burgdorf | Telefon 034 420 13 00 | E-Mail | Impressum und Datenschutz | Newsletter\n\nHolzkochherde\nHolzöfen\nFestool\nDrechselbänke\n\nSchwengelpumpen\nKondensatpumpen\n12 & 24 Volt Pumpen\nWasserpumpen\n\nSchliesstechnik\n3D Luftbefeuchter\nricardo.ch"
+    },
+    {
+      "id": "04b7dc39-d0d1-430a-9457-0f449863624a",
+      "url": "https://seilerburgdorf.ch/kontakt",
+      "text": "E. Seiler AG Burgdorf\n\nMenü\n\nÜber Uns\nAktuell\nHolzkochherd – Heizen und Kochen mit Holz\nWerkstattöfen / Holzöfen von Wamsler\nElektrowerkzeuge\nPumpen\nSchliesstechnik\nBriefkästen\nTresore\nDrechselbänke von Record\nSchnitzwerkzeuge\n3D Luftbefeuchter\nOnlineshop\nKontakt\nGalerie / Ausstellung\n\nKontakt\n\nE. Seiler AG am Kronenplatz / Oberstadt\nHohengasse 31\n3400 Burgdorf\nTel. 034 420 13 00\nFax. 034 420 13 01\ninfo(at)seilerburgdorf.ch\n\nÖffnungszeiten und Betriebsferien\n\nMontag: ganzer Tag geschlossen\nDienstag - Freitag: 08.30 - 12.00 & 13.30 - 18.30 Uhr\nSamstag: 08.30 - 16.00 Uhr durchgehend\nBetriebsferien 2026:\nOster-Samstag, 4. April: Geschlossen\nSommer-Ferien: 20. Juli - 3. August\nHerbst-Ferien: 19. September - 5. Oktober\nWeihnacht/Neujahr: 28. 12. 2026 - 5. 1. 2027\n\nParkieren Sie direkt vor unserem Geschäft\n\nFür Güterumschlag und Kurz-Einkäufe können Sie direkt vor unserem Geschäft parkieren. Fahren Sie in die Altstadt und parkieren Sie bei uns am Trottoir-Rand. Die Zufahrt für den motorisierten Verkehr ist zu jeder Tageszeit möglich. Von 17.00 - 06.00 Uhr ist die ganze Schmiedengasse mittels Poller für den Verkehr gesperrt. Während dieser Zeit ist die Zufahrt nur über die Hohengasse/Staldenbrücke/Technikumstrasse möglich.\n\nMit dem ÖV direkt vor unser Geschäft fahren\n\nReisen Sie per ÖV nach Burgdorf ?\nDer Ortsbus (Linie 461 ) bringt Sie ab dem Hauptbahnhof Burgdorf bequem (ca. alle 15 Minuten) in die Burgdorfer Oberstadt und hält auf dem Kronenplatz direkt vor unserem Geschäft.\n\n© by E. Seiler AG | Hohengasse 31 | 3400 Burgdorf | Telefon 034 420 13 00 | E-Mail | Impressum und Datenschutz | Newsletter\n\nHolzkochherde\nHolzöfen\nFestool\nDrechselbänke\n\nSchwengelpumpen\nKondensatpumpen\n12 & 24 Volt Pumpen\nWasserpumpen\n\nSchliesstechnik\n3D Luftbefeuchter\nricardo.ch"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://seilerburgdorf.ch/fileadmin/templates/2017/images/logo_seiler.svg",
+      "alt": ""
+    },
+    {
+      "url": "https://seilerburgdorf.ch/fileadmin/templates/2017/images/arrow.svg",
+      "alt": ""
+    },
+    {
+      "url": "https://seilerburgdorf.ch/fileadmin/_processed_/a/1/csm_Header_Festtool_2000x700_1008729d40.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://seilerburgdorf.ch/fileadmin/_processed_/1/8/csm_Header_Nostalgie_2000x700_083e54ddf9.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://seilerburgdorf.ch/fileadmin/_processed_/0/3/csm_CL3_log_a5cec9f057.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://seilerburgdorf.ch/fileadmin/user_upload/Ausguss.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://seilerburgdorf.ch/fileadmin/_processed_/8/c/csm_Ko_1f6410dd51.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://seilerburgdorf.ch/fileadmin/user_upload/Sea2017.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://seilerburgdorf.ch/fileadmin/_processed_/0/2/csm_Sea2017_d34f39534f.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://seilerburgdorf.ch/fileadmin/user_upload/Bilder/Startseite/Content_kochherde_pumpen_1000x666_2.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://seilerburgdorf.ch/fileadmin/user_upload/Bilder/Startseite/Record_Drechselbaenke_1000x666.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://seilerburgdorf.ch/fileadmin/user_upload/Bilder/Startseite/Tellerschleifmaschine_DS_300_1000x666.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://seilerburgdorf.ch/fileadmin/user_upload/Bilder/Startseite/VCMS_1000x666.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://seilerburgdorf.ch/fileadmin/user_upload/Bilder/Startseite/Schwengelpumpen_1000x666.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://seilerburgdorf.ch/fileadmin/user_upload/Bilder/Briefkaesten/IMG_3627.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://seilerburgdorf.ch/fileadmin/user_upload/Bilder/Tresore/TresorToscana.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://seilerburgdorf.ch/fileadmin/user_upload/Bilder/Schnitzwerkzeuge/Schnitzwerkzeuge.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://seilerburgdorf.ch/fileadmin/_processed_/4/5/csm_Festool_Saege_Systainer_1000x666_9b46c9224a.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://seilerburgdorf.ch/fileadmin/_processed_/d/0/csm_Content_k80_wamsler_1000x666_3_2754edf75d.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://seilerburgdorf.ch/fileadmin/user_upload/Tutti-2.png",
+      "alt": ""
+    },
+    {
+      "url": "https://seilerburgdorf.ch/fileadmin/user_upload/Bilder/Aktuell/Gebaeude_1000x666.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://seilerburgdorf.ch/fileadmin/_processed_/7/b/csm_Icon_FB_f1b2b62a16.png",
+      "alt": ""
+    },
+    {
+      "url": "https://seilerburgdorf.ch/fileadmin/_processed_/b/8/csm_SeilerAG-Retro_c8632103ea.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://seilerburgdorf.ch/fileadmin/user_upload/Bilder/Ueber%20uns/Content_ueberuns_einst_1000x666.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://seilerburgdorf.ch/fileadmin/user_upload/Bilder/Ueber%20uns/Content_ueberuns_heute_1000x666.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://seilerburgdorf.ch/fileadmin/_processed_/a/d/csm_SeilerAG-2018__8__3d55ea81ec.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://seilerburgdorf.ch/fileadmin/_processed_/d/3/csm_SeilerAG-2018__24__b806cbe97a.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://seilerburgdorf.ch/fileadmin/_processed_/9/d/csm_2011-2_fb271ec0ce.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://seilerburgdorf.ch/fileadmin/_processed_/a/d/csm_SeilerAG-2018__8__6cf7913b2b.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://seilerburgdorf.ch/fileadmin/user_upload/BSL.jpg",
+      "alt": ""
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/seiler-c980682d2fb2.jpg",
+      "url": "https://seilerburgdorf.ch/fileadmin/_processed_/a/1/csm_Header_Festtool_2000x700_1008729d40.jpg",
+      "sourceUrl": "https://seilerburgdorf.ch/fileadmin/_processed_/a/1/csm_Header_Festtool_2000x700_1008729d40.jpg",
+      "alt": "",
+      "width": 1600,
+      "height": 560,
+      "sha256": "c980682d2fb2d1b1cd9665ec182bb685026ee26c098312ee2b9c4a51f7093e91"
+    },
+    {
+      "path": "assets/seiler-1ca6e4a298f5.jpg",
+      "url": "https://seilerburgdorf.ch/fileadmin/_processed_/1/8/csm_Header_Nostalgie_2000x700_083e54ddf9.jpg",
+      "sourceUrl": "https://seilerburgdorf.ch/fileadmin/_processed_/1/8/csm_Header_Nostalgie_2000x700_083e54ddf9.jpg",
+      "alt": "",
+      "width": 1600,
+      "height": 560,
+      "sha256": "1ca6e4a298f5a904ac7d5d74c2869434af1db8925c32ddf350b14f907ab0bfa8"
+    },
+    {
+      "path": "assets/seiler-faba6ca378ad.jpg",
+      "url": "https://seilerburgdorf.ch/fileadmin/_processed_/0/3/csm_CL3_log_a5cec9f057.jpg",
+      "sourceUrl": "https://seilerburgdorf.ch/fileadmin/_processed_/0/3/csm_CL3_log_a5cec9f057.jpg",
+      "alt": "",
+      "width": 1600,
+      "height": 780,
+      "sha256": "faba6ca378ad4f4ed70a339bb13a8fbbb998d31aa63e7d6a5f9a68bcbdb58bb2"
+    },
+    {
+      "path": "assets/seiler-7ad6ee698f36.jpg",
+      "url": "https://seilerburgdorf.ch/fileadmin/user_upload/Ausguss.jpg",
+      "sourceUrl": "https://seilerburgdorf.ch/fileadmin/user_upload/Ausguss.jpg",
+      "alt": "",
+      "width": 1600,
+      "height": 560,
+      "sha256": "7ad6ee698f368f6d2c88c77e3a94d87aafc9177cf12f71d660d999c5ecf383db"
+    },
+    {
+      "path": "assets/seiler-b73a988d6150.jpg",
+      "url": "https://seilerburgdorf.ch/fileadmin/_processed_/8/c/csm_Ko_1f6410dd51.jpg",
+      "sourceUrl": "https://seilerburgdorf.ch/fileadmin/_processed_/8/c/csm_Ko_1f6410dd51.jpg",
+      "alt": "",
+      "width": 1600,
+      "height": 730,
+      "sha256": "b73a988d615066c462e306ecef9acd3c1792447fb5e88413ebeb88591295d8ff"
+    }
+  ]
+}

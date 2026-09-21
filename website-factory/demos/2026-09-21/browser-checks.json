@@ -1,0 +1,757 @@
+{
+  "checkedAt": "2026-09-21T18:04:27.982Z",
+  "mode": "real_local_browser_checks",
+  "viewports": [
+    375,
+    768,
+    1440
+  ],
+  "darkMode": true,
+  "reducedMotion": true,
+  "results": [
+    {
+      "slug": "fuhrer",
+      "passed": true,
+      "checks": [
+        {
+          "width": 375,
+          "contentWidth": 375,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        },
+        {
+          "width": 768,
+          "contentWidth": 768,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        },
+        {
+          "width": 1440,
+          "contentWidth": 1440,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        }
+      ],
+      "darkOverflow": false,
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "slug": "grossfeld",
+      "passed": true,
+      "checks": [
+        {
+          "width": 375,
+          "contentWidth": 375,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        },
+        {
+          "width": 768,
+          "contentWidth": 768,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        },
+        {
+          "width": 1440,
+          "contentWidth": 1440,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        }
+      ],
+      "darkOverflow": false,
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "slug": "bernhof",
+      "passed": true,
+      "checks": [
+        {
+          "width": 375,
+          "contentWidth": 375,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        },
+        {
+          "width": 768,
+          "contentWidth": 768,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        },
+        {
+          "width": 1440,
+          "contentWidth": 1440,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        }
+      ],
+      "darkOverflow": false,
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "slug": "wismer",
+      "passed": true,
+      "checks": [
+        {
+          "width": 375,
+          "contentWidth": 375,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        },
+        {
+          "width": 768,
+          "contentWidth": 768,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        },
+        {
+          "width": 1440,
+          "contentWidth": 1440,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        }
+      ],
+      "darkOverflow": false,
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "slug": "sopra",
+      "passed": true,
+      "checks": [
+        {
+          "width": 375,
+          "contentWidth": 375,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        },
+        {
+          "width": 768,
+          "contentWidth": 768,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        },
+        {
+          "width": 1440,
+          "contentWidth": 1440,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        }
+      ],
+      "darkOverflow": false,
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "slug": "bieri",
+      "passed": true,
+      "checks": [
+        {
+          "width": 375,
+          "contentWidth": 375,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        },
+        {
+          "width": 768,
+          "contentWidth": 768,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        },
+        {
+          "width": 1440,
+          "contentWidth": 1440,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        }
+      ],
+      "darkOverflow": false,
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "slug": "hairstudio-f",
+      "passed": true,
+      "checks": [
+        {
+          "width": 375,
+          "contentWidth": 375,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        },
+        {
+          "width": 768,
+          "contentWidth": 768,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        },
+        {
+          "width": 1440,
+          "contentWidth": 1440,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        }
+      ],
+      "darkOverflow": false,
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "slug": "schreinerzwei",
+      "passed": true,
+      "checks": [
+        {
+          "width": 375,
+          "contentWidth": 375,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        },
+        {
+          "width": 768,
+          "contentWidth": 768,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        },
+        {
+          "width": 1440,
+          "contentWidth": 1440,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        }
+      ],
+      "darkOverflow": false,
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "slug": "holiday",
+      "passed": true,
+      "checks": [
+        {
+          "width": 375,
+          "contentWidth": 375,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        },
+        {
+          "width": 768,
+          "contentWidth": 768,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        },
+        {
+          "width": 1440,
+          "contentWidth": 1440,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        }
+      ],
+      "darkOverflow": false,
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "slug": "seiler",
+      "passed": true,
+      "checks": [
+        {
+          "width": 375,
+          "contentWidth": 375,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        },
+        {
+          "width": 768,
+          "contentWidth": 768,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        },
+        {
+          "width": 1440,
+          "contentWidth": 1440,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        }
+      ],
+      "darkOverflow": false,
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "slug": "wacker",
+      "passed": true,
+      "checks": [
+        {
+          "width": 375,
+          "contentWidth": 375,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [
+            {
+              "tag": "SPAN",
+              "className": "",
+              "right": 427.265625
+            }
+          ],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        },
+        {
+          "width": 768,
+          "contentWidth": 768,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        },
+        {
+          "width": 1440,
+          "contentWidth": 1440,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        }
+      ],
+      "darkOverflow": false,
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "slug": "coiffeur-lanz",
+      "passed": true,
+      "checks": [
+        {
+          "width": 375,
+          "contentWidth": 375,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        },
+        {
+          "width": 768,
+          "contentWidth": 768,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        },
+        {
+          "width": 1440,
+          "contentWidth": 1440,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        }
+      ],
+      "darkOverflow": false,
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "slug": "fritschi-griesemer",
+      "passed": true,
+      "checks": [
+        {
+          "width": 375,
+          "contentWidth": 375,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        },
+        {
+          "width": 768,
+          "contentWidth": 768,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        },
+        {
+          "width": 1440,
+          "contentWidth": 1440,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        }
+      ],
+      "darkOverflow": false,
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "slug": "martin-graf-gartenbau",
+      "passed": true,
+      "checks": [
+        {
+          "width": 375,
+          "contentWidth": 375,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [
+            {
+              "tag": "DIV",
+              "className": "m-leaf",
+              "right": 496.9751892089844
+            }
+          ],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        },
+        {
+          "width": 768,
+          "contentWidth": 768,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [
+            {
+              "tag": "DIV",
+              "className": "m-leaf",
+              "right": 889.9752197265625
+            }
+          ],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        },
+        {
+          "width": 1440,
+          "contentWidth": 1440,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [
+            {
+              "tag": "DIV",
+              "className": "m-leaf",
+              "right": 1501.97509765625
+            }
+          ],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        }
+      ],
+      "darkOverflow": false,
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "slug": "lantii",
+      "passed": true,
+      "checks": [
+        {
+          "width": 375,
+          "contentWidth": 375,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        },
+        {
+          "width": 768,
+          "contentWidth": 768,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        },
+        {
+          "width": 1440,
+          "contentWidth": 1440,
+          "headings": 1,
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        }
+      ],
+      "darkOverflow": false,
+      "errors": [],
+      "failedRequests": []
+    }
+  ]
+}

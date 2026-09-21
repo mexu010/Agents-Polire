@@ -1,0 +1,173 @@
+{
+  "slug": "wismer",
+  "name": "Blumengärtnerei Wismer AG",
+  "website": "https://www.blumenwismer.ch/",
+  "locality": "Zug ZG",
+  "industry": "Gärtnerei / Floristik",
+  "phone": "041 711 06 25",
+  "runId": "batch-prospects-2026-09-21-b-760a5be3381d0366",
+  "report": "reports/prospecting-2026-09-21/reviews/wismer.md",
+  "family": "places",
+  "activity": {
+    "status": "uncertain",
+    "sourceUrl": "https://www.blumenwismer.ch/blank-3",
+    "activityDate": null,
+    "excerpt": "Unsere Öffnungszeiten",
+    "finding": "Live-Seite zeigt Öffnungszeiten und Kontakte. Ein Suchindex erwähnte Sommerferien 2026; diese datierte Angabe war auf der direkt geöffneten Seite nicht mehr vorhanden. Betrieb vorerst nicht als aktuell bestätigt werten."
+  },
+  "quality": 65.36842105263159,
+  "facts": [
+    {
+      "field": "company_name",
+      "value": "Blumengärtnerei Wismer AG",
+      "evidenceIds": [
+        "da93bc4b-66ff-42c6-8e92-75c58b689bae"
+      ]
+    },
+    {
+      "field": "locality",
+      "value": "Zug",
+      "evidenceIds": [
+        "da93bc4b-66ff-42c6-8e92-75c58b689bae"
+      ]
+    },
+    {
+      "field": "address",
+      "value": "Kirchmattstrasse 10\n6300 Zug",
+      "evidenceIds": [
+        "da93bc4b-66ff-42c6-8e92-75c58b689bae"
+      ]
+    },
+    {
+      "field": "industry",
+      "value": "Blumengärtnerei",
+      "evidenceIds": [
+        "da93bc4b-66ff-42c6-8e92-75c58b689bae"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Blumensträusse und Arrangemente für alle Anlässe",
+      "evidenceIds": [
+        "da93bc4b-66ff-42c6-8e92-75c58b689bae"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Blumen Abos wöchentlich/monatlich",
+      "evidenceIds": [
+        "da93bc4b-66ff-42c6-8e92-75c58b689bae"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Trauer Floristik",
+      "evidenceIds": [
+        "da93bc4b-66ff-42c6-8e92-75c58b689bae"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Individuelle Grabbepflanzung",
+      "evidenceIds": [
+        "da93bc4b-66ff-42c6-8e92-75c58b689bae"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Verschönerung von ihrem Balkon oder Ihrer Terrasse mit standortgerechten Pflanzen",
+      "evidenceIds": [
+        "da93bc4b-66ff-42c6-8e92-75c58b689bae"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Innenbegrünung mit Zimmerpflanzen oder Hydropflanzen",
+      "evidenceIds": [
+        "da93bc4b-66ff-42c6-8e92-75c58b689bae"
+      ]
+    },
+    {
+      "field": "opening_hours",
+      "value": "Dienstag - Freitag 8.00 - 12.00 13.30 - 18.00",
+      "evidenceIds": [
+        "da93bc4b-66ff-42c6-8e92-75c58b689bae"
+      ]
+    },
+    {
+      "field": "opening_hours",
+      "value": "Samstag 9.00 - 16.00",
+      "evidenceIds": [
+        "da93bc4b-66ff-42c6-8e92-75c58b689bae"
+      ]
+    },
+    {
+      "field": "opening_hours",
+      "value": "Sonntag und Montag geschlossen",
+      "evidenceIds": [
+        "da93bc4b-66ff-42c6-8e92-75c58b689bae"
+      ]
+    },
+    {
+      "field": "opening_hours",
+      "value": "Vor Feiertagen ab 16.00 Uhr geschlossen",
+      "evidenceIds": [
+        "da93bc4b-66ff-42c6-8e92-75c58b689bae"
+      ]
+    }
+  ],
+  "contacts": [
+    {
+      "contact_id": "aed29bf5-6b3d-4469-8c5c-63884a238956",
+      "kind": "phone",
+      "value": "+41(0) 417110625",
+      "evidence_ids": [
+        "da93bc4b-66ff-42c6-8e92-75c58b689bae"
+      ]
+    },
+    {
+      "contact_id": "01251765-d4be-4d02-9591-b55d4e059527",
+      "kind": "email",
+      "value": "blumenwismer@bluewin.ch",
+      "evidence_ids": [
+        "da93bc4b-66ff-42c6-8e92-75c58b689bae"
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "observation": "Im oberen Seitenbereich ist keine klar erkennbare Handlungsaufforderung sichtbar; Telefon und E-Mail stehen weiter unten auf der Seite.",
+      "recommendation": "Kontaktaufnahme im oberen Seitenbereich deutlich platzieren."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "da93bc4b-66ff-42c6-8e92-75c58b689bae",
+      "url": "https://www.blumenwismer.ch/",
+      "text": "Gärtnerei und Blumen | Grabbepflanzung und Kränze | Zug,\n\ntop of page\n\n​\n\nStart\n\nAngebot\n\nKontakt\n\nUeber uns\n\nMore\n\nUse tab to navigate through the menu items.\n\nWillkommen bei der Blumeng&auml;rtnerei Wismer\n\nUnsere &Ouml;ffnungszeiten\nDienstag - Freitag 8.00 - 12.00 13.30 - 18.00\nSamstag 9.00 - 16.00\nSonntag und Montag geschlossen\nVor Feiertagen ab 16.00 Uhr geschlossen\n\nUnsere G&auml;rtnerei befindet sich direkt unterhalb vom Friedhof in Zug. Kostenlose Parkpl&auml;tze befinden sich vor der T&uuml;r.\n\nBlumeng&auml;rtnerei Wismer AG\nKirchmattstrasse 10\n6300 Zug\nTel. +41(0) 417110625\nE-mail: blumenwismer@bluewin.ch\n\nEs stehen kostenfreie Parkpl&auml;tze zur Verf&uuml;gung.\n\nAngebot​​\n\nBlumenstr&auml;usse und Arrangemente f&uuml;r alle Anl&auml;sse\n\nBlumen Abos w&ouml;chentlich/monatlich\n\nTrauer Floristik\n\nIndividuelle Grabbepflanzung\n\nVersch&ouml;nerung von ihrem Balkon oder Ihrer Terrasse mit standortgerechten Pflanzen\n\nInnenbegr&uuml;nung mit Zimmerpflanzen oder Hydropflanzen\n\n​\n\nblumenwismer@bluewin.ch\n\n&copy;2026\n\nPhone \r\n\nMail \r\n\nbottom of page"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://static.wixstatic.com/media/f7aa5c_12c11990f3bc4999aaadf2b40d63d80a~mv2.png/v1/fill/w_430,h_197,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo.png",
+      "alt": "logo.png"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/f7aa5c_fb80dea6ba1145ed905767a7ccb7a69b~mv2.jpg/v1/fit/w_348,h_464,q_90,enc_avif,quality_auto/f7aa5c_fb80dea6ba1145ed905767a7ccb7a69b~mv2.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://static.wixstatic.com/media/f7aa5c_9c76fdd88eee4956ac1b785ae2894b1d~mv2.jpg/v1/fit/w_371,h_464,q_90,enc_avif,quality_auto/f7aa5c_9c76fdd88eee4956ac1b785ae2894b1d~mv2.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://static.wixstatic.com/media/f7aa5c_343d430af2d54e8ea1cc985b10bae04b~mv2.jpg/v1/fit/w_371,h_464,q_90,enc_avif,quality_auto/f7aa5c_343d430af2d54e8ea1cc985b10bae04b~mv2.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.blumenwismer.ch/media/emptystate.85a4add5.svg",
+      "alt": ""
+    }
+  ],
+  "assets": []
+}

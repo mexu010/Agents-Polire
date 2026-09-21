@@ -1,4 +1,21 @@
-# Prüfung vom 11. September 2026
+# Prüfprotokoll
+
+## 15 lokale Demo-Websites vom 21. September 2026
+
+Die ausdrücklich beauftragten 15 Design-Demos samt Vergleichsübersicht sind erstellt. Sie wurden von drei Entwicklungsagents auf Basis gespeicherter Quellen umgesetzt; dies ist kein abgeschlossener automatischer Factory-Strategist/Builder/QA-Lauf. Factory-Datenbank, Freigaben, Quoten und POLIRE-Website bleiben unverändert. Keine zusätzlichen Factory-Modellaufrufe, keine Kontaktaufnahme und keine öffentliche Veröffentlichung.
+
+| Prüfung | Ergebnis |
+|---|---|
+| `pnpm demos:build` | 15 Demos und Übersicht erzeugt |
+| `pnpm build` / `pnpm lint` | Beide Exit 0 |
+| `pnpm test` | 214 Tests in 23 Dateien bestanden |
+| `pnpm demos:check` | Alle 15 Demos bei 375, 768 und 1440 Pixeln bestanden; zusätzlich dunkles Farbschema und reduzierte Bewegung |
+| Gezielte axe-core-Prüfung | 30 Ansichten: sieben ausgewählte Regeln, keine gefundenen Verletzungen |
+| Lighthouse-Stichprobe Fritschi + Griesemer | Performance 100, Accessibility 100; einzelne lokale Labormessung |
+| Galerie | 15 funktionierende Vorschaubilder, Branchenfilter, Original-Links und Review-Befunde; keine mobile Überbreite |
+| Lokaler Server | GET/HEAD, Host-Prüfung, Pfadgrenzen und gesperrte Schreibzugriffe getestet |
+
+Ferienhinweise bei Seiler, Wacker, Hairstudio F und Holiday sind in Demo und Übersicht sichtbar. Ungeklärter Betriebsstatus bleibt gekennzeichnet. Die Barrierefreiheits-Stichprobe ist keine vollständige Zertifizierung. Ergebnisse: [Browserprüfungen](demos/2026-09-21/browser-checks.json), [ausgewählte Accessibility-Prüfungen](demos/2026-09-21/accessibility-checks.json), [Demo-Anleitung und Umfang](demos/2026-09-21/README.md).
 
 ## Aktuelle Ergänzung: Durchsatz vom 21. September 2026
 

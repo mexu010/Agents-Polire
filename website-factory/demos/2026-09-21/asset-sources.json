@@ -1,0 +1,637 @@
+{
+  "purpose": "Bilder aus den Original-Websites für interne lokale Designentwürfe, keine Veröffentlichung oder Rechteübertragung.",
+  "assets": [
+    {
+      "company": "BERNHOF-Vetsch AG",
+      "path": "assets/bernhof-c80f2eda3a6e.jpg",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/scff7c64439ec35e6/image/i0a885a351849997b/version/1652078452/image.jpg",
+      "sourceUrl": "https://image.jimcdn.com/app/cms/image/transf/none/path/scff7c64439ec35e6/image/i0a885a351849997b/version/1652078452/image.jpg",
+      "alt": "Ausstellungstüren von BERNHOF",
+      "width": 249,
+      "height": 160,
+      "sha256": "c80f2eda3a6e2ec92b78851485140c5e304bc030ac3e5b9694593ffaa15685b4"
+    },
+    {
+      "company": "BERNHOF-Vetsch AG",
+      "path": "assets/bernhof-7da6b9b63c1e.jpg",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/scff7c64439ec35e6/image/i0363ad914e5368bf/version/1788618823/image.jpg",
+      "sourceUrl": "https://image.jimcdn.com/app/cms/image/transf/none/path/scff7c64439ec35e6/image/i0363ad914e5368bf/version/1788618823/image.jpg",
+      "alt": "Hauseingangstüre mit viel Lichtdurchlass",
+      "width": 954,
+      "height": 2016,
+      "sha256": "7da6b9b63c1e9a81b52a2905d6e9cd64ab48b1b0df94ad8156242fde725614ed"
+    },
+    {
+      "company": "BERNHOF-Vetsch AG",
+      "path": "assets/bernhof-c14893c81421.jpg",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/scff7c64439ec35e6/image/ia9e3c85f2244a6e4/version/1788618822/image.jpg",
+      "sourceUrl": "https://image.jimcdn.com/app/cms/image/transf/none/path/scff7c64439ec35e6/image/ia9e3c85f2244a6e4/version/1788618822/image.jpg",
+      "alt": "",
+      "width": 1512,
+      "height": 2016,
+      "sha256": "c14893c81421c105934855aacaca75d5ce977fbcef9b270984869cb8dd2ee21c"
+    },
+    {
+      "company": "BERNHOF-Vetsch AG",
+      "path": "assets/bernhof-923968fd442b.jpg",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/scff7c64439ec35e6/image/icc56a05eb0b146d6/version/1788618822/image.jpg",
+      "sourceUrl": "https://image.jimcdn.com/app/cms/image/transf/none/path/scff7c64439ec35e6/image/icc56a05eb0b146d6/version/1788618822/image.jpg",
+      "alt": "",
+      "width": 1512,
+      "height": 2016,
+      "sha256": "923968fd442b66d069f91ec453d8ee347a33f49b234737119db1005cb76abf31"
+    },
+    {
+      "company": "BERNHOF-Vetsch AG",
+      "path": "assets/bernhof-269601d6535b.jpg",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=2048x2048:format=jpg:rotate=90/path/scff7c64439ec35e6/image/i856be902e79550a9/version/1788618822/image.jpg",
+      "sourceUrl": "https://image.jimcdn.com/app/cms/image/transf/dimension=2048x2048:format=jpg:rotate=90/path/scff7c64439ec35e6/image/i856be902e79550a9/version/1788618822/image.jpg",
+      "alt": "",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "269601d6535bd3d7c7d54ccf7b15edf88a71074921fb8e4e9d45272380ea1e49"
+    },
+    {
+      "company": "Fuhrer Schreinerei AG",
+      "path": "assets/fuhrer-86dd477f9769.jpg",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=1090x10000:format=jpg/path/sd3de0c0c46d5f704/image/i39eb92ae2386ffb8/version/1414214265/image.jpg",
+      "sourceUrl": "https://image.jimcdn.com/app/cms/image/transf/dimension=1090x10000:format=jpg/path/sd3de0c0c46d5f704/image/i39eb92ae2386ffb8/version/1414214265/image.jpg",
+      "alt": "Fuhrer Schreinerei - Kehrsatz",
+      "width": 1090,
+      "height": 252,
+      "sha256": "86dd477f9769d4e82e729b9b60519696c401708d53770d44e8609d8bb80848fe"
+    },
+    {
+      "company": "Fuhrer Schreinerei AG",
+      "path": "assets/fuhrer-64ceb02aba34.png",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=683x10000:format=png/path/sd3de0c0c46d5f704/image/ia991e396cfd25cdb/version/1773658956/image.png",
+      "sourceUrl": "https://image.jimcdn.com/app/cms/image/transf/dimension=683x10000:format=png/path/sd3de0c0c46d5f704/image/ia991e396cfd25cdb/version/1773658956/image.png",
+      "alt": "",
+      "width": 683,
+      "height": 302,
+      "sha256": "64ceb02aba341c479a07a01c8b70630e4c3f32acfc66338503383bd78fbc9e0b"
+    },
+    {
+      "company": "Fuhrer Schreinerei AG",
+      "path": "assets/fuhrer-38ba037c08a3.jpg",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/sd3de0c0c46d5f704/image/ib295c02b52254b57/version/1771591926/vertragsabschluss-mit-michael-moser.jpg",
+      "sourceUrl": "https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/sd3de0c0c46d5f704/image/ib295c02b52254b57/version/1771591926/vertragsabschluss-mit-michael-moser.jpg",
+      "alt": "Vertragsabschluss mit Michael Moser",
+      "width": 300,
+      "height": 400,
+      "sha256": "38ba037c08a31eba527e3eb49a2fe39432fd261328adc52595ba25e5161319c0"
+    },
+    {
+      "company": "Fuhrer Schreinerei AG",
+      "path": "assets/fuhrer-518029216afd.jpg",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/sd3de0c0c46d5f704/image/i953ee6cd3a43a604/version/1771591926/vertragsabschluss-mit-fabian-stucki.jpg",
+      "sourceUrl": "https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/sd3de0c0c46d5f704/image/i953ee6cd3a43a604/version/1771591926/vertragsabschluss-mit-fabian-stucki.jpg",
+      "alt": "Vertragsabschluss mit Fabian Stucki",
+      "width": 300,
+      "height": 400,
+      "sha256": "518029216afd8adb67f405f974f7eab52bbfd0c2e8d9a732d61949355d127368"
+    },
+    {
+      "company": "Fuhrer Schreinerei AG",
+      "path": "assets/fuhrer-5f9569a3933d.jpg",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=4096x4096:format=jpg/path/sd3de0c0c46d5f704/image/ib295c02b52254b57/version/1771591926/vertragsabschluss-mit-michael-moser.jpg",
+      "sourceUrl": "https://image.jimcdn.com/app/cms/image/transf/dimension=4096x4096:format=jpg/path/sd3de0c0c46d5f704/image/ib295c02b52254b57/version/1771591926/vertragsabschluss-mit-michael-moser.jpg",
+      "alt": "",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "5f9569a3933d14fc6991130466ef8c988e53ce3c16363b76e525842748b460f2"
+    },
+    {
+      "company": "Garage Grossfeld AG",
+      "path": "assets/grossfeld-c70853f167b0.png",
+      "url": "https://www.garage-grossfeld.ch/images/logo/logo-breit.png",
+      "sourceUrl": "https://www.garage-grossfeld.ch/images/logo/logo-breit.png#joomlaImage://local-images/logo/logo-breit.png?width=828&height=75",
+      "alt": "Logo",
+      "width": 652,
+      "height": 75,
+      "sha256": "c70853f167b03d832047960a23d30eb1284a5a165dee1ef517a3431fcd189a06"
+    },
+    {
+      "company": "Garage Grossfeld AG",
+      "path": "assets/grossfeld-f7e2b56cd670.png",
+      "url": "https://www.garage-grossfeld.ch/images/logo/logo.png",
+      "sourceUrl": "https://www.garage-grossfeld.ch/images/logo/logo.png#joomlaImage://local-images/logo/logo.png?width=300&height=113",
+      "alt": "Mobile Logo",
+      "width": 300,
+      "height": 113,
+      "sha256": "f7e2b56cd670f2550ed29cd9a18d26363488dc0cc36d9d2da57cec63d6f8fb48"
+    },
+    {
+      "company": "Garage Grossfeld AG",
+      "path": "assets/grossfeld-ba46dd94304a.png",
+      "url": "https://www.garage-grossfeld.ch/images/slider/garage.png",
+      "sourceUrl": "https://www.garage-grossfeld.ch/images/slider/garage.png#joomlaImage://local-images/slider/garage.png?width=1920&height=500",
+      "alt": "GARGAE GROSSFELD",
+      "width": 1920,
+      "height": 500,
+      "sha256": "ba46dd94304afbed5f94da2080c40bfe6edf6f87e4d30e250106f9170d37ac35"
+    },
+    {
+      "company": "Garage Grossfeld AG",
+      "path": "assets/grossfeld-83674cc3a05d.jpg",
+      "url": "https://www.garage-grossfeld.ch/images/slider/ds-no8_1.jpg",
+      "sourceUrl": "https://www.garage-grossfeld.ch/images/slider/ds-no8_1.jpg#joomlaImage://local-images/slider/ds-no8_1.jpg?width=1920&height=700",
+      "alt": "DS N°8",
+      "width": 1920,
+      "height": 600,
+      "sha256": "83674cc3a05d43afada6f570f3063f11b35db372f5789f2570a2d7e5d627e992"
+    },
+    {
+      "company": "Garage Grossfeld AG",
+      "path": "assets/grossfeld-792f4ce95ed4.jpg",
+      "url": "https://www.garage-grossfeld.ch/images/slider/outlander-phev_1.jpg",
+      "sourceUrl": "https://www.garage-grossfeld.ch/images/slider/outlander-phev_1.jpg#joomlaImage://local-images/slider/outlander-phev_1.jpg?width=1920&height=700",
+      "alt": "MITSUBISHI OUTLANDER PHEV",
+      "width": 1920,
+      "height": 600,
+      "sha256": "792f4ce95ed4008e7868b48b2d593572bf93454f0e4c13e7c5da894aff0d39bd"
+    },
+    {
+      "company": "Fredy Bieri AG",
+      "path": "assets/bieri-1a29616db702.jpg",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/s1e8b1741884b13af/image/i628397bcc321405d/version/1689596000/image.jpg",
+      "sourceUrl": "https://image.jimcdn.com/app/cms/image/transf/none/path/s1e8b1741884b13af/image/i628397bcc321405d/version/1689596000/image.jpg",
+      "alt": "1515590543s Webseite!",
+      "width": 276,
+      "height": 276,
+      "sha256": "1a29616db7026233e7a355bcb6769976025359ff3aa1a000903eab114788b840"
+    },
+    {
+      "company": "Fredy Bieri AG",
+      "path": "assets/bieri-d82d0d644df2.jpg",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=626x10000:format=jpg/path/s1e8b1741884b13af/image/ib7d59f58710e7712/version/1576738974/image.jpg",
+      "sourceUrl": "https://image.jimcdn.com/app/cms/image/transf/dimension=626x10000:format=jpg/path/s1e8b1741884b13af/image/ib7d59f58710e7712/version/1576738974/image.jpg",
+      "alt": "",
+      "width": 626,
+      "height": 417,
+      "sha256": "d82d0d644df231f32db2b5fa4c7e44535f94afb62827db4dd6cef64b55f0c3ae"
+    },
+    {
+      "company": "Fredy Bieri AG",
+      "path": "assets/bieri-f7a06b641c96.jpg",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=444x10000:format=jpg/path/s1e8b1741884b13af/image/i577f87996ad6e6d8/version/1688558739/image.jpg",
+      "sourceUrl": "https://image.jimcdn.com/app/cms/image/transf/dimension=444x10000:format=jpg/path/s1e8b1741884b13af/image/i577f87996ad6e6d8/version/1688558739/image.jpg",
+      "alt": "",
+      "width": 444,
+      "height": 462,
+      "sha256": "f7a06b641c96937cfc24cf133cd850307dd4b7965971bedcd4f36157adb25a43"
+    },
+    {
+      "company": "Fredy Bieri AG",
+      "path": "assets/bieri-2f58bf402f9f.jpg",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=505x10000:format=jpg/path/s1e8b1741884b13af/image/ia7af64e2cc59185f/version/1678356851/image.jpg",
+      "sourceUrl": "https://image.jimcdn.com/app/cms/image/transf/dimension=505x10000:format=jpg/path/s1e8b1741884b13af/image/ia7af64e2cc59185f/version/1678356851/image.jpg",
+      "alt": "",
+      "width": 505,
+      "height": 336,
+      "sha256": "2f58bf402f9ffc37cdff8ec8c11baac2ee4b7767a9a851c26cfa124cd5b8d213"
+    },
+    {
+      "company": "Fredy Bieri AG",
+      "path": "assets/bieri-39cac0b18f25.jpg",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=502x10000:format=jpg/path/s1e8b1741884b13af/image/i23410f5c95debdff/version/1675936863/image.jpg",
+      "sourceUrl": "https://image.jimcdn.com/app/cms/image/transf/dimension=502x10000:format=jpg/path/s1e8b1741884b13af/image/i23410f5c95debdff/version/1675936863/image.jpg",
+      "alt": "",
+      "width": 502,
+      "height": 337,
+      "sha256": "39cac0b18f25d7f2c778461b5692f9ae236e2b329c8a1207b4568dc8f45c3267"
+    },
+    {
+      "company": "Hairstudio F",
+      "path": "assets/hairstudio-f-6fa67eaa9d81.png",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/s50516ce04e8675fd/backgroundarea/icc4108e8d65b5b31/version/1677832658/image.png",
+      "sourceUrl": "https://image.jimcdn.com/app/cms/image/transf/none/path/s50516ce04e8675fd/backgroundarea/icc4108e8d65b5b31/version/1677832658/image.png",
+      "alt": "",
+      "width": 2400,
+      "height": 600,
+      "sha256": "6fa67eaa9d8189a1f605cbff53cc92a22ad524e500d41182c82a74a6d43e991b"
+    },
+    {
+      "company": "Schreiner2 AG",
+      "path": "assets/schreinerzwei-393d389b6fad.jpg",
+      "url": "https://www.schreinerzwei.ch/uploads/tx_flexslider/header_tueren.jpg",
+      "sourceUrl": "https://www.schreinerzwei.ch/uploads/tx_flexslider/header_tueren.jpg",
+      "alt": "",
+      "width": 936,
+      "height": 349,
+      "sha256": "393d389b6fadcea83fd18bcb02d0606e70b7d50f03e2d734f97bec701e54d86d"
+    },
+    {
+      "company": "Schreiner2 AG",
+      "path": "assets/schreinerzwei-865505c312d2.jpg",
+      "url": "https://www.schreinerzwei.ch/uploads/tx_flexslider/header_moebel.jpg",
+      "sourceUrl": "https://www.schreinerzwei.ch/uploads/tx_flexslider/header_moebel.jpg",
+      "alt": "",
+      "width": 936,
+      "height": 349,
+      "sha256": "865505c312d2e05ccaef657db6db0756850e51263afa8aeacdfbdd8ac70829b6"
+    },
+    {
+      "company": "Schreiner2 AG",
+      "path": "assets/schreinerzwei-e3710f9f2cc8.png",
+      "url": "https://www.schreinerzwei.ch/fileadmin/template/hp_images/_Logo_Schreinerzwei.png",
+      "sourceUrl": "https://www.schreinerzwei.ch/fileadmin/template/hp_images/_Logo_Schreinerzwei.png",
+      "alt": "Logo",
+      "width": 225,
+      "height": 126,
+      "sha256": "e3710f9f2cc899ae03a11239108d4b5009a0154223343a3bedc3e33910af3a65"
+    },
+    {
+      "company": "Schreiner2 AG",
+      "path": "assets/schreinerzwei-096d1cba37c6.jpg",
+      "url": "https://www.schreinerzwei.ch/uploads/tx_flexslider/header_fenster.jpg",
+      "sourceUrl": "https://www.schreinerzwei.ch/uploads/tx_flexslider/header_fenster.jpg",
+      "alt": "",
+      "width": 936,
+      "height": 349,
+      "sha256": "096d1cba37c68e5b5e889dbd23aa42ab1c60c94f5ae7aaca202a1b47592f2b88"
+    },
+    {
+      "company": "Schreiner2 AG",
+      "path": "assets/schreinerzwei-1e53036358fe.jpg",
+      "url": "https://www.schreinerzwei.ch/uploads/tx_flexslider/header_boeden_01.jpg",
+      "sourceUrl": "https://www.schreinerzwei.ch/uploads/tx_flexslider/header_boeden_01.jpg",
+      "alt": "",
+      "width": 936,
+      "height": 349,
+      "sha256": "1e53036358fe6595c3ac027911ded17989486f2a5ad26b419a3a9ca6939446fe"
+    },
+    {
+      "company": "Coiffeur Holiday",
+      "path": "assets/holiday-1160268b4cf0.png",
+      "url": "https://www.coiffeurholiday.ch/wp-content/uploads/2024/08/A-New-Design-Erstellt-mit-PosterMyWall-1.png",
+      "sourceUrl": "https://www.coiffeurholiday.ch/wp-content/uploads/2024/08/A-New-Design-Erstellt-mit-PosterMyWall-1.png",
+      "alt": "Coiffeur Holiday | Ursula Böhlen",
+      "width": 506,
+      "height": 900,
+      "sha256": "1160268b4cf02ccb0ad7a664dc66ad05a4fc0b2f1878b4abea0cc6124e210fdf"
+    },
+    {
+      "company": "Coiffeur Holiday",
+      "path": "assets/holiday-b54a03a616a0.jpg",
+      "url": "https://www.coiffeurholiday.ch/wp-content/uploads/2024/08/A-New-Design-Erstellt-mit-PosterMyWall-4.jpg",
+      "sourceUrl": "https://www.coiffeurholiday.ch/wp-content/uploads/2024/08/A-New-Design-Erstellt-mit-PosterMyWall-4.jpg",
+      "alt": "",
+      "width": 900,
+      "height": 639,
+      "sha256": "b54a03a616a003a01bb1bb20ba03f22a26fb03127724736bd2be574bbf453ac2"
+    },
+    {
+      "company": "Coiffeur Holiday",
+      "path": "assets/holiday-b7484f565624.jpg",
+      "url": "https://www.coiffeurholiday.ch/wp-content/uploads/2024/08/A-New-Design-Erstellt-mit-PosterMyWall-2-1.jpg",
+      "sourceUrl": "https://www.coiffeurholiday.ch/wp-content/uploads/2024/08/A-New-Design-Erstellt-mit-PosterMyWall-2-1.jpg",
+      "alt": "",
+      "width": 900,
+      "height": 639,
+      "sha256": "b7484f565624224e3f151c5946859fc720123d3fe61423bd04ee5e83447d47cd"
+    },
+    {
+      "company": "Coiffeur Holiday",
+      "path": "assets/holiday-5575b1e68412.jpg",
+      "url": "https://www.coiffeurholiday.ch/wp-content/uploads/2024/08/A-New-Design-Erstellt-mit-PosterMyWall-3-1.jpg",
+      "sourceUrl": "https://www.coiffeurholiday.ch/wp-content/uploads/2024/08/A-New-Design-Erstellt-mit-PosterMyWall-3-1.jpg",
+      "alt": "",
+      "width": 900,
+      "height": 639,
+      "sha256": "5575b1e68412ae0591ec09cf8bb3d856de51d85e8cbe6b77d4d0184b86cef4cb"
+    },
+    {
+      "company": "Coiffeur Holiday",
+      "path": "assets/holiday-3d3be09197a7.jpg",
+      "url": "https://www.coiffeurholiday.ch/wp-content/uploads/2024/08/A-New-Design-Erstellt-mit-PosterMyWall-1.jpg",
+      "sourceUrl": "https://www.coiffeurholiday.ch/wp-content/uploads/2024/08/A-New-Design-Erstellt-mit-PosterMyWall-1.jpg",
+      "alt": "",
+      "width": 900,
+      "height": 639,
+      "sha256": "3d3be09197a7ae5f71df187fb321b2a66f4002b31d6166087ed5e36d131be45e"
+    },
+    {
+      "company": "E. Seiler AG",
+      "path": "assets/seiler-c980682d2fb2.jpg",
+      "url": "https://seilerburgdorf.ch/fileadmin/_processed_/a/1/csm_Header_Festtool_2000x700_1008729d40.jpg",
+      "sourceUrl": "https://seilerburgdorf.ch/fileadmin/_processed_/a/1/csm_Header_Festtool_2000x700_1008729d40.jpg",
+      "alt": "",
+      "width": 1600,
+      "height": 560,
+      "sha256": "c980682d2fb2d1b1cd9665ec182bb685026ee26c098312ee2b9c4a51f7093e91"
+    },
+    {
+      "company": "E. Seiler AG",
+      "path": "assets/seiler-1ca6e4a298f5.jpg",
+      "url": "https://seilerburgdorf.ch/fileadmin/_processed_/1/8/csm_Header_Nostalgie_2000x700_083e54ddf9.jpg",
+      "sourceUrl": "https://seilerburgdorf.ch/fileadmin/_processed_/1/8/csm_Header_Nostalgie_2000x700_083e54ddf9.jpg",
+      "alt": "",
+      "width": 1600,
+      "height": 560,
+      "sha256": "1ca6e4a298f5a904ac7d5d74c2869434af1db8925c32ddf350b14f907ab0bfa8"
+    },
+    {
+      "company": "E. Seiler AG",
+      "path": "assets/seiler-faba6ca378ad.jpg",
+      "url": "https://seilerburgdorf.ch/fileadmin/_processed_/0/3/csm_CL3_log_a5cec9f057.jpg",
+      "sourceUrl": "https://seilerburgdorf.ch/fileadmin/_processed_/0/3/csm_CL3_log_a5cec9f057.jpg",
+      "alt": "",
+      "width": 1600,
+      "height": 780,
+      "sha256": "faba6ca378ad4f4ed70a339bb13a8fbbb998d31aa63e7d6a5f9a68bcbdb58bb2"
+    },
+    {
+      "company": "E. Seiler AG",
+      "path": "assets/seiler-7ad6ee698f36.jpg",
+      "url": "https://seilerburgdorf.ch/fileadmin/user_upload/Ausguss.jpg",
+      "sourceUrl": "https://seilerburgdorf.ch/fileadmin/user_upload/Ausguss.jpg",
+      "alt": "",
+      "width": 1600,
+      "height": 560,
+      "sha256": "7ad6ee698f368f6d2c88c77e3a94d87aafc9177cf12f71d660d999c5ecf383db"
+    },
+    {
+      "company": "E. Seiler AG",
+      "path": "assets/seiler-b73a988d6150.jpg",
+      "url": "https://seilerburgdorf.ch/fileadmin/_processed_/8/c/csm_Ko_1f6410dd51.jpg",
+      "sourceUrl": "https://seilerburgdorf.ch/fileadmin/_processed_/8/c/csm_Ko_1f6410dd51.jpg",
+      "alt": "",
+      "width": 1600,
+      "height": 730,
+      "sha256": "b73a988d615066c462e306ecef9acd3c1792447fb5e88413ebeb88591295d8ff"
+    },
+    {
+      "company": "Coiffeur Lanz, Vreni Lanz",
+      "path": "assets/coiffeur-lanz-8fb3edd118a1.png",
+      "url": "https://www.coiffeurlanz.ch/assets/images/Logo.png",
+      "sourceUrl": "https://www.coiffeurlanz.ch/assets/images/Logo.png",
+      "alt": "Logo",
+      "width": 971,
+      "height": 449,
+      "sha256": "8fb3edd118a1b5117c378f721fcfe7ff20c52a87f26f3ebc8b8d07c05bacc61f"
+    },
+    {
+      "company": "Fritschi + Griesemer AG",
+      "path": "assets/fritschi-griesemer-f2ef0a7a99a1.jpg",
+      "url": "https://www.fritschi-griesemer.ch/assets/images/3/FriGri_Bereich_Holzbau-c7bff058.jpg",
+      "sourceUrl": "https://www.fritschi-griesemer.ch/assets/images/3/FriGri_Bereich_Holzbau-c7bff058.jpg",
+      "alt": "",
+      "width": 350,
+      "height": 250,
+      "sha256": "f2ef0a7a99a14f1d145d1bb70c4fa66904a73acde21b60e271de5c827f5390ad"
+    },
+    {
+      "company": "Fritschi + Griesemer AG",
+      "path": "assets/fritschi-griesemer-e5eef7bf8cb2.jpg",
+      "url": "https://www.fritschi-griesemer.ch/assets/images/b/FriGri_Bereich_Schreinerei-3bd13a1f.jpg",
+      "sourceUrl": "https://www.fritschi-griesemer.ch/assets/images/b/FriGri_Bereich_Schreinerei-3bd13a1f.jpg",
+      "alt": "",
+      "width": 350,
+      "height": 250,
+      "sha256": "e5eef7bf8cb277f18924ff628905afef0a84f0450004431c7bb0a976c3dbee43"
+    },
+    {
+      "company": "Fritschi + Griesemer AG",
+      "path": "assets/fritschi-griesemer-cc50d679e202.jpg",
+      "url": "https://www.fritschi-griesemer.ch/assets/images/a/FriGri_Bereich_Bedachungen-13edd7e4.jpg",
+      "sourceUrl": "https://www.fritschi-griesemer.ch/assets/images/a/FriGri_Bereich_Bedachungen-13edd7e4.jpg",
+      "alt": "",
+      "width": 350,
+      "height": 250,
+      "sha256": "cc50d679e202d145b56fc5838c7a994b39f5cf913fa7c9367095ea056344e76e"
+    },
+    {
+      "company": "Fritschi + Griesemer AG",
+      "path": "assets/fritschi-griesemer-98aa7b80d269.jpg",
+      "url": "https://www.fritschi-griesemer.ch/assets/images/3/FriGri_Bereich_Spenglerei-676d64d0.jpg",
+      "sourceUrl": "https://www.fritschi-griesemer.ch/assets/images/3/FriGri_Bereich_Spenglerei-676d64d0.jpg",
+      "alt": "",
+      "width": 350,
+      "height": 250,
+      "sha256": "98aa7b80d2693a833915041068bf2f9f126023ed9f769cd759bf2f4f78622f65"
+    },
+    {
+      "company": "Fritschi + Griesemer AG",
+      "path": "assets/fritschi-griesemer-8ecd8c7a1ef0.jpg",
+      "url": "https://www.fritschi-griesemer.ch/assets/images/8/FriGri_Bereich_Service-5890cb9e.jpg",
+      "sourceUrl": "https://www.fritschi-griesemer.ch/assets/images/8/FriGri_Bereich_Service-5890cb9e.jpg",
+      "alt": "",
+      "width": 350,
+      "height": 250,
+      "sha256": "8ecd8c7a1ef0e292fe3a9f519b57be9748b548d6cf767e88926b02c7b1bf855a"
+    },
+    {
+      "company": "Martin Graf Gartenbau GmbH",
+      "path": "assets/martin-graf-gartenbau-9c0d5e23f86a.png",
+      "url": "https://grafgartenbaugmbh.ch/wp-content/themes/grafgartenbau/imgs/logo.png",
+      "sourceUrl": "https://grafgartenbaugmbh.ch/wp-content/themes/grafgartenbau/imgs/logo.png",
+      "alt": "Martin Graf Gartenbau",
+      "width": 337,
+      "height": 82,
+      "sha256": "9c0d5e23f86a16f37acdf0413e6aa52783e4bab193e2daed2830f4db4e794f45"
+    },
+    {
+      "company": "Martin Graf Gartenbau GmbH",
+      "path": "assets/martin-graf-gartenbau-f0d8d1fa43de.jpg",
+      "url": "http://grafgartenbaugmbh.ch/wp-content/uploads/2013/02/GG_bildbalken_HOME01.jpg",
+      "sourceUrl": "http://grafgartenbaugmbh.ch/wp-content/uploads/2013/02/GG_bildbalken_HOME01.jpg",
+      "alt": "GG_bildbalken_HOME01",
+      "width": 980,
+      "height": 318,
+      "sha256": "f0d8d1fa43dede6bccabb2ee0ed8926b8dcafaa105e68655930152fa2bca7fc9"
+    },
+    {
+      "company": "Martin Graf Gartenbau GmbH",
+      "path": "assets/martin-graf-gartenbau-dcd3890a1174.jpg",
+      "url": "http://grafgartenbaugmbh.ch/wp-content/uploads/2013/02/GG_bildbalken_KONTAKT01.jpg",
+      "sourceUrl": "http://grafgartenbaugmbh.ch/wp-content/uploads/2013/02/GG_bildbalken_KONTAKT01.jpg",
+      "alt": "GG_bildbalken_KONTAKT01",
+      "width": 980,
+      "height": 318,
+      "sha256": "dcd3890a11741a0266a30dda98e280a69eeb1fb7b4a490970c79f6b124eb4c1e"
+    },
+    {
+      "company": "Martin Graf Gartenbau GmbH",
+      "path": "assets/martin-graf-gartenbau-210c61b9fa86.jpg",
+      "url": "http://grafgartenbaugmbh.ch/wp-content/uploads/2013/02/GG_bildbalken_HOME01-648x210.jpg",
+      "sourceUrl": "http://grafgartenbaugmbh.ch/wp-content/uploads/2013/02/GG_bildbalken_HOME01-648x210.jpg",
+      "alt": "",
+      "width": 648,
+      "height": 210,
+      "sha256": "210c61b9fa86bc440178dca3619251a3f5578b6b4979cec2683c3257bb560989"
+    },
+    {
+      "company": "Martin Graf Gartenbau GmbH",
+      "path": "assets/martin-graf-gartenbau-2b7b69e65fba.jpg",
+      "url": "http://grafgartenbaugmbh.ch/wp-content/uploads/2013/02/GG_bildbalken_KONTAKT01-648x210.jpg",
+      "sourceUrl": "http://grafgartenbaugmbh.ch/wp-content/uploads/2013/02/GG_bildbalken_KONTAKT01-648x210.jpg",
+      "alt": "",
+      "width": 648,
+      "height": 210,
+      "sha256": "2b7b69e65fbae9d3223cdacc563c776baf628c9553c0e06a654af51f52cf3fc7"
+    },
+    {
+      "company": "Lantii GmbH",
+      "path": "assets/lantii-38085ce843c3.jpg",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/s453749577af900d8/image/i552980e68d4c3cec/version/1488984112/image.jpg",
+      "sourceUrl": "https://image.jimcdn.com/app/cms/image/transf/none/path/s453749577af900d8/image/i552980e68d4c3cec/version/1488984112/image.jpg",
+      "alt": "",
+      "width": 1280,
+      "height": 960,
+      "sha256": "38085ce843c3617d6bb80022e9af15d5980cf41af8b88a15b423a491f430a0cd"
+    },
+    {
+      "company": "Lantii GmbH",
+      "path": "assets/lantii-da6dee1d48cf.jpg",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/s453749577af900d8/image/i0ca185c4f1d94062/version/1488984112/image.jpg",
+      "sourceUrl": "https://image.jimcdn.com/app/cms/image/transf/none/path/s453749577af900d8/image/i0ca185c4f1d94062/version/1488984112/image.jpg",
+      "alt": "",
+      "width": 1024,
+      "height": 768,
+      "sha256": "da6dee1d48cff49a19d70faa4167321d7c575113b0530c96f395276931ec67e1"
+    },
+    {
+      "company": "Lantii GmbH",
+      "path": "assets/lantii-3600aea51556.jpg",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/s453749577af900d8/image/i65442715222b8a2a/version/1488984112/image.jpg",
+      "sourceUrl": "https://image.jimcdn.com/app/cms/image/transf/none/path/s453749577af900d8/image/i65442715222b8a2a/version/1488984112/image.jpg",
+      "alt": "",
+      "width": 1280,
+      "height": 960,
+      "sha256": "3600aea515567e27a1729734a1eea393137f16f455d5a7aeb3ba0ae914556ff5"
+    },
+    {
+      "company": "Lantii GmbH",
+      "path": "assets/lantii-591c41fc52c3.jpg",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/s453749577af900d8/image/ie6680866077ffd12/version/1488984112/image.jpg",
+      "sourceUrl": "https://image.jimcdn.com/app/cms/image/transf/none/path/s453749577af900d8/image/ie6680866077ffd12/version/1488984112/image.jpg",
+      "alt": "",
+      "width": 1280,
+      "height": 960,
+      "sha256": "591c41fc52c387462cb08874ad37b8440055433401677b9439bd089613173884"
+    },
+    {
+      "company": "Lantii GmbH",
+      "path": "assets/lantii-5a0a86048167.jpg",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/s453749577af900d8/image/ic66916d7b4e87485/version/1488984112/image.jpg",
+      "sourceUrl": "https://image.jimcdn.com/app/cms/image/transf/none/path/s453749577af900d8/image/ic66916d7b4e87485/version/1488984112/image.jpg",
+      "alt": "",
+      "width": 1280,
+      "height": 960,
+      "sha256": "5a0a86048167cfafd142dceb8205b147b4127ad77653465799218832a127d2e3"
+    }
+  ],
+  "skipped": [
+    {
+      "slug": "lantii",
+      "url": "https://u.jimcdn.com/cms/o/s453749577af900d8/emotion/crop/header.jpg?t=1352150212",
+      "error": "Robots or access policy disallows fetch"
+    },
+    {
+      "slug": "wismer",
+      "url": "https://static.wixstatic.com/media/f7aa5c_12c11990f3bc4999aaadf2b40d63d80a~mv2.png",
+      "error": "Robots or access policy disallows fetch"
+    },
+    {
+      "slug": "sopra",
+      "url": "https://static.wixstatic.com/media/4bc8ee_af4e4688aeb44cee9b69887adbe36b6c~mv2.jpg",
+      "error": "Robots or access policy disallows fetch"
+    },
+    {
+      "slug": "wacker",
+      "url": "https://static.wixstatic.com/media/062393_301a3bb047db4598a53ec0d6edbd7822~mv2.png",
+      "error": "Robots or access policy disallows fetch"
+    },
+    {
+      "slug": "wismer",
+      "url": "https://static.wixstatic.com/media/f7aa5c_fb80dea6ba1145ed905767a7ccb7a69b~mv2.jpg",
+      "error": "Robots or access policy disallows fetch"
+    },
+    {
+      "slug": "sopra",
+      "url": "https://static.wixstatic.com/media/4bc8ee_0eea6a95f5d840e1b877eabbcc28b30e~mv2.png",
+      "error": "Robots or access policy disallows fetch"
+    },
+    {
+      "slug": "wacker",
+      "url": "https://static.wixstatic.com/media/062393_6116e83d514a47939667c47f95a1336e~mv2.jpg",
+      "error": "Robots or access policy disallows fetch"
+    },
+    {
+      "slug": "wismer",
+      "url": "https://static.wixstatic.com/media/f7aa5c_9c76fdd88eee4956ac1b785ae2894b1d~mv2.jpg",
+      "error": "Robots or access policy disallows fetch"
+    },
+    {
+      "slug": "sopra",
+      "url": "https://static.wixstatic.com/media/4bc8ee_a25427a13eba4db485f07d2f29f250ba~mv2.jpg",
+      "error": "Robots or access policy disallows fetch"
+    },
+    {
+      "slug": "wacker",
+      "url": "https://static.wixstatic.com/media/062393_b216b58888c04c97801803920e94d5e4~mv2.jpg",
+      "error": "Robots or access policy disallows fetch"
+    },
+    {
+      "slug": "wismer",
+      "url": "https://static.wixstatic.com/media/f7aa5c_343d430af2d54e8ea1cc985b10bae04b~mv2.jpg",
+      "error": "Robots or access policy disallows fetch"
+    },
+    {
+      "slug": "sopra",
+      "url": "https://static.wixstatic.com/media/4bc8ee_6922bdaeb6864ee9bc536d5bcfd1c99b~mv2.jpg",
+      "error": "Robots or access policy disallows fetch"
+    },
+    {
+      "slug": "wacker",
+      "url": "https://static.wixstatic.com/media/062393_7efc29e1746148bb9852891f487b8083~mv2.png",
+      "error": "Robots or access policy disallows fetch"
+    },
+    {
+      "slug": "sopra",
+      "url": "https://static.wixstatic.com/media/11062b_7a80704b0d4547c4a6a39347d587411d~mv2.png",
+      "error": "Robots or access policy disallows fetch"
+    },
+    {
+      "slug": "wacker",
+      "url": "https://static.wixstatic.com/media/nsplsh_fa39165320fa4570b23d03159ad9fb79~mv2.jpg",
+      "error": "Robots or access policy disallows fetch"
+    },
+    {
+      "slug": "wacker",
+      "url": "https://static.wixstatic.com/media/8c6380e6c23b4c2c89576c8ad27c1af0.jpg",
+      "error": "Robots or access policy disallows fetch"
+    },
+    {
+      "slug": "wacker",
+      "url": "https://static.wixstatic.com/media/062393_828198a595e644bd91648c8149afbbf4~mv2.jpg",
+      "error": "Robots or access policy disallows fetch"
+    },
+    {
+      "slug": "wacker",
+      "url": "https://static.wixstatic.com/media/11062b_887147d0eb7f4635ad101b0bc9b533d5~mv2.jpeg",
+      "error": "Robots or access policy disallows fetch"
+    },
+    {
+      "slug": "wacker",
+      "url": "https://static.wixstatic.com/media/062393_01610a7f9306479da87e121c1d27d639%7Emv2.png",
+      "error": "Robots or access policy disallows fetch"
+    },
+    {
+      "slug": "wacker",
+      "url": "https://static.wixstatic.com/media/062393_01610a7f9306479da87e121c1d27d639~mv2.png",
+      "error": "Robots or access policy disallows fetch"
+    },
+    {
+      "slug": "sopra",
+      "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUoAAAAaCAYAAADR0BVGAAAACXBIWXMAAAsTAAALEwEAmpwYAAAKT2lDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjanVNnVFPpFj333vRCS4iAlEtvUhUIIFJCi4AUkSYqIQkQSoghodkVUcERRUUEG8igiAOOjoCMFVEsDIoK2AfkIaKOg6OIisr74Xuja9a89+bN/rXXPues852zzwfACAyWSDNRNYAMqUIeEeCDx8TG4eQuQIEKJHAAEAizZCFz/SMBAPh+PDwrIsAHvgABeNMLCADATZvAMByH/w/qQplcAYCEAcB0kThLCIAUAEB6jkKmAEBGAYCdmCZTAKAEAGDLY2LjAFAtAGAnf+bTAICd+Jl7AQBblCEVAaCRACATZYhEAGg7AKzPVopFAFgwABRmS8Q5ANgtADBJV2ZIALC3AMDOEAuyAAgMADBRiIUpAAR7AGDIIyN4AISZABRG8lc88SuuEOcqAAB4mbI8uSQ5RYFbCC1xB1dXLh4ozkkXKxQ2YQJhmkAuwnmZGTKBNA/g88wAAKCRFRHgg/P9eM4Ors7ONo62Dl8t6r8G/yJiYuP+5c+rcEAAAOF0ftH+LC+zGoA7BoBt/qIl7gRoXgugdfeLZrIPQLUAoOnaV/Nw+H48PEWhkLnZ2eXk5NhKxEJbYcpXff5nwl/AV/1s+X48/Pf14L7iJIEyXYFHBPjgwsz0TKUcz5IJhGLc5o9H/LcL//wd0yLESWK5WCoU41EScY5EmozzMqUiiUKSKcUl0v9k4t8s+wM+3zUAsGo+AXuRLahdYwP2SycQWHTA4vcAAPK7b8HUKAgDgGiD4c93/+8//UegJQCAZkmScQAAXkQkLlTKsz/HCAAARKCBKrBBG/TBGCzABhzBBdzBC/xgNoRCJMTCQhBCCmSAHHJgKayCQiiGzbAdKmAv1EAdNMBRaIaTcA4uwlW4Dj1wD/phCJ7BKLyBCQRByAgTYSHaiAFiilgjjggXmYX4IcFIBBKLJCDJiBRRIkuRNUgxUopUIFVIHfI9cgI5h1xGupE7yAAygvyGvEcxlIGyUT3UDLVDuag3GoRGogvQZHQxmo8WoJvQcrQaPYw2oefQq2gP2o8+Q8cwwOgYBzPEbDAuxsNCsTgsCZNjy7EirAyrxhqwVqwDu4n1Y8+xdwQSgUXACTYEd0IgYR5BSFhMWE7YSKggHCQ0EdoJNwkDhFHCJyKTqEu0JroR+cQYYjIxh1hILCPWEo8TLxB7iEPENyQSiUMyJ7mQAkmxpFTSEtJG0m5SI+ksqZs0SBojk8naZGuyBzmULCAryIXkneTD5DPkG+Qh8lsKnWJAcaT4U+IoUspqShnlEOU05QZlmDJBVaOaUt2ooVQRNY9aQq2htlKvUYeoEzR1mjnNgxZJS6WtopXTGmgXaPdpr+h0uhHdlR5Ol9BX0svpR+iX6AP0dwwNhhWDx4hnKBmbGAcYZxl3GK+YTKYZ04sZx1QwNzHrmOeZD5lvVVgqtip8FZHKCpVKlSaVGyovVKmqpqreqgtV81XLVI+pXlN9rkZVM1PjqQnUlqtVqp1Q61MbU2epO6iHqmeob1Q/pH5Z/YkGWcNMw09DpFGgsV/jvMYgC2MZs3gsIWsNq4Z1gTXEJrHN2Xx2KruY/R27iz2qqaE5QzNKM1ezUvOUZj8H45hx+Jx0TgnnKKeX836K3hTvKeIpG6Y0TLkxZVxrqpaXllirSKtRq0frvTau7aedpr1Fu1n7gQ5Bx0onXCdHZ4/OBZ3nU9lT3acKpxZNPTr1ri6qa6UbobtEd79up+6Ynr5egJ5Mb6feeb3n+hx9L/1U/W36p/VHDFgGswwkBtsMzhg8xTVxbzwdL8fb8VFDXcNAQ6VhlWGX4YSRudE8o9VGjUYPjGnGXOMk423GbcajJgYmISZLTepN7ppSTbmmKaY7TDtMx83MzaLN1pk1mz0x1zLnm+eb15vft2BaeFostqi2uGVJsuRaplnutrxuhVo5WaVYVVpds0atna0l1rutu6cRp7lOk06rntZnw7Dxtsm2qbcZsOXYBtuutm22fWFnYhdnt8Wuw+6TvZN9un2N/T0HDYfZDqsdWh1+c7RyFDpWOt6azpzuP33F9JbpL2dYzxDP2DPjthPLKcRpnVOb00dnF2e5c4PziIuJS4LLLpc+Lpsbxt3IveRKdPVxXeF60vWdm7Obwu2o26/uNu5p7ofcn8w0nymeWTNz0MPIQ+BR5dE/C5+VMGvfrH5PQ0+BZ7XnIy9jL5FXrdewt6V3qvdh7xc+9j5yn+M+4zw33jLeWV/MN8C3yLfLT8Nvnl+F30N/I/9k/3r/0QCngCUBZwOJgUGBWwL7+Hp8Ib+OPzrbZfay2e1BjKC5QRVBj4KtguXBrSFoyOyQrSH355jOkc5pDoVQfujW0Adh5mGLw34MJ4WHhVeGP45wiFga0TGXNXfR3ENz30T6RJZE3ptnMU85ry1KNSo+qi5qPNo3ujS6P8YuZlnM1VidWElsSxw5LiquNm5svt/87fOH4p3iC+N7F5gvyF1weaHOwvSFpxapLhIsOpZATIhOOJTwQRAqqBaMJfITdyWOCnnCHcJnIi/RNtGI2ENcKh5O8kgqTXqS7JG8NXkkxTOlLOW5hCepkLxMDUzdmzqeFpp2IG0yPTq9MYOSkZBxQqohTZO2Z+pn5mZ2y6xlhbL+xW6Lty8elQfJa7OQrAVZLQq2QqboVFoo1yoHsmdlV2a/zYnKOZarnivN7cyzytuQN5zvn//tEsIS4ZK2pYZLVy0dWOa9rGo5sjxxedsK4xUFK4ZWBqw8uIq2Km3VT6vtV5eufr0mek1rgV7ByoLBtQFr6wtVCuWFfevc1+1dT1gvWd+1YfqGnRs+FYmKrhTbF5cVf9go3HjlG4dvyr+Z3JS0qavEuWTPZtJm6ebeLZ5bDpaql+aXDm4N2dq0Dd9WtO319kXbL5fNKNu7g7ZDuaO/PLi8ZafJzs07P1SkVPRU+lQ27tLdtWHX+G7R7ht7vPY07NXbW7z3/T7JvttVAVVN1WbVZftJ+7P3P66Jqun4lvttXa1ObXHtxwPSA/0HIw6217nU1R3SPVRSj9Yr60cOxx++/p3vdy0NNg1VjZzG4iNwRHnk6fcJ3/ceDTradox7rOEH0x92HWcdL2pCmvKaRptTmvtbYlu6T8w+0dbq3nr8R9sfD5w0PFl5SvNUyWna6YLTk2fyz4ydlZ19fi753GDborZ752PO32oPb++6EHTh0kX/i+c7vDvOXPK4dPKy2+UTV7hXmq86X23qdOo8/pPTT8e7nLuarrlca7nuer21e2b36RueN87d9L158Rb/1tWeOT3dvfN6b/fF9/XfFt1+cif9zsu72Xcn7q28T7xf9EDtQdlD3YfVP1v+3Njv3H9qwHeg89HcR/cGhYPP/pH1jw9DBY+Zj8uGDYbrnjg+OTniP3L96fynQ89kzyaeF/6i/suuFxYvfvjV69fO0ZjRoZfyl5O/bXyl/erA6xmv28bCxh6+yXgzMV70VvvtwXfcdx3vo98PT+R8IH8o/2j5sfVT0Kf7kxmTk/8EA5jz/GMzLdsAAAAgY0hSTQAAeiUAAICDAAD5/wAAgOkAAHUwAADqYAAAOpgAABdvkl/FRgAACIFJREFUeNrsnOuS2ygQhRuBnWTf/1k3O5aA/QNbJ8enQfJkapMJXeWyrPul+TjdjRzsmgUxvbXpYGaxfTaYTmZ2a597+/5Cn69t2b1NfzWzbzTvrzadYH5q2+O+Uzvunc7lDucU27q4HM85nLwfta1bzeyAeWo9M7O9fZe2foDlxcxy+53bukebLmb2ZmYPM/unffY2f2+ft7Y+/v7etu/bHm3bA/bff/flfZ+5/eZPhk+B6X4NBab7d7/G6kxf8b3gTHc/xO9t4JfdN/nTfWMDX0vNBxP42FdY/qVt9w388Ub+2fd5Ax/v227UVmK7pgjX0O9VavOsrWuOv/Z5CXz0il/zMy7gl+gDD1r+AN/Z22/0zwf42sPM/m4+2Od/Bx9/gM+/0Qf3vZNvsl+yH9pF37P0Tkiik24ETXbKbfIJ4kEVuOn/tOkbNMLeeBM47Y0cLzrnEcHpAp2LUSPb6Nw6TO5tnQOuuztkXye043QnqgQjfrA7LNsBnOhIbwBPXPeN9vFGkEWQ7rDsgPtc6HwOmH8Q1BUUq/gwHD1HrQOf834zNAP5IH8jfBIAMQkfSeAnXwB0CEKEHUIxwu8IAqGvh0IgAvgi7YMBf4Pz79v259KXYQfe4VqbD9xEeyvU2Rn4AT5b7LgLATPT8h18DjvZNwdweA74fGfciOR3BbbDawt0X4ymfxooZ865OWqSp28CYOzQrLQOghj2lgykO91EPgY3IgPnMoKiEQDZQSJsh5AJcN47bVsEmDJArwhFyeoRHbDvn6F5DJxYTSvgeUrRTsJw1nvXF3zvTAc+g6gNlKcCLHaqajqKCArhGMDvsUNHlcnbbrB9FOBmkXGD+ZVg3+9BFp1BcDqxAtsVao+VwMRRRgEfrSRqdhGxFIKX6tzw/vZjJEctZmJIeK/vpYvOGcT3iPTbQNEpOFbRS20UsvYeFIHLob/6vcFDC7C/Sje1kqIt4mFnguFIIT4EYHeC5iHCml0ALgvAsfLmkCM7Sq8IB5sB72y4XO1jrL4DqDbxYw+wKnIKjkhgv0uOeNiEWkyUEooEUITjTbSn+0SBIkRxn4HacRSdSiWVVmF5oXZbB78P6sQPEgeZtgtOOgWVJLbR6HTcCFNOmYUzvpVe7MFn4c4ovOZGmCE3V+giOjASfG8UOkVHLaBjc6NHFXg4gDwEpDBkrSJUzk4eJ4tw1oR6PCj0OURYwdNGDjkKdT8aZL+KfTTIw8VoK5KwCM50It9NQmWaSBNEJ/8eRSgfKIXAsE4OMBOpU+5cCvmuEh4HddKHyIVj7rEQH4zEjseZSqBV56vSPPUVUHr5oBEkgwhnvAQ7XvgB4UIliByOGq2kXI16DXN6lkygG+XldgHOMoDh7oS6nNcxgnUeFIPqBHrLfh0Q1xehGwb5WAy3cX50orc0ACYXMRmMtxP52jBQnnwNnCcsBNUi0kO7KBB5eUvV2WxwnDBQx+qZubBML0DSU49B5D42UUXmm4e/N1JJ2MNGCBU8J6t0Y6tTmVVwLATIQqDEYgbnV7C4pMLk7OT0gggLlv150B0B9qBoTLXHOAjnA8EOgZcItpgzTU6aYKMiaBTV+UDtvjrpnIOiycPJXSJouY4QKAzfBkwpJzo4Cct0ITluE+XofQcnX3DQfgx6g11UnKOjRk1Uy7OTbOaqnVe5O0h1IggLqeAiCjomKsNV3NPL1bdlf5wFBzLoO4eIrriQg+kqDPVZ0KhRACqii0J5qtqAxxYeElec3LqJiE4JjgD82ChC3Qa8MJGnfGqP6YUK4izsDgOaqzF32Z6H5KhjbuLGqyStGr7AYXZ2FGUm1RjsueJbBoWQM+O1FhCXfUS+NduP1d6thbCjoXycEqukNqOjKKMIx9U6r7TfKpaVicLktjdj0xlA/gDLq8ODgo3HsiEUuVLGlXKjB6dOHMdFKdLzUBaz52E43s3NYlkGpVvoeAz8Zct+RZjOwkwj5cltqwNTqcUOQLPnMambPQ9bMnsecqVC3CpEEl8LXg8Pa+NquQm1qQThuwechwkcR5bhogvk+6KTDxjlaxB63lgoVIaBch9cIebKHALdU4orLF722YzBE4TKyqQ0gz2/kKHSbJgbrfZct1BtmOHqcYfZwKNKlEo9I/6m7T0NgDV7K8JIyamL64DDga78cIJQhwzNTMvMgWlxZLval9cbz94WWbbss4Xz3pjZ4rR/VJaqzuCF+QpSal8mVGgVEMuCDSpVlp12HCb34r9jp4laPDO6PRDkuIfBJOtuz4nV4PRyZn5hhC+Uh94EB+Q2uGnLli0biwYj8cHhPKsz9QaQgiRC1py0nOIFg1GNN569JHEmcgzpxM0KJw5U6ILUMIaN8iDm9Fyequx5CXN6P7xBGPpn59yWLVv2OkSLgNZGy6qNx1kmey7AmOk6hopUZ1Ac/f/A6HVb80LvV+S6US5DqU6vis3vT9sg/Ma3dIqNq8kqx+lVopctW/a6FfPHLzMoVfiOOUxeVxV/1Jt9dZAqYAFlE1AObVaomb0Ly6oxODkIJZ25N7KBVOZxVWdyLcuWLft/bVbnUMOIRsMDzXRV20sHjNTj6L8MToHQBj3A6IJHAPYGXHsnulHPVWwVWpYt+4zg5Gq6UTg+Y8aINSbEmNn1Mc71TGX7TM8QJoA9m1Advb1yivzLli37bYDpia96UciFCfCu/n6aP/t/v7M9w5ntgkN3m+QLtgvrLlu27PcAZZiovtG6KhS3GewuRqI/rBNfhOJsOcMsXAQx7yss31q27NOCslyEahhEpK/+s9Nwebx4cbNlKjQOJ06wnjz+UpPLln0uYP6sP2NWbDjzqmL9GQe/sn2dXHh478kuW7bsjwXqVXao4UkvcybUuhi1bNmyZSPb1i1YtmzZsgXKZcuWLVugXLZs2bKPtH8HADJQ9p+EtD02AAAAAElFTkSuQmCC",
+      "error": "Robots or access policy disallows fetch"
+    },
+    {
+      "slug": "wacker",
+      "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUoAAAAaCAYAAADR0BVGAAAACXBIWXMAAAsTAAALEwEAmpwYAAAKT2lDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjanVNnVFPpFj333vRCS4iAlEtvUhUIIFJCi4AUkSYqIQkQSoghodkVUcERRUUEG8igiAOOjoCMFVEsDIoK2AfkIaKOg6OIisr74Xuja9a89+bN/rXXPues852zzwfACAyWSDNRNYAMqUIeEeCDx8TG4eQuQIEKJHAAEAizZCFz/SMBAPh+PDwrIsAHvgABeNMLCADATZvAMByH/w/qQplcAYCEAcB0kThLCIAUAEB6jkKmAEBGAYCdmCZTAKAEAGDLY2LjAFAtAGAnf+bTAICd+Jl7AQBblCEVAaCRACATZYhEAGg7AKzPVopFAFgwABRmS8Q5ANgtADBJV2ZIALC3AMDOEAuyAAgMADBRiIUpAAR7AGDIIyN4AISZABRG8lc88SuuEOcqAAB4mbI8uSQ5RYFbCC1xB1dXLh4ozkkXKxQ2YQJhmkAuwnmZGTKBNA/g88wAAKCRFRHgg/P9eM4Ors7ONo62Dl8t6r8G/yJiYuP+5c+rcEAAAOF0ftH+LC+zGoA7BoBt/qIl7gRoXgugdfeLZrIPQLUAoOnaV/Nw+H48PEWhkLnZ2eXk5NhKxEJbYcpXff5nwl/AV/1s+X48/Pf14L7iJIEyXYFHBPjgwsz0TKUcz5IJhGLc5o9H/LcL//wd0yLESWK5WCoU41EScY5EmozzMqUiiUKSKcUl0v9k4t8s+wM+3zUAsGo+AXuRLahdYwP2SycQWHTA4vcAAPK7b8HUKAgDgGiD4c93/+8//UegJQCAZkmScQAAXkQkLlTKsz/HCAAARKCBKrBBG/TBGCzABhzBBdzBC/xgNoRCJMTCQhBCCmSAHHJgKayCQiiGzbAdKmAv1EAdNMBRaIaTcA4uwlW4Dj1wD/phCJ7BKLyBCQRByAgTYSHaiAFiilgjjggXmYX4IcFIBBKLJCDJiBRRIkuRNUgxUopUIFVIHfI9cgI5h1xGupE7yAAygvyGvEcxlIGyUT3UDLVDuag3GoRGogvQZHQxmo8WoJvQcrQaPYw2oefQq2gP2o8+Q8cwwOgYBzPEbDAuxsNCsTgsCZNjy7EirAyrxhqwVqwDu4n1Y8+xdwQSgUXACTYEd0IgYR5BSFhMWE7YSKggHCQ0EdoJNwkDhFHCJyKTqEu0JroR+cQYYjIxh1hILCPWEo8TLxB7iEPENyQSiUMyJ7mQAkmxpFTSEtJG0m5SI+ksqZs0SBojk8naZGuyBzmULCAryIXkneTD5DPkG+Qh8lsKnWJAcaT4U+IoUspqShnlEOU05QZlmDJBVaOaUt2ooVQRNY9aQq2htlKvUYeoEzR1mjnNgxZJS6WtopXTGmgXaPdpr+h0uhHdlR5Ol9BX0svpR+iX6AP0dwwNhhWDx4hnKBmbGAcYZxl3GK+YTKYZ04sZx1QwNzHrmOeZD5lvVVgqtip8FZHKCpVKlSaVGyovVKmqpqreqgtV81XLVI+pXlN9rkZVM1PjqQnUlqtVqp1Q61MbU2epO6iHqmeob1Q/pH5Z/YkGWcNMw09DpFGgsV/jvMYgC2MZs3gsIWsNq4Z1gTXEJrHN2Xx2KruY/R27iz2qqaE5QzNKM1ezUvOUZj8H45hx+Jx0TgnnKKeX836K3hTvKeIpG6Y0TLkxZVxrqpaXllirSKtRq0frvTau7aedpr1Fu1n7gQ5Bx0onXCdHZ4/OBZ3nU9lT3acKpxZNPTr1ri6qa6UbobtEd79up+6Ynr5egJ5Mb6feeb3n+hx9L/1U/W36p/VHDFgGswwkBtsMzhg8xTVxbzwdL8fb8VFDXcNAQ6VhlWGX4YSRudE8o9VGjUYPjGnGXOMk423GbcajJgYmISZLTepN7ppSTbmmKaY7TDtMx83MzaLN1pk1mz0x1zLnm+eb15vft2BaeFostqi2uGVJsuRaplnutrxuhVo5WaVYVVpds0atna0l1rutu6cRp7lOk06rntZnw7Dxtsm2qbcZsOXYBtuutm22fWFnYhdnt8Wuw+6TvZN9un2N/T0HDYfZDqsdWh1+c7RyFDpWOt6azpzuP33F9JbpL2dYzxDP2DPjthPLKcRpnVOb00dnF2e5c4PziIuJS4LLLpc+Lpsbxt3IveRKdPVxXeF60vWdm7Obwu2o26/uNu5p7ofcn8w0nymeWTNz0MPIQ+BR5dE/C5+VMGvfrH5PQ0+BZ7XnIy9jL5FXrdewt6V3qvdh7xc+9j5yn+M+4zw33jLeWV/MN8C3yLfLT8Nvnl+F30N/I/9k/3r/0QCngCUBZwOJgUGBWwL7+Hp8Ib+OPzrbZfay2e1BjKC5QRVBj4KtguXBrSFoyOyQrSH355jOkc5pDoVQfujW0Adh5mGLw34MJ4WHhVeGP45wiFga0TGXNXfR3ENz30T6RJZE3ptnMU85ry1KNSo+qi5qPNo3ujS6P8YuZlnM1VidWElsSxw5LiquNm5svt/87fOH4p3iC+N7F5gvyF1weaHOwvSFpxapLhIsOpZATIhOOJTwQRAqqBaMJfITdyWOCnnCHcJnIi/RNtGI2ENcKh5O8kgqTXqS7JG8NXkkxTOlLOW5hCepkLxMDUzdmzqeFpp2IG0yPTq9MYOSkZBxQqohTZO2Z+pn5mZ2y6xlhbL+xW6Lty8elQfJa7OQrAVZLQq2QqboVFoo1yoHsmdlV2a/zYnKOZarnivN7cyzytuQN5zvn//tEsIS4ZK2pYZLVy0dWOa9rGo5sjxxedsK4xUFK4ZWBqw8uIq2Km3VT6vtV5eufr0mek1rgV7ByoLBtQFr6wtVCuWFfevc1+1dT1gvWd+1YfqGnRs+FYmKrhTbF5cVf9go3HjlG4dvyr+Z3JS0qavEuWTPZtJm6ebeLZ5bDpaql+aXDm4N2dq0Dd9WtO319kXbL5fNKNu7g7ZDuaO/PLi8ZafJzs07P1SkVPRU+lQ27tLdtWHX+G7R7ht7vPY07NXbW7z3/T7JvttVAVVN1WbVZftJ+7P3P66Jqun4lvttXa1ObXHtxwPSA/0HIw6217nU1R3SPVRSj9Yr60cOxx++/p3vdy0NNg1VjZzG4iNwRHnk6fcJ3/ceDTradox7rOEH0x92HWcdL2pCmvKaRptTmvtbYlu6T8w+0dbq3nr8R9sfD5w0PFl5SvNUyWna6YLTk2fyz4ydlZ19fi753GDborZ752PO32oPb++6EHTh0kX/i+c7vDvOXPK4dPKy2+UTV7hXmq86X23qdOo8/pPTT8e7nLuarrlca7nuer21e2b36RueN87d9L158Rb/1tWeOT3dvfN6b/fF9/XfFt1+cif9zsu72Xcn7q28T7xf9EDtQdlD3YfVP1v+3Njv3H9qwHeg89HcR/cGhYPP/pH1jw9DBY+Zj8uGDYbrnjg+OTniP3L96fynQ89kzyaeF/6i/suuFxYvfvjV69fO0ZjRoZfyl5O/bXyl/erA6xmv28bCxh6+yXgzMV70VvvtwXfcdx3vo98PT+R8IH8o/2j5sfVT0Kf7kxmTk/8EA5jz/GMzLdsAAAAgY0hSTQAAeiUAAICDAAD5/wAAgOkAAHUwAADqYAAAOpgAABdvkl/FRgAACIFJREFUeNrsnOuS2ygQhRuBnWTf/1k3O5aA/QNbJ8enQfJkapMJXeWyrPul+TjdjRzsmgUxvbXpYGaxfTaYTmZ2a597+/5Cn69t2b1NfzWzbzTvrzadYH5q2+O+Uzvunc7lDucU27q4HM85nLwfta1bzeyAeWo9M7O9fZe2foDlxcxy+53bukebLmb2ZmYPM/unffY2f2+ft7Y+/v7etu/bHm3bA/bff/flfZ+5/eZPhk+B6X4NBab7d7/G6kxf8b3gTHc/xO9t4JfdN/nTfWMDX0vNBxP42FdY/qVt9w388Ub+2fd5Ax/v227UVmK7pgjX0O9VavOsrWuOv/Z5CXz0il/zMy7gl+gDD1r+AN/Z22/0zwf42sPM/m4+2Od/Bx9/gM+/0Qf3vZNvsl+yH9pF37P0Tkiik24ETXbKbfIJ4kEVuOn/tOkbNMLeeBM47Y0cLzrnEcHpAp2LUSPb6Nw6TO5tnQOuuztkXye043QnqgQjfrA7LNsBnOhIbwBPXPeN9vFGkEWQ7rDsgPtc6HwOmH8Q1BUUq/gwHD1HrQOf834zNAP5IH8jfBIAMQkfSeAnXwB0CEKEHUIxwu8IAqGvh0IgAvgi7YMBf4Pz79v259KXYQfe4VqbD9xEeyvU2Rn4AT5b7LgLATPT8h18DjvZNwdweA74fGfciOR3BbbDawt0X4ymfxooZ865OWqSp28CYOzQrLQOghj2lgykO91EPgY3IgPnMoKiEQDZQSJsh5AJcN47bVsEmDJArwhFyeoRHbDvn6F5DJxYTSvgeUrRTsJw1nvXF3zvTAc+g6gNlKcCLHaqajqKCArhGMDvsUNHlcnbbrB9FOBmkXGD+ZVg3+9BFp1BcDqxAtsVao+VwMRRRgEfrSRqdhGxFIKX6tzw/vZjJEctZmJIeK/vpYvOGcT3iPTbQNEpOFbRS20UsvYeFIHLob/6vcFDC7C/Sje1kqIt4mFnguFIIT4EYHeC5iHCml0ALgvAsfLmkCM7Sq8IB5sB72y4XO1jrL4DqDbxYw+wKnIKjkhgv0uOeNiEWkyUEooEUITjTbSn+0SBIkRxn4HacRSdSiWVVmF5oXZbB78P6sQPEgeZtgtOOgWVJLbR6HTcCFNOmYUzvpVe7MFn4c4ovOZGmCE3V+giOjASfG8UOkVHLaBjc6NHFXg4gDwEpDBkrSJUzk4eJ4tw1oR6PCj0OURYwdNGDjkKdT8aZL+KfTTIw8VoK5KwCM50It9NQmWaSBNEJ/8eRSgfKIXAsE4OMBOpU+5cCvmuEh4HddKHyIVj7rEQH4zEjseZSqBV56vSPPUVUHr5oBEkgwhnvAQ7XvgB4UIliByOGq2kXI16DXN6lkygG+XldgHOMoDh7oS6nNcxgnUeFIPqBHrLfh0Q1xehGwb5WAy3cX50orc0ACYXMRmMtxP52jBQnnwNnCcsBNUi0kO7KBB5eUvV2WxwnDBQx+qZubBML0DSU49B5D42UUXmm4e/N1JJ2MNGCBU8J6t0Y6tTmVVwLATIQqDEYgbnV7C4pMLk7OT0gggLlv150B0B9qBoTLXHOAjnA8EOgZcItpgzTU6aYKMiaBTV+UDtvjrpnIOiycPJXSJouY4QKAzfBkwpJzo4Cct0ITluE+XofQcnX3DQfgx6g11UnKOjRk1Uy7OTbOaqnVe5O0h1IggLqeAiCjomKsNV3NPL1bdlf5wFBzLoO4eIrriQg+kqDPVZ0KhRACqii0J5qtqAxxYeElec3LqJiE4JjgD82ChC3Qa8MJGnfGqP6YUK4izsDgOaqzF32Z6H5KhjbuLGqyStGr7AYXZ2FGUm1RjsueJbBoWQM+O1FhCXfUS+NduP1d6thbCjoXycEqukNqOjKKMIx9U6r7TfKpaVicLktjdj0xlA/gDLq8ODgo3HsiEUuVLGlXKjB6dOHMdFKdLzUBaz52E43s3NYlkGpVvoeAz8Zct+RZjOwkwj5cltqwNTqcUOQLPnMambPQ9bMnsecqVC3CpEEl8LXg8Pa+NquQm1qQThuwechwkcR5bhogvk+6KTDxjlaxB63lgoVIaBch9cIebKHALdU4orLF722YzBE4TKyqQ0gz2/kKHSbJgbrfZct1BtmOHqcYfZwKNKlEo9I/6m7T0NgDV7K8JIyamL64DDga78cIJQhwzNTMvMgWlxZLval9cbz94WWbbss4Xz3pjZ4rR/VJaqzuCF+QpSal8mVGgVEMuCDSpVlp12HCb34r9jp4laPDO6PRDkuIfBJOtuz4nV4PRyZn5hhC+Uh94EB+Q2uGnLli0biwYj8cHhPKsz9QaQgiRC1py0nOIFg1GNN569JHEmcgzpxM0KJw5U6ILUMIaN8iDm9Fyequx5CXN6P7xBGPpn59yWLVv2OkSLgNZGy6qNx1kmey7AmOk6hopUZ1Ac/f/A6HVb80LvV+S6US5DqU6vis3vT9sg/Ma3dIqNq8kqx+lVopctW/a6FfPHLzMoVfiOOUxeVxV/1Jt9dZAqYAFlE1AObVaomb0Ly6oxODkIJZ25N7KBVOZxVWdyLcuWLft/bVbnUMOIRsMDzXRV20sHjNTj6L8MToHQBj3A6IJHAPYGXHsnulHPVWwVWpYt+4zg5Gq6UTg+Y8aINSbEmNn1Mc71TGX7TM8QJoA9m1Advb1yivzLli37bYDpia96UciFCfCu/n6aP/t/v7M9w5ntgkN3m+QLtgvrLlu27PcAZZiovtG6KhS3GewuRqI/rBNfhOJsOcMsXAQx7yss31q27NOCslyEahhEpK/+s9Nwebx4cbNlKjQOJ06wnjz+UpPLln0uYP6sP2NWbDjzqmL9GQe/sn2dXHh478kuW7bsjwXqVXao4UkvcybUuhi1bNmyZSPb1i1YtmzZsgXKZcuWLVugXLZs2bKPtH8HADJQ9p+EtD02AAAAAElFTkSuQmCC",
+      "error": "Robots or access policy disallows fetch"
+    }
+  ]
+}

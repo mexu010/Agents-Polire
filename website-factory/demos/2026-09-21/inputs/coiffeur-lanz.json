@@ -1,0 +1,161 @@
+{
+  "slug": "coiffeur-lanz",
+  "name": "Coiffeur Lanz, Vreni Lanz",
+  "website": "https://www.coiffeurlanz.ch/",
+  "locality": "Bleienbach BE",
+  "industry": "",
+  "phone": "062 922 31 82",
+  "runId": "prospect-fast100-2026-09-21-078e6fa51f3aeb26",
+  "report": "reports/prospecting-100-2026-09-21/reviews/coiffeur-lanz.md",
+  "family": "salon-dining",
+  "activity": {
+    "website": "https://www.coiffeurlanz.ch/",
+    "name": "Coiffeur Lanz, Vreni Lanz",
+    "place": "Bleienbach BE",
+    "phone": "062 922 31 82",
+    "activityAssessment": "recent_activity_signal",
+    "activityDate": "2026-08-05",
+    "sourceUrl": "https://www.coiffeurlanz.ch/html/offnungszeiten.html",
+    "excerpt": "BETRIEBSFERIEN bis am 5. August 2026",
+    "limitation": "Der Suchindex zeigte den datierten Ferienhinweis. Der direkte Öffnungszeiten-Abruf im Webwerkzeug zeigte eine Zugriffsprüfung; nicht umgangen. Telefonische Erreichbarkeit nicht getestet.",
+    "corroborationUrl": "https://www.bleienbach.ch/leben/gewerbe",
+    "corroboration": "Die Gemeinde führt Coiffure Lanz, Vreni Lanz, Eichi 20, 3368 Bleienbach mit passender Website/E-Mail und Telefonnummer. Nicht mit gleichnamigen Salons verwechseln."
+  },
+  "quality": 28.333333333333332,
+  "facts": [
+    {
+      "field": "company_name",
+      "value": "Coiffeur Lanz",
+      "evidenceIds": [
+        "0bc627c3-8c07-49f7-ab89-f5c20e3c5e6b"
+      ]
+    },
+    {
+      "field": "locality",
+      "value": "Bleienbach",
+      "evidenceIds": [
+        "0bc627c3-8c07-49f7-ab89-f5c20e3c5e6b"
+      ]
+    },
+    {
+      "field": "address",
+      "value": "Eichi 20\n3368 Bleienbach",
+      "evidenceIds": [
+        "0bc627c3-8c07-49f7-ab89-f5c20e3c5e6b"
+      ]
+    }
+  ],
+  "contacts": [
+    {
+      "contact_id": "39344e32-9a54-418c-8a1f-f21997b219d8",
+      "kind": "phone",
+      "value": "062 / 922 31 82",
+      "evidence_ids": [
+        "0bc627c3-8c07-49f7-ab89-f5c20e3c5e6b"
+      ]
+    },
+    {
+      "contact_id": "7907e47b-48b1-4099-af5e-c9d4cf0376d3",
+      "kind": "phone",
+      "value": "079 / 713 62 32",
+      "evidence_ids": [
+        "0bc627c3-8c07-49f7-ab89-f5c20e3c5e6b"
+      ]
+    },
+    {
+      "contact_id": "0e93e11c-67ef-4606-9299-8746930b9405",
+      "kind": "email",
+      "value": "info@coiffeurlanz.ch",
+      "evidence_ids": [
+        "0bc627c3-8c07-49f7-ab89-f5c20e3c5e6b"
+      ]
+    },
+    {
+      "contact_id": "d898fda3-cf53-4183-9086-1fdbf3fa2164",
+      "kind": "contact_page",
+      "value": "https://www.coiffeurlanz.ch/html/kontakt.html",
+      "evidence_ids": [
+        "0bc627c3-8c07-49f7-ab89-f5c20e3c5e6b"
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "observation": "Die Startseite wird bei 375 px Breite als breit fixierte Desktop-Anordnung dargestellt; Inhalt und Navigation liegen in einer deutlich breiteren Fläche.",
+      "recommendation": "Layout für kleine Viewports anpassen und Navigation innerhalb der Viewportbreite anordnen."
+    },
+    {
+      "observation": "Auf der beobachteten Startseite sind Willkommen, Logo und Navigationslinks sichtbar, jedoch kein direkter Kontaktweg oder eine Handlungsaufforderung.",
+      "recommendation": "Kontakt"
+    },
+    {
+      "observation": "Im beobachteten Startseiteninhalt fehlen konkrete Informationen zum Angebot; sichtbar sind Willkommen, Logo und Navigation.",
+      "recommendation": "Leistungen"
+    },
+    {
+      "observation": "Am Ende des ausgelesenen Kontaktseiteninhalts erscheint «Hilfe bei wissenschaftlichen Arbeiten», ohne Bezug zu den übergebenen Firmenfakten.",
+      "recommendation": "Unbekannten Inhalt prüfen und entfernen, falls er nicht beabsichtigt ist."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "121ca07e-046e-41cb-ad4a-3932ead6a72a",
+      "url": "https://www.coiffeurlanz.ch/",
+      "text": "Home \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nHome | �ffnungszeiten | Kontakt |"
+    },
+    {
+      "id": "0bc627c3-8c07-49f7-ab89-f5c20e3c5e6b",
+      "url": "https://www.coiffeurlanz.ch/html/kontakt.html",
+      "text": "Kontakt \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nCoiffeur Lanz\n\r\nVreni Lanz\n\r\nEichi 20\n\r\n3368 Bleienbach\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nTel.:\n\r\nMobile:\n\r\nMail:\n\r\nWeb:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n062 / 922 31 82\n\r\n079 / 713 62 32\n\r\ninfo@coiffeurlanz.ch\n\r\nwww.coiffeurlanz.ch\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\nHilfe bei wissenschaftlichen Arbeiten"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://www.coiffeurlanz.ch/assets/images/autogen/clearpixel.gif",
+      "alt": ""
+    },
+    {
+      "url": "https://www.coiffeurlanz.ch/assets/images/Logo.png",
+      "alt": "Logo"
+    },
+    {
+      "url": "https://www.coiffeurlanz.ch/assets/images/autogen/Home_Hp_Highlighted_1.gif",
+      "alt": "Home"
+    },
+    {
+      "url": "https://www.coiffeurlanz.ch/assets/images/autogen/-ffnungszeiten_Np_Regular.gif",
+      "alt": "�ffnungszeiten"
+    },
+    {
+      "url": "https://www.coiffeurlanz.ch/assets/images/autogen/Kontakt_Np_Regular.gif",
+      "alt": "Kontakt"
+    },
+    {
+      "url": "https://www.coiffeurlanz.ch/assets/images/autogen/Willkommen_NBanner.jpg",
+      "alt": "Willkommen"
+    },
+    {
+      "url": "https://www.coiffeurlanz.ch/assets/images/autogen/Home_Np_Regular.gif",
+      "alt": "Home"
+    },
+    {
+      "url": "https://www.coiffeurlanz.ch/assets/images/autogen/Kontakt_Hp_Highlighted_1.gif",
+      "alt": "Kontakt"
+    },
+    {
+      "url": "https://www.coiffeurlanz.ch/assets/images/autogen/Kontakt_NBanner.jpg",
+      "alt": "Kontakt"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/coiffeur-lanz-8fb3edd118a1.png",
+      "url": "https://www.coiffeurlanz.ch/assets/images/Logo.png",
+      "sourceUrl": "https://www.coiffeurlanz.ch/assets/images/Logo.png",
+      "alt": "Logo",
+      "width": 971,
+      "height": 449,
+      "sha256": "8fb3edd118a1b5117c378f721fcfe7ff20c52a87f26f3ebc8b8d07c05bacc61f"
+    }
+  ]
+}

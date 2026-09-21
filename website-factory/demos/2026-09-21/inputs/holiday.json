@@ -1,0 +1,247 @@
+{
+  "slug": "holiday",
+  "name": "Coiffeur Holiday",
+  "website": "https://www.coiffeurholiday.ch/",
+  "locality": "Wangen an der Aare BE",
+  "industry": "Coiffeur",
+  "phone": "032 631 10 40",
+  "runId": "batch-prospects-2026-09-21-round2-b-3fffe3e7d9a56573",
+  "report": "reports/prospecting-2026-09-21-round2/reviews/holiday.md",
+  "family": "salon-dining",
+  "activity": {
+    "status": "current_announcement",
+    "sourceUrl": "https://www.coiffeurholiday.ch/",
+    "excerpt": "Ferien vom Donnerstag,24.09.2026 bis Montag,12.10.2026",
+    "finding": "Die frische Factory-Aufnahme zeigt einen Ferienhinweis vom 24. September bis 12. Oktober 2026. Damit liegt ein aktuelles eigenes Aktivitätssignal vor; der zuvor geöffnete Webindex war veraltet. Vor dem Anruf die Pause berücksichtigen.",
+    "verificationMethod": "Direkte Factory-Aufnahme; mobil visuell geprüft"
+  },
+  "quality": 60.631578947368425,
+  "facts": [
+    {
+      "field": "company_name",
+      "value": "Coiffeur Holiday",
+      "evidenceIds": [
+        "cc6448f3-b33f-4545-a31d-1ab0491a2d05"
+      ]
+    },
+    {
+      "field": "address",
+      "value": "Vorstadt 4\n3380 Wangen an der Aare",
+      "evidenceIds": [
+        "7aa630dc-7993-484a-aaac-05574b5a3373"
+      ]
+    },
+    {
+      "field": "industry",
+      "value": "Coiffeur",
+      "evidenceIds": [
+        "cc6448f3-b33f-4545-a31d-1ab0491a2d05"
+      ]
+    },
+    {
+      "field": "opening_hours",
+      "value": "Montag: geschlossen",
+      "evidenceIds": [
+        "cc6448f3-b33f-4545-a31d-1ab0491a2d05"
+      ]
+    },
+    {
+      "field": "opening_hours",
+      "value": "Dienstag: 8:30 – 12:00 / 13:30 – 18:00",
+      "evidenceIds": [
+        "cc6448f3-b33f-4545-a31d-1ab0491a2d05"
+      ]
+    },
+    {
+      "field": "opening_hours",
+      "value": "Mittwoch: 8:30 – 12:00 / 13:30 – 18:00",
+      "evidenceIds": [
+        "cc6448f3-b33f-4545-a31d-1ab0491a2d05"
+      ]
+    },
+    {
+      "field": "opening_hours",
+      "value": "Donnerstag: Vormittag geschlossen* / 13:30 – 18:00",
+      "evidenceIds": [
+        "cc6448f3-b33f-4545-a31d-1ab0491a2d05"
+      ]
+    },
+    {
+      "field": "opening_hours",
+      "value": "Freitag: 8:30 – 12:00 / 13:30 – 18:00",
+      "evidenceIds": [
+        "cc6448f3-b33f-4545-a31d-1ab0491a2d05"
+      ]
+    },
+    {
+      "field": "opening_hours",
+      "value": "Samstag: 08:00 – 13:00 (Jeder 3. Samstag geschlossen)",
+      "evidenceIds": [
+        "cc6448f3-b33f-4545-a31d-1ab0491a2d05"
+      ]
+    }
+  ],
+  "contacts": [
+    {
+      "contact_id": "773a2007-6e17-43be-b3b5-75b7e52d2518",
+      "kind": "phone",
+      "value": "032 631 10 40",
+      "evidence_ids": [
+        "cc6448f3-b33f-4545-a31d-1ab0491a2d05"
+      ]
+    },
+    {
+      "contact_id": "de186231-7378-42d2-b178-ac60b0377866",
+      "kind": "contact_page",
+      "value": "https://www.coiffeurholiday.ch/kontakt",
+      "evidence_ids": [
+        "316fb424-628e-4978-8b6f-2eb9d0c5d912"
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "observation": "Dienstag bis Freitag: 8:30 – 12:00 / 13:30 – 18:00 auf der Startseite; Dienstag bis Freitag: 8:30 – 12:00 / 13:30 – 18:30 auf Kontakt und Impressum.",
+      "recommendation": "Öffnungszeiten auf Startseite, Kontakt und Impressum abgleichen."
+    },
+    {
+      "observation": "Ursula Böhlen und Ursula Bösiger.",
+      "recommendation": "Firmen- oder Inhabername auf allen Seiten prüfen und vereinheitlichen."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "cc6448f3-b33f-4545-a31d-1ab0491a2d05",
+      "url": "https://www.coiffeurholiday.ch/",
+      "text": "Coiffeur Holiday | Ursula Böhlen – Coiffeur Holiday | Ursula Böhlen\n\nPREISE\nÜBER MICH\nKONTAKT\n\nHerzlich Willkommen\nbeim Coiffeur Holiday\n\nMontag: geschlossen\nDienstag: 8:30 – 12:00 / 13:30 – 18:00\nMittwoch: 8:30 – 12:00 / 13:30 – 18:00\nDonnerstag: Vormittag geschlossen* / 13:30 – 18:00\nFreitag: 8:30 – 12:00 / 13:30 – 18:00\nSamstag: 08:00 – 13:00 (Jeder 3. Samstag geschlossen)\n\nFerien vom Donnerstag,24.09.2026 bis Montag,12.10.2026\n\n*Jeden 2. Donnerstag, ganzer Tag geschlossen\n\nCoiffeur Holiday\nVorstadt 4\n3380 Wangen an der Aare\nTelefon: 032 631 10 40\n\n©2026 Coiffeur Holiday | Ursula Böhlen – Impressum – Datenschutzerklärung – Design by Grossenbacher Media"
+    },
+    {
+      "id": "316fb424-628e-4978-8b6f-2eb9d0c5d912",
+      "url": "https://www.coiffeurholiday.ch/kontakt",
+      "text": "KONTAKT – Coiffeur Holiday | Ursula Böhlen\n\nZum Inhalt springen\n\nPREISE\nÜBER MICH\nKONTAKT\n\nBitte aktiviere JavaScript in deinem Browser, um dieses Formular fertigzustellen.\nName * Vorname\nNachname\n\noder Nachricht Name\n\nE-Mail-Adresse *\nKommentar oder Nachricht *\n\nAbsenden\n\nADRESSE\n\nCoiffeur Holiday | Ursula Böhlen\nVorstadt 4\n3380 Wangen an der Aare\n\nImpressum\nDatenschutzerklärung\n\nKONTAKT\n\nTEL. 032 631 10 40\n\n>>> Online-Formular\n\n© 2026 Coiffeur Holiday | Ursula Bösiger\n\nÖFFNUNGSZEITEN\n\nMontag: geschlossen\nDienstag: 8:30 – 12:00 / 13:30 – 18:30\nMittwoch: 8:30 – 12:00 / 13:30 – 18:30\nDonnerstag: Vormittag geschlossen* / 13:30 – 18:30\nFreitag: 8:30 – 12:00 / 13:30 – 18:30\nSamstag: 08:00 – 13:00\n(Jeder 3. Samstag geschlossen)\n\n*jeden 2.Donnerstag ganzer Tag geschlossen"
+    },
+    {
+      "id": "7aa630dc-7993-484a-aaac-05574b5a3373",
+      "url": "https://www.coiffeurholiday.ch/kontakt/impressum",
+      "text": "Impressum – Coiffeur Holiday | Ursula Böhlen\n\nZum Inhalt springen\n\nPREISE\nÜBER MICH\nKONTAKT\n\nIMPRESSUM\n\nKontaktadresse\n\nCoiffeur Holiday | Ursula Böhlen\nVorstadt 4\n3380 Wangen an der Aare\n\nTelefon: 032 631 10 40\nWebseite: https:// www.coiffeurholiday.ch\n\nVertretungsberechtigte Person(en)\n\nUrsula Böhlen | Inhaberin\n\nHaftungsausschluss\n\nDer Autor übernimmt keinerlei Gewähr hinsichtlich der inhaltlichen Richtigkeit, Genauigkeit, Aktualität, Zuverlässigkeit und Vollständigkeit der Informationen.\n\nHaftungsansprüche gegen den Autor wegen Schäden materieller oder immaterieller Art, welche aus dem Zugriff oder der Nutzung bzw. Nichtnutzung der veröffentlichten Informationen, durch Missbrauch der Verbindung oder durch technische Störungen entstanden sind, werden ausgeschlossen.\n\nAlle Angebote sind unverbindlich. Der Autor behält es sich ausdrücklich vor, Teile der Seiten oder das gesamte Angebot ohne besondere Ankündigung zu verändern, zu ergänzen, zu löschen oder die Veröffentlichung zeitweise oder endgültig einzustellen.\n\nHaftungsausschluss für Links\n\nVerweise und Links auf Webseiten Dritter liegen ausserhalb unseres Verantwortungsbereichs. Es wird jegliche Verantwortung für solche Webseiten abgelehnt. Der Zugriff und die Nutzung solcher Webseiten erfolgen auf eigene Gefahr des jeweiligen Nutzers.\n\nUrheberrechte\n\nDie Urheber-und alle anderen Rechte an Inhalten, Bildern, Fotos oder anderen Dateien auf dieser Webseite, gehören ausschliesslich Coiffeur Holiday oder den speziell genannten Rechteinhabern. Für die Reproduktion jeglicher Elemente ist die schriftliche Zustimmung des Urheberrechtsträgers im Boraus einzuholen.\n\nADRESSE\n\nCoiffeur Holiday | Ursula Böhlen\nVorstadt 4\n3380 Wangen an der Aare\n\nImpressum\nDatenschutzerklärung\n\nKONTAKT\n\nTEL. 032 631 10 40\n\n>>> Online-Formular\n\n©"
+    },
+    {
+      "id": "5db58c09-c89d-408c-ae2b-0cca1d95eb1e",
+      "url": "https://www.coiffeurholiday.ch/kontakt/impressum",
+      "text": " 2026 Coiffeur Holiday | Ursula Bösiger\n\nÖFFNUNGSZEITEN\n\nMontag: geschlossen\nDienstag: 8:30 – 12:00 / 13:30 – 18:30\nMittwoch: 8:30 – 12:00 / 13:30 – 18:30\nDonnerstag: Vormittag geschlossen* / 13:30 – 18:30\nFreitag: 8:30 – 12:00 / 13:30 – 18:30\nSamstag: 08:00 – 13:00\n(Jeder 3. Samstag geschlossen)\n\n*jeden 2.Donnerstag ganzer Tag geschlossen"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://www.coiffeurholiday.ch/wp-content/uploads/2024/08/A-New-Design-Erstellt-mit-PosterMyWall-1.png",
+      "alt": "Coiffeur Holiday | Ursula Böhlen"
+    },
+    {
+      "url": "https://www.coiffeurholiday.ch/wp-content/uploads/2024/08/A-New-Design-Erstellt-mit-PosterMyWall-4.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.coiffeurholiday.ch/wp-content/uploads/2024/08/A-New-Design-Erstellt-mit-PosterMyWall-2-1.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.coiffeurholiday.ch/wp-content/uploads/2024/08/A-New-Design-Erstellt-mit-PosterMyWall-3-1.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.coiffeurholiday.ch/wp-content/uploads/2024/08/A-New-Design-Erstellt-mit-PosterMyWall-1.jpg",
+      "alt": ""
+    },
+    {
+      "url": "http://www.coiffeurholiday.ch/wp-content/uploads/2024/08/logo-sanoll@2x.png",
+      "alt": ""
+    },
+    {
+      "url": "http://www.coiffeurholiday.ch/wp-content/uploads/2024/08/DeaDia_Logo_256px.png",
+      "alt": ""
+    },
+    {
+      "url": "http://www.coiffeurholiday.ch/wp-content/uploads/2024/08/GS-LOGO_PflanzenHaarfarben_256px.png",
+      "alt": ""
+    },
+    {
+      "url": "https://www.coiffeurholiday.ch/wp-content/uploads/2024/08/image.png",
+      "alt": ""
+    },
+    {
+      "url": "https://www.coiffeurholiday.ch/wp-content/uploads/2024/08/Sonnegold_Logo_SG_MAIL.png",
+      "alt": ""
+    },
+    {
+      "url": "https://www.coiffeurholiday.ch/wp-content/plugins/wpforms-lite/assets/images/submit-spin.svg",
+      "alt": "Wird geladen"
+    },
+    {
+      "url": "https://www.coiffeurholiday.ch/wp-content/uploads/2024/08/DeaDia_Logo_256px.png",
+      "alt": ""
+    },
+    {
+      "url": "https://www.coiffeurholiday.ch/wp-content/uploads/2024/08/GS-LOGO_PflanzenHaarfarben_256px.png",
+      "alt": ""
+    },
+    {
+      "url": "http://www.coiffeurholiday.ch/wp-content/uploads/2024/08/image.png",
+      "alt": ""
+    },
+    {
+      "url": "http://www.coiffeurholiday.ch/wp-content/uploads/2024/08/Sonnegold_Logo_SG_MAIL.png",
+      "alt": ""
+    },
+    {
+      "url": "https://www.coiffeurholiday.ch/wp-content/uploads/2024/08/A-New-Design-Erstellt-mit-PosterMyWall-1-150x150.png",
+      "alt": ""
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/holiday-1160268b4cf0.png",
+      "url": "https://www.coiffeurholiday.ch/wp-content/uploads/2024/08/A-New-Design-Erstellt-mit-PosterMyWall-1.png",
+      "sourceUrl": "https://www.coiffeurholiday.ch/wp-content/uploads/2024/08/A-New-Design-Erstellt-mit-PosterMyWall-1.png",
+      "alt": "Coiffeur Holiday | Ursula Böhlen",
+      "width": 506,
+      "height": 900,
+      "sha256": "1160268b4cf02ccb0ad7a664dc66ad05a4fc0b2f1878b4abea0cc6124e210fdf"
+    },
+    {
+      "path": "assets/holiday-b54a03a616a0.jpg",
+      "url": "https://www.coiffeurholiday.ch/wp-content/uploads/2024/08/A-New-Design-Erstellt-mit-PosterMyWall-4.jpg",
+      "sourceUrl": "https://www.coiffeurholiday.ch/wp-content/uploads/2024/08/A-New-Design-Erstellt-mit-PosterMyWall-4.jpg",
+      "alt": "",
+      "width": 900,
+      "height": 639,
+      "sha256": "b54a03a616a003a01bb1bb20ba03f22a26fb03127724736bd2be574bbf453ac2"
+    },
+    {
+      "path": "assets/holiday-b7484f565624.jpg",
+      "url": "https://www.coiffeurholiday.ch/wp-content/uploads/2024/08/A-New-Design-Erstellt-mit-PosterMyWall-2-1.jpg",
+      "sourceUrl": "https://www.coiffeurholiday.ch/wp-content/uploads/2024/08/A-New-Design-Erstellt-mit-PosterMyWall-2-1.jpg",
+      "alt": "",
+      "width": 900,
+      "height": 639,
+      "sha256": "b7484f565624224e3f151c5946859fc720123d3fe61423bd04ee5e83447d47cd"
+    },
+    {
+      "path": "assets/holiday-5575b1e68412.jpg",
+      "url": "https://www.coiffeurholiday.ch/wp-content/uploads/2024/08/A-New-Design-Erstellt-mit-PosterMyWall-3-1.jpg",
+      "sourceUrl": "https://www.coiffeurholiday.ch/wp-content/uploads/2024/08/A-New-Design-Erstellt-mit-PosterMyWall-3-1.jpg",
+      "alt": "",
+      "width": 900,
+      "height": 639,
+      "sha256": "5575b1e68412ae0591ec09cf8bb3d856de51d85e8cbe6b77d4d0184b86cef4cb"
+    },
+    {
+      "path": "assets/holiday-3d3be09197a7.jpg",
+      "url": "https://www.coiffeurholiday.ch/wp-content/uploads/2024/08/A-New-Design-Erstellt-mit-PosterMyWall-1.jpg",
+      "sourceUrl": "https://www.coiffeurholiday.ch/wp-content/uploads/2024/08/A-New-Design-Erstellt-mit-PosterMyWall-1.jpg",
+      "alt": "",
+      "width": 900,
+      "height": 639,
+      "sha256": "3d3be09197a7ae5f71df187fb321b2a66f4002b31d6166087ed5e36d131be45e"
+    }
+  ]
+}

@@ -1,0 +1,415 @@
+{
+  "slug": "fritschi-griesemer",
+  "name": "Fritschi + Griesemer AG",
+  "website": "https://www.fritschi-griesemer.ch/",
+  "locality": "Güttingen / Kreuzlingen TG",
+  "industry": "",
+  "phone": "071 695 16 43",
+  "runId": "prospect-fast100-2026-09-21-07fd174fbd7b56bf",
+  "report": "reports/prospecting-100-2026-09-21/reviews/fritschi-griesemer.md",
+  "family": "wood",
+  "activity": {
+    "website": "https://www.fritschi-griesemer.ch/",
+    "name": "Fritschi + Griesemer AG",
+    "place": "Güttingen / Kreuzlingen TG",
+    "phone": "071 695 16 43",
+    "activityAssessment": "dated_primary_source",
+    "activityDate": "2026-04-28",
+    "sourceUrl": "https://www.guettingen.ch/politik/aus-dem-gemeinderat.html/203/news/1905",
+    "excerpt": "Schreinerarbeiten: Für CHF 24’635 an die Fritschi + Griesemer AG, Güttingen",
+    "limitation": "Amtliche Mitteilung vom 12.05.2026 über Auftragsvergabe an der Gemeinderatssitzung vom 28.04.2026. Beleg für Geschäftstätigkeit, kein Nachweis eines Website-Budgets.",
+    "corroborationUrl": "https://www.fritschi-griesemer.ch/willkommen.html"
+  },
+  "quality": 56.666666666666664,
+  "facts": [
+    {
+      "field": "company_name",
+      "value": "Fritschi + Griesemer AG",
+      "evidenceIds": [
+        "22b745d3-153e-4f64-8e3d-0d757eb9c4bf"
+      ]
+    },
+    {
+      "field": "country",
+      "value": "Schweiz",
+      "evidenceIds": [
+        "22b745d3-153e-4f64-8e3d-0d757eb9c4bf"
+      ]
+    },
+    {
+      "field": "locality",
+      "value": "Güttingen",
+      "evidenceIds": [
+        "22b745d3-153e-4f64-8e3d-0d757eb9c4bf"
+      ]
+    },
+    {
+      "field": "locality",
+      "value": "Kreuzlingen",
+      "evidenceIds": [
+        "22b745d3-153e-4f64-8e3d-0d757eb9c4bf"
+      ]
+    },
+    {
+      "field": "address",
+      "value": "Römerweg 17\n8594 Güttingen",
+      "evidenceIds": [
+        "469c072e-1e78-4759-8de5-aede25402fae"
+      ]
+    },
+    {
+      "field": "address",
+      "value": "Konstanzerstrasse 27\n8280 Kreuzlingen",
+      "evidenceIds": [
+        "469c072e-1e78-4759-8de5-aede25402fae"
+      ]
+    },
+    {
+      "field": "industry",
+      "value": "Holzbau",
+      "evidenceIds": [
+        "22b745d3-153e-4f64-8e3d-0d757eb9c4bf"
+      ]
+    },
+    {
+      "field": "industry",
+      "value": "Schreinerei",
+      "evidenceIds": [
+        "22b745d3-153e-4f64-8e3d-0d757eb9c4bf"
+      ]
+    },
+    {
+      "field": "industry",
+      "value": "Spenglerei",
+      "evidenceIds": [
+        "22b745d3-153e-4f64-8e3d-0d757eb9c4bf"
+      ]
+    },
+    {
+      "field": "industry",
+      "value": "Bedachungen",
+      "evidenceIds": [
+        "22b745d3-153e-4f64-8e3d-0d757eb9c4bf"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Service",
+      "evidenceIds": [
+        "22b745d3-153e-4f64-8e3d-0d757eb9c4bf"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Beratung & Planung",
+      "evidenceIds": [
+        "22b745d3-153e-4f64-8e3d-0d757eb9c4bf"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Unterhaltsarbeiten",
+      "evidenceIds": [
+        "22b745d3-153e-4f64-8e3d-0d757eb9c4bf"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Elementbau",
+      "evidenceIds": [
+        "22b745d3-153e-4f64-8e3d-0d757eb9c4bf"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Hausrenovation Kreuzlingen",
+      "evidenceIds": [
+        "22b745d3-153e-4f64-8e3d-0d757eb9c4bf"
+      ]
+    },
+    {
+      "field": "service_area",
+      "value": "Thurgau",
+      "evidenceIds": [
+        "22b745d3-153e-4f64-8e3d-0d757eb9c4bf"
+      ]
+    }
+  ],
+  "contacts": [
+    {
+      "contact_id": "b57be700-0518-41b0-8e91-fd3f818e19cb",
+      "kind": "phone",
+      "value": "071 695 16 43",
+      "evidence_ids": [
+        "469c072e-1e78-4759-8de5-aede25402fae"
+      ]
+    },
+    {
+      "contact_id": "b0e73329-59ca-47dc-b001-2d7bb348dcda",
+      "kind": "phone",
+      "value": "071 677 17 00",
+      "evidence_ids": [
+        "469c072e-1e78-4759-8de5-aede25402fae"
+      ]
+    },
+    {
+      "contact_id": "d67bccb6-cbda-42c5-88e2-4a377c170e31",
+      "kind": "email",
+      "value": "info@fritschi-griesemer.ch",
+      "evidence_ids": [
+        "469c072e-1e78-4759-8de5-aede25402fae"
+      ]
+    },
+    {
+      "contact_id": "5059806a-e4fe-4c71-9c3e-dbc0efd5c2ab",
+      "kind": "contact_page",
+      "value": "https://www.fritschi-griesemer.ch/kontakt.html",
+      "evidence_ids": [
+        "469c072e-1e78-4759-8de5-aede25402fae"
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "observation": "Der Einleitungstext ist im mobilen Screenshot sehr klein dargestellt.",
+      "recommendation": "Schriftgrösse und Zeilenhöhe des Einleitungstextes für mobile Ansichten erhöhen und erneut visuell prüfen."
+    },
+    {
+      "observation": "Die sichtbare Handlungsaufforderung im Einleitungsbereich lautet «Unsere Ansprechpersonen», während die Kontaktinformationen auf der Kontaktseite verfügbar sind.",
+      "recommendation": "Neben dem Verweis auf Ansprechpersonen einen direkten Kontaktzugang vorsehen."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "22b745d3-153e-4f64-8e3d-0d757eb9c4bf",
+      "url": "https://www.fritschi-griesemer.ch/willkommen.html",
+      "text": "Willkommen - Handwerk mit Tradition – Holzbau Schreinerei Spenglerei Bedachungen Service\n\nHolzbau Kreuzlingen\n\nHolzbau Güttingen, Holzbau Kreuzlingen, Holzbau, Schreinerei, Spenglerei, Bedachungen, Service, Unterhaltsarbeiten, Elementbau, Hausrenovation Kreuzlingen, Bauen mit Holz, Architektur, Innenausbau Holz, Holzboden, Loch im Parkett\n\nFritschi + Griesemer AG\n\nFritschi, Güttingen, Kreuzlingen, Griesemer, Holzbau, Schreinerei, Spenglerei, Bedachungen, Service, Unterhaltsarbeiten, Renovation, Umbau, Neubau, Zimmermann, Schreiner, Dachdecker, Spengler, Altnau, Romanshorn, Kreuzlingen, fritschi-griesemer, Theo Fritschi, Roman Vollenweider, Hampi Niederer, Traditionsunternehmen, Küche, Bad, Terrasse, Parkett, Boden, Möbel, Flickarbeiten, Instandhaltung, Unterhaltsarbeiten, Instandsetzung, Dach, Fassade, Eternit, Flachdach, Steildach, Holzküche, Holzboden, Elementbau, CNC, Bauunternehmen, Thurgau, Schweiz\n\nKontakt\n\nFritschi + Griesemer AG\n\nRömerweg 17\n8594 Güttingen\nTel. 071 695 16 43\n\nKonstanzerstrasse 27\n8280 Kreuzlingen\nTel. 071 677 17 00\n\ninfo@fritschi-griesemer.ch\n\nÜber uns\n\nTheo Fritschi\n\nInhaber, Geschäftsführer\nMitglied der Geschäftsleitung\n\n071 695 16 43\n\nt.fritschi@fritschi-griesemer.ch\n\n \n\nRoman Vollenweider\n\nBetriebsleiter Holzbau\nMitglied der Geschäftsleitung\n\n071 695 16 34\n\nr.vollenweider@fritschi-griesemer.ch\n\n \n\n \n\n \n\nHampi Niederer\n\nBetriebsleiter Schreinerei\nMitglied der Geschäftsleitung\n\n071 695 16 30\n\nh.niederer@fritschi-griesemer.ch\n\n \n\n \n\n \n\n \n\nNavigation überspringen\n\nWillkommen\n\nBereiche\n\nFirma\n\nJobs\n\nNews\n\nKontakt\n\n \n\nHandwerk\n\nmit Tradition\n\nWillkommen bei Fritschi + Griesemer AG\n\nHolzbau   |  Schreinerei   |  Spenglerei   |  Bedachungen   |  Service    |  Beratung & Planung\n\n8594 Güttingen · 8280 Kreuzlingen\n\nSeit 1903 ist unser Traditionsuntern"
+    },
+    {
+      "id": "5cfd527d-2308-44cb-ab5b-6247a6100dbe",
+      "url": "https://www.fritschi-griesemer.ch/willkommen.html",
+      "text": "ehmen im Holzbau und Schreinerei tätig. Mit der Übernahme durch Theo Fritschi im Jahr 2007 kamen die Bereiche Spenglerei und Bedachungen dazu. 2024 kamen mit Daniel Rothammer und Roman Vollenweider die Bereiche Beratung & Planung dazu. Wir führen sämtliche Arbeiten aus, ob Neubauten, Renovationen oder kleinere Flickarbeiten. Wir freuen uns auf Ihre Kontaktaufnahme .\n\nUnsere Ansprechpersonen\n\nBereiche\n\nHolzbau\n\nSchreinerei\n\nBedachungen\n\nSpenglerei\n\nService\n\nBeratung\n\nNews\n\n\r\n\r\n\r\n\n\r\n\r\n07 \r\nAug \r\n2025 \r\n\n\r\n\r\n\n\r\n\r\n\r\n07.08.2025 09:14\n\n\r\n2025 starten vier neue Lernende\n\r\nWir freuen uns, unsere neuen Lernenden im Team willkommen zu heissen!\n\n\r\n07.08.2025 09:14\n\n\r\n\n\r\n\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n18 \r\nJul \r\n2025 \r\n\n\r\n\r\n\n\r\n\r\n\r\n18.07.2025 10:58\n\n\r\nTag des Schweizer Holzes 2025\n\r\nSamstag, 13. September 2025\nGüttingen\n\n\r\n18.07.2025 10:58\n\n\r\n\n\r\n\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n07 \r\nJul \r\n2025 \r\n\n\r\n\r\n\n\r\n\r\n\r\n07.07.2025 07:28\n\n\r\nHerzlichen Glückwunsch\n\r\nWir sind mega stolz auf unsere drei Lernenden!\n\n\r\n07.07.2025 07:28\n\n\r\n\n\r\n\n\r\n\r\n\nalle News\n\nFritschi + Griesemer AG\n\nRömerweg 17\n8594 Güttingen\nTel. 071 695 16 43\n\nKonstanzerstrasse 27\n8280 Kreuzlingen\nTel. 071 677 17 00\n\ninfo@fritschi-griesemer.ch\n\n   Facebook\n\n   Instagram\n\nQuicklinks\n\nHolzbau Kreuzlingen\n\nAnsprechpersonen\n\nIsocell Einblas-Zellulosedämmung\n\nInnenausbau\n\nElement-Holzbau\n\nIndustrie und Scheunen\n\nSchreiner Küche\n\nBereiche\n\nHolzbau\n\nSchreinerei\n\nBedachungen\n\nSpenglerei\n\nDämmung\n\nService und Unterhalt\n\nCopyright 2026 Fritschi + Griesemer AG. Alle Rechte vorbehalten.\n\nImpressum Sitemap design by cinziadesign\n\nWillkommen\n\nBereiche\n\nHolzbau\n\nAltbau-Sanierungen\n\nDachkonstruktionen\n\nElementbau\n\nFassaden\n\nIndustrie und Scheunen\n\nInnenausbau\n\nKleinbauten\n\nTerrassen\n\nTreppenbau\n\nDämmung\n\nSchreinerei\n\nTüren\n\nMöbel\n\nKüche\n\nSpenglerei\n\nBedachungen\n\nBeratung & Planun"
+    },
+    {
+      "id": "c6f59bdb-b27f-41b9-9f85-1535bca916f2",
+      "url": "https://www.fritschi-griesemer.ch/willkommen.html",
+      "text": "g\n\nService\n\nFirma\n\nTeam\n\nAnsprechpersonen\n\nGeschichte\n\nJobs\n\nBauleiter im Holzbau\n\nZimmermann EFZ\n\nZimmermann Lehrling (Start 2027)\n\nHolzbau Vorarbeiter\n\nSchreiner Lehrling (Start 2027)\n\nDachdecker EFZ\n\nNews\n\nKontakt\n\nNavigation überspringen\n\nWillkommen\n\nBereiche\n\nHolzbau\n\nAltbau-Sanierungen\n\nDachkonstruktionen\n\nElementbau\n\nFassaden\n\nIndustrie und Scheunen\n\nInnenausbau\n\nKleinbauten\n\nTerrassen\n\nTreppenbau\n\nDämmung\n\nSchreinerei\n\nTüren\n\nMöbel\n\nKüche\n\nSpenglerei\n\nBedachungen\n\nBeratung & Planung\n\nService\n\nFirma\n\nTeam\n\nAnsprechpersonen\n\nGeschichte\n\nJobs\n\nBauleiter im Holzbau\n\nZimmermann EFZ\n\nZimmermann Lehrling (Start 2027)\n\nHolzbau Vorarbeiter\n\nSchreiner Lehrling (Start 2027)\n\nDachdecker EFZ\n\nNews\n\nKontakt"
+    },
+    {
+      "id": "469c072e-1e78-4759-8de5-aede25402fae",
+      "url": "https://www.fritschi-griesemer.ch/kontakt.html",
+      "text": "Kontakt - Handwerk mit Tradition – Holzbau Schreinerei Spenglerei Bedachungen Service\n\nHolzbau Kreuzlingen\n\nHolzbau Güttingen, Holzbau Kreuzlingen, Holzbau, Schreinerei, Spenglerei, Bedachungen, Service, Unterhaltsarbeiten, Elementbau, Hausrenovation Kreuzlingen, Bauen mit Holz, Architektur, Innenausbau Holz, Holzboden, Loch im Parkett\n\nFritschi + Griesemer AG\n\nFritschi, Güttingen, Kreuzlingen, Griesemer, Holzbau, Schreinerei, Spenglerei, Bedachungen, Service, Unterhaltsarbeiten, Renovation, Umbau, Neubau, Zimmermann, Schreiner, Dachdecker, Spengler, Altnau, Romanshorn, Kreuzlingen, fritschi-griesemer, Theo Fritschi, Roman Vollenweider, Hampi Niederer, Traditionsunternehmen, Küche, Bad, Terrasse, Parkett, Boden, Möbel, Flickarbeiten, Instandhaltung, Unterhaltsarbeiten, Instandsetzung, Dach, Fassade, Eternit, Flachdach, Steildach, Holzküche, Holzboden, Elementbau, CNC, Bauunternehmen, Thurgau, Schweiz\n\nKontakt\n\nFritschi + Griesemer AG\n\nRömerweg 17\n8594 Güttingen\nTel. 071 695 16 43\n\nKonstanzerstrasse 27\n8280 Kreuzlingen\nTel. 071 677 17 00\n\ninfo@fritschi-griesemer.ch\n\nÜber uns\n\nTheo Fritschi\n\nInhaber, Geschäftsführer\nMitglied der Geschäftsleitung\n\n071 695 16 43\n\nt.fritschi@fritschi-griesemer.ch\n\n \n\nRoman Vollenweider\n\nBetriebsleiter Holzbau\nMitglied der Geschäftsleitung\n\n071 695 16 34\n\nr.vollenweider@fritschi-griesemer.ch\n\n \n\n \n\n \n\nHampi Niederer\n\nBetriebsleiter Schreinerei\nMitglied der Geschäftsleitung\n\n071 695 16 30\n\nh.niederer@fritschi-griesemer.ch\n\n \n\n \n\n \n\n \n\nNavigation überspringen\n\nWillkommen\n\nBereiche\n\nFirma\n\nJobs\n\nNews\n\nKontakt\n\n \n\nKontakt\n\nFRITSCHI + GRIESEMER AG\n\nRömerweg 17\n8594 Güttingen\nTel. 071 695 16 43\n\nKonstanzerstrasse 27\n8280 Kreuzlingen\nTel. 071 677 17 00\n\ninfo@fritschi-griesemer.ch\n\nSenden\n\nFritschi + Griesemer AG\n\nRömerweg 17\n8594 Güttingen\nTel. 071 "
+    },
+    {
+      "id": "0e7eb6d8-5174-4960-9ec1-20dd39d0d2af",
+      "url": "https://www.fritschi-griesemer.ch/kontakt.html",
+      "text": "695 16 43\n\nKonstanzerstrasse 27\n8280 Kreuzlingen\nTel. 071 677 17 00\n\ninfo@fritschi-griesemer.ch\n\n   Facebook\n\n   Instagram\n\nQuicklinks\n\nHolzbau Kreuzlingen\n\nAnsprechpersonen\n\nIsocell Einblas-Zellulosedämmung\n\nInnenausbau\n\nElement-Holzbau\n\nIndustrie und Scheunen\n\nSchreiner Küche\n\nBereiche\n\nHolzbau\n\nSchreinerei\n\nBedachungen\n\nSpenglerei\n\nDämmung\n\nService und Unterhalt\n\nCopyright 2026 Fritschi + Griesemer AG. Alle Rechte vorbehalten.\n\nImpressum Sitemap design by cinziadesign\n\nWillkommen\n\nBereiche\n\nHolzbau\n\nAltbau-Sanierungen\n\nDachkonstruktionen\n\nElementbau\n\nFassaden\n\nIndustrie und Scheunen\n\nInnenausbau\n\nKleinbauten\n\nTerrassen\n\nTreppenbau\n\nDämmung\n\nSchreinerei\n\nTüren\n\nMöbel\n\nKüche\n\nSpenglerei\n\nBedachungen\n\nBeratung & Planung\n\nService\n\nFirma\n\nTeam\n\nAnsprechpersonen\n\nGeschichte\n\nJobs\n\nBauleiter im Holzbau\n\nZimmermann EFZ\n\nZimmermann Lehrling (Start 2027)\n\nHolzbau Vorarbeiter\n\nSchreiner Lehrling (Start 2027)\n\nDachdecker EFZ\n\nNews\n\nKontakt\n\nNavigation überspringen\n\nWillkommen\n\nBereiche\n\nHolzbau\n\nAltbau-Sanierungen\n\nDachkonstruktionen\n\nElementbau\n\nFassaden\n\nIndustrie und Scheunen\n\nInnenausbau\n\nKleinbauten\n\nTerrassen\n\nTreppenbau\n\nDämmung\n\nSchreinerei\n\nTüren\n\nMöbel\n\nKüche\n\nSpenglerei\n\nBedachungen\n\nBeratung & Planung\n\nService\n\nFirma\n\nTeam\n\nAnsprechpersonen\n\nGeschichte\n\nJobs\n\nBauleiter im Holzbau\n\nZimmermann EFZ\n\nZimmermann Lehrling (Start 2027)\n\nHolzbau Vorarbeiter\n\nSchreiner Lehrling (Start 2027)\n\nDachdecker EFZ\n\nNews\n\nKontakt"
+    },
+    {
+      "id": "4945ca11-7ddc-4d64-a291-70c1ea070561",
+      "url": "https://www.fritschi-griesemer.ch/team-alle.html",
+      "text": "Team - Handwerk mit Tradition – Holzbau Schreinerei Spenglerei Bedachungen Service\n\n \n\nNavigation überspringen\n\nWillkommen\n\nBereiche\n\nFirma\n\nJobs\n\nNews\n\nKontakt\n\n \n\nTeam\n\nHolzbau\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\nRoman Vollenweider\n\r\n\r\n\r\nInhaber / Geschäftsführer\nBetriebsleiter Holzbau / Verkauf\nMitglied der Geschäftsleitung\n\n\r\n\r\n071 695 16 34\n\r\n\r\n\r\nr.vollenweider@fritschi-griesemer.ch\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n \n\n \n\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\r\nPascal Hahn\n\r\n\r\n\r\nProjektleiter Holzbau / Bereichsleiter Service\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\r\nPhilipp Spohn\n\r\n\r\n\r\nPolier / Lehrlingsausbildner\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\r\nOliver Eberle\n\r\n\r\n\r\ndipl. Vorarbeiter / Treppenbauer\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\r\nNick Steiger\n\r\n\r\n\r\ndipl. Vorarbeiter / Lehrlingsausbildner\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\r\nPascal Sonderegger\n\r\n\r\n\r\ndipl. Vorarbeiter\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\r\nPatrick Roth\n\r\n\r\n\r\nZimmermann EFZ\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\r\nManuel Bücheler\n\r\n\r\n\r\nZimmermann EFZ\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\r\nColin Rüegg\n\r\n\r\n\r\nZimmermann EFZ\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\r\nAleksandrs Serebrjakovs\n\r\n\r\n\r\nZimmermann EFZ\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\r\nCornelius Sieger\n\r\n\r\n\r\nZimmermann EFZ\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\r\nDaniel Pleuler\n\r\n\r\n\r\nZimmermann EFZ\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\r\nEmanuel Ziegler\n\r\n\r\n\r\nZimmermann EFZ\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\r\nUrs von Bergen\n\r\n\r\n\r\nZimmermann EFZ\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\r\nSophia Wiegmann\n\r\n\r\n\r\nZimmerin EFZ\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n"
+    },
+    {
+      "id": "246aee1a-1bcf-42f8-a6dd-9f12e565234e",
+      "url": "https://www.fritschi-griesemer.ch/team-alle.html",
+      "text": "\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\r\nWendelin Eberle\n\r\n\r\n\r\nZimmermann EFZ \n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\r\nFabian Züllig\n\r\n\r\n\r\nZimmermann EFZ\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\r\nPascal Lezius\n\r\n\r\n\r\nMagaziner\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\r\nJustin Stoll\n\r\n\r\n\r\nLehrling Zimmermann EFZ 4. Lehrjahr \n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\r\nMicha Fisch\n\r\n\r\n\r\nLehrling Zimmermann EFZ 4. Lehrjahr\n\n \n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\r\nLeo Frey\n\r\n\r\n\r\nLehrling Zimmermann EFZ 3. Lehrjahr\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\r\nNelio Eberle\n\r\n\r\n\r\nLehrling Zimmermann EFZ 3. Lehrjahr\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\r\nMarlon Frischknecht\n\r\n\r\n\r\nLehrling Zimmermann EFZ 3. Lehrjahr\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\r\nJannick Engel\n\r\n\r\n\r\nLehrling Zimmermann EFZ 2. Lehrjahr\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\r\nBryan Nisple\n\r\n\r\n\r\nLehrling Zimmermann EFZ 2. Lehrjahr\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\r\nRene Vogrin\n\r\n\r\n\r\nLehrling Zimmermann EBA 2. Lehrjahr\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\r\nQuentin Hausammann\n\r\n\r\n\r\nLehrling Zimmermann EFZ 1. Lehrjahr\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\r\nMorin Lüchinger\n\r\n\r\n\r\nLehrling Zimmermann EFZ 1. Lehrjahr\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\nSchreinerei\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\nHampi Niederer\n\r\n\r\n\r\nBetriebsleiter Schreinerei\nMitglied der Geschäftsleitung\n\n\r\n\r\n071 695 16 30\n\r\n\r\n\r\nh.niederer@fritschi-griesemer.ch\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\nSilvan Knup\n\r\n\r\n\r\nProjektleiter Schreinerei\nLehrlingsausbildner\n\n\r\n\r\n071 695 16 33\n\r\n\r\n\r\ns.knup@fritschi-griesemer.ch\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n"
+    },
+    {
+      "id": "00aeec8a-62e1-4c14-9bac-7d83eddaeea5",
+      "url": "https://www.fritschi-griesemer.ch/team-alle.html",
+      "text": "\n\r\n\r\n\r\n\r\n\n \n\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\r\nTobias Keller\n\r\n\r\n\r\nSchreiner EFZ / Werkstattleiter\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\r\nPhilipp Schneggenburger\n\r\n\r\n\r\nSchreiner EFZ / Monteur\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\r\nLuca Andrea Laganaro\n\r\n\r\n\r\nSchreiner EFZ\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\r\nYul John\n\r\n\r\n\r\nLehrling Schreiner EFZ 4. Lehrjahr\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\r\nLino Wagner\n\r\n\r\n\r\nLehrling Schreiner EFZ 1. Lehrjahr\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n \n\nPlanung & Beratung\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\nDaniel Rothammer\n\r\n\r\n\r\nTeilhaber / Stv. Geschäftsführer\nBereichsleiter Planung\nMitglied der Geschäftsleitung\n\n\r\n\r\n071 695 16 17\n\r\n\r\n\r\nd.rothammer@fritschi-griesemer.ch\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n \n\n \n\nSpenglerei\n\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\r\nAndré Sick\n\r\n\r\n\r\nBauspengler EFZ\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n \n\n \n\nBedachungen\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\nRoman Vollenweider\n\r\n\r\n\r\nInhaber / Geschäftsführer\nBetriebsleiter Holzbau / Verkauf\nMitglied der Geschäftsleitung\n\n\r\n\r\n071 695 16 34\n\r\n\r\n\r\nr.vollenweider@fritschi-griesemer.ch\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\r\nRonny Ammann\n\r\n\r\n\r\nDachdecker / Bauspengler\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n \n\nAdministration\n\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\r\nPaul Griesemer\n\r\n\r\n\r\nAdministration / Spezial Aufträge\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\n\r\n\r\n\r\nSimone Bruhin\n\r\n\r\n\r\nAdministration / Buchhaltung\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\n\r\n\r\n\r\n\r\n\n \n\nNavigation überspringen\n\nTeam\n\nAnsprechpersonen\n\nGeschichte\n\n \n\nUnsere News\n\n\r\n\r\n\r\n2025 starten vier neue Lernende\n\r\n\r\n\r\n07. Aug, 2025 \r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\nWir freuen uns, unsere neuen Lernenden im Team willkommen zu heissen!\n\n\r\n\r\nWeiterlesen … 2025 starten vier neue Lernende\n\r\n\n\r\n\n\r\n\n\r"
+    },
+    {
+      "id": "4a49f442-de49-47d4-9833-0b04a4edb932",
+      "url": "https://www.fritschi-griesemer.ch/team-alle.html",
+      "text": "\n\r\n\r\n\n\r\n\r\n\r\nTag des Schweizer Holzes 2025\n\r\n\r\n\r\n18. Jul, 2025 \r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\nSamstag, 13. September 2025\nGüttingen\n\n\r\n\r\nWeiterlesen … Tag des Schweizer Holzes 2025\n\r\n\n\r\n\n\r\n\n\r\n\r\n\r\n\n\r\n\r\n\r\nHerzlichen Glückwunsch\n\r\n\r\n\r\n07. Jul, 2025 \r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\nWir sind mega stolz auf unsere drei Lernenden!\n\n\r\n\r\nWeiterlesen … Herzlichen Glückwunsch\n\r\n\n\r\n\n\r\n\n\r\n\r\n\r\n\n\r\n\r\n\r\nAltnau baut mit Schweizer Holz\n\r\n\r\n\r\n22. Nov, 2024 \r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\r\nGestern durften wir am neuen Primarschulhaus in Altnau das Label «Schweizer Holz» anbringen. Die\n\n\r\n\r\nWeiterlesen … Altnau baut mit Schweizer Holz\n\r\n\n\r\n\n\r\n\n\r\n\r\n\r\n\nFritschi + Griesemer AG\n\nRömerweg 17\n8594 Güttingen\nTel. 071 695 16 43\n\nKonstanzerstrasse 27\n8280 Kreuzlingen\nTel. 071 677 17 00\n\ninfo@fritschi-griesemer.ch\n\n   Facebook\n\n   Instagram\n\nQuicklinks\n\nHolzbau Kreuzlingen\n\nAnsprechpersonen\n\nIsocell Einblas-Zellulosedämmung\n\nInnenausbau\n\nElement-Holzbau\n\nIndustrie und Scheunen\n\nSchreiner Küche\n\nBereiche\n\nHolzbau\n\nSchreinerei\n\nBedachungen\n\nSpenglerei\n\nDämmung\n\nService und Unterhalt\n\nCopyright 2026 Fritschi + Griesemer AG. Alle Rechte vorbehalten.\n\nImpressum Sitemap design by cinziadesign\n\nWillkommen\n\nBereiche\n\nHolzbau\n\nAltbau-Sanierungen\n\nDachkonstruktionen\n\nElementbau\n\nFassaden\n\nIndustrie und Scheunen\n\nInnenausbau\n\nKleinbauten\n\nTerrassen\n\nTreppenbau\n\nDämmung\n\nSchreinerei\n\nTüren\n\nMöbel\n\nKüche\n\nSpenglerei\n\nBedachungen\n\nBeratung & Planung\n\nService\n\nFirma\n\nTeam\n\nAnsprechpersonen\n\nGeschichte\n\nJobs\n\nBauleiter im Holzbau\n\nZimmermann EFZ\n\nZimmermann Lehrling (Start 2027)\n\nHolzbau Vorarbeiter\n\nSchreiner Lehrling (Start 2027)\n\nDachdecker EFZ\n\nNews\n\nKontakt\n\nNavigation überspringen\n\nWillkommen\n\nBereiche\n\nHolzbau\n\nAltbau-Sanierungen\n\nDachkonstruktionen\n\nElementbau\n\nFassaden\n\nIndustrie und Scheunen\n\nInnenau"
+    },
+    {
+      "id": "3bf44d31-b375-4e64-bc60-aafbc44bf1b1",
+      "url": "https://www.fritschi-griesemer.ch/team-alle.html",
+      "text": "sbau\n\nKleinbauten\n\nTerrassen\n\nTreppenbau\n\nDämmung\n\nSchreinerei\n\nTüren\n\nMöbel\n\nKüche\n\nSpenglerei\n\nBedachungen\n\nBeratung & Planung\n\nService\n\nFirma\n\nTeam\n\nAnsprechpersonen\n\nGeschichte\n\nJobs\n\nBauleiter im Holzbau\n\nZimmermann EFZ\n\nZimmermann Lehrling (Start 2027)\n\nHolzbau Vorarbeiter\n\nSchreiner Lehrling (Start 2027)\n\nDachdecker EFZ\n\nNews\n\nKontakt"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://www.fritschi-griesemer.ch/assets/images/c/FriGri_offene_stellen_button-74eb7b5f.svg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.fritschi-griesemer.ch/assets/images/3/FriGri_Bereich_Holzbau-c7bff058.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.fritschi-griesemer.ch/assets/images/b/FriGri_Bereich_Schreinerei-3bd13a1f.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.fritschi-griesemer.ch/assets/images/a/FriGri_Bereich_Bedachungen-13edd7e4.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.fritschi-griesemer.ch/assets/images/3/FriGri_Bereich_Spenglerei-676d64d0.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.fritschi-griesemer.ch/assets/images/8/FriGri_Bereich_Service-5890cb9e.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.fritschi-griesemer.ch/assets/images/4/FriGri_Bereich_Planung-12b409ed.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.fritschi-griesemer.ch/assets/images/d/fritschi_bischi_01-e61a2982.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.fritschi-griesemer.ch/assets/images/2/fritschi_bischi_02-4bf6549d.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.fritschi-griesemer.ch/assets/images/2/fritschi_dieffenbach_-03-530a08c5.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.fritschi-griesemer.ch/assets/images/7/fritschi_dieffenbach_bearb-09-a7f43eaf.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.fritschi-griesemer.ch/assets/images/2/fritschi_griesemer_guettingen-16-8544375c.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.fritschi-griesemer.ch/assets/images/a/fritschi_griesemer_guettingen-25_retusche-f7e52fa4.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.fritschi-griesemer.ch/assets/images/b/fritschi_griesemer_otmarhof-11-14a9185f.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.fritschi-griesemer.ch/assets/images/9/fritschi_griesemer_otmarhof-29-b73a8084.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.fritschi-griesemer.ch/assets/images/d/fritschi_Kindergarten_Schulhaus_Felben_Wellhausen-08-3ea3ac22.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.fritschi-griesemer.ch/assets/images/9/fritschi_Kindergarten_Schulhaus_Felben_Wellhausen-11-b9a64155.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.fritschi-griesemer.ch/assets/images/b/fritschi_Kindergarten_Schulhaus_Felben_Wellhausen-18-aa834dcf.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.fritschi-griesemer.ch/assets/images/d/fritschi_Kindergarten_Schulhaus_Felben_Wellhausen-39-00bed733.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.fritschi-griesemer.ch/assets/images/4/fritschi_mueller-02-d7806179.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.fritschi-griesemer.ch/assets/images/c/fritschi_mueller-03-07e07f85.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.fritschi-griesemer.ch/assets/images/1/fritschi_mueller-11-d468ce71.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.fritschi-griesemer.ch/assets/images/4/fritschi_mueller-18-7a30b65c.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.fritschi-griesemer.ch/assets/images/7/fritschi_mueller-20-de81a701.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.fritschi-griesemer.ch/assets/images/8/fritschi_unknow_01-ffb51478.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.fritschi-griesemer.ch/assets/images/e/fritschi_unknow_02-09dfec15.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.fritschi-griesemer.ch/assets/images/d/fritschi_Villa_Botighofen-31-5d12e920.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.fritschi-griesemer.ch/assets/images/a/fg_lehrlinge_2025_quer-e44f6316.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.fritschi-griesemer.ch/assets/images/a/fritschi_griesemer_guettingen_tag_des_schweizer_holzes_2025_5-2d890fdc.jpeg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.fritschi-griesemer.ch/assets/images/0/Lehrlinge_2025-295268d2.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.fritschi-griesemer.ch/assets/images/5/fritschi_mueller-16-5d2cbed7.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.fritschi-griesemer.ch/files/Fritschi_Griesemer/Betrieb_sw/Fritschi_Griesemer_Betrieb_sw-01_low.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.fritschi-griesemer.ch/files/Fritschi_Griesemer/Betrieb_sw/Fritschi_Griesemer_Betrieb_sw-34_2.jpg",
+      "alt": ""
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/fritschi-griesemer-f2ef0a7a99a1.jpg",
+      "url": "https://www.fritschi-griesemer.ch/assets/images/3/FriGri_Bereich_Holzbau-c7bff058.jpg",
+      "sourceUrl": "https://www.fritschi-griesemer.ch/assets/images/3/FriGri_Bereich_Holzbau-c7bff058.jpg",
+      "alt": "",
+      "width": 350,
+      "height": 250,
+      "sha256": "f2ef0a7a99a14f1d145d1bb70c4fa66904a73acde21b60e271de5c827f5390ad"
+    },
+    {
+      "path": "assets/fritschi-griesemer-e5eef7bf8cb2.jpg",
+      "url": "https://www.fritschi-griesemer.ch/assets/images/b/FriGri_Bereich_Schreinerei-3bd13a1f.jpg",
+      "sourceUrl": "https://www.fritschi-griesemer.ch/assets/images/b/FriGri_Bereich_Schreinerei-3bd13a1f.jpg",
+      "alt": "",
+      "width": 350,
+      "height": 250,
+      "sha256": "e5eef7bf8cb277f18924ff628905afef0a84f0450004431c7bb0a976c3dbee43"
+    },
+    {
+      "path": "assets/fritschi-griesemer-cc50d679e202.jpg",
+      "url": "https://www.fritschi-griesemer.ch/assets/images/a/FriGri_Bereich_Bedachungen-13edd7e4.jpg",
+      "sourceUrl": "https://www.fritschi-griesemer.ch/assets/images/a/FriGri_Bereich_Bedachungen-13edd7e4.jpg",
+      "alt": "",
+      "width": 350,
+      "height": 250,
+      "sha256": "cc50d679e202d145b56fc5838c7a994b39f5cf913fa7c9367095ea056344e76e"
+    },
+    {
+      "path": "assets/fritschi-griesemer-98aa7b80d269.jpg",
+      "url": "https://www.fritschi-griesemer.ch/assets/images/3/FriGri_Bereich_Spenglerei-676d64d0.jpg",
+      "sourceUrl": "https://www.fritschi-griesemer.ch/assets/images/3/FriGri_Bereich_Spenglerei-676d64d0.jpg",
+      "alt": "",
+      "width": 350,
+      "height": 250,
+      "sha256": "98aa7b80d2693a833915041068bf2f9f126023ed9f769cd759bf2f4f78622f65"
+    },
+    {
+      "path": "assets/fritschi-griesemer-8ecd8c7a1ef0.jpg",
+      "url": "https://www.fritschi-griesemer.ch/assets/images/8/FriGri_Bereich_Service-5890cb9e.jpg",
+      "sourceUrl": "https://www.fritschi-griesemer.ch/assets/images/8/FriGri_Bereich_Service-5890cb9e.jpg",
+      "alt": "",
+      "width": 350,
+      "height": 250,
+      "sha256": "8ecd8c7a1ef0e292fe3a9f519b57be9748b548d6cf767e88926b02c7b1bf855a"
+    }
+  ]
+}

@@ -1,0 +1,341 @@
+{
+  "slug": "lantii",
+  "name": "Lantii GmbH",
+  "website": "https://www.lantii.ch/",
+  "locality": "Villigen AG",
+  "industry": "",
+  "phone": "056 245 79 39",
+  "runId": "prospect-fast100-2026-09-21-37e37b77cc5ed233",
+  "report": "reports/prospecting-100-2026-09-21/reviews/lantii.md",
+  "family": "places",
+  "activity": {
+    "website": "https://www.lantii.ch/",
+    "name": "Lantii GmbH",
+    "place": "Villigen AG",
+    "phone": "056 245 79 39",
+    "activityAssessment": "uncertain",
+    "activityDate": null,
+    "sourceUrl": "https://www.local.ch/de/d/villigen/5234/lantii-gmbh-6BGMC-znlZtdVPa3Gvz94Q",
+    "limitation": "Kontaktverzeichnis vorhanden, keine Öffnungszeiten eingetragen. Registeraggregatoren melden aktiv; das belegt keine laufende operative Tätigkeit. Kein belastbarer datierter Betriebsnachweis gefunden."
+  },
+  "quality": 45,
+  "facts": [
+    {
+      "field": "company_name",
+      "value": "Lantii GmbH",
+      "evidenceIds": [
+        "791e5627-7c4d-4636-bdac-4ed0c63cd18e"
+      ]
+    },
+    {
+      "field": "locality",
+      "value": "Villigen",
+      "evidenceIds": [
+        "791e5627-7c4d-4636-bdac-4ed0c63cd18e"
+      ]
+    },
+    {
+      "field": "address",
+      "value": "Alemannenweg 9\n\n5234 Villigen",
+      "evidenceIds": [
+        "791e5627-7c4d-4636-bdac-4ed0c63cd18e"
+      ]
+    },
+    {
+      "field": "industry",
+      "value": "Gipser & Maler",
+      "evidenceIds": [
+        "791e5627-7c4d-4636-bdac-4ed0c63cd18e"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Gipser & Fassadenisolation Maler",
+      "evidenceIds": [
+        "f448fd7a-4fe0-4e76-a9f2-7d7396b058f8"
+      ]
+    }
+  ],
+  "contacts": [
+    {
+      "contact_id": "9bdebc1a-42fd-497c-819d-69fe42cbfa07",
+      "kind": "phone",
+      "value": "056 245 79 39",
+      "evidence_ids": [
+        "791e5627-7c4d-4636-bdac-4ed0c63cd18e"
+      ]
+    },
+    {
+      "contact_id": "13d6f5e2-b9e0-4c98-a3f0-6f73844880c8",
+      "kind": "phone",
+      "value": "076 326 44 46",
+      "evidence_ids": [
+        "791e5627-7c4d-4636-bdac-4ed0c63cd18e"
+      ]
+    },
+    {
+      "contact_id": "a4e3e3d3-74fe-4873-86cb-c63145097c48",
+      "kind": "contact_page",
+      "value": "https://www.lantii.ch/kontakt/",
+      "evidence_ids": [
+        "791e5627-7c4d-4636-bdac-4ed0c63cd18e"
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "observation": "Die Navigation mit acht Einträgen ist bei 375 × 812 stark verdichtet.",
+      "recommendation": "Mobile Navigation mit grösseren, klar getrennten Bedienflächen vorsehen."
+    },
+    {
+      "observation": "Die geprüfte Seite /about/ enthält nur Navigation und Footer; im Auszug ist keine Unternehmensinformation vorhanden.",
+      "recommendation": "Unternehmensinformationen auf der Seite Wir über uns bereitstellen."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "f448fd7a-4fe0-4e76-a9f2-7d7396b058f8",
+      "url": "https://www.lantii.ch/",
+      "text": "Lantii.ch Gipser & Maler Villigen - Lantii.ch Gipser & Fassadenisolation Maler\n\nHome\nWir über uns\nLeistungen\nBildgalerie\nOffertanfrage\nReferenzen\nImmobilie zu verkaufen\nKontakt\n\nWillkommen auf unserer Homepage\n\nOberstes Ziel unserer Arbeit ist höchste Kundenzufriedenheit, die wir durch intensive \n\nBeratung, Zuverlässigkeit,\nTermintreue und einem guten Preis-Leistungsverhältnis erreichen wollen.\n\nlantii.ch\n\nMit Facebook verbinden\n\nImpressum | Datenschutz | Sitemap\nlantii.ch\n\nAnmelden\n\nAbmelden\n|\nBearbeiten\n\nzuklappen"
+    },
+    {
+      "id": "791e5627-7c4d-4636-bdac-4ed0c63cd18e",
+      "url": "https://www.lantii.ch/kontakt/",
+      "text": "Kontaktformular - Lantii.ch Gipser & Fassadenisolation Maler\n\nHome\nWir über uns\nLeistungen\nBildgalerie\nOffertanfrage\nReferenzen\nImmobilie zu verkaufen\nKontakt\n\nKontaktformular\n\nLantii GmbH\n\nGipser & Maler\n\nAlemannenweg 9\n\n5234 Villigen\n\nwww.lantii.ch\n\n[email protected]\n\nTel: 056 245 79 39\n\nNat: 076 326 44 46\n\nName\n\nE-Mail-Adresse\n\nNachricht\n\nBitte den Code eingeben:\n\nEs gilt unsere Datenschutzerklärung\n\nHinweis:\nBitte die mit * gekennzeichneten Felder ausfüllen.\n\nlantii.ch\n\nMit Facebook verbinden\n\nImpressum | Datenschutz | Sitemap\nlantii.ch\n\nAnmelden\n\nAbmelden\n|\nBearbeiten\n\nzuklappen"
+    },
+    {
+      "id": "b2652797-280a-4bed-8833-c76e7baabb2e",
+      "url": "https://www.lantii.ch/about/",
+      "text": "Impressum - Lantii.ch Gipser & Fassadenisolation Maler\n\nHome\nWir über uns\nLeistungen\nBildgalerie\nOffertanfrage\nReferenzen\nImmobilie zu verkaufen\nKontakt\n\nlantii.ch\n\nMit Facebook verbinden\n\nImpressum | Datenschutz | Sitemap\nlantii.ch\n\nAnmelden\n\nAbmelden\n|\nBearbeiten\n\nzuklappen"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://u.jimcdn.com/cms/o/s453749577af900d8/emotion/crop/header.jpg?t=1352150212",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/s453749577af900d8/image/i552980e68d4c3cec/version/1488984112/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/s453749577af900d8/image/i0ca185c4f1d94062/version/1488984112/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/s453749577af900d8/image/i65442715222b8a2a/version/1488984112/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/s453749577af900d8/image/ie6680866077ffd12/version/1488984112/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/s453749577af900d8/image/ic66916d7b4e87485/version/1488984112/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/s453749577af900d8/image/id15b0d3a04379354/version/1488984112/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/s453749577af900d8/image/ib452962fb95d0900/version/1488984112/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/s453749577af900d8/image/i69fc57f784147cdf/version/1488984113/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/s453749577af900d8/image/i0a8dda26e5b973de/version/1488984113/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/s453749577af900d8/image/i96efc6838066fe97/version/1488984113/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/s453749577af900d8/image/i28236bb9aca43c02/version/1488984113/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/s453749577af900d8/image/i3d5a86cd0c242656/version/1488984113/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/s453749577af900d8/image/i8fdf3096b4685d17/version/1488984113/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/s453749577af900d8/image/i679e6fa2f9ad9405/version/1488984113/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/s453749577af900d8/image/icd53fbbff5be023e/version/1488984113/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/s453749577af900d8/image/i2b65878d1d95c959/version/1488984113/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/s453749577af900d8/image/i4813fc3e6a35b50c/version/1488984113/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/s453749577af900d8/image/i1d698dd005906792/version/1488984113/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/s453749577af900d8/image/i0d7e79b7dc5e39a2/version/1488984113/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/s453749577af900d8/image/i02ee1ea13e6d5389/version/1488984114/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/s453749577af900d8/image/if9f59b36ec6b60a5/version/1488984114/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=25x25:mode=crop:format=jpg/path/s453749577af900d8/image/i552980e68d4c3cec/version/1488984112/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=25x25:mode=crop:format=jpg/path/s453749577af900d8/image/i0ca185c4f1d94062/version/1488984112/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=25x25:mode=crop:format=jpg/path/s453749577af900d8/image/i65442715222b8a2a/version/1488984112/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=25x25:mode=crop:format=jpg/path/s453749577af900d8/image/ie6680866077ffd12/version/1488984112/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=25x25:mode=crop:format=jpg/path/s453749577af900d8/image/ic66916d7b4e87485/version/1488984112/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=25x25:mode=crop:format=jpg/path/s453749577af900d8/image/id15b0d3a04379354/version/1488984112/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=25x25:mode=crop:format=jpg/path/s453749577af900d8/image/ib452962fb95d0900/version/1488984112/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=25x25:mode=crop:format=jpg/path/s453749577af900d8/image/i69fc57f784147cdf/version/1488984113/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=4096x4096:format=jpg/path/s453749577af900d8/image/i552980e68d4c3cec/version/1488984112/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=25x25:mode=crop:format=jpg/path/s453749577af900d8/image/i0a8dda26e5b973de/version/1488984113/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=25x25:mode=crop:format=jpg/path/s453749577af900d8/image/i96efc6838066fe97/version/1488984113/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=25x25:mode=crop:format=jpg/path/s453749577af900d8/image/i28236bb9aca43c02/version/1488984113/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=25x25:mode=crop:format=jpg/path/s453749577af900d8/image/i3d5a86cd0c242656/version/1488984113/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=25x25:mode=crop:format=jpg/path/s453749577af900d8/image/i8fdf3096b4685d17/version/1488984113/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=25x25:mode=crop:format=jpg/path/s453749577af900d8/image/i679e6fa2f9ad9405/version/1488984113/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=25x25:mode=crop:format=jpg/path/s453749577af900d8/image/icd53fbbff5be023e/version/1488984113/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=25x25:mode=crop:format=jpg/path/s453749577af900d8/image/i2b65878d1d95c959/version/1488984113/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=25x25:mode=crop:format=jpg/path/s453749577af900d8/image/i4813fc3e6a35b50c/version/1488984113/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=25x25:mode=crop:format=jpg/path/s453749577af900d8/image/i1d698dd005906792/version/1488984113/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=25x25:mode=crop:format=jpg/path/s453749577af900d8/image/i0d7e79b7dc5e39a2/version/1488984113/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=25x25:mode=crop:format=jpg/path/s453749577af900d8/image/i02ee1ea13e6d5389/version/1488984114/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=25x25:mode=crop:format=jpg/path/s453749577af900d8/image/if9f59b36ec6b60a5/version/1488984114/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=50x10000:format=jpg/path/s453749577af900d8/image/i7510a49295971148/version/1367744869/image.jpg",
+      "alt": ""
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/lantii-38085ce843c3.jpg",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/s453749577af900d8/image/i552980e68d4c3cec/version/1488984112/image.jpg",
+      "sourceUrl": "https://image.jimcdn.com/app/cms/image/transf/none/path/s453749577af900d8/image/i552980e68d4c3cec/version/1488984112/image.jpg",
+      "alt": "",
+      "width": 1280,
+      "height": 960,
+      "sha256": "38085ce843c3617d6bb80022e9af15d5980cf41af8b88a15b423a491f430a0cd"
+    },
+    {
+      "path": "assets/lantii-da6dee1d48cf.jpg",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/s453749577af900d8/image/i0ca185c4f1d94062/version/1488984112/image.jpg",
+      "sourceUrl": "https://image.jimcdn.com/app/cms/image/transf/none/path/s453749577af900d8/image/i0ca185c4f1d94062/version/1488984112/image.jpg",
+      "alt": "",
+      "width": 1024,
+      "height": 768,
+      "sha256": "da6dee1d48cff49a19d70faa4167321d7c575113b0530c96f395276931ec67e1"
+    },
+    {
+      "path": "assets/lantii-3600aea51556.jpg",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/s453749577af900d8/image/i65442715222b8a2a/version/1488984112/image.jpg",
+      "sourceUrl": "https://image.jimcdn.com/app/cms/image/transf/none/path/s453749577af900d8/image/i65442715222b8a2a/version/1488984112/image.jpg",
+      "alt": "",
+      "width": 1280,
+      "height": 960,
+      "sha256": "3600aea515567e27a1729734a1eea393137f16f455d5a7aeb3ba0ae914556ff5"
+    },
+    {
+      "path": "assets/lantii-591c41fc52c3.jpg",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/s453749577af900d8/image/ie6680866077ffd12/version/1488984112/image.jpg",
+      "sourceUrl": "https://image.jimcdn.com/app/cms/image/transf/none/path/s453749577af900d8/image/ie6680866077ffd12/version/1488984112/image.jpg",
+      "alt": "",
+      "width": 1280,
+      "height": 960,
+      "sha256": "591c41fc52c387462cb08874ad37b8440055433401677b9439bd089613173884"
+    },
+    {
+      "path": "assets/lantii-5a0a86048167.jpg",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/s453749577af900d8/image/ic66916d7b4e87485/version/1488984112/image.jpg",
+      "sourceUrl": "https://image.jimcdn.com/app/cms/image/transf/none/path/s453749577af900d8/image/ic66916d7b4e87485/version/1488984112/image.jpg",
+      "alt": "",
+      "width": 1280,
+      "height": 960,
+      "sha256": "5a0a86048167cfafd142dceb8205b147b4127ad77653465799218832a127d2e3"
+    }
+  ]
+}

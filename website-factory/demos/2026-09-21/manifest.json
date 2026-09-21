@@ -1,0 +1,246 @@
+{
+  "date": "2026-09-21",
+  "authorization": "User requested a demo for every poor website found and shown today.",
+  "mode": "local_design_concepts",
+  "factoryRunsUnchanged": true,
+  "scope": "15 reviewed sites with specific improvement needs; 3 lower-priority sites and 6 incomplete/unscored reviews excluded.",
+  "leads": [
+    {
+      "slug": "bernhof",
+      "name": "BERNHOF-Vetsch AG",
+      "family": "wood",
+      "website": "https://www.bernhof.ch/",
+      "activity": {
+        "status": "recent_self_report",
+        "sourceUrl": "https://www.bernhof.ch/",
+        "activityDate": "2026-08-09",
+        "excerpt": "Wir haben Betriebsferien vom 20.7.2026 bis 9. August 2026.",
+        "finding": "Die Webrecherche zeigte einen eigenen Sommerferien-Hinweis für 2026. Im späteren direkten Factory-Abruf war diese Datierung nicht mehr vorhanden. Das ist ein Recherchehinweis; aktuellen Betrieb und Erreichbarkeit zuerst telefonisch bestätigen."
+      },
+      "quality": 53.333333333333336,
+      "report": "reports/prospecting-2026-09-21/reviews/bernhof.md"
+    },
+    {
+      "slug": "fuhrer",
+      "name": "Fuhrer Schreinerei AG",
+      "family": "wood",
+      "website": "https://www.fuhrerschreinerei.ch/",
+      "activity": {
+        "status": "recent_self_report",
+        "sourceUrl": "https://www.fuhrerschreinerei.ch/",
+        "activityDate": "2026-08-03",
+        "excerpt": "Betriebsferien vom 25.Juli-Montag 03.August 2026",
+        "finding": "Eigene Website nennt die Sommerpause 2026 und seit Oktober 2025 ein erweitertes Arbeitsangebot."
+      },
+      "quality": 58.333333333333336,
+      "report": "reports/prospecting-2026-09-21/reviews/fuhrer.md"
+    },
+    {
+      "slug": "grossfeld",
+      "name": "Garage Grossfeld AG",
+      "family": "places",
+      "website": "https://www.garage-grossfeld.ch/",
+      "activity": {
+        "status": "recent_self_report",
+        "sourceUrl": "https://www.garage-grossfeld.ch/standort?catid=39%3Aaktuell&id=24%3Amai-2026&view=article",
+        "activityDate": "2026-09-01",
+        "excerpt": "Ab dem 1. September startet unser neuer Werkstattleiter Patrik Schenker.",
+        "finding": "Eine eigene Personalnachricht nennt Ausbildungsstart im August 2026 und neuen Werkstattleiter ab September."
+      },
+      "quality": 54.578947368421055,
+      "report": "reports/prospecting-2026-09-21/reviews/grossfeld.md"
+    },
+    {
+      "slug": "wismer",
+      "name": "Blumengärtnerei Wismer AG",
+      "family": "places",
+      "website": "https://www.blumenwismer.ch/",
+      "activity": {
+        "status": "uncertain",
+        "sourceUrl": "https://www.blumenwismer.ch/blank-3",
+        "activityDate": null,
+        "excerpt": "Unsere Öffnungszeiten",
+        "finding": "Live-Seite zeigt Öffnungszeiten und Kontakte. Ein Suchindex erwähnte Sommerferien 2026; diese datierte Angabe war auf der direkt geöffneten Seite nicht mehr vorhanden. Betrieb vorerst nicht als aktuell bestätigt werten."
+      },
+      "quality": 65.36842105263159,
+      "report": "reports/prospecting-2026-09-21/reviews/wismer.md"
+    },
+    {
+      "slug": "sopra",
+      "name": "Restaurant Sopra",
+      "family": "salon-dining",
+      "website": "https://www.restaurantsopra.ch/",
+      "activity": {
+        "status": "recent_self_report",
+        "sourceUrl": "https://www.restaurantsopra.ch/",
+        "activityDate": "2026-09-19",
+        "excerpt": "19. September 2026",
+        "finding": "Die eigene Website enthält ein Mittagmenü vom 19. September 2026 und eine Online-Reservationsverknüpfung."
+      },
+      "quality": 64.05263157894737,
+      "report": "reports/prospecting-2026-09-21/reviews/sopra.md"
+    },
+    {
+      "slug": "bieri",
+      "name": "Fredy Bieri AG",
+      "family": "wood",
+      "website": "https://www.schreinerei-bieri.ch/",
+      "activity": {
+        "status": "recent_self_report",
+        "sourceUrl": "https://www.schreinerei-bieri.ch/aktuell/",
+        "excerpt": "Betriebsferien vom 31. Juli bis 16. August 2026",
+        "finding": "Eigene Nachrichten nennen Sommerferien, einen Tag der offenen Tür im Mai 2026 und Investitionen. Aktuelles Aktivitätssignal; heutige Erreichbarkeit nicht bestätigt."
+      },
+      "quality": 45,
+      "report": "reports/prospecting-2026-09-21-round2/reviews/bieri.md"
+    },
+    {
+      "slug": "hairstudio-f",
+      "name": "Hairstudio F",
+      "family": "salon-dining",
+      "website": "https://www.hairstudiof.ch/",
+      "activity": {
+        "status": "current_announcement",
+        "sourceUrl": "https://www.hairstudiof.ch/",
+        "excerpt": "ab Montag 28.09.2026 wieder hier",
+        "finding": "Eigene Ferienhinweise für August und September 2026. Am 24.–26. September abwesend. Für Anrufe die Festnetznummer verwenden; die Website bittet ausdrücklich um keine WhatsApp-Anrufe."
+      },
+      "quality": 40,
+      "report": "reports/prospecting-2026-09-21-round2/reviews/hairstudio-f.md"
+    },
+    {
+      "slug": "schreinerzwei",
+      "name": "Schreiner2 AG",
+      "family": "wood",
+      "website": "https://www.schreinerzwei.ch/",
+      "activity": {
+        "status": "current_announcement",
+        "sourceUrl": "https://www.schreinerzwei.ch/",
+        "excerpt": "Betriebsferien 2026/2027",
+        "finding": "Eigene Website führt einen Ferienplan für 2026/2027 und Geschäftskontakte. Kein telefonischer Betriebsnachweis."
+      },
+      "quality": 62.89473684210527,
+      "report": "reports/prospecting-2026-09-21-round2/reviews/schreinerzwei.md"
+    },
+    {
+      "slug": "holiday",
+      "name": "Coiffeur Holiday",
+      "family": "salon-dining",
+      "website": "https://www.coiffeurholiday.ch/",
+      "activity": {
+        "status": "current_announcement",
+        "sourceUrl": "https://www.coiffeurholiday.ch/",
+        "excerpt": "Ferien vom Donnerstag,24.09.2026 bis Montag,12.10.2026",
+        "finding": "Die frische Factory-Aufnahme zeigt einen Ferienhinweis vom 24. September bis 12. Oktober 2026. Damit liegt ein aktuelles eigenes Aktivitätssignal vor; der zuvor geöffnete Webindex war veraltet. Vor dem Anruf die Pause berücksichtigen.",
+        "verificationMethod": "Direkte Factory-Aufnahme; mobil visuell geprüft"
+      },
+      "quality": 60.631578947368425,
+      "report": "reports/prospecting-2026-09-21-round2/reviews/holiday.md"
+    },
+    {
+      "slug": "seiler",
+      "name": "E. Seiler AG",
+      "family": "places",
+      "website": "https://seilerburgdorf.ch/",
+      "activity": {
+        "status": "temporary_holiday",
+        "sourceUrl": "https://seilerburgdorf.ch/aktuell",
+        "excerpt": "Betriebsferien vom 19. 9. - 5. 10. 2026",
+        "finding": "Eigene aktuelle Mitteilung: Betriebspause bis einschliesslich 5. Oktober; Wiederaufnahme ab 6. Oktober 2026. Kein Hinweis auf eine dauerhafte Schliessung. Anruf zurückstellen."
+      },
+      "quality": 64.73684210526316,
+      "report": "reports/prospecting-2026-09-21-round2/reviews/seiler.md"
+    },
+    {
+      "slug": "wacker",
+      "name": "Restaurant Wacker",
+      "family": "salon-dining",
+      "website": "https://www.restaurant-wacker.ch/",
+      "activity": {
+        "status": "temporary_holiday",
+        "sourceUrl": "https://www.restaurant-wacker.ch/wochenmenue",
+        "excerpt": "Montag, 21. September bis und mit",
+        "finding": "Suchindex zeigt Wochenmenü vom September 2026 und Betriebsferien 21. September bis 12. Oktober. Direkter Menüabruf lief in ein Zeitlimit; Pause vor Anruf nochmals prüfen."
+      },
+      "quality": 70.57894736842105,
+      "report": "reports/prospecting-2026-09-21-round2/reviews/wacker.md"
+    },
+    {
+      "slug": "coiffeur-lanz",
+      "name": "Coiffeur Lanz, Vreni Lanz",
+      "family": "salon-dining",
+      "website": "https://www.coiffeurlanz.ch/",
+      "activity": {
+        "website": "https://www.coiffeurlanz.ch/",
+        "name": "Coiffeur Lanz, Vreni Lanz",
+        "place": "Bleienbach BE",
+        "phone": "062 922 31 82",
+        "activityAssessment": "recent_activity_signal",
+        "activityDate": "2026-08-05",
+        "sourceUrl": "https://www.coiffeurlanz.ch/html/offnungszeiten.html",
+        "excerpt": "BETRIEBSFERIEN bis am 5. August 2026",
+        "limitation": "Der Suchindex zeigte den datierten Ferienhinweis. Der direkte Öffnungszeiten-Abruf im Webwerkzeug zeigte eine Zugriffsprüfung; nicht umgangen. Telefonische Erreichbarkeit nicht getestet.",
+        "corroborationUrl": "https://www.bleienbach.ch/leben/gewerbe",
+        "corroboration": "Die Gemeinde führt Coiffure Lanz, Vreni Lanz, Eichi 20, 3368 Bleienbach mit passender Website/E-Mail und Telefonnummer. Nicht mit gleichnamigen Salons verwechseln."
+      },
+      "quality": 28.333333333333332,
+      "report": "reports/prospecting-100-2026-09-21/reviews/coiffeur-lanz.md"
+    },
+    {
+      "slug": "fritschi-griesemer",
+      "name": "Fritschi + Griesemer AG",
+      "family": "wood",
+      "website": "https://www.fritschi-griesemer.ch/",
+      "activity": {
+        "website": "https://www.fritschi-griesemer.ch/",
+        "name": "Fritschi + Griesemer AG",
+        "place": "Güttingen / Kreuzlingen TG",
+        "phone": "071 695 16 43",
+        "activityAssessment": "dated_primary_source",
+        "activityDate": "2026-04-28",
+        "sourceUrl": "https://www.guettingen.ch/politik/aus-dem-gemeinderat.html/203/news/1905",
+        "excerpt": "Schreinerarbeiten: Für CHF 24’635 an die Fritschi + Griesemer AG, Güttingen",
+        "limitation": "Amtliche Mitteilung vom 12.05.2026 über Auftragsvergabe an der Gemeinderatssitzung vom 28.04.2026. Beleg für Geschäftstätigkeit, kein Nachweis eines Website-Budgets.",
+        "corroborationUrl": "https://www.fritschi-griesemer.ch/willkommen.html"
+      },
+      "quality": 56.666666666666664,
+      "report": "reports/prospecting-100-2026-09-21/reviews/fritschi-griesemer.md"
+    },
+    {
+      "slug": "martin-graf-gartenbau",
+      "name": "Martin Graf Gartenbau GmbH",
+      "family": "places",
+      "website": "https://grafgartenbaugmbh.ch/",
+      "activity": {
+        "website": "https://grafgartenbaugmbh.ch/",
+        "name": "Martin Graf Gartenbau GmbH",
+        "place": "Lindau ZH",
+        "phone": "052 345 12 50",
+        "activityAssessment": "uncertain",
+        "activityDate": null,
+        "sourceUrl": "https://grafgartenbaugmbh.ch/",
+        "limitation": "Website und öffentliche Verzeichnisse stimmen bei Firma/Adresse/Telefon überein. Kein belastbarer datierter Betriebsnachweis gefunden. Aktiver Registereintrag allein reicht nicht."
+      },
+      "quality": 53.333333333333336,
+      "report": "reports/prospecting-100-2026-09-21/reviews/martin-graf-gartenbau.md"
+    },
+    {
+      "slug": "lantii",
+      "name": "Lantii GmbH",
+      "family": "places",
+      "website": "https://www.lantii.ch/",
+      "activity": {
+        "website": "https://www.lantii.ch/",
+        "name": "Lantii GmbH",
+        "place": "Villigen AG",
+        "phone": "056 245 79 39",
+        "activityAssessment": "uncertain",
+        "activityDate": null,
+        "sourceUrl": "https://www.local.ch/de/d/villigen/5234/lantii-gmbh-6BGMC-znlZtdVPa3Gvz94Q",
+        "limitation": "Kontaktverzeichnis vorhanden, keine Öffnungszeiten eingetragen. Registeraggregatoren melden aktiv; das belegt keine laufende operative Tätigkeit. Kein belastbarer datierter Betriebsnachweis gefunden."
+      },
+      "quality": 45,
+      "report": "reports/prospecting-100-2026-09-21/reviews/lantii.md"
+    }
+  ]
+}

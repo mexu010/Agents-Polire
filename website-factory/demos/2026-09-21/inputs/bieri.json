@@ -1,0 +1,369 @@
+{
+  "slug": "bieri",
+  "name": "Fredy Bieri AG",
+  "website": "https://www.schreinerei-bieri.ch/",
+  "locality": "Schötz LU",
+  "industry": "Schreinerei / Küchen",
+  "phone": "041 980 13 81",
+  "runId": "batch-prospects-2026-09-21-round2-a-92033777dc8b8e2a",
+  "report": "reports/prospecting-2026-09-21-round2/reviews/bieri.md",
+  "family": "wood",
+  "activity": {
+    "status": "recent_self_report",
+    "sourceUrl": "https://www.schreinerei-bieri.ch/aktuell/",
+    "excerpt": "Betriebsferien vom 31. Juli bis 16. August 2026",
+    "finding": "Eigene Nachrichten nennen Sommerferien, einen Tag der offenen Tür im Mai 2026 und Investitionen. Aktuelles Aktivitätssignal; heutige Erreichbarkeit nicht bestätigt."
+  },
+  "quality": 45,
+  "facts": [
+    {
+      "field": "company_name",
+      "value": "FREDY BIERI AG",
+      "evidenceIds": [
+        "7875a399-aecc-4220-a681-0426c01ebed6"
+      ]
+    },
+    {
+      "field": "address",
+      "value": "Nebikerstrasse 40, 6247 Schötz",
+      "evidenceIds": [
+        "7875a399-aecc-4220-a681-0426c01ebed6"
+      ]
+    },
+    {
+      "field": "address",
+      "value": "Rosenweg 3, 6234 Triengen",
+      "evidenceIds": [
+        "7875a399-aecc-4220-a681-0426c01ebed6"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Bieri Küchen",
+      "evidenceIds": [
+        "7875a399-aecc-4220-a681-0426c01ebed6"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Schreinerei Schränke",
+      "evidenceIds": [
+        "7875a399-aecc-4220-a681-0426c01ebed6"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Badezimmer",
+      "evidenceIds": [
+        "7875a399-aecc-4220-a681-0426c01ebed6"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Boden Parkett",
+      "evidenceIds": [
+        "7875a399-aecc-4220-a681-0426c01ebed6"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Laminat",
+      "evidenceIds": [
+        "7875a399-aecc-4220-a681-0426c01ebed6"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Vinyl",
+      "evidenceIds": [
+        "7875a399-aecc-4220-a681-0426c01ebed6"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Möbel",
+      "evidenceIds": [
+        "7875a399-aecc-4220-a681-0426c01ebed6"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Gastro- und Ladenbau",
+      "evidenceIds": [
+        "7875a399-aecc-4220-a681-0426c01ebed6"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Umbauten",
+      "evidenceIds": [
+        "7875a399-aecc-4220-a681-0426c01ebed6"
+      ]
+    },
+    {
+      "field": "claim",
+      "value": "seit 1989",
+      "evidenceIds": [
+        "7875a399-aecc-4220-a681-0426c01ebed6"
+      ]
+    }
+  ],
+  "contacts": [
+    {
+      "contact_id": "cbb16384-8926-4bd3-a417-fce124325e2b",
+      "kind": "phone",
+      "value": "041 980 13 81",
+      "evidence_ids": [
+        "7875a399-aecc-4220-a681-0426c01ebed6",
+        "5bbaaeba-cb0b-43ab-ac72-dffecc17b3d4"
+      ]
+    },
+    {
+      "contact_id": "7abe154f-0b11-4cba-a8db-227fada7351b",
+      "kind": "phone",
+      "value": "041 933 30 58",
+      "evidence_ids": [
+        "7875a399-aecc-4220-a681-0426c01ebed6",
+        "5bbaaeba-cb0b-43ab-ac72-dffecc17b3d4"
+      ]
+    },
+    {
+      "contact_id": "bbf78cfd-c1b1-4ff1-a224-8317af778916",
+      "kind": "contact_page",
+      "value": "https://www.schreinerei-bieri.ch/kontakt/",
+      "evidence_ids": [
+        "5bbaaeba-cb0b-43ab-ac72-dffecc17b3d4"
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "observation": "Bei 375 px sind Navigation, Links und Kontaktangaben sehr klein dargestellt; der Cookie-Hinweis verdeckt den oberen Bereich.",
+      "recommendation": "Mobile Schriftgrössen, Abstände und Bedienelemente prüfen; Cookie-Hinweis so platzieren, dass zentrale Inhalte erreichbar bleiben."
+    },
+    {
+      "observation": "Der Cookie-Hinweis liegt beim Aufruf über dem Kopfbereich und dem primären Seiteninhalt.",
+      "recommendation": "Cookie-Hinweis hinsichtlich Grösse, Position und Erreichbarkeit der Inhalte prüfen."
+    },
+    {
+      "observation": "Die Startseite bündelt zahlreiche Aktuell-Links, Standortangaben und Leistungsbilder; eine klar hervorgehobene nächste Handlung ist nicht beobachtet.",
+      "recommendation": "Startseitenhierarchie und den Einstieg zu Kontakt oder Leistungen klarer priorisieren."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "7875a399-aecc-4220-a681-0426c01ebed6",
+      "url": "https://www.schreinerei-bieri.ch/",
+      "text": "sChötz - 1515590543s Webseite!\n\nHome\nAktuell\nBieri Küchen\nSchreinerei Schränke\nBadezimmer\nBoden Parkett\nLaminat\nVinyl\n\nMöbel\nGastro- und Ladenbau\nReferenzen\n\nUmbauten\nBieri Team\nStellen\nMarktplatz\nKontakt\n\nHome\nAktuell\nBieri Küchen\nSchreinerei Schränke\nBadezimmer\nBoden Parkett\nLaminat\nVinyl\n\nMöbel\nGastro- und Ladenbau\nReferenzen\n\nUmbauten\nBieri Team\nStellen\nMarktplatz\nKontakt\n\nHome\n\nFREDY BIERI AG\n\nseit 1989    \n\nAKTUELL\n\nBetriebsferien\n\nLehrabschluss\n\nElias Häfliger\n\nFirmenausflug 2026\n\nHerzlichen Dank  für Ihren Besuch\n\nTag der offenen Tür\n\nEinbauküche\n\nBadumbau\n\nNeue CNC\n\nNeuer Montagebus\n\nNeue Schleifmaschine\n\nLehrabschluss\n\nRemo Zimmermann\n\nKüng Platten\n\n\"Lieferbar\"\n\nNeuerstellung Badezimmer\n\nSkitag 2025\n\nsChötz\n\nFredy Bieri AG\n\nNebikerstrasse\n40\n\n6247 Schötz\n\nT: 041 980 13 81\n\n[email protected]\n\nTriengen\n\nFredy Bieri AG\n\nRosenweg 3\n\n6234 Triengen\n\nT: 041 933 30 58\n\n[email protected]\n\nBieri Küchen\n\nBieri team\n\nSChreinerei Bieri\n\nGastro-Ladenbau\n\nWEITEREMPFEHLEN\n\nHinterlassen Sie Uns eine\n\nGoogle Bewertung\n\nKONTAKT\n\nFredy Bieri AG\n\nNebikerstrasse 40\n\n6247 Schötz\n\n \n\n041 980 13 81 \n\n[email protected]\n\nREFERENZEN\n\nDOWNLOADS\n\nBibox Fermacell\n\nWeinregal ohne Leim oder Schrauben \n\nImpressum | Datenschutz | Cookie-Richtlinie | Sitemap\n\nAnmelden\n\nAbmelden\n|\nBearbeiten\n\nzuklappen"
+    },
+    {
+      "id": "71898103-bf14-4f7c-b0b6-0f242f5299ed",
+      "url": "https://www.schreinerei-bieri.ch/bieri-team/",
+      "text": "Bieri Team - 1515590543s Webseite!\n\nHome\nAktuell\nBieri Küchen\nSchreinerei Schränke\nBadezimmer\nBoden Parkett\nLaminat\nVinyl\n\nMöbel\nGastro- und Ladenbau\nReferenzen\n\nUmbauten\nBieri Team\nStellen\nMarktplatz\nKontakt\n\nHome\nAktuell\nBieri Küchen\nSchreinerei Schränke\nBadezimmer\nBoden Parkett\nLaminat\nVinyl\n\nMöbel\nGastro- und Ladenbau\nReferenzen\n\nUmbauten\nBieri Team\nStellen\nMarktplatz\nKontakt\n\nBieri Team\n\nBieri Team\n\nGeschichte\n\nReferenzen\n\nLeitbild\n\nThomas Röthlisberger\n\nInhaber / Geschäftsführung\n\n[email protected]\n\nTel: 041 984 04 21\n\nSelina stadelmann\n\nProjektleitung AVOR/ Berufsbildnerin\n\n[email protected]\n\nTel: 041 984 04 24\n\nMartin Sommerhalder\n\nProjektleitung AVOR\n\n[email protected]\n\n \n\nDANIEL RUCKSTUHL\n\nProjektleitung AVOR\n\n[email protected]\n\nTel: 041 933 30 58\n\nADRIAN BRUNNER\n\nProjektleitung AVOR\n\n[email protected]\n\nTel: 041 984 04 27\n\nFranz Meier\n\nProjektleitung AVOR\n\n[email protected]\n\nTel: 041 984 04 22\n\nFredy BIeri\n\nKundenberatung / Verkauf\n\n[email protected]\n\nTel: 041 984 04 20\n\nJolanda Wiederkehr\n\nAdministration\n\n[email protected]\n\nTel: 041 984 04 25\n\nChristian Fischer\n\nWerkstattleitung / CNC\n\n \n\n[email protected]\n\nTel: 041 980 13 81\n\nChristoph Waser\n\nMontage\n\n \n\nWalter Vogel\n\nMontage\n\nmarco Lussi\n\nMontage / Werkstatt\n\nOthmar Schmid\n\nOberflächentechnik\n\nSimon Vogel\n\nWerkstatt / CNC\n\nElias Häfliger\n\nCNC / Werkstatt\n\nLaura Bucher\n\nWerkstatt\n\nAlois stutz\n\nWerkstatt\n\nStefan Widmer\n\nWerkstatt\n\nLIO MEIER\n\n \n\n4. Lehrjahr Schreiner EFZ\n\nTIM ROOS\n\n \n\n4. Lehrjahr Schreiner EFZ\n\nNIK DUBACH \n\n \n\n3. Lehrjahr Schreiner EFZ\n\nWEITEREMPFEHLEN\n\nHinterlassen Sie Uns eine\n\nGoogle Bewertung\n\nKONTAKT\n\nFredy Bieri AG\n\nNebikerstrasse 40\n\n6247 Schötz\n\n \n\n041 980 13 81 \n\n[email protected]\n\nREFERENZEN\n\nDOWNLOADS\n\nBibox Fermacell\n\nWeinregal ohne Leim oder Schrauben \n\nImpressum | Datenschutz | C"
+    },
+    {
+      "id": "dee158d4-a8a8-4f07-b986-00c52b18b619",
+      "url": "https://www.schreinerei-bieri.ch/bieri-team/",
+      "text": "ookie-Richtlinie | Sitemap\n\nAnmelden\n\nAbmelden\n|\nBearbeiten\n\nzuklappen"
+    },
+    {
+      "id": "5bbaaeba-cb0b-43ab-ac72-dffecc17b3d4",
+      "url": "https://www.schreinerei-bieri.ch/kontakt/",
+      "text": "Kontakt - 1515590543s Webseite!\n\nHome\nAktuell\nBieri Küchen\nSchreinerei Schränke\nBadezimmer\nBoden Parkett\nLaminat\nVinyl\n\nMöbel\nGastro- und Ladenbau\nReferenzen\n\nUmbauten\nBieri Team\nStellen\nMarktplatz\nKontakt\n\nHome\nAktuell\nBieri Küchen\nSchreinerei Schränke\nBadezimmer\nBoden Parkett\nLaminat\nVinyl\n\nMöbel\nGastro- und Ladenbau\nReferenzen\n\nUmbauten\nBieri Team\nStellen\nMarktplatz\nKontakt\n\nKontakt\n\nKontakt\n\nSuchen Sie nach einer bestimmten Person, dann klicken Sie HIER\n\nSO FINDEN SIE UNS\n\n \n\nStandort Schötz\n\n \n\nFredy Bieri AG\n\nNebikerstrasse 40\n\n6247 Schötz\n\n \n\nTelefon:    041 980 13 81\n\n \n\n[email protected]\n\nwww.schreinerei-bieri.ch\n\nInhalte von Google Maps werden aufgrund deiner aktuellen Cookie-Einstellungen nicht angezeigt. Klicke auf die Cookie-Richtlinie (Funktionell), um den Cookie-Richtlinien von Google Maps zuzustimmen und den Inhalt anzusehen. Mehr dazu erfährst du in der Google Maps Datenschutzerklärung .\n\n \n\n \n\n \n\nStandort Triengen\n\n \n\nFredy Bieri AG\n\nRosenweg 3\n\n6234 Triengen\n\n \n\nTelefon:    041 933 30 58\n\n \n\n[email protected]\n\nwww.schreinerei-bieri.ch\n\nInhalte von Google Maps werden aufgrund deiner aktuellen Cookie-Einstellungen nicht angezeigt. Klicke auf die Cookie-Richtlinie (Funktionell), um den Cookie-Richtlinien von Google Maps zuzustimmen und den Inhalt anzusehen. Mehr dazu erfährst du in der Google Maps Datenschutzerklärung .\n\nName\n\nEmail\n\nMessage\n\nEs gilt unsere Datenschutzerklärung\n\nHinweis:\nBitte die mit * gekennzeichneten Felder ausfüllen.\n\nWEITEREMPFEHLEN\n\nHinterlassen Sie Uns eine\n\nGoogle Bewertung\n\nKONTAKT\n\nFredy Bieri AG\n\nNebikerstrasse 40\n\n6247 Schötz\n\n \n\n041 980 13 81 \n\n[email protected]\n\nREFERENZEN\n\nDOWNLOADS\n\nBibox Fermacell\n\nWeinregal ohne Leim oder Schrauben \n\nImpressum | Datenschutz | Cookie-Richtlinie | Sitemap\n\nAnmelden\n\nAbmelden\n|\nBearbeiten\n"
+    },
+    {
+      "id": "fb256334-26f5-4783-b810-7d8a224b59b4",
+      "url": "https://www.schreinerei-bieri.ch/kontakt/",
+      "text": "\nzuklappen"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/s1e8b1741884b13af/image/i628397bcc321405d/version/1689596000/image.jpg",
+      "alt": "1515590543s Webseite!"
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=626x10000:format=jpg/path/s1e8b1741884b13af/image/ib7d59f58710e7712/version/1576738974/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=444x10000:format=jpg/path/s1e8b1741884b13af/image/i577f87996ad6e6d8/version/1688558739/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=505x10000:format=jpg/path/s1e8b1741884b13af/image/ia7af64e2cc59185f/version/1678356851/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=502x10000:format=jpg/path/s1e8b1741884b13af/image/i23410f5c95debdff/version/1675936863/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=507x10000:format=jpg/path/s1e8b1741884b13af/image/i8b8c7cd853ecddd0/version/1576836738/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=493x10000:format=jpg/path/s1e8b1741884b13af/image/i8cf2504fc5731cd8/version/1574928477/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=318x10000:format=jpg/path/s1e8b1741884b13af/image/i83c876a63f378cab/version/1725968666/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=318x10000:format=jpg/path/s1e8b1741884b13af/image/ibf88b9dbdf08d4f4/version/1725968677/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=318x10000:format=jpg/path/s1e8b1741884b13af/image/i0a9df888c5269958/version/1762843722/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=318x10000:format=jpg/path/s1e8b1741884b13af/image/i446a66f3841a2a03/version/1725968713/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=318x10000:format=jpg/path/s1e8b1741884b13af/image/ibd174da2b8228979/version/1730737066/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=318x10000:format=jpg/path/s1e8b1741884b13af/image/i40e854dfd351bd16/version/1742796546/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=318x10000:format=jpg/path/s1e8b1741884b13af/image/i2172bfc39bfb76e1/version/1762843835/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=318x10000:format=jpg/path/s1e8b1741884b13af/image/i168b16073a6a8f31/version/1762844055/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=318x10000:format=jpg/path/s1e8b1741884b13af/image/i4424c94c9cc75648/version/1762844047/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=318x10000:format=jpg/path/s1e8b1741884b13af/image/ieba8cf77de134bd1/version/1762844197/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=318x10000:format=jpg/path/s1e8b1741884b13af/image/icc2dedf901cf967d/version/1762844251/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=318x10000:format=jpg/path/s1e8b1741884b13af/image/ie8263f7a945a5ce7/version/1762844394/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=318x10000:format=jpg/path/s1e8b1741884b13af/image/ida97047c4179fc85/version/1762844537/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=318x10000:format=jpg/path/s1e8b1741884b13af/image/idd34f646bd8f754e/version/1775542303/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=318x10000:format=jpg/path/s1e8b1741884b13af/image/i6c5efada81cc04b8/version/1785474397/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=318x10000:format=jpg/path/s1e8b1741884b13af/image/i20b08a783d415abd/version/1748408134/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=318x10000:format=jpg/path/s1e8b1741884b13af/image/i363087fb3552c4f8/version/1748408102/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=318x10000:format=jpg/path/s1e8b1741884b13af/image/ib8f71814fca6f4da/version/1748408084/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=318x10000:format=jpg/path/s1e8b1741884b13af/image/i91f653bdba703e24/version/1785474516/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=318x10000:format=jpg/path/s1e8b1741884b13af/image/ib5dcf93595e68cf7/version/1785474554/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=318x10000:format=jpg/path/s1e8b1741884b13af/image/i88e302ce10ff44db/version/1785474632/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/s1e8b1741884b13af/backgroundarea/i3ebc365f4fed7057/version/1536211218/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://u.jimcdn.com/cms/o/s1e8b1741884b13af/img/favicon.png?t=1516005111",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=origxorig:format=jpg/path/s1e8b1741884b13af/image/ib7d59f58710e7712/version/1576738974/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=origxorig:format=jpg/path/s1e8b1741884b13af/image/i577f87996ad6e6d8/version/1688558739/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/s1e8b1741884b13af/backgroundarea/ifa5d777654abbeb3/version/1521537836/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/s1e8b1741884b13af/backgroundarea/i5c23619675f1a400/version/1568094484/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://assets.jimstatic.com/s/img/google_map_placeholder.png",
+      "alt": ""
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/bieri-1a29616db702.jpg",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/s1e8b1741884b13af/image/i628397bcc321405d/version/1689596000/image.jpg",
+      "sourceUrl": "https://image.jimcdn.com/app/cms/image/transf/none/path/s1e8b1741884b13af/image/i628397bcc321405d/version/1689596000/image.jpg",
+      "alt": "1515590543s Webseite!",
+      "width": 276,
+      "height": 276,
+      "sha256": "1a29616db7026233e7a355bcb6769976025359ff3aa1a000903eab114788b840"
+    },
+    {
+      "path": "assets/bieri-d82d0d644df2.jpg",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=626x10000:format=jpg/path/s1e8b1741884b13af/image/ib7d59f58710e7712/version/1576738974/image.jpg",
+      "sourceUrl": "https://image.jimcdn.com/app/cms/image/transf/dimension=626x10000:format=jpg/path/s1e8b1741884b13af/image/ib7d59f58710e7712/version/1576738974/image.jpg",
+      "alt": "",
+      "width": 626,
+      "height": 417,
+      "sha256": "d82d0d644df231f32db2b5fa4c7e44535f94afb62827db4dd6cef64b55f0c3ae"
+    },
+    {
+      "path": "assets/bieri-f7a06b641c96.jpg",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=444x10000:format=jpg/path/s1e8b1741884b13af/image/i577f87996ad6e6d8/version/1688558739/image.jpg",
+      "sourceUrl": "https://image.jimcdn.com/app/cms/image/transf/dimension=444x10000:format=jpg/path/s1e8b1741884b13af/image/i577f87996ad6e6d8/version/1688558739/image.jpg",
+      "alt": "",
+      "width": 444,
+      "height": 462,
+      "sha256": "f7a06b641c96937cfc24cf133cd850307dd4b7965971bedcd4f36157adb25a43"
+    },
+    {
+      "path": "assets/bieri-2f58bf402f9f.jpg",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=505x10000:format=jpg/path/s1e8b1741884b13af/image/ia7af64e2cc59185f/version/1678356851/image.jpg",
+      "sourceUrl": "https://image.jimcdn.com/app/cms/image/transf/dimension=505x10000:format=jpg/path/s1e8b1741884b13af/image/ia7af64e2cc59185f/version/1678356851/image.jpg",
+      "alt": "",
+      "width": 505,
+      "height": 336,
+      "sha256": "2f58bf402f9ffc37cdff8ec8c11baac2ee4b7767a9a851c26cfa124cd5b8d213"
+    },
+    {
+      "path": "assets/bieri-39cac0b18f25.jpg",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=502x10000:format=jpg/path/s1e8b1741884b13af/image/i23410f5c95debdff/version/1675936863/image.jpg",
+      "sourceUrl": "https://image.jimcdn.com/app/cms/image/transf/dimension=502x10000:format=jpg/path/s1e8b1741884b13af/image/i23410f5c95debdff/version/1675936863/image.jpg",
+      "alt": "",
+      "width": 502,
+      "height": 337,
+      "sha256": "39cac0b18f25d7f2c778461b5692f9ae236e2b329c8a1207b4568dc8f45c3267"
+    }
+  ]
+}

@@ -1,0 +1,513 @@
+{
+  "slug": "bernhof",
+  "name": "BERNHOF-Vetsch AG",
+  "website": "https://www.bernhof.ch/",
+  "locality": "Frümsen SG",
+  "industry": "Schreinerei / Haustüren",
+  "phone": "081 757 12 73",
+  "runId": "batch-prospects-2026-09-21-a-867af9e243f6fc73",
+  "report": "reports/prospecting-2026-09-21/reviews/bernhof.md",
+  "family": "wood",
+  "activity": {
+    "status": "recent_self_report",
+    "sourceUrl": "https://www.bernhof.ch/",
+    "activityDate": "2026-08-09",
+    "excerpt": "Wir haben Betriebsferien vom 20.7.2026 bis 9. August 2026.",
+    "finding": "Die Webrecherche zeigte einen eigenen Sommerferien-Hinweis für 2026. Im späteren direkten Factory-Abruf war diese Datierung nicht mehr vorhanden. Das ist ein Recherchehinweis; aktuellen Betrieb und Erreichbarkeit zuerst telefonisch bestätigen."
+  },
+  "quality": 53.333333333333336,
+  "facts": [
+    {
+      "field": "company_name",
+      "value": "BERNHOF-Vetsch AG",
+      "evidenceIds": [
+        "68c51e9a-abd0-4a74-a525-591708ec90e2"
+      ]
+    },
+    {
+      "field": "address",
+      "value": "im Hof 3",
+      "evidenceIds": [
+        "68c51e9a-abd0-4a74-a525-591708ec90e2"
+      ]
+    },
+    {
+      "field": "locality",
+      "value": "CH-9467 Frümsen (Gemeinde Sennwald)",
+      "evidenceIds": [
+        "68c51e9a-abd0-4a74-a525-591708ec90e2"
+      ]
+    },
+    {
+      "field": "country",
+      "value": "CH",
+      "evidenceIds": [
+        "68c51e9a-abd0-4a74-a525-591708ec90e2"
+      ]
+    },
+    {
+      "field": "industry",
+      "value": "Haustüren Holzhandwerk",
+      "evidenceIds": [
+        "68c51e9a-abd0-4a74-a525-591708ec90e2"
+      ]
+    },
+    {
+      "field": "industry",
+      "value": "Schreinerei Innenausbau",
+      "evidenceIds": [
+        "68c51e9a-abd0-4a74-a525-591708ec90e2"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Haustüren",
+      "evidenceIds": [
+        "05c0931f-a30e-4b09-97b0-bfb2e8fe2263"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Innenausbau",
+      "evidenceIds": [
+        "05c0931f-a30e-4b09-97b0-bfb2e8fe2263"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Innentüren",
+      "evidenceIds": [
+        "05c0931f-a30e-4b09-97b0-bfb2e8fe2263"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Brandschutz-VKF-Türen EI 30",
+      "evidenceIds": [
+        "05c0931f-a30e-4b09-97b0-bfb2e8fe2263"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Schränke-Garderoben",
+      "evidenceIds": [
+        "05c0931f-a30e-4b09-97b0-bfb2e8fe2263"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Wohnungs-Servicearbeiten",
+      "evidenceIds": [
+        "e137a23a-a32c-4e13-8d28-aa7ce2fabab0"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Glasbruch Reparatur",
+      "evidenceIds": [
+        "05c0931f-a30e-4b09-97b0-bfb2e8fe2263"
+      ]
+    },
+    {
+      "field": "opening_hours",
+      "value": "Montag - Freitag",
+      "evidenceIds": [
+        "ece7fdae-7c4c-4ea1-87a7-33255ca8f1c1"
+      ]
+    }
+  ],
+  "contacts": [
+    {
+      "contact_id": "12024727-a2f0-4260-913a-b841097595fc",
+      "kind": "phone",
+      "value": "081 757 12 73",
+      "evidence_ids": [
+        "ece7fdae-7c4c-4ea1-87a7-33255ca8f1c1"
+      ]
+    },
+    {
+      "contact_id": "29c142da-8c43-4324-8211-a7c831ada23c",
+      "kind": "phone",
+      "value": "079 346 28 84",
+      "evidence_ids": [
+        "ece7fdae-7c4c-4ea1-87a7-33255ca8f1c1"
+      ]
+    },
+    {
+      "contact_id": "4d2b9dc8-c2a6-443e-a287-6d02ec8a616e",
+      "kind": "contact_page",
+      "value": "https://www.bernhof.ch/kontakt/",
+      "evidence_ids": [
+        "ece7fdae-7c4c-4ea1-87a7-33255ca8f1c1",
+        "4d010328-10e3-4eb2-9646-c97ab2ff63a4"
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "observation": "Der Cookie-Dialog überdeckt beim beobachteten mobilen und Desktop-Aufruf grosse Teile des sichtbaren Startseiteninhalts.",
+      "recommendation": "Cookie-Dialog kompakter gestalten und die Schliessen-Funktion deutlich erreichbar halten."
+    },
+    {
+      "observation": "Die Startseite enthält eine umfangreiche Navigation mit wiederholten Menüpunkten sowie mehrere unterschiedliche Themenbereiche auf derselben Seite.",
+      "recommendation": "Leistungen und Kontaktweg in einer klareren Reihenfolge bündeln und Navigationswiederholungen prüfen."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "05c0931f-a30e-4b09-97b0-bfb2e8fe2263",
+      "url": "https://www.bernhof.ch/",
+      "text": "Neue Haustüren und Innenausbauten - Ausstellungstüren von BERNHOF\n\nStartseite Diplom-Abschlussfeier\nIndustrie-und Gewerbemesse\nKundenmeinungen\nAdventsfenster\nNeue Wohnung 2018\n\nHaustüren für alle Ansprüche Haustüre Türdoppel Alu eloxiert\nHaustüre m. Glasausschnitt\nHaustüre Traditionell\nHaustüre m. Massivdoppel Haustür Renovierung\n\nLinks\n\nInnenausbau Innentüren\nBrandschutz-VKF-Türen EI 30\nSchränke-Garderoben\nBadzimmer\nUmbauten\nBrandschaden oder Wasserschaden\nTerrassenböden\nHolzhandwerk-Kleinteile\nDecken u. Akustikdecken\n\nTüren direkt zum Mitnehmen\nDiv. Rest-Posten\nBeratung - Auftrag Wohnungsservice\nGlasbruch Reparatur\n\nKontakt So finden Sie uns\n\nPrix-Lignum 2021\n\nHaustüren und Innenausbauten von Bernhof-Vetsch AG Frümsen - [email protected] - 081 757 12 73\n\nStartseite Diplom-Abschlussfeier\nIndustrie-und Gewerbemesse\nKundenmeinungen\nAdventsfenster\nNeue Wohnung 2018\n\nHaustüren für alle Ansprüche Haustüre Türdoppel Alu eloxiert\nHaustüre m. Glasausschnitt\nHaustüre Traditionell\nHaustüre m. Massivdoppel Haustür Renovierung\n\nLinks\n\nInnenausbau Innentüren\nBrandschutz-VKF-Türen EI 30\nSchränke-Garderoben\nBadzimmer\nUmbauten\nBrandschaden oder Wasserschaden\nTerrassenböden\nHolzhandwerk-Kleinteile\nDecken u. Akustikdecken\n\nTüren direkt zum Mitnehmen\nDiv. Rest-Posten\nBeratung - Auftrag Wohnungsservice\nGlasbruch Reparatur\n\nKontakt So finden Sie uns\n\nPrix-Lignum 2021\n\nStartseite\n\nBeratung - Planung - Qualität = optimale Ergebnisse - jede Tür ein Unikat\n\nBERNHOF-Haustüren werden in der Schweiz - in Frümsen/SG hergestellt\n\nHaustüren für alle Ansprüche   - Neubau - Umbau - Sanierung\n\nHandwerkliche Qualitätsarbeit und durchdachte verzugsfreie Konstruktionen führten zur Patentierung der ersten BERNHOF-Haustüre. Unsere\nHaustüren werden ständig an neue Qualitäts- und Sicherheitsstandards angepass"
+    },
+    {
+      "id": "68c51e9a-abd0-4a74-a525-591708ec90e2",
+      "url": "https://www.bernhof.ch/",
+      "text": "t. \n\nWas Bernhof aber einzigartig macht, ist die persönliche Beratung. Sie wird vor allem von jenen Kunden und Kundinnen geschätzt, die noch\nnicht so recht wissen, wie ihre Haustüre schliesslich aussehen soll und welchen Ansprüchen sie genügen muss. Oder die mit ihrer bestehenden Türe nicht mehr so recht zufrieden.\n\nOft kann eine bestehende Haustüre mit geringem Aufwand renoviert werden . \n\nBERNHOF-Vetsch AG\n\nHaustüren Holzhandwerk\n\nSchreinerei Innenausbau\n\nim Hof 3\n\nCH-9467 Frümsen (Gemeinde Sennwald) \n\n+81 757 12 73 - 079 346 28 84\n\n[email protected]\n\nPlanen Sie eine neue Hauseingangstüre? Rufen Sie uns an\n\n081 757 12 73.  Wir freuen\nuns auf Ihre Kontaktaufnahme.\n\n \n\nAuch Garderobe, Schränke, Innentüren\n\nFreie Lehrstelle als Schreiner EFZ\n\nRufe uns an - wir vereinbaren gerne Schnuppertage, damit Du den Beruf kennenlernen kannst. \n\nSchöne Haustüren und Innenausbauten nach Ihren Vorstellungen .\n\nNehmen Sie sich Zeit für eine Beratung?\n\nWir freuen uns auf Sie. 081 757 12 73\n\nWebmail\n\nImpressum | AGB | Datenschutz | Cookie-Richtlinie\nBERNHOF@Vetsch AG\n\nAbmelden\n|\nBearbeiten\n\nNach oben scrollen"
+    },
+    {
+      "id": "e137a23a-a32c-4e13-8d28-aa7ce2fabab0",
+      "url": "https://www.bernhof.ch/reparaturauftrag/wohnungsservice/",
+      "text": "Wohnungsservice - Mieterschäden - Ausstellungstüren von BERNHOF\n\nStartseite Diplom-Abschlussfeier\nIndustrie-und Gewerbemesse\nKundenmeinungen\nAdventsfenster\nNeue Wohnung 2018\n\nHaustüren für alle Ansprüche Haustüre Türdoppel Alu eloxiert\nHaustüre m. Glasausschnitt\nHaustüre Traditionell\nHaustüre m. Massivdoppel Haustür Renovierung\n\nLinks\n\nInnenausbau Innentüren\nBrandschutz-VKF-Türen EI 30\nSchränke-Garderoben\nBadzimmer\nUmbauten\nBrandschaden oder Wasserschaden\nTerrassenböden\nHolzhandwerk-Kleinteile\nDecken u. Akustikdecken\n\nTüren direkt zum Mitnehmen\nDiv. Rest-Posten\nBeratung - Auftrag Wohnungsservice\nGlasbruch Reparatur\n\nKontakt So finden Sie uns\n\nPrix-Lignum 2021\n\nHaustüren und Innenausbauten von Bernhof-Vetsch AG Frümsen - [email protected] - 081 757 12 73\n\nStartseite Diplom-Abschlussfeier\nIndustrie-und Gewerbemesse\nKundenmeinungen\nAdventsfenster\nNeue Wohnung 2018\n\nHaustüren für alle Ansprüche Haustüre Türdoppel Alu eloxiert\nHaustüre m. Glasausschnitt\nHaustüre Traditionell\nHaustüre m. Massivdoppel Haustür Renovierung\n\nLinks\n\nInnenausbau Innentüren\nBrandschutz-VKF-Türen EI 30\nSchränke-Garderoben\nBadzimmer\nUmbauten\nBrandschaden oder Wasserschaden\nTerrassenböden\nHolzhandwerk-Kleinteile\nDecken u. Akustikdecken\n\nTüren direkt zum Mitnehmen\nDiv. Rest-Posten\nBeratung - Auftrag Wohnungsservice\nGlasbruch Reparatur\n\nKontakt So finden Sie uns\n\nPrix-Lignum 2021\n\nBeratung - Auftrag\nWohnungsservice\n\nWohnungs-Servicearbeiten\n\nWohnungsauszug - Wohnungseinzug\n\n \n\nVielfach gibt es beim Wohnungsauszug etwas zu erneuern, verschönern oder einfach instand zu stellen.\n\nwir erneuern Silikonfugen\n\nstellen Küchenfronten richtig ein\n\nrichten Schubladen und Auszüge\n\nliefern neue Besteckeinsätze und Flaschenhalterungen\n\nkontrollieren Türen und Planetdichtungen\n\nmontieren Gummipuffer\n\nbefestigen Schwell"
+    },
+    {
+      "id": "b3074f6f-4648-4f57-bf07-95db64158520",
+      "url": "https://www.bernhof.ch/reparaturauftrag/wohnungsservice/",
+      "text": "en\n\nsetzen Schlösser und Schlüssel\n\npassen Fussleisten an\n\nbringen den neuen Abfalleimer\n\nreparieren Fensterscheiben\n\nmontieren neue Schliess-Systeme, z. B. neue Zylinder oder Schlüssel\n\n Der neue Mieter freut sich und Sie ?.\n\nRufen Sie uns an. 081 757 12 73\n\n \n\nBERNHOF-Vetsch AG\n\nHaustüren Holzhandwerk\n\nSchreinerei Innenausbau\n\nim Hof 3\n\nCH-9467 Frümsen (Gemeinde Sennwald) \n\n+81 757 12 73 - 079 346 28 84\n\n[email protected]\n\nPlanen Sie eine neue Hauseingangstüre? Rufen Sie uns an\n\n081 757 12 73.  Wir freuen\nuns auf Ihre Kontaktaufnahme.\n\n \n\nAuch Garderobe, Schränke, Innentüren\n\nFreie Lehrstelle als Schreiner EFZ\n\nRufe uns an - wir vereinbaren gerne Schnuppertage, damit Du den Beruf kennenlernen kannst. \n\nSchöne Haustüren und Innenausbauten nach Ihren Vorstellungen .\n\nNehmen Sie sich Zeit für eine Beratung?\n\nWir freuen uns auf Sie. 081 757 12 73\n\nWebmail\n\nImpressum | AGB | Datenschutz | Cookie-Richtlinie\nBERNHOF@Vetsch AG\n\nAbmelden\n|\nBearbeiten\n\nNach oben scrollen"
+    },
+    {
+      "id": "ece7fdae-7c4c-4ea1-87a7-33255ca8f1c1",
+      "url": "https://www.bernhof.ch/kontakt/",
+      "text": "Besuchen Sie uns - Ausstellungstüren von BERNHOF\n\nStartseite Diplom-Abschlussfeier\nIndustrie-und Gewerbemesse\nKundenmeinungen\nAdventsfenster\nNeue Wohnung 2018\n\nHaustüren für alle Ansprüche Haustüre Türdoppel Alu eloxiert\nHaustüre m. Glasausschnitt\nHaustüre Traditionell\nHaustüre m. Massivdoppel Haustür Renovierung\n\nLinks\n\nInnenausbau Innentüren\nBrandschutz-VKF-Türen EI 30\nSchränke-Garderoben\nBadzimmer\nUmbauten\nBrandschaden oder Wasserschaden\nTerrassenböden\nHolzhandwerk-Kleinteile\nDecken u. Akustikdecken\n\nTüren direkt zum Mitnehmen\nDiv. Rest-Posten\nBeratung - Auftrag Wohnungsservice\nGlasbruch Reparatur\n\nKontakt So finden Sie uns\n\nPrix-Lignum 2021\n\nHaustüren und Innenausbauten von Bernhof-Vetsch AG Frümsen - [email protected] - 081 757 12 73\n\nStartseite Diplom-Abschlussfeier\nIndustrie-und Gewerbemesse\nKundenmeinungen\nAdventsfenster\nNeue Wohnung 2018\n\nHaustüren für alle Ansprüche Haustüre Türdoppel Alu eloxiert\nHaustüre m. Glasausschnitt\nHaustüre Traditionell\nHaustüre m. Massivdoppel Haustür Renovierung\n\nLinks\n\nInnenausbau Innentüren\nBrandschutz-VKF-Türen EI 30\nSchränke-Garderoben\nBadzimmer\nUmbauten\nBrandschaden oder Wasserschaden\nTerrassenböden\nHolzhandwerk-Kleinteile\nDecken u. Akustikdecken\n\nTüren direkt zum Mitnehmen\nDiv. Rest-Posten\nBeratung - Auftrag Wohnungsservice\nGlasbruch Reparatur\n\nKontakt So finden Sie uns\n\nPrix-Lignum 2021\n\nKontakt\n\nKontakt\n\nMontag - Freitag\n\nsamstags oder nach tel. Vereinbarung. \n\nOffice:  081 757 12 73\n\nMobile: 079 346 28 84\n\nMail:      [email protected]\n\nBitte um Kontaktaufnahme\n\nGerne beraten wir Sie vor Ort.\n\nEinfach Ihre Kontaktdaten ausfüllen. Wir nehmen dann mit Ihnen Kontakt auf.\n\nName\n\nStrasse\n\nPLZ und Ort\n\nTelefon\n\nE-Mail\n\nInteresse für\n\nHaustüre - Abschlusstüre - Veloraumtüre\n\nInnentüren\n\nSchreinerarbeiten - Schränke - Garderobe\n\nFen"
+    },
+    {
+      "id": "4d010328-10e3-4eb2-9646-c97ab2ff63a4",
+      "url": "https://www.bernhof.ch/kontakt/",
+      "text": "ster\n\nKüchensanierung\n\nAkustikdecken\n\nNachricht\n\nEs gilt die Datenschutzerklärung .\n\nHinweis:\nBitte die mit * gekennzeichneten Felder ausfüllen.\n\nSo finden Sie uns\n\nim Hof 3, 9467 Frümsen\n\nInhalte von Google Maps werden aufgrund deiner aktuellen Cookie-Einstellungen nicht angezeigt. Klicke auf die Cookie-Richtlinie (Funktionell), um den Cookie-Richtlinien von Google Maps zuzustimmen und den Inhalt anzusehen. Mehr dazu erfährst du in der Google Maps Datenschutzerklärung .\n\nBERNHOF-Vetsch AG\n\nHaustüren Holzhandwerk\n\nSchreinerei Innenausbau\n\nim Hof 3\n\nCH-9467 Frümsen (Gemeinde Sennwald) \n\n+81 757 12 73 - 079 346 28 84\n\n[email protected]\n\nPlanen Sie eine neue Hauseingangstüre? Rufen Sie uns an\n\n081 757 12 73.  Wir freuen\nuns auf Ihre Kontaktaufnahme.\n\n \n\nAuch Garderobe, Schränke, Innentüren\n\nFreie Lehrstelle als Schreiner EFZ\n\nRufe uns an - wir vereinbaren gerne Schnuppertage, damit Du den Beruf kennenlernen kannst. \n\nSchöne Haustüren und Innenausbauten nach Ihren Vorstellungen .\n\nNehmen Sie sich Zeit für eine Beratung?\n\nWir freuen uns auf Sie. 081 757 12 73\n\nWebmail\n\nImpressum | AGB | Datenschutz | Cookie-Richtlinie\nBERNHOF@Vetsch AG\n\nAbmelden\n|\nBearbeiten\n\nNach oben scrollen"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/scff7c64439ec35e6/image/i0a885a351849997b/version/1652078452/image.jpg",
+      "alt": "Ausstellungstüren von BERNHOF"
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/scff7c64439ec35e6/image/i0363ad914e5368bf/version/1788618823/image.jpg",
+      "alt": "Hauseingangstüre mit viel Lichtdurchlass"
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/scff7c64439ec35e6/image/ia9e3c85f2244a6e4/version/1788618822/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/scff7c64439ec35e6/image/icc56a05eb0b146d6/version/1788618822/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=2048x2048:format=jpg:rotate=90/path/scff7c64439ec35e6/image/i856be902e79550a9/version/1788618822/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/scff7c64439ec35e6/image/i0e5ded3c1bc0e26d/version/1788618822/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/scff7c64439ec35e6/image/i0a3a6ac917350bac/version/1788618822/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=2048x2048:format=jpg/path/scff7c64439ec35e6/image/i0aca4a2a3951eaf6/version/1788618822/image.jpg",
+      "alt": "Holz-Metall-Türe mit Fingerleser in Buchs"
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=2048x2048:format=jpg:rotate=90/path/scff7c64439ec35e6/image/i0755f4b905381dd9/version/1788618822/image.jpg",
+      "alt": "Innenansicht des Eingangsportals"
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=2048x2048:format=jpg:rotate=90/path/scff7c64439ec35e6/image/i966cad48e768e2c0/version/1788618822/image.jpg",
+      "alt": "Holz-Metalltüre Räfiserhalde Buchs"
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/scff7c64439ec35e6/image/idfeef2d5381faf80/version/1788618822/image.jpg",
+      "alt": "Vollfläche massive Hauseingangstüre mit seitlicher Verglasung"
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/scff7c64439ec35e6/image/i9d23d91760cd33ca/version/1788618822/image.jpg",
+      "alt": "Holz-ALU-Türe mit Glasausschnitt"
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/scff7c64439ec35e6/image/i4aa4e339251fd16b/version/1788618822/image.jpg",
+      "alt": "Haustüre weiss mit Bandsägenschnitt"
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=2048x2048:format=jpg/path/scff7c64439ec35e6/image/ie73252f4942755c1/version/1788618822/image.jpg",
+      "alt": "Landwirtschaftliches Schulzentrum Salez - Aussentüren"
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/scff7c64439ec35e6/image/id893ac2cb8135ecc/version/1788618822/image.jpg",
+      "alt": "Schwere Aussentüre in Raumhöhe für MFH"
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/scff7c64439ec35e6/image/i90119bdd2c6b2cda/version/1788617085/image.jpg",
+      "alt": "Bernhof-Haustüre in Frümsen mit Bandsägenschnitt"
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/scff7c64439ec35e6/image/i78f1db24619d2b63/version/1788617085/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/scff7c64439ec35e6/image/i05aaf6940824cc0d/version/1788617085/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=2048x2048:format=jpg:rotate=90/path/scff7c64439ec35e6/image/i45e721425631758a/version/1788619500/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=25x25:mode=crop:format=jpg/path/scff7c64439ec35e6/image/i0363ad914e5368bf/version/1788618823/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=25x25:mode=crop:format=jpg/path/scff7c64439ec35e6/image/ia9e3c85f2244a6e4/version/1788618822/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=25x25:mode=crop:format=jpg/path/scff7c64439ec35e6/image/icc56a05eb0b146d6/version/1788618822/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=25x25:mode=crop:format=jpg:rotate=90/path/scff7c64439ec35e6/image/i856be902e79550a9/version/1788618822/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=25x25:mode=crop:format=jpg/path/scff7c64439ec35e6/image/i0e5ded3c1bc0e26d/version/1788618822/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=25x25:mode=crop:format=jpg/path/scff7c64439ec35e6/image/i0a3a6ac917350bac/version/1788618822/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=25x25:mode=crop:format=jpg/path/scff7c64439ec35e6/image/i0aca4a2a3951eaf6/version/1788618822/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=25x25:mode=crop:format=jpg:rotate=90/path/scff7c64439ec35e6/image/i0755f4b905381dd9/version/1788618822/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=25x25:mode=crop:format=jpg:rotate=90/path/scff7c64439ec35e6/image/i966cad48e768e2c0/version/1788618822/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=25x25:mode=crop:format=jpg/path/scff7c64439ec35e6/image/idfeef2d5381faf80/version/1788618822/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=25x25:mode=crop:format=jpg/path/scff7c64439ec35e6/image/i9d23d91760cd33ca/version/1788618822/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=4096x4096:format=jpg/path/scff7c64439ec35e6/image/idfeef2d5381faf80/version/1788618822/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=25x25:mode=crop:format=jpg/path/scff7c64439ec35e6/image/i4aa4e339251fd16b/version/1788618822/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=25x25:mode=crop:format=jpg/path/scff7c64439ec35e6/image/ie73252f4942755c1/version/1788618822/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=25x25:mode=crop:format=jpg/path/scff7c64439ec35e6/image/id893ac2cb8135ecc/version/1788618822/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=25x25:mode=crop:format=jpg/path/scff7c64439ec35e6/image/i90119bdd2c6b2cda/version/1788617085/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=25x25:mode=crop:format=jpg/path/scff7c64439ec35e6/image/i78f1db24619d2b63/version/1788617085/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=25x25:mode=crop:format=jpg/path/scff7c64439ec35e6/image/i05aaf6940824cc0d/version/1788617085/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=25x25:mode=crop:format=jpg:rotate=90/path/scff7c64439ec35e6/image/i45e721425631758a/version/1788619500/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/scff7c64439ec35e6/image/i816f023548d51584/version/1738118626/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=409x2048:format=jpg/path/scff7c64439ec35e6/image/i816f023548d51584/version/1738118626/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/scff7c64439ec35e6/image/i87c798bb75fad4c1/version/1738118626/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/scff7c64439ec35e6/image/ia61aec0a498b1249/version/1738118626/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=409x2048:format=jpg/path/scff7c64439ec35e6/image/ia61aec0a498b1249/version/1738118626/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/scff7c64439ec35e6/image/i333637113cd06291/version/1738118626/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=409x2048:format=jpg/path/scff7c64439ec35e6/image/i333637113cd06291/version/1738118626/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=10000x211:format=jpg:rotate=90/path/scff7c64439ec35e6/image/i4775744df283f435/version/1788619454/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=212x10000:format=jpg/path/scff7c64439ec35e6/image/i739ccb5f21788320/version/1731339245/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=63x10000:format=png/path/scff7c64439ec35e6/image/i8d31af04bbe5fb17/version/1516289958/image.png",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=4096x4096:format=jpg/path/scff7c64439ec35e6/image/i6edff672d4a96973/version/1586438543/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/scff7c64439ec35e6/image/i5a696e2dcd05481f/version/1586438543/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=90x90:mode=crop:format=jpg/path/scff7c64439ec35e6/image/i5a696e2dcd05481f/version/1586438543/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/scff7c64439ec35e6/image/idb63b5c8f401a2f3/version/1586438543/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=90x90:mode=crop:format=jpg/path/scff7c64439ec35e6/image/idb63b5c8f401a2f3/version/1586438543/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/scff7c64439ec35e6/image/iee2110232a305df4/version/1586438543/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=90x90:mode=crop:format=jpg/path/scff7c64439ec35e6/image/iee2110232a305df4/version/1586438543/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/scff7c64439ec35e6/image/ie93115c2a7d60a1d/version/1586438543/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=90x90:mode=crop:format=jpg/path/scff7c64439ec35e6/image/ie93115c2a7d60a1d/version/1586438543/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/scff7c64439ec35e6/image/i5beb6fb040113b1b/version/1586438543/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=90x90:mode=crop:format=jpg/path/scff7c64439ec35e6/image/i5beb6fb040113b1b/version/1586438543/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/scff7c64439ec35e6/image/i8aaeea6090725bbd/version/1586438543/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=90x90:mode=crop:format=jpg/path/scff7c64439ec35e6/image/i8aaeea6090725bbd/version/1586438543/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/scff7c64439ec35e6/image/id4d5e9e02d8dd948/version/1586438543/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=90x90:mode=crop:format=jpg/path/scff7c64439ec35e6/image/id4d5e9e02d8dd948/version/1586438543/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/scff7c64439ec35e6/image/i6edff672d4a96973/version/1586438543/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=90x90:mode=crop:format=jpg/path/scff7c64439ec35e6/image/i6edff672d4a96973/version/1586438543/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/scff7c64439ec35e6/image/i835c3549b2cae5c0/version/1586438543/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=90x90:mode=crop:format=jpg/path/scff7c64439ec35e6/image/i835c3549b2cae5c0/version/1586438543/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/scff7c64439ec35e6/backgroundarea/ibcbe1907823cf6b9/version/1516266573/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://assets.jimstatic.com/s/img/google_map_placeholder.png",
+      "alt": ""
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/bernhof-c80f2eda3a6e.jpg",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/scff7c64439ec35e6/image/i0a885a351849997b/version/1652078452/image.jpg",
+      "sourceUrl": "https://image.jimcdn.com/app/cms/image/transf/none/path/scff7c64439ec35e6/image/i0a885a351849997b/version/1652078452/image.jpg",
+      "alt": "Ausstellungstüren von BERNHOF",
+      "width": 249,
+      "height": 160,
+      "sha256": "c80f2eda3a6e2ec92b78851485140c5e304bc030ac3e5b9694593ffaa15685b4"
+    },
+    {
+      "path": "assets/bernhof-7da6b9b63c1e.jpg",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/scff7c64439ec35e6/image/i0363ad914e5368bf/version/1788618823/image.jpg",
+      "sourceUrl": "https://image.jimcdn.com/app/cms/image/transf/none/path/scff7c64439ec35e6/image/i0363ad914e5368bf/version/1788618823/image.jpg",
+      "alt": "Hauseingangstüre mit viel Lichtdurchlass",
+      "width": 954,
+      "height": 2016,
+      "sha256": "7da6b9b63c1e9a81b52a2905d6e9cd64ab48b1b0df94ad8156242fde725614ed"
+    },
+    {
+      "path": "assets/bernhof-c14893c81421.jpg",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/scff7c64439ec35e6/image/ia9e3c85f2244a6e4/version/1788618822/image.jpg",
+      "sourceUrl": "https://image.jimcdn.com/app/cms/image/transf/none/path/scff7c64439ec35e6/image/ia9e3c85f2244a6e4/version/1788618822/image.jpg",
+      "alt": "",
+      "width": 1512,
+      "height": 2016,
+      "sha256": "c14893c81421c105934855aacaca75d5ce977fbcef9b270984869cb8dd2ee21c"
+    },
+    {
+      "path": "assets/bernhof-923968fd442b.jpg",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/scff7c64439ec35e6/image/icc56a05eb0b146d6/version/1788618822/image.jpg",
+      "sourceUrl": "https://image.jimcdn.com/app/cms/image/transf/none/path/scff7c64439ec35e6/image/icc56a05eb0b146d6/version/1788618822/image.jpg",
+      "alt": "",
+      "width": 1512,
+      "height": 2016,
+      "sha256": "923968fd442b66d069f91ec453d8ee347a33f49b234737119db1005cb76abf31"
+    },
+    {
+      "path": "assets/bernhof-269601d6535b.jpg",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=2048x2048:format=jpg:rotate=90/path/scff7c64439ec35e6/image/i856be902e79550a9/version/1788618822/image.jpg",
+      "sourceUrl": "https://image.jimcdn.com/app/cms/image/transf/dimension=2048x2048:format=jpg:rotate=90/path/scff7c64439ec35e6/image/i856be902e79550a9/version/1788618822/image.jpg",
+      "alt": "",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "269601d6535bd3d7c7d54ccf7b15edf88a71074921fb8e4e9d45272380ea1e49"
+    }
+  ]
+}

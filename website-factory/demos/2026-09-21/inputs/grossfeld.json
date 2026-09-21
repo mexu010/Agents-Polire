@@ -1,0 +1,329 @@
+{
+  "slug": "grossfeld",
+  "name": "Garage Grossfeld AG",
+  "website": "https://www.garage-grossfeld.ch/",
+  "locality": "Trimbach SO",
+  "industry": "Garage",
+  "phone": "062 293 09 09",
+  "runId": "batch-prospects-2026-09-21-a-8b2bf7fdca74d829",
+  "report": "reports/prospecting-2026-09-21/reviews/grossfeld.md",
+  "family": "places",
+  "activity": {
+    "status": "recent_self_report",
+    "sourceUrl": "https://www.garage-grossfeld.ch/standort?catid=39%3Aaktuell&id=24%3Amai-2026&view=article",
+    "activityDate": "2026-09-01",
+    "excerpt": "Ab dem 1. September startet unser neuer Werkstattleiter Patrik Schenker.",
+    "finding": "Eine eigene Personalnachricht nennt Ausbildungsstart im August 2026 und neuen Werkstattleiter ab September."
+  },
+  "quality": 54.578947368421055,
+  "facts": [
+    {
+      "field": "company_name",
+      "value": "Garage Grossfeld AG",
+      "evidenceIds": [
+        "a9ecf8b6-0c9f-4332-9fe8-21b481ca16f6"
+      ]
+    },
+    {
+      "field": "address",
+      "value": "Einschlagweg 36 | 4632 Trimbach",
+      "evidenceIds": [
+        "a9ecf8b6-0c9f-4332-9fe8-21b481ca16f6"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Neu-/Gebrauchtwagen",
+      "evidenceIds": [
+        "07e95987-ad81-4ecc-97aa-664a11505aef"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Mietwagen",
+      "evidenceIds": [
+        "07e95987-ad81-4ecc-97aa-664a11505aef"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Citroën",
+      "evidenceIds": [
+        "07e95987-ad81-4ecc-97aa-664a11505aef"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Honda",
+      "evidenceIds": [
+        "07e95987-ad81-4ecc-97aa-664a11505aef"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "DS Automobiles",
+      "evidenceIds": [
+        "07e95987-ad81-4ecc-97aa-664a11505aef"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Mitsubishi Vertreter",
+      "evidenceIds": [
+        "a9ecf8b6-0c9f-4332-9fe8-21b481ca16f6"
+      ]
+    },
+    {
+      "field": "opening_hours",
+      "value": "Verkauf\nMontag - Freitag\n07:30 - 12:00 Uhr\n13:30 - 18:00 Uhr\nSamstag\n07:30 - 12:00 Uhr",
+      "evidenceIds": [
+        "a9ecf8b6-0c9f-4332-9fe8-21b481ca16f6"
+      ]
+    },
+    {
+      "field": "opening_hours",
+      "value": "Werkstatt\nMontag - Freitag\n07:30 - 12:00 Uhr\n13:30 - 18:00 Uhr\nSamstag\nSaisonal (07:30 - 11:30 Uhr)",
+      "evidenceIds": [
+        "a9ecf8b6-0c9f-4332-9fe8-21b481ca16f6"
+      ]
+    },
+    {
+      "field": "opening_hours",
+      "value": "Kundendienst\nMontag - Freitag\n07:30 - 12:00 Uhr\n13:30 - 18:00 Uhr\nSamstag\nSaisonal (07:30 - 11:30 Uhr)",
+      "evidenceIds": [
+        "a9ecf8b6-0c9f-4332-9fe8-21b481ca16f6"
+      ]
+    }
+  ],
+  "contacts": [
+    {
+      "contact_id": "d8ebe3fb-623f-44df-99b4-88cea13b9035",
+      "kind": "phone",
+      "value": "+41 62 293 09 09",
+      "evidence_ids": [
+        "a9ecf8b6-0c9f-4332-9fe8-21b481ca16f6"
+      ]
+    },
+    {
+      "contact_id": "164c712f-d82d-41f4-bf08-00fdb4b117ac",
+      "kind": "email",
+      "value": "info@garage-grossfeld.ch",
+      "evidence_ids": [
+        "a9ecf8b6-0c9f-4332-9fe8-21b481ca16f6"
+      ]
+    },
+    {
+      "contact_id": "da6db84a-fbb4-4a0d-afdd-b1832aaeff08",
+      "kind": "email",
+      "value": "josef.setz@garage-grossfeld.ch",
+      "evidence_ids": [
+        "49568368-a392-40b3-8181-4620a8504f2d"
+      ]
+    },
+    {
+      "contact_id": "cfa20f25-8be3-4c9c-b030-264377f5b667",
+      "kind": "email",
+      "value": "patrik.schenker@garage-grossfeld.ch",
+      "evidence_ids": [
+        "49568368-a392-40b3-8181-4620a8504f2d"
+      ]
+    },
+    {
+      "contact_id": "32577329-201e-47c3-bf42-7cd42f5a9bb8",
+      "kind": "email",
+      "value": "sandra.setz@garage-grossfeld.ch",
+      "evidence_ids": [
+        "49568368-a392-40b3-8181-4620a8504f2d"
+      ]
+    },
+    {
+      "contact_id": "8e6f686e-28a7-478a-8d16-dd92a1a5f701",
+      "kind": "email",
+      "value": "maik.senn@garage-grossfeld.ch",
+      "evidence_ids": [
+        "49568368-a392-40b3-8181-4620a8504f2d"
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "observation": "Im gelieferten Startseiteninhalt stehen «GARGAE GROSSFELD» und «CITROËN C5 AIRCORSS».",
+      "recommendation": "Schreibweisen in den Startseiteninhalten prüfen und korrigieren."
+    },
+    {
+      "observation": "Der Cookie-Hinweis enthält: «Wenn Sie jetzt einen Link anklicken, wegklicken oder das Impressum wählen, akzeptieren Sie automatisch die Cookies.»",
+      "recommendation": "Einwilligungslogik und Hinweistext fachlich überprüfen; Akzeptanz nur über eine eindeutige Auswahl auslösen."
+    },
+    {
+      "observation": "Lighthouse mobile performance: 53.",
+      "recommendation": "Die gemessene mobile Ladeleistung anhand eines Performance-Profils analysieren und priorisierte Optimierungen ableiten."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "07e95987-ad81-4ecc-97aa-664a11505aef",
+      "url": "https://www.garage-grossfeld.ch/",
+      "text": "Willkommen – Garage Grossfeld AG\n\nWillkommen\nÜber uns Team\nPortrait\nLeitbild\nÖffnungszeiten\nStellenangebote\nPartner\nSponsoring\n\nDienstleistungen\nVerkauf \r\n\r\n?>\r\n\r\nNeu-/Gebrauchtwagen\nCitroën\nHonda\nDS Automobiles\n\nMietwagen\nStandort\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\nWillkommen\nÜber uns Team\nPortrait\nLeitbild\nÖffnungszeiten\nStellenangebote\nPartner\nSponsoring\n\nDienstleistungen\nVerkauf \r\n\r\n?>\r\n\r\nNeu-/Gebrauchtwagen\nCitroën\nHonda\nDS Automobiles\n\nMietwagen\nStandort\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\nJ51_LayerSlideshow\n\r\n\n\r\n\r\nGARGAE GROSSFELD\n\nDS N°8\n\nZEITLOS & AVANTGARDISTISCH\n\nMITSUBISHI OUTLANDER PHEV\n\nEin neues Gesicht der Stärke\n\nCITROËN C5 X\n\nC5 X ist eine einzigartige Kombination aus der Eleganz einer Limousine, der Dynamik eines Kombis und der erhöhten Sitzposition eines SUV. Er ist als Plug-in Hybrid und Hybrid erhältlich.\n\nDS 7\n\nATHLETISCH & MAJESTÄTISCH\n\nMITSUBISHI GRANDIS\n\nWir präsentieren den brandneuen Mitsubishi Grandis - das Familienauto, das den Anforderungen eines hektischen Alltags gewachsen ist.\n\nCITROËN C5 AIRCORSS\n\nDas geräumigste, komfortabelste und technologisch fortschrittlichste SUV, das wir je gebaut haben\n\nDS N°4\n\nDESIGN & AERODYNAMIK\n\nMITSUBISHI ECLIPSE\n\nDer neue Eclipse Cross ist Mitsubishi Motors erstes vollelektrische Fahrzeug für eine neue Ära und markiert einen bedeutenden Meilenstein bei der weiteren Elektrifizierung der europäischen Fahrzeugpalette der Marke\n\nCITROËN Ë-C3\n\nDer ë-C3 revolutioniert die Elektromobilität: kompakt und erschwinglich. Made in Europe, ohne Kompromisse bei Design, Komfort und Technik.\n\nCITROËN NUTZFAHRZEUGE\n\nEntdecken Sie die ë-Serie von Citroën in den Versionen Berlingo, Jumpy oder Jumper. Das äusserst vielseitige Nutzfahrzeug mit zahlreichen Vorteilen, modernem Design und neuesten Komfort- und Sicherheitsausstattunge"
+    },
+    {
+      "id": "a9ecf8b6-0c9f-4332-9fe8-21b481ca16f6",
+      "url": "https://www.garage-grossfeld.ch/",
+      "text": "n.Jetzt noch effizienter dank mehr elektrischer Reichweite.\n\n\r\n\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nNews - Aktuell\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nNeue Mitarbeiter\r\n\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\r\n\r\n\n\r\n\n\r\n\n\r\n\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\nHerzlich Willkommen bei der Garage Grossfeld AG\n\r\n\n\r\nNEU:\n\r\nWir sind seit Frühling 2025 auch Ihr Mitsubishi Vertreter in der Region Olten.\n\r\n\n\r\nTreten Sie ein und lernen Sie uns kennen.\n\r\nGerne begrüssen wir Sie in unserem Betrieb und vereinbaren Sie noch heute einen Termin.\n\r\nWir freuen uns darauf Sie kennenzulernen.\n\r\nIhr Garage Grossfeld-Team\n\r\n\n\r\nRufen Sie uns an unter der Telefonnummer +41 62 293 09 09\n\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\n\r\n\r\n\r\n\nGarage Grossfeld AG | Einschlagweg 36 | 4632 Trimbach\n\r\n\n\r\nUnsere Öffnungszeiten\n\n\r\n\n\r\n\n\r\n\r\n\r\nVerkauf\n\r\n\n\r\n\r\n\nMontag - Freitag\n07:30 - 12:00 Uhr\n13:30 - 18:00 Uhr\nSamstag\n07:30 - 12:00 Uhr\n\n\r\n\n\r\n\n\r\n\r\n\r\nWerkstatt\n\r\n\n\r\n\r\n\nMontag - Freitag\n07:30 - 12:00 Uhr\n13:30 - 18:00 Uhr\nSamstag\nSaisonal (07:30 - 11:30 Uhr)\n\n\r\n\n\r\n\n\r\n\r\n\r\nKundendienst\n\r\n\n\r\n\r\n\nMontag - Freitag\n07:30 - 12:00 Uhr\n13:30 - 18:00 Uhr\nSamstag\nSaisonal (07:30 - 11:30 Uhr)\n\n\r\n\n\r\n\n© 2026 Garage Grossfeld AG | info@garage-grossfeld.ch | +41 62 293 09 09\n\nDatenschutzerklärung\nDatenschutzrichtlinie\nDatenschutzklausel in AGB\n\nWir benutzen Cookies\nWir nutzen Cookies auf unserer Website. Einige von ihnen sind essenziell für den Betrieb der Seite, während andere uns helfen, diese Website und die Nutzererfahrung zu verbessern (Tracking Cookies Matomo). Ferner werden unsere verwendeten Schriften bei Google geladen und Ihre IP dort gespeichert. Sie können nun selbst entscheiden, ob Sie die Cookies zulassen und Google Schriften laden möchten. Bitte beachten Sie, dass bei einer Ablehnung womöglich nicht mehr alle Funktionalitäten der Seite zur Verfügung stehen.\n\nWenn Sie jetzt einen Link anklicken, wegkli"
+    },
+    {
+      "id": "eee2a385-c572-48ff-b402-ab71198b6ef6",
+      "url": "https://www.garage-grossfeld.ch/",
+      "text": "cken oder das Impressum wählen, akzeptieren Sie automatisch die Cookies.\nCookies zulassen Cookies ablehnen"
+    },
+    {
+      "id": "c0e5f345-fbb5-4d79-9a2c-496df9ff3be3",
+      "url": "https://www.garage-grossfeld.ch/ueber-uns",
+      "text": "Über uns – Garage Grossfeld AG\n\nWillkommen\nÜber uns Team\nPortrait\nLeitbild\nÖffnungszeiten\nStellenangebote\nPartner\nSponsoring\n\nDienstleistungen\nVerkauf \r\n\r\n?>\r\n\r\nNeu-/Gebrauchtwagen\nCitroën\nHonda\nDS Automobiles\n\nMietwagen\nStandort\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\nWillkommen\nÜber uns Team\nPortrait\nLeitbild\nÖffnungszeiten\nStellenangebote\nPartner\nSponsoring\n\nDienstleistungen\nVerkauf \r\n\r\n?>\r\n\r\nNeu-/Gebrauchtwagen\nCitroën\nHonda\nDS Automobiles\n\nMietwagen\nStandort\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\nJ51_LayerSlideshow\n\r\n\n\r\n\r\nGARGAE GROSSFELD\n\nDS N°8\n\nZEITLOS & AVANTGARDISTISCH\n\nMITSUBISHI OUTLANDER PHEV\n\nEin neues Gesicht der Stärke\n\nCITROËN C5 X\n\nC5 X ist eine einzigartige Kombination aus der Eleganz einer Limousine, der Dynamik eines Kombis und der erhöhten Sitzposition eines SUV. Er ist als Plug-in Hybrid und Hybrid erhältlich.\n\nDS 7\n\nATHLETISCH & MAJESTÄTISCH\n\nMITSUBISHI GRANDIS\n\nWir präsentieren den brandneuen Mitsubishi Grandis - das Familienauto, das den Anforderungen eines hektischen Alltags gewachsen ist.\n\nCITROËN C5 AIRCORSS\n\nDas geräumigste, komfortabelste und technologisch fortschrittlichste SUV, das wir je gebaut haben\n\nDS N°4\n\nDESIGN & AERODYNAMIK\n\nMITSUBISHI ECLIPSE\n\nDer neue Eclipse Cross ist Mitsubishi Motors erstes vollelektrische Fahrzeug für eine neue Ära und markiert einen bedeutenden Meilenstein bei der weiteren Elektrifizierung der europäischen Fahrzeugpalette der Marke\n\nCITROËN Ë-C3\n\nDer ë-C3 revolutioniert die Elektromobilität: kompakt und erschwinglich. Made in Europe, ohne Kompromisse bei Design, Komfort und Technik.\n\nCITROËN NUTZFAHRZEUGE\n\nEntdecken Sie die ë-Serie von Citroën in den Versionen Berlingo, Jumpy oder Jumper. Das äusserst vielseitige Nutzfahrzeug mit zahlreichen Vorteilen, modernem Design und neuesten Komfort- und Sicherheitsausstattungen."
+    },
+    {
+      "id": "dbed8afb-87bd-4405-9e9d-2df9d6d59cf6",
+      "url": "https://www.garage-grossfeld.ch/ueber-uns",
+      "text": "Jetzt noch effizienter dank mehr elektrischer Reichweite.\n\n\r\n\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\nHier finden Sie alles wissenswerte über unsere Firma.\n\nUnterkategorien\n\nStellenangebote\n\nLeitbild\n\nÖffnungszeiten\n\nPortrait\n\nSponsoring\n\nPartner\n\nTeam\n\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\n© 2026 Garage Grossfeld AG | info@garage-grossfeld.ch | +41 62 293 09 09\n\nDatenschutzerklärung\nDatenschutzrichtlinie\nDatenschutzklausel in AGB\n\nWir benutzen Cookies\nWir nutzen Cookies auf unserer Website. Einige von ihnen sind essenziell für den Betrieb der Seite, während andere uns helfen, diese Website und die Nutzererfahrung zu verbessern (Tracking Cookies Matomo). Ferner werden unsere verwendeten Schriften bei Google geladen und Ihre IP dort gespeichert. Sie können nun selbst entscheiden, ob Sie die Cookies zulassen und Google Schriften laden möchten. Bitte beachten Sie, dass bei einer Ablehnung womöglich nicht mehr alle Funktionalitäten der Seite zur Verfügung stehen.\n\nWenn Sie jetzt einen Link anklicken, wegklicken oder das Impressum wählen, akzeptieren Sie automatisch die Cookies.\nCookies zulassen Cookies ablehnen"
+    },
+    {
+      "id": "615c9313-5234-4cd8-b5d5-1baeb3001535",
+      "url": "https://www.garage-grossfeld.ch/ueber-uns/team",
+      "text": "Team – Garage Grossfeld AG\n\nWillkommen\nÜber uns Team\nPortrait\nLeitbild\nÖffnungszeiten\nStellenangebote\nPartner\nSponsoring\n\nDienstleistungen\nVerkauf \r\n\r\n?>\r\n\r\nNeu-/Gebrauchtwagen\nCitroën\nHonda\nDS Automobiles\n\nMietwagen\nStandort\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\n\nWillkommen\nÜber uns Team\nPortrait\nLeitbild\nÖffnungszeiten\nStellenangebote\nPartner\nSponsoring\n\nDienstleistungen\nVerkauf \r\n\r\n?>\r\n\r\nNeu-/Gebrauchtwagen\nCitroën\nHonda\nDS Automobiles\n\nMietwagen\nStandort\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\r\n\r\nJ51_LayerSlideshow\n\r\n\n\r\n\r\nGARGAE GROSSFELD\n\nDS N°8\n\nZEITLOS & AVANTGARDISTISCH\n\nMITSUBISHI OUTLANDER PHEV\n\nEin neues Gesicht der Stärke\n\nCITROËN C5 X\n\nC5 X ist eine einzigartige Kombination aus der Eleganz einer Limousine, der Dynamik eines Kombis und der erhöhten Sitzposition eines SUV. Er ist als Plug-in Hybrid und Hybrid erhältlich.\n\nDS 7\n\nATHLETISCH & MAJESTÄTISCH\n\nMITSUBISHI GRANDIS\n\nWir präsentieren den brandneuen Mitsubishi Grandis - das Familienauto, das den Anforderungen eines hektischen Alltags gewachsen ist.\n\nCITROËN C5 AIRCORSS\n\nDas geräumigste, komfortabelste und technologisch fortschrittlichste SUV, das wir je gebaut haben\n\nDS N°4\n\nDESIGN & AERODYNAMIK\n\nMITSUBISHI ECLIPSE\n\nDer neue Eclipse Cross ist Mitsubishi Motors erstes vollelektrische Fahrzeug für eine neue Ära und markiert einen bedeutenden Meilenstein bei der weiteren Elektrifizierung der europäischen Fahrzeugpalette der Marke\n\nCITROËN Ë-C3\n\nDer ë-C3 revolutioniert die Elektromobilität: kompakt und erschwinglich. Made in Europe, ohne Kompromisse bei Design, Komfort und Technik.\n\nCITROËN NUTZFAHRZEUGE\n\nEntdecken Sie die ë-Serie von Citroën in den Versionen Berlingo, Jumpy oder Jumper. Das äusserst vielseitige Nutzfahrzeug mit zahlreichen Vorteilen, modernem Design und neuesten Komfort- und Sicherheitsausstattungen.Jetz"
+    },
+    {
+      "id": "49568368-a392-40b3-8181-4620a8504f2d",
+      "url": "https://www.garage-grossfeld.ch/ueber-uns/team",
+      "text": "t noch effizienter dank mehr elektrischer Reichweite.\n\n\r\n\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\nDas hochmotivierte Grossfeld Team freut sich auf Ihren Besuch.\n\r\nDurch unsere langjährigen Erfahrungen, den stetigen Aus- und Weiterbildungen und ihrem Know how sind unsere Mitarbeiter optimal für die Marken Honda, Citröen, DS, Toyota, Suzuki und Daihatsu ausgebildet.\n\r\nAuch Fahrzeughalter anderen Automarken sind herzlich bei uns willkommen. Ihr Fahrzeug ist bei uns in den besten Händen.\n\n\r\n\n\r\n\r\n\r\n\r\n\n\r\n\n\r\n\n\r\n\r\n\r\n\r\n\r\n\r\nJoe Setz\n\r\n\n\r\n\r\n\n\r\nGeschäftsführer\nInhaber\nVerkauf\nKundendienstberater Stv.\n\r\n+41 62 293 09 09\n\r\njosef.setz@garage-grossfeld.ch\n\n\r\n\n\r\n\n\r\n\r\n\r\nPatrik Schenker\n\r\n\n\r\n\r\n\n\r\nWerkstattleiter\nAutomobildiagnostiker\nAb 1. September 2026\n\r\n+41 62 293 09 09\n\r\npatrik.schenker@garage-grossfeld.ch\n\n\r\n\n\r\n\n\r\n\r\n\r\nJaden-Zola Guelord\n\r\n\n\r\n\r\n\n\r\nAutomobil-Fachmann EBA\n1. Lehrjahr\nAb August 2026\n\r\n+41 62 293 09 09\n\r\ninfo@garage-grossfeld.ch\n\n\r\n\n\r\n\n\r\n\r\n\r\nSandra Setz\n\r\n\n\r\n\r\n\n\r\nAdministration\nBuchhaltung\nTeilhaberin\nStv. Geschäftsführerin\n\r\n+41 62 293 09 09\n\r\nsandra.setz@garage-grossfeld.ch\n\n\r\n\n\r\n\n\r\n\r\n\r\nMarc Schnider\n\r\n\n\r\n\r\n\n\r\nAutomechaniker EFZ\n\n\r\n+41 62 293 09 09\n\r\ninfo@garage-grossfeld.ch\n\n\r\n\n\r\n\n\r\n\r\n\r\nMaik Senn\n\r\n\n\r\n\r\n\n\r\nKundendienstleiter\nTeile & Zubehör\n\n\r\n+41 62 293 09 09\n\r\nmaik.senn@garage-grossfeld.ch\n\n\r\n\n\r\n\n\r\n\r\n\r\nMichael Kälin\n\r\n\n\r\n\r\n\n\r\nAutomobil- Fachmann EFZ\n\n\r\n+41 62 293 09 09\n\r\ninfo@garage-grossfeld.ch\n\n\r\n\n\r\n\n\r\n\r\n\r\nLars Mangold\n\r\n\n\r\n\r\n\n\r\nAutomobil-Assistent EBA\n\n\r\n+41 62 293 09 09\n\r\ninfo@garage-grossfeld.ch\n\n\r\n\n\r\n\n\r\n\n\r\n\n\r\n\n© 2026 Garage Grossfeld AG | info@garage-grossfeld.ch | +41 62 293 09 09\n\nDatenschutzerklärung\nDatenschutzrichtlinie\nDatenschutzklausel in AGB\n\nWir benutzen Cookies\nWir nutzen Cookies auf unserer Website. Einige von ihnen sind essenziell für den Betrieb der Seite, "
+    },
+    {
+      "id": "4820a51e-3b46-429a-abd6-dbd0c5fe8fa9",
+      "url": "https://www.garage-grossfeld.ch/ueber-uns/team",
+      "text": "während andere uns helfen, diese Website und die Nutzererfahrung zu verbessern (Tracking Cookies Matomo). Ferner werden unsere verwendeten Schriften bei Google geladen und Ihre IP dort gespeichert. Sie können nun selbst entscheiden, ob Sie die Cookies zulassen und Google Schriften laden möchten. Bitte beachten Sie, dass bei einer Ablehnung womöglich nicht mehr alle Funktionalitäten der Seite zur Verfügung stehen.\n\nWenn Sie jetzt einen Link anklicken, wegklicken oder das Impressum wählen, akzeptieren Sie automatisch die Cookies.\nCookies zulassen Cookies ablehnen"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://www.garage-grossfeld.ch/images/logo/logo-breit.png#joomlaImage://local-images/logo/logo-breit.png?width=828&height=75",
+      "alt": "Logo"
+    },
+    {
+      "url": "https://www.garage-grossfeld.ch/images/logo/logo.png#joomlaImage://local-images/logo/logo.png?width=300&height=113",
+      "alt": "Mobile Logo"
+    },
+    {
+      "url": "https://www.garage-grossfeld.ch/images/slider/garage.png#joomlaImage://local-images/slider/garage.png?width=1920&height=500",
+      "alt": "GARGAE GROSSFELD"
+    },
+    {
+      "url": "https://www.garage-grossfeld.ch/images/slider/ds-no8_1.jpg#joomlaImage://local-images/slider/ds-no8_1.jpg?width=1920&height=700",
+      "alt": "DS N°8"
+    },
+    {
+      "url": "https://www.garage-grossfeld.ch/images/slider/outlander-phev_1.jpg#joomlaImage://local-images/slider/outlander-phev_1.jpg?width=1920&height=700",
+      "alt": "MITSUBISHI OUTLANDER PHEV"
+    },
+    {
+      "url": "https://www.garage-grossfeld.ch/images/slider/c5.png#joomlaImage://local-images/slider/c5.png?width=1920&height=700",
+      "alt": "CITROËN C5 X"
+    },
+    {
+      "url": "https://www.garage-grossfeld.ch/images/slider/ds-7_1.jpg#joomlaImage://local-images/slider/ds-7_1.jpg?width=1440&height=525",
+      "alt": "DS 7"
+    },
+    {
+      "url": "https://www.garage-grossfeld.ch/images/slider/mit-grandis.jpg#joomlaImage://local-images/slider/mit-grandis.jpg?width=1920&height=700",
+      "alt": "MITSUBISHI GRANDIS"
+    },
+    {
+      "url": "https://www.garage-grossfeld.ch/images/slider/c5-aircross_1.jpg#joomlaImage://local-images/slider/c5-aircross_1.jpg?width=1920&height=700",
+      "alt": "CITROËN C5 AIRCORSS"
+    },
+    {
+      "url": "https://www.garage-grossfeld.ch/images/slider/ds-no4_1.jpg#joomlaImage://local-images/slider/ds-no4_1.jpg?width=1920&height=700",
+      "alt": "DS N°4"
+    },
+    {
+      "url": "https://www.garage-grossfeld.ch/images/slider/mit-eclipse.jpg#joomlaImage://local-images/slider/mit-eclipse.jpg?width=1920&height=700",
+      "alt": "MITSUBISHI ECLIPSE"
+    },
+    {
+      "url": "https://www.garage-grossfeld.ch/images/slider/cit-e-c3.jpg#joomlaImage://local-images/slider/cit-e-c3.jpg?width=1920&height=700",
+      "alt": "CITROËN Ë-C3"
+    },
+    {
+      "url": "https://www.garage-grossfeld.ch/images/slider/nutz.png#joomlaImage://local-images/slider/nutz.png?width=1920&height=700",
+      "alt": "CITROËN NUTZFAHRZEUGE"
+    },
+    {
+      "url": "https://www.garage-grossfeld.ch/images/team/joe.png",
+      "alt": "Josef Setz"
+    },
+    {
+      "url": "https://www.garage-grossfeld.ch/images/team/mann.png",
+      "alt": "Patrik Schenker"
+    },
+    {
+      "url": "https://www.garage-grossfeld.ch/images/team/sandra.png",
+      "alt": "Sandra Setz"
+    },
+    {
+      "url": "https://www.garage-grossfeld.ch/images/team/maik.png",
+      "alt": "Maik Senn"
+    },
+    {
+      "url": "https://www.garage-grossfeld.ch/images/team/michael.png",
+      "alt": "Michael Kälin"
+    },
+    {
+      "url": "https://www.garage-grossfeld.ch/images/team/lars.png",
+      "alt": "Lars Mangold"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/grossfeld-c70853f167b0.png",
+      "url": "https://www.garage-grossfeld.ch/images/logo/logo-breit.png",
+      "sourceUrl": "https://www.garage-grossfeld.ch/images/logo/logo-breit.png#joomlaImage://local-images/logo/logo-breit.png?width=828&height=75",
+      "alt": "Logo",
+      "width": 652,
+      "height": 75,
+      "sha256": "c70853f167b03d832047960a23d30eb1284a5a165dee1ef517a3431fcd189a06"
+    },
+    {
+      "path": "assets/grossfeld-f7e2b56cd670.png",
+      "url": "https://www.garage-grossfeld.ch/images/logo/logo.png",
+      "sourceUrl": "https://www.garage-grossfeld.ch/images/logo/logo.png#joomlaImage://local-images/logo/logo.png?width=300&height=113",
+      "alt": "Mobile Logo",
+      "width": 300,
+      "height": 113,
+      "sha256": "f7e2b56cd670f2550ed29cd9a18d26363488dc0cc36d9d2da57cec63d6f8fb48"
+    },
+    {
+      "path": "assets/grossfeld-ba46dd94304a.png",
+      "url": "https://www.garage-grossfeld.ch/images/slider/garage.png",
+      "sourceUrl": "https://www.garage-grossfeld.ch/images/slider/garage.png#joomlaImage://local-images/slider/garage.png?width=1920&height=500",
+      "alt": "GARGAE GROSSFELD",
+      "width": 1920,
+      "height": 500,
+      "sha256": "ba46dd94304afbed5f94da2080c40bfe6edf6f87e4d30e250106f9170d37ac35"
+    },
+    {
+      "path": "assets/grossfeld-83674cc3a05d.jpg",
+      "url": "https://www.garage-grossfeld.ch/images/slider/ds-no8_1.jpg",
+      "sourceUrl": "https://www.garage-grossfeld.ch/images/slider/ds-no8_1.jpg#joomlaImage://local-images/slider/ds-no8_1.jpg?width=1920&height=700",
+      "alt": "DS N°8",
+      "width": 1920,
+      "height": 600,
+      "sha256": "83674cc3a05d43afada6f570f3063f11b35db372f5789f2570a2d7e5d627e992"
+    },
+    {
+      "path": "assets/grossfeld-792f4ce95ed4.jpg",
+      "url": "https://www.garage-grossfeld.ch/images/slider/outlander-phev_1.jpg",
+      "sourceUrl": "https://www.garage-grossfeld.ch/images/slider/outlander-phev_1.jpg#joomlaImage://local-images/slider/outlander-phev_1.jpg?width=1920&height=700",
+      "alt": "MITSUBISHI OUTLANDER PHEV",
+      "width": 1920,
+      "height": 600,
+      "sha256": "792f4ce95ed4008e7868b48b2d593572bf93454f0e4c13e7c5da894aff0d39bd"
+    }
+  ]
+}

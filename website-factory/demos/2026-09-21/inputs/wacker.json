@@ -1,0 +1,212 @@
+{
+  "slug": "wacker",
+  "name": "Restaurant Wacker",
+  "website": "https://www.restaurant-wacker.ch/",
+  "locality": "Reinach BL",
+  "industry": "Restaurant",
+  "phone": "061 711 53 20",
+  "runId": "batch-prospects-2026-09-21-round2-b-39489b196217237e",
+  "report": "reports/prospecting-2026-09-21-round2/reviews/wacker.md",
+  "family": "salon-dining",
+  "activity": {
+    "status": "temporary_holiday",
+    "sourceUrl": "https://www.restaurant-wacker.ch/wochenmenue",
+    "excerpt": "Montag, 21. September bis und mit",
+    "finding": "Suchindex zeigt Wochenmenü vom September 2026 und Betriebsferien 21. September bis 12. Oktober. Direkter Menüabruf lief in ein Zeitlimit; Pause vor Anruf nochmals prüfen."
+  },
+  "quality": 70.57894736842105,
+  "facts": [
+    {
+      "field": "company_name",
+      "value": "Restaurant Wacker",
+      "evidenceIds": [
+        "f7b3c147-ec3f-43fe-a4ea-570ad95be043"
+      ]
+    },
+    {
+      "field": "locality",
+      "value": "Reinach",
+      "evidenceIds": [
+        "f7b3c147-ec3f-43fe-a4ea-570ad95be043"
+      ]
+    },
+    {
+      "field": "address",
+      "value": "Fleischbachstrasse 25\n4153 Reinach",
+      "evidenceIds": [
+        "f7b3c147-ec3f-43fe-a4ea-570ad95be043"
+      ]
+    },
+    {
+      "field": "industry",
+      "value": "Restaurant",
+      "evidenceIds": [
+        "f7b3c147-ec3f-43fe-a4ea-570ad95be043"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Wochenmenü und Business Lunch",
+      "evidenceIds": [
+        "f7b3c147-ec3f-43fe-a4ea-570ad95be043"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Saisonale Köstlichkeiten und Klassiker",
+      "evidenceIds": [
+        "f7b3c147-ec3f-43fe-a4ea-570ad95be043"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Charbonnade à discrétion",
+      "evidenceIds": [
+        "f7b3c147-ec3f-43fe-a4ea-570ad95be043"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Weine",
+      "evidenceIds": [
+        "f7b3c147-ec3f-43fe-a4ea-570ad95be043"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "besondere saisonale Veranstaltungen",
+      "evidenceIds": [
+        "f7b3c147-ec3f-43fe-a4ea-570ad95be043"
+      ]
+    },
+    {
+      "field": "service_area",
+      "value": "in Reinach",
+      "evidenceIds": [
+        "f7b3c147-ec3f-43fe-a4ea-570ad95be043"
+      ]
+    },
+    {
+      "field": "opening_hours",
+      "value": "Montag - Samstag\n11:00 - 23:00 Uhr",
+      "evidenceIds": [
+        "f7b3c147-ec3f-43fe-a4ea-570ad95be043"
+      ]
+    },
+    {
+      "field": "opening_hours",
+      "value": "Sonntag:\n11:00 - 22:00 Uhr",
+      "evidenceIds": [
+        "f7b3c147-ec3f-43fe-a4ea-570ad95be043"
+      ]
+    }
+  ],
+  "contacts": [
+    {
+      "contact_id": "58228fdb-c07e-420d-b11b-670840ec7afe",
+      "kind": "phone",
+      "value": "+41 61 711 53 20",
+      "evidence_ids": [
+        "f7b3c147-ec3f-43fe-a4ea-570ad95be043"
+      ]
+    },
+    {
+      "contact_id": "c6a47ef9-1137-4eb8-bbcb-29a1338ffb82",
+      "kind": "email",
+      "value": "info@restaurant-wacker.ch",
+      "evidence_ids": [
+        "f7b3c147-ec3f-43fe-a4ea-570ad95be043"
+      ]
+    },
+    {
+      "contact_id": "335857e8-1485-4654-b503-e88e76cb2bf1",
+      "kind": "contact_page",
+      "value": "https://www.restaurant-wacker.ch/kontakt",
+      "evidence_ids": [
+        "982ebc9c-b31b-4119-9cac-c9eb6b07e3a6"
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "observation": "Die Datenschutzseite zeigt «Überschrift 2» sowie einen bearbeitbaren Platzhaltertext.",
+      "recommendation": "Vollständige, geprüfte Datenschutzbestimmungen hinter dem Datenschutzlink veröffentlichen und Platzhalter entfernen."
+    },
+    {
+      "observation": "Im mobilen Startseiten-Screenshot erscheinen Fliesstexte und Navigationselemente sehr klein.",
+      "recommendation": "Schriftgrössen und Abstände für kleine Viewports prüfen und lesbarer gestalten."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "f7b3c147-ec3f-43fe-a4ea-570ad95be043",
+      "url": "https://www.restaurant-wacker.ch/",
+      "text": "Restaurant Wacker | Reinach BL\n\ntop of page\n\nHome\n\nSpeisen und Weine\n\nWochenmenü\nà la carte\nNachspeisen\nWeinkarte\n\nEvents\n\nKontakt\n\nMehr\n\nUse tab to navigate through the menu items.\n\nReservieren\n\nRestaurant Wacker\n\nFranzösischer Genuss \nin Reinach\n\nReservieren\nWochenmenü\n\nCharbonnade à discrétion | CHF 35.–  |  jeden Montag- und Mittwochabend\n\nMittag\n\nWochenmenü und Business Lunch\n\nJede Woche aufs Neue auf unser Mittagsangebot aus unserer Küche freuen. Diese Woche auf der Karte? Entdecken Sie selbst:\n\nWochenmenü ansehen\n\nà la Carte\n\nSaisonale Köstlichkeiten und Klassiker\n\nOb saisonale Gerichte oder altbekannte Klassiker wie Stroganoff, Flammkuchen oder die hausgemachten Wackernudeln. Wir kochen stets mit frischen und saisonalen Produkten. \n\nSpeisekarte entdecken\n\nCharbonnade\n\nà discrétion\n\nGeniessen Sie jeden Montag- und Mittwochabend Charbonnade à discrétion.\n\nHausspezialitäten\n\nWeine\n\nIm Offenausschank und Flaschen\n\nDie ideale Begleitung zu Ihrer Menuwahl entdecken Sie mit einem Blick in unsere Weinkarte.\n\nWeinkarte entdecken\n\nEvents\n\nim Wacker\n\nGeniessen Sie besondere saisonale Veranstaltungen bei uns im Wacker.\n\nEvents im Wacker entdecken\n\nWo Sie uns finden:\n\nFleischbachstrasse 25\n4153 Reinach\n\n​\n\n+41 61 711 53 20\n\ninfo@restaurant-wacker.ch\n\nÖffnungszeiten\n\nMontag - Samstag\n\n11:00 - 23:00 Uhr\n\nSonntag: \n\n11:00 - 22:00 Uhr\n\nBetriebsferien\n\nMontag, 09. Februar bis und mit \nMontag, 02. März 2026\n\n \n\nMontag, 21. September bis und mit \nMontag, 12 . Oktober 2026\n\n \n\nHeiligabend geschlossen\n \n\nImpressum\n\nDatenschutz\n\nDesign by Kristina Vogt\n\nbottom of page"
+    },
+    {
+      "id": "982ebc9c-b31b-4119-9cac-c9eb6b07e3a6",
+      "url": "https://www.restaurant-wacker.ch/kontakt",
+      "text": "Kontakt | Restaurant Wacker\n\ntop of page\n\nHome\n\nSpeisen und Weine\n\nWochenmenü\nà la carte\nNachspeisen\nWeinkarte\n\nEvents\n\nKontakt\n\nMehr\n\nUse tab to navigate through the menu items.\n\nReservieren\n\nKontakt\n\nGerne stehen wir Ihnen bei Fragen zur Verfügung.\n\nAnfrage\n\nSenden Sie uns hier Ihre Anfrage und wir werden uns so bald wie möglich bei Ihnen melden. \n\nTelefon\n\n+41 61 711 53 20\n\nE-Mail\n\ninfo@restaurant-wacker.ch\n\nVorname *\n\nNachname *\n\nTelefonnummer *\n\nE-Mail *\n\nNachricht\n\nAbsenden\n\nBesuchen Sie uns\n\nBesuchen Sie uns auf der Terrasse oder in der Gaststube. Parkplätze stehen in unmittelbarer Nähe zur Verfügung. \n\nAdresse: \n\nFleischbachstrasse 25, 4153 Reinach\n\nÖffnungszeiten\n\nMo - Sa\n\n11:00 Uhr - 23:00 Uhr\n\nSonntags\n\n11:00 Uhr - 22:00 Uhr\n\nWo Sie uns finden:\n\nFleischbachstrasse 25\n4153 Reinach\n\n​\n\n+41 61 711 53 20\n\ninfo@restaurant-wacker.ch\n\nÖffnungszeiten\n\nMontag - Samstag\n\n11:00 - 23:00 Uhr\n\nSonntag: \n\n11:00 - 22:00 Uhr\n\nBetriebsferien\n\nMontag, 09. Februar bis und mit \nMontag, 02. März 2026\n\n \n\nMontag, 21. September bis und mit \nMontag, 12 . Oktober 2026\n\n \n\nHeiligabend geschlossen\n \n\nImpressum\n\nDatenschutz\n\nDesign by Kristina Vogt\n\nbottom of page"
+    },
+    {
+      "id": "780a6c6b-0b06-4e78-a7cf-2a79aa11188d",
+      "url": "https://www.restaurant-wacker.ch/kopie-von-kontakt",
+      "text": "Datenschutz | Restaurant Wacker\n\ntop of page\n\nHome\n\nSpeisen und Weine\n\nWochenmenü\nà la carte\nNachspeisen\nWeinkarte\n\nEvents\n\nKontakt\n\nMehr\n\nUse tab to navigate through the menu items.\n\nReservieren\n\nDatenschutz\n\nHier finden Sie die Detials zu unseren Datenschutzbestimmungen\n\nÜberschrift 2\n\nIch bin ein Textabschnitt. Klicke hier, um deinen eigenen Text hinzuzufügen und mich zu bearbeiten.\n\nWo Sie uns finden:\n\nFleischbachstrasse 25\n4153 Reinach\n\n​\n\n+41 61 711 53 20\n\ninfo@restaurant-wacker.ch\n\nÖffnungszeiten\n\nMontag - Samstag\n\n11:00 - 23:00 Uhr\n\nSonntag: \n\n11:00 - 22:00 Uhr\n\nBetriebsferien\n\nMontag, 09. Februar bis und mit \nMontag, 02. März 2026\n\n \n\nMontag, 21. September bis und mit \nMontag, 12 . Oktober 2026\n\n \n\nHeiligabend geschlossen\n \n\nImpressum\n\nDatenschutz\n\nDesign by Kristina Vogt\n\nbottom of page"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://static.wixstatic.com/media/062393_301a3bb047db4598a53ec0d6edbd7822~mv2.png/v1/fill/w_148,h_56,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo-restaurant-wacker-dropshadow.png",
+      "alt": "logo-restaurant-wacker-dropshadow.png"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/062393_6116e83d514a47939667c47f95a1336e~mv2.jpg/v1/fill/w_147,h_98,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/062393_6116e83d514a47939667c47f95a1336e~mv2.jpg",
+      "alt": "Aussicht auf die Terrasse - Restaurant Wacker Reinach BL"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/062393_b216b58888c04c97801803920e94d5e4~mv2.jpg/v1/fill/w_123,h_82,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/062393_b216b58888c04c97801803920e94d5e4~mv2.jpg",
+      "alt": "Tomaten Mozzarella Salat in Schale - Restaurant Wacker Reinach BL"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/062393_7efc29e1746148bb9852891f487b8083~mv2.png/v1/fill/w_122,h_70,al_c,q_85,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/062393_7efc29e1746148bb9852891f487b8083~mv2.png",
+      "alt": "Fleischgericht mit Beilagen und Sauce - Restaurant Wacker Reinach BL"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/nsplsh_fa39165320fa4570b23d03159ad9fb79~mv2.jpg/v1/fill/w_123,h_82,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/nsplsh_fa39165320fa4570b23d03159ad9fb79~mv2.jpg",
+      "alt": "Charbonnade - Kohle auf heissem Tischgrill - Restaurant Wacker Reinach BL"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/8c6380e6c23b4c2c89576c8ad27c1af0.jpg/v1/fill/w_122,h_81,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/8c6380e6c23b4c2c89576c8ad27c1af0.jpg",
+      "alt": "Flaschen- und Offenweinauswahl -Restaurant Wacker Reinach BL"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/062393_828198a595e644bd91648c8149afbbf4~mv2.jpg/v1/fill/w_123,h_82,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/062393_828198a595e644bd91648c8149afbbf4~mv2.jpg",
+      "alt": "Sommerterrasse und vielfältige Events im Restaurant Wacker Reinach BL"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/11062b_887147d0eb7f4635ad101b0bc9b533d5~mv2.jpeg/v1/fill/w_97,h_64,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/11062b_887147d0eb7f4635ad101b0bc9b533d5~mv2.jpeg",
+      "alt": "Kontakt - Restaurant Wacker Reinach BL"
+    },
+    {
+      "url": "https://static.parastorage.com/services/linguist-flags/1.1005.0/assets/flags/square/CHE.png",
+      "alt": ""
+    },
+    {
+      "url": "https://static.wixstatic.com/media/062393_01610a7f9306479da87e121c1d27d639%7Emv2.png/v1/fit/w_2500,h_1330,al_c/062393_01610a7f9306479da87e121c1d27d639%7Emv2.png",
+      "alt": ""
+    },
+    {
+      "url": "https://static.wixstatic.com/media/062393_01610a7f9306479da87e121c1d27d639~mv2.png",
+      "alt": ""
+    },
+    {
+      "url": "https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/media/sloppyframe.3214ce8e.png",
+      "alt": ""
+    },
+    {
+      "url": "data:image/png;base64,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",
+      "alt": ""
+    }
+  ],
+  "assets": []
+}

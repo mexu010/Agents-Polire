@@ -1,0 +1,277 @@
+{
+  "slug": "fuhrer",
+  "name": "Fuhrer Schreinerei AG",
+  "website": "https://www.fuhrerschreinerei.ch/",
+  "locality": "Kehrsatz BE",
+  "industry": "Schreinerei / Fenster / Türen",
+  "phone": "031 961 35 55",
+  "runId": "batch-prospects-2026-09-21-a-2feffc069b30c9c3",
+  "report": "reports/prospecting-2026-09-21/reviews/fuhrer.md",
+  "family": "wood",
+  "activity": {
+    "status": "recent_self_report",
+    "sourceUrl": "https://www.fuhrerschreinerei.ch/",
+    "activityDate": "2026-08-03",
+    "excerpt": "Betriebsferien vom 25.Juli-Montag 03.August 2026",
+    "finding": "Eigene Website nennt die Sommerpause 2026 und seit Oktober 2025 ein erweitertes Arbeitsangebot."
+  },
+  "quality": 58.333333333333336,
+  "facts": [
+    {
+      "field": "company_name",
+      "value": "Fuhrer Schreinerei AG",
+      "evidenceIds": [
+        "b751e1f1-d77e-4db0-ae3f-ffd6881d9565"
+      ]
+    },
+    {
+      "field": "country",
+      "value": "CH",
+      "evidenceIds": [
+        "b751e1f1-d77e-4db0-ae3f-ffd6881d9565"
+      ]
+    },
+    {
+      "field": "locality",
+      "value": "Kehrsatz",
+      "evidenceIds": [
+        "b751e1f1-d77e-4db0-ae3f-ffd6881d9565"
+      ]
+    },
+    {
+      "field": "address",
+      "value": "Kirchackerweg 31\nCH-3122 Kehrsatz",
+      "evidenceIds": [
+        "b751e1f1-d77e-4db0-ae3f-ffd6881d9565"
+      ]
+    },
+    {
+      "field": "industry",
+      "value": "Die Fenster und Türenfabrik",
+      "evidenceIds": [
+        "b751e1f1-d77e-4db0-ae3f-ffd6881d9565"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Fenster",
+      "evidenceIds": [
+        "b751e1f1-d77e-4db0-ae3f-ffd6881d9565"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Türen",
+      "evidenceIds": [
+        "b751e1f1-d77e-4db0-ae3f-ffd6881d9565"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Innenausbau",
+      "evidenceIds": [
+        "b751e1f1-d77e-4db0-ae3f-ffd6881d9565"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Spezialmontagen",
+      "evidenceIds": [
+        "b751e1f1-d77e-4db0-ae3f-ffd6881d9565"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "kleinere Zimmerarbeiten",
+      "evidenceIds": [
+        "b751e1f1-d77e-4db0-ae3f-ffd6881d9565"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Dachausbauten",
+      "evidenceIds": [
+        "b751e1f1-d77e-4db0-ae3f-ffd6881d9565"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Lukarnen inkl. Fenster",
+      "evidenceIds": [
+        "b751e1f1-d77e-4db0-ae3f-ffd6881d9565"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Dachflächenfenster",
+      "evidenceIds": [
+        "b751e1f1-d77e-4db0-ae3f-ffd6881d9565"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Fassadensanierungen",
+      "evidenceIds": [
+        "b751e1f1-d77e-4db0-ae3f-ffd6881d9565"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Dachreperaturen",
+      "evidenceIds": [
+        "b751e1f1-d77e-4db0-ae3f-ffd6881d9565"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Carporte",
+      "evidenceIds": [
+        "b751e1f1-d77e-4db0-ae3f-ffd6881d9565"
+      ]
+    },
+    {
+      "field": "opening_hours",
+      "value": "Montag - Donnerstag\n07.30-11.45 / 13.30-17.00 Uhr\nFreitag bis 16.00 Uhr",
+      "evidenceIds": [
+        "b751e1f1-d77e-4db0-ae3f-ffd6881d9565"
+      ]
+    }
+  ],
+  "contacts": [
+    {
+      "contact_id": "62646a5f-4686-4738-a3cc-e68f5aeef03a",
+      "kind": "phone",
+      "value": "031 961 35 55",
+      "evidence_ids": [
+        "b751e1f1-d77e-4db0-ae3f-ffd6881d9565"
+      ]
+    },
+    {
+      "contact_id": "84301762-8198-494d-8da7-d3523aaa85d1",
+      "kind": "contact_page",
+      "value": "https://www.fuhrerschreinerei.ch/kontakt/",
+      "evidence_ids": [
+        "e5f74b59-122d-48a3-b429-26dd16f642a6"
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "observation": "Der Cookie-Hinweis verdeckt auf der Startseite bei 375 × 812 einen grossen Teil des sichtbaren Inhalts.",
+      "recommendation": "Cookie-Hinweis kompakter gestalten und den sichtbaren Seiteninhalt weniger verdecken."
+    },
+    {
+      "observation": "Die Startseite enthält Inhalte mit Datumsbezug auf Oktober 2025 und 2022.",
+      "recommendation": "Datierte Startseiteninhalte prüfen und aktuelle Inhalte priorisieren."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "b751e1f1-d77e-4db0-ae3f-ffd6881d9565",
+      "url": "https://www.fuhrerschreinerei.ch/",
+      "text": "Fuhrer Schreinerei - Kehrsatz - Fuhrer Schreinerei - Kehrsatz\n\nHome Firma / Betrieb\nMitarbeiter\nSeit 50 Jahren...\nAnfahrt\nReferenzen\nSponsoring\n\nFenster Fenstersysteme\nDenkmalschutzfenster\n\nTüren\nInnenausbau\nSpezialmontagen\nProjekte\nLinks\nKontakt\nBienenkasten\n\nHome\nFenster\nTüren\nInnenausbau\nSpezialmontagen\nProjekte\nLinks\nKontakt\nBienenkasten\n\nAb Oktober 2025 bieten wir auch kleinere Zimmerarbeiten an. Durch unsere Personellen Veränderungen im Büro, können wir Dachausbauten, Lukarnen inkl. Fenster,\nDachflächenfenster,Fassadensanierungen,Dachreperaturen, Carporte etc. herstellen und montieren.\n\nUnser Team freut sich auf die zusätzliche Herausforderung.\n\nNeues Fabrikgebäude am Kirchackerweg 31 in Kehrsatz \n\nNach dem Brand vom 20.September 2022\n\nVertragsabschluss für 3 Jahre mit den Spitzenschwinger\n\nMichael Moser und Fabian Stucki\n\nWir wünschen den beiden viel Erfolg\n\nFirma / Betrieb\nMitarbeiter\nSeit 50 Jahren...\nAnfahrt\nReferenzen\nSponsoring\n\nFuhrer Schreinerei AG\n\nDie Fenster und Türenfabrik\n\nKirchackerweg 31\n\nCH-3122 Kehrsatz\n\nT: 031 961 35 55\n\n[email protected]\n\nÖffnungszeiten\n\nMontag - Donnerstag\n\n07.30-11.45 / 13.30-17.00 Uhr\n\nFreitag bis 16.00 Uhr\n\n \n\nVertreterbesuche nur auf Voranmeldung erwünscht!\n\nCookie-Richtlinie\n© New-Webdesign.ch by Nicole Fasel 2014\n\nAbmelden\n|\nBearbeiten"
+    },
+    {
+      "id": "e5f74b59-122d-48a3-b429-26dd16f642a6",
+      "url": "https://www.fuhrerschreinerei.ch/kontakt/",
+      "text": "Kontakt - Fuhrer Schreinerei - Kehrsatz\n\nHome Firma / Betrieb\nMitarbeiter\nSeit 50 Jahren...\nAnfahrt\nReferenzen\nSponsoring\n\nFenster Fenstersysteme\nDenkmalschutzfenster\n\nTüren\nInnenausbau\nSpezialmontagen\nProjekte\nLinks\nKontakt\nBienenkasten\n\nHome\nFenster\nTüren\nInnenausbau\nSpezialmontagen\nProjekte\nLinks\nKontakt\nBienenkasten\n\nKontakt\n\nMöchten Sie nähere Informationen oder eine Offerte, nehmen Sie mit uns Kontakt auf.\n\n \n\nWir melden uns umgehend bei Ihnen.\n\n \n\nFuhrer Schreinerei AG\n\nKirchackerweg 31\n\n3122 Kehrsatz\n\n \n\nTel: 031 961 35 55\n\nRolf Stauffer / Direkwahl 031 960 16 50 / [email protected]\n\nAndreas Wenger / Direktwahl 031 960 16 51 / [email protected]\n\nMatthias Lüthi [email protected]\n\nName\n\nFirma\n\nE-Mail\n\nTelefon\n\nNachricht\n\nBitte den Code eingeben:\n\nEs gilt unsere Datenschutzerklärung\n\nHinweis:\nBitte die mit * gekennzeichneten Felder ausfüllen.\n\nFuhrer Schreinerei AG\n\nDie Fenster und Türenfabrik\n\nKirchackerweg 31\n\nCH-3122 Kehrsatz\n\nT: 031 961 35 55\n\n[email protected]\n\nÖffnungszeiten\n\nMontag - Donnerstag\n\n07.30-11.45 / 13.30-17.00 Uhr\n\nFreitag bis 16.00 Uhr\n\n \n\nVertreterbesuche nur auf Voranmeldung erwünscht!\n\nCookie-Richtlinie\n© New-Webdesign.ch by Nicole Fasel 2014\n\nAbmelden\n|\nBearbeiten"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=1090x10000:format=jpg/path/sd3de0c0c46d5f704/image/i39eb92ae2386ffb8/version/1414214265/image.jpg",
+      "alt": "Fuhrer Schreinerei - Kehrsatz"
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=683x10000:format=png/path/sd3de0c0c46d5f704/image/ia991e396cfd25cdb/version/1773658956/image.png",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/sd3de0c0c46d5f704/image/ib295c02b52254b57/version/1771591926/vertragsabschluss-mit-michael-moser.jpg",
+      "alt": "Vertragsabschluss mit Michael Moser"
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/sd3de0c0c46d5f704/image/i953ee6cd3a43a604/version/1771591926/vertragsabschluss-mit-fabian-stucki.jpg",
+      "alt": "Vertragsabschluss mit Fabian Stucki"
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=60x60:mode=crop:format=jpg/path/sd3de0c0c46d5f704/image/i293522b403c86e3d/version/1414214740/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=60x60:mode=crop:format=jpg/path/sd3de0c0c46d5f704/image/ib13976dbc39ab93f/version/1414219458/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://www.fuhrerschreinerei.ch/app/common/captcha/index/captchaId/cfd438627047534b5178e94fc348518706d8ff8e",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=4096x4096:format=jpg/path/sd3de0c0c46d5f704/image/ib295c02b52254b57/version/1771591926/vertragsabschluss-mit-michael-moser.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/sd3de0c0c46d5f704/image/ib295c02b52254b57/version/1771591926/vertragsabschluss-mit-michael-moser.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/sd3de0c0c46d5f704/image/i953ee6cd3a43a604/version/1771591926/vertragsabschluss-mit-fabian-stucki.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/sd3de0c0c46d5f704/image/i293522b403c86e3d/version/1414214740/image.jpg",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/sd3de0c0c46d5f704/backgroundarea/i5c79f57adf87a87d/version/1766036917/image.jpg",
+      "alt": ""
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/fuhrer-86dd477f9769.jpg",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=1090x10000:format=jpg/path/sd3de0c0c46d5f704/image/i39eb92ae2386ffb8/version/1414214265/image.jpg",
+      "sourceUrl": "https://image.jimcdn.com/app/cms/image/transf/dimension=1090x10000:format=jpg/path/sd3de0c0c46d5f704/image/i39eb92ae2386ffb8/version/1414214265/image.jpg",
+      "alt": "Fuhrer Schreinerei - Kehrsatz",
+      "width": 1090,
+      "height": 252,
+      "sha256": "86dd477f9769d4e82e729b9b60519696c401708d53770d44e8609d8bb80848fe"
+    },
+    {
+      "path": "assets/fuhrer-64ceb02aba34.png",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=683x10000:format=png/path/sd3de0c0c46d5f704/image/ia991e396cfd25cdb/version/1773658956/image.png",
+      "sourceUrl": "https://image.jimcdn.com/app/cms/image/transf/dimension=683x10000:format=png/path/sd3de0c0c46d5f704/image/ia991e396cfd25cdb/version/1773658956/image.png",
+      "alt": "",
+      "width": 683,
+      "height": 302,
+      "sha256": "64ceb02aba341c479a07a01c8b70630e4c3f32acfc66338503383bd78fbc9e0b"
+    },
+    {
+      "path": "assets/fuhrer-38ba037c08a3.jpg",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/sd3de0c0c46d5f704/image/ib295c02b52254b57/version/1771591926/vertragsabschluss-mit-michael-moser.jpg",
+      "sourceUrl": "https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/sd3de0c0c46d5f704/image/ib295c02b52254b57/version/1771591926/vertragsabschluss-mit-michael-moser.jpg",
+      "alt": "Vertragsabschluss mit Michael Moser",
+      "width": 300,
+      "height": 400,
+      "sha256": "38ba037c08a31eba527e3eb49a2fe39432fd261328adc52595ba25e5161319c0"
+    },
+    {
+      "path": "assets/fuhrer-518029216afd.jpg",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/sd3de0c0c46d5f704/image/i953ee6cd3a43a604/version/1771591926/vertragsabschluss-mit-fabian-stucki.jpg",
+      "sourceUrl": "https://image.jimcdn.com/app/cms/image/transf/dimension=1920x400:format=jpg/path/sd3de0c0c46d5f704/image/i953ee6cd3a43a604/version/1771591926/vertragsabschluss-mit-fabian-stucki.jpg",
+      "alt": "Vertragsabschluss mit Fabian Stucki",
+      "width": 300,
+      "height": 400,
+      "sha256": "518029216afd8adb67f405f974f7eab52bbfd0c2e8d9a732d61949355d127368"
+    },
+    {
+      "path": "assets/fuhrer-5f9569a3933d.jpg",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=4096x4096:format=jpg/path/sd3de0c0c46d5f704/image/ib295c02b52254b57/version/1771591926/vertragsabschluss-mit-michael-moser.jpg",
+      "sourceUrl": "https://image.jimcdn.com/app/cms/image/transf/dimension=4096x4096:format=jpg/path/sd3de0c0c46d5f704/image/ib295c02b52254b57/version/1771591926/vertragsabschluss-mit-michael-moser.jpg",
+      "alt": "",
+      "width": 1536,
+      "height": 2048,
+      "sha256": "5f9569a3933d14fc6991130466ef8c988e53ce3c16363b76e525842748b460f2"
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "slug": "hairstudio-f",
+  "name": "Hairstudio F",
+  "website": "https://www.hairstudiof.ch/",
+  "locality": "Fehraltorf ZH",
+  "industry": "Coiffeur",
+  "phone": "044 955 12 12",
+  "runId": "batch-prospects-2026-09-21-round2-a-119f6839d1f2af50",
+  "report": "reports/prospecting-2026-09-21-round2/reviews/hairstudio-f.md",
+  "family": "salon-dining",
+  "activity": {
+    "status": "current_announcement",
+    "sourceUrl": "https://www.hairstudiof.ch/",
+    "excerpt": "ab Montag 28.09.2026 wieder hier",
+    "finding": "Eigene Ferienhinweise für August und September 2026. Am 24.–26. September abwesend. Für Anrufe die Festnetznummer verwenden; die Website bittet ausdrücklich um keine WhatsApp-Anrufe."
+  },
+  "quality": 40,
+  "facts": [
+    {
+      "field": "company_name",
+      "value": "Hairstudio F",
+      "evidenceIds": [
+        "c34baa6f-71a4-4857-9c4a-700119e13bb3"
+      ]
+    },
+    {
+      "field": "locality",
+      "value": "Fehraltorf",
+      "evidenceIds": [
+        "2791966c-6f0b-4f8f-9346-cd04435be278"
+      ]
+    },
+    {
+      "field": "address",
+      "value": "Bahnhofstrasse 12\n8320 Fehraltorf",
+      "evidenceIds": [
+        "2791966c-6f0b-4f8f-9346-cd04435be278"
+      ]
+    },
+    {
+      "field": "industry",
+      "value": "Coiffeur",
+      "evidenceIds": [
+        "c34baa6f-71a4-4857-9c4a-700119e13bb3"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "CUT, COLORS & MORE",
+      "evidenceIds": [
+        "c34baa6f-71a4-4857-9c4a-700119e13bb3"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Waschen, schneiden, föhnen",
+      "evidenceIds": [
+        "51462393-27d4-4a89-9dbb-d46e3e0d6062"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Färben",
+      "evidenceIds": [
+        "51462393-27d4-4a89-9dbb-d46e3e0d6062"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Tönen",
+      "evidenceIds": [
+        "51462393-27d4-4a89-9dbb-d46e3e0d6062"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Meches",
+      "evidenceIds": [
+        "51462393-27d4-4a89-9dbb-d46e3e0d6062"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Dauerwelle",
+      "evidenceIds": [
+        "51462393-27d4-4a89-9dbb-d46e3e0d6062"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Augenbrauen zupfen",
+      "evidenceIds": [
+        "51462393-27d4-4a89-9dbb-d46e3e0d6062"
+      ]
+    },
+    {
+      "field": "service",
+      "value": "Wimpern färben",
+      "evidenceIds": [
+        "51462393-27d4-4a89-9dbb-d46e3e0d6062"
+      ]
+    },
+    {
+      "field": "opening_hours",
+      "value": "Montag & Dienstag\n\n08.30 - 12.00\n13.30 - 18.00\nMittwoch\ngeschlossen\nDonnerstag & Freitag\n\n08.30 - 12.00\n13.30 - 18.30\nSamstag\n08.00 - 13.00",
+      "evidenceIds": [
+        "c34baa6f-71a4-4857-9c4a-700119e13bb3"
+      ]
+    }
+  ],
+  "contacts": [
+    {
+      "contact_id": "9fa1c26a-ea95-4cde-b7ad-2a5c0105f4f1",
+      "kind": "phone",
+      "value": "044 955 12 12",
+      "evidence_ids": [
+        "2791966c-6f0b-4f8f-9346-cd04435be278"
+      ]
+    },
+    {
+      "contact_id": "26bdeb03-a3fe-4180-9960-90e8d5d58fdb",
+      "kind": "phone",
+      "value": "079 852 00 52",
+      "evidence_ids": [
+        "c34baa6f-71a4-4857-9c4a-700119e13bb3"
+      ]
+    },
+    {
+      "contact_id": "48e7e53f-b9db-4745-beae-b1762b7defec",
+      "kind": "contact_page",
+      "value": "https://www.hairstudiof.ch/kontakt/",
+      "evidence_ids": [
+        "02086efa-57b5-4087-bf48-96a5c874ae6c"
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "observation": "Auf der mobilen Startseite trennen grosse Leerbereiche mehrere Inhaltsabschnitte; Öffnungszeiten und Adresse stehen erst am Ende der langen Seite.",
+      "recommendation": "Leerbereiche reduzieren und Öffnungszeiten sowie Kontaktangaben früher platzieren."
+    },
+    {
+      "observation": "Der Ferienzeitraum Donnerstag 13.08.2026 bis Samstag 29.08.2026 erscheint auf der Startseite zweimal.",
+      "recommendation": "Ferienhinweise an einer Stelle führen und vergangene Hinweise entfernen."
+    },
+    {
+      "observation": "Die Startseite nennt Terminvereinbarung sowie WhatsApp, E-Mail und Telefon im Fliesstext; eine hervorgehobene Kontaktaktion ist im mobilen Screenshot nicht sichtbar.",
+      "recommendation": "Eine klar sichtbare Kontaktaktion vor den längeren Hinweisen platzieren."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "c34baa6f-71a4-4857-9c4a-700119e13bb3",
+      "url": "https://www.hairstudiof.ch/",
+      "text": "Hairstudio F - Ihr Coiffeur in Fehraltorf\n\nStart\nÜber mich\nLeistungen/Preise\nFotos\nKontakt\n\nStart\nÜber mich\nLeistungen/Preise\nFotos\nKontakt\n\nHerzlich Willkommen\n\nIm Hairstudio F -  für CUT, COLORS & MORE\n\nEs freut mich Sie auf meiner Webseite begrüssen zu dürfen.\n\nIn meinem kleinen, aber feinen Salon werden Sie mit Freude und Herz bedient und gehen frisch gestylt und glücklich wieder nach Hause.\n\n \n\nVereinbaren Sie gleich noch Ihren Wunschtermin!\n\nRollstuhlgängig!!\n\n \n\n1 Kundenparkplatz vor dem Haus\n\n \n\nBarzahlung sowie Twint, Kreditkarten ,Ec und Debit möglich.\n\n \n\nAm Mittwoch ist das Hairstudio F immer Geschlossen.\n\n \n\n \n\n \n\nFERIEN:\n\n \n\n \n\n \n\nSamstag 10.07.2026 Und Montag 13.07.2026      \n\n \n\nDonnerstag 13.08.2026 bis und mit Samstag 29.08.2026   ab Montag 31.08.2026 wieder hier!\n\n \n\nDonnerstag 24.09.2026 bis und mit Samstag 26.09.2026  ab\nMontag 28.09.2026 wieder hier\n\n  \n\n \n\nSie können iTermine via Whatsapp SCHRIFTLICH   ( KEINE ANRUFE AUF WHATSAPP BITTE)   oder Mail anfragen  \n\n \n\nWhatsapp: 079 852 00 52  (BItte keine Anrufe)\n\nMail: [email protected]\n\n \n\n \n\nFiorina Provenzano \n\n \n\n \n\n \n\n \n\n \n\n \n\n \n\n \n\n \n\n \n\n \n\n \n\n \n\n \n\n \n\n \n\nGUTSCHEINE:\n\nKönnen weder BAR noch für Produkte verwendet werden.\n\nAllgemein keine Barauszahlung möglich\n\n \n\nVielen Dank für Ihr Verständnis\n\n \n\n \n\n \n\n \n\nNEU NEU NEU!!!  KLIMATISIERTES LOKAL!!  Damit auch bei heissen Tagen ,Coole Frisuren enstehen.. :)\n\n \n\n \n\n \n\n \n\n \n\nEine Schöne Zeit wünsche ich Euch von Herzen und bleibt Gesund !\n\n \n\n Ferien:\n\n \n\nDonnerstag 13.August 2026 bis \n\nSamstag 29.August 2026\n\n \n\nWir sind am Montag 31.August ab 10.00 Uhr gerne wieder für Sie da\n\nÖffnungszeiten\n\nMontag & Dienstag\n\n \n\n08.30 - 12.00\n\n13.30 - 18.00\n\nMittwoch\n\ngeschlossen\n\nDonnerstag & Freitag\n\n \n\n08.30 - 12.00\n\n13.30 - 18.30\n\nSamstag\n\n08.00 - 13.00\n\nAdres"
+    },
+    {
+      "id": "2791966c-6f0b-4f8f-9346-cd04435be278",
+      "url": "https://www.hairstudiof.ch/",
+      "text": "se\n\nBahnhofstrasse 12\n\n8320 Fehraltorf\n\nE: [email protected]\n\nT: 044 955 12 12\n\n© Hairstudio F (2023)\n\nAbmelden\n|\nBearbeiten\n\nNach oben scrollen"
+    },
+    {
+      "id": "51462393-27d4-4a89-9dbb-d46e3e0d6062",
+      "url": "https://www.hairstudiof.ch/leistungen-preise/",
+      "text": "Hairstudio F - Ihr Coiffeur in Fehraltorf\n\nStart\nÜber mich\nLeistungen/Preise\nFotos\nKontakt\n\nStart\nÜber mich\nLeistungen/Preise\nFotos\nKontakt\n\nUnsere Dienstleistungen\n\nGOOD HAIR - GOOD MOOD - GOOD DAY\n\nDamen\n\n \n\n \n\nKurz\n\nMittel\n\nLang\n\nnur waschen\n\n15\n\n \n\n \n\n \n\nWaschen, schneiden, föhnen\n\n \n\n78\n\n85\n\n93\n\nWaschen, föhnen oder legen\n\n \n\n48\n\n55\n\n63\n\ncut & go ohne waschen\n\n49\n\n \n\n \n\n \n\ncut & go mit waschen\n\n62\n\n \n\n \n\n \n\n          \n\n \n\n \n\n \n\n \n\n \n\nFärben:  Ganzer Kopf\n\n                Nur Ansatz bis 2 cm\n\n \n\n \n\n56\n\n \n\n61\n\n \n\n \n\n67\n\n \n\n \n\n74\n\n \n\nTönen:   Ganzer Kopf\n\n                nur Ansatz bis 2 cm\n\n \n\n49\n\n55\n\n \n\n63\n\n \n\n69\n\n \n\n \n\nMeches: Ganzer Kopf\n\n                Nur Oberkopf\n\n \n\n                Mehrfarbig ganzer Kopf\n\n                Mehrfarbig nur Oberkopf\n\n \n\n                Blondieren\n\n                \n\n \n\n \n\n \n\n78\n\n68\n\n \n\n87\n\n81\n\n \n\n58\n\n \n\n \n\n \n\n \n\n94\n\n79\n\n \n\n97 \n\n91\n\n \n\n64 \n\n \n\n \n\n107\n\n99\n\n \n\n115\n\n103\n\n \n\n-\n\n \n\n \n\n \n\n \n\n \n\nDauerwelle: Ganzer Kopf\n\n                       Nur Oberkopf\n\n \n\n \n\n86\n\n73\n\n104\n\n85\n\n-\n\nHeadlines\n\n \n\n \n\n76\n\n \n\n86\n\n \n\n -\n\n \n\nPflege\n\n \n\n8\n\n10\n\n12\n\nIntensivkur\n\n \n\n \n\n12\n\n \n\n14\n\n17\n\nWella-Plex \n\n \n\nGlossing Pflege \n\n \n\nColor Fresh\n\n \n\n \n\n28\n\n \n\n31\n\n \n\n36\n\n \n\n \n\n \n\n34\n\n \n\n39\n\n \n\n \n\n \n\n \n\n \n\n48\n\n \n\nAugenbrauen zupfen\n\n \n\n12\n\n \n\n \n\nAugenbrauen färben\n\n \n\n18\n\n \n\n \n\nAugenbrauen färben und zupfen\n\n \n\n25\n\n \n\n \n\nWimpern färben\n\n \n\n26\n\n \n\n \n\nHerren\n\nWaschen, schneiden, föhnen\n\n51\n\nSchneiden, föhnen\n\n43\n\nMaschinenschnitt mit waschen\n\n43\n\nMaschinenschnitt ohne waschen\n\n39\n\nKränzli Schnitt mit waschen\n\n35\n\nKränzli Schnitt ohne waschen\n\n \n\n31\n\n \n\nSchnauz\n\n6\n\nBart kürzen ( Nicht rasieren ) \n\n \n\n11\n\n \n\nFärben/bleichen\n\n51\n\nMeches Oberkopf\n\n53\n\nDauerwelle Ganzer Kopf\n\n69 \n\nDauerwelle Oberkopf\n\n \n\nPflege/Conditioner\n\n \n\nBrauen Zupfen\n\nBrauen Färben\n\nWimpern Färben\n"
+    },
+    {
+      "id": "f9ae3311-b33b-4e3b-af5d-7396734e7aa2",
+      "url": "https://www.hairstudiof.ch/leistungen-preise/",
+      "text": "\n59\n\n \n\n10\n\n \n\n12\n\n18\n\n26\n\n \n\n \n\nKinder\n\nBabies bis 3 Jahre\n\n19\n\nKleinkinder bis 5 Jahre\n\n22\n\n \n\n \n\nMädchen, 6 - 9 Jahre\n\n31\n\nMädchen, 10 - 12 Jahre\n\n41\n\nMädchen, 13 - 16 Jahre\n\n51\n\nmit waschen\n\nmit Pfelege/Conditioner\n\n+8\n\n+8\n\nmit Fönen  (Stylen)\n\n+8\n\n \n\n \n\nKnabe, 6 - 9 Jahre\n\n \n\n \n\n25\n\nKnabe, 10 - 12 Jahre\n\n31\n\nKnabe, 13 - 16 Jahre\n\n35\n\n mit waschen\n\n+8\n\nBei Kinder ist der Preis für das nassspritzen und schneiden und trocken fönen.\n\nBitte die Haare vor dem Coiffeur Termin waschen wenn es nicht im Salon erwünscht ist.\n\nWaschen und Fönen ist separat zu berechnen. \n\n \n\nFärben und Dauerwelle nur mit Einwilligung von Eltern. Jugendliche unter 16 Jahren erhalten10% Rabatt auf regulären Preise.\n\n \n\nLehrlinge und Studenten mit Schülerausweis erhalten 10% Rabatt.\n\n \n\nBitte denken Sie daran - einen Termin, der nicht wahrgenommen werden kann, frühzeitig zu verschieben oder zu stornieren. Terminabsagen von weniger als 24 Stunden werden zu 50%\nin Rechnung gestellt.\n\nÖffnungszeiten\n\nMontag & Dienstag\n\n \n\n08.30 - 12.00\n\n13.30 - 18.00\n\nMittwoch\n\ngeschlossen\n\nDonnerstag & Freitag\n\n \n\n08.30 - 12.00\n\n13.30 - 18.30\n\nSamstag\n\n08.00 - 13.00\n\nAdresse\n\nBahnhofstrasse 12\n\n8320 Fehraltorf\n\nE: [email protected]\n\nT: 044 955 12 12\n\n© Hairstudio F (2023)\n\nAbmelden\n|\nBearbeiten\n\nNach oben scrollen"
+    },
+    {
+      "id": "02086efa-57b5-4087-bf48-96a5c874ae6c",
+      "url": "https://www.hairstudiof.ch/kontakt/",
+      "text": "Hairstudio F - Ihr Coiffeur in Fehraltorf\n\nStart\nÜber mich\nLeistungen/Preise\nFotos\nKontakt\n\nStart\nÜber mich\nLeistungen/Preise\nFotos\nKontakt\n\nSchreiben Sie oder rufen Sie uns an.\n\nTelefon: 044 955 12 12\n\nEmail: [email protected]\n\nName\n\nE-Mail\n\nNachricht\n\nBitte den Code eingeben:\n\nEs gilt unsere Datenschutzerklärung\n\nHinweis:\nBitte die mit * gekennzeichneten Felder ausfüllen.\n\nÖffnungszeiten\n\nMontag & Dienstag\n\n \n\n08.30 - 12.00\n\n13.30 - 18.00\n\nMittwoch\n\ngeschlossen\n\nDonnerstag & Freitag\n\n \n\n08.30 - 12.00\n\n13.30 - 18.30\n\nSamstag\n\n08.00 - 13.00\n\nAdresse\n\nBahnhofstrasse 12\n\n8320 Fehraltorf\n\nE: [email protected]\n\nT: 044 955 12 12\n\n© Hairstudio F (2023)\n\nAbmelden\n|\nBearbeiten\n\nNach oben scrollen"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://www.hairstudiof.ch/app/common/captcha/index/captchaId/666a5abe76e43ceb57fa17491cd3f2fe0138a915",
+      "alt": ""
+    },
+    {
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/s50516ce04e8675fd/backgroundarea/icc4108e8d65b5b31/version/1677832658/image.png",
+      "alt": ""
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/hairstudio-f-6fa67eaa9d81.png",
+      "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/s50516ce04e8675fd/backgroundarea/icc4108e8d65b5b31/version/1677832658/image.png",
+      "sourceUrl": "https://image.jimcdn.com/app/cms/image/transf/none/path/s50516ce04e8675fd/backgroundarea/icc4108e8d65b5b31/version/1677832658/image.png",
+      "alt": "",
+      "width": 2400,
+      "height": 600,
+      "sha256": "6fa67eaa9d8189a1f605cbff53cc92a22ad524e500d41182c82a74a6d43e991b"
+    }
+  ]
+}

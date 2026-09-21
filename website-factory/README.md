@@ -1,5 +1,7 @@
 # POLIRE Website Factory
 
+**Neue lokale Designvorschauen:** [15 Demos vom 21. September 2026](demos/2026-09-21/README.md). Mit `pnpm demos` die fertige Übersicht lokal öffnen; `pnpm demos:build` erstellt sie erneut. Diese Entwicklungsentwürfe sind getrennt von den gespeicherten automatischen Factory-Läufen.
+
 Lokale TypeScript-Anwendung mit sieben Agent-Stufen, SQLite, einem deklarativen React-Renderer und echten Browserprüfungen. Das Projekt ist von der bestehenden POLIRE-Website getrennt. Es enthält keinen E-Mail-Versand.
 
 ## Schnellstart mit ChatGPT-Anmeldung
