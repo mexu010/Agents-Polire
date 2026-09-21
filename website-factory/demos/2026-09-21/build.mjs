@@ -8,7 +8,7 @@ const root = path.dirname(fileURLToPath(import.meta.url));
 const output = path.join(root, 'public');
 const manifest = JSON.parse(readFileSync(path.join(root, 'manifest.json'), 'utf8'));
 mkdirSync(output, { recursive: true });
-for (const file of ['fonts.css','shared.css','shared.js','gallery.css','gallery.js']) copyFileSync(path.join(root,file), path.join(output,file));
+for (const file of ['fonts.css','shared.css','shared.js','gallery.css','gallery.js','vercel.json','robots.txt']) copyFileSync(path.join(root,file), path.join(output,file));
 mkdirSync(path.join(output,'fonts'),{recursive:true});
 for (const file of readdirSync(path.join(root,'fonts')).filter(file=>/\.(woff2|txt|md)$/.test(file))) copyFileSync(path.join(root,'fonts',file),path.join(output,'fonts',file));
 const leads = [];

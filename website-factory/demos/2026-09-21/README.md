@@ -17,6 +17,12 @@ pnpm demos
 
 Anschliessend [Demo-Übersicht öffnen](http://127.0.0.1:4320/). Der Server bindet ausschliesslich an den lokalen Rechner. Bei Bedarf kann `POLIRE_DEMO_PORT` einen anderen Port festlegen. Zum Beenden im Terminal Strg+C. Die Übersicht bietet Vorschaubilder, Branchenfilter, Original-Websites und die gespeicherten Review-Befunde.
 
+### Dauerhafte Team-Vorschau
+
+Für die vom Nutzer gewünschte Vorschau für Orlando und David ist ein separates Vercel-Projekt vorbereitet. Im Repository `mexu010/ChatGPT_Polire` muss dessen **Root Directory** auf `website-factory/demos/2026-09-21/public` zeigen. Framework: **Other**. Die dort mitgelieferte `vercel.json` überspringt Installation und Build; Vercel liefert die bereits geprüften statischen Dateien aus. Es werden keine API-Keys oder Factory-Prozesse benötigt. Künftige Designänderungen zuerst lokal mit `pnpm demos:build` erzeugen und die aktualisierten Dateien committen.
+
+Das POLIRE-Hauptprojekt wird dafür nicht umgestellt. Den Zugriff für die Team-Vorschau über Vercels Deployment Protection und die passende Freigabe regeln; `noindex`, `robots.txt` und `public: false` sind kein Passwortschutz. Letzteres hält lediglich Deployment-Quelltext und Logs privat. Nach der Anmeldung müssen Projekt, tatsächlicher Zugriffsmodus und Online-Link noch eingerichtet und geprüft werden; diese Vorbereitung allein veröffentlicht keine Website. [Vercel-Konfiguration](https://vercel.com/docs/project-configuration/vercel-json), [Deployment Protection](https://vercel.com/docs/deployment-protection).
+
 Jede Karte zeigt ausserdem die gerundete Qualität der **bisherigen Website**: 0 = sehr schwach, 100 = sehr gut. Das ist keine Bewertung der neuen Demo und keine Kaufwahrscheinlichkeit. Der konkrete Befund und der nächste Schritt stehen direkt daneben; unbekannte Werte bleiben unbekannt.
 
 | Demo | Original |
