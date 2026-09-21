@@ -301,6 +301,14 @@ export async function screenCollected(
       contactsFrom(scanHtml(page.html), page.sourceUrl, page.html),
     ),
   );
+  const sparseContent = pages.every(
+    (page) =>
+      extractPage(page.html, new URL(page.sourceUrl)).text.trim().length < 80,
+  );
+  if (sparseContent)
+    limitations.push(
+      "Zu wenig lesbarer Inhalt für eine verlässliche statische Vorauswahl. Visuelle Prüfung erforderlich.",
+    );
   if (contacts.length) {
     for (const contact of contacts)
       signals.push({
@@ -325,7 +333,8 @@ export async function screenCollected(
   return {
     website,
     checkedAt: now(),
-    status: priority >= 2 ? "candidate" : "no_signal",
+    status:
+      priority >= 2 ? "candidate" : sparseContent ? "uncertain" : "no_signal",
     priority,
     signals,
     contacts,

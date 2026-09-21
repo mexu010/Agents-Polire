@@ -1,5 +1,17 @@
 # Prüfprotokoll
 
+## Konservative Vorauswahl vom 21. September 2026
+
+Die Vorauswahl reserviert innerhalb der bisherigen Review-Grenze Plätze für unklare Fälle und eine zufällig gezogene Kontrolle der Websites ohne statisches Signal. Alle übrigen Firmen bleiben ausdrücklich unbewertet und im Bericht sichtbar. Wenig lesbarer statischer Inhalt gilt bei fehlenden starken Signalen als unklar. Quellenlücken werden nicht als Geschäftsschliessung oder gute Website umgedeutet.
+
+Zufallsstartwert, Grundgesamtheit und konkrete Auswahl werden vor jedem Dispatch persistiert. `--plan-only` speichert die Auswahl ohne Agent-Aufruf; Wiederaufnahme behält sie bei. Bestehende Versuche und reservierte Plätze verbrauchen dieselbe ursprüngliche Obergrenze. Modell-, Quoten-, Budget- und Demo-Freigaben sind unverändert.
+
+Build und ESLint bestanden; 219 Tests in 23 Dateien bestanden. Regressionen decken gemischte Auswahl, unklare/fehlgeschlagene Abrufe, gleichbleibende Ziehung bei Wiederaufnahme, alte Stapel, fehlende Scores, Review-Grenzen und sehr kurze HTML-Inhalte ab. Die unabhängige Codeprüfung fand keine blockierenden Fehler.
+
+Der echte bestehende 100er-Stapel wurde zunächst ausschliesslich mit gespeicherten HTML-Daten neu ausgewertet und geplant: vier vorhandene Reviews unverändert, 96 offene Firmen, zwei noch freie Plätze. Der OAuth-Zähler blieb dabei bei 90. Die Auswahl reservierte Schreiner Blarer aus 88 Websites ohne statisches Signal sowie D. Labhart aus den acht unklaren Fällen. Das ist kein Beleg für die Trefferquote des Filters.
+
+Anschliessend wurden beide ausgewählten Firmen tatsächlich mit Scout, Audit und Qualifier über OAuth bearbeitet: sechs zusätzliche Aufrufe, Tagesstand 96 von 100. Beide Agent-Läufe endeten am Demo-Freigabepunkt, jedoch ohne belastbaren Gesamtwert. Bei Blarer fehlten wegen Browser-Zeitlimits die visuellen Belege; bei Labhart stoppte ein Zertifikatsfehler den Quellenabruf. Beide bleiben offen, nicht als schlechte oder gute Websites eingestuft. Der Bericht trennt deshalb ausdrücklich sechs abgeschlossene Agent-Läufe von weiterhin vier auswertbaren Reviews. [Echter Kontrolllauf mit Ergebnissen und Grenzen](reports/selection-control-2026-09-21/README.md).
+
 ## 15 lokale Demo-Websites vom 21. September 2026
 
 Die ausdrücklich beauftragten 15 Design-Demos samt Vergleichsübersicht sind erstellt. Sie wurden von drei Entwicklungsagents auf Basis gespeicherter Quellen umgesetzt; dies ist kein abgeschlossener automatischer Factory-Strategist/Builder/QA-Lauf. Factory-Datenbank, Freigaben, Quoten und POLIRE-Website bleiben unverändert. Keine zusätzlichen Factory-Modellaufrufe, keine Kontaktaufnahme und keine öffentliche Veröffentlichung.

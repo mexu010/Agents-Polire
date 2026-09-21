@@ -63,6 +63,10 @@ export function registerWorkflowCommands(
       "--recheck-screening",
       "re-evaluate saved HTML; newly selected candidates may use remaining live review slots",
     )
+    .option(
+      "--plan-only",
+      "persist the balanced review selection without starting agent reviews",
+    )
     .description(
       "Screen 100 websites without LLM calls, review a bounded shortlist, stop before any demo",
     )
@@ -82,6 +86,7 @@ export function registerWorkflowCommands(
               maxReviews: o.maxReviews,
               screenConcurrency: o.screenConcurrency,
               recheckScreening: o.recheckScreening,
+              planOnly: o.planOnly,
             }),
           o.mode,
         ),

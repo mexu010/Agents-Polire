@@ -401,6 +401,7 @@ test("explicit recheck replays saved crawl without refetching or changing the ma
       batchId: "recheck",
       websites: [website],
       maxReviews: 1,
+      planOnly: true,
     },
     {
       screenWebsite: async (url: string) => {
@@ -463,6 +464,186 @@ test("explicit recheck replays saved crawl without refetching or changing the ma
   expect(second.results[0].screening.status).toBe("candidate");
   expect(second.results[0].recheckedAt).toBeTruthy();
   expect(s.reviewed).toHaveLength(1);
+  s.store.close();
+});
+
+test("reserves review places for uncertainty and a persistent random control sample", async () => {
+  const s = setup();
+  const websites = [
+    "c1",
+    "c2",
+    "c3",
+    "c4",
+    "u1",
+    "u2",
+    "n1",
+    "n2",
+    "n3",
+    "n4",
+  ].map((n) => `https://${n}.ch/`);
+  const options = { batchId: "balanced", websites, maxReviews: 6 };
+  const screenWebsite = async (url: string) => ({
+    ...(await s.screenWebsite(url)),
+    status: new URL(url).hostname.startsWith("c")
+      ? ("candidate" as const)
+      : new URL(url).hostname.startsWith("u")
+        ? ("uncertain" as const)
+        : ("no_signal" as const),
+    priority: 0,
+  });
+  const plan: any = await runProspecting(
+    s.factory,
+    { ...options, planOnly: true },
+    { screenWebsite },
+  );
+  expect(s.reviewed).toHaveLength(0);
+  const selected = plan.results.filter((r: any) => r.selectionReason);
+  expect(
+    selected.filter((r: any) => r.selectionReason === "candidate"),
+  ).toHaveLength(3);
+  expect(
+    selected.filter((r: any) => r.selectionReason === "uncertain"),
+  ).toHaveLength(2);
+  expect(
+    selected.filter((r: any) => r.selectionReason === "control_sample"),
+  ).toHaveLength(1);
+  expect(plan.summary.pendingReviews).toBe(10);
+  expect(plan.selection.controlPopulation).toHaveLength(4);
+  const result: any = await runProspecting(s.factory, options, {
+    screenWebsite,
+  });
+  expect(s.screened).toHaveLength(10);
+  expect(result.selection.seed).toBe(plan.selection.seed);
+  expect(
+    result.results
+      .filter((r: any) => r.selectionReason)
+      .map((r: any) => r.website),
+  ).toEqual(selected.map((r: any) => r.website));
+  expect(s.reviewed).toHaveLength(6);
+  expect(result.summary.pendingReviews).toBe(4);
+  expect(result.summary.controlSample).toMatchObject({
+    population: 4,
+    selected: 1,
+    completed: 1,
+    assessable: 1,
+    promising: 1,
+  });
+  expect(s.reviewed[0].website).toBe(
+    selected.find((r: any) => r.selectionReason === "control_sample").website,
+  );
+  expect(readFileSync(result.reportPath, "utf8")).toContain(
+    "Zufallsstichprobe",
+  );
+  for (const row of result.results.filter((r: any) => !r.reviewStatus))
+    expect(readFileSync(result.reportPath, "utf8")).toContain(row.website);
+  await runProspecting(s.factory, options, { screenWebsite });
+  expect(s.reviewed).toHaveLength(6);
+  s.store.close();
+});
+
+test("unknown and failed screens get full reviews while no-signal sites stay eligible", async () => {
+  const s = setup();
+  const result: any = await runProspecting(
+    s.factory,
+    {
+      batchId: "unclear",
+      websites: [
+        "https://broken.ch/",
+        "https://unknown.ch/",
+        "https://quiet.ch/",
+      ],
+      maxReviews: 3,
+    },
+    {
+      screenWebsite: async (url: string) => ({
+        ...(await s.screenWebsite(url)),
+        status: url.includes("unknown")
+          ? ("uncertain" as const)
+          : ("no_signal" as const),
+      }),
+    },
+  );
+  expect(result.summary.completeReviews).toBe(3);
+  expect(
+    result.results.find((r: any) => r.website.includes("broken"))
+      .selectionReason,
+  ).toBe("uncertain");
+  expect(
+    result.results.find((r: any) => r.website.includes("quiet"))
+      .selectionReason,
+  ).toBe("control_sample");
+  expect(result.summary.pendingReviews).toBe(0);
+  s.store.close();
+});
+
+test("legacy batches use only remaining slots without replacing reviews or run identities", async () => {
+  const s = setup();
+  const options = {
+    batchId: "legacy",
+    websites: ["https://old.ch/", "https://unknown.ch/", "https://quiet.ch/"],
+    maxReviews: 2,
+  };
+  await runProspecting(
+    s.factory,
+    { ...options, planOnly: true },
+    { screenWebsite: s.screenWebsite },
+  );
+  const saved = s.store.get("prospect_batches", "legacy");
+  delete saved.selection;
+  saved.results.forEach((row: any, i: number) => {
+    delete row.selectionReason;
+    row.screening.status =
+      i === 0 ? "candidate" : i === 1 ? "uncertain" : "no_signal";
+  });
+  saved.results[0].reviewStatus = "blocked_review";
+  saved.results[0].runId = "original-run";
+  s.store.put("prospect_batches", "legacy", saved);
+  const result: any = await runProspecting(s.factory, options, {
+    screenWebsite: s.screenWebsite,
+  });
+  expect(s.reviewed).toHaveLength(1);
+  expect(result.results[0].runId).toBe("original-run");
+  expect(result.results[0].reviewStatus).toBe("blocked_review");
+  expect(result.summary.controlSample.completed).toBe(1);
+  expect(result.summary.pendingReviews).toBe(2);
+  s.store.close();
+});
+
+test("null audit scores do not count as good websites or a valid sample outcome", async () => {
+  const s = setup();
+  const original = s.factory.runLead;
+  s.factory.runLead = async (url: string, options: any) => {
+    const job = await original(url, options);
+    job.context.demoReview.summary.audit.qualityScore = null;
+    return job;
+  };
+  const result: any = await runProspecting(
+    s.factory,
+    {
+      batchId: "inconclusive",
+      websites: ["https://no-signal.ch/"],
+      maxReviews: 1,
+    },
+    {
+      screenWebsite: async (url: string) => ({
+        ...(await s.screenWebsite(url)),
+        status: "no_signal" as const,
+      }),
+    },
+  );
+  expect(result.summary.controlSample).toMatchObject({
+    selected: 1,
+    completed: 1,
+    assessable: 0,
+    inconclusive: 1,
+    promising: 0,
+  });
+  expect(result.summary.controlSample.promisingRate).toBeNull();
+  expect(result.summary.assessableReviews).toBe(0);
+  expect(result.summary.pendingReviews).toBe(1);
+  expect(readFileSync(result.reportPath, "utf8")).toContain(
+    "abgeschlossen, aber nicht auswertbar",
+  );
   s.store.close();
 });
 
@@ -550,7 +731,12 @@ test("recheck cannot exceed the original review cap when rankings change", async
     },
   );
   expect(s.reviewed).toHaveLength(1);
-  expect(batch.results[0].reviewStatus).toBe("complete");
-  expect(batch.results[1].reviewStatus).toBeUndefined();
+  expect(
+    batch.results.find((r: any) => r.website === s.reviewed[0].website)
+      .reviewStatus,
+  ).toBe("complete");
+  expect(
+    batch.results.filter((r: any) => r.reviewStatus === "complete"),
+  ).toHaveLength(1);
   s.store.close();
 });

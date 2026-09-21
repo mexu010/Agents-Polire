@@ -47,6 +47,14 @@ async function collected(
 }
 
 describe("screenCollected", () => {
+  it("keeps a near-empty static page uncertain even when its metadata is complete", async () => {
+    const crawl = await collected(
+      "<html><head><title>Firma</title><meta name=viewport content=width-device><meta name=description content=Firma></head><body>Willkommen</body></html>",
+    );
+    const result = await screenCollected("https://example.test/", crawl);
+    expect(result.status).toBe("uncertain");
+    expect(result.limitations.join(" ")).toMatch(/wenig lesbarer Inhalt/i);
+  });
   it("grounds static signals in exact homepage markup and ranks strong signals", async () => {
     const crawl = await collected(
       '<html><head></head><body><frame src="https://widget.example/"></body></html>',
@@ -73,7 +81,7 @@ describe("screenCollected", () => {
 
   it("does not rank a modern iframe as a legacy frame signal", async () => {
     const crawl = await collected(
-      '<html><head><title>Example</title><meta name=viewport content=width-device><meta name=description content=Example></head><body><iframe src="https://maps.example/"></iframe></body></html>',
+      '<html><head><title>Example</title><meta name=viewport content=width-device><meta name=description content=Example></head><body>Unsere Werkstatt in Zürich zeigt hier Leistungen, Kontakt und aktuelle Öffnungszeiten für Kundinnen und Kunden.<iframe src="https://maps.example/"></iframe></body></html>',
     );
 
     const result = await screenCollected("https://example.test/", crawl);
@@ -107,7 +115,7 @@ describe("screenCollected", () => {
 
   it("recognizes title, description and viewport despite attribute quote and order variations", async () => {
     const crawl = await collected(
-      "<html><head><meta content='width=device-width, initial-scale=1' name=viewport><meta content=nope name=description><title>Example</title></head><body></body></html>",
+      "<html><head><meta content='width=device-width, initial-scale=1' name=viewport><meta content=nope name=description><title>Example</title></head><body>Unsere Werkstatt in Zürich zeigt hier Leistungen, Kontakt und aktuelle Öffnungszeiten für Kundinnen und Kunden.</body></html>",
     );
 
     const result = await screenCollected("https://example.test/", crawl);
@@ -184,7 +192,7 @@ describe("screenCollected", () => {
 
   it("does not turn a missing description on two pages into a candidate", async () => {
     const html =
-      "<html><head><title>Example</title><meta name=viewport content=width-device></head><body></body></html>";
+      "<html><head><title>Example</title><meta name=viewport content=width-device></head><body>Unsere Werkstatt in Zürich zeigt hier Leistungen, Kontakt und aktuelle Öffnungszeiten für Kundinnen und Kunden.</body></html>";
     const crawl = await collected(html);
     const contactPath = path.join(
       path.dirname(crawl.evidence[0].locator.split("#", 1)[0]),
@@ -261,7 +269,7 @@ describe("screenCollected", () => {
 
   it("does not make a candidate from a contact or a Swiss-looking domain", async () => {
     const crawl = await collected(
-      '<html><head><title>Example</title><meta name=viewport content=width-device><meta name=description content=Example></head><body><a href="mailto:hello@example.ch">hello@example.ch</a></body></html>',
+      '<html><head><title>Example</title><meta name=viewport content=width-device><meta name=description content=Example></head><body>Unsere Werkstatt in Zürich zeigt hier Leistungen, Kontakt und aktuelle Öffnungszeiten für Kundinnen und Kunden.<a href="mailto:hello@example.ch">hello@example.ch</a></body></html>',
       { website: "https://example.ch/" },
     );
 
@@ -333,7 +341,7 @@ describe("screenCollected", () => {
 
   it("replays a hermetic CrawlPage outcome contract", async () => {
     const crawl = await collected(
-      "<html><head><title>Example</title><meta name=viewport content=width-device><meta name=description content=Example></head><body></body></html>",
+      "<html><head><title>Example</title><meta name=viewport content=width-device><meta name=description content=Example></head><body>Unsere Werkstatt in Zürich zeigt hier Leistungen, Kontakt und aktuelle Öffnungszeiten für Kundinnen und Kunden.</body></html>",
     );
 
     const result = await screenCollected("https://example.test/", crawl);

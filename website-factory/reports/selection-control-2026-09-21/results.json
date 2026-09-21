@@ -1,0 +1,329 @@
+{
+  "batchId": "fast100-2026-09-21",
+  "checkedAt": "2026-09-21T18:18:32.023Z",
+  "selection": {
+    "version": 2,
+    "seed": "222c14c0-ead7-4a87-a203-04de60735258",
+    "createdAt": "2026-09-21T18:14:19.775Z",
+    "controlPopulation": [
+      "https://www.kronemosnang.ch/",
+      "https://www.hotelmontvully.ch/",
+      "https://www.ccm-coiffure.ch/",
+      "https://www.r-landenberg.ch/",
+      "https://hoenggerhof.ch/",
+      "https://burghohenklingen.com/",
+      "https://www.zumweinberg.ch/",
+      "https://strandhotel.ch/",
+      "https://www.freihof-wettingen.ch/",
+      "https://www.bruenigpark.ch/",
+      "https://www.rest-frohsinn.ch/",
+      "https://kreuz-schlosswil.ch/",
+      "https://www.goeldischreinerei.ch/",
+      "https://badertscher.ch/",
+      "https://www.schreinerei-tanner.ch/",
+      "https://www.hairdreams-chur.com/",
+      "https://www.capellofortunato.ch/",
+      "https://www.intercoiffuresonja.ch/",
+      "https://www.haartreff-jeuss.ch/",
+      "https://www.artof-hair.ch/",
+      "https://www.emmeleder.ch/",
+      "https://alumex.ch/",
+      "https://www.aacoiffure.ch/",
+      "https://mueller-garage.ch/",
+      "https://autoleisibach.ch/",
+      "https://www.gp-garage.ch/",
+      "https://www.centralbiglen.ch/",
+      "https://www.garage-heller.ch/",
+      "https://www.pschweizerag.ch/",
+      "https://www.holzundtraum.ch/",
+      "https://www.ganderag.ch/",
+      "https://www.ard-swiss.ch/",
+      "https://www.kien-holz.com/",
+      "https://suemi.ch/",
+      "https://www.marschallag.ch/",
+      "https://www.schreiner-blarer.ch/",
+      "https://www.schreinereiegger.ch/",
+      "https://www.schreinereipaulstricker.ch/",
+      "https://www.holz-isch-heimelig.ch/",
+      "https://www.hug-wolfwil.ch/",
+      "https://www.arpi.ch/",
+      "https://www.t-ruggiero.ch/",
+      "https://www.weisskreuzmalans.ch/",
+      "https://www.entla.ch/",
+      "https://www.fenster-steiner.ch/",
+      "https://www.rubema.ch/",
+      "https://www.baerhaustechnik.ch/",
+      "https://www.gallatiag.ch/",
+      "https://wickart.ch/",
+      "https://www.fzag.ch/",
+      "https://www.arnoldag.ch/",
+      "https://www.michel-ht.ch/",
+      "https://www.willi-gt.ch/",
+      "https://www.meyer-soehne.ch/",
+      "https://winkenbach-hausen.ch/",
+      "https://www.dreamplant.ch/",
+      "https://www.blumen-hoehener.ch/",
+      "https://www.hofladendinhard.ch/",
+      "https://www.buuremetzg.ch/",
+      "https://www.ricklimetzg.ch/",
+      "https://zurfluh-metzgerei.ch/",
+      "https://www.metzg-abegg.ch/",
+      "https://martimetzgerei.ch/",
+      "https://www.metzgerei-willener.ch/",
+      "https://www.metzgerei-rickenbach.ch/",
+      "https://www.forster-metzgerei.ch/",
+      "https://metzgerei-bodmer.ch/",
+      "https://www.berwert-metzgerei.ch/",
+      "https://www.dag-gartenbau.ch/",
+      "https://www.meiergartenbau.ch/",
+      "https://www.gartenbau-kaelin.ch/",
+      "https://www.bernergartenbau.ch/",
+      "https://www.weiersmueller-gartenbau.ch/",
+      "https://www.garten-fonseca.ch/",
+      "https://www.spaltenstein-gartenbau.ch/",
+      "https://maler-kosin.ch/",
+      "https://www.gruber-ag.ch/",
+      "https://www.maler-furger.ch/",
+      "https://ricocampana.ch/",
+      "https://www.chiriatti-ag.ch/",
+      "https://www.dd-maler.ch/",
+      "https://www.malerguyer.ch/",
+      "https://www.garage-marugg.ch/",
+      "https://www.riedgarage.ch/",
+      "https://www.rep4you.ch/",
+      "https://garagehelg.ch/",
+      "https://sensation-cars.ch/",
+      "https://www.doldis-automobile.ch/"
+    ]
+  },
+  "summary": {
+    "total": 100,
+    "screened": 100,
+    "screenFailed": 0,
+    "candidates": 4,
+    "uncertain": 8,
+    "noSignal": 88,
+    "pendingReviews": 96,
+    "assessableReviews": 4,
+    "plannedReviews": 0,
+    "controlSample": {
+      "population": 88,
+      "selected": 1,
+      "completed": 1,
+      "assessable": 0,
+      "inconclusive": 1,
+      "promising": 0,
+      "promisingRate": null
+    },
+    "completeReviews": 6,
+    "reviewFailed": 0,
+    "blockedReviews": 0,
+    "modelCalls": 20,
+    "elapsedMs": 374206
+  },
+  "oauthCallsBefore": 90,
+  "oauthCallsAfter": 96,
+  "newCalls": 6,
+  "modelChanges": false,
+  "limitsChanged": false,
+  "mode": "real_oauth_reviews",
+  "conclusion": "Neither new review has a defensible overall quality score. This run does not establish selection recall or false-negative rate.",
+  "selected": [
+    {
+      "website": "https://www.schreiner-blarer.ch/",
+      "selectionReason": "control_sample",
+      "selectionScreeningStatus": "no_signal",
+      "runId": "prospect-fast100-2026-09-21-81dc79a35401c3d4",
+      "reviewStatus": "complete",
+      "reviewFile": "reviews/schreiner-blarer.md",
+      "summary": {
+        "website": "https://www.schreiner-blarer.ch/",
+        "businessStatus": {
+          "status": "uncertain",
+          "verification": "not_reviewed"
+        },
+        "audit": {
+          "qualityScore": null,
+          "coverage": 0.5,
+          "dimensions": {
+            "mobile_usability": null,
+            "conversion": "no_material_issue",
+            "content_clarity": "minor_friction",
+            "trust_transparency": "no_material_issue",
+            "technical_seo": null
+          },
+          "issues": [
+            {
+              "issueId": "6026f569-a0ee-4441-bcc2-4f5ffa3806a8",
+              "severity": "minor",
+              "category": "content_clarity",
+              "observation": "«Contact Us» erscheint auf der deutschsprachigen Kontaktseite.",
+              "recommendation": "«Contact Us» einheitlich auf Deutsch ausgeben.",
+              "suggestedFixTarget": "source_data"
+            },
+            {
+              "issueId": "80317d1f-fc0d-468e-bcb6-ac10538dd56b",
+              "severity": "minor",
+              "category": "content_clarity",
+              "observation": "«Ihre Schreinerei bietet Ihnen präzise und qualitativ hochwertige Holz- und Glasarbeiten.» erscheint auf der Startseite zweimal.",
+              "recommendation": "Doppelte Aussage entfernen oder durch belegten, eigenständigen Inhalt ersetzen.",
+              "suggestedFixTarget": "source_data"
+            }
+          ]
+        },
+        "qualification": {
+          "decision": "manual_review",
+          "priority": null,
+          "score": null,
+          "lowerBound": 5,
+          "upperBound": 90,
+          "coverage": 0.15000000000000002,
+          "uncertain": true,
+          "reasonCodes": [
+            "manual_review"
+          ]
+        },
+        "eligibility": {
+          "canApprove": false,
+          "blockers": [
+            "business_activity_unverified",
+            "ch_location_missing",
+            "audit_coverage_insufficient"
+          ],
+          "limitation": "Approval overrides ranking only; it does not supply missing facts or waive implementation and safety constraints."
+        },
+        "sourceHashes": {
+          "profile": "cc3bccef18cf2785028f5e82b586309e8450cbd6c57f3bfc9922e5c5c8c5e00d",
+          "audit": "91b9328a03d79431a2e3c81b3b5220d97cc9d3d9e8a3a51cd8602158dcc460f9",
+          "qualification": "417582d3c745d0018179c58d5258862ed616e111e98724ecdde37b10a3127452",
+          "offer": "564105b3e6e3bc6f643f74662822d1436a8c3f9c195620d3b8ea8fc435de7779",
+          "campaign": "24b3222bca1b2233c6d64d6309b5acfe82decdaa258fa62c9c9d989aa3a8a210",
+          "template": "a3a52c20860e9540545a9028d2e30b2841060105fc7d566d34b3b5ccd8198172"
+        }
+      },
+      "limitations": [
+        "Nur HTML-Inhalte von Startseite, Kontaktseite und Impressum wurden übergeben.",
+        "Keine Bilder, Viewports, Interaktionen, Messwerte oder SEO-Metadaten wurden übergeben."
+      ],
+      "crawlErrors": [
+        {
+          "code": "browser_capture_failed",
+          "viewport": {
+            "width": 375,
+            "height": 812
+          },
+          "message": "TimeoutError: page.goto: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://www.schreiner-blarer.ch/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+        },
+        {
+          "code": "browser_capture_failed",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "message": "TimeoutError: page.goto: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://www.schreiner-blarer.ch/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+        },
+        {
+          "code": "lighthouse_not_requested",
+          "message": "Lighthouse was explicitly disabled"
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "ecc01105-211d-4335-94bc-a7645ede51cb",
+          "kind": "html",
+          "source_url": "https://www.schreiner-blarer.ch/",
+          "artifact_hash": "231f87a75fd084ce76d4ef7dcf56aed3fa2f71ea5f57e0596067575b0e5fb497"
+        },
+        {
+          "evidence_id": "acd1daca-0041-43a7-a7c4-40a26e5f4b65",
+          "kind": "html",
+          "source_url": "https://www.schreiner-blarer.ch/",
+          "artifact_hash": "231f87a75fd084ce76d4ef7dcf56aed3fa2f71ea5f57e0596067575b0e5fb497"
+        },
+        {
+          "evidence_id": "399fb2ba-e990-41df-bb31-f95e5c6cd516",
+          "kind": "html",
+          "source_url": "https://www.schreiner-blarer.ch/kontakt",
+          "artifact_hash": "009d7cf97f179696d6e01308e39e009680f8c7ce5e349f407e1089ba690980e8"
+        },
+        {
+          "evidence_id": "7380d9d3-6cdb-4a32-8880-1b63c790a023",
+          "kind": "html",
+          "source_url": "https://www.schreiner-blarer.ch/impressum",
+          "artifact_hash": "598320fe1310ddb35499ec0796a0b5e3dff4ccaf3ce790aabc11c4986c3ca282"
+        }
+      ]
+    },
+    {
+      "website": "https://www.d-labhart.ch/",
+      "selectionReason": "uncertain",
+      "selectionScreeningStatus": "uncertain",
+      "runId": "prospect-fast100-2026-09-21-30d85c05a990e63a",
+      "reviewStatus": "complete",
+      "reviewFile": "reviews/d-labhart.md",
+      "summary": {
+        "website": "https://www.d-labhart.ch/",
+        "businessStatus": {
+          "status": "uncertain",
+          "verification": "not_reviewed"
+        },
+        "audit": {
+          "qualityScore": null,
+          "coverage": 0,
+          "dimensions": {
+            "mobile_usability": null,
+            "conversion": null,
+            "content_clarity": null,
+            "trust_transparency": null,
+            "technical_seo": null
+          },
+          "issues": []
+        },
+        "qualification": {
+          "decision": "manual_review",
+          "priority": null,
+          "score": null,
+          "lowerBound": 0,
+          "upperBound": 100,
+          "coverage": 0,
+          "uncertain": true,
+          "reasonCodes": [
+            "manual_review"
+          ]
+        },
+        "eligibility": {
+          "canApprove": false,
+          "blockers": [
+            "business_activity_unverified",
+            "company_identity_missing",
+            "ch_location_missing",
+            "audit_coverage_insufficient",
+            "offer_fit_not_supported",
+            "implementation_fit_not_supported"
+          ],
+          "limitation": "Approval overrides ranking only; it does not supply missing facts or waive implementation and safety constraints."
+        },
+        "sourceHashes": {
+          "profile": "d9725fdb0481d75d2d4a0fd1b17279fe8789fa77042bf05636de9cc115535f3f",
+          "audit": "3d5951faa247f294a421cddc1a0fe237549d38a5d739ac5ccc0b11da472e8b75",
+          "qualification": "d8f96f6fc1a7405f3c0ad7c54af807fa2d27b0eb78fe30c9d067fc40e2eaf616",
+          "offer": "564105b3e6e3bc6f643f74662822d1436a8c3f9c195620d3b8ea8fc435de7779",
+          "campaign": "24b3222bca1b2233c6d64d6309b5acfe82decdaa258fa62c9c9d989aa3a8a210",
+          "template": "a3a52c20860e9540545a9028d2e30b2841060105fc7d566d34b3b5ccd8198172"
+        }
+      },
+      "limitations": [
+        "Die einzige übergebene Seite hatte das Ergebnis «blocked».",
+        "Es wurden keine Belege, Bilder oder Firmenfakten bereitgestellt."
+      ],
+      "crawlErrors": [
+        {
+          "code": "robots_unavailable",
+          "url": "https://www.d-labhart.ch/",
+          "message": "Error [ERR_TLS_CERT_ALTNAME_INVALID]: Hostname/IP does not match certificate's altnames: Host: www.d-labhart.ch. is not in the cert's altnames: DNS:*.stackcp.com, DNS:stackcp.com"
+        }
+      ],
+      "evidence": []
+    }
+  ]
+}

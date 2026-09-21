@@ -9,6 +9,12 @@ import {
   type ScreeningResult,
 } from "./screening.js";
 import { writeReviewReport } from "./workflow.js";
+import {
+  controlSampleSummary,
+  hasAssessableReview,
+  planProspectReviews,
+  promisingReview,
+} from "./prospect-selection.js";
 
 type Options = {
   batchId: string;
@@ -16,6 +22,7 @@ type Options = {
   maxReviews?: number;
   screenConcurrency?: number;
   recheckScreening?: boolean;
+  planOnly?: boolean;
 };
 type Dependencies = {
   screenWebsite?: typeof screenWebsite;
@@ -156,24 +163,8 @@ export function writeProspectingReport(
   mkdirSync(dir, { recursive: true });
   const file = join(dir, `${batch.batchId}.md`);
   const rows = batch.results as JsonObject[];
-  const promising = rows.filter((r) => {
-    const summary = r.review?.context?.demoReview?.summary;
-    const score = summary?.audit?.qualityScore;
-    return (
-      r.reviewStatus === "complete" &&
-      typeof score === "number" &&
-      Number.isFinite(score) &&
-      score <= 65 &&
-      summary?.audit?.issues?.length > 0 &&
-      summary?.businessStatus?.status !== "closed"
-    );
-  });
-  const pending = rows.filter(
-    (r) =>
-      r.screening?.status === "uncertain" ||
-      (r.screening?.status === "candidate" && r.reviewStatus !== "complete") ||
-      r.screenStatus === "failed",
-  );
+  const promising = rows.filter(promisingReview);
+  const pending = rows.filter((r) => !hasAssessableReview(r));
   const lines = [
     `# Prospecting ${safeText(batch.batchId)}`,
     "",
@@ -184,8 +175,9 @@ export function writeProspectingReport(
         ]
       : []),
     `Stand: ${now()}`,
-    `Websites: ${rows.length}; vorgeprüft: ${batch.summary.screened}; vollständige Reviews: ${batch.summary.completeReviews}; Modellaufrufe: ${batch.summary.modelCalls}; Laufzeit: ${batch.summary.elapsedMs} ms.`,
+    `Websites: ${rows.length}; vorgeprüft: ${batch.summary.screened}; abgeschlossene Agent-Läufe: ${batch.summary.completeReviews}; auswertbare Reviews: ${rows.filter(hasAssessableReview).length}; Modellaufrufe: ${batch.summary.modelCalls}; Laufzeit: ${batch.summary.elapsedMs} ms.`,
     "Betriebsstatus nicht verifiziert. Vorprüfung ist kein visueller Audit und keine Betriebsprüfung.",
+    "Kein statisches Signal bedeutet unbewertet, nicht gute Website. Unklare Quellen und Abruffehler sind kein Ausschlussgrund. Offene Firmen bleiben erhalten.",
     "",
     "## Auswahl mit vollständigem Review",
     "",
@@ -195,7 +187,7 @@ export function writeProspectingReport(
   for (const row of promising) {
     const audit = row.review.context.demoReview.summary.audit;
     lines.push(
-      `- ${safeText(row.website)} — Qualität ${audit.qualityScore}/100; [Einzelreview](<${resolve(row.reportPath)}>); Betriebsstatus nicht verifiziert.`,
+      `- [${safeText(row.website)}](${sourceLink(row.website)}) — Qualität ${audit.qualityScore}/100; [Einzelreview](<${resolve(row.reportPath)}>); Betriebsstatus nicht verifiziert.`,
     );
     for (const signal of row.screening?.signals ?? []) {
       const source = sourceLink(signal.sourceUrl);
@@ -212,12 +204,31 @@ export function writeProspectingReport(
         );
     }
   }
-  lines.push("", "## Warteschlange und unklare Fälle", "");
+  const sample = controlSampleSummary(batch);
+  lines.push(
+    "",
+    "## Zufallsstichprobe zur Kontrolle der Vorauswahl",
+    "",
+    `Grundgesamtheit ohne statisches Signal: ${sample.population}; ausgewählt: ${sample.selected}; abgeschlossene Agent-Läufe: ${sample.completed}; auswertbar: ${sample.assessable}; noch ohne auswertbares Ergebnis: ${sample.inconclusive}; zusätzliche Review-Kandidaten: ${sample.promising}.`,
+    "Die Ziehung ist vor dem Review gespeichert und wird bei Wiederaufnahme nicht wiederholt. Stichproben laufen zuerst und zählen innerhalb derselben Review-, Aufruf- und Budgetgrenzen.",
+    "Zusätzliche Review-Kandidaten haben Qualität bis 65/100 und konkrete Befunde. Das belegt weder laufende Geschäftstätigkeit noch Budget. Keine Hochrechnung auf alle Firmen und kein Nachweis der Filtergüte; dafür fehlen eine ausreichend grosse abgeschlossene Stichprobe und menschliche Bewertung.",
+    "",
+  );
+  for (const row of rows.filter((r) => r.selectionReason === "control_sample"))
+    lines.push(
+      `- [${safeText(row.website)}](${sourceLink(row.website)}) — ${safeText(row.reviewStatus ?? "geplant")}${row.reportPath ? `; [Einzelreview](<${resolve(row.reportPath)}>)` : ""}${promisingReview(row) ? "; zusätzlicher Review-Kandidat" : ""}.`,
+    );
+  lines.push(
+    "",
+    "## Offene Firmen und unklare Fälle",
+    "",
+    "Nicht ausgewählte Firmen sind weiterhin unbewertet. Bei ausgeschöpftem Review-Limit werden sie in diesem Stapel nicht automatisch nachgeprüft.",
+  );
   if (!pending.length)
     lines.push("Keine offenen Kandidaten oder unklaren Fälle.");
   for (const row of pending)
     lines.push(
-      `- ${safeText(row.website)} — ${safeText(row.screening?.status ?? row.screenStatus)}; ${safeText(row.reviewStatus ?? "kein Review")}`,
+      `- [${safeText(row.website)}](${sourceLink(row.website)}) — ${safeText(row.screening?.status ?? row.screenStatus)}; ${safeText(row.reviewStatus === "complete" ? "Agent-Lauf abgeschlossen, aber nicht auswertbar" : (row.reviewStatus ?? (row.selectionReason ? "Review geplant" : "offen, noch nicht ausgewählt")))}; Auswahl: ${safeText(row.selectionReason ?? "ausstehend")}`,
     );
   lines.push("", `Vollständige Ergebnisse: ${safeText(batch.jsonPath)}`, "");
   const staging = `${file}.${id()}.tmp`;
@@ -393,25 +404,24 @@ export async function runProspecting(
       },
     );
     batch = store.get(KIND, key);
-    const reviewSlots = Math.max(
-      0,
-      maxReviews -
-        (batch.results as JsonObject[]).filter((row) => row.reviewStatus)
-          .length,
-    );
-    const candidates = (batch.results as JsonObject[])
-      .map((row, index) => ({ row, index }))
-      .filter(
-        ({ row }) => row.screening?.status === "candidate" && !row.reviewStatus,
-      )
-      .sort(
-        (a, b) =>
-          b.row.screening.priority - a.row.screening.priority ||
-          a.index - b.index,
-      )
-      .slice(0, reviewSlots);
+    store.transaction(() => {
+      ensureLease();
+      batch = store.get(KIND, key);
+      planProspectReviews(batch);
+      store.put(KIND, key, batch);
+    });
+    const candidates = options.planOnly
+      ? []
+      : (batch.results as JsonObject[])
+          .filter((row) => row.selectionReason && !row.reviewStatus)
+          .sort(
+            (a, b) =>
+              Number(b.selectionReason === "control_sample") -
+                Number(a.selectionReason === "control_sample") ||
+              a.selectionOrder - b.selectionOrder,
+          );
     let quotaStopped = false;
-    await workers(candidates, reviewConcurrency, async ({ row }) => {
+    await workers(candidates, reviewConcurrency, async (row) => {
       if (row.reviewStatus) return;
       const runId = `prospect-${key}-${hash(row.website).slice(0, 16)}`;
       if (quotaStopped) {
@@ -482,6 +492,12 @@ export async function runProspecting(
       candidates: rows.filter((r) => r.screening?.status === "candidate")
         .length,
       uncertain: rows.filter((r) => r.screening?.status === "uncertain").length,
+      noSignal: rows.filter((r) => r.screening?.status === "no_signal").length,
+      pendingReviews: rows.filter((r) => !hasAssessableReview(r)).length,
+      assessableReviews: rows.filter(hasAssessableReview).length,
+      plannedReviews: rows.filter((r) => r.selectionReason && !r.reviewStatus)
+        .length,
+      controlSample: controlSampleSummary(batch),
       completeReviews: rows.filter((r) => r.reviewStatus === "complete").length,
       reviewFailed: rows.filter((r) => r.reviewStatus === "failed").length,
       blockedReviews: rows.filter((r) => r.reviewStatus === "blocked_review")
