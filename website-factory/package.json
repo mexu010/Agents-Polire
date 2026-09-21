@@ -7,13 +7,13 @@
     "node": ">=24.0.0"
   },
   "scripts": {
-    "factory": "tsx src/cli.ts",
+    "factory": "node scripts/run.mjs",
     "build": "tsc --noEmit",
     "lint": "eslint .",
     "format": "prettier --write src tests prompts",
     "test": "vitest run",
     "test:watch": "vitest",
-    "demo": "tsx src/cli.ts demo",
+    "demo": "node scripts/run.mjs demo",
     "demo-decision": "node scripts/run.mjs demo-decision",
     "business-review": "node scripts/run.mjs business-review",
     "batch": "node scripts/run.mjs batch",

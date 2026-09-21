@@ -19,10 +19,13 @@
   },
   "models": {
     "scout": {
-      "max_input_tokens": 32000
+      "max_input_tokens": 48000
+    },
+    "audit": {
+      "max_input_tokens": 48000
     },
     "qualifier": {
-      "max_input_tokens": 32000
+      "max_input_tokens": 48000
     }
   },
   "offer": {

@@ -61,6 +61,8 @@ Eine Prüfung darf höchstens 30 Tage alt sein, die belegte Aktivität höchsten
 
 Voraussetzungen: Node.js 24 oder neuer, pnpm und Chrome oder Playwright Chromium.
 
+Die Startskripte verwenden zusätzlich den Zertifikatsspeicher des Betriebssystems (`--use-system-ca`). So können beispielsweise unter Windows bereits vertrauenswürdige Netzwerkzertifikate genutzt werden. TLS-Zertifikatsprüfungen bleiben aktiv. Die POLIRE-Testkonfiguration erlaubt pro Analyse-Stufe ein konservatives Eingabelimit von 48’000 Tokens für Quellen, Schema und Screenshots; die Aufrufgrenzen bleiben unverändert.
+
 Alle folgenden Befehle im Projektordner `website-factory` ausführen.
 
 ```powershell

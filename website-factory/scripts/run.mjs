@@ -8,7 +8,7 @@ const args = process.argv
   .filter((arg, index) => !(arg === "--" && index === 1));
 const child = spawn(
   process.execPath,
-  ["--import", "tsx", path.join(root, "src/cli.ts"), ...args],
+  ["--use-system-ca", "--import", "tsx", path.join(root, "src/cli.ts"), ...args],
   { cwd: root, stdio: "inherit", windowsHide: true },
 );
 child.once("error", () => {
