@@ -5,6 +5,7 @@ import { afterEach, describe, expect, test } from "vitest";
 import { renderSite, verifyArtifact } from "../src/renderer.js";
 import { startPreview } from "../src/preview.js";
 import { hash } from "../src/contracts.js";
+import { chromium } from "playwright";
 
 const temporaryDirectories: string[] = [];
 const closePreviewServers: Array<() => Promise<void>> = [];
@@ -173,6 +174,373 @@ afterEach(async () => {
 });
 
 describe("renderSite", () => {
+  test("keeps the page heading before a later hero without reordering sections", async () => {
+    const base = siteSpec();
+    const home = base.pages[0];
+    const laterHero = {
+      ...home,
+      sections: [home.sections[1], home.sections[0]],
+    };
+    const rendered = await renderSite({
+      leadId: "lead-renderer-test",
+      siteSpec: siteSpec({
+        theme: { ...base.theme, composition: "editorial" },
+        pages: [laterHero, base.pages[1]],
+      }),
+      profile,
+      assets: [],
+      outputDir: await temporaryDirectory(),
+      mode: "fixture",
+    });
+    const html = await readFile(
+      path.join(rendered.artifactDir, "index.html"),
+      "utf8",
+    );
+    expect(html.match(/<h1\b/g)).toHaveLength(1);
+    expect(html).toMatch(
+      /<h1>Muster Gartenpflege<\/h1>[\s\S]*id="contact-main"[\s\S]*id="hero-main"/,
+    );
+    expect(html).toContain("<h2>Ihr Garten. Sorgfaeltig gepflegt.</h2>");
+  });
+
+  test("keeps theme palette, spacing, font choice and long headings usable in the browser", async () => {
+    let browser;
+    try {
+      browser = await chromium.launch({ headless: true });
+    } catch {
+      browser = await chromium.launch({ headless: true, channel: "chrome" });
+    }
+    try {
+      const page = await browser.newPage({
+        viewport: { width: 375, height: 812 },
+      });
+      for (const composition of [
+        "atelier",
+        "editorial",
+        "bold",
+        "minimal",
+      ] as const) {
+        const measurements: number[] = [];
+        for (const spacing of ["compact", "generous"] as const) {
+          const base = siteSpec();
+          base.pages[0].sections[0].heading = copy(
+            "SehrLangerUntrennbarerFirmennameOhneLeerzeichenDerTrotzdemSichtbarBleibenMuss",
+          );
+          const rendered = await renderSite({
+            leadId: "lead-renderer-test",
+            siteSpec: siteSpec({
+              ...base,
+              theme: {
+                ...base.theme,
+                composition,
+                palette: "dark",
+                accent_hex: null,
+                spacing,
+                font_pair: "sans",
+              },
+            }),
+            profile,
+            assets: [],
+            outputDir: await temporaryDirectory(),
+            mode: "fixture",
+          });
+          const html = await readFile(
+            path.join(rendered.artifactDir, "index.html"),
+            "utf8",
+          );
+          const css = await readFile(
+            path.join(rendered.artifactDir, "assets", "site.css"),
+            "utf8",
+          );
+          await page.setContent(
+            html
+              .replace(/<meta http-equiv="Content-Security-Policy"[^>]*\/>/, "")
+              .replace(
+                '<link rel="stylesheet" href="/assets/site.css"/>',
+                `<style>${css}</style>`,
+              ),
+          );
+          const actual = await page.evaluate(() => {
+            const root = getComputedStyle(document.documentElement);
+            const section = document.querySelector(".designed-section")!;
+            const heading = section.querySelector("h1")!;
+            return {
+              paper: root.backgroundColor,
+              padding: Number.parseFloat(getComputedStyle(section).paddingTop),
+              font: getComputedStyle(heading).fontFamily,
+              fits:
+                heading.getBoundingClientRect().right <= innerWidth &&
+                document.documentElement.scrollWidth <= innerWidth,
+            };
+          });
+          expect(actual.paper).toMatch(
+            /^rgb\((?:[0-6]?\d), (?:[0-6]?\d), (?:[0-6]?\d)\)$/,
+          );
+          expect(actual.font).not.toMatch(/Georgia|Times New Roman/);
+          expect(actual.fits).toBe(true);
+          measurements.push(actual.padding);
+        }
+        expect(measurements[1]).toBeGreaterThan(measurements[0] + 20);
+        for (const width of [768, 1440]) {
+          await page.setViewportSize({ width, height: 900 });
+          expect(
+            await page.evaluate(
+              () => document.documentElement.scrollWidth <= innerWidth,
+            ),
+          ).toBe(true);
+        }
+        await page.setViewportSize({ width: 375, height: 812 });
+      }
+      const base = siteSpec();
+      const rendered = await renderSite({
+        leadId: "lead-renderer-test",
+        siteSpec: siteSpec({
+          theme: {
+            ...base.theme,
+            composition: "atelier",
+            font_pair: "editorial",
+          },
+        }),
+        profile,
+        assets: [],
+        outputDir: await temporaryDirectory(),
+        mode: "fixture",
+      });
+      const html = await readFile(
+        path.join(rendered.artifactDir, "index.html"),
+        "utf8",
+      );
+      const css = await readFile(
+        path.join(rendered.artifactDir, "assets", "site.css"),
+        "utf8",
+      );
+      await page.setContent(
+        html
+          .replace(/<meta http-equiv="Content-Security-Policy"[^>]*\/>/, "")
+          .replace(
+            '<link rel="stylesheet" href="/assets/site.css"/>',
+            `<style>${css}</style>`,
+          ),
+      );
+      expect(
+        await page
+          .locator("h1")
+          .evaluate((element) => getComputedStyle(element).fontFamily),
+      ).toMatch(/Georgia|Times New Roman/);
+    } finally {
+      await browser.close();
+    }
+  }, 20000);
+
+  test("chooses a truly legible ink for a middle-grey brand accent", async () => {
+    const base = siteSpec();
+    const rendered = await renderSite({
+      leadId: "lead-renderer-test",
+      siteSpec: siteSpec({
+        theme: { ...base.theme, composition: "bold", accent_hex: "#777777" },
+      }),
+      profile,
+      assets: [],
+      outputDir: await temporaryDirectory(),
+      mode: "fixture",
+    });
+    const css = await readFile(
+      path.join(rendered.artifactDir, "assets", "site.css"),
+      "utf8",
+    );
+    expect(css).toContain("--accent:#777777;--accent-ink:#000000");
+  });
+
+  test("keeps ordinary bold hero words and contact labels intact on desktop", async () => {
+    let browser;
+    try {
+      browser = await chromium.launch({ headless: true });
+    } catch {
+      browser = await chromium.launch({ headless: true, channel: "chrome" });
+    }
+    try {
+      const page = await browser.newPage({
+        viewport: { width: 1440, height: 900 },
+      });
+      for (const composition of ["bold", "atelier"] as const) {
+        const base = siteSpec();
+        base.pages[0].sections[0].heading = copy("Haarschnitte in Zürich");
+        const rendered = await renderSite({
+          leadId: "lead-renderer-test",
+          siteSpec: siteSpec({
+            ...base,
+            theme: {
+              ...base.theme,
+              composition,
+              font_pair: composition === "atelier" ? "editorial" : "sans",
+            },
+          }),
+          profile: {
+            ...profile,
+            contacts: [
+              ...profile.contacts,
+              {
+                contact_id: "contact-page",
+                kind: "contact_page",
+                value: "https://fixture.alpina-service.example/kontakt",
+                evidence_ids: ["ev-5"],
+              },
+            ],
+          },
+          assets: [],
+          outputDir: await temporaryDirectory(),
+          mode: "fixture",
+        });
+        const html = await readFile(
+          path.join(rendered.artifactDir, "index.html"),
+          "utf8",
+        );
+        const css = await readFile(
+          path.join(rendered.artifactDir, "assets", "site.css"),
+          "utf8",
+        );
+        await page.setContent(
+          html
+            .replace(/<meta http-equiv="Content-Security-Policy"[^>]*\/>/, "")
+            .replace(
+              '<link rel="stylesheet" href="/assets/site.css"/>',
+              `<style>${css}</style>`,
+            ),
+        );
+        const result = await page.evaluate(() => {
+          const rectCount = (element: Element, length: number) => {
+            const range = document.createRange();
+            range.setStart(element.firstChild!, 0);
+            range.setEnd(element.firstChild!, length);
+            return range.getClientRects().length;
+          };
+          const headline = document.querySelector("h1")!;
+          const label = Array.from(document.querySelectorAll(".contact span")).find(
+            (element) => element.textContent === "Kontaktseite",
+          )!;
+          return {
+            wordLines: rectCount(headline, "Haarschnitte".length),
+            labelLines: rectCount(label, "Kontaktseite".length),
+            overflow: document.documentElement.scrollWidth > innerWidth,
+          };
+        });
+        if (composition === "bold") expect(result.wordLines).toBe(1);
+        expect(result.labelLines).toBe(1);
+        expect(result.overflow).toBe(false);
+      }
+    } finally {
+      await browser.close();
+    }
+  }, 15000);
+
+  test.each(["atelier", "editorial", "bold", "minimal"] as const)(
+    "renders %s as a distinct composition with one heading and no invented imagery",
+    async (composition) => {
+      const base = siteSpec();
+      const rendered = await renderSite({
+        leadId: "lead-renderer-test",
+        siteSpec: siteSpec({ theme: { ...base.theme, composition } }),
+        profile,
+        assets: [],
+        outputDir: await temporaryDirectory(),
+        mode: "fixture",
+      });
+      const home = await readFile(
+        path.join(rendered.artifactDir, "index.html"),
+        "utf8",
+      );
+      const services = await readFile(
+        path.join(rendered.artifactDir, "leistungen", "index.html"),
+        "utf8",
+      );
+      expect(home.match(/<h1\b/g)).toHaveLength(1);
+      expect(services.match(/<h1\b/g)).toHaveLength(1);
+      expect(home).toContain(
+        '<a class="brand" href="/">Muster Gartenpflege</a>',
+      );
+      expect(home).toContain("Ihr Garten. Sorgfaeltig gepflegt.");
+      expect(home).toContain(`composition-${composition}`);
+      expect(home).not.toMatch(/<img\b|placeholder|placehold\.co/i);
+      expect(home).not.toMatch(/(?:mailto:|tel:|https?:\/\/|<script\b)/);
+      expect(services).toContain("Regelmaessige Gartenpflege");
+      expect(services).toContain('id="services-main"');
+      expect(() =>
+        verifyArtifact({
+          artifactDir: rendered.artifactDir,
+          expectedHash: rendered.hash,
+        }),
+      ).not.toThrow();
+    },
+  );
+
+  test("composition changes header, hero and service markup rather than only a class", async () => {
+    const signatures = new Set<string>();
+    for (const composition of [
+      "atelier",
+      "editorial",
+      "bold",
+      "minimal",
+    ] as const) {
+      const base = siteSpec();
+      const rendered = await renderSite({
+        leadId: "lead-renderer-test",
+        siteSpec: siteSpec({ theme: { ...base.theme, composition } }),
+        profile,
+        assets: [],
+        outputDir: await temporaryDirectory(),
+        mode: "fixture",
+      });
+      const home = await readFile(
+        path.join(rendered.artifactDir, "index.html"),
+        "utf8",
+      );
+      const services = await readFile(
+        path.join(rendered.artifactDir, "leistungen", "index.html"),
+        "utf8",
+      );
+      const header = home.match(
+        /<header class="site-header[\s\S]*?<\/header>/,
+      )?.[0];
+      const hero = home.match(
+        /<section id="hero-main"[\s\S]*?<\/section>/,
+      )?.[0];
+      const list = services.match(
+        /<section id="services-main"[\s\S]*?<\/section>/,
+      )?.[0];
+      expect(header).toBeTruthy();
+      expect(hero).toBeTruthy();
+      expect(list).toBeTruthy();
+      signatures.add(
+        `${header?.replace(/composition-[a-z]+/g, "composition")}\n${hero?.replace(/composition-[a-z]+/g, "composition")}\n${list?.replace(/composition-[a-z]+/g, "composition")}`,
+      );
+    }
+    expect(signatures.size).toBe(4);
+  });
+
+  test("writes a validated brand accent with readable button text and reduced motion CSS", async () => {
+    const base = siteSpec();
+    const rendered = await renderSite({
+      leadId: "lead-renderer-test",
+      siteSpec: siteSpec({
+        theme: { ...base.theme, composition: "bold", accent_hex: "#FFE500" },
+      }),
+      profile,
+      assets: [],
+      outputDir: await temporaryDirectory(),
+      mode: "fixture",
+    });
+    const css = await readFile(
+      path.join(rendered.artifactDir, "assets", "site.css"),
+      "utf8",
+    );
+    expect(css).toContain("--accent:#FFE500");
+    expect(css).toContain("--accent-ink:#000000");
+    expect(css).toMatch(/\.motion-subtle[^}]*animation:/);
+    expect(css).toMatch(/prefers-reduced-motion:reduce/);
+    expect(css).toMatch(/animation:none!important/);
+    expect(css).not.toMatch(/@import|url\(https?:/);
+  });
+
   test("escapes supplied text and emits a noindex preview with no executable actions", async () => {
     const outputDir = await temporaryDirectory();
     const rendered = await renderSite({

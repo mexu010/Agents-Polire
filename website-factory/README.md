@@ -4,6 +4,47 @@
 
 Lokale TypeScript-Anwendung mit sieben Agent-Stufen, SQLite, einem deklarativen React-Renderer und echten Browserprüfungen. Das Projekt ist von der bestehenden POLIRE-Website getrennt. Es enthält keinen E-Mail-Versand.
 
+## Design-Recherche und unterschiedliche Seitenaufbauten
+
+Neue Demos durchlaufen nach deiner Demo-Freigabe: **Referenzen prüfen → Designrichtung begründen → SiteSpec bauen → rendern → Browser- und QA-Prüfung**. Die Recherche ist normaler Anwendungscode; es kommt kein zusätzlicher LLM-Agent hinzu.
+
+- Die Factory wählt anhand belegter Branche/Leistungen zunächst zwei Referenzseiten und erfasst Quellenauszüge sowie je eine Desktop-Ansicht. Der vorhandene Crawler begrenzt Abrufe und respektiert seine Netzwerk-/Robots-Regeln. Referenzbilder werden dem Strategist als Bilder übergeben, nicht als freigegebene Kunden-Assets.
+- Ohne Suchanbindung verwendet sie einen kleinen branchenbezogenen Referenzkatalog. Er enthält Startpunkte für Salon/Beauty, Gastronomie, Handwerk/Architektur und Garten. Andere Branchen erhalten ausdrücklich allgemeine Gestaltungsreferenzen. Das ist keine offene Websuche und keine Rangliste der besten Websites. Alternativ lassen sich bis zu drei konkrete Referenz-URLs konfigurieren. Bei aktivierter, budgetierter Brave-Suche sucht sie nach der jeweiligen Branche und prüft die gefundenen Quellen anschliessend.
+- Der Strategist muss konkrete Beobachtungen und ihre Anwendung, ein eigenes Konzept sowie mindestens zwei verworfene Richtungen nennen. Vier strukturelle Kompositionen stehen zur Verfügung: **Atelier, Editorial, Bold und Minimal**. Abschnittsfolge, Schrift, Palette, Abstände und freigegebene Bilder passen die Richtung an die Firma an. Farbe oder Schrift allein dürfen eine unmittelbar vorherige, vergleichbare Komposition mit derselben Abschnittsfolge nicht als neuen Entwurf ausgeben.
+- Der Builder muss die gewählte Komposition erhalten. QA prüft die Umsetzung anhand der tatsächlichen Mobil-/Desktopbilder. Referenztexte bleiben fremde Inhalte: keine kopierten Kundenbehauptungen, keine ungeklärten Bildrechte. Ohne Referenzbild sind nur Textbeobachtungen erlaubt. Ist keine Quelle lesbar, stoppt der Ablauf vor dem Strategist mit `needs_input`.
+
+Grenzen lassen sich zentral in der verwendeten Konfigurationsdatei einstellen:
+
+```json
+{
+  "designResearch": {
+    "maxReferences": 2,
+    "maxDurationMsPerReference": 45000,
+    "referenceUrls": []
+  }
+}
+```
+
+Harte Obergrenze: drei Referenzen, höchstens 60 Sekunden Crawl-Zeitbudget pro Referenz; zusätzlich gelten die bestehenden Request-/Byte-Grenzen. Standard: eine HTML-Seite, bis zu 80 Browseranfragen und 12 MB je Referenz, ohne Lighthouse. Suchabfragen nutzen die bestehende Budgetreservierung und benötigen bei `research.enabled: true` den lokalen `BRAVE_SEARCH_API_KEY`, einen expliziten Abfragepreis und USD-Budgets. Katalogabrufe benötigen keinen neuen Schlüssel. Die Bilder zählen zum vorhandenen Input-Tokenlimit des Strategist; Modell-, OAuth- und Retry-Limits bleiben unverändert.
+
+Paket, Bilder, gewählte Richtung und Alternativen bleiben im Lauf gespeichert. `pnpm report --config config/live-test.json RUN_ID` zeigt die klickbaren Quellen, die Methode und Einschränkungen. `resume` verwendet gespeicherte Recherche. Für eine ausdrückliche neue Recherche eine lokale Patch-Datei mit `{"refreshDesignReferences": true}` anlegen und ausführen:
+
+```powershell
+pnpm factory --config config/live-test.json revise RUN_ID --revision REVISION --file design-refresh.json
+pnpm resume --config config/live-test.json RUN_ID
+```
+
+Das erneuert nur die Design-Stufen; Analyse und Demo-Entscheidung bleiben bestehen. Vorhandene Preview-/Versandfreigaben werden ungültig. Nach Änderungen an Firma, Kampagne oder Angebot gelten weiterhin die bestehenden neuen Review-Freigaben. Alte abgeschlossene Briefings werden nicht automatisch umgestaltet. Die bisherigen 15 Entwicklungsdemos bleiben separat.
+
+Kostenloser Vergleich mit identischen **synthetischen** Salon-Inhalten, ohne Modell- oder Rechercheaufrufe:
+
+```powershell
+pnpm designs
+pnpm designs:check
+```
+
+Ohne `pnpm` im PATH: `node --use-system-ca --import tsx scripts/design-showcase.ts` beziehungsweise zusätzlich `--check-only`. Der Vergleich öffnet lokal Port 4321 und geschützte Einzelvorschauen auf freien Ports; die bestehende Demoübersicht auf 4320 bleibt frei. Einzelvorschauen laufen nach einer Stunde ab. `designs:check` erzeugt echte Screenshots und Browserprüfungen bei 375/768/1440 Pixeln unter `work/design-showcase/`. Diese Funktionstests ersetzen keinen echten Modell-Designlauf und keine menschliche Qualitätsbewertung.
+
 ## Schnellstart mit ChatGPT-Anmeldung
 
 Für Live-Agenten nutzt die Factory die Anmeldung der lokalen Codex CLI. Ein OpenAI-API-Key ist dafür nicht nötig. Installiere die Codex CLI, melde dich im Browser bei ChatGPT an und prüfe den Status:

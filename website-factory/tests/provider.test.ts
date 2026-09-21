@@ -230,6 +230,34 @@ test("accepts complete orchestrator inputs, reachable schemas, and a real screen
     profile,
     audit,
     qualification,
+    designResearch: {
+      research: {
+        status: "complete",
+        industry: "Sanitär",
+        query: "service website",
+        source_mode: "catalog",
+        captured_at: new Date().toISOString(),
+        gaps: [],
+        recent_designs: [],
+        references: [0, 1, 2].map((index) => ({
+          reference_id: `ref-${index}`,
+          url: `https://ref-${index}.example/`,
+          title: `Reference ${index}`,
+          excerpt: "Navigation and services",
+          evidence_ids: [],
+          image_evidence_ids: [`design-image-${index}`],
+        })),
+      },
+      evidence: [0, 1, 2].map((index) => ({
+        ...root.evidence[0],
+        kind: "screenshot",
+        evidence_id: `design-image-${index}`,
+      })),
+      images: [0, 1, 2].map((index) => ({
+        ...root.images[0],
+        evidence_id: `design-image-${index}`,
+      })),
+    },
   });
   const brief = processAgentOutput(
     "strategist",

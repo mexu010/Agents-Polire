@@ -268,6 +268,8 @@ export class ResearchService {
     subject: () => Record<string, unknown>,
   ): { cache: any | null; reservationId?: string } {
     return this.store.transaction(() => {
+      if (this.ownerDeleted())
+        throw new ResearchOperationError("Research owner has been deleted");
       const cache = this.store.get(
         kind === "search" ? "research-discovery" : "research-fetch",
         id,
@@ -341,12 +343,6 @@ export class ResearchService {
     event: Record<string, unknown>,
   ): void {
     this.store.transaction(() => {
-      this.store.put(cacheKind, id, record);
-      this.store.put("research-operation", id, {
-        ...(this.store.get("research-operation", id) ?? {}),
-        state: "succeeded",
-        completedAt: now(),
-      });
       if (reservationId && this.billing)
         this.store.settleBudget(reservationId, {
           actualCostMicroUsd: this.billing.queryCostMicroUsd,
@@ -355,6 +351,14 @@ export class ResearchService {
             chargedMicroUsd: this.billing.queryCostMicroUsd,
           },
         });
+      // Accounting survives deletion; source material and query events do not.
+      if (this.ownerDeleted()) return;
+      this.store.put(cacheKind, id, record);
+      this.store.put("research-operation", id, {
+        ...(this.store.get("research-operation", id) ?? {}),
+        state: "succeeded",
+        completedAt: now(),
+      });
       this.event(kind, id, { state: "succeeded", ...event });
     });
   }
@@ -366,16 +370,17 @@ export class ResearchService {
     event: Record<string, unknown>,
   ): void {
     this.store.transaction(() => {
-      this.store.put("research-operation", id, {
-        ...(this.store.get("research-operation", id) ?? {}),
-        state: "failed",
-        completedAt: now(),
-      });
       if (reservationId)
         this.store.markBudgetUncertain(
           reservationId,
           "research_request_failed",
         );
+      if (this.ownerDeleted()) return;
+      this.store.put("research-operation", id, {
+        ...(this.store.get("research-operation", id) ?? {}),
+        state: "failed",
+        completedAt: now(),
+      });
       this.event(kind, id, { state: "failed", ...event });
     });
   }
@@ -398,7 +403,17 @@ export class ResearchService {
   }
 
   private saveRun(state: RunState): void {
-    this.store.put("research-run", this.runId, state);
+    this.store.put("research-run", this.runId, {
+      ...state,
+      runId: this.runId,
+      ...(this.billing ? { leadId: this.billing.leadId } : {}),
+    });
+  }
+
+  private ownerDeleted(): boolean {
+    return Boolean(
+      this.billing && this.store.get("tombstones", this.billing.leadId),
+    );
   }
 
   private event(

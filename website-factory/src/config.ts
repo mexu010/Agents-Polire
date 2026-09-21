@@ -56,6 +56,11 @@ export interface FactoryConfig {
   offer: JsonObject;
   agency: JsonObject | null;
   autoGenerate: boolean;
+  designResearch: {
+    maxReferences: number;
+    maxDurationMsPerReference: number;
+    referenceUrls: string[];
+  };
   research: {
     enabled: boolean;
     maxSteps: number;
@@ -207,6 +212,11 @@ export function defaultConfig(): FactoryConfig {
     },
     agency: null,
     autoGenerate: false,
+    designResearch: {
+      maxReferences: 2,
+      maxDurationMsPerReference: 45_000,
+      referenceUrls: [],
+    },
     research: {
       enabled: false,
       maxSteps: 6,
@@ -355,6 +365,34 @@ export function validateConfig(config: FactoryConfig): FactoryConfig {
       throw new Error(`limits.${key} exceeds hard maximum ${cap}`);
   if (typeof config.autoGenerate !== "boolean")
     throw new Error("autoGenerate must be boolean");
+  positiveInteger(
+    "designResearch.maxReferences",
+    config.designResearch.maxReferences,
+  );
+  positiveInteger(
+    "designResearch.maxDurationMsPerReference",
+    config.designResearch.maxDurationMsPerReference,
+  );
+  if (
+    config.designResearch.maxReferences > 3 ||
+    config.designResearch.maxDurationMsPerReference > 60_000
+  )
+    throw new Error(
+      "designResearch exceeds hard maximum: 3 references, 60000 ms each",
+    );
+  if (
+    !Array.isArray(config.designResearch.referenceUrls) ||
+    config.designResearch.referenceUrls.length > 3 ||
+    config.designResearch.referenceUrls.some(
+      (url) =>
+        typeof url !== "string" ||
+        url.length > 400 ||
+        !/^https?:\/\//.test(url),
+    )
+  )
+    throw new Error(
+      "designResearch.referenceUrls requires at most 3 HTTP(S) URLs",
+    );
   if (typeof config.research.enabled !== "boolean")
     throw new Error("research.enabled must be boolean");
   for (const [key, cap] of Object.entries({

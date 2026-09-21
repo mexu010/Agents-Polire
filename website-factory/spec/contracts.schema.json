@@ -2422,6 +2422,15 @@
             "none",
             "subtle"
           ]
+        },
+        "composition": {
+          "type": "string",
+          "enum": [
+            "atelier",
+            "editorial",
+            "bold",
+            "minimal"
+          ]
         }
       },
       "required": [
@@ -2514,6 +2523,9 @@
             "it-CH",
             "en"
           ]
+        },
+        "design_plan": {
+          "$ref": "#/$defs/DesignPlan"
         }
       },
       "required": [
@@ -3234,6 +3246,9 @@
             "maxLength": 2000
           },
           "maxItems": 100
+        },
+        "design_plan": {
+          "$ref": "#/$defs/DesignPlan"
         }
       },
       "required": [
@@ -3573,6 +3588,25 @@
             "$ref": "#/$defs/ApprovedAsset"
           },
           "maxItems": 100
+        },
+        "design_research": {
+          "$ref": "#/$defs/DesignResearch"
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "maxItems": 15,
+          "minItems": 0
+        },
+        "images": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ImageBinding"
+          },
+          "maxItems": 3,
+          "minItems": 0
         }
       },
       "required": [
@@ -4343,6 +4377,280 @@
         "usage",
         "state",
         "provider_response_id"
+      ],
+      "additionalProperties": false
+    },
+    "DesignPlan": {
+      "type": "object",
+      "properties": {
+        "concept": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1200
+        },
+        "reference_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 400
+          },
+          "maxItems": 3,
+          "minItems": 0
+        },
+        "observations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "reference_id": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 400
+              },
+              "basis": {
+                "enum": [
+                  "visual",
+                  "text"
+                ],
+                "type": "string"
+              },
+              "takeaway": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1200
+              },
+              "application": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1200
+              }
+            },
+            "required": [
+              "reference_id",
+              "basis",
+              "takeaway",
+              "application"
+            ],
+            "additionalProperties": false
+          },
+          "maxItems": 6,
+          "minItems": 0
+        },
+        "alternatives": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "composition": {
+                "type": "string",
+                "enum": [
+                  "atelier",
+                  "editorial",
+                  "bold",
+                  "minimal"
+                ]
+              },
+              "reason": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1200
+              }
+            },
+            "required": [
+              "composition",
+              "reason"
+            ],
+            "additionalProperties": false
+          },
+          "maxItems": 3,
+          "minItems": 2
+        },
+        "avoid": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1200
+          },
+          "maxItems": 8,
+          "minItems": 1
+        },
+        "originality_note": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1200
+        }
+      },
+      "required": [
+        "concept",
+        "reference_ids",
+        "observations",
+        "alternatives",
+        "avoid",
+        "originality_note"
+      ],
+      "additionalProperties": false
+    },
+    "DesignReference": {
+      "type": "object",
+      "properties": {
+        "reference_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 400
+        },
+        "url": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 400
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 400
+        },
+        "excerpt": {
+          "type": "string",
+          "maxLength": 2000
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 400
+          },
+          "maxItems": 4,
+          "minItems": 0
+        },
+        "image_evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 400
+          },
+          "maxItems": 1,
+          "minItems": 0
+        }
+      },
+      "required": [
+        "reference_id",
+        "url",
+        "title",
+        "excerpt",
+        "evidence_ids",
+        "image_evidence_ids"
+      ],
+      "additionalProperties": false
+    },
+    "DesignResearch": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "complete",
+            "partial",
+            "unavailable",
+            "fixture"
+          ]
+        },
+        "industry": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 400
+        },
+        "query": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 400
+        },
+        "source_mode": {
+          "type": "string",
+          "enum": [
+            "catalog",
+            "search",
+            "operator",
+            "fixture"
+          ]
+        },
+        "captured_at": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 400
+        },
+        "references": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/DesignReference"
+          },
+          "maxItems": 3,
+          "minItems": 0
+        },
+        "gaps": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1200
+          },
+          "maxItems": 12,
+          "minItems": 0
+        },
+        "recent_designs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "composition": {
+                "type": "string",
+                "enum": [
+                  "atelier",
+                  "editorial",
+                  "bold",
+                  "minimal"
+                ]
+              },
+              "font_pair": {
+                "type": "string",
+                "enum": [
+                  "sans",
+                  "editorial"
+                ]
+              },
+              "section_order": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 400
+                },
+                "maxItems": 35,
+                "minItems": 0
+              }
+            },
+            "required": [
+              "composition",
+              "font_pair",
+              "section_order"
+            ],
+            "additionalProperties": false
+          },
+          "maxItems": 8,
+          "minItems": 0
+        }
+      },
+      "required": [
+        "status",
+        "industry",
+        "query",
+        "source_mode",
+        "captured_at",
+        "references",
+        "gaps",
+        "recent_designs"
       ],
       "additionalProperties": false
     }

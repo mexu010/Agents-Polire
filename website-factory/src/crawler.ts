@@ -65,6 +65,7 @@ export type CrawlOptions = {
   maxDurationMs?: number;
   maxCrawlDurationMs?: number;
   lighthouse?: boolean;
+  screenshotViewports?: "all" | "desktop";
 };
 
 type CrawlLimits = typeof DEFAULTS;
@@ -889,6 +890,7 @@ async function captureScreenshots(
   outputDir: string,
   limits: ProxyLimits,
   runLighthouse: boolean,
+  screenshotViewports: "all" | "desktop" = "all",
 ): Promise<{
   evidence: JsonObject[];
   images: Array<{
@@ -926,10 +928,12 @@ async function captureScreenshots(
         !/^wss?:/i.test(url)
       );
     };
-    for (const viewport of [
-      { width: 375, height: 812 },
-      { width: 1440, height: 1000 },
-    ]) {
+    for (const viewport of screenshotViewports === "desktop"
+      ? [{ width: 1440, height: 1000 }]
+      : [
+          { width: 375, height: 812 },
+          { width: 1440, height: 1000 },
+        ]) {
       const context = await browser.newContext({
         viewport,
         serviceWorkers: "block",
@@ -1314,6 +1318,7 @@ export async function collect(
         maxRedirects: limits.maxRedirects,
       },
       options.lighthouse !== false,
+      options.screenshotViewports,
     );
     evidenceItems.push(...captured.evidence);
     images = captured.images;

@@ -10,6 +10,7 @@ import qa from "../prompts/qa.js";
 import sales from "../prompts/sales.js";
 import { assertCopyPolicy, assertSubjectPolicy } from "./copy-policy.js";
 import { decodeHTML } from "entities";
+import { validateDesignPlan } from "./design-policy.js";
 
 const prompts: Record<AgentName, string> = {
   scout,
@@ -455,6 +456,7 @@ function registerSales(output: JsonObject, input: JsonObject): JsonObject {
 }
 function registerStrategist(output: JsonObject, input: JsonObject): JsonObject {
   const data = output.data;
+  validateDesignPlan(data, input);
   checkGrounding(data, input);
   assertSafeClaims(data, input);
   const issues = new Set(
@@ -502,6 +504,8 @@ function registerStrategist(output: JsonObject, input: JsonObject): JsonObject {
 function registerBuilder(output: JsonObject, input: JsonObject): JsonObject {
   const data = output.data;
   const site = data.site_spec;
+  if (site.theme.composition !== input.brief.theme.composition)
+    throw new Error("Builder must preserve the brief composition");
   checkGrounding(site, input);
   assertSafeClaims(site, input);
   const sections = new Set(

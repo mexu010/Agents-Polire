@@ -134,7 +134,11 @@ const cli = new Command()
 cli
   .command("doctor")
   .option("--mode <mode>", "fixture or live", "fixture")
-  .option("--budget-usd <amount>", "lower configured API or search USD budgets", Number)
+  .option(
+    "--budget-usd <amount>",
+    "lower configured API or search USD budgets",
+    Number,
+  )
   .action(async (o, cmd) => {
     const config = configured(cmd.optsWithGlobals(), o.mode, o.budgetUsd);
     if (config.mode === "fixture")
@@ -152,7 +156,11 @@ cli
   .requiredOption("--mode <mode>", "fixture or live")
   .option("--stop-after <agent>")
   .option("--run-id <id>", "stable run identity for safe continuation")
-  .option("--budget-usd <amount>", "lower configured API or search USD budgets", Number)
+  .option(
+    "--budget-usd <amount>",
+    "lower configured API or search USD budgets",
+    Number,
+  )
   .option("--experimental")
   .action(async (o, cmd) =>
     print(
@@ -522,7 +530,7 @@ cli
   .requiredOption("--revision <number>", "expected job revision", Number)
   .requiredOption(
     "--file <file>",
-    "JSON file containing campaign, offer, agency, or recrawl",
+    "JSON file containing campaign, offer, agency, recrawl, or refreshDesignReferences",
   )
   .action(async (runId, o, cmd) => {
     const patch = JSON.parse(readFileSync(resolve(o.file), "utf8"));

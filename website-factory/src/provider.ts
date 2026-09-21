@@ -7,8 +7,6 @@ import {
   hash,
   id,
   ROOT_NAMES,
-  schemaFor,
-  validate,
   type AgentName,
   type JsonObject,
 } from "./contracts.js";
@@ -21,6 +19,7 @@ import {
   type OAuthResult,
 } from "./codex-oauth.js";
 import { reserveOAuthCall, oauthQuotaStatus } from "./oauth-quota.js";
+import { modelOutputSchema, readAgentModelOutput } from "./model-contracts.js";
 
 interface ResponsesClient {
   responses: { create(body: any, options?: any): Promise<any> };
@@ -581,7 +580,7 @@ export class ModelProvider {
             type: "json_schema",
             name: `${ROOT_NAMES[args.agent]}Output`,
             strict: true,
-            schema: schemaFor(`${ROOT_NAMES[args.agent]}Output`),
+            schema: modelOutputSchema(args.agent),
           },
         },
         service_tier: "default",
@@ -704,7 +703,7 @@ export class ModelProvider {
           parsed = null;
         }
         try {
-          const validated = validate(`${ROOT_NAMES[args.agent]}Output`, parsed);
+          const validated = readAgentModelOutput(args.agent, parsed);
           this.store.updateAttempt(attemptId, { state: "succeeded" });
           return validated;
         } catch {
@@ -1137,9 +1136,8 @@ export class ModelProvider {
       limits: configured,
       images,
       instructions: promptFor(args.agent),
-      schema: schemaFor(`${ROOT_NAMES[args.agent]}Output`),
-      validateOutput: (value) =>
-        validate(`${ROOT_NAMES[args.agent]}Output`, value),
+      schema: modelOutputSchema(args.agent),
+      validateOutput: (value) => readAgentModelOutput(args.agent, value),
     });
   }
 

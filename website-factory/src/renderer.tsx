@@ -11,8 +11,9 @@ import path from "node:path";
 import React, { type ReactNode } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { hash, id, now, validate, type JsonObject } from "./contracts.js";
+import { compositionCss, accentCss } from "./design-styles.js";
 
-export const RENDERER_VERSION = "local-service/1.0.0";
+export const RENDERER_VERSION = "local-service/1.1.0";
 const PREVIEW_POLICY_VERSION = "local-noindex-no-submit/1.0.0";
 const TEST_CONFIG = { viewports: [375, 768, 1440], fullPage: true };
 const CONTENT_SECURITY_POLICY =
@@ -180,24 +181,67 @@ function Section({
 function Layout({
   children,
   siteSpec,
+  profile,
 }: {
   children: ReactNode;
   siteSpec: JsonObject;
+  profile: JsonObject;
 }) {
+  const composition = siteSpec.theme.composition as string | undefined;
+  const company = profile.facts.find(
+    (fact: JsonObject) =>
+      fact.field === "company_name" &&
+      typeof fact.value === "string" &&
+      fact.value.trim() &&
+      fact.verification !== "unknown" &&
+      fact.verification !== "conflicting",
+  )?.value as string | undefined;
+  const navigation = (
+    <nav aria-label="Hauptnavigation">
+      {siteSpec.navigation.map((item: JsonObject) => (
+        <a key={item.route} href={hrefForRoute(item.route)}>
+          {copyText(item.label)}
+        </a>
+      ))}
+    </nav>
+  );
+  const brand = (
+    <a className="brand" href="/">
+      {composition ? (company ?? "Vorschau") : "Vorschau"}
+    </a>
+  );
+  const header =
+    composition === "editorial" ? (
+      <header className="site-header editorial-header">
+        <div className="editorial-masthead">{brand}</div>
+        <div className="editorial-navigation">{navigation}</div>
+      </header>
+    ) : composition === "bold" ? (
+      <header className="site-header bold-header">
+        {brand}
+        <div className="bold-nav-frame">{navigation}</div>
+      </header>
+    ) : composition === "minimal" ? (
+      <header className="site-header minimal-header">
+        <div className="minimal-brand-line">
+          {brand}
+          {navigation}
+        </div>
+      </header>
+    ) : composition === "atelier" ? (
+      <header className="site-header atelier-header">
+        <div className="atelier-brand-frame">{brand}</div>
+        {navigation}
+      </header>
+    ) : (
+      <header className="site-header">
+        {brand}
+        {navigation}
+      </header>
+    );
   return (
     <>
-      <header className="site-header">
-        <a className="brand" href="/">
-          Vorschau
-        </a>
-        <nav aria-label="Hauptnavigation">
-          {siteSpec.navigation.map((item: JsonObject) => (
-            <a key={item.route} href={hrefForRoute(item.route)}>
-              {copyText(item.label)}
-            </a>
-          ))}
-        </nav>
-      </header>
+      {header}
       <div className="preview-banner" role="note">
         Unverbindlicher Gestaltungsvorschlag · Zugriff zeitlich begrenzt
       </div>
@@ -209,6 +253,180 @@ function Layout({
         </p>
       </footer>
     </>
+  );
+}
+
+type Composition = "atelier" | "editorial" | "bold" | "minimal";
+
+function DesignedSection({
+  section,
+  siteSpec,
+  profile,
+  assetUrls,
+  composition,
+  hero,
+}: {
+  section: JsonObject;
+  siteSpec: JsonObject;
+  profile: JsonObject;
+  assetUrls: Map<string, string>;
+  composition: Composition;
+  hero: boolean;
+}) {
+  const assetUrl =
+    section.asset_id === null ? undefined : assetUrls.get(section.asset_id);
+  if (section.asset_id !== null && !assetUrl)
+    throw new Error(
+      `Section references unavailable asset: ${section.asset_id}`,
+    );
+  const heading = hero ? (
+    <h1>{copyText(section.heading)}</h1>
+  ) : (
+    <h2>{copyText(section.heading)}</h2>
+  );
+  const body = (
+    <div className="section-body">
+      {section.body.map((paragraph: JsonObject, index: number) => (
+        <p key={index}>{copyText(paragraph)}</p>
+      ))}
+    </div>
+  );
+  const cta = section.cta && (
+    <Cta cta={section.cta} siteSpec={siteSpec} profile={profile} />
+  );
+  const image = assetUrl && (
+    <img
+      className="section-image"
+      src={assetUrl}
+      alt={assetUrls.get(`${section.asset_id}:alt`) ?? ""}
+    />
+  );
+  const contacts = section.component === "contact" && (
+    <div className="contacts">
+      {profile.contacts.map((contact: JsonObject) => (
+        <div className="contact" key={contact.contact_id}>
+          <span>{contactLabel(contact)}</span>
+          <strong>{contact.value}</strong>
+        </div>
+      ))}
+      <p className="demo-note">
+        Vorschau: Es wird nichts versendet. Kontaktaktionen sind deaktiviert.
+      </p>
+    </div>
+  );
+  const items = section.items as JsonObject[];
+  let content: ReactNode;
+  if (composition === "atelier") {
+    content = (
+      <div className="atelier-frame">
+        <div className="atelier-heading">
+          {heading}
+          {image}
+        </div>
+        <div className="atelier-detail">
+          {body}
+          {items.length > 0 && (
+            <div className="atelier-items">
+              {items.map((item, index) => (
+                <article key={index} className="atelier-item">
+                  <h3>{copyText(item.title)}</h3>
+                  <p>{copyText(item.text)}</p>
+                </article>
+              ))}
+            </div>
+          )}
+          {contacts}
+          {cta}
+        </div>
+      </div>
+    );
+  } else if (composition === "editorial") {
+    content = (
+      <div className="editorial-frame">
+        <div className="editorial-index" aria-hidden="true">
+          {String(
+            siteSpec.pages
+              .flatMap((page: JsonObject) => page.sections)
+              .findIndex(
+                (candidate: JsonObject) =>
+                  candidate.section_id === section.section_id,
+              ) + 1,
+          ).padStart(2, "0")}
+        </div>
+        <div className="editorial-content">
+          {heading}
+          {body}
+          {items.length > 0 && (
+            <ol className="editorial-items">
+              {items.map((item, index) => (
+                <li key={index}>
+                  <h3>{copyText(item.title)}</h3>
+                  <p>{copyText(item.text)}</p>
+                </li>
+              ))}
+            </ol>
+          )}
+          {contacts}
+          {cta}
+        </div>
+        {image && <figure className="editorial-figure">{image}</figure>}
+      </div>
+    );
+  } else if (composition === "bold") {
+    content = (
+      <div className="bold-frame">
+        <div className="bold-title">{heading}</div>
+        <div className="bold-detail">
+          {body}
+          {items.length > 0 && (
+            <div className="bold-items">
+              {items.map((item, index) => (
+                <article key={index}>
+                  <span aria-hidden="true">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <h3>{copyText(item.title)}</h3>
+                  <p>{copyText(item.text)}</p>
+                </article>
+              ))}
+            </div>
+          )}
+          {contacts}
+          {cta}
+        </div>
+        {image && <div className="bold-image">{image}</div>}
+      </div>
+    );
+  } else {
+    content = (
+      <div className="minimal-frame">
+        <div className="minimal-intro">
+          {heading}
+          {body}
+          {cta}
+        </div>
+        {image && <div className="minimal-image">{image}</div>}
+        {items.length > 0 && (
+          <dl className="minimal-items">
+            {items.map((item, index) => (
+              <div key={index}>
+                <dt>{copyText(item.title)}</dt>
+                <dd>{copyText(item.text)}</dd>
+              </div>
+            ))}
+          </dl>
+        )}
+        {contacts}
+      </div>
+    );
+  }
+  return (
+    <section
+      id={section.section_id}
+      className={`designed-section composition-${composition} component-${section.component} variant-${section.variant}${hero ? " is-hero" : ""}`}
+    >
+      {content}
+    </section>
   );
 }
 
@@ -230,8 +448,17 @@ function Document({
         ? "#e6b566"
         : "#176b5b";
   const themeClass = `theme-${siteSpec.theme.palette} font-${siteSpec.theme.font_pair} spacing-${siteSpec.theme.spacing} motion-${siteSpec.theme.motion}`;
+  const composition = siteSpec.theme.composition as Composition | undefined;
+  const firstHeroId =
+    page.sections[0]?.component === "hero"
+      ? page.sections[0].section_id
+      : undefined;
   return (
-    <html lang={siteSpec.locale} className={themeClass} data-accent={accent}>
+    <html
+      lang={siteSpec.locale}
+      className={`${themeClass}${composition ? ` composition-${composition}` : ""}`}
+      data-accent={accent}
+    >
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -245,19 +472,33 @@ function Document({
         <link rel="stylesheet" href="/assets/site.css" />
       </head>
       <body>
-        <Layout siteSpec={siteSpec}>
-          <header className="page-title">
-            <h1>{copyText(page.title)}</h1>
-          </header>
-          {page.sections.map((section: JsonObject) => (
-            <Section
-              key={section.section_id}
-              section={section}
-              siteSpec={siteSpec}
-              profile={profile}
-              assetUrls={assetUrls}
-            />
-          ))}
+        <Layout siteSpec={siteSpec} profile={profile}>
+          {(!composition || !firstHeroId) && (
+            <header className="page-title">
+              <h1>{copyText(page.title)}</h1>
+            </header>
+          )}
+          {page.sections.map((section: JsonObject) =>
+            composition ? (
+              <DesignedSection
+                key={section.section_id}
+                section={section}
+                siteSpec={siteSpec}
+                profile={profile}
+                assetUrls={assetUrls}
+                composition={composition}
+                hero={section.section_id === firstHeroId}
+              />
+            ) : (
+              <Section
+                key={section.section_id}
+                section={section}
+                siteSpec={siteSpec}
+                profile={profile}
+                assetUrls={assetUrls}
+              />
+            ),
+          )}
         </Layout>
       </body>
     </html>
@@ -384,7 +625,7 @@ export async function renderSite({
   const preparedAssets = await prepareAssets(siteSpec, assets, stagingDir);
   await writeFile(
     path.join(stagingDir, "assets", "site.css"),
-    `${CSS}\n`,
+    `${CSS}\n${compositionCss}\n${siteSpec.theme.composition ? accentCss(siteSpec.theme) : ""}\n`,
     "utf8",
   );
   const pageHashes: Array<{ route: string; hash: string }> = [];

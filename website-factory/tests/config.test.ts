@@ -5,6 +5,29 @@ import { describe, expect, test } from "vitest";
 import { defaultConfig, loadConfig } from "../src/config.js";
 
 describe("factory configuration", () => {
+  test("caps design research and accepts a bounded operator reference list", () => {
+    const dir = mkdtempSync(join(tmpdir(), "factory-design-config-"));
+    const file = join(dir, "config.json");
+    writeFileSync(
+      file,
+      JSON.stringify({ designResearch: { maxReferences: 4 } }),
+    );
+    expect(() => loadConfig(file)).toThrow(/designResearch/);
+    writeFileSync(
+      file,
+      JSON.stringify({ designResearch: { maxDurationMsPerReference: 60001 } }),
+    );
+    expect(() => loadConfig(file)).toThrow(/designResearch/);
+    writeFileSync(
+      file,
+      JSON.stringify({
+        designResearch: { referenceUrls: ["https://salon.example/"] },
+      }),
+    );
+    expect(loadConfig(file).designResearch.referenceUrls).toEqual([
+      "https://salon.example/",
+    ]);
+  });
   test("accepts an explicit fast crawl profile without enabling a hidden performance score", () => {
     const dir = mkdtempSync(join(tmpdir(), "factory-fast-config-"));
     const file = join(dir, "config.json");

@@ -23,6 +23,66 @@ function service(
 }
 
 describe("ResearchService", () => {
+  test.each([false, true])(
+    "does not resurrect deleted lead research after a delayed search (failure=%s)",
+    async (failed) => {
+      let release!: () => void, signal!: () => void;
+      const pending = new Promise<void>((done) => (release = done)),
+        started = new Promise<void>((done) => (signal = done));
+      const originalFetch = globalThis.fetch;
+      const { store, research } = service({
+        apiKey: "fixture-key",
+        billing: {
+          leadId: "deleted-lead",
+          spendScopeId: "test",
+          queryCostMicroUsd: 100,
+          limits: {
+            leadMicroUsd: 1000,
+            runMicroUsd: 1000,
+            dayMicroUsd: 1000,
+            totalMicroUsd: 1000,
+          },
+        },
+      });
+      globalThis.fetch = async () => {
+        signal();
+        await pending;
+        if (failed) throw new Error("simulated connection loss");
+        return new Response(
+          JSON.stringify({
+            web: {
+              results: [{ url: "https://example.com/", title: "Example" }],
+            },
+          }),
+          { status: 200 },
+        );
+      };
+      try {
+        const task = research.discover("salon inspiration").catch(() => null);
+        await started;
+        store.transaction(() => {
+          store.db.prepare("DELETE FROM records").run();
+          store.put("tombstones", "deleted-lead", { leadId: "deleted-lead" });
+        });
+        release();
+        await task;
+        expect(store.list("research-discovery")).toEqual([]);
+        expect(store.list("research-operation")).toEqual([]);
+        expect(store.list("research-event")).toEqual([]);
+        expect(store.list("research-run")).toEqual([]);
+        const budget = store.getBudgetStatus({ runId: "run-1" });
+        expect(failed ? budget.uncertainMicroUsd : budget.settledMicroUsd).toBe(
+          100,
+        );
+        await expect(research.discover("another query")).rejects.toThrow(
+          /deleted/i,
+        );
+      } finally {
+        globalThis.fetch = originalFetch;
+        store.close();
+      }
+    },
+  );
   test("discovers public search results once and resumes from its durable cache", async () => {
     let calls = 0;
     const { store, research } = service({

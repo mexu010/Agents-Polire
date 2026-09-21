@@ -14,10 +14,17 @@ import {
 } from "./contracts.js";
 import type { FactoryConfig } from "./config.js";
 import { ModelProvider } from "./provider.js";
-import { renderSite, verifyArtifact } from "./renderer.js";
+import { renderSite, verifyArtifact, RENDERER_VERSION } from "./renderer.js";
 import { runBrowserTests } from "./browser-tests.js";
 import { Store } from "./store.js";
 import { businessBlocker, validateBusinessReview } from "./business.js";
+import {
+  researchDesign,
+  fixtureDesignResearch,
+  designIndustry,
+} from "./design-research.js";
+import { designFingerprint } from "./design-policy.js";
+import { ResearchService } from "./research.js";
 
 type RunOptions = {
   stopAfter?: AgentName;
@@ -33,7 +40,7 @@ type AgentOutput = (
 ) => JsonObject | Promise<JsonObject>;
 const TEMPLATE = {
   template_id: "local-service",
-  version: "1",
+  version: "2",
   components: [
     "hero",
     "services",
@@ -45,7 +52,7 @@ const TEMPLATE = {
   ],
   variants: ["split", "stacked", "cards"],
   font_pairs: ["sans", "editorial"],
-  features: ["contact"],
+  features: ["contact", "design-research-v1"],
 };
 function validateRevision(name: string, value: unknown): JsonObject {
   return validate(name, value);
@@ -57,6 +64,7 @@ export class Factory {
   private readonly browserRunner: typeof runBrowserTests;
   private readonly collector: Collector | undefined;
   private readonly agentOutput: AgentOutput | undefined;
+  private readonly designResearch: typeof researchDesign | undefined;
   constructor(
     readonly config: FactoryConfig,
     readonly store: Store,
@@ -66,6 +74,7 @@ export class Factory {
       browserRunner?: typeof runBrowserTests;
       collector?: Collector;
       agentOutput?: AgentOutput;
+      designResearch?: typeof researchDesign;
     } = {},
   ) {
     this.provider =
@@ -75,6 +84,7 @@ export class Factory {
     this.browserRunner = options.browserRunner ?? runBrowserTests;
     this.collector = options.collector;
     this.agentOutput = options.agentOutput;
+    this.designResearch = options.designResearch;
     this.store.db.exec(`CREATE TABLE IF NOT EXISTS factory_jobs(
       run_id TEXT PRIMARY KEY, lead_id TEXT NOT NULL, revision INTEGER NOT NULL, stage TEXT NOT NULL,
       status TEXT NOT NULL, value_json TEXT NOT NULL, lease_owner TEXT, lease_expires_at TEXT, fencing_token INTEGER NOT NULL DEFAULT 0,
@@ -267,6 +277,7 @@ export class Factory {
       offer?: JsonObject;
       agency?: JsonObject | null;
       recrawl?: boolean;
+      refreshDesignReferences?: boolean;
     },
   ): JsonObject {
     return this.store.transaction(() =>
@@ -281,9 +292,16 @@ export class Factory {
       offer?: JsonObject;
       agency?: JsonObject | null;
       recrawl?: boolean;
+      refreshDesignReferences?: boolean;
     },
   ): JsonObject {
-    const allowed = new Set(["campaign", "offer", "agency", "recrawl"]);
+    const allowed = new Set([
+      "campaign",
+      "offer",
+      "agency",
+      "recrawl",
+      "refreshDesignReferences",
+    ]);
     for (const key of Object.keys(patch))
       if (!allowed.has(key))
         throw new Error(`revision field is not allowed: ${key}`);
@@ -299,6 +317,11 @@ export class Factory {
       validateRevision("AgencyProfile", patch.agency);
     if (patch.recrawl !== undefined && typeof patch.recrawl !== "boolean")
       throw new Error("recrawl must be boolean");
+    if (
+      patch.refreshDesignReferences !== undefined &&
+      typeof patch.refreshDesignReferences !== "boolean"
+    )
+      throw new Error("refreshDesignReferences must be boolean");
     const campaignChanged =
       patch.campaign !== undefined &&
       hash(patch.campaign) !== hash(job.context.campaign);
@@ -308,7 +331,13 @@ export class Factory {
     const agencyChanged =
       patch.agency !== undefined &&
       hash(patch.agency) !== hash(job.context.agency ?? null);
-    if (!campaignChanged && !offerChanged && !agencyChanged && !patch.recrawl)
+    if (
+      !campaignChanged &&
+      !offerChanged &&
+      !agencyChanged &&
+      !patch.recrawl &&
+      !patch.refreshDesignReferences
+    )
       return job;
     if (campaignChanged) job.context.campaign = patch.campaign;
     if (offerChanged) job.context.offer = patch.offer;
@@ -325,6 +354,7 @@ export class Factory {
         "qualification",
         "demoReview",
         "demoDecision",
+        "designResearch",
         "brief",
         "siteSpec",
         "render",
@@ -344,6 +374,7 @@ export class Factory {
         "qualification",
         "demoReview",
         "demoDecision",
+        "designResearch",
         "brief",
         "siteSpec",
         "render",
@@ -358,6 +389,25 @@ export class Factory {
       job.artifactHash = null;
       job.draftHash = null;
       job.externalPreview = null;
+    } else if (patch.refreshDesignReferences) {
+      clear([
+        "designResearch",
+        "brief",
+        "siteSpec",
+        "render",
+        "browser",
+        "qa",
+        "preview",
+        "approved_improvements",
+        "sales",
+        "repairTasks",
+        "previousSiteSpec",
+      ]);
+      this.revokeApprovals(job);
+      job.artifactHash = null;
+      job.draftHash = null;
+      job.externalPreview = null;
+      job.stage = "design_research";
     } else if (agencyChanged) {
       clear(["sales"]);
       job.draftHash = null;
@@ -369,7 +419,11 @@ export class Factory {
     job.stopAfter = null;
     job.error = null;
     job.status =
-      agencyChanged && !campaignChanged && !offerChanged && !patch.recrawl
+      agencyChanged &&
+      !campaignChanged &&
+      !offerChanged &&
+      !patch.recrawl &&
+      !patch.refreshDesignReferences
         ? "succeeded"
         : "queued";
     return this.save(job, expectedRevision);
@@ -801,6 +855,16 @@ export class Factory {
         }
       }
       for (const agent of ["strategist", "builder"] as AgentName[]) {
+        if (agent === "strategist" && !job.context.brief) {
+          if (!job.context.designResearch)
+            job = await this.collectDesignResearch(job, lease);
+          if (job.context.designResearch.research.status === "unavailable") {
+            job.stage = "design_research";
+            job.status = "needs_input";
+            job.reason = "design_references_unavailable";
+            return this.save(job, job.revision, lease);
+          }
+        }
         if (!job.context[this.contextKey(agent)]) {
           job.stage = agent;
           job.context[this.contextKey(agent)] = await this.agent(job, agent);
@@ -815,6 +879,7 @@ export class Factory {
         job.stage = "render";
         const key = hash({
           kind: "render",
+          rendererVersion: RENDERER_VERSION,
           leadId: job.leadId,
           siteSpec: job.context.siteSpec,
           profile: job.context.profile,
@@ -982,6 +1047,106 @@ export class Factory {
       job.status = "failed";
       job.error = error instanceof Error ? error.message : String(error);
       this.save(job, job.revision, lease);
+      throw error;
+    }
+  }
+
+  private async collectDesignResearch(
+    initial: JsonObject,
+    lease: string,
+  ): Promise<JsonObject> {
+    let job = initial;
+    job.stage = "design_research";
+    const industry = designIndustry(job.context.profile).key;
+    const recent = (
+      this.store.db
+        .prepare(
+          "SELECT value_json FROM factory_jobs WHERE run_id != ? ORDER BY updated_at DESC, rowid DESC LIMIT 40",
+        )
+        .all(job.id) as Array<{ value_json: string }>
+    )
+      .map((row) => JSON.parse(row.value_json))
+      .filter(
+        (other) =>
+          other.mode === job.mode &&
+          other.context?.brief?.theme?.composition &&
+          designIndustry(other.context.profile).key === industry,
+      )
+      .slice(0, 8)
+      .map((other) => designFingerprint(other.context.brief));
+    const operation = this.beginOperation(job, "design_research");
+    let finalDir: string | null = null;
+    try {
+      const search =
+        this.config.mode === "live" && this.config.research.enabled
+          ? new ResearchService({
+              store: this.store,
+              runId: job.id,
+              maxQueriesPerRun: this.config.research.maxQueries,
+              maxResultsPerQuery: this.config.research.maxResults,
+              maxPagesPerRun: this.config.research.maxPages,
+              billing: {
+                leadId: job.leadId,
+                spendScopeId: this.config.budgets.spendScopeId!,
+                queryCostMicroUsd: this.config.research.queryCostMicroUsd!,
+                limits: {
+                  leadMicroUsd: this.config.budgets.leadMicroUsd!,
+                  runMicroUsd: this.config.budgets.runMicroUsd!,
+                  dayMicroUsd: this.config.budgets.dayMicroUsd!,
+                  totalMicroUsd: this.config.budgets.totalMicroUsd!,
+                },
+              },
+            })
+          : undefined;
+      const packet =
+        this.config.mode === "fixture" && !this.designResearch
+          ? fixtureDesignResearch(recent)
+          : await (this.designResearch ?? researchDesign)({
+              profile: job.context.profile,
+              website: job.website,
+              config: this.config,
+              outputDir: operation.stagingRoot,
+              recentDesigns: recent,
+              collector: this.collector,
+              ...(search
+                ? {
+                    discover: async (query: string) =>
+                      (
+                        await search.discover(query, {
+                          limit: Math.min(5, this.config.research.maxResults),
+                        })
+                      ).results.map((result) => ({ url: result.url })),
+                  }
+                : {}),
+            });
+      validate("DesignResearch", packet.research);
+      finalDir = join(this.config.dataDir, "crawl", job.leadId, operation.id);
+      this.recordPublication(operation.id, finalDir);
+      this.store.transaction(() => {
+        this.assertWorker(job, lease);
+        mkdirSync(join(this.config.dataDir, "crawl", job.leadId), {
+          recursive: true,
+        });
+        renameSync(
+          this.safeStagingPath(operation.stagingRoot),
+          this.safePublicationPath(finalDir as string),
+        );
+        job.context.designResearch = this.rewritePaths(
+          packet,
+          operation.stagingRoot,
+          finalDir as string,
+        );
+        job = this.save(job, job.revision, lease);
+      });
+      this.finishPublishedOperation(operation.id);
+      return job;
+    } catch (error) {
+      if (finalDir)
+        rmSync(this.safePublicationPath(finalDir), {
+          recursive: true,
+          force: true,
+        });
+      this.endOperation(operation.id, operation.stagingRoot);
       throw error;
     }
   }
@@ -1496,7 +1661,7 @@ export class Factory {
   }
   private beginOperation(
     job: JsonObject,
-    kind: "collect" | "render" | "browser",
+    kind: "collect" | "render" | "browser" | "design_research",
   ): { id: string; stagingRoot: string } {
     const operationId = `${kind}-${id()}`;
     const stagingRoot = this.safeStagingPath(

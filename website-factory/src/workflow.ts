@@ -228,6 +228,48 @@ export function writeReviewReport(dataDir: string, job: JsonObject): string {
       "Keine Demo-Freigabe durch diesen Bericht. Kein Versand.",
     );
   }
+  const design = job.context?.designResearch?.research;
+  const brief = job.context?.brief;
+  if (design) {
+    const modes: Record<string, string> = {
+      catalog: "Referenzkatalog, live geprüft",
+      search: "Websuche und anschliessende Quellenprüfung",
+      operator: "Vorgegebene Referenzen, live geprüft",
+      fixture: "Simulierter Funktionstest",
+    };
+    lines.push(
+      "",
+      "## Design-Recherche",
+      "",
+      `Methode: ${modes[design.source_mode] ?? "unbekannt"}.`,
+      `Branche/Thema: ${plain(design.industry)}. Stand: ${plain(design.captured_at)}.`,
+      "Referenzen dienen nur der Gestaltung. Bilder, Texte und Kundenbehauptungen werden nicht übernommen.",
+      "",
+    );
+    for (const ref of design.references) {
+      const url = publicUrl(ref.url)
+        .href.replaceAll("(", "%28")
+        .replaceAll(")", "%29");
+      lines.push(
+        `- [${plain(ref.title)}](${url}) – ${ref.image_evidence_ids.length ? "Bildansicht erfasst" : "nur Text verfügbar"}`,
+      );
+    }
+    for (const gap of design.gaps) lines.push(`- Einschränkung: ${plain(gap)}`);
+    if (brief?.design_plan) {
+      lines.push(
+        "",
+        `**Designrichtung: ${plain(brief.theme.composition)}.** ${plain(brief.design_plan.concept)}`,
+        "",
+      );
+      for (const observation of brief.design_plan.observations)
+        lines.push(
+          `- Beobachtung: ${plain(observation.takeaway)} → Umsetzung: ${plain(observation.application)}`,
+        );
+      lines.push(
+        `Eigenständigkeit: ${plain(brief.design_plan.originality_note)}`,
+      );
+    }
+  }
   const dir = join(dataDir, "reviews");
   mkdirSync(dir, { recursive: true });
   const file = join(dir, `${hash(job.id ?? job.runId).slice(0, 24)}.md`);

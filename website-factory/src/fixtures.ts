@@ -4,6 +4,7 @@ import {
   type AgentName,
   type JsonObject,
 } from "./contracts.js";
+import { COMPOSITIONS } from "./design-policy.js";
 
 const stamp = "2026-09-11T10:00:00.000Z";
 const ev = (
@@ -176,6 +177,13 @@ export function buildAgentInput(
         offer: context.offer,
         template: context.template,
         approved_assets: context.approvedAssets ?? [],
+        ...(context.designResearch
+          ? {
+              design_research: context.designResearch.research,
+              evidence: context.designResearch.evidence,
+              images: context.designResearch.images,
+            }
+          : {}),
       });
     case "builder":
       return validate("BuilderInput", {
@@ -376,12 +384,45 @@ function strategist(input: JsonObject): JsonObject {
     (f: JsonObject) => f.field === "locality",
   );
   const issue = input.audit.issues[0].issue_id;
+  const research = input.design_research;
+  const composition =
+    COMPOSITIONS.find(
+      (value) => value !== research?.recent_designs[0]?.composition,
+    ) ?? "editorial";
+  const designPlan = research
+    ? {
+        concept:
+          "SIMULATED: eigenständige typografische Gestaltung für einen lokalen Dienstleister.",
+        reference_ids: research.references.map(
+          (ref: JsonObject) => ref.reference_id,
+        ),
+        observations: research.references.map((ref: JsonObject) => ({
+          reference_id: ref.reference_id,
+          basis: ref.evidence_ids.length ? "text" : "visual",
+          takeaway: "SIMULATED Beobachtung für einen Funktionstest.",
+          application: "SIMULATED Ableitung einer klaren Leistungshierarchie.",
+        })),
+        alternatives: COMPOSITIONS.filter((value) => value !== composition)
+          .slice(0, 2)
+          .map((value) => ({
+            composition: value,
+            reason: "SIMULATED alternative Richtung für den Vertragstest.",
+          })),
+        avoid: [
+          "Identische Komposition und Abschnittsfolge des vorherigen Entwurfs.",
+        ],
+        originality_note:
+          "SIMULATED Funktionsprüfung; keine menschlich bewertete Designqualität.",
+      }
+    : null;
   return {
     data: {
       primary_goal: "Kontaktanfragen erleichtern",
       audience_assumptions: ["Lokale Kundschaft in Zürich"],
       design_rationale: "Klare Leistungen und ein gut sichtbarer Kontaktweg.",
+      ...(designPlan ? { design_plan: designPlan } : {}),
       theme: {
+        ...(research ? { composition } : {}),
         font_pair: "sans",
         palette: "brand",
         accent_hex: "#176b5b",
