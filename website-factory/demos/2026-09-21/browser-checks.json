@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-21T18:04:27.982Z",
+  "checkedAt": "2026-09-21T20:38:03.312Z",
   "mode": "real_local_browser_checks",
   "viewports": [
     375,
@@ -17,6 +17,7 @@
           "width": 375,
           "contentWidth": 375,
           "headings": 1,
+          "clippedHeadings": [],
           "badImages": [],
           "badAnchors": [],
           "realContacts": [],
@@ -30,6 +31,7 @@
           "width": 768,
           "contentWidth": 768,
           "headings": 1,
+          "clippedHeadings": [],
           "badImages": [],
           "badAnchors": [],
           "realContacts": [],
@@ -43,6 +45,7 @@
           "width": 1440,
           "contentWidth": 1440,
           "headings": 1,
+          "clippedHeadings": [],
           "badImages": [],
           "badAnchors": [],
           "realContacts": [],
@@ -65,6 +68,7 @@
           "width": 375,
           "contentWidth": 375,
           "headings": 1,
+          "clippedHeadings": [],
           "badImages": [],
           "badAnchors": [],
           "realContacts": [],
@@ -78,6 +82,7 @@
           "width": 768,
           "contentWidth": 768,
           "headings": 1,
+          "clippedHeadings": [],
           "badImages": [],
           "badAnchors": [],
           "realContacts": [],
@@ -91,6 +96,7 @@
           "width": 1440,
           "contentWidth": 1440,
           "headings": 1,
+          "clippedHeadings": [],
           "badImages": [],
           "badAnchors": [],
           "realContacts": [],
@@ -113,6 +119,7 @@
           "width": 375,
           "contentWidth": 375,
           "headings": 1,
+          "clippedHeadings": [],
           "badImages": [],
           "badAnchors": [],
           "realContacts": [],
@@ -126,6 +133,7 @@
           "width": 768,
           "contentWidth": 768,
           "headings": 1,
+          "clippedHeadings": [],
           "badImages": [],
           "badAnchors": [],
           "realContacts": [],
@@ -139,54 +147,7 @@
           "width": 1440,
           "contentWidth": 1440,
           "headings": 1,
-          "badImages": [],
-          "badAnchors": [],
-          "realContacts": [],
-          "noindex": true,
-          "overflow": [],
-          "menuWorks": true,
-          "dialogWorks": true,
-          "dialogClosed": true
-        }
-      ],
-      "darkOverflow": false,
-      "errors": [],
-      "failedRequests": []
-    },
-    {
-      "slug": "wismer",
-      "passed": true,
-      "checks": [
-        {
-          "width": 375,
-          "contentWidth": 375,
-          "headings": 1,
-          "badImages": [],
-          "badAnchors": [],
-          "realContacts": [],
-          "noindex": true,
-          "overflow": [],
-          "menuWorks": true,
-          "dialogWorks": true,
-          "dialogClosed": true
-        },
-        {
-          "width": 768,
-          "contentWidth": 768,
-          "headings": 1,
-          "badImages": [],
-          "badAnchors": [],
-          "realContacts": [],
-          "noindex": true,
-          "overflow": [],
-          "menuWorks": true,
-          "dialogWorks": true,
-          "dialogClosed": true
-        },
-        {
-          "width": 1440,
-          "contentWidth": 1440,
-          "headings": 1,
+          "clippedHeadings": [],
           "badImages": [],
           "badAnchors": [],
           "realContacts": [],
@@ -209,6 +170,7 @@
           "width": 375,
           "contentWidth": 375,
           "headings": 1,
+          "clippedHeadings": [],
           "badImages": [],
           "badAnchors": [],
           "realContacts": [],
@@ -222,6 +184,7 @@
           "width": 768,
           "contentWidth": 768,
           "headings": 1,
+          "clippedHeadings": [],
           "badImages": [],
           "badAnchors": [],
           "realContacts": [],
@@ -235,6 +198,75 @@
           "width": 1440,
           "contentWidth": 1440,
           "headings": 1,
+          "clippedHeadings": [],
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        }
+      ],
+      "darkOverflow": false,
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "slug": "wismer",
+      "passed": true,
+      "checks": [
+        {
+          "width": 375,
+          "contentWidth": 375,
+          "headings": 1,
+          "clippedHeadings": [],
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [
+            {
+              "tag": "SPAN",
+              "className": "wis-ring",
+              "right": 509.7631607055664
+            },
+            {
+              "tag": "SPAN",
+              "className": "wis-leaf",
+              "right": 422.2650451660156
+            }
+          ],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        },
+        {
+          "width": 768,
+          "contentWidth": 768,
+          "headings": 1,
+          "clippedHeadings": [],
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [
+            {
+              "tag": "SPAN",
+              "className": "wis-ring",
+              "right": 821.4344482421875
+            }
+          ],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        },
+        {
+          "width": 1440,
+          "contentWidth": 1440,
+          "headings": 1,
+          "clippedHeadings": [],
           "badImages": [],
           "badAnchors": [],
           "realContacts": [],
@@ -257,6 +289,7 @@
           "width": 375,
           "contentWidth": 375,
           "headings": 1,
+          "clippedHeadings": [],
           "badImages": [],
           "badAnchors": [],
           "realContacts": [],
@@ -270,6 +303,7 @@
           "width": 768,
           "contentWidth": 768,
           "headings": 1,
+          "clippedHeadings": [],
           "badImages": [],
           "badAnchors": [],
           "realContacts": [],
@@ -283,6 +317,7 @@
           "width": 1440,
           "contentWidth": 1440,
           "headings": 1,
+          "clippedHeadings": [],
           "badImages": [],
           "badAnchors": [],
           "realContacts": [],
@@ -305,11 +340,18 @@
           "width": 375,
           "contentWidth": 375,
           "headings": 1,
+          "clippedHeadings": [],
           "badImages": [],
           "badAnchors": [],
           "realContacts": [],
           "noindex": true,
-          "overflow": [],
+          "overflow": [
+            {
+              "tag": "SPAN",
+              "className": "hf-f",
+              "right": 423
+            }
+          ],
           "menuWorks": true,
           "dialogWorks": true,
           "dialogClosed": true
@@ -318,11 +360,18 @@
           "width": 768,
           "contentWidth": 768,
           "headings": 1,
+          "clippedHeadings": [],
           "badImages": [],
           "badAnchors": [],
           "realContacts": [],
           "noindex": true,
-          "overflow": [],
+          "overflow": [
+            {
+              "tag": "SPAN",
+              "className": "hf-f",
+              "right": 832
+            }
+          ],
           "menuWorks": true,
           "dialogWorks": true,
           "dialogClosed": true
@@ -331,11 +380,18 @@
           "width": 1440,
           "contentWidth": 1440,
           "headings": 1,
+          "clippedHeadings": [],
           "badImages": [],
           "badAnchors": [],
           "realContacts": [],
           "noindex": true,
-          "overflow": [],
+          "overflow": [
+            {
+              "tag": "SPAN",
+              "className": "hf-f",
+              "right": 1504
+            }
+          ],
           "menuWorks": true,
           "dialogWorks": true,
           "dialogClosed": true
@@ -353,11 +409,23 @@
           "width": 375,
           "contentWidth": 375,
           "headings": 1,
+          "clippedHeadings": [],
           "badImages": [],
           "badAnchors": [],
           "realContacts": [],
           "noindex": true,
-          "overflow": [],
+          "overflow": [
+            {
+              "tag": "DIV",
+              "className": "sz-strip sz-strip-one",
+              "right": 440.89054107666016
+            },
+            {
+              "tag": "IMG",
+              "className": "",
+              "right": 428.63196563720703
+            }
+          ],
           "menuWorks": true,
           "dialogWorks": true,
           "dialogClosed": true
@@ -366,11 +434,23 @@
           "width": 768,
           "contentWidth": 768,
           "headings": 1,
+          "clippedHeadings": [],
           "badImages": [],
           "badAnchors": [],
           "realContacts": [],
           "noindex": true,
-          "overflow": [],
+          "overflow": [
+            {
+              "tag": "DIV",
+              "className": "sz-strip sz-strip-one",
+              "right": 806.5187377929688
+            },
+            {
+              "tag": "IMG",
+              "className": "",
+              "right": 794.2601928710938
+            }
+          ],
           "menuWorks": true,
           "dialogWorks": true,
           "dialogClosed": true
@@ -379,11 +459,23 @@
           "width": 1440,
           "contentWidth": 1440,
           "headings": 1,
+          "clippedHeadings": [],
           "badImages": [],
           "badAnchors": [],
           "realContacts": [],
           "noindex": true,
-          "overflow": [],
+          "overflow": [
+            {
+              "tag": "DIV",
+              "className": "sz-strip sz-strip-one",
+              "right": 1497.2974853515625
+            },
+            {
+              "tag": "IMG",
+              "className": "",
+              "right": 1485.0389404296875
+            }
+          ],
           "menuWorks": true,
           "dialogWorks": true,
           "dialogClosed": true
@@ -401,6 +493,7 @@
           "width": 375,
           "contentWidth": 375,
           "headings": 1,
+          "clippedHeadings": [],
           "badImages": [],
           "badAnchors": [],
           "realContacts": [],
@@ -414,6 +507,7 @@
           "width": 768,
           "contentWidth": 768,
           "headings": 1,
+          "clippedHeadings": [],
           "badImages": [],
           "badAnchors": [],
           "realContacts": [],
@@ -427,54 +521,7 @@
           "width": 1440,
           "contentWidth": 1440,
           "headings": 1,
-          "badImages": [],
-          "badAnchors": [],
-          "realContacts": [],
-          "noindex": true,
-          "overflow": [],
-          "menuWorks": true,
-          "dialogWorks": true,
-          "dialogClosed": true
-        }
-      ],
-      "darkOverflow": false,
-      "errors": [],
-      "failedRequests": []
-    },
-    {
-      "slug": "seiler",
-      "passed": true,
-      "checks": [
-        {
-          "width": 375,
-          "contentWidth": 375,
-          "headings": 1,
-          "badImages": [],
-          "badAnchors": [],
-          "realContacts": [],
-          "noindex": true,
-          "overflow": [],
-          "menuWorks": true,
-          "dialogWorks": true,
-          "dialogClosed": true
-        },
-        {
-          "width": 768,
-          "contentWidth": 768,
-          "headings": 1,
-          "badImages": [],
-          "badAnchors": [],
-          "realContacts": [],
-          "noindex": true,
-          "overflow": [],
-          "menuWorks": true,
-          "dialogWorks": true,
-          "dialogClosed": true
-        },
-        {
-          "width": 1440,
-          "contentWidth": 1440,
-          "headings": 1,
+          "clippedHeadings": [],
           "badImages": [],
           "badAnchors": [],
           "realContacts": [],
@@ -497,17 +544,12 @@
           "width": 375,
           "contentWidth": 375,
           "headings": 1,
+          "clippedHeadings": [],
           "badImages": [],
           "badAnchors": [],
           "realContacts": [],
           "noindex": true,
-          "overflow": [
-            {
-              "tag": "SPAN",
-              "className": "",
-              "right": 427.265625
-            }
-          ],
+          "overflow": [],
           "menuWorks": true,
           "dialogWorks": true,
           "dialogClosed": true
@@ -516,6 +558,7 @@
           "width": 768,
           "contentWidth": 768,
           "headings": 1,
+          "clippedHeadings": [],
           "badImages": [],
           "badAnchors": [],
           "realContacts": [],
@@ -529,6 +572,58 @@
           "width": 1440,
           "contentWidth": 1440,
           "headings": 1,
+          "clippedHeadings": [],
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        }
+      ],
+      "darkOverflow": false,
+      "errors": [],
+      "failedRequests": []
+    },
+    {
+      "slug": "seiler",
+      "passed": true,
+      "checks": [
+        {
+          "width": 375,
+          "contentWidth": 375,
+          "headings": 1,
+          "clippedHeadings": [],
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        },
+        {
+          "width": 768,
+          "contentWidth": 768,
+          "headings": 1,
+          "clippedHeadings": [],
+          "badImages": [],
+          "badAnchors": [],
+          "realContacts": [],
+          "noindex": true,
+          "overflow": [],
+          "menuWorks": true,
+          "dialogWorks": true,
+          "dialogClosed": true
+        },
+        {
+          "width": 1440,
+          "contentWidth": 1440,
+          "headings": 1,
+          "clippedHeadings": [],
           "badImages": [],
           "badAnchors": [],
           "realContacts": [],
@@ -551,6 +646,7 @@
           "width": 375,
           "contentWidth": 375,
           "headings": 1,
+          "clippedHeadings": [],
           "badImages": [],
           "badAnchors": [],
           "realContacts": [],
@@ -564,6 +660,7 @@
           "width": 768,
           "contentWidth": 768,
           "headings": 1,
+          "clippedHeadings": [],
           "badImages": [],
           "badAnchors": [],
           "realContacts": [],
@@ -577,6 +674,7 @@
           "width": 1440,
           "contentWidth": 1440,
           "headings": 1,
+          "clippedHeadings": [],
           "badImages": [],
           "badAnchors": [],
           "realContacts": [],
@@ -599,6 +697,7 @@
           "width": 375,
           "contentWidth": 375,
           "headings": 1,
+          "clippedHeadings": [],
           "badImages": [],
           "badAnchors": [],
           "realContacts": [],
@@ -612,6 +711,7 @@
           "width": 768,
           "contentWidth": 768,
           "headings": 1,
+          "clippedHeadings": [],
           "badImages": [],
           "badAnchors": [],
           "realContacts": [],
@@ -625,6 +725,7 @@
           "width": 1440,
           "contentWidth": 1440,
           "headings": 1,
+          "clippedHeadings": [],
           "badImages": [],
           "badAnchors": [],
           "realContacts": [],
@@ -647,17 +748,12 @@
           "width": 375,
           "contentWidth": 375,
           "headings": 1,
+          "clippedHeadings": [],
           "badImages": [],
           "badAnchors": [],
           "realContacts": [],
           "noindex": true,
-          "overflow": [
-            {
-              "tag": "DIV",
-              "className": "m-leaf",
-              "right": 496.9751892089844
-            }
-          ],
+          "overflow": [],
           "menuWorks": true,
           "dialogWorks": true,
           "dialogClosed": true
@@ -666,17 +762,12 @@
           "width": 768,
           "contentWidth": 768,
           "headings": 1,
+          "clippedHeadings": [],
           "badImages": [],
           "badAnchors": [],
           "realContacts": [],
           "noindex": true,
-          "overflow": [
-            {
-              "tag": "DIV",
-              "className": "m-leaf",
-              "right": 889.9752197265625
-            }
-          ],
+          "overflow": [],
           "menuWorks": true,
           "dialogWorks": true,
           "dialogClosed": true
@@ -685,17 +776,12 @@
           "width": 1440,
           "contentWidth": 1440,
           "headings": 1,
+          "clippedHeadings": [],
           "badImages": [],
           "badAnchors": [],
           "realContacts": [],
           "noindex": true,
-          "overflow": [
-            {
-              "tag": "DIV",
-              "className": "m-leaf",
-              "right": 1501.97509765625
-            }
-          ],
+          "overflow": [],
           "menuWorks": true,
           "dialogWorks": true,
           "dialogClosed": true
@@ -713,6 +799,7 @@
           "width": 375,
           "contentWidth": 375,
           "headings": 1,
+          "clippedHeadings": [],
           "badImages": [],
           "badAnchors": [],
           "realContacts": [],
@@ -726,6 +813,7 @@
           "width": 768,
           "contentWidth": 768,
           "headings": 1,
+          "clippedHeadings": [],
           "badImages": [],
           "badAnchors": [],
           "realContacts": [],
@@ -739,6 +827,7 @@
           "width": 1440,
           "contentWidth": 1440,
           "headings": 1,
+          "clippedHeadings": [],
           "badImages": [],
           "badAnchors": [],
           "realContacts": [],
@@ -752,6 +841,164 @@
       "darkOverflow": false,
       "errors": [],
       "failedRequests": []
+    }
+  ],
+  "galleryChecks": [
+    {
+      "width": 375,
+      "passed": true,
+      "overflow": false,
+      "imagesOkay": true,
+      "headings": 1,
+      "concepts": 15,
+      "scores": [
+        "53 von 100",
+        "58 von 100",
+        "55 von 100",
+        "65 von 100",
+        "64 von 100",
+        "45 von 100",
+        "40 von 100",
+        "63 von 100",
+        "61 von 100",
+        "65 von 100",
+        "71 von 100",
+        "28 von 100",
+        "57 von 100",
+        "53 von 100",
+        "45 von 100"
+      ],
+      "scoresUnchanged": true,
+      "filters": [
+        {
+          "family": "wood",
+          "visible": 5,
+          "expected": 5,
+          "passed": true
+        },
+        {
+          "family": "salon-dining",
+          "visible": 5,
+          "expected": 5,
+          "passed": true
+        },
+        {
+          "family": "places",
+          "visible": 5,
+          "expected": 5,
+          "passed": true
+        },
+        {
+          "family": "all",
+          "visible": 15,
+          "expected": 15,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "passed": true,
+      "overflow": false,
+      "imagesOkay": true,
+      "headings": 1,
+      "concepts": 15,
+      "scores": [
+        "53 von 100",
+        "58 von 100",
+        "55 von 100",
+        "65 von 100",
+        "64 von 100",
+        "45 von 100",
+        "40 von 100",
+        "63 von 100",
+        "61 von 100",
+        "65 von 100",
+        "71 von 100",
+        "28 von 100",
+        "57 von 100",
+        "53 von 100",
+        "45 von 100"
+      ],
+      "scoresUnchanged": true,
+      "filters": [
+        {
+          "family": "wood",
+          "visible": 5,
+          "expected": 5,
+          "passed": true
+        },
+        {
+          "family": "salon-dining",
+          "visible": 5,
+          "expected": 5,
+          "passed": true
+        },
+        {
+          "family": "places",
+          "visible": 5,
+          "expected": 5,
+          "passed": true
+        },
+        {
+          "family": "all",
+          "visible": 15,
+          "expected": 15,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "passed": true,
+      "overflow": false,
+      "imagesOkay": true,
+      "headings": 1,
+      "concepts": 15,
+      "scores": [
+        "53 von 100",
+        "58 von 100",
+        "55 von 100",
+        "65 von 100",
+        "64 von 100",
+        "45 von 100",
+        "40 von 100",
+        "63 von 100",
+        "61 von 100",
+        "65 von 100",
+        "71 von 100",
+        "28 von 100",
+        "57 von 100",
+        "53 von 100",
+        "45 von 100"
+      ],
+      "scoresUnchanged": true,
+      "filters": [
+        {
+          "family": "wood",
+          "visible": 5,
+          "expected": 5,
+          "passed": true
+        },
+        {
+          "family": "salon-dining",
+          "visible": 5,
+          "expected": 5,
+          "passed": true
+        },
+        {
+          "family": "places",
+          "visible": 5,
+          "expected": 5,
+          "passed": true
+        },
+        {
+          "family": "all",
+          "visible": 15,
+          "expected": 15,
+          "passed": true
+        }
+      ]
     }
   ]
 }

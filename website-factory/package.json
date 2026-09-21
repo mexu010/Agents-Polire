@@ -17,6 +17,7 @@
     "demos": "node demos/server.mjs",
     "demos:build": "node demos/2026-09-21/build.mjs",
     "demos:check": "node demos/2026-09-21/check.mjs",
+    "demos:a11y": "node demos/2026-09-21/a11y.mjs",
     "designs": "node --use-system-ca --import tsx scripts/design-showcase.ts",
     "designs:check": "node --use-system-ca --import tsx scripts/design-showcase.ts --check-only",
     "demo-decision": "node scripts/run.mjs demo-decision",

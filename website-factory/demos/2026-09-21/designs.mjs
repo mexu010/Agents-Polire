@@ -1,0 +1,17 @@
+export const designs = {
+  bernhof: { title: 'Der Eingang als Architektur', description: 'Schmale Türporträts, präzise Abstände und ein architektonischer Aufbau.' },
+  fuhrer: { title: 'Licht. Rahmen. Handwerk.', description: 'Eine technische Formensprache für Fenster, Türen und Innenausbau.' },
+  bieri: { title: 'Räume zum Leben', description: 'Ein Wohnmagazin mit grosszügigen Bildflächen und ruhiger Typografie.' },
+  schreinerzwei: { title: 'Schweizer Werkstattportfolio', description: 'Grafische Schrift, klare Kontraste und eine eigenständige Bildmontage.' },
+  'fritschi-griesemer': { title: 'Vier Disziplinen, ein Auftritt', description: 'Eine geordnete Projekttafel macht die unterschiedlichen Gewerke greifbar.' },
+  sopra: { title: 'Die Speisekarte als Bühne', description: 'Eine typografische Restaurantseite mit mediterranem Charakter.' },
+  wacker: { title: 'Eine Einladung an den Tisch', description: 'Restaurantkultur in kräftigen Farben mit eigenständiger Menügestaltung.' },
+  'coiffeur-lanz': { title: 'Persönlich und nah', description: 'Ein ruhiger Salonauftritt mit präziser Schrift und direkter Kontaktführung.' },
+  'hairstudio-f': { title: 'Farbe mit Haltung', description: 'Ein grafischer Salonauftritt mit markanter Typografie und klaren Kontrasten.' },
+  holiday: { title: 'Ein Blick in den Salon', description: 'Vorhandene Salonbilder geben dem Auftritt Nähe und einen eigenen Rhythmus.' },
+  grossfeld: { title: 'Automobilhaus in Bewegung', description: 'Grossformatige Fahrzeugbilder treffen auf übersichtliche Servicewege.' },
+  wismer: { title: 'Blumen als Typoplakat', description: 'Organische Formen und ausdrucksstarke Schrift, bewusst ohne fremde Fotos.' },
+  seiler: { title: 'Der Fachhandel als Katalog', description: 'Selbstbewusste Beschriftung und klare Orientierung im Sortiment.' },
+  'martin-graf-gartenbau': { title: 'Natur im Seitenrhythmus', description: 'Botanische Nahaufnahmen, offene Flächen und eine ruhige Informationsfolge.' },
+  lantii: { title: 'Fläche, Farbe und Fassade', description: 'Architektonische Bildflächen und klare Farbkontraste für Gipser- und Malerarbeiten.' },
+};

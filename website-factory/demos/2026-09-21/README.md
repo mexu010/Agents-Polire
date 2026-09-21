@@ -2,6 +2,10 @@
 
 Die ausdrückliche Demo-Freigabe im Chat vom 21. September 2026 wurde für 15 heute vorgestellte Firmen mit konkreten Website-Schwächen umgesetzt. Es sind individuell gestaltete Startseiten, keine vollständigen produktiven Firmenwebsites.
 
+**Alle 15 Entwürfe wurden auf Wunsch des Nutzers nochmals neu gestaltet.** Jede Firma hat einen eigenen Aufbau und eine begründete Gestaltungsrichtung. Die Übersicht zeigt die neuen Vorschaubilder und beschreibt das jeweilige Konzept. Die ursprünglichen Qualitätswerte und Review-Befunde bleiben erhalten; sie beziehen sich weiterhin auf die bisherigen Firmenwebsites.
+
+Die geprüften Inspirationsquellen und konkreten Designentscheidungen stehen in [Holz und Schreinerei](design-notes/wood.md), [Salons und Restaurants](design-notes/salon-dining.md) sowie [Garten, Garage und Fachhandwerk](design-notes/places.md). Referenzbilder wurden nicht in die Kundendemos übernommen. Lokale Schriftdateien samt Lizenzhinweisen liegen unter [fonts](fonts/README.md).
+
 ## Anschauen
 
 Im Projektordner `website-factory`:
@@ -51,6 +55,10 @@ Die Entwürfe wurden durch drei Entwicklungsagents innerhalb der Codex-Sitzung g
 
 Bei laufendem Server prüft `pnpm demos:check` alle 15 Demos in Chrome bei 375, 768 und 1440 Pixeln, dunkles Farbschema, reduzierte Bewegung, Bilder, Anker, mobile Navigation, Kontakt-Dialoge und Seitenfehler. `POLIRE_DEMO_BASE` kann die lokale Testadresse überschreiben. Der Prüflauf erneuert die Vorschaubilder; danach bindet `pnpm demos:build` sie in die Übersicht ein.
 
+Zusätzlich prüft der Lauf abgeschnittene Überschriften sowie Galerie-Filter, Konzepttexte und die unveränderten Originalscores. `pnpm demos:a11y` prüft mit der bereits vorhandenen axe-core-Version sieben gezielte Regeln für alle Demos und die Galerie, jeweils mobil und auf Desktop in hellem und dunklem Farbschema. Auch dieser Prüflauf braucht einen laufenden Demo-Server. Konkrete aktuelle Resultate stehen in den beiden Prüfdateien; keine Prüfung ersetzt eine vollständige manuelle Abnahme.
+
 [browser-checks.json](browser-checks.json) enthält die Browser-Ergebnisse; [accessibility-checks.json](accessibility-checks.json) dokumentiert ergänzende gezielte Prüfungen und deren Grenzen. Eine Auswahlprüfung ersetzt keine vollständige Barrierefreiheits-Zertifizierung.
+
+Prüfstand der Überarbeitung vom 21. September 2026: alle 15 Demos und die Galerie bestehen die Browserprüfungen in den drei Grössen. Die 64 gezielten Axe-Prüfungen melden keine Verstösse gegen die ausgewählten Regeln. Desktop- und Mobilaufnahmen aller Entwürfe wurden zusätzlich visuell gesichtet und gefundene Layoutfehler korrigiert. Factory-Lint, TypeScript-Build und alle 251 bestehenden Tests bestehen ebenfalls.
 
 Die POLIRE-Website bleibt unverändert. Bilder, Texte, Geschäftszeiten und gewünschte Funktionen werden vor einem echten Kundenprojekt mit der Firma abgestimmt.

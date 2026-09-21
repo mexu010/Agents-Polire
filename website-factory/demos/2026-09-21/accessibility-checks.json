@@ -1,154 +1,388 @@
 {
-  "checkedAt": "2026-09-21T18:01:08.969Z",
-  "method": "axe-core 4.13.0, seven selected rules, mobile light and dark; not a complete accessibility certification",
+  "checkedAt": "2026-09-21T20:33:32.744Z",
+  "method": "axe-core 4.13.0, seven selected rules, mobile/desktop light and dark; not a complete accessibility certification",
   "results": [
     {
-      "slug": "fuhrer",
-      "colorScheme": "light",
-      "violations": []
-    },
-    {
       "slug": "bernhof",
-      "colorScheme": "light",
-      "violations": []
-    },
-    {
-      "slug": "grossfeld",
+      "width": 375,
       "colorScheme": "light",
       "violations": []
     },
     {
       "slug": "fuhrer",
-      "colorScheme": "dark",
+      "width": 375,
+      "colorScheme": "light",
+      "violations": []
+    },
+    {
+      "slug": "grossfeld",
+      "width": 375,
+      "colorScheme": "light",
       "violations": []
     },
     {
       "slug": "bernhof",
+      "width": 375,
       "colorScheme": "dark",
       "violations": []
     },
     {
       "slug": "grossfeld",
+      "width": 375,
+      "colorScheme": "dark",
+      "violations": []
+    },
+    {
+      "slug": "fuhrer",
+      "width": 375,
+      "colorScheme": "dark",
+      "violations": []
+    },
+    {
+      "slug": "bernhof",
+      "width": 1440,
+      "colorScheme": "light",
+      "violations": []
+    },
+    {
+      "slug": "grossfeld",
+      "width": 1440,
+      "colorScheme": "light",
+      "violations": []
+    },
+    {
+      "slug": "fuhrer",
+      "width": 1440,
+      "colorScheme": "light",
+      "violations": []
+    },
+    {
+      "slug": "bernhof",
+      "width": 1440,
+      "colorScheme": "dark",
+      "violations": []
+    },
+    {
+      "slug": "grossfeld",
+      "width": 1440,
+      "colorScheme": "dark",
+      "violations": []
+    },
+    {
+      "slug": "fuhrer",
+      "width": 1440,
       "colorScheme": "dark",
       "violations": []
     },
     {
       "slug": "wismer",
+      "width": 375,
       "colorScheme": "light",
       "violations": []
     },
     {
       "slug": "sopra",
+      "width": 375,
       "colorScheme": "light",
       "violations": []
     },
     {
       "slug": "bieri",
+      "width": 375,
       "colorScheme": "light",
       "violations": []
     },
     {
       "slug": "wismer",
+      "width": 375,
       "colorScheme": "dark",
       "violations": []
     },
     {
       "slug": "sopra",
+      "width": 375,
       "colorScheme": "dark",
       "violations": []
     },
     {
       "slug": "bieri",
+      "width": 375,
+      "colorScheme": "dark",
+      "violations": []
+    },
+    {
+      "slug": "wismer",
+      "width": 1440,
+      "colorScheme": "light",
+      "violations": []
+    },
+    {
+      "slug": "sopra",
+      "width": 1440,
+      "colorScheme": "light",
+      "violations": []
+    },
+    {
+      "slug": "bieri",
+      "width": 1440,
+      "colorScheme": "light",
+      "violations": []
+    },
+    {
+      "slug": "wismer",
+      "width": 1440,
+      "colorScheme": "dark",
+      "violations": []
+    },
+    {
+      "slug": "sopra",
+      "width": 1440,
+      "colorScheme": "dark",
+      "violations": []
+    },
+    {
+      "slug": "bieri",
+      "width": 1440,
       "colorScheme": "dark",
       "violations": []
     },
     {
       "slug": "hairstudio-f",
+      "width": 375,
       "colorScheme": "light",
       "violations": []
     },
     {
       "slug": "schreinerzwei",
+      "width": 375,
       "colorScheme": "light",
       "violations": []
     },
     {
       "slug": "holiday",
+      "width": 375,
       "colorScheme": "light",
       "violations": []
     },
     {
       "slug": "hairstudio-f",
+      "width": 375,
       "colorScheme": "dark",
       "violations": []
     },
     {
       "slug": "schreinerzwei",
+      "width": 375,
       "colorScheme": "dark",
       "violations": []
     },
     {
       "slug": "holiday",
+      "width": 375,
+      "colorScheme": "dark",
+      "violations": []
+    },
+    {
+      "slug": "hairstudio-f",
+      "width": 1440,
+      "colorScheme": "light",
+      "violations": []
+    },
+    {
+      "slug": "schreinerzwei",
+      "width": 1440,
+      "colorScheme": "light",
+      "violations": []
+    },
+    {
+      "slug": "holiday",
+      "width": 1440,
+      "colorScheme": "light",
+      "violations": []
+    },
+    {
+      "slug": "hairstudio-f",
+      "width": 1440,
+      "colorScheme": "dark",
+      "violations": []
+    },
+    {
+      "slug": "schreinerzwei",
+      "width": 1440,
+      "colorScheme": "dark",
+      "violations": []
+    },
+    {
+      "slug": "holiday",
+      "width": 1440,
       "colorScheme": "dark",
       "violations": []
     },
     {
       "slug": "seiler",
+      "width": 375,
       "colorScheme": "light",
       "violations": []
     },
     {
       "slug": "wacker",
+      "width": 375,
       "colorScheme": "light",
       "violations": []
     },
     {
       "slug": "coiffeur-lanz",
+      "width": 375,
       "colorScheme": "light",
       "violations": []
     },
     {
       "slug": "seiler",
+      "width": 375,
       "colorScheme": "dark",
       "violations": []
     },
     {
       "slug": "wacker",
+      "width": 375,
       "colorScheme": "dark",
       "violations": []
     },
     {
       "slug": "coiffeur-lanz",
+      "width": 375,
+      "colorScheme": "dark",
+      "violations": []
+    },
+    {
+      "slug": "seiler",
+      "width": 1440,
+      "colorScheme": "light",
+      "violations": []
+    },
+    {
+      "slug": "coiffeur-lanz",
+      "width": 1440,
+      "colorScheme": "light",
+      "violations": []
+    },
+    {
+      "slug": "wacker",
+      "width": 1440,
+      "colorScheme": "light",
+      "violations": []
+    },
+    {
+      "slug": "coiffeur-lanz",
+      "width": 1440,
+      "colorScheme": "dark",
+      "violations": []
+    },
+    {
+      "slug": "seiler",
+      "width": 1440,
+      "colorScheme": "dark",
+      "violations": []
+    },
+    {
+      "slug": "wacker",
+      "width": 1440,
       "colorScheme": "dark",
       "violations": []
     },
     {
       "slug": "fritschi-griesemer",
+      "width": 375,
       "colorScheme": "light",
       "violations": []
     },
     {
       "slug": "martin-graf-gartenbau",
+      "width": 375,
       "colorScheme": "light",
       "violations": []
     },
     {
       "slug": "lantii",
+      "width": 375,
       "colorScheme": "light",
       "violations": []
     },
     {
       "slug": "fritschi-griesemer",
-      "colorScheme": "dark",
-      "violations": []
-    },
-    {
-      "slug": "martin-graf-gartenbau",
+      "width": 375,
       "colorScheme": "dark",
       "violations": []
     },
     {
       "slug": "lantii",
+      "width": 375,
+      "colorScheme": "dark",
+      "violations": []
+    },
+    {
+      "slug": "martin-graf-gartenbau",
+      "width": 375,
+      "colorScheme": "dark",
+      "violations": []
+    },
+    {
+      "slug": "fritschi-griesemer",
+      "width": 1440,
+      "colorScheme": "light",
+      "violations": []
+    },
+    {
+      "slug": "lantii",
+      "width": 1440,
+      "colorScheme": "light",
+      "violations": []
+    },
+    {
+      "slug": "martin-graf-gartenbau",
+      "width": 1440,
+      "colorScheme": "light",
+      "violations": []
+    },
+    {
+      "slug": "fritschi-griesemer",
+      "width": 1440,
+      "colorScheme": "dark",
+      "violations": []
+    },
+    {
+      "slug": "lantii",
+      "width": 1440,
+      "colorScheme": "dark",
+      "violations": []
+    },
+    {
+      "slug": "martin-graf-gartenbau",
+      "width": 1440,
+      "colorScheme": "dark",
+      "violations": []
+    },
+    {
+      "slug": "gallery",
+      "width": 375,
+      "colorScheme": "light",
+      "violations": []
+    },
+    {
+      "slug": "gallery",
+      "width": 375,
+      "colorScheme": "dark",
+      "violations": []
+    },
+    {
+      "slug": "gallery",
+      "width": 1440,
+      "colorScheme": "light",
+      "violations": []
+    },
+    {
+      "slug": "gallery",
+      "width": 1440,
       "colorScheme": "dark",
       "violations": []
     }

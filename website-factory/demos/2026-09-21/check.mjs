@@ -10,7 +10,7 @@ const out = path.resolve(root, '../..', 'work', 'demo-qa-2026-09-21');
 mkdirSync(out, { recursive: true }); mkdirSync(path.join(root, 'public', 'thumbnails'), { recursive: true });
 const browser = await chromium.launch({ headless: true, channel: 'chrome' });
 const base = process.env.POLIRE_DEMO_BASE ?? 'http://127.0.0.1:4320';
-const results = []; let cursor = 0;
+const results = []; const galleryChecks = []; let cursor = 0;
 try {
   await Promise.all(Array.from({ length: 3 }, async () => {
     const page = await browser.newPage();
@@ -29,6 +29,10 @@ try {
         const state = await page.evaluate(() => ({
           width: window.innerWidth, contentWidth: document.documentElement.scrollWidth,
           headings: document.querySelectorAll('h1').length,
+          clippedHeadings: [...document.querySelectorAll('main h1,main h2,main h3')].filter(heading=>{
+            const range=document.createRange();range.selectNodeContents(heading);
+            return [...range.getClientRects()].some(rect=>rect.left < -1 || rect.right > window.innerWidth+1);
+          }).map(heading=>heading.textContent),
           badImages: [...document.images].filter(i => !i.complete || i.naturalWidth === 0).map(i => i.getAttribute('src')),
           badAnchors: [...document.querySelectorAll('a[href^="#"]')].filter(a => a.hash && !document.getElementById(decodeURIComponent(a.hash.slice(1)))).map(a => a.hash),
           realContacts: [...document.querySelectorAll('a[href^="tel:"],a[href^="mailto:"],form')].map(e => e.outerHTML.slice(0,160)),
@@ -44,7 +48,8 @@ try {
         await page.locator('[data-close-demo]').click();
         const closed = !await page.locator('.polire-dialog').isVisible();
         const screenshot = `${lead.slug}-${width}.png`;
-        if (width === 375) await page.screenshot({ path:path.join(out,screenshot), fullPage:true });
+        await page.evaluate(()=>window.scrollTo(0,0));
+        if (width !== 1440) await page.screenshot({ path:path.join(out,screenshot), fullPage:true });
         if (width === 1440) {
           await page.screenshot({ path:path.join(root,'public','thumbnails',`${lead.slug}.png`) });
           await page.screenshot({ path:path.join(out,screenshot), fullPage:true });
@@ -54,13 +59,45 @@ try {
       await page.emulateMedia({ colorScheme:'dark', reducedMotion:'reduce' });
       await page.screenshot({path:path.join(out,`${lead.slug}-dark.png`),fullPage:true});
       const darkOverflow = await page.evaluate(()=>document.documentElement.scrollWidth>window.innerWidth+1);
-      const passed = checks.every(c=>c.contentWidth<=c.width+1 && c.headings===1 && !c.badImages.length && !c.badAnchors.length && !c.realContacts.length && c.noindex && c.menuWorks && c.dialogWorks && c.dialogClosed) && !darkOverflow && !errors.length && !failedRequests.length;
+      const passed = checks.every(c=>c.contentWidth<=c.width+1 && c.headings===1 && !c.clippedHeadings.length && !c.badImages.length && !c.badAnchors.length && !c.realContacts.length && c.noindex && c.menuWorks && c.dialogWorks && c.dialogClosed) && !darkOverflow && !errors.length && !failedRequests.length;
       const result = {slug:lead.slug,passed,checks,darkOverflow,errors,failedRequests}; results.push(result);
-      process.stdout.write(JSON.stringify({slug:lead.slug,passed,problems:checks.filter(c=>c.contentWidth>c.width+1||c.badImages.length||c.badAnchors.length||!c.menuWorks)})+'\n');
+      process.stdout.write(JSON.stringify({slug:lead.slug,passed,problems:checks.filter(c=>c.contentWidth>c.width+1||c.clippedHeadings.length||c.badImages.length||c.badAnchors.length||!c.menuWorks)})+'\n');
       page.off('pageerror',onError); page.off('response',onResponse);
     }
     await page.close();
   }));
+  const gallery = await browser.newPage();
+  for (const width of [375,768,1440]) {
+    await gallery.setViewportSize({width,height:960});
+    await gallery.emulateMedia({colorScheme:'light',reducedMotion:'reduce'});
+    await gallery.goto(base,{waitUntil:'networkidle'});
+    await gallery.evaluate(async()=>{ await document.fonts.ready; [...document.images].forEach(i=>{i.loading='eager';}); await Promise.all([...document.images].map(i=>i.decode().catch(()=>{}))); });
+    const filters=[];
+    for (const family of ['wood','salon-dining','places','all']) {
+      await gallery.locator(`[data-filter="${family}"]`).click();
+      const visible=await gallery.locator('.demo-card:visible').count();
+      const expected=family==='all'?15:manifest.leads.filter(lead=>lead.family===family).length;
+      filters.push({family,visible,expected,passed:visible===expected});
+    }
+    await gallery.evaluate(()=>window.scrollTo(0,0));
+    const state=await gallery.evaluate(()=>({
+      overflow:document.documentElement.scrollWidth>window.innerWidth+1,
+      imagesOkay:[...document.images].every(image=>image.complete&&image.naturalWidth>0),
+      headings:document.querySelectorAll('h1').length,
+      concepts:document.querySelectorAll('.card-concept').length,
+      scores:[...document.querySelectorAll('.card-score strong')].map(node=>node.textContent),
+    }));
+    const expectedScores=manifest.leads.map(lead=>{
+      const source=JSON.parse(readFileSync(path.join(root,'inputs',lead.slug+'.json'),'utf8'));
+      return typeof source.quality==='number'&&Number.isFinite(source.quality)&&source.quality>=0&&source.quality<=100?Math.round(source.quality)+' von 100':'Noch nicht bewertbar';
+    });
+    const scoresUnchanged=JSON.stringify(expectedScores)===JSON.stringify(state.scores);
+    const passed=!state.overflow&&state.imagesOkay&&state.headings===1&&state.concepts===15&&scoresUnchanged&&filters.every(filter=>filter.passed);
+    galleryChecks.push({width,passed,...state,scoresUnchanged,filters});
+    await gallery.screenshot({path:path.join(out,`gallery-${width}.png`),fullPage:true});
+  }
+  await gallery.close();
 } finally { await browser.close(); }
-writeFileSync(path.join(root,'browser-checks.json'),JSON.stringify({checkedAt:new Date().toISOString(),mode:'real_local_browser_checks',viewports:[375,768,1440],darkMode:true,reducedMotion:true,results},null,2)+'\n');
-if (results.length!==15 || results.some(r=>!r.passed)) process.exitCode=1;
+writeFileSync(path.join(root,'browser-checks.json'),JSON.stringify({checkedAt:new Date().toISOString(),mode:'real_local_browser_checks',viewports:[375,768,1440],darkMode:true,reducedMotion:true,results,galleryChecks},null,2)+'\n');
+process.stdout.write(JSON.stringify({gallery:galleryChecks.map(check=>({width:check.width,passed:check.passed}))})+'\n');
+if (results.length!==15 || results.some(r=>!r.passed) || galleryChecks.some(check=>!check.passed)) process.exitCode=1;
