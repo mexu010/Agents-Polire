@@ -46,6 +46,8 @@ CSV benötigt die Spalte `website`. Stapel sind auf 50 Einträge begrenzt, dedup
 
 Der erste echte Such- und Review-Stapel vom 21. September 2026 liegt unter [reports/prospecting-2026-09-21](reports/prospecting-2026-09-21/README.md). Die Firmen wurden im Chat recherchiert, anschliessend mit Scout, Audit und Qualifier über OAuth geprüft. Die Liste unterscheidet aktuelle Aktivitätssignale von unbekanntem Betriebsstatus. Ein auffindbarer Kontakt ist keine Bestätigung von Interesse oder Budget.
 
+Der [zweite Durchlauf mit zehn weiteren Firmen](reports/prospecting-2026-09-21-round2/README.md) enthält zusätzliche Reviews, Quellen und Hinweise zu aktuellen Betriebsferien. Die früheren Ergebnisse bleiben separat erhalten.
+
 `config/prospecting.json` prüft bekannte URLs ohne kostenpflichtige Such-API. Die Konfiguration nutzt absichtlich dieselbe Datenbank wie `live-test.json`, damit bestehende OAuth-Zähler erhalten bleiben. Sie erlaubt bis zu drei HTML-Seiten je Firma und höhere Eingabelimits für die Quellen und Screenshots (Scout/Qualifier 64’000, Audit 80’000 Tokens). Die Grenzen für Aufrufe, Wiederholungen und Freigaben bleiben unverändert.
 
 ```powershell

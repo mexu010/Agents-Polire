@@ -1,0 +1,181 @@
+{
+  "checkedAt": "2026-09-21",
+  "discoveryMethod": "Webrecherche im Chat; echte Factory-Reviews via OAuth, ohne Brave-Suchaufrufe.",
+  "leads": [
+    {
+      "slug": "bieri",
+      "name": "Fredy Bieri AG",
+      "website": "https://www.schreinerei-bieri.ch/",
+      "locality": "Schötz LU",
+      "industry": "Schreinerei / Küchen",
+      "phone": "041 980 13 81",
+      "contactSource": "https://www.schreinerei-bieri.ch/",
+      "callNotBefore": null,
+      "activity": {
+        "status": "recent_self_report",
+        "sourceUrl": "https://www.schreinerei-bieri.ch/aktuell/",
+        "excerpt": "Betriebsferien vom 31. Juli bis 16. August 2026",
+        "finding": "Eigene Nachrichten nennen Sommerferien, einen Tag der offenen Tür im Mai 2026 und Investitionen. Aktuelles Aktivitätssignal; heutige Erreichbarkeit nicht bestätigt."
+      }
+    },
+    {
+      "slug": "brockicenter",
+      "name": "Brockicenter Bern Sugiez",
+      "website": "https://www.brockicenter.ch/index.html",
+      "locality": "Sugiez FR",
+      "industry": "Räumungen / Transporte / Brockenhaus",
+      "phone": "079 823 64 60",
+      "contactSource": "https://www.brockicenter.ch/index.html",
+      "callNotBefore": null,
+      "activity": {
+        "status": "current_announcement",
+        "sourceUrl": "https://www.brockicenter.ch/flohmarkt.html",
+        "excerpt": "Das Brockicenter Bern präsentiert wieder diesen Anlass im Jahr 2026",
+        "finding": "Eigene Website bewirbt Flohmärkte 2026. Eine ergänzende Veranstaltungsseite nennt den 26. September 2026. Das ist eine Ankündigung, kein Nachweis eines schon durchgeführten Anlasses."
+      }
+    },
+    {
+      "slug": "hairstudio-f",
+      "name": "Hairstudio F",
+      "website": "https://www.hairstudiof.ch/",
+      "locality": "Fehraltorf ZH",
+      "industry": "Coiffeur",
+      "phone": "044 955 12 12",
+      "contactSource": "https://www.hairstudiof.ch/",
+      "callNotBefore": null,
+      "activity": {
+        "status": "current_announcement",
+        "sourceUrl": "https://www.hairstudiof.ch/",
+        "excerpt": "ab Montag 28.09.2026 wieder hier",
+        "finding": "Eigene Ferienhinweise für August und September 2026. Am 24.–26. September abwesend. Für Anrufe die Festnetznummer verwenden; die Website bittet ausdrücklich um keine WhatsApp-Anrufe."
+      }
+    },
+    {
+      "slug": "schreinerzwei",
+      "name": "Schreiner2 AG",
+      "website": "https://www.schreinerzwei.ch/",
+      "locality": "Gampelen BE",
+      "industry": "Schreinerei",
+      "phone": "032 338 16 84",
+      "contactSource": "https://www.schreinerzwei.ch/",
+      "callNotBefore": null,
+      "activity": {
+        "status": "current_announcement",
+        "sourceUrl": "https://www.schreinerzwei.ch/",
+        "excerpt": "Betriebsferien 2026/2027",
+        "finding": "Eigene Website führt einen Ferienplan für 2026/2027 und Geschäftskontakte. Kein telefonischer Betriebsnachweis."
+      }
+    },
+    {
+      "slug": "cacarola",
+      "name": "Garage Cacarola",
+      "website": "https://www.garagecacarola.ch/",
+      "locality": "Jenins GR",
+      "industry": "Garage",
+      "phone": "079 604 04 10",
+      "contactSource": "https://www.garagecacarola.ch/kontakt/",
+      "callNotBefore": null,
+      "activity": {
+        "status": "recent_self_report",
+        "sourceUrl": "https://www.garagecacarola.ch/",
+        "excerpt": "Betriebsferien vom 4. bis 20. Juli 2026",
+        "finding": "Eigene Startseite nennt die Sommerpause im Juli 2026. Die direkt geöffnete Kontaktseite nennt Jenins und die Geschäftstelefonnummer, enthält aber zusätzlich einen alten Winterferienhinweis. Aktuellen Betrieb telefonisch bestätigen."
+      }
+    },
+    {
+      "slug": "rohner",
+      "name": "Coiffeur Carmen Rohner",
+      "website": "https://www.coiffeur-rohner.ch/",
+      "locality": "Niederweningen ZH",
+      "industry": "Coiffeur",
+      "phone": "056 241 05 52",
+      "contactSource": "https://www.coiffeur-rohner.ch/",
+      "callNotBefore": null,
+      "activity": {
+        "status": "current_announcement",
+        "sourceUrl": "https://www.coiffeur-rohner.ch/",
+        "excerpt": "Am 1.Oktober 2026 bin ich bereits",
+        "finding": "Eigene Website kündigt das zehnjährige Jubiläum im Oktober 2026 an und enthält Ferienhinweise sowie eine Online-Buchung."
+      }
+    },
+    {
+      "slug": "holiday",
+      "name": "Coiffeur Holiday",
+      "website": "https://www.coiffeurholiday.ch/",
+      "locality": "Wangen an der Aare BE",
+      "industry": "Coiffeur",
+      "phone": "032 631 10 40",
+      "contactSource": "https://www.coiffeurholiday.ch/",
+      "callNotBefore": null,
+      "activity": {
+        "status": "current_announcement",
+        "sourceUrl": "https://www.coiffeurholiday.ch/",
+        "excerpt": "Ferien vom Donnerstag,24.09.2026 bis Montag,12.10.2026",
+        "finding": "Die frische Factory-Aufnahme zeigt einen Ferienhinweis vom 24. September bis 12. Oktober 2026. Damit liegt ein aktuelles eigenes Aktivitätssignal vor; der zuvor geöffnete Webindex war veraltet. Vor dem Anruf die Pause berücksichtigen.",
+        "verificationMethod": "Direkte Factory-Aufnahme; mobil visuell geprüft"
+      },
+      "callUnavailable": {
+        "from": "2026-09-24",
+        "through": "2026-10-12"
+      }
+    },
+    {
+      "slug": "seiler",
+      "name": "E. Seiler AG",
+      "website": "https://seilerburgdorf.ch/",
+      "locality": "Burgdorf BE",
+      "industry": "Werkzeuge / Schliesstechnik",
+      "phone": "034 420 13 00",
+      "contactSource": "https://seilerburgdorf.ch/",
+      "callNotBefore": "2026-10-06",
+      "activity": {
+        "status": "temporary_holiday",
+        "sourceUrl": "https://seilerburgdorf.ch/aktuell",
+        "excerpt": "Betriebsferien vom 19. 9. - 5. 10. 2026",
+        "finding": "Eigene aktuelle Mitteilung: Betriebspause bis einschliesslich 5. Oktober; Wiederaufnahme ab 6. Oktober 2026. Kein Hinweis auf eine dauerhafte Schliessung. Anruf zurückstellen."
+      }
+    },
+    {
+      "slug": "wacker",
+      "name": "Restaurant Wacker",
+      "website": "https://www.restaurant-wacker.ch/",
+      "locality": "Reinach BL",
+      "industry": "Restaurant",
+      "phone": "061 711 53 20",
+      "contactSource": "https://www.restaurant-wacker.ch/",
+      "callNotBefore": "2026-10-13",
+      "activity": {
+        "status": "temporary_holiday",
+        "sourceUrl": "https://www.restaurant-wacker.ch/wochenmenue",
+        "excerpt": "Montag, 21. September bis und mit",
+        "finding": "Suchindex zeigt Wochenmenü vom September 2026 und Betriebsferien 21. September bis 12. Oktober. Direkter Menüabruf lief in ein Zeitlimit; Pause vor Anruf nochmals prüfen."
+      }
+    },
+    {
+      "slug": "macchi",
+      "name": "Macchi AG",
+      "website": "https://www.macchi-baeckerei.ch/",
+      "locality": "Buchrain / Luzern LU",
+      "industry": "Bäckerei / Verpflegung",
+      "phone": "041 445 70 80",
+      "contactSource": "https://www.macchi-baeckerei.ch/",
+      "callNotBefore": null,
+      "activity": {
+        "status": "recent_self_report",
+        "sourceUrl": "https://www.macchi-baeckerei.ch/menu.html",
+        "excerpt": "Montag, 21. September 2026",
+        "finding": "Eigene Menüseite enthält ein Tagesangebot für den 21. September 2026. Geschäftlicher Kontakt der Zentrale ist auf der Website ausgewiesen."
+      }
+    }
+  ],
+  "excluded": [
+    {
+      "website": "https://www.le-bocage.ch/",
+      "reason": "Abruf lieferte 429; nicht weiter verfolgt."
+    },
+    {
+      "website": "https://www.beatroethlisberger.ch/",
+      "reason": "Direkter Abruf lieferte keinen auswertbaren Inhalt; keine Aussage über Schliessung."
+    }
+  ]
+}

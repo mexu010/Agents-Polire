@@ -1,0 +1,102 @@
+{
+  "bieri": {
+    "order": 1,
+    "priority": "Zuerst ansehen",
+    "reason": "Deutliche mobile und inhaltliche Schwächen bei einem Betrieb mit eigenen Aktivitätsnachrichten aus 2026.",
+    "findings": [
+      "- Die Startseite beginnt mit einer langen Folge von Neuigkeiten-Links. Leistungen und der nächste Schritt zur Anfrage könnten früher und klarer erscheinen.",
+      "- Der Audit bemängelt kleine mobile Bedienelemente und den grossen Cookie-Dialog.",
+      "- Kein verwertbarer Performancewert vorhanden. Das ist eine Messlücke, kein Nachweis langsamer Ladezeiten."
+    ]
+  },
+  "brockicenter": {
+    "order": 9,
+    "priority": "Agent-Review unvollständig",
+    "reason": "Der Scout gab CH ohne passenden ausdrücklichen Länderbeleg aus. Die Faktenprüfung stoppte den Lauf; die folgenden Hinweise sind ausschliesslich manuelle Sichtprüfung.",
+    "findings": [
+      "- Ergänzende Sichtprüfung: Flohmarkt, Räumungen und Transporte stehen auf derselben Startseite. Ein klarer eigener Einstieg für Räumungsanfragen ist ein möglicher Ansatz.",
+      "- Ergänzende Sichtprüfung: Ein englischer Cookie-Hinweis überlagert die deutschsprachige Seite."
+    ]
+  },
+  "rohner": {
+    "order": 10,
+    "priority": "Agent-Review unvollständig",
+    "reason": "Der Scout meldete die Startseite als Buchungsseite, ohne die konkrete Zieladresse korrekt zu belegen. Die Faktenprüfung hat den Lauf gestoppt.",
+    "findings": [
+      "- Manuelle Sichtprüfung: Eine mobile Darstellung, Salonbilder, Telefonnummer und ein Verweis auf Online-Termine sind vorhanden.",
+      "- Der Buchungsverweis erscheint erst nach mehreren Bildern und einem Jubiläumsflyer. Seine Platzierung wäre ein möglicher Ansatz, aber es liegt kein vollständiger Agent-Audit vor."
+    ]
+  },
+  "holiday": {
+    "order": 6,
+    "priority": "Gezielte Korrekturen prüfen",
+    "reason": "Der Agent findet widersprüchliche Kontaktinformationen. Zuerst diese klären, bevor ein umfangreicher Neubau angeboten wird.",
+    "findings": [
+      "- Der Audit findet unterschiedliche Schliesszeiten: 18.00 Uhr auf der Startseite, 18.30 Uhr auf Kontakt- und Impressumsseite. Tatsächliche Zeiten bestätigen und vereinheitlichen.",
+      "- Auf den geprüften Seiten erscheinen zwei unterschiedliche Nachnamen. Die korrekte aktuelle Anbieterbezeichnung ist zu klären.",
+      "- Die mobile Startseite enthält bereits Adresse, Telefonnummer und Öffnungszeiten. Ein kompletter Neubau lässt sich allein aus diesen Befunden nicht begründen."
+    ]
+  },
+  "hairstudio-f": {
+    "order": 2,
+    "priority": "Zuerst ansehen",
+    "reason": "Der Audit und die mobile Aufnahme zeigen konkrete Hürden vor der Terminvereinbarung.",
+    "findings": [
+      "- Grosse Leerbereiche machen die Startseite unnötig lang. Öffnungszeiten und Adresse erscheinen erst am Ende.",
+      "- Ein bereits beendeter Ferienzeitraum steht doppelt auf der Seite. Aktuelle Hinweise und dauerhafte Informationen sollten getrennt werden.",
+      "- Telefonnummer, E-Mail und WhatsApp stehen überwiegend im Fliesstext. Eine gut sichtbare Terminaktion wäre ein konkreter Verbesserungsansatz.",
+      "- Für Anrufe ausschliesslich die angegebene Festnetznummer verwenden; die Website bittet um keine WhatsApp-Anrufe."
+    ]
+  },
+  "seiler": {
+    "order": 4,
+    "priority": "Nach Betriebsferien prüfen",
+    "reason": "Konkrete mobile Verbesserungen, aber laut eigener Mitteilung bis 5. Oktober geschlossen.",
+    "findings": [
+      "- Beschreibungen und Beschriftungen der Leistungskarten sind laut Audit auf kleinen Bildschirmen schwer lesbar.",
+      "- Telefon und E-Mail sind vorhanden, aber ein hervorgehobener Kontaktaufruf im mobilen Einstieg fehlt.",
+      "- Das breite Sortiment führt zu einer sehr langen Startseite. Klare Kategorien und ein früher Beratungszugang wären mögliche Ansätze."
+    ]
+  },
+  "schreinerzwei": {
+    "order": 3,
+    "priority": "Interessant, Bedarf klären",
+    "reason": "Konkrete Verbesserungen bei Kontaktführung und Aktualität; ein eigenes Aktivitätssignal für 2026/2027 ist vorhanden.",
+    "findings": [
+      "- Die sichtbaren Einstiegs-Schaltflächen führen zu Informationen über Betrieb und Ausstellung. Ein hervorgehobener Kontakt- oder Offertenaufruf fehlt laut Audit im ersten Bildschirm.",
+      "- Startseite und Über-uns-Seite nennen unterschiedliche Ferienzeiträume; eine Angabe enthält sogar ein unplausibles Anfangs-/Enddatum. Bestätigte Angaben vereinheitlichen.",
+      "- Die mobile Performance lag bei 80/100. Das allein ist kein Beleg für gravierende Ladeprobleme."
+    ]
+  },
+  "wacker": {
+    "order": 5,
+    "priority": "Nach Betriebsferien prüfen",
+    "reason": "Gezielte Korrekturen sind belegt; die bestehende Website hat bereits einen klaren Reservationszugang.",
+    "findings": [
+      "- Die [Datenschutzseite](https://www.restaurant-wacker.ch/kopie-von-kontakt) enthält noch eine Musterüberschrift und Platzhaltertext. Tatsächliche Angaben prüfen und ergänzen.",
+      "- Mobile Texte und Navigation erscheinen sehr klein. Die für 375 Pixel angeforderte Aufnahme zeigt ein 980 Pixel breites Layout; die mobile Anpassung sollte geprüft werden.",
+      "- Reservation und Wochenmenü sind bereits im Einstieg vorhanden. Der Befund rechtfertigt zunächst Verbesserungen, nicht automatisch einen vollständigen Neubau."
+    ]
+  },
+  "macchi": {
+    "order": 7,
+    "priority": "Niedrige Priorität",
+    "reason": "Die Website ist nach dem Audit weitgehend brauchbar. Die gefundenen Punkte begründen zunächst gezielte Optimierungen.",
+    "findings": [
+      "- Der direkte Kontaktweg könnte früher sichtbar sein; Telefonnummer und E-Mail sind im Footer vorhanden.",
+      "- Die einzelne mobile Performance-Messung lag bei 65/100. Ursachen müssen vor einer Optimierung untersucht werden; Tracking-Anfragen wurden im Prüfumfeld teilweise blockiert.",
+      "- Es liegen keine Hinweise auf ein defektes Bestell- oder Buchungssystem vor. Ein kompletter Neubau ist durch diese Prüfung nicht begründet."
+    ]
+  },
+  "cacarola": {
+    "order": 8,
+    "priority": "Visuelle Prüfung fehlt",
+    "reason": "Die Browseraufnahmen liefen in das Zeitlimit. Daraus folgt weder eine schlechte Website noch ein geschlossener Betrieb.",
+    "findings": [
+      "- Der Agent findet einen Werbehinweis für den Website-Baukasten. Dieser könnte von einer Termin- oder Kontaktanfrage ablenken.",
+      "- Mobile und Desktop-Aufnahmen sowie eine verwertbare Performance-Messung fehlen. Deshalb keine belastbare visuelle Qualitätsbewertung.",
+      "- Telefonnummer und Adresse in diesem Bericht wurden ergänzend aus der Kontaktseite recherchiert. Sie lagen dem Agent im begrenzten Crawl nicht vor.",
+      "- Die separat geöffneten Seiten enthalten unterschiedliche ältere Ferienhinweise. Aktuelle Angaben vor einem Gespräch nochmals prüfen."
+    ]
+  }
+}
