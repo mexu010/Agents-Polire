@@ -5,7 +5,6 @@
   "installCommand": "",
   "outputDirectory": ".",
   "trailingSlash": true,
-  "public": false,
   "headers": [
     {
       "source": "/(.*)",
