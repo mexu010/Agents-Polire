@@ -1,0 +1,6 @@
+data/
+.env
+.env.*
+!.env.example
+.local-access.txt
+test-results/

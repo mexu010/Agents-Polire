@@ -1,0 +1,8 @@
+.env
+.env.*
+.local-access.txt
+data
+tests
+test-results
+node_modules
+.git
