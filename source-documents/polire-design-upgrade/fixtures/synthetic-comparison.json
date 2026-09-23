@@ -1,0 +1,254 @@
+{
+  "catalog": {
+    "version": "proposal-fixture-1",
+    "features": {
+      "composition": [
+        "atelier",
+        "editorial",
+        "bold",
+        "minimal"
+      ],
+      "hero_structure": [
+        "portrait-index",
+        "editorial-spread",
+        "type-led"
+      ],
+      "mobile_structure": [
+        "portrait-first",
+        "story-first",
+        "action-first"
+      ],
+      "section_rhythm": [
+        "compact-linear",
+        "alternating-spreads",
+        "dense-list"
+      ],
+      "font_pair": [
+        "sans",
+        "editorial"
+      ],
+      "image_strategy": [
+        "approved-portrait",
+        "approved-work",
+        "no-photo"
+      ],
+      "service_layout": [
+        "price-lines",
+        "feature-stories",
+        "compact-menu"
+      ],
+      "density": [
+        "calm",
+        "mixed",
+        "compact"
+      ]
+    },
+    "components": [
+      "hero",
+      "services",
+      "process",
+      "about",
+      "contact",
+      "faq",
+      "testimonials"
+    ]
+  },
+  "concepts": [
+    {
+      "concept_key": "concept-a",
+      "signature": {
+        "version": 2,
+        "capabilities_version": "proposal-fixture-1",
+        "features": {
+          "composition": "atelier",
+          "hero_structure": "portrait-index",
+          "mobile_structure": "portrait-first",
+          "section_rhythm": "compact-linear",
+          "font_pair": "sans",
+          "image_strategy": "approved-portrait",
+          "service_layout": "price-lines",
+          "density": "calm",
+          "section_order": [
+            "hero",
+            "about",
+            "services",
+            "contact"
+          ]
+        }
+      }
+    },
+    {
+      "concept_key": "concept-b",
+      "signature": {
+        "version": 2,
+        "capabilities_version": "proposal-fixture-1",
+        "features": {
+          "composition": "editorial",
+          "hero_structure": "editorial-spread",
+          "mobile_structure": "story-first",
+          "section_rhythm": "alternating-spreads",
+          "font_pair": "editorial",
+          "image_strategy": "approved-work",
+          "service_layout": "feature-stories",
+          "density": "mixed",
+          "section_order": [
+            "hero",
+            "services",
+            "about",
+            "contact"
+          ]
+        }
+      }
+    },
+    {
+      "concept_key": "concept-c",
+      "signature": {
+        "version": 2,
+        "capabilities_version": "proposal-fixture-1",
+        "features": {
+          "composition": "bold",
+          "hero_structure": "type-led",
+          "mobile_structure": "action-first",
+          "section_rhythm": "dense-list",
+          "font_pair": "sans",
+          "image_strategy": "no-photo",
+          "service_layout": "compact-menu",
+          "density": "compact",
+          "section_order": [
+            "hero",
+            "services",
+            "contact"
+          ]
+        }
+      }
+    }
+  ],
+  "portfolio": {
+    "candidate": {
+      "design_key": "candidate-design",
+      "project_key": "current-project",
+      "brand_key": "brand-current",
+      "recorded_at": "2026-09-22T11:00:00.000Z",
+      "signature": {
+        "version": 2,
+        "capabilities_version": "proposal-fixture-1",
+        "features": {
+          "composition": "atelier",
+          "hero_structure": "portrait-index",
+          "mobile_structure": "portrait-first",
+          "section_rhythm": "compact-linear",
+          "font_pair": "sans",
+          "image_strategy": "approved-portrait",
+          "service_layout": "price-lines",
+          "density": "calm",
+          "section_order": [
+            "hero",
+            "about",
+            "services",
+            "contact"
+          ]
+        }
+      }
+    },
+    "history": [
+      {
+        "design_key": "recent-different",
+        "project_key": "past-project-a",
+        "brand_key": "brand-a",
+        "recorded_at": "2026-09-21T11:00:00.000Z",
+        "signature": {
+          "version": 2,
+          "capabilities_version": "proposal-fixture-1",
+          "features": {
+            "composition": "editorial",
+            "hero_structure": "editorial-spread",
+            "mobile_structure": "story-first",
+            "section_rhythm": "alternating-spreads",
+            "font_pair": "editorial",
+            "image_strategy": "approved-work",
+            "service_layout": "feature-stories",
+            "density": "mixed",
+            "section_order": [
+              "hero",
+              "services",
+              "about",
+              "contact"
+            ]
+          }
+        }
+      },
+      {
+        "design_key": "older-repeat",
+        "project_key": "past-project-b",
+        "brand_key": "brand-b",
+        "recorded_at": "2026-09-20T11:00:00.000Z",
+        "signature": {
+          "version": 2,
+          "capabilities_version": "proposal-fixture-1",
+          "features": {
+            "composition": "atelier",
+            "hero_structure": "portrait-index",
+            "mobile_structure": "portrait-first",
+            "section_rhythm": "compact-linear",
+            "font_pair": "sans",
+            "image_strategy": "approved-portrait",
+            "service_layout": "price-lines",
+            "density": "calm",
+            "section_order": [
+              "hero",
+              "about",
+              "services",
+              "contact"
+            ]
+          }
+        }
+      },
+      {
+        "design_key": "legacy-record",
+        "project_key": "past-project-c",
+        "brand_key": null,
+        "recorded_at": "2026-09-19T11:00:00.000Z",
+        "signature": {
+          "composition": "atelier",
+          "font_pair": "sans",
+          "section_order": [
+            "hero",
+            "services",
+            "contact"
+          ]
+        }
+      },
+      {
+        "design_key": "same-project-revision",
+        "project_key": "current-project",
+        "brand_key": "brand-current",
+        "recorded_at": "2026-09-18T11:00:00.000Z",
+        "signature": {
+          "version": 2,
+          "capabilities_version": "proposal-fixture-1",
+          "features": {
+            "composition": "atelier",
+            "hero_structure": "portrait-index",
+            "mobile_structure": "portrait-first",
+            "section_rhythm": "compact-linear",
+            "font_pair": "sans",
+            "image_strategy": "approved-portrait",
+            "service_layout": "price-lines",
+            "density": "calm",
+            "section_order": [
+              "hero",
+              "about",
+              "services",
+              "contact"
+            ]
+          }
+        }
+      }
+    ],
+    "options": {
+      "limit": 8,
+      "near_repeat_threshold": 0.8,
+      "ignore_same_brand": false
+    }
+  }
+}

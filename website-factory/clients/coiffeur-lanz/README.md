@@ -2,6 +2,20 @@
 
 Vollständige, eigenständige Kundenwebsite mit sechs Inhaltsseitentypen (Start, Salon, Besuch, Kontakt, Journal, Beitrag), Impressum und Datenschutz. Servergerendert, mobil, lokale Schriftdateien, helle/dunkle Darstellung, geschützter Inhaltseditor, dauerhaftes Postfach, Bild-Upload, Journal, Besucherstatistik, Sicherungen und Monatsberichte. Kein zusätzlicher LLM-Aufruf und keine OpenAI-Schlüssel erforderlich.
 
+## Gewählte Gestaltung B
+
+Die redaktionelle Richtung B ist in den vorhandenen öffentlichen Renderer integriert. [Umsetzung, Vorher-/Nachher-Bilder und Testnachweise](DESIGN-B-UMSETZUNG.md).
+
+Für eine sichere lokale Besichtigung mit einer **neuen isolierten Testdatenbank**, ohne `.env` und ohne Zugriff auf vorhandene Kundendaten:
+
+```powershell
+node preview-review.mjs
+```
+
+Öffnet einen Server auf `http://127.0.0.1:4332/` (selbst im Browser öffnen). Der Pfad zum zufälligen Verwaltungszugang wird im Terminal genannt; das Passwort wird ausschliesslich in der dortigen lokalen Datei gespeichert. Optional `--port 4333`. Strg+C beendet die Vorschau. Jeder Start verwendet neue Testdaten; frühere Testverzeichnisse werden nicht automatisch gelöscht. Keine E-Mails, keine Veröffentlichung, keine geplanten Wartungsaufgaben.
+
+Gespeicherte Kundeninhalte werden durch die Gestaltung nicht ersetzt. Der neue Standardtitel «Coiffeur Lanz. / In Bleienbach.» gilt für neue Datenbestände. In einem bereits bestehenden Bestand kann die Inhaberin ihn im Editor selbst übernehmen oder ihren bisherigen Titel behalten. Das Titelfeld unterstützt jetzt Zeilenumbrüche.
+
 ## Lokal starten
 
 Node.js ab 24.14.0, geprüft mit 24.19.0. Keine Installation von Laufzeitpaketen nötig. Im Ordner `clients/coiffeur-lanz`:
@@ -73,6 +87,7 @@ node --test tests/*.test.mjs
 # Im Factory-Checkout mit den bestehenden Playwright-Abhängigkeiten:
 node check-browser.mjs
 node check-admin.mjs
+node check-design-b.mjs
 ```
 
 Die API-Tests prüfen unter anderem Zugriffsschutz, CSRF, persistente Änderungen, Revisionskonflikte, Spam-/Formularschutz, Wiederholungen, Zustellfehler, Statistik-Privatsphäre und Backups. Browsertests verwenden ein getrenntes Testdatenverzeichnis, keine realen Anfragen oder E-Mails.

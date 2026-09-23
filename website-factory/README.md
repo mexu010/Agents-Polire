@@ -8,10 +8,10 @@ Lokale TypeScript-Anwendung mit sieben Agent-Stufen, SQLite, einem deklarativen 
 
 Neue Demos durchlaufen nach deiner Demo-Freigabe: **Referenzen prüfen → Designrichtung begründen → SiteSpec bauen → rendern → Browser- und QA-Prüfung**. Die Recherche ist normaler Anwendungscode; es kommt kein zusätzlicher LLM-Agent hinzu.
 
-- Die Factory wählt anhand belegter Branche/Leistungen zunächst zwei Referenzseiten und erfasst Quellenauszüge sowie je eine Desktop-Ansicht. Der vorhandene Crawler begrenzt Abrufe und respektiert seine Netzwerk-/Robots-Regeln. Referenzbilder werden dem Strategist als Bilder übergeben, nicht als freigegebene Kunden-Assets.
+- Die Factory wählt anhand belegter Branche/Leistungen Referenzkandidaten und einen begründeten Gestaltungskontrast. Auswahlgrund und Erfassungslücken werden gespeichert. Die erste lesbare Referenz wird nach Möglichkeit auf Desktop und Mobil erfasst, weitere Referenzen auf Desktop (höchstens vier Bildeingaben). Der vorhandene Crawler begrenzt Abrufe und respektiert seine Netzwerk-/Robots-Regeln. Referenzbilder werden dem Strategist als Bilder übergeben, nicht als freigegebene Kunden-Assets. Eine reine URL oder Bild-ID erlaubt keine visuelle Behauptung.
 - Ohne Suchanbindung verwendet sie einen kleinen branchenbezogenen Referenzkatalog. Er enthält Startpunkte für Salon/Beauty, Gastronomie, Handwerk/Architektur und Garten. Andere Branchen erhalten ausdrücklich allgemeine Gestaltungsreferenzen. Das ist keine offene Websuche und keine Rangliste der besten Websites. Alternativ lassen sich bis zu drei konkrete Referenz-URLs konfigurieren. Bei aktivierter, budgetierter Brave-Suche sucht sie nach der jeweiligen Branche und prüft die gefundenen Quellen anschliessend.
-- Der Strategist muss konkrete Beobachtungen und ihre Anwendung, ein eigenes Konzept sowie mindestens zwei verworfene Richtungen nennen. Vier strukturelle Kompositionen stehen zur Verfügung: **Atelier, Editorial, Bold und Minimal**. Abschnittsfolge, Schrift, Palette, Abstände und freigegebene Bilder passen die Richtung an die Firma an. Farbe oder Schrift allein dürfen eine unmittelbar vorherige, vergleichbare Komposition mit derselben Abschnittsfolge nicht als neuen Entwurf ausgeben.
-- Der Builder muss die gewählte Komposition erhalten. QA prüft die Umsetzung anhand der tatsächlichen Mobil-/Desktopbilder. Referenztexte bleiben fremde Inhalte: keine kopierten Kundenbehauptungen, keine ungeklärten Bildrechte. Ohne Referenzbild sind nur Textbeobachtungen erlaubt. Ist keine Quelle lesbar, stoppt der Ablauf vor dem Strategist mit `needs_input`.
+- Der Strategist muss konkrete Beobachtungen und ihre Anwendung, ein eigenes Konzept sowie mindestens zwei verworfene Richtungen nennen. Die bisherigen Kompositionen **Atelier, Editorial, Bold und Minimal** bleiben erhalten. Dazu kommen drei validierte Rendererprofile: **editorial-spread**, **service-index** und **type-poster**, mit eigenen Hero-, Leistungs-, Bild- und Mobilstrukturen. Strategist und Builder müssen die zulässigen Kombinationen von Profil, Komposition und Schrift einhalten. Der Vergleich umfasst bis zu acht frühere Projekte derselben Branche; derselbe Firmenhost und seine Revisionen zählen nicht erneut. Fehlende alte Signaturen werden als Vergleichslücke gezeigt. Eine unterschiedliche Signatur ist kein Nachweis für gutes Design.
+- Der Builder muss das gewählte Profil und die Abschnittsfolge erhalten. Redaktionelle Texte und faktgebundene Satzrahmen dürfen natürlicher formulieren, die Faktenprüfung bleibt aktiv. Ohne freigegebene Fotos funktionieren die Profile mit Typografie, Linien und Flächen. QA erhält die aktuellen Renderbilder; ein visuelles Urteil benötigt eine passende Route, einen passenden Viewport und den aktuellen Artefakt-/Bildhash. Fehler benötigen Beobachtung, Änderungsvorschlag und prüfbares Abnahmekriterium. Referenztexte bleiben fremde Inhalte: keine kopierten Kundenbehauptungen, keine ungeklärten Bildrechte. Ohne Referenzbild sind nur Textbeobachtungen erlaubt. Ist keine Quelle lesbar, stoppt der Ablauf vor dem Strategist mit `needs_input`.
 
 Grenzen lassen sich zentral in der verwendeten Konfigurationsdatei einstellen:
 
@@ -44,6 +44,32 @@ pnpm designs:check
 ```
 
 Ohne `pnpm` im PATH: `node --use-system-ca --import tsx scripts/design-showcase.ts` beziehungsweise zusätzlich `--check-only`. Der Vergleich öffnet lokal Port 4321 und geschützte Einzelvorschauen auf freien Ports; die bestehende Demoübersicht auf 4320 bleibt frei. Einzelvorschauen laufen nach einer Stunde ab. `designs:check` erzeugt echte Screenshots und Browserprüfungen bei 375/768/1440 Pixeln unter `work/design-showcase/`. Diese Funktionstests ersetzen keinen echten Modell-Designlauf und keine menschliche Qualitätsbewertung.
+
+## Optional: drei gerenderte Konzepte vor dem Build
+
+`designExploration.enabled` ist standardmässig `false`. Bei `true` erstellt der vorhandene Strategist einen zusätzlichen schema-validierten Explorationsschritt. Alle drei Mini-Vorschauen verwenden dieselben bestätigten Inhalte und dieselben freigegebenen Assets. Der Lauf wartet bei `concept_review` auf menschliche Auswahl. Die textlichen Alternativen des normalen Briefings bleiben davon getrennt.
+
+Kostenloser lokaler Test mit synthetischer Firma, ohne externe Recherche und ohne Modellaufruf:
+
+```powershell
+Set-Location 'C:\Users\StartKlar\Documents\ChatGPT\Project-Polire\website-factory'
+pnpm factory --config config/design-exploration.fixture.json run --mode fixture --run-id design-upgrade-preview --domain https://fixture.alpina-service.example/
+pnpm factory --config config/design-exploration.fixture.json concepts open design-upgrade-preview --port 4331
+```
+
+Die zweite Ausgabe enthält einen lokalen geschützten Link. Zum Beenden `Ctrl+C`. In einem zweiten Terminal lässt sich der aktuelle Auswahlstand lesen und eine Richtung wählen:
+
+```powershell
+pnpm factory --config config/design-exploration.fixture.json concepts show design-upgrade-preview
+pnpm factory --config config/design-exploration.fixture.json concepts select design-upgrade-preview CONCEPT_ID --revision REVISION --review-hash REVIEW_HASH
+pnpm factory --config config/design-exploration.fixture.json preview open design-upgrade-preview
+```
+
+Platzhalter aus `concepts show` übernehmen. Erst die Auswahl startet den einen vollständigen Builder-/QA-Durchlauf. `resume` während der Auswahlpause startet keine weiteren Modellaufrufe. Die Auswahl ist an Revision, Recherche, Fähigkeiten, Artefakte und Screenshot-Hashes gebunden. Änderungen machen sie ungültig. Eine abgelaufene Vorschau muss gezielt über `revise` mit `refreshDesignReferences` erneuert werden; das kann im Live-Modus erneut Quoten/Kosten verbrauchen.
+
+Die Galerie ist schreibgeschützt, nur lokal erreichbar und mit kurzlebigem Token geschützt. Angezeigte Profilbeschreibungen stammen aus den implementierten Rendererfähigkeiten; ungeprüfte Modellprosa dient nicht als sichtbarer Nachweis. Ein neues Profil muss in Vertrag, Fähigkeiten, Renderer und Tests ergänzt werden.
+
+Im Live-Modus zählt Exploration als zusätzlicher Strategist-Aufruf mit dessen Modell, Reasoning, Tokenlimit und bestehenden API-Budgets beziehungsweise OAuth-Quoten. Kein zusätzlicher Agent, keine automatische Freigabe, kein höheres Limit. Grosse Inputs können weiterhin vor dem Dispatch am unveränderten Eingabelimit stoppen. Für diesen Upgrade-Auftrag wurden keine Live-Modellläufe freigegeben.
 
 ## Schnellstart mit ChatGPT-Anmeldung
 

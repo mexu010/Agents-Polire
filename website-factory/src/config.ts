@@ -56,6 +56,7 @@ export interface FactoryConfig {
   offer: JsonObject;
   agency: JsonObject | null;
   autoGenerate: boolean;
+  designExploration: { enabled: boolean };
   designResearch: {
     maxReferences: number;
     maxDurationMsPerReference: number;
@@ -212,6 +213,7 @@ export function defaultConfig(): FactoryConfig {
     },
     agency: null,
     autoGenerate: false,
+    designExploration: { enabled: false },
     designResearch: {
       maxReferences: 2,
       maxDurationMsPerReference: 45_000,
@@ -365,6 +367,8 @@ export function validateConfig(config: FactoryConfig): FactoryConfig {
       throw new Error(`limits.${key} exceeds hard maximum ${cap}`);
   if (typeof config.autoGenerate !== "boolean")
     throw new Error("autoGenerate must be boolean");
+  if (typeof config.designExploration.enabled !== "boolean")
+    throw new Error("designExploration.enabled must be boolean");
   positiveInteger(
     "designResearch.maxReferences",
     config.designResearch.maxReferences,

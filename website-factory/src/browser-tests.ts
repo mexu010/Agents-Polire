@@ -24,6 +24,16 @@ const VIEWPORTS: Viewport[] = [
   { width: 1440, height: 1000 },
 ];
 
+/** innerText applies CSS text-transform. Copy/source validation remains exact upstream. */
+export function renderedCopyPresent(
+  visibleText: string,
+  expected: string,
+): boolean {
+  return visibleText
+    .toLocaleLowerCase("de-CH")
+    .includes(expected.toLocaleLowerCase("de-CH"));
+}
+
 function checkId(
   category: string,
   route: string | null,
@@ -218,14 +228,12 @@ async function pageChecks(
       : "An external or undeclared link was rendered",
   );
 
-  const assetStatus = await page
-    .locator("img")
-    .evaluateAll((images) =>
-      images.map((image) => ({
-        complete: (image as HTMLImageElement).complete,
-        width: (image as HTMLImageElement).naturalWidth,
-      })),
-    );
+  const assetStatus = await page.locator("img").evaluateAll((images) =>
+    images.map((image) => ({
+      complete: (image as HTMLImageElement).complete,
+      width: (image as HTMLImageElement).naturalWidth,
+    })),
+  );
   const assetsPass = assetStatus.every(
     (asset) => asset.complete && asset.width > 0,
   );
@@ -307,7 +315,7 @@ async function pageChecks(
           !["unknown", "conflicting"].includes(fact.verification)
         );
       }) &&
-      (visibleText.includes(candidate.text) ||
+      (renderedCopyPresent(visibleText, candidate.text) ||
         metaDescription === candidate.text),
   );
   add(
@@ -389,6 +397,7 @@ export async function runBrowserTests({
     sha256: string;
   }>;
   build: JsonObject;
+  visualContractVersion: "rendered-views/2";
 }> {
   validate("SiteSpec", siteSpec);
   validate("Profile", profile);
@@ -470,5 +479,12 @@ export async function runBrowserTests({
     await preview.close();
   }
   verifyArtifact({ artifactDir, expectedHash: verifiedArtifact.hash });
-  return { results, requiredChecks, evidence: allEvidence, images, build };
+  return {
+    results,
+    requiredChecks,
+    evidence: allEvidence,
+    images,
+    build,
+    visualContractVersion: "rendered-views/2",
+  };
 }

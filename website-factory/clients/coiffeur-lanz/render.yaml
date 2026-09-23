@@ -1,0 +1,39 @@
+# Deployment-Vorschlag, noch nicht eingerichtet. Kostenpflichtig: vorher freigeben.
+# Blueprint-Pfad im GitHub-Sammelrepo:
+# website-factory/clients/coiffeur-lanz/render.yaml
+services:
+  - type: web
+    name: polire-coiffeur-lanz
+    runtime: node
+    region: frankfurt
+    plan: 0.5c-512mb
+    numInstances: 1
+    rootDir: website-factory/clients/coiffeur-lanz
+    autoDeployTrigger: "off"
+    buildCommand: node cli.mjs check
+    startCommand: 'PUBLIC_ORIGIN="${PUBLIC_ORIGIN:-${RENDER_EXTERNAL_URL:?}}" exec node cli.mjs start'
+    healthCheckPath: /healthz
+    maxShutdownDelaySeconds: 30
+    disk:
+      name: lanz-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: NODE_VERSION
+        value: 24.19.0
+      - key: SKIP_INSTALL_DEPS
+        value: "true"
+      - key: HOST
+        value: 0.0.0.0
+      - key: PORT
+        value: "10000"
+      - key: DATA_DIR
+        value: /var/data/lanz
+      - key: APP_STAGE
+        value: review
+      - key: TRUST_PROXY
+        value: "false"
+      - key: ADMIN_PASSWORD_HASH
+        sync: false
+      - key: SESSION_SECRET
+        generateValue: true

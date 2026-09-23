@@ -79,6 +79,38 @@ describe("design direction policy", () => {
       validateDesignPlan(brief(), { design_research: packet }),
     ).toThrow(/image/i);
   });
+  it("binds visual observations to delivered screenshot images for current inputs", () => {
+    const packet = research();
+    const current = {
+      design_research: packet,
+      images: [
+        {
+          evidence_id: "img-1",
+          attachment_ref: "reference.png",
+          sha256: "abc",
+          width: 1440,
+          height: 1000,
+        },
+      ],
+      evidence: [{ evidence_id: "img-1", kind: "screenshot" }],
+    };
+    expect(() => validateDesignPlan(brief(), current)).not.toThrow();
+    expect(() =>
+      validateDesignPlan(brief(), { ...current, images: [] }),
+    ).toThrow(/delivered screenshot/i);
+    expect(() =>
+      validateDesignPlan(brief(), {
+        ...current,
+        evidence: [{ evidence_id: "img-1", kind: "html" }],
+      }),
+    ).toThrow(/delivered screenshot/i);
+    expect(() =>
+      validateDesignPlan(brief(), {
+        ...current,
+        images: [{ ...current.images[0], evidence_id: "another-image" }],
+      }),
+    ).toThrow(/delivered screenshot/i);
+  });
   it("requires two genuinely different alternatives and rejects a colour-only repeat", () => {
     const data = brief();
     data.design_plan.alternatives[0].composition = "atelier";

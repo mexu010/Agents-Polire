@@ -1,0 +1,86 @@
+{
+  "candidate": {
+    "design_key": "candidate-design",
+    "project_key": "current-project",
+    "brand_key": "brand-current",
+    "recorded_at": "2026-09-22T11:00:00.000Z",
+    "signature": {
+      "composition": "atelier",
+      "font_pair": "sans",
+      "section_order": [
+        "hero",
+        "about",
+        "services",
+        "contact"
+      ]
+    }
+  },
+  "history": [
+    {
+      "design_key": "recent-different",
+      "project_key": "past-project-a",
+      "brand_key": "brand-a",
+      "recorded_at": "2026-09-21T11:00:00.000Z",
+      "signature": {
+        "composition": "editorial",
+        "font_pair": "editorial",
+        "section_order": [
+          "hero",
+          "services",
+          "about",
+          "contact"
+        ]
+      }
+    },
+    {
+      "design_key": "older-repeat",
+      "project_key": "past-project-b",
+      "brand_key": "brand-b",
+      "recorded_at": "2026-09-20T11:00:00.000Z",
+      "signature": {
+        "composition": "atelier",
+        "font_pair": "sans",
+        "section_order": [
+          "hero",
+          "about",
+          "services",
+          "contact"
+        ]
+      }
+    },
+    {
+      "design_key": "legacy-record",
+      "project_key": "past-project-c",
+      "brand_key": null,
+      "recorded_at": "2026-09-19T11:00:00.000Z",
+      "signature": {
+        "composition": "atelier",
+        "font_pair": "sans",
+        "section_order": [
+          "hero",
+          "services",
+          "contact"
+        ]
+      }
+    },
+    {
+      "design_key": "same-project-revision",
+      "project_key": "current-project",
+      "brand_key": "brand-current",
+      "recorded_at": "2026-09-18T11:00:00.000Z",
+      "signature": {
+        "composition": "atelier",
+        "font_pair": "sans",
+        "section_order": [
+          "hero",
+          "about",
+          "services",
+          "contact"
+        ]
+      }
+    }
+  ],
+  "options": {
+    "limit": 8
+  }
+}

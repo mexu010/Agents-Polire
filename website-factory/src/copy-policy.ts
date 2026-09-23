@@ -6,6 +6,13 @@ export const EDITORIAL_COPY_TEMPLATES = [
   "Jetzt Kontakt aufnehmen",
   "Kontaktangaben ansehen.",
   "Leistungen",
+  "Angebot ansehen",
+  "Auf einen Blick",
+  "Ihr Besuch",
+  "Startseite",
+  "Übersicht",
+  "Zur Übersicht",
+  "Zum Kontakt",
   "Über uns",
   "Mehr erfahren",
   "Anfrage starten",
@@ -15,6 +22,14 @@ export const EDITORIAL_COPY_TEMPLATES = [
   "Alle wichtigen Informationen auf einen Blick.",
   "Darf ich Ihnen den Vorschlag kurz vorstellen?",
   "Unverbindlichen Vorschlag ansehen.",
+] as const;
+
+export const FACTUAL_COPY_FRAMES = [
+  "{fact} im Überblick",
+  "Mehr über {fact} erfahren",
+  "{fact} entdecken",
+  "Details zu {fact}",
+  "Informationen zu {fact}",
 ] as const;
 
 export const FACTUAL_CONNECTOR_WORDS = [
@@ -66,6 +81,11 @@ export const normaliseCopy = (text: string): string =>
 
 const editorial = new Set(EDITORIAL_COPY_TEMPLATES.map(normaliseCopy));
 const factualConnectors = new Set<string>(FACTUAL_CONNECTOR_WORDS);
+const factualFrameRemainders = new Set(
+  FACTUAL_COPY_FRAMES.map((frame) =>
+    normaliseCopy(frame.replace("{fact}", "")),
+  ),
+);
 const subjects = new Set(SUBJECT_TEMPLATES.map(normaliseCopy));
 
 const removeProjection = (text: string, support: string): string =>
@@ -91,7 +111,9 @@ export function assertCopyPolicy(
     throw new Error(`unsupported claim in copy: ${text}`);
   for (const support of [...supports].sort((a, b) => b.length - a.length))
     remainder = removeProjection(remainder, support);
-  const extra = normaliseCopy(remainder).split(" ").filter(Boolean);
+  const normalisedRemainder = normaliseCopy(remainder);
+  if (factualFrameRemainders.has(normalisedRemainder)) return;
+  const extra = normalisedRemainder.split(" ").filter(Boolean);
   if (extra.some((word) => !factualConnectors.has(word)))
     throw new Error(`unsupported claim in copy: ${text}`);
 }
@@ -111,8 +133,9 @@ export function assertSubjectPolicy(
     throw new Error(`unsupported claim in Sales subject: ${subject}`);
 }
 
-export const COPY_POLICY_PROMPT = `Copy-Policy (Runtime und Prompt verwenden dieselbe Liste):
-- Redaktionelle Copy ohne Fakt-IDs darf ausschliesslich eine dieser vollständigen Vorlagen verwenden: ${EDITORIAL_COPY_TEMPLATES.map((template) => JSON.stringify(template)).join(", ")}.
-- Factual Copy muss jeden referenzierten Fakt-, Improvement- oder Operatorwert wörtlich wiedergeben. Zusätzlich sind ausschliesslich diese neutralen Bindewörter erlaubt: ${FACTUAL_CONNECTOR_WORDS.join(", ")}.
-- Sales-Betreff ohne Firmenwert darf ausschliesslich eine dieser vollständigen Vorlagen verwenden: ${SUBJECT_TEMPLATES.map((template) => JSON.stringify(template)).join(", ")}. Mit einem belegten company_name sind ausschliesslich diese Rahmen erlaubt: ${SUBJECT_FACT_FRAMES.map((template) => JSON.stringify(template)).join(", ")}.
-- Vorlagen dürfen nicht erweitert werden. Zahlen, Zertifikate, Garantien, Leistungen, Orte, Personalgrössen und andere konkrete Firmenbehauptungen benötigen die entsprechende factual Projektion.`;
+export const COPY_POLICY_PROMPT = `Copy-Policy:
+- Editorial: exakt eine Vorlage, keine fact_ids: ${EDITORIAL_COPY_TEMPLATES.join(" | ")}.
+- Factual: alle referenzierten Werte wörtlich. Nur Bindewörter (${FACTUAL_CONNECTOR_WORDS.join(",")}) oder Rahmen (${FACTUAL_COPY_FRAMES.join(" | ")}); {fact}=unveränderter Wert.
+- Vorlagen nie erweitern. Firmenbehauptungen benötigen passende factual Projektionen.`;
+
+export const SUBJECT_POLICY_PROMPT = `Sales-Betreff: exakt ${SUBJECT_TEMPLATES.join(" | ")}; mit belegtem company_name auch ${SUBJECT_FACT_FRAMES.join(" | ")}.`;

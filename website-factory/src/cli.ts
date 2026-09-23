@@ -17,6 +17,7 @@ import { ModelProvider } from "./provider.js";
 import { Store } from "./store.js";
 import { Evaluation } from "./evaluation.js";
 import { registerWorkflowCommands } from "./workflow-cli.js";
+import { startConceptPreview } from "./concept-preview.js";
 
 type GlobalOptions = { config?: string; dataDir?: string };
 function configured(
@@ -113,6 +114,21 @@ function print(value: unknown): void {
   process.stdout.write(`${JSON.stringify(value, null, 2)}\n`);
 }
 function runOutput(job: JsonObject): JsonObject {
+  if (job.stage === "concept_review" && job.context.conceptPreviews)
+    return {
+      runId: job.id,
+      revision: job.revision,
+      stage: job.stage,
+      status: job.status,
+      reviewHash: job.context.conceptPreviews.reviewHash,
+      concepts: job.context.conceptPreviews.previews.map((p: JsonObject) => ({
+        conceptId: p.conceptId,
+        title: p.concept.title,
+        profile: p.concept.design_profile,
+      })),
+      notice:
+        "Drei echte Mini-Vorschauen. Mit concepts open ansehen und mit concepts select auswählen. Noch kein Vollbuild.",
+    };
   const review = job.context?.demoReview;
   if (!review) return job;
   return {
@@ -259,6 +275,60 @@ cli
       }),
     ),
   );
+
+const concepts = cli.command("concepts");
+concepts
+  .command("show")
+  .argument("<run-id>")
+  .action(async (runId, _, cmd) =>
+    print(
+      await useFactory(cmd.optsWithGlobals(), (f) => f.conceptReview(runId)),
+    ),
+  );
+concepts
+  .command("select")
+  .argument("<run-id>")
+  .argument("<concept-id>")
+  .requiredOption("--revision <number>", "expected revision", Number)
+  .requiredOption("--review-hash <hash>", "exact reviewed concept set")
+  .action(async (runId, conceptId, o, cmd) =>
+    print(
+      runOutput(
+        await useFactory(cmd.optsWithGlobals(), (f) =>
+          f.selectConcept(runId, conceptId, o.revision, o.reviewHash),
+        ),
+      ),
+    ),
+  );
+concepts
+  .command("open")
+  .argument("<run-id>")
+  .option("--port <number>", "loopback gallery port", Number)
+  .action(async (runId, o, cmd) => {
+    const config = configured(cmd.optsWithGlobals());
+    const store = new Store(config.dataDir);
+    try {
+      const factory = new Factory(config, store);
+      const review = factory.conceptReview(runId);
+      const server = await startConceptPreview({ review, port: o.port });
+      print({
+        url: server.url,
+        runId,
+        revision: review.revision,
+        reviewHash: review.reviewHash,
+        notice:
+          "Geschützte lokale Konzeptauswahl. Auswahl über concepts select; Strg+C beendet die Ansicht.",
+      });
+      const close = async () => {
+        await server.close();
+        process.exit(0);
+      };
+      process.once("SIGINT", () => void close());
+      process.once("SIGTERM", () => void close());
+    } finally {
+      store.close();
+    }
+  });
 
 const preview = cli.command("preview");
 preview

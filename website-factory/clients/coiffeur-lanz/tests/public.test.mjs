@@ -78,6 +78,7 @@ test('production metadata indexes pages and unknown routes return a real 404', (
   const missing = page('/fehlend/');
   assert.equal(missing.status, 404);
   assert.match(missing.html, /Seite nicht gefunden/);
+  assert.match(missing.html, /data-page-status="404"/);
 });
 
 test('published article has BlogPosting metadata with its date', () => {
@@ -86,4 +87,42 @@ test('published article has BlogPosting metadata with its date', () => {
   const { html } = page('/journal/ausblick/', content);
   assert.match(html, /"@type":"BlogPosting"/);
   assert.match(html, /"datePublished":"2026-09-22"/);
+});
+
+test('editorial pages keep the saved identity and copy instead of embedding original business facts', () => {
+  const content = structuredClone(initialContent);
+  Object.assign(content.business, { name: 'Salon Test', person: 'Testperson', city: 'Testort', street: 'Testweg 9', postalCode: '9999' });
+  content.home = { eyebrow: 'Eigener Einstieg', headline: 'Mein <Titel>\nZweite Zeile', intro: 'Eigene Startbeschreibung.' };
+  content.salon = { headline: 'Eigener Salontitel', intro: 'Eigene Salonbeschreibung.' };
+  content.visit.intro = 'Eigene Besuchsbeschreibung.';
+  content.contact.intro = 'Eigene Kontaktbeschreibung.';
+  for (const path of ['/', '/salon/', '/besuch/', '/kontakt/', '/journal/']) {
+    const html = page(path, content).html;
+    const visible = html.slice(html.indexOf('<body'));
+    assert.doesNotMatch(visible, /Vreni Lanz|Coiffeur Lanz|Bleienbach|Eichi 20/, path);
+    assert.match(visible, /Testort/);
+  }
+  const html = page('/', content).html;
+  assert.match(html, /Mein &lt;Titel&gt;<br>Zweite Zeile/);
+  assert.match(html, /Eigener Einstieg/);
+  assert.match(html, /Eigene Startbeschreibung/);
+  assert.match(page('/salon/', content).html, /Eigener Salontitel/);
+  assert.match(page('/salon/', content).html, /Eigene Salonbeschreibung/);
+});
+
+test('editorial image uses the approved local asset or a complete text-only layout', () => {
+  const content = structuredClone(initialContent);
+  content.heroImage = '/assets/uploads/approved.png';
+  content.heroAlt = 'Freigegebene Aufnahme <Salon>';
+  const uploaded = page('/', content).html;
+  assert.match(uploaded, /src="\/assets\/uploads\/approved.png"/);
+  assert.match(uploaded, /alt="Freigegebene Aufnahme &lt;Salon&gt;"/);
+  assert.doesNotMatch(uploaded, /<figcaption>Symbolbild/);
+  for (const image of ['', 'https://unapproved.example/image.jpg', '/assets/../private.png']) {
+    content.heroImage = image;
+    const html = page('/', content).html;
+    assert.match(html, /class="hero-spread is-text-only"/);
+    assert.doesNotMatch(html, /<figure/);
+    assert.match(html, /Termin anfragen/);
+  }
 });

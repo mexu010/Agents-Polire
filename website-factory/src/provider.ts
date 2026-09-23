@@ -3,13 +3,7 @@ import { readFileSync } from "node:fs";
 import { extname, resolve } from "node:path";
 import OpenAI from "openai";
 import { promptFor } from "./agents.js";
-import {
-  hash,
-  id,
-  ROOT_NAMES,
-  type AgentName,
-  type JsonObject,
-} from "./contracts.js";
+import { hash, id, type AgentName, type JsonObject } from "./contracts.js";
 import type { FactoryConfig, ModelConfig, Price } from "./config.js";
 import { BudgetExceededError, Store } from "./store.js";
 import {
@@ -20,6 +14,7 @@ import {
 } from "./codex-oauth.js";
 import { reserveOAuthCall, oauthQuotaStatus } from "./oauth-quota.js";
 import { modelOutputSchema, readAgentModelOutput } from "./model-contracts.js";
+import { taskSchema, type AgentTask } from "./design-concepts.js";
 
 interface ResponsesClient {
   responses: { create(body: any, options?: any): Promise<any> };
@@ -464,6 +459,7 @@ export class ModelProvider {
 
   async invoke(args: {
     agent: AgentName;
+    task?: AgentTask;
     input: JsonObject;
     runId: string;
     leadId: string;
@@ -472,6 +468,7 @@ export class ModelProvider {
     repair?: { reason: string };
     images?: Array<{ path: string; evidence_id: string; sha256?: string }>;
   }): Promise<JsonObject> {
+    taskSchema(args.agent, args.task);
     if (this.config.mode !== "live")
       throw new ProviderError(
         "FIXTURE_DISPATCH_FORBIDDEN",
@@ -555,7 +552,7 @@ export class ModelProvider {
               : "initial";
       const requestBody = {
         model,
-        instructions: promptFor(args.agent),
+        instructions: promptFor(args.agent, args.task),
         input: [
           {
             role: "user",
@@ -578,9 +575,9 @@ export class ModelProvider {
         text: {
           format: {
             type: "json_schema",
-            name: `${ROOT_NAMES[args.agent]}Output`,
+            name: `${taskSchema(args.agent, args.task)}Output`,
             strict: true,
-            schema: modelOutputSchema(args.agent),
+            schema: modelOutputSchema(args.agent, args.task),
           },
         },
         service_tier: "default",
@@ -703,7 +700,7 @@ export class ModelProvider {
           parsed = null;
         }
         try {
-          const validated = readAgentModelOutput(args.agent, parsed);
+          const validated = readAgentModelOutput(args.agent, parsed, args.task);
           this.store.updateAttempt(attemptId, { state: "succeeded" });
           return validated;
         } catch {
@@ -1135,9 +1132,10 @@ export class ModelProvider {
       model,
       limits: configured,
       images,
-      instructions: promptFor(args.agent),
-      schema: modelOutputSchema(args.agent),
-      validateOutput: (value) => readAgentModelOutput(args.agent, value),
+      instructions: promptFor(args.agent, args.task),
+      schema: modelOutputSchema(args.agent, args.task),
+      validateOutput: (value) =>
+        readAgentModelOutput(args.agent, value, args.task),
     });
   }
 

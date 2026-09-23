@@ -415,9 +415,9 @@ describe("renderSite", () => {
             return range.getClientRects().length;
           };
           const headline = document.querySelector("h1")!;
-          const label = Array.from(document.querySelectorAll(".contact span")).find(
-            (element) => element.textContent === "Kontaktseite",
-          )!;
+          const label = Array.from(
+            document.querySelectorAll(".contact span"),
+          ).find((element) => element.textContent === "Kontaktseite")!;
           return {
             wordLines: rectCount(headline, "Haarschnitte".length),
             labelLines: rectCount(label, "Kontaktseite".length),
@@ -456,7 +456,7 @@ describe("renderSite", () => {
       expect(home.match(/<h1\b/g)).toHaveLength(1);
       expect(services.match(/<h1\b/g)).toHaveLength(1);
       expect(home).toContain(
-        '<a class="brand" href="/">Muster Gartenpflege</a>',
+        '<a class="brand title-medium-word" href="/">Muster Gartenpflege</a>',
       );
       expect(home).toContain("Ihr Garten. Sorgfaeltig gepflegt.");
       expect(home).toContain(`composition-${composition}`);
@@ -516,6 +516,424 @@ describe("renderSite", () => {
     }
     expect(signatures.size).toBe(4);
   });
+
+  test.each([
+    [
+      "editorial-spread",
+      "editorial",
+      "editorial",
+      "spread-hero",
+      "spread-services",
+    ],
+    ["service-index", "minimal", "sans", "index-hero", "index-services"],
+    ["type-poster", "bold", "sans", "poster-hero", "poster-services"],
+  ] as const)(
+    "renders %s as a genuine photo-free structure",
+    async (
+      design_profile,
+      composition,
+      font_pair,
+      heroStructure,
+      serviceStructure,
+    ) => {
+      const base = siteSpec();
+      const rendered = await renderSite({
+        leadId: "lead-renderer-test",
+        siteSpec: siteSpec({
+          theme: { ...base.theme, design_profile, composition, font_pair },
+        }),
+        profile,
+        assets: [],
+        outputDir: await temporaryDirectory(),
+        mode: "fixture",
+      });
+      const home = await readFile(
+        path.join(rendered.artifactDir, "index.html"),
+        "utf8",
+      );
+      const services = await readFile(
+        path.join(rendered.artifactDir, "leistungen", "index.html"),
+        "utf8",
+      );
+      const css = await readFile(
+        path.join(rendered.artifactDir, "assets", "site.css"),
+        "utf8",
+      );
+      expect(home).toContain(`profile-${design_profile}`);
+      expect(home).toContain(heroStructure);
+      expect(services).toContain(serviceStructure);
+      expect(home.match(/<h1\b/g)).toHaveLength(1);
+      expect(services.match(/<h1\b/g)).toHaveLength(1);
+      expect(home).not.toMatch(/<img\b|<script\b|(?:mailto:|tel:|https?:\/\/)/);
+      expect(css).toContain(`.profile-${design_profile}`);
+      expect(() =>
+        verifyArtifact({
+          artifactDir: rendered.artifactDir,
+          expectedHash: rendered.hash,
+        }),
+      ).not.toThrow();
+    },
+  );
+
+  test("rejects a contradictory selected profile before creating an artifact", async () => {
+    const base = siteSpec();
+    const outputDir = await temporaryDirectory();
+    await expect(
+      renderSite({
+        leadId: "lead-renderer-test",
+        siteSpec: siteSpec({
+          theme: {
+            ...base.theme,
+            design_profile: "type-poster",
+            composition: "minimal",
+            font_pair: "sans",
+          },
+        }),
+        profile,
+        assets: [],
+        outputDir,
+        mode: "fixture",
+      }),
+    ).rejects.toThrow(/composition/i);
+    expect(
+      await (await import("node:fs/promises")).readdir(outputDir),
+    ).toHaveLength(0);
+  });
+
+  test("profile heroes use distinct desktop grids and deliberate mobile stacks without overflow", async () => {
+    let browser;
+    try {
+      browser = await chromium.launch({ headless: true });
+    } catch {
+      browser = await chromium.launch({ headless: true, channel: "chrome" });
+    }
+    try {
+      const page = await browser.newPage({
+        viewport: { width: 1440, height: 900 },
+      });
+      const desktopGrids = new Set<string>();
+      for (const [design_profile, composition, font_pair, selector] of [
+        ["editorial-spread", "editorial", "editorial", ".spread-hero"],
+        ["service-index", "minimal", "sans", ".index-hero"],
+        ["type-poster", "bold", "sans", ".poster-hero"],
+      ] as const) {
+        const base = siteSpec();
+        base.pages[0].sections[0].heading = copy(
+          "Sanitärinstallationen in Zürich",
+        );
+        base.pages[1].sections[0].items[0].title = copy(
+          "Sanitärinstallationen",
+        );
+        const rendered = await renderSite({
+          leadId: "lead-renderer-test",
+          siteSpec: siteSpec({
+            ...base,
+            theme: {
+              ...base.theme,
+              design_profile,
+              composition,
+              font_pair,
+            },
+          }),
+          profile,
+          assets: [],
+          outputDir: await temporaryDirectory(),
+          mode: "fixture",
+        });
+        const html = await readFile(
+          path.join(rendered.artifactDir, "index.html"),
+          "utf8",
+        );
+        const servicesHtml = await readFile(
+          path.join(rendered.artifactDir, "leistungen", "index.html"),
+          "utf8",
+        );
+        const css = await readFile(
+          path.join(rendered.artifactDir, "assets", "site.css"),
+          "utf8",
+        );
+        await page.setViewportSize({ width: 1440, height: 900 });
+        await page.setContent(
+          html
+            .replace(/<meta http-equiv="Content-Security-Policy"[^>]*\/>/, "")
+            .replace(
+              '<link rel="stylesheet" href="/assets/site.css"/>',
+              `<style>${css}</style>`,
+            ),
+        );
+        desktopGrids.add(
+          await page
+            .locator(selector)
+            .evaluate(
+              (element) => getComputedStyle(element).gridTemplateColumns,
+            ),
+        );
+        expect(
+          await page.evaluate(
+            () => document.documentElement.scrollWidth <= innerWidth,
+          ),
+        ).toBe(true);
+        if (design_profile === "editorial-spread") {
+          expect(
+            await page
+              .locator(".profile-section.is-hero")
+              .evaluate((element) => element.getBoundingClientRect().height),
+          ).toBeLessThan(620);
+        }
+        await page.setViewportSize({ width: 375, height: 812 });
+        expect(
+          await page
+            .locator(selector)
+            .evaluate(
+              (element) =>
+                getComputedStyle(element).gridTemplateColumns.split(" ").length,
+            ),
+        ).toBe(1);
+        expect(
+          await page.evaluate(
+            () => document.documentElement.scrollWidth <= innerWidth,
+          ),
+        ).toBe(true);
+        const inspectWord = async (headingSelector: string) =>
+          page.locator(headingSelector).evaluate((element) => {
+            const range = document.createRange();
+            range.setStart(element.firstChild!, 0);
+            range.setEnd(element.firstChild!, "Sanitärinstallationen".length);
+            const rects = Array.from(range.getClientRects());
+            return {
+              lines: rects.length,
+              fontSize: Number.parseFloat(getComputedStyle(element).fontSize),
+              overflowWrap: getComputedStyle(element).overflowWrap,
+            };
+          });
+        const heroWord = await inspectWord("h1");
+        expect(heroWord.lines).toBe(1);
+        expect(heroWord.fontSize).toBeGreaterThanOrEqual(26);
+        expect(heroWord.overflowWrap).toBe("normal");
+        await page.setContent(
+          servicesHtml
+            .replace(/<meta http-equiv="Content-Security-Policy"[^>]*\/>/, "")
+            .replace(
+              '<link rel="stylesheet" href="/assets/site.css"/>',
+              `<style>${css}</style>`,
+            ),
+        );
+        const serviceWord = await inspectWord(
+          ".profile-section.component-services h3",
+        );
+        for (const word of [serviceWord]) {
+          expect(word.lines).toBe(1);
+          expect(word.fontSize).toBeGreaterThanOrEqual(16);
+          expect(word.overflowWrap).toBe("normal");
+        }
+        await page.setViewportSize({ width: 1440, height: 900 });
+        const serviceSeparation = await page
+          .locator(".profile-section.component-services article")
+          .evaluate((article) => {
+            const textRect = (element: Element) => {
+              const range = document.createRange();
+              range.selectNodeContents(element);
+              return range.getBoundingClientRect();
+            };
+            const title = textRect(article.querySelector("h3")!);
+            const description = textRect(article.querySelector("p")!);
+            return {
+              separated:
+                title.right <= description.left ||
+                title.bottom <= description.top ||
+                description.right <= title.left ||
+                description.bottom <= title.top,
+            };
+          });
+        expect(serviceSeparation.separated).toBe(true);
+      }
+      expect(desktopGrids.size).toBe(3);
+    } finally {
+      await browser.close();
+    }
+  }, 15000);
+
+  test("does not repeat the company name as both brand and home navigation label", async () => {
+    const base = siteSpec();
+    const rendered = await renderSite({
+      leadId: "lead-renderer-test",
+      siteSpec: siteSpec({
+        theme: {
+          ...base.theme,
+          design_profile: "type-poster",
+          composition: "bold",
+          font_pair: "sans",
+        },
+        navigation: [
+          { label: copy("Muster Gartenpflege", ["fact-company"]), route: "/" },
+        ],
+      }),
+      profile,
+      assets: [],
+      outputDir: await temporaryDirectory(),
+      mode: "fixture",
+    });
+    const home = await readFile(
+      path.join(rendered.artifactDir, "index.html"),
+      "utf8",
+    );
+    const header =
+      home.match(/<header class="site-header[\s\S]*?<\/header>/)?.[0] ?? "";
+    expect(header.match(/Muster Gartenpflege/g)).toHaveLength(1);
+    expect(header).not.toContain("bold-nav-frame");
+    expect(header).not.toContain("<nav");
+  });
+
+  test.each([
+    ["editorial-spread", "editorial", "editorial"],
+    ["service-index", "minimal", "sans"],
+    ["type-poster", "bold", "sans"],
+  ] as const)(
+    "%s keeps the medium-length hero word Haarschnitte intact on mobile",
+    async (design_profile, composition, font_pair) => {
+      let browser;
+      try {
+        browser = await chromium.launch({ headless: true });
+      } catch {
+        browser = await chromium.launch({ headless: true, channel: "chrome" });
+      }
+      try {
+        const base = siteSpec();
+        base.pages[0].sections[0].heading = copy("Haarschnitte in Zürich");
+        const rendered = await renderSite({
+          leadId: "lead-renderer-test",
+          siteSpec: siteSpec({
+            ...base,
+            theme: {
+              ...base.theme,
+              design_profile,
+              composition,
+              font_pair,
+            },
+          }),
+          profile,
+          assets: [],
+          outputDir: await temporaryDirectory(),
+          mode: "fixture",
+        });
+        const html = await readFile(
+          path.join(rendered.artifactDir, "index.html"),
+          "utf8",
+        );
+        const css = await readFile(
+          path.join(rendered.artifactDir, "assets", "site.css"),
+          "utf8",
+        );
+        const page = await browser.newPage({
+          viewport: { width: 375, height: 812 },
+        });
+        await page.setContent(
+          html
+            .replace(/<meta http-equiv="Content-Security-Policy"[^>]*\/>/, "")
+            .replace(
+              '<link rel="stylesheet" href="/assets/site.css"/>',
+              `<style>${css}</style>`,
+            ),
+        );
+        const word = await page.locator("h1").evaluate((heading) => {
+          const range = document.createRange();
+          range.setStart(heading.firstChild!, 0);
+          range.setEnd(heading.firstChild!, "Haarschnitte".length);
+          return {
+            lines: Array.from(range.getClientRects()).length,
+            fontSize: Number.parseFloat(getComputedStyle(heading).fontSize),
+            lineHeight: Number.parseFloat(getComputedStyle(heading).lineHeight),
+            overflowWrap: getComputedStyle(heading).overflowWrap,
+            className: heading.className,
+          };
+        });
+        expect(word.lines).toBe(1);
+        expect(word.fontSize).toBeGreaterThanOrEqual(32);
+        expect(word.overflowWrap).toBe("normal");
+        expect(word.className).toContain("title-medium-word");
+        if (design_profile === "type-poster") {
+          expect(word.lineHeight / word.fontSize).toBeGreaterThanOrEqual(0.95);
+        }
+        expect(
+          await page.evaluate(
+            () => document.documentElement.scrollWidth <= innerWidth,
+          ),
+        ).toBe(true);
+      } finally {
+        await browser.close();
+      }
+    },
+    15000,
+  );
+
+  test("profile section spacing follows compact, comfortable and generous themes", async () => {
+    let browser;
+    try {
+      browser = await chromium.launch({ headless: true });
+    } catch {
+      browser = await chromium.launch({ headless: true, channel: "chrome" });
+    }
+    try {
+      const page = await browser.newPage({
+        viewport: { width: 1440, height: 900 },
+      });
+      for (const [design_profile, composition, font_pair] of [
+        ["editorial-spread", "editorial", "editorial"],
+        ["service-index", "minimal", "sans"],
+        ["type-poster", "bold", "sans"],
+      ] as const) {
+        const paddings: number[] = [];
+        for (const spacing of ["compact", "comfortable", "generous"] as const) {
+          const base = siteSpec();
+          const rendered = await renderSite({
+            leadId: "lead-renderer-test",
+            siteSpec: siteSpec({
+              ...base,
+              theme: {
+                ...base.theme,
+                design_profile,
+                composition,
+                font_pair,
+                spacing,
+              },
+            }),
+            profile,
+            assets: [],
+            outputDir: await temporaryDirectory(),
+            mode: "fixture",
+          });
+          const html = await readFile(
+            path.join(rendered.artifactDir, "index.html"),
+            "utf8",
+          );
+          const css = await readFile(
+            path.join(rendered.artifactDir, "assets", "site.css"),
+            "utf8",
+          );
+          await page.setContent(
+            html
+              .replace(/<meta http-equiv="Content-Security-Policy"[^>]*\/>/, "")
+              .replace(
+                '<link rel="stylesheet" href="/assets/site.css"/>',
+                `<style>${css}</style>`,
+              ),
+          );
+          paddings.push(
+            await page
+              .locator(".profile-section:not(.is-hero)")
+              .first()
+              .evaluate((section) =>
+                Number.parseFloat(getComputedStyle(section).paddingTop),
+              ),
+          );
+        }
+        expect(paddings[0]).toBeLessThan(paddings[1]);
+        expect(paddings[1]).toBeLessThan(paddings[2]);
+      }
+    } finally {
+      await browser.close();
+    }
+  }, 15000);
 
   test("writes a validated brand accent with readable button text and reduced motion CSS", async () => {
     const base = siteSpec();

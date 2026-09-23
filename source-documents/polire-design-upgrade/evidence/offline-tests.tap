@@ -1,0 +1,274 @@
+TAP version 13
+# Subtest: comparison CLI outputs its synthetic example and explicit limitations
+ok 1 - comparison CLI outputs its synthetic example and explicit limitations
+  ---
+  duration_ms: 38.186095
+  type: 'test'
+  ...
+# Subtest: strict comparison uses exit 1 for warnings, not a parsing error
+ok 2 - strict comparison uses exit 1 for warnings, not a parsing error
+  ---
+  duration_ms: 35.715555
+  type: 'test'
+  ...
+# Subtest: strict comparison passes the distinct synthetic fixture
+ok 3 - strict comparison passes the distinct synthetic fixture
+  ---
+  duration_ms: 33.200279
+  type: 'test'
+  ...
+# Subtest: comparison refuses missing inputs and unknown arguments
+ok 4 - comparison refuses missing inputs and unknown arguments
+  ---
+  duration_ms: 60.475395
+  type: 'test'
+  ...
+# Subtest: comparison rejects invalid JSON without an uncaught stack trace
+ok 5 - comparison rejects invalid JSON without an uncaught stack trace
+  ---
+  duration_ms: 35.140073
+  type: 'test'
+  ...
+# Subtest: preflight requires an explicit source directory
+ok 6 - preflight requires an explicit source directory
+  ---
+  duration_ms: 33.203544
+  type: 'test'
+  ...
+# Subtest: preflight reports missing Factory sources instead of claiming compatibility
+ok 7 - preflight reports missing Factory sources instead of claiming compatibility
+  ---
+  duration_ms: 32.732863
+  type: 'test'
+  ...
+# Subtest: preflight inventories synthetic sources without exposing secrets or executing scripts
+ok 8 - preflight inventories synthetic sources without exposing secrets or executing scripts
+  ---
+  duration_ms: 45.190026
+  type: 'test'
+  ...
+# Subtest: preflight does not follow source symlinks into excluded local data
+ok 9 - preflight does not follow source symlinks into excluded local data
+  ---
+  duration_ms: 49.402181
+  type: 'test'
+  ...
+# Subtest: CLI help has no effects and succeeds
+ok 10 - CLI help has no effects and succeeds
+  ---
+  duration_ms: 60.565976
+  type: 'test'
+  ...
+# Subtest: current three-field structure matches the documented fingerprint
+ok 11 - current three-field structure matches the documented fingerprint
+  ---
+  duration_ms: 1.575178
+  type: 'test'
+  ...
+# Subtest: current fingerprint detects an older repeat across the provided history
+ok 12 - current fingerprint detects an older repeat across the provided history
+  ---
+  duration_ms: 1.006639
+  type: 'test'
+  ...
+# Subtest: current fingerprint excludes repairs/revisions of the same project
+ok 13 - current fingerprint excludes repairs/revisions of the same project
+  ---
+  duration_ms: 0.305661
+  type: 'test'
+  ...
+# Subtest: a font-only change does not defeat the composition/order warning
+ok 14 - a font-only change does not defeat the composition/order warning
+  ---
+  duration_ms: 0.558003
+  type: 'test'
+  ...
+# Subtest: current fingerprint rejects unknown labels, extra fields and unbound components
+ok 15 - current fingerprint rejects unknown labels, extra fields and unbound components
+  ---
+  duration_ms: 0.303108
+  type: 'test'
+  ...
+# Subtest: incompatible fingerprints are gaps rather than evidence of variety
+ok 16 - incompatible fingerprints are gaps rather than evidence of variety
+  ---
+  duration_ms: 0.176096
+  type: 'test'
+  ...
+# Subtest: current fingerprint has no guessed similarity score
+ok 17 - current fingerprint has no guessed similarity score
+  ---
+  duration_ms: 0.40415
+  type: 'test'
+  ...
+# Subtest: current fingerprint CLI reports repeats and has a strict warning exit code
+ok 18 - current fingerprint CLI reports repeats and has a strict warning exit code
+  ---
+  duration_ms: 42.931708
+  type: 'test'
+  ...
+# Subtest: valid canonical signature roundtrips without mutating its input
+ok 19 - valid canonical signature roundtrips without mutating its input
+  ---
+  duration_ms: 1.081803
+  type: 'test'
+  ...
+# Subtest: unknown or synonym capability tokens are rejected
+ok 20 - unknown or synonym capability tokens are rejected
+  ---
+  duration_ms: 0.639855
+  type: 'test'
+  ...
+# Subtest: extra signature fields cannot fabricate diversity
+ok 21 - extra signature fields cannot fabricate diversity
+  ---
+  duration_ms: 0.247133
+  type: 'test'
+  ...
+# Subtest: missing data cannot be counted as novelty
+ok 22 - missing data cannot be counted as novelty
+  ---
+  duration_ms: 0.143526
+  type: 'test'
+  ...
+# Subtest: old signature versions are not silently upgraded
+ok 23 - old signature versions are not silently upgraded
+  ---
+  duration_ms: 0.261425
+  type: 'test'
+  ...
+# Subtest: capabilities version must match the supplied catalog
+ok 24 - capabilities version must match the supplied catalog
+  ---
+  duration_ms: 0.136807
+  type: 'test'
+  ...
+# Subtest: unknown section components are rejected
+ok 25 - unknown section components are rejected
+  ---
+  duration_ms: 0.183897
+  type: 'test'
+  ...
+# Subtest: catalog disallows duplicate tokens and missing feature lists
+ok 26 - catalog disallows duplicate tokens and missing feature lists
+  ---
+  duration_ms: 0.373644
+  type: 'test'
+  ...
+# Subtest: an exact repeat has no declared difference
+ok 27 - an exact repeat has no declared difference
+  ---
+  duration_ms: 0.911135
+  type: 'test'
+  ...
+# Subtest: comparison does not report a visual quality score
+ok 28 - comparison does not report a visual quality score
+  ---
+  duration_ms: 0.302657
+  type: 'test'
+  ...
+# Subtest: typography and density alone are insufficient alternatives
+ok 29 - typography and density alone are insufficient alternatives
+  ---
+  duration_ms: 0.292601
+  type: 'test'
+  ...
+# Subtest: three structurally different synthetic directions pass the declared rule
+ok 30 - three structurally different synthetic directions pass the declared rule
+  ---
+  duration_ms: 2.321465
+  type: 'test'
+  ...
+# Subtest: all concept pairs are checked, including the first and third
+ok 31 - all concept pairs are checked, including the first and third
+  ---
+  duration_ms: 0.211429
+  type: 'test'
+  ...
+# Subtest: duplicate concept identifiers are rejected
+ok 32 - duplicate concept identifiers are rejected
+  ---
+  duration_ms: 0.125739
+  type: 'test'
+  ...
+# Subtest: invalid thresholds and policies are rejected
+ok 33 - invalid thresholds and policies are rejected
+  ---
+  duration_ms: 0.223257
+  type: 'test'
+  ...
+# Subtest: an older matching design is detected even when the latest differs
+ok 34 - an older matching design is detected even when the latest differs
+  ---
+  duration_ms: 0.784664
+  type: 'test'
+  ...
+# Subtest: same project revisions do not trigger the portfolio repetition warning
+ok 35 - same project revisions do not trigger the portfolio repetition warning
+  ---
+  duration_ms: 0.228274
+  type: 'test'
+  ...
+# Subtest: same-brand exceptions require explicit policy and a known brand
+ok 36 - same-brand exceptions require explicit policy and a known brand
+  ---
+  duration_ms: 0.244028
+  type: 'test'
+  ...
+# Subtest: legacy/incompatible data remains a visible comparison gap
+ok 37 - legacy/incompatible data remains a visible comparison gap
+  ---
+  duration_ms: 0.217788
+  type: 'test'
+  ...
+# Subtest: empty history is not declared original
+ok 38 - empty history is not declared original
+  ---
+  duration_ms: 0.190377
+  type: 'test'
+  ...
+# Subtest: lookback is applied after filtering and sorting, not source array order
+ok 39 - lookback is applied after filtering and sorting, not source array order
+  ---
+  duration_ms: 0.136857
+  type: 'test'
+  ...
+# Subtest: repeated history IDs are rejected instead of affecting counts
+ok 40 - repeated history IDs are rejected instead of affecting counts
+  ---
+  duration_ms: 0.365371
+  type: 'test'
+  ...
+# Subtest: ambiguous or invalid timestamps are rejected
+ok 41 - ambiguous or invalid timestamps are rejected
+  ---
+  duration_ms: 0.152741
+  type: 'test'
+  ...
+# Subtest: input objects are not mutated by history sorting
+ok 42 - input objects are not mutated by history sorting
+  ---
+  duration_ms: 0.201825
+  type: 'test'
+  ...
+# Subtest: section order is significant and repeated supported sections remain representable
+ok 43 - section order is significant and repeated supported sections remain representable
+  ---
+  duration_ms: 0.175415
+  type: 'test'
+  ...
+# Subtest: direct comparison rejects mismatched capability versions
+ok 44 - direct comparison rejects mismatched capability versions
+  ---
+  duration_ms: 0.100562
+  type: 'test'
+  ...
+1..44
+# tests 44
+# suites 0
+# pass 44
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 484.397329

@@ -7,7 +7,7 @@ export const initialContent = {
   },
   home: {
     eyebrow: 'Coiffeur Lanz · Bleienbach',
-    headline: 'Für Ihren nächsten Schnitt.',
+    headline: 'Coiffeur Lanz.\nIn Bleienbach.',
     intro: 'Willkommen bei Vreni Lanz. Für einen Termin erreichen Sie den Salon telefonisch oder mit einer Nachricht.',
   },
   salon: {

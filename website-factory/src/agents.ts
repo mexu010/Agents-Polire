@@ -11,6 +11,10 @@ import sales from "../prompts/sales.js";
 import { assertCopyPolicy, assertSubjectPolicy } from "./copy-policy.js";
 import { decodeHTML } from "entities";
 import { validateDesignPlan } from "./design-policy.js";
+import { processConceptOutput, type AgentTask } from "./design-concepts.js";
+import { validateDesignTheme } from "./design-capabilities.js";
+import exploration from "../prompts/design-exploration.js";
+import { validateVisualQA } from "./visual-qa.js";
 
 const prompts: Record<AgentName, string> = {
   scout,
@@ -30,8 +34,10 @@ const outputSchema: Record<AgentName, string> = {
   qa: "QAOutput",
   sales: "SalesOutput",
 };
-export function promptFor(agent: AgentName): string {
-  return `${common}\n\n${prompts[agent]}`;
+export function promptFor(agent: AgentName, task?: AgentTask): string {
+  if (task && agent !== "strategist")
+    throw new Error("Exploration requires Strategist");
+  return `${common}\n\n${task ? exploration : prompts[agent]}`;
 }
 const evidence = (input: JsonObject): Map<string, JsonObject> =>
   new Map<string, JsonObject>(
@@ -456,6 +462,17 @@ function registerSales(output: JsonObject, input: JsonObject): JsonObject {
 }
 function registerStrategist(output: JsonObject, input: JsonObject): JsonObject {
   const data = output.data;
+  validateDesignTheme(data.theme);
+  if (
+    data.theme.design_profile &&
+    !(input.template.design_profiles ?? []).includes(data.theme.design_profile)
+  )
+    throw new Error("Design profile is not available in template");
+  if (
+    input.selected_concept &&
+    data.theme.design_profile !== input.selected_concept.design_profile
+  )
+    throw new Error("Strategist must preserve the selected concept");
   validateDesignPlan(data, input);
   checkGrounding(data, input);
   assertSafeClaims(data, input);
@@ -504,6 +521,9 @@ function registerStrategist(output: JsonObject, input: JsonObject): JsonObject {
 function registerBuilder(output: JsonObject, input: JsonObject): JsonObject {
   const data = output.data;
   const site = data.site_spec;
+  validateDesignTheme(site.theme);
+  if (site.theme.design_profile !== input.brief.theme.design_profile)
+    throw new Error("Builder must preserve the selected design profile");
   if (site.theme.composition !== input.brief.theme.composition)
     throw new Error("Builder must preserve the brief composition");
   checkGrounding(site, input);
@@ -548,6 +568,14 @@ function registerBuilder(output: JsonObject, input: JsonObject): JsonObject {
   );
   const copies: JsonObject[] = site.navigation.map((n: JsonObject) => n.label);
   for (const page of site.pages) {
+    const plannedPage = input.brief.pages.find(
+      (p: JsonObject) => p.route === page.route,
+    );
+    if (
+      JSON.stringify(page.sections.map((s: JsonObject) => s.section_id)) !==
+      JSON.stringify(plannedPage.sections.map((s: JsonObject) => s.section_id))
+    )
+      throw new Error("Builder must preserve the planned section order");
     copies.push(page.title, page.meta_description);
     const expected = expectedByRoute.get(page.route) as Map<string, JsonObject>;
     for (const section of page.sections) {
@@ -669,6 +697,7 @@ function registerQA(output: JsonObject, input: JsonObject): JsonObject {
   for (const issue of data.resolved_audit_issue_ids)
     if (!auditIssues.has(issue))
       throw new Error(`audit issue reference does not exist: ${issue}`);
+  validateVisualQA(data, input);
   const issues = data.issues.map((x: JsonObject) => ({ issue_id: id(), ...x }));
   const checks = [...runtime.values(), ...data.checks];
   for (const check of data.checks) {
@@ -748,7 +777,13 @@ export function processAgentOutput(
   agent: AgentName,
   output: JsonObject,
   input: JsonObject,
+  task?: AgentTask,
 ): JsonObject {
+  if (task) {
+    if (agent !== "strategist")
+      throw new Error("Exploration requires Strategist");
+    return processConceptOutput(output, input);
+  }
   validate(
     `${agent === "qa" ? "QA" : agent[0].toUpperCase() + agent.slice(1)}Input`,
     input,

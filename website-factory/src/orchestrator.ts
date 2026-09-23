@@ -1,4 +1,11 @@
-import { mkdirSync, renameSync, rmSync, writeFileSync } from "node:fs";
+import {
+  mkdirSync,
+  renameSync,
+  rmSync,
+  writeFileSync,
+  readFileSync,
+} from "node:fs";
+import { createHash } from "node:crypto";
 import { rm } from "node:fs/promises";
 import { join, resolve, sep } from "node:path";
 import { buildAgentInput, fixtureInput, fixtureOutput } from "./fixtures.js";
@@ -23,7 +30,18 @@ import {
   fixtureDesignResearch,
   designIndustry,
 } from "./design-research.js";
-import { designFingerprint } from "./design-policy.js";
+import { designFingerprint, reviewDesignHistory } from "./design-policy.js";
+import {
+  DESIGN_CAPABILITIES_VERSION,
+  DESIGN_PROFILES,
+} from "./design-capabilities.js";
+import {
+  comparisonContent,
+  conceptDependencies,
+  miniSiteSpec,
+  taskSchema,
+  type AgentTask,
+} from "./design-concepts.js";
 import { ResearchService } from "./research.js";
 
 type RunOptions = {
@@ -53,6 +71,8 @@ const TEMPLATE = {
   variants: ["split", "stacked", "cards"],
   font_pairs: ["sans", "editorial"],
   features: ["contact", "design-research-v1"],
+  design_profiles: Object.keys(DESIGN_PROFILES),
+  capabilities_version: DESIGN_CAPABILITIES_VERSION,
 };
 function validateRevision(name: string, value: unknown): JsonObject {
   return validate(name, value);
@@ -120,6 +140,8 @@ export class Factory {
     context.campaign =
       this.config.mode === "fixture" ? context.campaign : this.config.campaign;
     context.agency = this.config.agency;
+    if (this.config.designExploration.enabled)
+      context.template = structuredClone(TEMPLATE);
     const job: JsonObject = {
       runId,
       leadId,
@@ -132,6 +154,7 @@ export class Factory {
       website: url.toString(),
       experimental: Boolean(opts.experimental),
       requireDemoDecision: Boolean(opts.requireDemoDecision),
+      designExplorationEnabled: this.config.designExploration.enabled,
       stopAfter: opts.stopAfter ?? null,
       context,
       cacheHits: 0,
@@ -269,6 +292,144 @@ export class Factory {
     });
   }
 
+  /** Read-only verification of the exact set a local operator may select. */
+  conceptReview(runId: string): JsonObject {
+    const job = this.show(runId);
+    if (
+      !job.designExplorationEnabled ||
+      job.stage !== "concept_review" ||
+      job.status !== "waiting_approval"
+    )
+      throw new Error("Concept review is not waiting for selection");
+    return this.verifyConceptPreviews(job, true);
+  }
+
+  private verifyConceptPreviews(
+    job: JsonObject,
+    requireUnexpired = false,
+  ): JsonObject {
+    const packet = job.context.conceptPreviews;
+    if (!packet || !job.context.conceptSet)
+      throw new Error("No current concept previews");
+    if (
+      packet.dependenciesHash !==
+      conceptDependencies(job.context, RENDERER_VERSION)
+    )
+      throw new Error(
+        "Concept dependencies changed; refresh the design references before selecting",
+      );
+    if (packet.conceptSetHash !== hash(job.context.conceptSet))
+      throw new Error("Concept set hash changed");
+    for (const preview of packet.previews) {
+      const verified = verifyArtifact({
+        artifactDir: this.safePublicationPath(preview.render.artifactDir),
+        expectedHash: preview.render.hash,
+      });
+      if (
+        requireUnexpired &&
+        Date.parse(verified.manifest.expires_at) <= Date.now()
+      )
+        throw new Error(
+          "Concept preview expired; refresh design references before selecting",
+        );
+      if (preview.browser.build.artifact_hash !== preview.render.hash)
+        throw new Error("Concept browser artifact mismatch");
+      if (
+        ![375, 768, 1440].every((width) =>
+          preview.browser.images.some((img: JsonObject) => img.width === width),
+        )
+      )
+        throw new Error("Concept preview screenshots missing");
+      for (const img of preview.browser.images) {
+        const bytes = readFileSync(this.safePublicationPath(img.path));
+        if (createHash("sha256").update(bytes).digest("hex") !== img.sha256)
+          throw new Error("Concept screenshot image has changed");
+      }
+    }
+    const subject = {
+      dependenciesHash: packet.dependenciesHash,
+      conceptSetHash: packet.conceptSetHash,
+      previews: packet.previews.map((p: JsonObject) => ({
+        conceptId: p.conceptId,
+        concept: p.concept,
+        siteSpec: p.siteSpec,
+        artifactHash: p.render.hash,
+        screenshots: p.browser.images.map((img: JsonObject) => ({
+          evidence_id: img.evidence_id,
+          sha256: img.sha256,
+          width: img.width,
+          height: img.height,
+        })),
+      })),
+    };
+    if (packet.reviewHash !== hash(subject))
+      throw new Error("Concept review hash mismatch");
+    return { runId: job.id, revision: job.revision, mode: job.mode, ...packet };
+  }
+
+  async selectConcept(
+    runId: string,
+    conceptId: string,
+    expectedRevision: number,
+    reviewHash: string,
+  ): Promise<JsonObject> {
+    const saved = this.store.transaction(() => {
+      const job = this.show(runId);
+      if (job.revision !== expectedRevision)
+        throw new Error("version conflict for concept selection");
+      if (
+        !job.designExplorationEnabled ||
+        job.stage !== "concept_review" ||
+        job.status !== "waiting_approval"
+      )
+        throw new Error(
+          "Concept selection is not available outside the waiting review stage",
+        );
+      const review = this.conceptReview(runId);
+      if (review.reviewHash !== reviewHash)
+        throw new Error("Concept review hash does not match");
+      const chosen = review.previews.find(
+        (p: JsonObject) => p.conceptId === conceptId,
+      );
+      if (!chosen) throw new Error("Unknown concept selection");
+      const selection = validate("DesignSelection", {
+        concept_id: conceptId,
+        review_hash: reviewHash,
+        dependencies_hash: review.dependenciesHash,
+        subject_revision: expectedRevision,
+        decided_at: now(),
+      });
+      this.store.put("concept_selections", id(), {
+        ...selection,
+        runId,
+        leadId: job.leadId,
+      });
+      job.context.conceptSelection = selection;
+      job.context.selectedConcept = chosen.concept;
+      for (const key of [
+        "brief",
+        "siteSpec",
+        "render",
+        "browser",
+        "qa",
+        "preview",
+        "approved_improvements",
+        "sales",
+        "repairTasks",
+        "previousSiteSpec",
+      ])
+        delete job.context[key];
+      this.revokeApprovals(job);
+      job.artifactHash = null;
+      job.draftHash = null;
+      job.externalPreview = null;
+      job.stage = "strategist";
+      job.status = "queued";
+      return this.save(job, expectedRevision);
+    });
+    return this.execute(saved);
+  }
+
   revise(
     runId: string,
     expectedRevision: number,
@@ -343,6 +504,16 @@ export class Factory {
     if (offerChanged) job.context.offer = patch.offer;
     if (agencyChanged) job.context.agency = patch.agency;
     const clear = (keys: string[]) => {
+      if (keys.includes("designResearch"))
+        keys.push(
+          "conceptSet",
+          "conceptGenerationHash",
+          "conceptPreviews",
+          "conceptSelection",
+          "selectedConcept",
+          "designDiversity",
+          "designSnapshot",
+        );
       for (const key of keys) delete job.context[key];
     };
     if (patch.recrawl || campaignChanged) {
@@ -864,10 +1035,32 @@ export class Factory {
             job.reason = "design_references_unavailable";
             return this.save(job, job.revision, lease);
           }
+          if (job.designExplorationEnabled) {
+            if (!job.context.conceptSelection) {
+              job = await this.prepareConcepts(job, lease);
+              job.stage = "concept_review";
+              job.status = "waiting_approval";
+              return this.save(job, job.revision, lease);
+            }
+            const review = this.verifyConceptPreviews(job);
+            if (
+              job.context.conceptSelection.review_hash !== review.reviewHash ||
+              job.context.conceptSelection.dependencies_hash !==
+                review.dependenciesHash
+            )
+              throw new Error("Selected concept has stale dependencies");
+          }
         }
         if (!job.context[this.contextKey(agent)]) {
           job.stage = agent;
           job.context[this.contextKey(agent)] = await this.agent(job, agent);
+          if (agent === "strategist" && job.context.brief?.theme) {
+            job.context.designSnapshot = designFingerprint(job.context.brief);
+            job.context.designDiversity = reviewDesignHistory(
+              job.context.brief,
+              job.context.designResearch?.research.recent_designs ?? [],
+            );
+          }
           job = this.save(job, job.revision, lease);
         }
         if (job.stopAfter === agent) {
@@ -1051,6 +1244,133 @@ export class Factory {
     }
   }
 
+  private async prepareConcepts(
+    initial: JsonObject,
+    lease: string,
+  ): Promise<JsonObject> {
+    let job = initial;
+    // Validate content/render capabilities before the extra model dispatch.
+    const content = comparisonContent(job.context);
+    const generationHash = conceptDependencies(job.context, RENDERER_VERSION);
+    if (
+      job.context.conceptSet &&
+      job.context.conceptGenerationHash !== generationHash
+    )
+      throw new Error(
+        "Concept generation dependencies changed; refresh design references before resuming",
+      );
+    if (!job.context.conceptSet) {
+      job.stage = "design_exploration";
+      job.context.conceptSet = await this.agent(
+        job,
+        "strategist",
+        "design_exploration",
+      );
+      job.context.conceptGenerationHash = generationHash;
+      job = this.save(job, job.revision, lease);
+    }
+    if (job.context.conceptPreviews) {
+      this.verifyConceptPreviews(job);
+      return job;
+    }
+    const operation = this.beginOperation(job, "concept_previews");
+    let finalDir: string | null = null;
+    try {
+      const previews: JsonObject[] = [];
+      for (const [
+        index,
+        concept,
+      ] of job.context.conceptSet.concepts.entries()) {
+        const conceptId = `concept-${hash({ concept, index }).slice(0, 16)}`;
+        const siteSpec = miniSiteSpec(content, concept);
+        const render = await this.renderer({
+          leadId: job.leadId,
+          siteSpec,
+          profile: job.context.profile,
+          assets: job.context.approvedAssets ?? [],
+          outputDir: join(operation.stagingRoot, conceptId),
+          mode: job.mode,
+        });
+        const browser = await this.browserRunner({
+          artifactDir: render.artifactDir,
+          siteSpec,
+          profile: job.context.profile,
+          outputDir: join(operation.stagingRoot, conceptId, "screenshots"),
+        });
+        const failed = browser.results.filter(
+          (check: JsonObject) => check.result !== "pass",
+        );
+        if (failed.length)
+          throw new Error(
+            `Concept ${concept.design_profile} has failing browser checks: ${JSON.stringify(failed)}`,
+          );
+        previews.push({ conceptId, concept, siteSpec, render, browser });
+      }
+      const dependenciesHash = conceptDependencies(
+        job.context,
+        RENDERER_VERSION,
+      );
+      const conceptSetHash = hash(job.context.conceptSet);
+      const subject = {
+        dependenciesHash,
+        conceptSetHash,
+        previews: previews.map((p) => ({
+          conceptId: p.conceptId,
+          concept: p.concept,
+          siteSpec: p.siteSpec,
+          artifactHash: p.render.hash,
+          screenshots: p.browser.images.map((img: JsonObject) => ({
+            evidence_id: img.evidence_id,
+            sha256: img.sha256,
+            width: img.width,
+            height: img.height,
+          })),
+        })),
+      };
+      const packet = {
+        dependenciesHash,
+        conceptSetHash,
+        reviewHash: hash(subject),
+        previews,
+        notice:
+          "Drei Mini-Vorschauen mit identischen Inhalten. Keine getesteten Animationen, keine vollständigen Builds. Menschliche Auswahl erforderlich.",
+      };
+      finalDir = join(
+        this.config.dataDir,
+        "artifacts",
+        job.leadId,
+        operation.id,
+      );
+      this.recordPublication(operation.id, finalDir);
+      this.store.transaction(() => {
+        this.assertWorker(job, lease);
+        mkdirSync(join(this.config.dataDir, "artifacts", job.leadId), {
+          recursive: true,
+        });
+        renameSync(
+          this.safeStagingPath(operation.stagingRoot),
+          this.safePublicationPath(finalDir!),
+        );
+        job.context.conceptPreviews = this.rewritePaths(
+          packet,
+          operation.stagingRoot,
+          finalDir!,
+        );
+        job = this.save(job, job.revision, lease);
+      });
+      this.finishPublishedOperation(operation.id);
+      return job;
+    } catch (error) {
+      if (finalDir)
+        rmSync(this.safePublicationPath(finalDir), {
+          recursive: true,
+          force: true,
+        });
+      this.endOperation(operation.id, operation.stagingRoot);
+      throw error;
+    }
+  }
+
   private async collectDesignResearch(
     initial: JsonObject,
     lease: string,
@@ -1058,22 +1378,49 @@ export class Factory {
     let job = initial;
     job.stage = "design_research";
     const industry = designIndustry(job.context.profile).key;
-    const recent = (
-      this.store.db
-        .prepare(
-          "SELECT value_json FROM factory_jobs WHERE run_id != ? ORDER BY updated_at DESC, rowid DESC LIMIT 40",
-        )
-        .all(job.id) as Array<{ value_json: string }>
-    )
-      .map((row) => JSON.parse(row.value_json))
-      .filter(
-        (other) =>
-          other.mode === job.mode &&
-          other.context?.brief?.theme?.composition &&
-          designIndustry(other.context.profile).key === industry,
+    const recent: JsonObject[] = [];
+    const seenHosts = new Set([
+      new URL(job.website).hostname.replace(/^www\./, ""),
+    ]);
+    // Iterate newest first; revisions, other industries and invalid legacy rows must
+    // not crowd valid independent projects out of the eight-project window.
+    for (const row of this.store.db
+      .prepare(
+        "SELECT value_json FROM factory_jobs WHERE run_id != ? ORDER BY updated_at DESC, rowid DESC",
       )
-      .slice(0, 8)
-      .map((other) => designFingerprint(other.context.brief));
+      .iterate(job.id) as Iterable<{ value_json: string }>) {
+      try {
+        const other = JSON.parse(row.value_json);
+        const host = new URL(other.website).hostname.replace(/^www\./, "");
+        if (
+          seenHosts.has(host) ||
+          other.mode !== job.mode ||
+          !other.context?.brief?.theme?.composition ||
+          designIndustry(other.context.profile).key !== industry
+        )
+          continue;
+        validate("Brief", other.context.brief);
+        const oldBrief = structuredClone(other.context.brief);
+        delete oldBrief.theme.design_profile;
+        const summary = designFingerprint(oldBrief);
+        // Never infer old renderer semantics from today's capability registry.
+        const storedSignature = other.context.designSnapshot?.signature;
+        if (storedSignature) {
+          try {
+            validate("DesignSignature", storedSignature);
+            summary.signature = storedSignature;
+            delete summary.signature_gap;
+          } catch {
+            /* Keep the explicit legacy comparison gap. */
+          }
+        }
+        recent.push(summary);
+        seenHosts.add(host);
+        if (recent.length === 8) break;
+      } catch {
+        /* An invalid legacy row is not evidence of a design decision. */
+      }
+    }
     const operation = this.beginOperation(job, "design_research");
     let finalDir: string | null = null;
     try {
@@ -1151,16 +1498,20 @@ export class Factory {
     }
   }
 
-  private async agent(job: JsonObject, agent: AgentName): Promise<JsonObject> {
-    const input = buildAgentInput(agent, job.context);
+  private async agent(
+    job: JsonObject,
+    agent: AgentName,
+    task?: AgentTask,
+  ): Promise<JsonObject> {
+    const input = buildAgentInput(agent, job.context, task);
     const inputHash = hash(input);
-    const root = `${agent === "qa" ? "QA" : agent[0].toUpperCase() + agent.slice(1)}Output`;
+    const root = `${taskSchema(agent, task)}Output`;
     const key = hash({
       agent,
       leadId: job.leadId,
       input,
       schema: schemaFor(root),
-      prompt: promptFor(agent),
+      prompt: promptFor(agent, task),
       model: this.config.models[agent],
       policy: { mode: this.config.mode, limits: this.config.limits },
     });
@@ -1187,9 +1538,9 @@ export class Factory {
     let priorReason: string | null = null;
     if (prior) {
       try {
-        const result = processAgentOutput(agent, prior.raw, input);
+        const result = processAgentOutput(agent, prior.raw, input, task);
         this.recordSemantic(job, prior, "accepted", null);
-        this.publishAgentResult(job, agent, stepId, key, result);
+        this.publishAgentResult(job, agent, stepId, key, result, task);
         return result;
       } catch (error) {
         priorReason = this.errorMessage(error);
@@ -1213,6 +1564,7 @@ export class Factory {
           ? fixtureOutput(agent, input)
           : await this.provider!.invoke({
               agent,
+              task,
               input,
               runId: job.id,
               leadId: job.leadId,
@@ -1226,10 +1578,10 @@ export class Factory {
         { cause: dispatchError },
       );
     }
-    let diagnostic = this.persistRaw(job, agent, logical, raw, phase);
+    let diagnostic = this.persistRaw(job, agent, logical, raw, phase, task);
     let result: JsonObject;
     try {
-      result = processAgentOutput(agent, raw, input);
+      result = processAgentOutput(agent, raw, input, task);
       this.recordSemantic(job, diagnostic, "accepted", null);
     } catch (error) {
       const reason = this.errorMessage(error);
@@ -1238,6 +1590,7 @@ export class Factory {
       try {
         raw = await this.provider!.invoke({
           agent,
+          task,
           input,
           runId: job.id,
           leadId: job.leadId,
@@ -1252,9 +1605,9 @@ export class Factory {
         );
       }
       phase = "semantic_repair";
-      diagnostic = this.persistRaw(job, agent, logical, raw, phase);
+      diagnostic = this.persistRaw(job, agent, logical, raw, phase, task);
       try {
-        result = processAgentOutput(agent, raw, input);
+        result = processAgentOutput(agent, raw, input, task);
         this.recordSemantic(job, diagnostic, "accepted", null);
       } catch (repairError) {
         const message = this.errorMessage(repairError);
@@ -1270,6 +1623,7 @@ export class Factory {
         try {
           raw = await this.provider!.invoke({
             agent,
+            task,
             input,
             runId: job.id,
             leadId: job.leadId,
@@ -1283,9 +1637,9 @@ export class Factory {
             { cause: upgradeError },
           );
         }
-        diagnostic = this.persistRaw(job, agent, logical, raw, "upgrade");
+        diagnostic = this.persistRaw(job, agent, logical, raw, "upgrade", task);
         try {
-          result = processAgentOutput(agent, raw, input);
+          result = processAgentOutput(agent, raw, input, task);
           this.recordSemantic(job, diagnostic, "accepted", null);
         } catch (upgradeSemanticError) {
           this.recordSemantic(
@@ -1298,7 +1652,7 @@ export class Factory {
         }
       }
     }
-    this.publishAgentResult(job, agent, stepId, key, result);
+    this.publishAgentResult(job, agent, stepId, key, result, task);
     return result;
   }
 
@@ -1357,8 +1711,9 @@ export class Factory {
     logical: JsonObject,
     raw: JsonObject,
     phase: string,
+    task?: AgentTask,
   ): JsonObject {
-    const root = `${agent === "qa" ? "QA" : agent[0].toUpperCase() + agent.slice(1)}Output`;
+    const root = `${taskSchema(agent, task)}Output`;
     validate(root, raw);
     const rawId = id();
     const sequence =
@@ -1374,6 +1729,7 @@ export class Factory {
       stepId: logical.stepId,
       inputHash: logical.inputHash,
       phase,
+      ...(task ? { task } : {}),
       sequence,
       raw,
       rawHash: hash(raw),
@@ -1411,14 +1767,16 @@ export class Factory {
     stepId: string,
     key: string,
     result: JsonObject,
+    task?: AgentTask,
   ): void {
     this.store.transaction(() => {
       this.assertPublishable(job);
       this.putCache(key, result, job.leadId);
-      this.store.put("steps", `${job.id}:${agent}`, {
+      this.store.put("steps", `${job.id}:${agent}${task ? `:${task}` : ""}`, {
         runId: job.id,
         leadId: job.leadId,
         agent,
+        ...(task ? { task } : {}),
         stepId,
         stepKey: key,
         status: "succeeded",
@@ -1661,7 +2019,8 @@ export class Factory {
   }
   private beginOperation(
     job: JsonObject,
-    kind: "collect" | "render" | "browser" | "design_research",
+    kind:
+      "collect" | "render" | "browser" | "design_research" | "concept_previews",
   ): { id: string; stagingRoot: string } {
     const operationId = `${kind}-${id()}`;
     const stagingRoot = this.safeStagingPath(

@@ -1,0 +1,174 @@
+{
+  "toolkit_version": "0.1.0",
+  "synthetic_or_user_supplied_input": true,
+  "status": "declared_rules_passed",
+  "quality_verdict": null,
+  "concepts": {
+    "passed_declared_diversity_rule": true,
+    "rule": {
+      "minimum_differences": 4,
+      "minimum_structural_differences": 2
+    },
+    "comparisons": [
+      {
+        "left": "concept-a",
+        "right": "concept-b",
+        "matched": [],
+        "different": [
+          "composition",
+          "hero_structure",
+          "mobile_structure",
+          "section_rhythm",
+          "font_pair",
+          "image_strategy",
+          "service_layout",
+          "density",
+          "section_order"
+        ],
+        "structural_differences": [
+          "hero_structure",
+          "mobile_structure",
+          "section_rhythm",
+          "image_strategy",
+          "service_layout",
+          "section_order"
+        ],
+        "declared_similarity": 0,
+        "same_composition_and_order": false,
+        "interpretation": "declared_features_not_visual_quality",
+        "distinct_enough": true
+      },
+      {
+        "left": "concept-a",
+        "right": "concept-c",
+        "matched": [
+          "font_pair"
+        ],
+        "different": [
+          "composition",
+          "hero_structure",
+          "mobile_structure",
+          "section_rhythm",
+          "image_strategy",
+          "service_layout",
+          "density",
+          "section_order"
+        ],
+        "structural_differences": [
+          "hero_structure",
+          "mobile_structure",
+          "section_rhythm",
+          "image_strategy",
+          "service_layout",
+          "section_order"
+        ],
+        "declared_similarity": 0.08,
+        "same_composition_and_order": false,
+        "interpretation": "declared_features_not_visual_quality",
+        "distinct_enough": true
+      },
+      {
+        "left": "concept-b",
+        "right": "concept-c",
+        "matched": [],
+        "different": [
+          "composition",
+          "hero_structure",
+          "mobile_structure",
+          "section_rhythm",
+          "font_pair",
+          "image_strategy",
+          "service_layout",
+          "density",
+          "section_order"
+        ],
+        "structural_differences": [
+          "hero_structure",
+          "mobile_structure",
+          "section_rhythm",
+          "image_strategy",
+          "service_layout",
+          "section_order"
+        ],
+        "declared_similarity": 0,
+        "same_composition_and_order": false,
+        "interpretation": "declared_features_not_visual_quality",
+        "distinct_enough": true
+      }
+    ],
+    "limitation": "Studio heuristic on declarations. Requires independent review of actual renders."
+  },
+  "portfolio": {
+    "compared_count": 2,
+    "available_history_count": 2,
+    "excluded_by_project_or_brand": 0,
+    "selected_history_count": 2,
+    "comparison_coverage": 1,
+    "skipped_history": [],
+    "warnings": [],
+    "comparisons": [
+      {
+        "design_key": "recent-different",
+        "matched": [],
+        "different": [
+          "composition",
+          "hero_structure",
+          "mobile_structure",
+          "section_rhythm",
+          "font_pair",
+          "image_strategy",
+          "service_layout",
+          "density",
+          "section_order"
+        ],
+        "structural_differences": [
+          "hero_structure",
+          "mobile_structure",
+          "section_rhythm",
+          "image_strategy",
+          "service_layout",
+          "section_order"
+        ],
+        "declared_similarity": 0,
+        "same_composition_and_order": false,
+        "interpretation": "declared_features_not_visual_quality",
+        "repeat_warning": false
+      },
+      {
+        "design_key": "older-repeat",
+        "matched": [
+          "font_pair"
+        ],
+        "different": [
+          "composition",
+          "hero_structure",
+          "mobile_structure",
+          "section_rhythm",
+          "image_strategy",
+          "service_layout",
+          "density",
+          "section_order"
+        ],
+        "structural_differences": [
+          "hero_structure",
+          "mobile_structure",
+          "section_rhythm",
+          "image_strategy",
+          "service_layout",
+          "section_order"
+        ],
+        "declared_similarity": 0.08,
+        "same_composition_and_order": false,
+        "interpretation": "declared_features_not_visual_quality",
+        "repeat_warning": false
+      }
+    ],
+    "rule": {
+      "limit": 8,
+      "near_repeat_threshold": 0.8,
+      "ignore_same_brand": false
+    },
+    "preserves_existing_gate": "Caller MUST retain current hard repetition validation. This helper emits advisory results only.",
+    "limitation": "Declared structural comparison only; not a screenshot similarity or quality measurement."
+  }
+}

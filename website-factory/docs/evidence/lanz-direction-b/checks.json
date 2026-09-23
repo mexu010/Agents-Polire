@@ -1,0 +1,271 @@
+{
+  "checkedAt": "2026-09-22T21:08:57.473Z",
+  "checks": [
+    {
+      "width": 320,
+      "path": "/",
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "noindex": "noindex, nofollow"
+    },
+    {
+      "width": 320,
+      "path": "/salon/",
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "noindex": "noindex, nofollow"
+    },
+    {
+      "width": 320,
+      "path": "/besuch/",
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "noindex": "noindex, nofollow"
+    },
+    {
+      "width": 320,
+      "path": "/kontakt/",
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "noindex": "noindex, nofollow"
+    },
+    {
+      "width": 320,
+      "path": "/journal/",
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "noindex": "noindex, nofollow"
+    },
+    {
+      "width": 320,
+      "path": "/impressum/",
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "noindex": "noindex, nofollow"
+    },
+    {
+      "width": 320,
+      "path": "/datenschutz/",
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "noindex": "noindex, nofollow"
+    },
+    {
+      "width": 320,
+      "path": "/nicht-vorhanden/",
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "noindex": "noindex, nofollow"
+    },
+    {
+      "width": 390,
+      "path": "/",
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "noindex": "noindex, nofollow"
+    },
+    {
+      "width": 390,
+      "path": "/salon/",
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "noindex": "noindex, nofollow"
+    },
+    {
+      "width": 390,
+      "path": "/besuch/",
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "noindex": "noindex, nofollow"
+    },
+    {
+      "width": 390,
+      "path": "/kontakt/",
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "noindex": "noindex, nofollow"
+    },
+    {
+      "width": 390,
+      "path": "/journal/",
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "noindex": "noindex, nofollow"
+    },
+    {
+      "width": 390,
+      "path": "/impressum/",
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "noindex": "noindex, nofollow"
+    },
+    {
+      "width": 390,
+      "path": "/datenschutz/",
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "noindex": "noindex, nofollow"
+    },
+    {
+      "width": 390,
+      "path": "/nicht-vorhanden/",
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "noindex": "noindex, nofollow"
+    },
+    {
+      "width": 768,
+      "path": "/",
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "noindex": "noindex, nofollow"
+    },
+    {
+      "width": 768,
+      "path": "/salon/",
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "noindex": "noindex, nofollow"
+    },
+    {
+      "width": 768,
+      "path": "/besuch/",
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "noindex": "noindex, nofollow"
+    },
+    {
+      "width": 768,
+      "path": "/kontakt/",
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "noindex": "noindex, nofollow"
+    },
+    {
+      "width": 768,
+      "path": "/journal/",
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "noindex": "noindex, nofollow"
+    },
+    {
+      "width": 768,
+      "path": "/impressum/",
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "noindex": "noindex, nofollow"
+    },
+    {
+      "width": 768,
+      "path": "/datenschutz/",
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "noindex": "noindex, nofollow"
+    },
+    {
+      "width": 768,
+      "path": "/nicht-vorhanden/",
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "noindex": "noindex, nofollow"
+    },
+    {
+      "width": 1440,
+      "path": "/",
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "noindex": "noindex, nofollow"
+    },
+    {
+      "width": 1440,
+      "path": "/salon/",
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "noindex": "noindex, nofollow"
+    },
+    {
+      "width": 1440,
+      "path": "/besuch/",
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "noindex": "noindex, nofollow"
+    },
+    {
+      "width": 1440,
+      "path": "/kontakt/",
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "noindex": "noindex, nofollow"
+    },
+    {
+      "width": 1440,
+      "path": "/journal/",
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "noindex": "noindex, nofollow"
+    },
+    {
+      "width": 1440,
+      "path": "/impressum/",
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "noindex": "noindex, nofollow"
+    },
+    {
+      "width": 1440,
+      "path": "/datenschutz/",
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "noindex": "noindex, nofollow"
+    },
+    {
+      "width": 1440,
+      "path": "/nicht-vorhanden/",
+      "overflow": false,
+      "broken": [],
+      "h1": 1,
+      "noindex": "noindex, nofollow"
+    }
+  ],
+  "errors": [],
+  "formStates": [
+    "invalid",
+    "network-error",
+    "success"
+  ],
+  "keyboard": "passed",
+  "journal": "empty + published + article",
+  "noJavaScript": "navigation and contact fallback passed",
+  "isolatedData": true
+}

@@ -376,7 +376,11 @@
             "sales",
             "outreach_review",
             "export",
-            "done"
+            "done",
+            "demo_review",
+            "design_research",
+            "design_exploration",
+            "concept_review"
           ]
         },
         "status": {
@@ -1440,6 +1444,24 @@
             "maxLength": 400
           },
           "maxItems": 100
+        },
+        "design_profiles": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "editorial-spread",
+              "service-index",
+              "type-poster"
+            ]
+          },
+          "maxItems": 3,
+          "minItems": 0
+        },
+        "capabilities_version": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 400
         }
       },
       "required": [
@@ -1602,6 +1624,11 @@
             "maxLength": 2000
           },
           "maxItems": 12
+        },
+        "acceptance_criterion": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1200
         }
       },
       "required": [
@@ -1722,6 +1749,11 @@
             "maxLength": 2000
           },
           "maxItems": 12
+        },
+        "acceptance_criterion": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1200
         }
       },
       "required": [
@@ -2430,6 +2462,14 @@
             "editorial",
             "bold",
             "minimal"
+          ]
+        },
+        "design_profile": {
+          "type": "string",
+          "enum": [
+            "editorial-spread",
+            "service-index",
+            "type-poster"
           ]
         }
       },
@@ -3597,7 +3637,7 @@
           "items": {
             "$ref": "#/$defs/Evidence"
           },
-          "maxItems": 15,
+          "maxItems": 18,
           "minItems": 0
         },
         "images": {
@@ -3605,8 +3645,11 @@
           "items": {
             "$ref": "#/$defs/ImageBinding"
           },
-          "maxItems": 3,
+          "maxItems": 4,
           "minItems": 0
+        },
+        "selected_concept": {
+          "$ref": "#/$defs/ConceptDraft"
         }
       },
       "required": [
@@ -3746,6 +3789,10 @@
             "$ref": "#/$defs/ImageBinding"
           },
           "maxItems": 20
+        },
+        "visual_contract_version": {
+          "type": "string",
+          "const": "rendered-views/2"
         }
       },
       "required": [
@@ -4521,7 +4568,7 @@
             "minLength": 1,
             "maxLength": 400
           },
-          "maxItems": 4,
+          "maxItems": 5,
           "minItems": 0
         },
         "image_evidence_ids": {
@@ -4531,7 +4578,31 @@
             "minLength": 1,
             "maxLength": 400
           },
-          "maxItems": 1,
+          "maxItems": 2,
+          "minItems": 0
+        },
+        "selection_role": {
+          "type": "string",
+          "enum": [
+            "industry",
+            "contrast",
+            "operator",
+            "search"
+          ]
+        },
+        "selection_reason": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1200
+        },
+        "capture_limitations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1200
+          },
+          "maxItems": 8,
           "minItems": 0
         }
       },
@@ -4629,6 +4700,14 @@
                 },
                 "maxItems": 35,
                 "minItems": 0
+              },
+              "signature": {
+                "$ref": "#/$defs/DesignSignature"
+              },
+              "signature_gap": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1200
               }
             },
             "required": [
@@ -4651,6 +4730,297 @@
         "references",
         "gaps",
         "recent_designs"
+      ],
+      "additionalProperties": false
+    },
+    "DesignSignature": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "integer",
+          "const": 2
+        },
+        "capabilities_version": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 400
+        },
+        "features": {
+          "type": "object",
+          "properties": {
+            "composition": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 400
+            },
+            "hero_structure": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 400
+            },
+            "mobile_structure": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 400
+            },
+            "section_rhythm": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 400
+            },
+            "font_pair": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 400
+            },
+            "image_strategy": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 400
+            },
+            "service_layout": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 400
+            },
+            "density": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 400
+            },
+            "section_order": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 400
+              },
+              "maxItems": 35,
+              "minItems": 0
+            }
+          },
+          "required": [
+            "composition",
+            "hero_structure",
+            "mobile_structure",
+            "section_rhythm",
+            "font_pair",
+            "image_strategy",
+            "service_layout",
+            "density",
+            "section_order"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "version",
+        "capabilities_version",
+        "features"
+      ],
+      "additionalProperties": false
+    },
+    "ConceptDraft": {
+      "type": "object",
+      "properties": {
+        "design_profile": {
+          "type": "string",
+          "enum": [
+            "editorial-spread",
+            "service-index",
+            "type-poster"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1200
+        },
+        "reference_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 400
+          },
+          "maxItems": 3,
+          "minItems": 0
+        },
+        "tradeoff": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1200
+        }
+      },
+      "required": [
+        "design_profile",
+        "title",
+        "rationale",
+        "reference_ids",
+        "tradeoff"
+      ],
+      "additionalProperties": false
+    },
+    "ConceptSet": {
+      "type": "object",
+      "properties": {
+        "concepts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ConceptDraft"
+          },
+          "maxItems": 3,
+          "minItems": 3
+        }
+      },
+      "required": [
+        "concepts"
+      ],
+      "additionalProperties": false
+    },
+    "DesignExplorationInput": {
+      "type": "object",
+      "properties": {
+        "profile": {
+          "$ref": "#/$defs/Profile"
+        },
+        "audit": {
+          "$ref": "#/$defs/AuditResult"
+        },
+        "qualification": {
+          "$ref": "#/$defs/Qualification"
+        },
+        "campaign": {
+          "$ref": "#/$defs/Campaign"
+        },
+        "offer": {
+          "$ref": "#/$defs/Offer"
+        },
+        "template": {
+          "$ref": "#/$defs/Template"
+        },
+        "approved_assets": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ApprovedAsset"
+          },
+          "maxItems": 100
+        },
+        "design_research": {
+          "$ref": "#/$defs/DesignResearch"
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "maxItems": 18,
+          "minItems": 0
+        },
+        "images": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ImageBinding"
+          },
+          "maxItems": 4,
+          "minItems": 0
+        },
+        "task": {
+          "type": "string",
+          "const": "design_exploration"
+        },
+        "comparison_content": {
+          "$ref": "#/$defs/SiteSpec"
+        }
+      },
+      "required": [
+        "profile",
+        "audit",
+        "qualification",
+        "campaign",
+        "offer",
+        "template",
+        "approved_assets",
+        "task",
+        "comparison_content",
+        "design_research"
+      ],
+      "additionalProperties": false
+    },
+    "DesignExplorationOutput": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ConceptSet"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "gaps": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Gap"
+          },
+          "maxItems": 100
+        },
+        "notices": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Notice"
+          },
+          "maxItems": 100
+        }
+      },
+      "required": [
+        "data",
+        "gaps",
+        "notices"
+      ],
+      "additionalProperties": false
+    },
+    "DesignSelection": {
+      "type": "object",
+      "properties": {
+        "concept_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 400
+        },
+        "review_hash": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 400
+        },
+        "dependencies_hash": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 400
+        },
+        "decided_at": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 400
+        },
+        "subject_revision": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "concept_id",
+        "review_hash",
+        "dependencies_hash",
+        "decided_at",
+        "subject_revision"
       ],
       "additionalProperties": false
     }

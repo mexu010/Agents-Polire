@@ -13,12 +13,18 @@
       nav.classList.toggle('is-open', open);
     });
     nav.addEventListener('click', event => { if (event.target.closest('a')) close(); });
-    document.addEventListener('keydown', event => { if (event.key === 'Escape') close(); });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+        const focusWasInside = nav.contains(document.activeElement);
+        close();
+        if (focusWasInside) toggle.focus();
+      }
+    });
     const desktop = window.matchMedia('(min-width: 761px)');
     desktop.addEventListener('change', event => { if (event.matches) close(); });
   }
 
-  if (navigator.doNotTrack !== '1' && navigator.globalPrivacyControl !== true) {
+  if (document.body.dataset.pageStatus !== '404' && navigator.doNotTrack !== '1' && navigator.globalPrivacyControl !== true) {
     fetch('/api/view', {
       method: 'POST', headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ path: location.pathname, referrer: document.referrer }),

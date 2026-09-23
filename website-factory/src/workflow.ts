@@ -253,6 +253,10 @@ export function writeReviewReport(dataDir: string, job: JsonObject): string {
       lines.push(
         `- [${plain(ref.title)}](${url}) – ${ref.image_evidence_ids.length ? "Bildansicht erfasst" : "nur Text verfügbar"}`,
       );
+      if (ref.selection_reason)
+        lines.push(`  Auswahl: ${plain(ref.selection_reason)}`);
+      for (const gap of ref.capture_limitations ?? [])
+        lines.push(`  Einschränkung: ${plain(gap)}`);
     }
     for (const gap of design.gaps) lines.push(`- Einschränkung: ${plain(gap)}`);
     if (brief?.design_plan) {
@@ -269,6 +273,31 @@ export function writeReviewReport(dataDir: string, job: JsonObject): string {
         `Eigenständigkeit: ${plain(brief.design_plan.originality_note)}`,
       );
     }
+  }
+  if (job.context?.conceptPreviews) {
+    lines.push(
+      "",
+      "## Gerenderte Konzeptauswahl",
+      "",
+      "Drei Mini-Vorschauen derselben Inhalte; keine vollständigen Websites und kein Qualitätsnachweis durch unterschiedliche Signaturen.",
+      job.context.conceptSelection
+        ? `Gewählt: ${plain(job.context.selectedConcept?.title)}.`
+        : "Wartet auf menschliche Auswahl im Konzeptvergleich.",
+    );
+  }
+  const diversity = job.context?.designDiversity;
+  if (diversity) {
+    lines.push(
+      "",
+      "## Vergleich mit früheren Projekten",
+      "",
+      `${diversity.available_count} vergleichbare Projekte, davon ${diversity.compared_count} mit kompatibler erweiterter Signatur.`,
+      plain(diversity.limitation),
+    );
+    for (const warning of diversity.warnings)
+      lines.push(`- Wiederholungswarnung: ${plain(warning.reason)}`);
+    for (const gap of diversity.gaps)
+      lines.push(`- Vergleichslücke: ${plain(gap.reason)}`);
   }
   const dir = join(dataDir, "reviews");
   mkdirSync(dir, { recursive: true });

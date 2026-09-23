@@ -1,5 +1,17 @@
 # POLIRE Projektarchiv
 
+## Aktueller Sicherungsstand: 23. September 2026
+
+Der Branch `codex/polire-design-hosting-2026-09-23` enthält das Factory-Designupgrade, die vollständige Lanz-Website in Richtung B, alle drei vorherigen Gestaltungsrichtungen und den Hostingplan. Er dient zur Sicherung und Zusammenarbeit; Render wurde nicht eingerichtet. Ältere Abschnitte und Berichte unten beschreiben ihren jeweiligen historischen Stand.
+
+- [Aktueller Stand, Einrichtung und Prüfungen](website-factory/docs/GITHUB-STAND-2026-09-23.md)
+- [Hostingplan mit Kosten](website-factory/docs/superpowers/plans/2026-09-23-polire-kundenhosting.md)
+- [Lanz-Screenshot-Belege](website-factory/docs/evidence/README.md)
+- [Zusammenfassung der letzten sichtbaren Projektentscheidungen](chats/Polire-Agents-2026-09-23-Stand.md)
+- `source-documents/polire-design-upgrade.zip` und der gleichnamige entpackte Quellordner bewahren das bereitgestellte Auftragspaket. Das Paket ist eine historische Entwicklungsgrundlage, kein direkt installierbarer Factory-Patch. Generierte `dist/`-Dateien sind im Original-ZIP enthalten.
+
+Die aktuelle Agenturwebsite wird separat entwickelt: [Agency_Polire_Website, Branch feat/project-enquiry](https://github.com/mexu010/Agency_Polire_Website/tree/feat/project-enquiry). Der dortige Commit `4d9936ad3ae0cb31f6f624b0057f4b3fe4385a11` war am 23.09.2026 bereits auf GitHub vorhanden. Der Ordner `polire-website/` in diesem Sammelarchiv bleibt ein älterer Archivstand; er wurde nicht ungeprüft synchronisiert.
+
 Stand: 21. September 2026. Dieses Archiv enthält den Website-Quellcode, die Website Factory mit sieben Agent-Rollen, Spezifikationen, Tests, verfügbare sichtbare Projekt-Chats und Review-Ergebnisse.
 
 ## Verzeichnisse

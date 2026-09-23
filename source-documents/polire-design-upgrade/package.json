@@ -1,0 +1,12 @@
+{
+  "name": "polire-design-upgrade-reference-kit",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Offline, standalone reference helpers; not an installed POLIRE Factory integration.",
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "test": "node --test tests/diversity.test.mjs tests/cli.test.mjs tests/current-fingerprint.test.mjs",
+    "example": "node scripts/evaluate-designs.mjs --input fixtures/synthetic-comparison.json"
+  }
+}

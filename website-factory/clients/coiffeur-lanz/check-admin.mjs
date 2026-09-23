@@ -55,7 +55,7 @@ try {
   assert.equal(await page.locator('#stat-views').innerText(), '0', 'real empty analytics');
 
   await page.locator('.side-nav [data-tab="content"]').click();
-  await page.locator('[name="home.headline"]').fill('Ein bestätigter Testtitel.');
+  await page.locator('[name="home.headline"]').fill('Ein bestätigter Testtitel.\nZweite Zeile.');
   await page.locator('[name="legal.hostingProvider"]').fill('Test Hosting');
   await page.locator('[name="legal.hostingCountry"]').fill('Schweiz');
   await page.locator('[name="legal.privacyContact"]').fill('datenschutz@example.test');
@@ -63,7 +63,9 @@ try {
   await page.locator('#global-message').getByText('Ihre Änderungen wurden gespeichert.').waitFor();
   await page.reload({ waitUntil: 'networkidle' });
   await page.locator('.side-nav [data-tab="content"]').click();
-  assert.equal(await page.locator('[name="home.headline"]').inputValue(), 'Ein bestätigter Testtitel.');
+  assert.equal(await page.locator('[name="home.headline"]').inputValue(), 'Ein bestätigter Testtitel.\nZweite Zeile.');
+  const editedHome = await fetch(config.origin + '/');
+  assert.match(await editedHome.text(), /Ein bestätigter Testtitel\.<br>Zweite Zeile\./, 'saved title appears on public page');
   assert.equal(await page.locator('[name="legal.hostingProvider"]').inputValue(), 'Test Hosting');
   assert.equal(await page.locator('[name="legal.hostingCountry"]').inputValue(), 'Schweiz');
   assert.equal(await page.locator('[name="legal.privacyContact"]').inputValue(), 'datenschutz@example.test');

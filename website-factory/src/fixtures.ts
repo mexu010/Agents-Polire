@@ -5,6 +5,12 @@ import {
   type JsonObject,
 } from "./contracts.js";
 import { COMPOSITIONS } from "./design-policy.js";
+import {
+  comparisonContent,
+  conceptTheme,
+  fixtureConceptOutput,
+  type AgentTask,
+} from "./design-concepts.js";
 
 const stamp = "2026-09-11T10:00:00.000Z";
 const ev = (
@@ -121,7 +127,17 @@ export function fixtureInput(): JsonObject {
 export function buildAgentInput(
   agent: AgentName,
   context: JsonObject,
+  task?: AgentTask,
 ): JsonObject {
+  if (task) {
+    if (agent !== "strategist")
+      throw new Error("Exploration requires Strategist");
+    return validate("DesignExplorationInput", {
+      ...buildAgentInput(agent, context),
+      task,
+      comparison_content: comparisonContent(context),
+    });
+  }
   const crawl = context.crawl ?? context;
   const evidence = crawl.evidence ?? context.evidence ?? [];
   const images = (crawl.images ?? []).map((image: JsonObject) =>
@@ -177,9 +193,27 @@ export function buildAgentInput(
         offer: context.offer,
         template: context.template,
         approved_assets: context.approvedAssets ?? [],
+        ...(context.selectedConcept
+          ? { selected_concept: context.selectedConcept }
+          : {}),
         ...(context.designResearch
           ? {
-              design_research: context.designResearch.research,
+              design_research: {
+                ...context.designResearch.research,
+                // The full resolved signatures stay in the run for deterministic
+                // comparison. The model only needs compact prior layout summaries.
+                recent_designs:
+                  context.designResearch.research.recent_designs.map(
+                    (prior: JsonObject) => ({
+                      composition: prior.composition,
+                      font_pair: prior.font_pair,
+                      section_order: prior.section_order,
+                      ...(prior.signature_gap
+                        ? { signature_gap: prior.signature_gap }
+                        : {}),
+                    }),
+                  ),
+              },
               evidence: context.designResearch.evidence,
               images: context.designResearch.images,
             }
@@ -221,6 +255,9 @@ export function buildAgentInput(
         approved_assets: context.approvedAssets ?? [],
         evidence: browser.evidence ?? evidence,
         images: browserImages,
+        ...(browser.visualContractVersion
+          ? { visual_contract_version: browser.visualContractVersion }
+          : {}),
       });
     }
     case "sales":
@@ -385,10 +422,11 @@ function strategist(input: JsonObject): JsonObject {
   );
   const issue = input.audit.issues[0].issue_id;
   const research = input.design_research;
-  const composition =
-    COMPOSITIONS.find(
-      (value) => value !== research?.recent_designs[0]?.composition,
-    ) ?? "editorial";
+  const composition = input.selected_concept
+    ? conceptTheme(input.selected_concept.design_profile).composition
+    : (COMPOSITIONS.find(
+        (value) => value !== research?.recent_designs[0]?.composition,
+      ) ?? "editorial");
   const designPlan = research
     ? {
         concept:
@@ -428,6 +466,9 @@ function strategist(input: JsonObject): JsonObject {
         accent_hex: "#176b5b",
         spacing: "comfortable",
         motion: "subtle",
+        ...(input.selected_concept
+          ? conceptTheme(input.selected_concept.design_profile)
+          : {}),
       },
       template_id: input.template.template_id,
       template_version: input.template.version,
@@ -557,12 +598,35 @@ function builder(input: JsonObject): JsonObject {
   };
 }
 function qa(input: JsonObject): JsonObject {
+  const renderedViewImage = (check: JsonObject): JsonObject | undefined => {
+    if (input.visual_contract_version !== "rendered-views/2")
+      return input.images.find(
+        (image: JsonObject) =>
+          !check.viewport || image.width === check.viewport.width,
+      );
+    return input.images.find((image: JsonObject) => {
+      const proof = input.evidence.find(
+        (item: JsonObject) =>
+          item.evidence_id === image.evidence_id && item.kind === "screenshot",
+      );
+      if (typeof proof?.locator !== "string") return false;
+      try {
+        const locator = JSON.parse(proof.locator) as JsonObject;
+        return (
+          locator.route === check.page_ref &&
+          (!check.viewport ||
+            (locator.viewport?.width === check.viewport.width &&
+              locator.viewport?.height === check.viewport.height))
+        );
+      } catch {
+        return false;
+      }
+    });
+  };
   const checks = input.required_checks
     .filter((c: JsonObject) => c.executor === "qa_model")
     .map((c: JsonObject) => {
-      const image = input.images.find(
-        (x: JsonObject) => !c.viewport || x.width === c.viewport.width,
-      );
+      const image = renderedViewImage(c);
       return {
         check_id: c.check_id,
         result: image ? "pass" : "not_tested",
@@ -673,6 +737,8 @@ export function fixtureOutput(
   agent: AgentName | "sales-input" | "browser",
   input: JsonObject,
 ): JsonObject {
+  if (agent === "strategist" && input.task === "design_exploration")
+    return validate("DesignExplorationOutput", fixtureConceptOutput(input));
   if (agent === "sales-input") {
     const profile =
       input.profile ??

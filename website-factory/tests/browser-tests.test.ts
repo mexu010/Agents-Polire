@@ -2,10 +2,20 @@ import { mkdtemp, readFile, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { expect, test } from "vitest";
-import { runBrowserTests } from "../src/browser-tests.js";
+import { runBrowserTests, renderedCopyPresent } from "../src/browser-tests.js";
 import { renderSite } from "../src/renderer.js";
 
 const copy = (text: string) => ({ text, kind: "editorial", fact_ids: [] });
+
+test("visible-copy checking accepts CSS uppercase but not altered fact values", () => {
+  expect(
+    renderedCopyPresent("ALPINA SANITÄR GMBH", "Alpina Sanitär GmbH"),
+  ).toBe(true);
+  expect(renderedCopyPresent("ALPINA SANITÄR AG", "Alpina Sanitär GmbH")).toBe(
+    false,
+  );
+  expect(renderedCopyPresent("Preis CHF 390", "Preis CHF 290")).toBe(false);
+});
 
 test("runs real required browser checks while leaving visual judgement to QA", async () => {
   const root = await mkdtemp(path.join(tmpdir(), "factory-browser-"));

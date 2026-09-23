@@ -1,0 +1,46 @@
+{
+  "toolkit_version": "0.1.0",
+  "status": "review_required",
+  "fingerprint_contract": "three-fields-as-described-in-2026-09-22-handover",
+  "selected_history_count": 3,
+  "compared_count": 3,
+  "skipped_history": [],
+  "warnings": [
+    {
+      "design_key": "older-repeat",
+      "same_composition": true,
+      "same_section_order": true,
+      "same_font_pair": true,
+      "same_all_fields": true,
+      "repetition_warning": true
+    }
+  ],
+  "comparisons": [
+    {
+      "design_key": "recent-different",
+      "same_composition": false,
+      "same_section_order": false,
+      "same_font_pair": false,
+      "same_all_fields": false,
+      "repetition_warning": false
+    },
+    {
+      "design_key": "older-repeat",
+      "same_composition": true,
+      "same_section_order": true,
+      "same_font_pair": true,
+      "same_all_fields": true,
+      "repetition_warning": true
+    },
+    {
+      "design_key": "legacy-record",
+      "same_composition": true,
+      "same_section_order": false,
+      "same_font_pair": true,
+      "same_all_fields": false,
+      "repetition_warning": false
+    }
+  ],
+  "quality_verdict": null,
+  "limitation": "Only declared composition, font_pair and component order. Not visual similarity. Caller must retain the existing hard gate."
+}

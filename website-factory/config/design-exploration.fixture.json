@@ -1,0 +1,6 @@
+{
+  "mode": "fixture",
+  "dataDir": "./work/design-upgrade-local",
+  "autoGenerate": true,
+  "designExploration": { "enabled": true }
+}

@@ -11,9 +11,18 @@ import path from "node:path";
 import React, { type ReactNode } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { hash, id, now, validate, type JsonObject } from "./contracts.js";
-import { compositionCss, accentCss } from "./design-styles.js";
+import {
+  compositionCss,
+  designProfileCss,
+  accentCss,
+} from "./design-styles.js";
+import {
+  resolveDesignProfile,
+  validateDesignTheme,
+  type DesignProfile,
+} from "./design-capabilities.js";
 
-export const RENDERER_VERSION = "local-service/1.1.0";
+export const RENDERER_VERSION = "local-service/1.2.0";
 const PREVIEW_POLICY_VERSION = "local-noindex-no-submit/1.0.0";
 const TEST_CONFIG = { viewports: [375, 768, 1440], fullPage: true };
 const CONTENT_SECURITY_POLICY =
@@ -45,6 +54,20 @@ function hrefForRoute(route: string): string {
 
 function copyText(value: JsonObject): string {
   return String(value.text);
+}
+
+function headingScaleClass(
+  text: string,
+): "title-long-word" | "title-medium-word" | undefined {
+  const longestWord = Math.max(
+    ...text
+      .trim()
+      .split(/\s+/u)
+      .map((word) => Array.from(word.replace(/[^\p{L}\p{N}]/gu, "")).length),
+  );
+  if (longestWord >= 16) return "title-long-word";
+  if (longestWord >= 10) return "title-medium-word";
+  return undefined;
 }
 
 function contactLabel(contact: JsonObject): string {
@@ -196,17 +219,31 @@ function Layout({
       fact.verification !== "unknown" &&
       fact.verification !== "conflicting",
   )?.value as string | undefined;
-  const navigation = (
-    <nav aria-label="Hauptnavigation">
-      {siteSpec.navigation.map((item: JsonObject) => (
-        <a key={item.route} href={hrefForRoute(item.route)}>
-          {copyText(item.label)}
-        </a>
-      ))}
-    </nav>
+  const navigationItems = siteSpec.navigation.filter(
+    (item: JsonObject) =>
+      !(
+        composition &&
+        item.route === "/" &&
+        company &&
+        copyText(item.label).trim() === company.trim()
+      ),
   );
+  const navigation =
+    navigationItems.length > 0 ? (
+      <nav aria-label="Hauptnavigation">
+        {navigationItems.map((item: JsonObject) => (
+          <a key={item.route} href={hrefForRoute(item.route)}>
+            {copyText(item.label)}
+          </a>
+        ))}
+      </nav>
+    ) : null;
+  const brandScaleClass = company ? headingScaleClass(company) : undefined;
   const brand = (
-    <a className="brand" href="/">
+    <a
+      className={`brand${brandScaleClass ? ` ${brandScaleClass}` : ""}`}
+      href="/"
+    >
       {composition ? (company ?? "Vorschau") : "Vorschau"}
     </a>
   );
@@ -219,7 +256,7 @@ function Layout({
     ) : composition === "bold" ? (
       <header className="site-header bold-header">
         {brand}
-        <div className="bold-nav-frame">{navigation}</div>
+        {navigation && <div className="bold-nav-frame">{navigation}</div>}
       </header>
     ) : composition === "minimal" ? (
       <header className="site-header minimal-header">
@@ -257,6 +294,154 @@ function Layout({
 }
 
 type Composition = "atelier" | "editorial" | "bold" | "minimal";
+
+function ProfiledSection({
+  section,
+  siteSpec,
+  profile,
+  assetUrls,
+  designProfile,
+  hero,
+}: {
+  section: JsonObject;
+  siteSpec: JsonObject;
+  profile: JsonObject;
+  assetUrls: Map<string, string>;
+  designProfile: DesignProfile;
+  hero: boolean;
+}) {
+  const assetUrl =
+    section.asset_id === null ? undefined : assetUrls.get(section.asset_id);
+  if (section.asset_id !== null && !assetUrl)
+    throw new Error(
+      `Section references unavailable asset: ${section.asset_id}`,
+    );
+  const Heading = hero ? "h1" : "h2";
+  const headingText = copyText(section.heading);
+  const heading = (
+    <Heading className={headingScaleClass(headingText)}>{headingText}</Heading>
+  );
+  const body = (
+    <div className="profile-body">
+      {section.body.map((paragraph: JsonObject, index: number) => (
+        <p key={index}>{copyText(paragraph)}</p>
+      ))}
+    </div>
+  );
+  const image = assetUrl && (
+    <figure className="profile-image">
+      <img
+        src={assetUrl}
+        alt={assetUrls.get(`${section.asset_id}:alt`) ?? ""}
+      />
+    </figure>
+  );
+  const contacts = section.component === "contact" && (
+    <div className="contacts">
+      {profile.contacts.map((contact: JsonObject) => (
+        <div className="contact" key={contact.contact_id}>
+          <span>{contactLabel(contact)}</span>
+          <strong>{contact.value}</strong>
+        </div>
+      ))}
+      <p className="demo-note">
+        Vorschau: Es wird nichts versendet. Kontaktaktionen sind deaktiviert.
+      </p>
+    </div>
+  );
+  const cta = section.cta && (
+    <Cta cta={section.cta} siteSpec={siteSpec} profile={profile} />
+  );
+  const items = section.items as JsonObject[];
+  const itemList = items.length > 0 && (
+    <div
+      className={`${designProfile.id === "editorial-spread" ? "spread" : designProfile.id === "service-index" ? "index" : "poster"}-services`}
+    >
+      {items.map((item, index) => (
+        <article
+          key={index}
+          className={
+            headingScaleClass(copyText(item.title))
+              ? "has-long-title"
+              : undefined
+          }
+        >
+          <span aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+          <h3 className={headingScaleClass(copyText(item.title))}>
+            {copyText(item.title)}
+          </h3>
+          <p>{copyText(item.text)}</p>
+        </article>
+      ))}
+    </div>
+  );
+
+  let content: ReactNode;
+  if (hero && designProfile.id === "editorial-spread") {
+    content = (
+      <div className="spread-hero">
+        <div className="spread-title">{heading}</div>
+        <div className="spread-detail">
+          {body}
+          {cta}
+        </div>
+        {image}
+      </div>
+    );
+  } else if (hero && designProfile.id === "service-index") {
+    content = (
+      <div className="index-hero">
+        <span className="index-cue" aria-hidden="true">
+          01 / Übersicht
+        </span>
+        <div>
+          {heading}
+          {body}
+          {cta}
+        </div>
+        {image}
+      </div>
+    );
+  } else if (hero && designProfile.id === "type-poster") {
+    content = (
+      <div className="poster-hero">
+        <div className="poster-title">{heading}</div>
+        <div className="poster-detail">
+          {body}
+          {cta}
+        </div>
+        {image}
+      </div>
+    );
+  } else {
+    const prefix =
+      designProfile.id === "editorial-spread"
+        ? "spread"
+        : designProfile.id === "service-index"
+          ? "index"
+          : "poster";
+    content = (
+      <div className={`${prefix}-section`}>
+        <div className={`${prefix}-section-heading`}>{heading}</div>
+        <div className={`${prefix}-section-content`}>
+          {body}
+          {itemList}
+          {contacts}
+          {cta}
+        </div>
+        {image}
+      </div>
+    );
+  }
+  return (
+    <section
+      id={section.section_id}
+      className={`profile-section profile-${designProfile.id} component-${section.component} variant-${section.variant}${hero ? " is-hero" : ""}`}
+    >
+      {content}
+    </section>
+  );
+}
 
 function DesignedSection({
   section,
@@ -449,6 +634,7 @@ function Document({
         : "#176b5b";
   const themeClass = `theme-${siteSpec.theme.palette} font-${siteSpec.theme.font_pair} spacing-${siteSpec.theme.spacing} motion-${siteSpec.theme.motion}`;
   const composition = siteSpec.theme.composition as Composition | undefined;
+  const designProfile = resolveDesignProfile(siteSpec.theme);
   const firstHeroId =
     page.sections[0]?.component === "hero"
       ? page.sections[0].section_id
@@ -456,7 +642,7 @@ function Document({
   return (
     <html
       lang={siteSpec.locale}
-      className={`${themeClass}${composition ? ` composition-${composition}` : ""}`}
+      className={`${themeClass}${composition ? ` composition-${composition}` : ""}${designProfile ? ` profile-${designProfile.id}` : ""}`}
       data-accent={accent}
     >
       <head>
@@ -479,7 +665,17 @@ function Document({
             </header>
           )}
           {page.sections.map((section: JsonObject) =>
-            composition ? (
+            designProfile ? (
+              <ProfiledSection
+                key={section.section_id}
+                section={section}
+                siteSpec={siteSpec}
+                profile={profile}
+                assetUrls={assetUrls}
+                designProfile={designProfile}
+                hero={section.section_id === firstHeroId}
+              />
+            ) : composition ? (
               <DesignedSection
                 key={section.section_id}
                 section={section}
@@ -605,6 +801,7 @@ export async function renderSite({
   if (!leadId) throw new Error("Renderer requires the owning lead ID");
   validate("SiteSpec", siteSpec);
   validate("Profile", profile);
+  validateDesignTheme(siteSpec.theme);
   validateFactReferences(siteSpec, profile);
   const routes = new Set<string>();
   for (const page of siteSpec.pages) {
@@ -625,7 +822,7 @@ export async function renderSite({
   const preparedAssets = await prepareAssets(siteSpec, assets, stagingDir);
   await writeFile(
     path.join(stagingDir, "assets", "site.css"),
-    `${CSS}\n${compositionCss}\n${siteSpec.theme.composition ? accentCss(siteSpec.theme) : ""}\n`,
+    `${CSS}\n${compositionCss}\n${designProfileCss}\n${siteSpec.theme.composition ? accentCss(siteSpec.theme) : ""}\n`,
     "utf8",
   );
   const pageHashes: Array<{ route: string; hash: string }> = [];

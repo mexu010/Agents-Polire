@@ -10,12 +10,83 @@ const CATALOG = {
   salon: [
     "https://www.georgenorthwood.com/",
     "https://www.hershesons.com/pages/stores",
+    "https://www.vitsoe.com/",
+    "https://normcph.com/",
   ],
-  hospitality: ["https://www.themodernnyc.com/", "https://ottolenghi.co.uk/"],
-  craft: ["https://normcph.com/", "https://www.vitsoe.com/"],
-  garden: ["https://www.andy-sturgeon.com/", "https://normcph.com/"],
-  general: ["https://normcph.com/", "https://www.pentagram.com/"],
+  hospitality: [
+    "https://www.themodernnyc.com/",
+    "https://ottolenghi.co.uk/",
+    "https://www.vitsoe.com/",
+    "https://normcph.com/",
+  ],
+  craft: [
+    "https://normcph.com/",
+    "https://www.vitsoe.com/",
+    "https://www.pentagram.com/",
+  ],
+  garden: [
+    "https://www.andy-sturgeon.com/",
+    "https://normcph.com/",
+    "https://www.vitsoe.com/",
+  ],
+  general: [
+    "https://normcph.com/",
+    "https://www.pentagram.com/",
+    "https://www.vitsoe.com/",
+  ],
 };
+
+type SelectionRole = "industry" | "contrast" | "operator" | "search";
+type Candidate = { url: string; role: SelectionRole; reason: string };
+
+function rotated<T>(items: T[], seed: string): T[] {
+  if (items.length < 2) return [...items];
+  const offset = Number.parseInt(hash(seed).slice(0, 8), 16) % items.length;
+  return [...items.slice(offset), ...items.slice(0, offset)];
+}
+
+function catalogCandidates(
+  key: keyof typeof CATALOG,
+  project: string,
+): Candidate[] {
+  const entries = CATALOG[key];
+  const industryCount = {
+    salon: 2,
+    hospitality: 2,
+    craft: 0,
+    garden: 1,
+    general: 0,
+  }[key];
+  const industry = rotated(
+    entries.slice(0, industryCount),
+    `${project}:industry`,
+  );
+  const contrastPool = entries.slice(industryCount);
+  const contrasts = rotated(
+    contrastPool.length ? contrastPool : entries,
+    `${project}:contrast`,
+  );
+  return [
+    ...industry.slice(0, 1).map((url) => ({
+      url,
+      role: "industry" as const,
+      reason:
+        "Katalogkandidat aus derselben Branche für Nutzeraufgabe, Leistungsstruktur und Hauptaktion; Eignung folgt erst aus dem Abruf.",
+    })),
+    ...contrasts.map((url) => ({
+      url,
+      role: "contrast" as const,
+      reason:
+        "Benachbarte oder branchenfremde Gestaltungsreferenz für eine fotoarme Übertragung mit Typografie, Raster und klarer Informationsstruktur; kein Branchennachweis.",
+    })),
+    ...industry.slice(1).map((url) => ({
+      url,
+      role: "industry" as const,
+      reason:
+        "Zusätzlicher Katalogkandidat aus derselben Branche; Eignung folgt erst aus dem Abruf.",
+    })),
+  ];
+}
 
 export function designIndustry(profile: JsonObject): {
   key: keyof typeof CATALOG;
@@ -85,14 +156,33 @@ export async function researchDesign(options: {
   let sourceMode = config.designResearch.referenceUrls.length
     ? "operator"
     : "catalog";
-  let candidates = config.designResearch.referenceUrls.length
-    ? config.designResearch.referenceUrls
-    : CATALOG[industry.key];
+  const catalog = catalogCandidates(industry.key, options.website);
+  let candidates: Candidate[] = config.designResearch.referenceUrls.length
+    ? config.designResearch.referenceUrls.map((url) => ({
+        url,
+        role: "operator" as const,
+        reason:
+          "Vom Betreiber ausdrücklich vorgegebene Referenz; tatsächliche Quelle wird weiterhin geprüft.",
+      }))
+    : catalog;
   if (sourceMode === "catalog" && config.research.enabled && options.discover) {
     try {
       const results = await options.discover(query);
       if (results.length) {
-        candidates = results.map((result) => result.url);
+        const searchCandidates = results.map((result) => ({
+          url: result.url,
+          role: "search" as const,
+          reason:
+            "Tatsächlicher Suchtreffer zur Branchenaufgabe; Eignung folgt nur aus dem geprüften Quellenbeleg.",
+        }));
+        const contrast = catalog.find(
+          (candidate) => candidate.role === "contrast",
+        );
+        candidates = [
+          searchCandidates[0],
+          ...(contrast ? [contrast] : []),
+          ...searchCandidates.slice(1),
+        ];
         sourceMode = "search";
       } else
         gaps.push(
@@ -115,23 +205,26 @@ export async function researchDesign(options: {
   const host = (url: string) =>
     new URL(url).hostname.replace(/^www\./, "").toLowerCase();
   const seen = new Set([host(options.website)]);
-  const selectUrls = (entries: string[], count: number): string[] => {
-    const chosen: string[] = [];
+  const selectCandidates = (
+    entries: Candidate[],
+    count: number,
+  ): Candidate[] => {
+    const chosen: Candidate[] = [];
     for (const candidate of entries.slice(0, 10)) {
       if (chosen.length === count) break;
       try {
-        const url = publicUrl(candidate);
+        const url = publicUrl(candidate.url);
         url.hash = "";
         if (url.href.length > 400 || seen.has(host(url.href))) continue;
         seen.add(host(url.href));
-        chosen.push(url.href);
+        chosen.push({ ...candidate, url: url.href });
       } catch {
         gaps.push("Unsichere oder ungültige Referenzadresse übersprungen.");
       }
     }
     return chosen;
   };
-  const useCatalog = (remaining: number): string[] => {
+  const useCatalog = (remaining: number): Candidate[] => {
     sourceMode = "catalog";
     gaps.push(
       "Unbrauchbare Suchtreffer; verbleibende Abrufe prüfen den Referenzkatalog.",
@@ -140,17 +233,47 @@ export async function researchDesign(options: {
       gaps.push(
         "Allgemeine Gestaltungsreferenzen, keine belegten Branchenvorbilder.",
       );
-    return selectUrls(CATALOG[industry.key], remaining);
+    return selectCandidates(catalog, remaining);
   };
-  const urls = selectUrls(candidates, limit);
-  if (sourceMode === "search" && !urls.length) urls.push(...useCatalog(limit));
+  const selected = selectCandidates(candidates, limit);
+  if (
+    sourceMode === "search" &&
+    !selected.some((candidate) => candidate.role === "search")
+  ) {
+    sourceMode = "catalog";
+    gaps.push(
+      "Unbrauchbare Suchtreffer; ausgewählte Abrufe prüfen nur den Referenzkatalog.",
+    );
+    selected.push(...selectCandidates(catalog, limit - selected.length));
+  }
+  if (sourceMode === "operator" && selected.length < limit) {
+    gaps.push(
+      "Weniger Betreiber-URLs als Referenzplätze; übrige Plätze verwenden begründete Katalogkandidaten.",
+    );
+    selected.push(...selectCandidates(catalog, limit - selected.length));
+  }
+  if (sourceMode === "search" && selected.length < limit) {
+    gaps.push(
+      "Zu wenige unterschiedliche Such- und Kontrastkandidaten; übrige Plätze verwenden weitere Katalogstartpunkte.",
+    );
+    selected.push(...selectCandidates(catalog, limit - selected.length));
+  }
+  if (
+    industry.key === "craft" &&
+    selected.some((candidate) => candidate.role === "contrast")
+  )
+    gaps.push(
+      "Der Handwerk-/Architektur-Katalog enthält nur benachbarte oder branchenfremde Gestaltungsreferenzen und keine direkte Branchenreferenz für den konkreten Handwerksbetrieb.",
+    );
   const references: JsonObject[] = [],
     evidence: JsonObject[] = [],
     images: JsonObject[] = [];
   let attempted = 0;
-  for (const url of urls) {
+  let acceptedReference = false;
+  for (const candidate of selected) {
     if (attempted >= limit) break;
     attempted++;
+    const { url } = candidate;
     const refId = `design-${hash(url).slice(0, 20)}`;
     try {
       const crawled = await (options.collector ?? collect)(url, {
@@ -158,7 +281,7 @@ export async function researchDesign(options: {
         outputDir: join(options.outputDir, refId),
         browser: true,
         lighthouse: false,
-        screenshotViewports: "desktop",
+        screenshotViewports: acceptedReference ? "desktop" : "all",
         maxHtmlPagesPerLead: 1,
         maxCrawlDurationMs: Math.min(
           config.crawler.maxCrawlDurationMs,
@@ -177,19 +300,24 @@ export async function researchDesign(options: {
       const html = (crawled.evidence ?? [])
         .filter((e: JsonObject) => e.kind === "html" && e.excerpt)
         .slice(0, 2);
-      const image = [...(crawled.images ?? [])].sort(
-        (a: JsonObject, b: JsonObject) => b.width - a.width,
-      )[0];
-      const screenshot =
-        image &&
-        (crawled.evidence ?? []).find(
-          (e: JsonObject) =>
-            e.kind === "screenshot" && e.evidence_id === image.evidence_id,
-        );
-      if (!html.length && !screenshot) {
+      const imagePairs = [...(crawled.images ?? [])]
+        .map((image: JsonObject) => ({
+          image,
+          evidence: (crawled.evidence ?? []).find(
+            (e: JsonObject) =>
+              e.kind === "screenshot" && e.evidence_id === image.evidence_id,
+          ),
+        }))
+        .filter((pair) => pair.evidence)
+        .sort((a, b) => Number(a.image.width) - Number(b.image.width));
+      if (!html.length && !imagePairs.length) {
         gaps.push(`Referenz nicht lesbar: ${url}`);
         if (sourceMode === "search" && !references.length && attempted < limit)
-          urls.splice(attempted, urls.length, ...useCatalog(limit - attempted));
+          selected.splice(
+            attempted,
+            selected.length,
+            ...useCatalog(limit - attempted),
+          );
         continue;
       }
       const remap = (e: JsonObject) =>
@@ -198,22 +326,58 @@ export async function researchDesign(options: {
           evidence_id: `${refId}-${e.evidence_id}`,
         });
       const sources: JsonObject[] = html.map(remap);
-      if (screenshot) {
-        const bound = remap(screenshot);
+      const selectedImages = acceptedReference
+        ? imagePairs.slice(-1)
+        : imagePairs.length > 1
+          ? [imagePairs[0], imagePairs.at(-1)!]
+          : imagePairs;
+      for (const pair of selectedImages) {
+        const bound = remap(pair.evidence!);
         sources.push(bound);
         images.push(
           validate("ImageBinding", {
             evidence_id: bound.evidence_id,
-            attachment_ref: image.path,
-            sha256: image.sha256,
-            width: image.width,
-            height: image.height,
+            attachment_ref: pair.image.path,
+            sha256: pair.image.sha256,
+            width: pair.image.width,
+            height: pair.image.height,
           }),
         );
-      } else
-        gaps.push(
-          `Kein Referenzbild verfügbar: ${url}. Nur Textbeobachtungen erlaubt.`,
+      }
+      const captureLimitations: string[] = [];
+      const viewportWidth = (pair: (typeof selectedImages)[number]): number => {
+        try {
+          const locator = JSON.parse(String(pair.evidence?.locator)) as {
+            viewport?: { width?: number };
+          };
+          if (Number.isFinite(locator.viewport?.width))
+            return Number(locator.viewport?.width);
+        } catch {
+          // Older collector fixtures do not always contain a JSON locator.
+        }
+        return Number(pair.image.width);
+      };
+      if (!html.length)
+        captureLimitations.push(
+          "Keine lesbare Textquelle verfügbar; nur die gebundene Ansicht wurde erfasst.",
         );
+      if (!selectedImages.length)
+        captureLimitations.push(
+          "Kein Referenzbild verfügbar; nur Textbeobachtungen erlaubt.",
+        );
+      if (
+        !acceptedReference &&
+        !selectedImages.some((pair) => viewportWidth(pair) <= 600)
+      )
+        captureLimitations.push(
+          "Keine mobile Ansicht verfügbar; Mobile-Komposition wurde nicht visuell geprüft.",
+        );
+      if (!selectedImages.some((pair) => viewportWidth(pair) > 600))
+        captureLimitations.push(
+          "Keine Desktopansicht verfügbar; Desktop-Komposition wurde nicht visuell geprüft.",
+        );
+      if (captureLimitations.length)
+        gaps.push(...captureLimitations.map((gap) => `${url}: ${gap}`));
       evidence.push(...sources);
       references.push({
         reference_id: refId,
@@ -229,11 +393,19 @@ export async function researchDesign(options: {
         image_evidence_ids: sources
           .filter((e) => e.kind === "screenshot")
           .map((e) => e.evidence_id),
+        selection_role: candidate.role,
+        selection_reason: candidate.reason,
+        capture_limitations: captureLimitations,
       });
+      acceptedReference = true;
     } catch {
       gaps.push(`Referenzabruf fehlgeschlagen: ${url}`);
       if (sourceMode === "search" && !references.length && attempted < limit)
-        urls.splice(attempted, urls.length, ...useCatalog(limit - attempted));
+        selected.splice(
+          attempted,
+          selected.length,
+          ...useCatalog(limit - attempted),
+        );
     }
   }
   return {
@@ -241,7 +413,12 @@ export async function researchDesign(options: {
       status:
         references.length === 0
           ? "unavailable"
-          : references.length === limit && images.length === references.length
+          : references.length === limit &&
+              references.every(
+                (reference) =>
+                  (reference.image_evidence_ids as string[]).length > 0 &&
+                  (reference.capture_limitations as string[]).length === 0,
+              )
             ? "complete"
             : "partial",
       industry: industry.label,
